@@ -1,0 +1,35 @@
+name: Eleven
+type: theme
+base theme: seven
+package: Core
+core: '8.x'
+
+regions:
+  breadcrumb: Breadcrumb
+  title: 'page title'
+  highlighted: Highlighted
+  help: Help
+  content: Content
+  primary_tabs: 'Primary tabs'
+  secondary_tabs: 'Secondary tabs'
+  primary_admin_actions: 'Primary admin actions'
+  user_login: 'login'
+
+# -- Libraries -----------------------------------------------------------------
+libraries:
+  - eleven/global
+
+#-------------------------------------------------------------------------------
+# LIBRARIES OVERRIDE
+#-------------------------------------------------------------------------------
+libraries-override:
+  # toolbar
+  toolbar/toolbar:
+    css:
+      theme:
+        /core/themes/stable/css/toolbar/toolbar.theme.css: templates/frontend-admin/toolbar/toolbar.css
+        /core/themes/stable/css/toolbar/toolbar.icons.theme.css: false
+  toolbar/toolbar.menu:
+    css:
+      state:
+        /core/themes/stable/css/toolbar/toolbar.menu.css: false

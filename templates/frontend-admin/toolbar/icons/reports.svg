@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="16px" height="15px" viewBox="0 0 16 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>pie</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="admin-/-menu-sub-horizontal" transform="translate(-668.000000, -8.000000)" fill="#FFFFFF">
+            <path d="M674.857151,15.946438 L674.857151,9.14285851 C671.071432,9.14285851 668,12.2142907 668,16.0000095 C668,19.7857283 671.071432,22.8571606 674.857151,22.8571606 C676.758939,22.8571606 678.491084,22.0803739 679.732157,20.8214439 L674.857151,15.946438 Z M676.526796,16.0000095 L681.392873,20.8750153 C682.651803,19.6339424 683.42859,17.9017975 683.42859,16.0000095 L676.526796,16.0000095 Z M682.857161,14.857151 C682.857161,11.0714322 679.785728,8 676.00001,8 L676.00001,14.857151 L682.857161,14.857151 Z" id="pie"></path>
+        </g>
+    </g>
+</svg>

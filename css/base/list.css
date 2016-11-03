@@ -1,0 +1,50 @@
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ol {
+  list-style-type: decimal;
+}
+li {
+  list-style: none;
+}
+ol li{
+  list-style: decimal;
+}
+ul li {
+  margin-left: 2rem;
+}
+ol li {
+  margin-left: 3rem;
+}
+
+/* fake dots */
+.content li:before {
+  position: relative;
+  top: 0.1em;
+  padding-right: 0.25em;
+  color: gray;
+  font-size: 1.5em;
+  content: "•";
+}
+
+/* -- list items -------------------------------------------------------------*/
+.content li {
+  margin-left: 2rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid gray;
+  color: gray;
+}
+
+
+li:nth-child(odd) {
+}
+li:nth-child(odd):hover {
+}
+li:nth-child(even) {
+}
+li:nth-child(even):hover {
+}

@@ -1,0 +1,127 @@
+global:
+  css:
+    base:
+      css/base/base.css: { weight: -20}
+      css/base/image.css: {}
+      css/base/list.css: {}
+      css/base/table.css: {}
+      css/base/nav.css: {}
+      css/admin.css: {}
+    layout:
+      css/layout/layout.css: {}
+      css/layout/layout-admin.css: {}
+    component:
+     templates/component/messages/messages.css: {}
+    theme:
+      css/theme/icon.css: {}
+      css/theme/balloon.css: {}
+      css/theme/menu.css: {}
+      css/theme/image.css: {}
+      css/theme/typography.css: {}
+      css/temp.css: {}
+      css/print.css: { media: print }
+  js:
+    js/table.js: {}
+    js/script.js: {}
+  dependencies:
+    - system/admin
+
+
+dialog:
+  css:
+    theme:
+      css/components/dialog.css: { weight:-20}
+
+admin.overview:
+  css:
+    theme:
+      templates/admin/overview/admin-block.css: {}
+
+admin.theme:
+  css:
+    theme:
+      templates/admin/themes/admin-themes.css: {}
+
+form.node:
+  css:
+    theme:
+      templates/admin/node-edit/node-edit.css: {}
+
+form.ckeditor:
+  css:
+    theme:
+      templates/component/ckeditor/ckeditortheme.css: { }
+
+form.comments.admin:
+  css:
+    theme:
+      templates/admin/form-comment-admin.css: {}
+
+form.permissions:
+  css:
+    theme:
+      templates/admin/form-permissions/form-permissions.css: {}
+
+form.modules:
+  css:
+    theme:
+      templates/admin/modules/system-modules.css: {}
+
+form.verticaltabs:
+  css:
+    theme:
+      templates/base/form/vertical-tabs/vertical-tabs.css: {}
+
+
+views:
+  css:
+    theme:
+      templates/base/views/css/views.css: {}
+      templates/base/views/css/views-form.css: {}
+
+views.exposed:
+  css:
+    theme:
+      templates/base/views/exposed/views-exposed.css: {}
+
+views.table.admin:
+  css:
+    theme:
+      templates/admin/views/structure-table-views.css: {}
+
+views.admin:
+  css:
+    theme:
+
+
+admin.panelizer:
+  css:
+    theme:
+      templates/admin/panelizer/panelizer.css: {}
+
+
+paragraphs.admin:
+  css:
+    theme:
+      templates/component/paragraphs/admin/paragraphs.admin.css: {}
+
+# navigation
+usermenu:
+  css:
+    theme:
+      templates/component/navigation/usermenu/usermenu.css: {}
+
+menu.tabs:
+  css:
+    theme:
+      templates/component/navigation/localtask/localtask.css: {}
+
+breadcrumb:
+  css:
+    theme:
+      templates/component/breadcrumb/breadcrumb.css: {}
+
+file:
+  css:
+    theme:
+      css/components/file.css: {}

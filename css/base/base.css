@@ -1,0 +1,39 @@
+/* box-sizing */
+* {
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+html {
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: #f3f5f6;
+  text-size-adjust: 100%; /*ios only*/
+  background: red;
+}
+iframe {
+  max-width: 100%;
+  border: 0;
+}
+hr {
+  border-top: 1px solid #666;
+  width: 100%;
+}
+
+/* make sure the footer is always placed at the bottom */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin:0;
+  background-color: white;
+}
+
+main {
+  flex: 1;
+}
+
+a{
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+}

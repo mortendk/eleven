@@ -1,0 +1,488 @@
+/*
+Admin Toolbar
+
+Dont change the classnames - stuff will break.
+
+.toolbar
+
+.toolbar-bar
+-------------------------------------------------------------------------------
+.toolbar-tab  |  .toolbar-tab  |  .toolbar-tab  |  .toolbar-tab  |
+-------------------------------------------------------------------------------
+.toolbar-icon (for the toolbar-tab + .is-active .toolbar-tray-horizontal)
+.toolbar-tray
+  .toolbar-lining
+------------------------------------------------------------------------------
+.toolbar-menu
+  .menu-item.menu-item--collapsed
+
+.toolbar-toggle-orientation
+
+*/
+#toolbar-administration {
+  font-family: sans-serif;
+  font-size: 0.7rem;
+}
+.toolbar a,
+.toolbar a:hover {
+  text-decoration: none;
+}
+.toolbar .toolbar-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* color scheme */
+.toolbar-bar {
+  background-color: #666;
+}
+/* main admin bar colors */
+.toolbar-item {
+  border-left-color: white;
+}
+.toolbar-item:hover {
+  background-color: #999;
+}
+.toolbar-item.is-active {
+  background-color: red;
+  color: white;
+}
+
+/* border color */
+.toolbar-icon-edit:hover{
+
+  border-top-color: hotpink;
+}
+.toolbar-icon-escape-admin:hover {
+  border-top-color: hotpink;
+}
+.toolbar-tab > a[href="/admin"]:hover {
+  border-top-color: #ff905e;
+}
+.toolbar-tab > a[href="/admin/config/user-interface/shortcut"]:hover {
+  border-top-color: #dc554f;
+}
+.toolbar-tab > a[href="/user"]:hover {
+  border-top-color: #ffdb77;
+}
+
+
+
+/*------------------------------------------------------------------------------
+  Main Toolbar
+------------------------------------------------------------------------------*/
+/* Toolbar main section links */
+.toolbar-item {
+  padding: 0.3rem 1rem;
+  border-top: 1px solid transparent;
+  border-left: 1px solid;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+
+/* main toolbar icons */
+.toolbar-icon {
+  padding-left: 1.8rem;
+  background-repeat: no-repeat;
+  background-position: 0.3rem center;
+  background-size: 1rem;
+}
+/* back to site*/
+.toolbar-icon-escape-admin {
+  background-image: url(icons/back.svg);
+  color: #999;
+}
+/* manage */
+a[href="/admin"].toolbar-item {
+  background-image: url(icons/manage.svg);
+  color: #ff905e;
+}
+/* shortcut*/
+a[href="/admin/config/user-interface/shortcut"].toolbar-item {
+  background-image: url(icons/love.svg);
+  color: #dc554f;
+}
+/* user */
+a[href="/user"].toolbar-item {
+  background-image: url(icons/user.svg);
+  color: #ffdb77;
+}
+/* edit (outside  in )*/
+
+
+/* -----------------------------------------------------------------------------
+ TRAY
+----------------------------------------------------------------------------- */
+.toolbar-tray {
+  border-top: 1px solid #666;
+  background-color: #1d1f24;
+}
+.toolbar-tray li {
+  border-bottom: 1px solid #1c4e5e;
+}
+.toolbar-tray li a {
+  border-left: 1px solid #313746;
+  color: white;
+  text-decoration: none;
+}
+.toolbar-tray li a:hover {
+  background-color: #313746;
+  color: #eee;
+}
+.toolbar-tray li a.is-active {
+  background-color: #313746;
+  color: #999;
+}
+
+.toolbar .toolbar-tray-horizontal ul li.menu-item,
+div.toolbar .toolbar-tray-horizontal .menu-item:last-child {
+  border: none;
+  border-right: 1px solid #000;
+  border-left: 1px solid #000;
+  min-width: 3rem;
+}
+
+div.toolbar-tray-horizontal ul li.menu-item a {
+  /*background-color: #313746;*/
+  padding: 0 0.5rem;
+}
+
+
+div.toolbar-tray-horizontal .menu-item--expanded {
+  background-color: #1d1f24;
+}
+
+.toolbar-tray a {
+  border-left: 1px solid #313746;
+  color: white;
+  text-decoration: none;
+}
+
+/* menu when its folded out */
+.toolbar-tray-horizontal ul li.menu-item:hover {
+  background-color: #313746;
+}
+div.toolbar-tray-horizontal ul li.menu-item--expanded:hover ul {
+  box-shadow: none;
+}
+div.toolbar .toolbar-tray-horizontal ul ul li.menu-item {
+  border-top: 1px solid #000;
+  background-color: #52545b;
+}
+div.toolbar .toolbar-tray-horizontal ul ul li.menu-item:first-child {
+  border-top: 1px solid black;
+}
+div.toolbar .toolbar-tray-horizontal ul ul li.menu-item:hover a {
+  background-color: #52545b;
+}
+
+/*lvl 2*/
+div.toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded {
+  background: #313746 url(icons/nav-next.svg) no-repeat right center;
+}
+div.toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:hover a {
+  background: #313746 url(icons/nav-next.svg) no-repeat right center;
+}
+/*leve 3*/
+div.toolbar-tray-horizontal ul li.menu-item--expanded .menu-item:hover ul {
+  margin-top: -25px;
+}
+div.toolbar-tray-horizontal ul li.menu-item--expanded .menu-item:hover ul li.menu-item a {
+  background-color: #313746;
+}
+div.toolbar-tray-horizontal ul li.menu-item--expanded .menu-item:hover ul li.menu-item a:hover {
+  background-color: hotpink;
+}
+
+
+/*------------------------------------------------------------------------------
+  Icons
+------------------------------------------------------------------------------*/
+/* vertical tray */
+.toolbar-tray-vertical .toolbar-icon,
+#toolbar-item-shortcuts-tray.toolbar-tray-vertical a,
+#toolbar-item-user-tray.toolbar-tray-vertical a {
+  padding: 0;
+  line-height: 1.5rem;
+}
+.toolbar-tray-vertical .toolbar-icon:before,
+#toolbar-item-shortcuts-tray.toolbar-tray-vertical a:before,
+#toolbar-item-user-tray.toolbar-tray-vertical a:before {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+  margin-bottom: -0.5rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  content: "";
+}
+
+/* horizontal tray  */
+.toolbar-tray-horizontal .toolbar-icon,
+#toolbar-item-shortcuts-tray.toolbar-tray-horizontal a,
+#toolbar-item-user-tray.toolbar-tray-horizontal a {
+  padding: 0 1rem 0 0;
+  line-height: 1.5rem;
+}
+.toolbar-tray-horizontal .toolbar-icon:before,
+#toolbar-item-shortcuts-tray.toolbar-tray-horizontal a:before,
+#toolbar-item-user-tray.toolbar-tray-horizontal a:before {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+  margin-bottom: -0.5rem;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center center;
+  content: "";
+}
+
+/*Manage icons */
+a.toolbar-icon-admin-toolbar-tools-help:before{
+  background-image: url(icons/drop.svg);
+  border-bottom: 2px solid #520e24;
+  padding: 0;
+  margin: 0;
+  border-bottom: 2px solid white;
+}
+.toolbar-icon-system-admin-content:before {
+  border-bottom: 2px solid #520e24;
+  background-color: #520e24;
+  background-image: url(icons/content.svg);
+}
+.toolbar-icon-system-admin-structure:before {
+  border-bottom: 2px solid #8f2041;
+  background-color: #8f2041;
+  background-image: url(icons/structure.svg);
+}
+.toolbar-icon-system-themes-page:before {
+  border-bottom: 2px solid #dc554f;
+  background-color: #dc554f;
+  background-image: url(icons/appearance.svg);
+}
+.toolbar-icon-system-modules-list:before {
+  border-bottom: 2px solid #ff905e;
+  background-color: #ff905e;
+  background-image: url(icons/extend.svg);
+}
+.toolbar-icon-system-admin-config:before {
+  border-bottom: 2px solid #ffdb77;
+  background-color: #ffdb77;
+  background-image: url(icons/configuration.svg);
+}
+.toolbar-icon-entity-user-collection:before {
+  border-bottom: 2px solid #ff905e;
+  background-color: #ff905e;
+  background-image: url(icons/people.svg);
+}
+.toolbar-icon-system-admin-reports:before {
+  border-bottom: 2px solid #dc554f;
+  background-color: #dc554f;
+  background-image: url(icons/reports.svg);
+}
+.toolbar-icon-help-main:before {
+  border-bottom: 2px solid #8f2041;
+  background-color: #8f2041;
+  background-image: url(icons/help.svg);
+}
+/*shortcuts icons */
+#toolbar-item-shortcuts-tray a:before {
+  background-color: #8f2041;
+  background-image: url(icons/bookmark.svg);
+}
+#toolbar-item-shortcuts-tray a.edit-shortcuts {
+  color: white;
+  text-decoration: none;
+}
+#toolbar-item-shortcuts-tray a.edit-shortcuts:before {
+  background-color: transparent;
+  background-image: url(icons/edit.svg);
+}
+
+/* User */
+.toolbar-tray .account a:before {
+  background-color: #520e24;
+  background-image: url(icons/user.svg);
+}
+.toolbar-tray .account-edit a:before {
+  background-color: #8f2041;
+  background-image: url(icons/user.svg);
+}
+.toolbar-tray .logout a:before {
+  background-color: #dc554f;
+  background-image: url(icons/user.svg);
+}
+
+
+/* -----------------------------------------------------------------------------
+ Handle.
+----------------------------------------------------------------------------- */
+.toolbar-box {
+  position: relative;
+  display: block;
+}
+button.toolbar-handle,
+button.toolbar-handle:hover,
+button.toolbar-handle:focus {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 10px;
+  display: block;
+  overflow: hidden;
+  width: 20px ;
+  height: 20px;
+  border-radius: 0;
+  background-image: url(icons/nav-down.svg);
+  background-position: center center;
+  text-indent: -9999px;
+  cursor: pointer;
+  border:none;
+  background-color: transparent
+}
+button.toolbar-handle.open {
+  background-image: url(icons/nav-up.svg);
+}
+
+/* Show and hide the sub nav */
+.toolbar .toolbar-tray-horizontal .toolbar-menu .toolbar-handle,
+.toolbar .toolbar-tray-horizontal .toolbar-menu ul,
+.toolbar .toolbar-tray-vertical .toolbar-menu ul {
+  display: none;
+}
+.toolbar .toolbar-tray-vertical li.open > ul {
+  display: block;
+}
+
+
+/**
+ * Items.
+ */
+.toolbar .level-1 > ul {
+  background-color: #313746;
+}
+.toolbar .level-2 > ul {
+  padding-left: 1rem;
+  background-color: #3f4453;
+}
+.toolbar .level-3 > ul {
+}
+.toolbar .level-4 > ul {
+}
+.toolbar .level-5 > ul {
+}
+.toolbar .level-6 > ul {
+}
+.toolbar .level-7 > ul {
+}
+.toolbar .level-8 > ul {
+}
+
+/* toggle buttons */
+button.toolbar-icon-toggle-horizontal,
+button.toolbar-icon-toggle-horizontal:hover,
+button.toolbar-icon-toggle-horizontal:focus {
+  float: right;
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  background-image: url(icons/toolbar-up.svg);
+  text-indent: -999em;
+  border:none
+}
+.toolbar-icon-toggle-vertical,
+.toolbar-icon-toggle-vertical:hover,
+.toolbar-icon-toggle-vertical:focus {
+  overflow: hidden;
+  width: 1rem;
+  height: 1rem;
+  padding: 0 1rem 0 0;
+  border: none;
+  outline: 0;
+  background: transparent url(icons/toolbar-left.svg) no-repeat;
+  background-size: 0.6rem;
+  text-indent: -999em;
+}
+
+/* -- edit contextual menus ------------------------------------------------- */
+.toolbar-icon-edit {
+  border: none;
+  border: none;
+  background-color: transparent;
+  background-image: url(icons/edit.svg);
+}
+.toolbar-icon-edit:hover,
+.toolbar-icon-edit:focus {
+  border: none;
+  background-color: transparent;
+  background-image: url(icons/edit.svg);
+}
+.toolbar .toolbar-bar .contextual-toolbar-tab .toolbar-item.is-active {
+  border: none;
+  background-image: url(icons/edit-active.svg);
+  color: hotpink;
+}
+
+
+/* toolbar tools */
+div.toolbar .toolbar-tray-horizontal .toolbar-icon-admin-toolbar-tools-help + .toolbar-menu .menu-item{
+  background-color: #26C4FF;
+}
+div.toolbar .toolbar-tray-horizontal .toolbar-icon-admin-toolbar-tools-help + .toolbar-menu .menu-item:hover{
+  background-color: #1497F3;
+}
+
+/* -- menu toolbar vertical width --------------------------------------------*/
+body.toolbar-tray-open.toolbar-vertical.toolbar-fixed{
+  margin-left: 2rem !important;
+}
+body.toolbar-vertical .toolbar-tray{
+  background: rgba(0, 0, 0, 0.9);
+}
+
+/*menu bar width when "closed" */
+body.toolbar-vertical .toolbar-oriented .toolbar-tray-vertical{
+  width: 2rem; /*main fix for width*/
+  overflow: hidden;
+  transition: width 0.2s ease-in-out;
+}
+body.toolbar-vertical .menu-item.level-1 a{
+  position: relative;
+  text-indent: -999px;
+  height: 2rem;
+}
+body.toolbar-vertical .menu-item.level-1 a:before {
+  display: block;
+  left:0rem;
+  position: absolute;
+}
+body.toolbar-vertical .menu-item.level-1 .toolbar-handle{
+  background-image: none;
+}
+body.toolbar-vertical .menu-item.level-1.open .toolbar-box{
+  display: none
+}
+body.toolbar-vertical .toolbar-tray-vertical:hover .menu-item.level-1.open .toolbar-box{
+  display: block
+}
+/* hover*/
+body.toolbar-vertical .toolbar-oriented .toolbar-tray-vertical:hover{
+  width: 12rem;
+}
+body.toolbar-vertical  .toolbar-tray-vertical:hover .menu-item.level-1 a{
+  position: relative;
+  text-indent: 0;
+  height: 2rem;
+}
+body.toolbar-vertical .toolbar-tray-vertical:hover .menu-item.level-1 a:before {
+  position: relative;
+  display: inline-block;
+}
+body.toolbar-vertical .toolbar-tray-vertical:hover .menu-item.level-1 .toolbar-handle{
+  background-image: url(icons/nav-down.svg);
+}

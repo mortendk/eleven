@@ -1,0 +1,300 @@
+/* -- base table -------------------------------------------------------------*/
+table {
+  width: 100%;
+  table-layout: auto;
+  border-spacing: 0;
+  border-collapse: collapse;
+  color: black;
+  font-size: 1rem;
+}
+caption,
+th,
+td {
+  padding: 0.5rem 0.2rem;
+  text-align: left;
+  vertical-align: top;
+}
+caption {
+  border-bottom: 1px solid white;
+  color: #666;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* header --------------------------------------------------------------------*/
+th {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  background-color: #f7f7f7;
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-align: left;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+th:last-child {
+  border-right: 1px solid #ddd;
+}
+th,
+th a {
+  color: #0080AD
+}
+th a:hover {
+  color: #1397CB
+}
+th.is-active a {
+  color: #1397CB
+}
+.tablesort{
+  width: 0.7rem;
+  height: 0.7rem;
+}
+.tablesort--asc{
+  background-image: url(../../icons/table-arrow-up.svg)
+}
+.tablesort--desc{
+  background-image: url(../../icons/table-arrow-down.svg)
+}
+.sticky-header th{
+  border-right: 1px solid #ddd;
+}
+th.views-field-operations{
+  width: 7rem;
+}
+
+
+/* row background colors */
+tr:nth-of-type(odd) {
+  background-color: white;
+}
+tr:nth-of-type(odd):hover {
+  background-color: #eee;
+  color:#77AFEF;
+}
+tr.selected:nth-of-type(odd){
+  background: #edf4fe;
+}
+tr:nth-of-type(odd):hover td{
+  border-color:white
+}
+tr:nth-of-type(even) {
+  background-color: #F7F7F7;
+}
+tr:nth-of-type(even):hover {
+  background-color: #eee;
+    color:#77AFEF;
+}
+tr.selected:nth-of-type(even){
+  background: rgba(237, 244, 254, 0.56)
+}
+tr:nth-of-type(even):hover td{
+  border-color:white
+}
+
+/*cells*/
+td {
+  border-bottom: 1px solid #eee;
+  border-left: 1px solid #eee;
+}
+td:last-child {
+  border-right: 1px solid #eee
+}
+td a{
+  color: #666
+}
+
+
+
+/* -- responsive table -------------------------------------------------------*/
+/*
+The responsive table needs a little bit of js magic so we can add in the add
+names for each field.
+*/
+@media only screen and (max-width: 48em) {
+  .tableresponsive-enabled,
+  .responsive-enabled thead,
+  .responsive-enabled tbody,
+  .responsive-enabled th,
+  .responsive-enabled td,
+  .responsive-enabled tr,
+  .responsive-enabled caption {
+    display: block;
+  }
+
+  .tableresponsive-enabled {
+    overflow-x: auto;
+  }
+
+  /* Hide table headers. */
+  .responsive-enabled th {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .responsive-enabled tr {
+  }
+
+  .responsive-enabled tr td,
+  .responsive-enabled tr td:first-child,
+  .responsive-enabled .cke_editable tr th:first-child,
+  .responsive-enabled .cke_editable tr td:first-child {
+    position: relative;
+    padding: 0.5rem 0.5rem 0.5rem 8rem; /* Makes space for the :before data. */
+  }
+
+  /* Adds a "fake cell" that we can use as placeholder for the titles. */
+  .responsive-enabled tr td:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 7.4rem;
+    margin: 0;
+    padding: 0.5rem;
+    font-family: sans-serif;
+    font-weight: bold;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #77AFEF;
+  }
+
+  .responsive-enabled tr td:before,
+  .responsive-enabled tr td{
+  }
+
+  /*
+  Reads the data-title atribute set found in  js/scripts.js ResponsiveTablefix
+  */
+  .responsive-enabled td:before {
+    content: attr(data-title);
+  }
+  .views-form table.responsive-enabled tbody > tr > td:first-child,
+  table.responsive-enabled tbody > tr > td:first-child{
+    text-align: center;
+    width: 100%;
+  }
+
+  /* hardcoded js stuff... lets fix that */
+  .sticky-header[style]{
+    top: 0 !important;
+
+  }
+  .sticky-header thead tr{
+    background: #77AFEF;
+    border-bottom: 1px solid #1397CB;
+    color: white;
+  }
+  .sticky-header thead tr a{
+    color: white;
+  }
+  .sticky-header thead th{
+    background-color: transparent;
+    border:none;
+    color: white;
+    border-right: 1px solid #1397CB
+  }
+  .sticky-header th[style]{
+    display: inline-block !important;
+  }
+
+}
+
+/* -- views & admin table's  ----------------------------------------------------*/
+
+table.admintable {
+  font-size: 0.8rem;
+  width: 100%;;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+
+}
+table.admintable tr{ }
+
+table.admintable .view-operations-table-column{
+  width: 7rem;
+}
+
+table.admintable .select-all input[type="checkbox"]{
+  margin: 0;
+  padding:0;
+  width: 1rem;
+  height: 1rem;
+}
+table.admintable .form-item{
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border:none;
+}
+table.admintable .checkbox__title{
+  display: block
+}
+
+
+@media only screen and (max-width: 48em) {
+  table.admintable .checkbox--check{
+    height: 2rem;
+    margin-top: 0.5rem
+  }
+  table.admintable .checkbox--check label{
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+}
+
+
+/* -- block admin page */
+.region-title td {
+  background-color: white;
+  border-bottom: 1px solid #0080AD;
+  border-top: 1px solid #eee;
+  color: #333;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #0080AD;
+}
+
+table.admintable tbody > tr.region-title > td:first-child{
+  width:100%;
+  padding: 0.5rem
+}
+
+
+
+/* checkbox*/
+.admintable .checkbox,
+.views-form table .checkbox{
+  margin-left: 0;
+}
+.admintable .checkbox--check label,
+.views-form table .checkbox--check label{
+  background-image: url(../../templates/base/form/icons/checkbox--red.svg);
+}
+.admintable .checkbox--check input[type=checkbox]:checked + label,
+.views-form table .checkbox--check input[type=checkbox]:checked + label{
+  background-image: url(../../templates/base/form/icons/checkbox-on--red.svg);
+}
+
+/*selected elements  background */
+.admintable tr.selected:nth-of-type(even),
+.views-form tr.selected:nth-of-type(even){
+  background-color: #e9769f;
+  color: #C24F78
+}
+.admintable tr.selected:nth-of-type(even) a,
+.views-form tr.selected:nth-of-type(even) a{
+  color: #C24F78;
+}
+.admintable tr.selected:nth-of-type(odd),
+.views-form tr.selected:nth-of-type(odd){
+  background-color: #d65c88;
+  color: #eee
+}
+.admintable tr.selected:nth-of-type(odd) a
+.views-form tr.selected:nth-of-type(odd) a{
+  color: #eee;
+}

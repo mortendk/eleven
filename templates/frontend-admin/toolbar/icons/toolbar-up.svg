@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="25px" viewBox="0 0 24 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>toolbar-up</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Admin-Navigation" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="admin-menu" transform="translate(-726.000000, -1232.000000)" fill="#666F87">
+            <g id="admin-menu-left" transform="translate(-1.000000, 916.000000)">
+                <path d="M739,321.83 L748.17,331 L751,328.17 L739,316.17 L727,328.17 L729.83,331 L739,321.83 L739,321.83 Z M727,341 L751,341 L751,337 L727,337 L727,341 L727,341 Z" id="toolbar-up"></path>
+            </g>
+        </g>
+    </g>
+</svg>
