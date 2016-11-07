@@ -1,0 +1,28 @@
+.block-place-region {
+  outline: 1px dashed rgba(0,0,0,0.5);
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.7);
+  margin: 1em 0;
+  padding: 5px;
+  text-align: center;
+  text-shadow: none;
+}
+
+.block-place-region a.button {
+  background: hotpink;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+  font-size: 1rem;
+  padding: 0;
+  height: 26px;
+  width: 26px;
+  white-space: nowrap;
+  display: block
+}
+
+.toolbar .toolbar-bar .block-place-toolbar-tab {
+  float: right;
+}
+
+[dir="rtl"] .toolbar .toolbar-bar .block-place-toolbar-tab {
+  float: left;
+}

@@ -1,10 +1,8 @@
 /*
 Admin Toolbar
-
-Dont change the classnames - stuff will break.
+Dont change the classnames - stuff will break ;)
 
 .toolbar
-
 .toolbar-bar
 -------------------------------------------------------------------------------
 .toolbar-tab  |  .toolbar-tab  |  .toolbar-tab  |  .toolbar-tab  |
@@ -17,8 +15,9 @@ Dont change the classnames - stuff will break.
   .menu-item.menu-item--collapsed
 
 .toolbar-toggle-orientation
-
 */
+
+/* set global toolbar*/
 #toolbar-administration {
   font-family: sans-serif;
   font-size: 0.7rem;
@@ -33,88 +32,65 @@ Dont change the classnames - stuff will break.
   list-style: none;
 }
 
-/* color scheme */
-.toolbar-bar {
-  background-color: #666;
-}
-/* main admin bar colors */
-.toolbar-item {
-  border-left-color: white;
-}
-.toolbar-item:hover {
-  background-color: #999;
-}
-.toolbar-item.is-active {
-  background-color: red;
-  color: white;
-}
-
-/* border color */
-.toolbar-icon-edit:hover{
-
-  border-top-color: hotpink;
-}
-.toolbar-icon-escape-admin:hover {
-  border-top-color: hotpink;
-}
-.toolbar-tab > a[href="/admin"]:hover {
-  border-top-color: #ff905e;
-}
-.toolbar-tab > a[href="/admin/config/user-interface/shortcut"]:hover {
-  border-top-color: #dc554f;
-}
-.toolbar-tab > a[href="/user"]:hover {
-  border-top-color: #ffdb77;
-}
-
-
-
 /*------------------------------------------------------------------------------
-  Main Toolbar
+  Main Toolbar (toolbar-tab)
 ------------------------------------------------------------------------------*/
-/* Toolbar main section links */
-.toolbar-item {
+.toolbar-bar {
+  background-color: #eee;
+}
+
+/* Toolbar main tabs links */
+.toolbar-tab .toolbar-item {
   padding: 0.3rem 1rem;
   border-top: 1px solid transparent;
   border-left: 1px solid;
-  color: white;
+  color: #999;
   text-decoration: none;
   text-transform: uppercase;
 }
+.toolbar-tab .toolbar-item.is-active {
+  background-color: #ddd;
+  color: red
+}
 
-
-/* main toolbar icons */
-.toolbar-icon {
+/* Toolbar tab icons */
+.toolbar-tab .toolbar-icon {
   padding-left: 1.8rem;
   background-repeat: no-repeat;
   background-position: 0.3rem center;
   background-size: 1rem;
 }
-/* back to site*/
-.toolbar-icon-escape-admin {
-  background-image: url(icons/back.svg);
-  color: #999;
-}
-/* manage */
-a[href="/admin"].toolbar-item {
-  background-image: url(icons/manage.svg);
-  color: #ff905e;
-}
-/* shortcut*/
-a[href="/admin/config/user-interface/shortcut"].toolbar-item {
-  background-image: url(icons/love.svg);
-  color: #dc554f;
-}
-/* user */
-a[href="/user"].toolbar-item {
-  background-image: url(icons/user.svg);
-  color: #ffdb77;
-}
-/* edit (outside  in )*/
+
+  /* back to site*/
+  .toolbar-tab .toolbar-icon-escape-admin {
+    background-image: url(icons/back.svg);
+  }
+  /* manage */
+  .toolbar-tab .toolbar-icon-menu {
+    background-image: url(icons/manage.svg);
+  }
+  /* shortcut*/
+  .toolbar-tab .toolbar-icon-shortcut {
+    background-image: url(icons/love.svg);
+  }
+  /* user */
+  .toolbar-tab .toolbar-icon-user {
+    background-image: url(icons/user.svg);
+  }
+  /*edit*/
+  .toolbar-tab .toolbar-icon-edit{
+    background-image: url(icons/user.svg);
+  }
+  .toolbar-tab .toolbar-icon-place-block-inactive{
+    background-image: url(icons/user.svg);
+  }
+  .toolbar-tab .toolbar-icon-place-block-active{
+    background-image: url(icons/user.svg);
+  }
 
 
 /* -----------------------------------------------------------------------------
- TRAY
+ TRAY 2nd level of the admin
 ----------------------------------------------------------------------------- */
 .toolbar-tray {
   border-top: 1px solid #666;

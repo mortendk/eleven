@@ -26,102 +26,17 @@ global:
   dependencies:
     - system/admin
 
-
-dialog:
+# Front end admin tools:
+feat.contextual:
   css:
     theme:
-      css/components/dialog.css: { weight:-20}
-
-admin.overview:
+      templates/feat/contextual/contextual.css: {}
+feat.outside_in:
   css:
     theme:
-      templates/admin/overview/admin-block.css: {}
+      templates/feat/outside_in/outside_in.css: {}
 
-admin.theme:
+feat.ckeditor:
   css:
     theme:
-      templates/admin/themes/admin-themes.css: {}
-
-form.node:
-  css:
-    theme:
-      templates/admin/node-edit/node-edit.css: {}
-
-form.ckeditor:
-  css:
-    theme:
-      templates/component/ckeditor/ckeditortheme.css: { }
-
-form.comments.admin:
-  css:
-    theme:
-      templates/admin/form-comment-admin.css: {}
-
-form.permissions:
-  css:
-    theme:
-      templates/admin/form-permissions/form-permissions.css: {}
-
-form.modules:
-  css:
-    theme:
-      templates/admin/modules/system-modules.css: {}
-
-form.verticaltabs:
-  css:
-    theme:
-      templates/base/form/vertical-tabs/vertical-tabs.css: {}
-
-
-views:
-  css:
-    theme:
-      templates/base/views/css/views.css: {}
-      templates/base/views/css/views-form.css: {}
-
-views.exposed:
-  css:
-    theme:
-      templates/base/views/exposed/views-exposed.css: {}
-
-views.table.admin:
-  css:
-    theme:
-      templates/admin/views/structure-table-views.css: {}
-
-views.admin:
-  css:
-    theme:
-
-
-admin.panelizer:
-  css:
-    theme:
-      templates/admin/panelizer/panelizer.css: {}
-
-
-paragraphs.admin:
-  css:
-    theme:
-      templates/component/paragraphs/admin/paragraphs.admin.css: {}
-
-# navigation
-usermenu:
-  css:
-    theme:
-      templates/component/navigation/usermenu/usermenu.css: {}
-
-menu.tabs:
-  css:
-    theme:
-      templates/component/navigation/localtask/localtask.css: {}
-
-breadcrumb:
-  css:
-    theme:
-      templates/component/breadcrumb/breadcrumb.css: {}
-
-file:
-  css:
-    theme:
-      css/components/file.css: {}
+      templates/feat/ckeditor/ckeditor.css: {}

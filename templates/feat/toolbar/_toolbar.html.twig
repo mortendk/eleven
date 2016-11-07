@@ -9,10 +9,10 @@
         {% spaceless %}
           <div{{ tray.attributes }}>
             {% if tray.label %}
-              <nav class="toolbar-lining clearfix" role="navigation" aria-label="{{ tray.label }}">
+              <nav class="toolbar-lining" role="navigation" aria-label="{{ tray.label }}">
                 <h3 class="toolbar-tray-name visually-hidden">{{ tray.label }}</h3>
             {% else %}
-              <nav class="toolbar-lining clearfix" role="navigation">
+              <nav class="toolbar-lining" role="navigation">
             {% endif %}
             {{ tray.links }}
             </nav>
