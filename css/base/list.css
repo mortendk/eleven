@@ -27,7 +27,7 @@ ol li {
   padding-right: 0.25em;
   color: gray;
   font-size: 1.5em;
-  content: "•";
+  content: "-";
 }
 
 /* -- list items -------------------------------------------------------------*/

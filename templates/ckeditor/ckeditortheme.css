@@ -1,0 +1,160 @@
+.cke.cke_chrome {
+  border: 1px solid #ededed;
+  box-shadow: none;
+}
+.cke .cke_top {
+  padding: 0;
+  border-top: 0 solid black;
+  border-bottom: 0 solid black;
+  background: #f9f9f9;
+  box-shadow: none;
+}
+/* buttons */
+.cke .cke_toolgroup {
+  margin: 0;
+  border: 1px solid #edf4fe;
+  border-radius: 0;
+  background: #f9f9f9;
+  background-image: none;
+  box-shadow: none;
+}
+.cke .cke_toolbar_separator {
+  background-color: black;
+  box-shadow: none;
+}
+.cke.cke_chrome .cke_button {
+  border-radius: 0;
+  background: none;
+  background-image: none;
+  box-shadow: none;
+}
+.cke.cke_chrome .cke_button:first-child,
+.cke.cke_chrome .cke_button:last-child {
+  border-radius: 0;
+}
+
+
+/* -- buttons actions --------------------------------------------------------*/
+.cke .cke_button:hover,
+.cke .cke_button:focus {
+  background: #edf4fe;
+}
+.cke.cke_chrome .cke_button_on {
+  background: #ccc;
+}
+
+/* button icons */
+.cke.cke_chrome .cke_button_icon {
+  width: 16px;
+  height: 16px;
+}
+.cke.cke_chrome .cke_button .cke_button_icon[style] {
+  background-position: 0 !important;
+  background-size: 16px !important;
+}
+.cke.cke_chrome .cke_button .cke_button__bold_icon {
+  background: url(icons/bold.svg) no-repeat !important;
+}
+.cke.cke_chrome .cke_button .cke_button__italic_icon {
+  background: url(icons/italic.svg) no-repeat !important;
+}
+.cke.cke_chrome .cke_button .cke_button__strike_icon {
+  background: url(icons/strikethrough.svg) no-repeat !important;
+}
+.cke.cke_chrome .cke_button .cke_button__superscript_icon {
+  background: url(icons/superscript.svg) no-repeat !important;
+}
+.cke.cke_chrome .cke_button .cke_button__subscript_icon {
+  background: url(icons/subscript.svg) no-repeat !important;
+}
+.cke.cke_chrome .cke_button .cke_button__removeformat_icon {
+  background: url(icons/format_clear.svg) no-repeat !important;
+}
+
+.cke.cke_chrome .cke_button .cke_button__drupallink_icon {
+  background: url(icons/link.svg) no-repeat !important;
+}
+.cke.cke_chrome .cke_button .cke_button__drupalunlink_icon {
+  background: url(icons/link.svg) no-repeat !important;
+}
+
+.cke.cke_chrome .cke_button .cke_button__bulletedlist_icon {
+  background: url(icons/list-bullet.svg) no-repeat !important;
+}
+.cke.cke_chrome .cke_button .cke_button__numberedlist_icon {
+  background: url(icons/list-number.svg) no-repeat !important;
+}
+
+.cke.cke_chrome .cke_button .cke_button__blockquote_icon {
+  background: url(icons/quote.svg) no-repeat !important;
+}
+.cke.cke_chrome .cke_button .cke_button__drupalimage_icon {
+  background: url(icons/image.svg) no-repeat !important;
+}
+.cke.cke_chrome .cke_button .cke_button__table_icon {
+  background: url(icons/table.svg) no-repeat !important;
+}
+.cke.cke_chrome .cke_button .cke_button__horizontalrule_icon {
+  background: url(icons/hr.svg) no-repeat !important;
+}
+
+.cke.cke_chrome .cke_button .cke_button__showblocks_icon {
+  background: url(icons/showblocks.svg) no-repeat !important;
+}
+.cke.cke_chrome .cke_button .cke_button__source_icon {
+  background: url(icons/code.svg) no-repeat !important;
+}
+
+/* drop down */
+.cke .cke_combo_button {
+  border: 1px solid #EDEDED;
+  border-radius: 0;
+  background: #efefef;
+  background-image: none;
+  box-shadow: none;
+
+}
+.cke.cke_chrome .cke_combo_button:active,
+.cke.cke_chrome .cke_combo_button:focus,
+.cke.cke_chrome .cke_combo_button:hover {
+  border: 1px solid #77AFEF;
+  background: #edf4fe;
+  background-image: none;
+  box-shadow: none;
+}
+.cke .cke_combo_text {
+  color: #666;
+  text-shadow: none;
+}
+.cke .cke_combo_arrow {
+  border-top: 3px solid #666;
+}
+
+.cke .cke_combo_on a.cke_combo_button {
+  background: blue;
+  background-image: none;
+  box-shadow: none;
+}
+/* -- bottom -----------------------------------------------------------------*/
+.cke .cke_bottom {
+  padding: 0;
+  border-top: 0 solid black;
+  border-bottom: 0 solid black;
+  background: #f9f9f9;
+  box-shadow: none;
+}
+
+.cke .cke_resizer {
+  border-color: transparent #366089 transparent transparent;
+  box-shadow: none;
+}
+.cke .cke_path_item {
+  text-shadow: none;
+  font-weight: normal;
+}
+.cke .cke_path_item:hover {
+  border-radius: 0;
+  background-color: #d9e1ed;
+  box-shadow: none;
+  text-shadow: none;
+}

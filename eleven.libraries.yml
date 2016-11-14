@@ -26,17 +26,48 @@ global:
   dependencies:
     - system/admin
 
-# Front end admin tools:
+# ------------------------------------------------------------------------------
+# Front End Admin Tools:
+# ------------------------------------------------------------------------------
+feat.toolbar:
+  css:
+    theme:
+      templates/feat/toolbar/toolbar.css: {}
+
 feat.contextual:
   css:
     theme:
       templates/feat/contextual/contextual.css: {}
-feat.outside_in:
-  css:
-    theme:
-      templates/feat/outside_in/outside_in.css: {}
 
 feat.ckeditor:
   css:
     theme:
       templates/feat/ckeditor/ckeditor.css: {}
+
+feat.placeblock:
+  css:
+    theme:
+      templates/feat/block_place/block_place.css: {}
+
+feat.outside_in:
+  css:
+    theme:
+      templates/feat/outside_in/outside_in.css: {}
+
+feat.quickedit:
+  css:
+    theme:
+      templates/feat/quickedit/quickedit.css: {}
+
+feat.shortcut:
+  css:
+    theme:
+      templates/feat/shortcut/shortcut.css: {}
+
+# ------------------------------------------------------------------------------
+# Forms
+# ------------------------------------------------------------------------------
+form.ckeditor:
+  css:
+    theme:
+      templates/component/ckeditor/ckeditortheme.css: { }

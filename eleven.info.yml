@@ -23,23 +23,66 @@ libraries:
 # LIBRARIES EXTEND
 #-------------------------------------------------------------------------------
 libraries-extend:
+  toolbar/toolbar:
+    - eleven/feat.toolbar
+  contextual/drupal.contextual-links:
+    - eleven/feat.contextual
   outside_in/drupal.outside_in:
     - eleven/feat.outside_in
+  block_place/drupal.block_place:
+    - eleven/feat.placeblock
+  block_place/drupal.block_place.icons:
+    - eleven/feat.placeblock
+  quickedit/quickedit:
+  - eleven/feat.quickedit
+  shortcut/drupal.shortcut:
+  - eleven/feat.shortcut
+
+  ckeditor/drupal.ckeditor:
+    - flatearth/form.ckeditor
 
 #-------------------------------------------------------------------------------
 # LIBRARIES OVERRIDE
+# Remove the css files and use libraries-extend to add in new libs so they are
+# all
 #-------------------------------------------------------------------------------
 libraries-override:
+
   # toolbar
   toolbar/toolbar:
     css:
       theme:
-        /core/themes/stable/css/toolbar/toolbar.theme.css: templates/feat/toolbar/toolbar.css
+        /core/themes/stable/css/toolbar/toolbar.theme.css: false
         /core/themes/stable/css/toolbar/toolbar.icons.theme.css: false
   toolbar/toolbar.menu:
     css:
       state:
         /core/themes/stable/css/toolbar/toolbar.menu.css: false
+
+  # contextual
+  contextual/drupal.contextual-links:
+    css:
+      theme:
+        /core/themes/stable/css/contextual/contextual.theme.css: false
+        /core/themes/stable/css/contextual/contextual.icons.theme.css: false
+  contextual/drupal.contextual-toolbar:
+    css:
+      component:
+        /core/themes/stable/css/contextual/contextual.toolbar.css: false
+
+  # quickedit
+  quickedit/quickedit:
+    css:
+      theme:
+        /core/themes/stable/css/quickedit/quickedit.theme.css: false
+        /core/themes/stable/css/quickedit/quickedit.icons.theme.css: false
+
+  # shotcut
+  shortcut/drupal.shortcut:
+    css:
+      theme:
+        /core/themes/stable/css/shortcut/shortcut.theme.css: false
+        /core/themes/stable/css/shortcut/shortcut.icons.theme.css: false
 
   # outside_in
   outside_in/drupal.outside_in:
@@ -52,19 +95,13 @@ libraries-override:
         css/outside_in.tabledrag.css: false
       theme:
         css/outside_in.theme.css: false
+
   # place blocks
   block_place/drupal.block_place:
     css:
       theme:
-        css/block-place.css: templates/feat/block_place/block_place.css
+        css/block-place.css: false
   block_place/drupal.block_place.icons:
     css:
       theme:
-        css/block-place.icons.theme.css: templates/feat/block_place/block_place.css
-
-
-
-
-#-------------------------------------------------------------------------------
-# Remove stylesheets when libraries dont want to be overridden because of something
-#-------------------------------------------------------------------------------
+        css/block-place.icons.theme.css: false
