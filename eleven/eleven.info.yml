@@ -1,0 +1,13 @@
+name: Eleven
+type: theme
+description: 'a new modern disruptive, responsive HTML5 based admin theme for Drupal8'
+base theme: elevenfeat # Seperated the Front End Admin Tools.
+core: '8.x'
+screenshot: goes-to-eleven.jpg
+
+# -- regions -------------------------------------------------------------------
+
+
+# -- Libraries -----------------------------------------------------------------
+libraries:
+  - eleven/global

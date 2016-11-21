@@ -1,0 +1,60 @@
+.ui-dialog-offcanvas {
+  background: red;
+  border: 0;
+  z-index: 501;
+}
+
+
+.ui-dialog-offcanvas .ui-dialog-titlebar {
+
+}
+
+
+/**/
+.ui-dialog-offcanvas .ui-dialog-titlebar-close {
+  background-image: url(icons/x.svg);
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-color: transparent;
+  border: 0;
+  position: absolute;
+  right: 20px;
+}
+.ui-dialog-offcanvas .ui-dialog-titlebar-close:hover {
+  background-image: url(icons/x.svg);
+}
+[dir="rtl"] .ui-dialog-offcanvas .ui-dialog-titlebar-close {
+  left: 20px;
+  right: auto;
+}
+
+
+
+
+/* Style content in the tray. */
+.ui-dialog-offcanvas p,
+.ui-dialog-offcanvas h1,
+.ui-dialog-offcanvas h2,
+.ui-dialog-offcanvas h3,
+.ui-dialog-offcanvas h4,
+.ui-dialog-offcanvas h5,
+.ui-dialog-offcanvas h6,
+.ui-dialog-offcanvas pre,
+.ui-dialog-offcanvas legend,
+.ui-dialog-offcanvas cite,
+.ui-dialog-offcanvas span,
+.ui-dialog-offcanvas summary,
+.ui-dialog-offcanvas details,
+.ui-dialog-offcanvas .form-item {
+}
+
+.ui-dialog-offcanvas a,
+.ui-dialog-offcanvas .link {
+}
+.ui-dialog-offcanvas a:focus,
+.ui-dialog-offcanvas .link:focus,
+.ui-dialog-offcanvas a:hover,
+.ui-dialog-offcanvas .link:hover {
+
+}

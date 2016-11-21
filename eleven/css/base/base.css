@@ -18,7 +18,7 @@ hr {
   width: 100%;
 }
 
-/* make sure the footer is always placed at the bottom */
+/* flex fix to make sure the footer is always placed at the bottom */
 body {
   display: flex;
   min-height: 100vh;
@@ -26,11 +26,11 @@ body {
   margin:0;
   background-color: white;
 }
-
 main {
   flex: 1;
 }
 
+/* basic links */
 a{
   text-decoration: none;
 }

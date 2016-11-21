@@ -1,50 +1,45 @@
-name: Eleven
+name: Eleven FEAT
 type: theme
+description: 'Seperation of the frontend Admin tools for the Eleven theme'
 base theme: classy
-package: Core
+package: eleven
 core: '8.x'
 
-regions:
-  breadcrumb: Breadcrumb
-  title: 'page title'
-  highlighted: Highlighted
-  help: Help
-  content: Content
-  primary_tabs: 'Primary tabs'
-  secondary_tabs: 'Secondary tabs'
-  primary_admin_actions: 'Primary admin actions'
-  user_login: 'login'
-
+hidden: TRUE
 # -- Libraries -----------------------------------------------------------------
 libraries:
-  - eleven/global
+  - elevenfeat/global
 
 #-------------------------------------------------------------------------------
 # LIBRARIES EXTEND
 #-------------------------------------------------------------------------------
 libraries-extend:
+  #FEAT
   toolbar/toolbar:
-    - eleven/feat.toolbar
+    - elevenfeat/feat.toolbar
   contextual/drupal.contextual-links:
-    - eleven/feat.contextual
+    - elevenfeat/feat.contextual
   outside_in/drupal.outside_in:
-    - eleven/feat.outside_in
+    - elevenfeat/feat.outside_in
   block_place/drupal.block_place:
-    - eleven/feat.placeblock
+    - elevenfeat/feat.placeblock
   block_place/drupal.block_place.icons:
-    - eleven/feat.placeblock
+    - elevenfeat/feat.placeblock
   quickedit/quickedit:
-  - eleven/feat.quickedit
+  - elevenfeat/feat.quickedit
   shortcut/drupal.shortcut:
-  - eleven/feat.shortcut
+  - elevenfeat/feat.shortcut
+  core/jquery.ui:
+  - elevenfeat/feat.jquery_ui
 
+  #Forms
   ckeditor/drupal.ckeditor:
-    - flatearth/form.ckeditor
+  - elevenfeat/form.ckeditor
 
 #-------------------------------------------------------------------------------
 # LIBRARIES OVERRIDE
-# Remove the css files and use libraries-extend to add in new libs so they are
-# all
+# Remove css files, use libraries-extend to add in new libs with elevens css files
+# templates & icons
 #-------------------------------------------------------------------------------
 libraries-override:
 
@@ -52,37 +47,37 @@ libraries-override:
   toolbar/toolbar:
     css:
       theme:
-        /core/themes/stable/css/toolbar/toolbar.theme.css: false
-        /core/themes/stable/css/toolbar/toolbar.icons.theme.css: false
+        css/toolbar.theme.css: false
+        css/toolbar.icons.theme.css: false
   toolbar/toolbar.menu:
     css:
       state:
-        /core/themes/stable/css/toolbar/toolbar.menu.css: false
+        css/toolbar.menu.css: false
 
   # contextual
   contextual/drupal.contextual-links:
     css:
       theme:
-        /core/themes/stable/css/contextual/contextual.theme.css: false
-        /core/themes/stable/css/contextual/contextual.icons.theme.css: false
+        css/contextual.theme.css: false
+        css/contextual.icons.theme.css: false
   contextual/drupal.contextual-toolbar:
     css:
       component:
-        /core/themes/stable/css/contextual/contextual.toolbar.css: false
+        css/contextual.toolbar.css: false
 
   # quickedit
   quickedit/quickedit:
     css:
       theme:
-        /core/themes/stable/css/quickedit/quickedit.theme.css: false
-        /core/themes/stable/css/quickedit/quickedit.icons.theme.css: false
+        css/quickedit.theme.css: false
+        css/quickedit.icons.theme.css: false
 
   # shotcut
   shortcut/drupal.shortcut:
     css:
       theme:
-        /core/themes/stable/css/shortcut/shortcut.theme.css: false
-        /core/themes/stable/css/shortcut/shortcut.icons.theme.css: false
+        css/shortcut.theme.css: false
+        css/shortcut.icons.theme.css: false
 
   # outside_in
   outside_in/drupal.outside_in:
@@ -105,3 +100,9 @@ libraries-override:
     css:
       theme:
         css/block-place.icons.theme.css: false
+
+  # jquery ui
+  core/jquery.ui:
+    css:
+      theme:
+        assets/vendor/jquery.ui/themes/base/theme.css: false

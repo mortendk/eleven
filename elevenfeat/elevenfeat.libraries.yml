@@ -1,28 +1,11 @@
 global:
   css:
     base:
-      css/base/base.css: { weight: -20}
-      css/base/image.css: {}
-      css/base/list.css: {}
-      css/base/table.css: {}
-      css/base/nav.css: {}
-      css/admin.css: {}
     layout:
-      css/layout/layout.css: {}
-      css/layout/layout-admin.css: {}
     component:
-     templates/component/messages/messages.css: {}
     theme:
-      css/theme/icon.css: {}
-      css/theme/balloon.css: {}
-      css/theme/menu.css: {}
-      css/theme/image.css: {}
-      css/theme/typography.css: {}
-      css/temp.css: {}
-      css/print.css: { media: print }
+      css/type.css: {}
   js:
-    js/table.js: {}
-    js/script.js: {}
   dependencies:
     - system/admin
 
@@ -39,11 +22,6 @@ feat.contextual:
     theme:
       templates/feat/contextual/contextual.css: {}
 
-feat.ckeditor:
-  css:
-    theme:
-      templates/feat/ckeditor/ckeditor.css: {}
-
 feat.placeblock:
   css:
     theme:
@@ -53,6 +31,7 @@ feat.outside_in:
   css:
     theme:
       templates/feat/outside_in/outside_in.css: {}
+      templates/feat/outside_in/offcanvas_container.css: {}
 
 feat.quickedit:
   css:
@@ -64,10 +43,15 @@ feat.shortcut:
     theme:
       templates/feat/shortcut/shortcut.css: {}
 
+feat.jquery_ui:
+  css:
+    theme:
+      templates/feat/jquery_ui/jquery_ui.css: {}
+
 # ------------------------------------------------------------------------------
 # Forms
 # ------------------------------------------------------------------------------
 form.ckeditor:
   css:
     theme:
-      templates/component/ckeditor/ckeditortheme.css: { }
+      templates/form/ckeditor/ckeditortheme.css: { }
