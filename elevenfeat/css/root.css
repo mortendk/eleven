@@ -1,0 +1,27 @@
+:root {
+  --asphalt: #566075;
+  --asphalt-light: #6C7B8A;
+  --concrete: #B0BEC5;
+  --concrete-light: #CFD8DC;
+  --gravel: #F0F0F0;
+  --gravel-light: #F9F9F9;
+  --bluesky: #18A9E0;
+  --bluesky-light: #6BBEE4;
+  --bluesky-10: #2FB1E3;
+  --bluesky-20: #46BAE6:
+  --bluesky-30: #5DC2E9;
+  --bluesky-40: #74CBEC;
+  --bluesky-50: #8BD4EF;
+  --rasberry: #CD255C;
+  --rasberry-light: #F8608C;
+  --grass: #7EBD4E:
+  --grass-light: #98D468;
+  --strawberry: #D8434D;
+  --strawberry: #ED5465;
+  --pumpkin: #E9673F;
+  --pumpkin-light: #F87E51;
+  --yellowsnow: #F5BA41;
+  --yellowsnow-light: #FCCE54;
+  --black: #000000;
+  --white: #ffffff;
+}

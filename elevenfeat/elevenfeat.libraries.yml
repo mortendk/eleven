@@ -1,7 +1,9 @@
 global:
   css:
     base:
+      css/root.css: {}
     layout:
+      css/layout.css: {}
     component:
     theme:
       css/type.css: {}
