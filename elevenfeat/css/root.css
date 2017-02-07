@@ -8,20 +8,39 @@
   --bluesky: #18A9E0;
   --bluesky-light: #6BBEE4;
   --bluesky-10: #2FB1E3;
-  --bluesky-20: #46BAE6:
+  --bluesky-20: #46BAE6;
   --bluesky-30: #5DC2E9;
   --bluesky-40: #74CBEC;
   --bluesky-50: #8BD4EF;
   --rasberry: #CD255C;
   --rasberry-light: #F8608C;
-  --grass: #7EBD4E:
+  --grass: #7EBD4E;
   --grass-light: #98D468;
   --strawberry: #D8434D;
-  --strawberry: #ED5465;
+  --strawberry-light: #ED5465;
   --pumpkin: #E9673F;
   --pumpkin-light: #F87E51;
   --yellowsnow: #F5BA41;
   --yellowsnow-light: #FCCE54;
   --black: #000000;
   --white: #ffffff;
+
+  --icon-drop: url("data:image/svg+xml,%0A%3Csvg width='19px' height='24px' viewBox='6 5 19 24' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 42 %2836781%29 - http://www.bohemiancoding.com/sketch --%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3C/defs%3E%3Cpath d='M16.0001856,7.94743691 C17.0112026,9.64560637 18.2138918,10.9083505 19.4649781,12.2220066 C20.2964091,13.0950499 21.1562181,13.9977739 22.0038347,15.0808289 L22.0091057,15.0875138 L22.0144299,15.0941452 C23.2044474,16.5737463 23.8075224,18.4403209 23.7126447,20.349946 C23.6171281,22.2727269 22.8173763,24.082079 21.4607106,25.4447217 C20.0022457,26.9097766 18.0630032,27.716506 16.0002921,27.716506 C13.9375809,27.716506 11.9983385,26.9097231 10.5397671,25.4447217 C9.18304815,24.082079 8.38318985,22.2726199 8.28756678,20.3498925 C8.19252936,18.4402674 8.79555106,16.5737463 9.98551531,15.0941452 L9.99083953,15.0875138 L9.99611052,15.0808289 C10.8437803,13.997667 11.7036959,13.0948359 12.5352866,12.2217392 C13.7864262,10.9080831 14.9890621,9.64549942 16.0001856,7.94743691 L16.0001856,7.94743691 Z M16.0001856,5 C14.3912581,9.26098602 11.6895335,10.839951 8.99142929,14.2875762 C6.13631374,17.837667 6.3512527,23.0527703 9.63613968,26.3522589 C11.3935598,28.1174909 13.6968195,29 16.0001856,29 C18.3034985,29 20.6067581,28.1174909 22.364125,26.3522589 C25.649012,23.0527703 25.8634718,17.837667 23.0083562,14.2875762 C20.3103053,10.8400045 17.6091131,9.26098602 16.0001856,5 L16.0001856,5 L16.0001856,5 Z' id='drop' stroke='none' fill='%2318A9E0' fill-rule='evenodd'%3E%3C/path%3E%3C/svg%3E");
+  --icon-down: url("data:image/svg+xml,%0A%3Csvg width='16px' height='10px' viewBox='0 3 16 10' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 42 %2836781%29 - http://www.bohemiancoding.com/sketch --%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3C/defs%3E%3Cpolygon id='menu-open' stroke='none' fill='%23000000' fill-rule='evenodd' points='14.1155556 3 8 9.11555556 1.88444444 3 0 4.88444444 8 12.8844444 16 4.88444444'%3E%3C/polygon%3E%3C/svg%3E");
+  --icon-up: url("data:image/svg+xml,%0A%3Csvg width='17px' height='10px' viewBox='0 2 17 10' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 42 %2836781%29 - http://www.bohemiancoding.com/sketch --%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3C/defs%3E%3Cpolygon id='menu-close' stroke='none' fill='%23000000' fill-rule='evenodd' points='8.00269751 2 0 10.0026975 1.88730283 11.8900003 8.00269751 5.77460566 14.1180922 11.8900003 16.005395 10.0026975'%3E%3C/polygon%3E%3C/svg%3E");
+  --icon-heart: url("data:image/svg+xml,%0A%3Csvg width='17px' height='15px' viewBox='0 1 17 15' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 42 %2836781%29 - http://www.bohemiancoding.com/sketch --%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3C/defs%3E%3Cg id='heart' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' transform='translate%280.000000, 1.000000%29'%3E%3Cpath d='M8.0000096,14.0952229 C8.14286667,14.0952229 8.28572427,14.0416517 8.3928672,13.9345088 L13.9553739,8.57735947 C14.0357312,8.49700213 16.0000192,6.70235733 16.0000192,4.5594976 C16.0000192,1.94342293 14.4018027,0.380921067 11.7321568,0.380921067 C10.1696549,0.380921067 8.70536747,1.6130656 8.0000096,2.30949493 C7.29465173,1.6130656 5.83036427,0.380921067 4.2678624,0.380921067 C1.598216,0.380921067 0,1.94342293 0,4.5594976 C0,6.70235733 1.964288,8.49700213 2.0357168,8.5595024 L7.607152,13.9345088 C7.71429493,14.0416517 7.857152,14.0952229 8.0000096,14.0952229 Z' id='Shape' fill='%23FFFFFF' fill-rule='nonzero'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+
+  --button-bluesky: repeating-linear-gradient(to right, #18A9E0 0rem, #18A9E0 2rem, #6BBEE4 2rem, #6BBEE4 );
+  --button-bluesky-light: repeating-linear-gradient(to right, #6BBEE4 0rem, #6BBEE4 2rem, #8BD4EF 2rem, #8BD4EF );
+  --button-bluesky-50: repeating-linear-gradient(to right, #8BD4EF 0rem, #8BD4EF 2rem, #F0F0F0 2rem, #F0F0F0 );
+
+  --button-concrete: repeating-linear-gradient(to right, #B0BEC5 0rem, #B0BEC5 2rem, #CFD8DC 2rem, #CFD8DC );
+
+  --button-gravel: repeating-linear-gradient(to right, #F0F0F0 0rem, #F0F0F0 2rem, #F9F9F9 2rem, #F9F9F9 );
+  --button-gravel-light: repeating-linear-gradient(to right, #F9F9F9 0rem, #F9F9F9 2rem, #fff 2rem, #fff );
+
+  --button-rasberry: repeating-linear-gradient(to right, #cd255c 0rem, #cd255c 2rem, #f8608c 2rem, #f8608c );
+  --button-rasberry-rev: repeating-linear-gradient(to right, #f8608c 0rem, #f8608c 2rem, #cd255c 2rem, #cd255c );
+  --button-rasberry-active: repeating-linear-gradient(to right, #cd255c 0rem, #cd255c 2rem, #cd255c 2rem, #cd255c );  
+  --button-asphalt: repeating-linear-gradient(to right, #566075 0rem, #566075 2rem, #6C7B8A 2rem, #6C7B8A );
 }

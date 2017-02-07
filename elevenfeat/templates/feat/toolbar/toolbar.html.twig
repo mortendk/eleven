@@ -21,10 +21,12 @@
  */
 #}
 <div{{ attributes.addClass('toolbar') }}>
-  <nav{{ toolbar_attributes.addClass('toolbar-bar L') }}>
+  <nav{{ toolbar_attributes.addClass('toolbar-bar') }}>
 
     <h2 class="visually-hidden">{{ toolbar_heading }}</h2>
-
+    <div class="toolbar-tab">
+      <a href="{{ url('<front>') }}" class="toolbar-item toolbar-item--small toolbar-icon toolbar-icon-11home">home</a>
+    </div>
     {% for key, tab in tabs %}
       {% set tray = trays[key] %}
       <div{{ tab.attributes.addClass('toolbar-tab') }}>
