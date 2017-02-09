@@ -1,15 +1,11 @@
 /* Style the editables while in edit mode. */
 #main-canvas.js-outside-in-edit-mode .outside-in-editable {
-  outline: 1px dashed green;
+  outline: 1px dashed var(--strawberry);
 }
 #main-canvas.js-outside-in-edit-mode .outside-in-editable:hover,
 #main-canvas.js-outside-in-edit-mode .outside-in-editable.outside-in-active-editable {
   background-color: rgba(250,0,0,0.2);
 }
-
-
-
-
 
 
 /* Override default styling from jquery UI. */

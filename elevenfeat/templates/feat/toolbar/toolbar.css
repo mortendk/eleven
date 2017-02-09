@@ -45,18 +45,19 @@ body.is-edit-ui-toolbar-opened .toolbar-bar,
   background-color: var(--asphalt);
   color: var(--white);
 }
-.toolbar-tab .toolbar-item--small {
-  width: 2rem;
-  min-width: 2rem;
-  text-indent: -999rem;
-}
 
 @media (max-width: 47.99rem) {
   .toolbar-tab .toolbar-item {
     width: 3em;
     min-width: 3rem;
-    text-indent: -99rem;
+    text-indent: -999rem;
   }
+}
+
+.toolbar-tab .toolbar-item--small {
+  width: 2rem;
+  min-width: 2rem;
+  text-indent: -999rem;
 }
 
 .toolbar-tab button.toolbar-icon {
@@ -132,10 +133,10 @@ body.is-edit-ui-toolbar-opened .toolbar-bar,
   float: right;
   margin: 0 0 0 3rem;
 }
-@media (max-width: 47.99em) {
-.toolbar .toolbar-bar .contextual-toolbar-tab.toolbar-tab {
-  margin: 0
-}
+@media (max-width: 61.99em) {
+  .toolbar .toolbar-bar .contextual-toolbar-tab.toolbar-tab {
+    margin: 0;
+  }
 }
 
 /* Editing */
@@ -227,7 +228,7 @@ VERTICAL TRAY variation
   color: var(--white);
   line-height: 2rem;
 }
-.toolbar-vertical .toolbar-menu a:hover{
+.toolbar-vertical .toolbar-menu a:hover {
   background-image: var(--icon-heart), var(--button-bluesky-light);
 }
 .toolbar-vertical .toolbar-menu .level-2 a {
@@ -274,7 +275,7 @@ VERTICAL TRAY variation
   background-position: center center;
   text-indent: -999rem;
 }
-.toolbar button.toolbar-handle:hover{
+.toolbar button.toolbar-handle:hover {
   background-color: var(--bluesky);
 }
 .toolbar button.toolbar-handle.open {
@@ -285,7 +286,7 @@ body.toolbar-vertical .toolbar-menu .level-2 button.toolbar-handle {
   background-color: var(--gravel);
   background-image: var(--icon-down-small);
 }
-body.toolbar-vertical .toolbar-menu .level-2 button.toolbar-handle:hover{
+body.toolbar-vertical .toolbar-menu .level-2 button.toolbar-handle:hover {
   background-color: var(--gravel-light);
 }
 body.toolbar-vertical .toolbar-menu .level-2 button.toolbar-handle.open {
@@ -341,7 +342,7 @@ nav[aria-label="User-defined shortcuts"] a {
   padding: 0 0.5rem 0 2.5rem ;
   border-left: 1px solid var(--bluesky-light);
   outline: none;
-  background-image: var(--icon-heart), var(--button-rasberry);
+  background-image: var(--icon-pen), var(--button-rasberry);
   background-repeat: no-repeat;
   background-position: 0.5rem 0.5rem,
   0 0;
@@ -361,15 +362,21 @@ nav[aria-label="User-defined shortcuts"] a {
 User
 */
 .toolbar-tray .account a {
-  background-image: var(--icon-user);
+  background-image: var(--icon-user), var(--button-bluesky);
 }
 .toolbar-tray .account-edit a {
-  background-image: var(--icon-user);
+  background-image: var(--icon-pen), var(--button-bluesky);
 }
 .toolbar-tray li.logout {
   float: right;
   padding-right: 1rem;
 }
+
+.toolbar-vertical .toolbar-tray li.logout{
+  float: none;
+  padding: 0
+}
+
 .toolbar-tray .logout a {
   background-image: var(--icon-user),var(--button-strawberry);
   background-position: 0.5rem 0.5rem,  0 0;
