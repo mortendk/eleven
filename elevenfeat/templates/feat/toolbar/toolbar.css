@@ -26,7 +26,7 @@ TODO:
 }
 
 /*------------------------------------------------------------------------------
-  Main Toolbar (toolbar-tab)
+  Main Toolbar (toolbar-tabs)
 ------------------------------------------------------------------------------*/
 .toolbar-bar {
   background-color: var(--black);
@@ -41,23 +41,64 @@ body.is-edit-ui-toolbar-opened .toolbar-bar,
 .toolbar-tab .toolbar-item {
   min-width: 9rem;
   height: 2rem;
+  padding-top: 0.5rem;
+  padding-left: 2.5rem;
   border-left: 1px solid var(--black);
   background-color: var(--asphalt);
+  background-repeat: no-repeat;
+  background-position: 1rem 0.5rem;
+  background-size: 1rem;
   color: var(--white);
+  font-size: 1rem;
+  text-transform: capitalize;
+  transition: background 0.2s ease-in-out;
 }
 
 @media (max-width: 47.99rem) {
   .toolbar-tab .toolbar-item {
     width: 3em;
     min-width: 3rem;
+    background-position: center center;
     text-indent: -999rem;
   }
 }
 
-.toolbar-tab .toolbar-item--small {
-  width: 2rem;
-  min-width: 2rem;
-  text-indent: -999rem;
+.toolbar-tab .toolbar-item:hover {
+  animation: toolbar_tab_pulse 1.5s infinite;
+}
+.toolbar-tab .toolbar-item.is-active {
+  background-color: var(--bluesky);
+}
+.toolbar-tab .toolbar-item.is-active:hover {
+  animation: toolbar_tab_pulse_active 1.5s infinite;
+}
+/* tabs animation */
+@keyframes toolbar_tab_pulse {
+  0% {
+    background-size: 1rem;
+  }
+  50% {
+    background-color: var(--asphalt-light);
+    background-size: 1.2rem;
+    color: var(--concrete);
+  }
+  100% {
+    background-size: 1rem;
+  }
+}
+@keyframes toolbar_tab_pulse_active {
+  0% {
+    background-size: 1rem;
+    color: var(--white);
+  }
+  50% {
+    background-color: var(--bluesky-light);
+    background-size: 1.2rem;
+    color: var(--bluesky-50);
+  }
+  100% {
+    background-size: 1rem;
+  }
 }
 
 .toolbar-tab button.toolbar-icon {
@@ -65,53 +106,36 @@ body.is-edit-ui-toolbar-opened .toolbar-bar,
   padding: 0 0 0 2.5rem ;
   border: 0;
   outline: none;
+  background-repeat: no-repeat;
   background-position: 0.5rem 0.5rem,
   0 0;
   background-size: auto;
   text-align: left;
-}
-
-.toolbar-tab .toolbar-item:hover {
-  background-color: var(--asphalt-light);
-}
-.toolbar-tab .toolbar-item.is-active {
-  background-color: var(--bluesky);
-}
-.toolbar-tab .toolbar-item.is-active:hover {
-  background-color: var(--bluesky-light);
-}
-
-/* Toolbar tab icons */
-.toolbar-tab .toolbar-icon {
-  padding-top: 0.5rem;
-  padding-left: 2.5rem;
-  background-repeat: no-repeat;
-  background-position: 1rem 0.5rem;
-  background-size: 1rem;
-  font-size: 1rem;
-  text-transform: capitalize;
-}
-@media (max-width: 47.99em) {
-  .toolbar-tab .toolbar-icon {
-    background-position: center center;
-  }
-  .toolbar-tab .toolbar-item--small.toolbar-icon {
-    margin: 0;
-    padding: 0;
-    background-position: center center;
-  }
+  transition: background 0.2s ease-in-out;
 }
 
 /* main toolbar icons */
-.toolbar-tab .toolbar-icon-11home {
+.toolbar-icon-11home {
+  display: block;
+  float: left;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
   background-color: var(--asphalt-light);
   background-image: var(--icon-drop);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 1rem;
+  text-indent: -999rem;
+}
+/* Home icon */
+.toolbar-icon-11home:hover {
+  background-color: var(--concrete);
 }
 
 .toolbar-tab .toolbar-icon-escape-admin {
   background-image: url("data:image/svg+xml,%0A%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 42 %2836781%29 - http://www.bohemiancoding.com/sketch --%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3C/defs%3E%3Cpath d='M15.1135128,7.34274701 C15.1135128,6.64441594 14.6514829,6.02824103 13.9122353,6.02824103 L6.684033,6.02824103 L9.69236149,3.01925558 C9.93877734,2.77278525 10.0825204,2.43388923 10.0825204,2.0847237 C10.0825204,1.73555816 9.93877734,1.39666215 9.69236149,1.15019243 L8.92231148,0.390243618 C8.67589562,0.1437739 8.34734094,0 7.99825171,0 C7.64916248,0 7.31034053,0.1437739 7.06392467,0.390243618 L0.37989106,7.06546873 C0.14374248,7.31193845 0,7.65083446 0,8 C0,8.34916554 0.14374248,8.68806155 0.37989106,8.92426175 L7.06392467,15.6200259 C7.31034053,15.8562261 7.64916248,16 7.99825171,16 C8.34734094,16 8.6861629,15.8562261 8.92231148,15.6200259 L9.69236149,14.8395381 C9.93877734,14.6033379 10.0825204,14.2644418 10.0825204,13.9152763 C10.0825204,13.5661108 9.93877734,13.2272141 9.69236149,12.9910139 L6.684033,9.97175897 L13.9122353,9.97175897 C14.6514829,9.97175897 15.1135128,9.35558406 15.1135128,8.65725299 L15.1135128,7.34274701 Z' id='Shape' stroke='none' fill='%23FFFFFF' fill-rule='evenodd'%3E%3C/path%3E%3C/svg%3E");
 }
-
 /* back to site*/
 .toolbar-tab .toolbar-icon-escape-admin {
   background-image: url("data:image/svg+xml,%0A%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 42 %2836781%29 - http://www.bohemiancoding.com/sketch --%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3C/defs%3E%3Cpath d='M15.1135128,7.34274701 C15.1135128,6.64441594 14.6514829,6.02824103 13.9122353,6.02824103 L6.684033,6.02824103 L9.69236149,3.01925558 C9.93877734,2.77278525 10.0825204,2.43388923 10.0825204,2.0847237 C10.0825204,1.73555816 9.93877734,1.39666215 9.69236149,1.15019243 L8.92231148,0.390243618 C8.67589562,0.1437739 8.34734094,0 7.99825171,0 C7.64916248,0 7.31034053,0.1437739 7.06392467,0.390243618 L0.37989106,7.06546873 C0.14374248,7.31193845 0,7.65083446 0,8 C0,8.34916554 0.14374248,8.68806155 0.37989106,8.92426175 L7.06392467,15.6200259 C7.31034053,15.8562261 7.64916248,16 7.99825171,16 C8.34734094,16 8.6861629,15.8562261 8.92231148,15.6200259 L9.69236149,14.8395381 C9.93877734,14.6033379 10.0825204,14.2644418 10.0825204,13.9152763 C10.0825204,13.5661108 9.93877734,13.2272141 9.69236149,12.9910139 L6.684033,9.97175897 L13.9122353,9.97175897 C14.6514829,9.97175897 15.1135128,9.35558406 15.1135128,8.65725299 L15.1135128,7.34274701 Z' id='Shape' stroke='none' fill='%23FFFFFF' fill-rule='evenodd'%3E%3C/path%3E%3C/svg%3E");
@@ -128,10 +152,11 @@ body.is-edit-ui-toolbar-opened .toolbar-bar,
 .toolbar-tab .toolbar-icon-user {
   background-image: var(--icon-user);
 }
-/* edit & block layout */
+
+/* edit */
 .toolbar .toolbar-bar .contextual-toolbar-tab.toolbar-tab {
   float: right;
-  margin: 0 0 0 3rem;
+  margin: 0 0 0 1rem;
 }
 @media (max-width: 61.99em) {
   .toolbar .toolbar-bar .contextual-toolbar-tab.toolbar-tab {
@@ -155,23 +180,47 @@ body.is-edit-ui-toolbar-opened .toolbar-bar,
   background-image: var(--icon-pen), var(--button-rasberry-active);
 }
 
+/* Place block */
+.toolbar .toolbar-bar .block-place-toolbar-tab {
+  float: right;
+  margin: 0 1rem 0 0;
+}
+.toolbar-tab .toolbar-icon-place-block-inactive {
+  background-image: var(--icon-browser), var(--button-asphalt);
+  background-position: 0.5rem 0.5rem, 0 0;
+  background-size: auto;
+}
+.toolbar-tab .toolbar-icon-place-block-inactive:hover {
+  background-image: var(--icon-browser), var(--button-rasberry);
+}
+.toolbar-tab .toolbar-icon-place-block-inactive:active {
+  background-image: var(--icon-browser), var(--button-rasberry-active);
+}
+.toolbar-tab .toolbar-icon-place-block-active {
+  background-image: var(--icon-browser), var(--button-rasberry);
+  background-position: 0.5rem 0.5rem, 0 0;
+  background-size: auto;
+}
+.toolbar-tab .toolbar-icon-place-block-active:hover {
+  background-image: var(--icon-browser), var(--button-rasberry-rev);
+}
+.toolbar-tab .toolbar-icon-place-block-active:active {
+  background-image: var(--icon-browser), var(--button-rasberry-active);
+}
+
 /* block layout  */
-/* why do .module css files have padding in em ????  anyways overwrite it */
 .toolbar .toolbar-bar .toolbar-tab > .edit-ui__toolbar-icon.toolbar-icon {
   padding-left: 2.5rem;
 }
 .toolbar-tab .edit-ui__toolbar-icon {
-  background-image: url("data:image/svg+xml,%0A%3Csvg width='16px' height='17px' viewBox='0 0 16 17' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 42 %2836781%29 - http://www.bohemiancoding.com/sketch --%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3C/defs%3E%3Cpath d='M0.681197853,0.503049441 C0.255934778,0.646007103 -0.0220152521,1.05475715 0.00137028395,1.50279587 L0.00137028395,15.4992458 C0.00137028395,16.0513905 0.448972005,16.4989922 1.00111671,16.4989922 L14.9975667,16.4989922 C15.5497114,16.4989922 15.9973131,16.0513905 15.9973131,15.4992458 L15.9973131,1.50279587 C15.9973131,0.950651161 15.5497114,0.503049441 14.9975667,0.503049441 L1.00111671,0.503049441 C0.941253887,0.497639833 0.881025174,0.497639833 0.821162352,0.503049441 C0.781208551,0.500647886 0.741146582,0.500647886 0.701192781,0.503049441 L0.681197853,0.503049441 Z M3.00060956,2.50254229 C3.56046756,2.50254229 4.00035598,2.94243072 4.00035598,3.50228871 C4.00035598,4.06214671 3.56046756,4.50203514 3.00060956,4.50203514 C2.44075156,4.50203514 2.00086313,4.06214671 2.00086313,3.50228871 C2.00086313,2.94243072 2.44075156,2.50254229 3.00060956,2.50254229 Z M6.99959526,2.50254229 L12.9980738,2.50254229 C13.5579318,2.50254229 13.9978202,2.94243072 13.9978202,3.50228871 C13.9978202,4.06214671 13.5579318,4.50203514 12.9980738,4.50203514 L6.99959526,4.50203514 C6.43973726,4.50203514 5.99984883,4.06214671 5.99984883,3.50228871 C5.99984883,2.94243072 6.43973726,2.50254229 6.99959526,2.50254229 Z M2.00086313,6.50152799 L13.9978202,6.50152799 L13.9978202,14.4994994 L2.00086313,14.4994994 L2.00086313,6.50152799 Z' id='icon-/-browser' stroke='none' fill='%23FFFFFF' fill-rule='evenodd'%3E%3C/path%3E%3C/svg%3E"),
-  var(--button-asphalt);
+  background-image: var(--icon-browser), var(--button-asphalt);
 }
 .toolbar-tab .edit-ui__toolbar-icon:hover,
 .toolbar-tab .edit-ui__toolbar-icon.is-active {
-  background-image: url("data:image/svg+xml,%0A%3Csvg width='16px' height='17px' viewBox='0 0 16 17' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 42 %2836781%29 - http://www.bohemiancoding.com/sketch --%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3C/defs%3E%3Cpath d='M0.681197853,0.503049441 C0.255934778,0.646007103 -0.0220152521,1.05475715 0.00137028395,1.50279587 L0.00137028395,15.4992458 C0.00137028395,16.0513905 0.448972005,16.4989922 1.00111671,16.4989922 L14.9975667,16.4989922 C15.5497114,16.4989922 15.9973131,16.0513905 15.9973131,15.4992458 L15.9973131,1.50279587 C15.9973131,0.950651161 15.5497114,0.503049441 14.9975667,0.503049441 L1.00111671,0.503049441 C0.941253887,0.497639833 0.881025174,0.497639833 0.821162352,0.503049441 C0.781208551,0.500647886 0.741146582,0.500647886 0.701192781,0.503049441 L0.681197853,0.503049441 Z M3.00060956,2.50254229 C3.56046756,2.50254229 4.00035598,2.94243072 4.00035598,3.50228871 C4.00035598,4.06214671 3.56046756,4.50203514 3.00060956,4.50203514 C2.44075156,4.50203514 2.00086313,4.06214671 2.00086313,3.50228871 C2.00086313,2.94243072 2.44075156,2.50254229 3.00060956,2.50254229 Z M6.99959526,2.50254229 L12.9980738,2.50254229 C13.5579318,2.50254229 13.9978202,2.94243072 13.9978202,3.50228871 C13.9978202,4.06214671 13.5579318,4.50203514 12.9980738,4.50203514 L6.99959526,4.50203514 C6.43973726,4.50203514 5.99984883,4.06214671 5.99984883,3.50228871 C5.99984883,2.94243072 6.43973726,2.50254229 6.99959526,2.50254229 Z M2.00086313,6.50152799 L13.9978202,6.50152799 L13.9978202,14.4994994 L2.00086313,14.4994994 L2.00086313,6.50152799 Z' id='icon-/-browser' stroke='none' fill='%23FFFFFF' fill-rule='evenodd'%3E%3C/path%3E%3C/svg%3E"),
-  var(--button-rasberry);
+  background-image: var(--icon-browser), var(--button-rasberry);
 }
 .toolbar-tab .edit-ui__toolbar-icon:active {
-  background-image: url("data:image/svg+xml,%0A%3Csvg width='16px' height='17px' viewBox='0 0 16 17' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 42 %2836781%29 - http://www.bohemiancoding.com/sketch --%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3C/defs%3E%3Cpath d='M0.681197853,0.503049441 C0.255934778,0.646007103 -0.0220152521,1.05475715 0.00137028395,1.50279587 L0.00137028395,15.4992458 C0.00137028395,16.0513905 0.448972005,16.4989922 1.00111671,16.4989922 L14.9975667,16.4989922 C15.5497114,16.4989922 15.9973131,16.0513905 15.9973131,15.4992458 L15.9973131,1.50279587 C15.9973131,0.950651161 15.5497114,0.503049441 14.9975667,0.503049441 L1.00111671,0.503049441 C0.941253887,0.497639833 0.881025174,0.497639833 0.821162352,0.503049441 C0.781208551,0.500647886 0.741146582,0.500647886 0.701192781,0.503049441 L0.681197853,0.503049441 Z M3.00060956,2.50254229 C3.56046756,2.50254229 4.00035598,2.94243072 4.00035598,3.50228871 C4.00035598,4.06214671 3.56046756,4.50203514 3.00060956,4.50203514 C2.44075156,4.50203514 2.00086313,4.06214671 2.00086313,3.50228871 C2.00086313,2.94243072 2.44075156,2.50254229 3.00060956,2.50254229 Z M6.99959526,2.50254229 L12.9980738,2.50254229 C13.5579318,2.50254229 13.9978202,2.94243072 13.9978202,3.50228871 C13.9978202,4.06214671 13.5579318,4.50203514 12.9980738,4.50203514 L6.99959526,4.50203514 C6.43973726,4.50203514 5.99984883,4.06214671 5.99984883,3.50228871 C5.99984883,2.94243072 6.43973726,2.50254229 6.99959526,2.50254229 Z M2.00086313,6.50152799 L13.9978202,6.50152799 L13.9978202,14.4994994 L2.00086313,14.4994994 L2.00086313,6.50152799 Z' id='icon-/-browser' stroke='none' fill='%23FFFFFF' fill-rule='evenodd'%3E%3C/path%3E%3C/svg%3E"),
-  var(--button-rasberry-rev);
+  background-image: var(--icon-browser), var(--button-rasberry-rev);
 }
 
 /* -----------------------------------------------------------------------------
@@ -182,24 +231,206 @@ body.is-edit-ui-toolbar-opened .toolbar-bar,
   background-color: var(--bluesky);
 }
 
-.toolbar-horizontal .toolbar-menu a {
+/*
+  Setting all menu item links
+*/
+.toolbar-menu a {
   display: block;
   min-width: 8rem;
   height: 2rem;
-  padding-top: 0.5rem;
-  padding-right: 1rem;
-  padding-left: 2.5rem;
+  margin: 0;
+  padding: 0 0.5rem 0 2.5rem ;
+  border: none;
   border-right: 1px solid var(--bluesky-light);
+  outline: none;
+  background-image: var(--icon-default), var(--button-bluesky-solid);
   background-repeat: no-repeat;
-  background-position: 1rem 0.5rem;
-  background-size: 1rem;
+  background-position: 0.5rem 0.5rem,  0 0;
+  background-size: auto;
   color: var(--white);
   font-size: 1rem;
+  line-height: 2rem;
 }
-.toolbar-horizontal .toolbar-menu a:hover {
-  background-color: var(--bluesky-light);
+.toolbar-menu a:hover {
+  animation: toolbar_slide 2s infinite;
+  background-image: var(--icon-default), var(--button-bluesky);
+}
+@keyframes toolbar_slide {
+  0% {
+    background-position: 0.5rem 0.5rem,  0 0;
+  }
+  25% {
+    background-position: 0.5rem 0.7rem,  0 0;
+  }
+  80% {
+    background-position: 0.5rem 0.3rem,  0 0;
+  }
+  100% {
+    background-position: 0.5rem 0.5rem,  0 0;
+  }
 }
 
+/*------------------------------------------------------------------------------
+2nd level Icons
+------------------------------------------------------------------------------*/
+/*
+  2nd level: Manage icons
+*/
+/* set defaults */
+.toolbar-menu-administration a.toolbar-icon {
+  background-image: var(--icon-drop), var(--button-bluesky-solid);
+}
+.toolbar-menu-administration a.toolbar-icon {
+  background-image: var(--icon-pen), var(--button-bluesky-solid);
+}
+.toolbar-menu-administration a.toolbar-icon:hover,
+.toolbar-menu-administration a.toolbar-icon:focus{
+  background-image: var(--icon-pen), var(--button-bluesky);
+}
+.toolbar-menu-administration a.toolbar-icon:active{
+  background-image: var(--icon-pen), var(--button-bluesky-light);
+}
+
+/* content */
+.toolbar-menu-administration a.toolbar-icon-system-admin-content {
+  background-image: var(--icon-content), var(--button-bluesky-solid);
+}
+.toolbar-menu-administration a.toolbar-icon-system-admin-content:hover,
+.toolbar-menu-administration a.toolbar-icon-system-admin-content:focus{
+  background-image: var(--icon-content), var(--button-bluesky);
+}
+.toolbar-menu-administration a.toolbar-icon-system-admin-content:active{
+  background-image: var(--icon-content), var(--button-bluesky-light);
+}
+.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-content {
+  background-image: var(--icon-content), var(--button-bluesky);
+}
+.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-content:hover,
+.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-content:focus,
+.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-content:active{
+  background-image: var(--icon-content), var(--button-bluesky-light);
+}
+
+/* Structure */
+.toolbar-menu-administration a.toolbar-icon-system-admin-structure {
+  background-image: var(--icon-structure), var(--button-bluesky-solid);
+}
+.toolbar-menu-administration a.toolbar-icon-system-admin-structure:hover,
+.toolbar-menu-administration a.toolbar-icon-system-admin-structure:focus{
+  background-image: var(--icon-structure), var(--button-bluesky);
+}
+.toolbar-menu-administration a.toolbar-icon-system-admin-structure:active{
+  background-image: var(--icon-structure), var(--button-bluesky-light);
+}
+.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-structure {
+  background-image: var(--icon-structure), var(--button-bluesky);
+}
+.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-structure:hover,
+.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-structure:focus,
+.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-structure:active{
+  background-image: var(--icon-structure), var(--button-bluesky-light);
+}
+
+/* Apperance */
+.toolbar-menu-administration a.toolbar-icon-system-themes-page {
+  background-image: var(--icon-rocket), var(--button-bluesky-solid);
+}
+.toolbar-menu-administration a.toolbar-icon-system-themes-page:hover,
+.toolbar-menu-administration a.toolbar-icon-system-themes-page:focus{
+  background-image: var(--icon-rocket), var(--button-bluesky);
+}
+.toolbar-menu-administration a.toolbar-icon-system-themes-page:active{
+  background-image: var(--icon-rocket), var(--button-bluesky-light);
+}
+.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-themes-page {
+  background-image: var(--icon-rocket), var(--button-bluesky);
+}
+.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-themes-page:hover,
+.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-themes-page:focus,
+.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-themes-page:active{
+  background-image: var(--icon-rocket), var(--button-bluesky-light);
+}
+
+
+/* Extend */
+.toolbar-menu-administration a.toolbar-icon-system-modules-list {
+  background-image: var(--icon-puzzle), var(--button-bluesky-solid);
+}
+.toolbar-menu-administration a.toolbar-icon-system-modules-list:hover,
+.toolbar-menu-administration a.toolbar-icon-system-modules-list:focus{
+  background-image: var(--icon-puzzle), var(--button-bluesky);
+}
+.toolbar-menu-administration a.toolbar-icon-system-modules-list:active{
+  background-image: var(--icon-puzzle), var(--button-bluesky-light);
+}
+.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-modules-list {
+  background-image: var(--icon-puzzle), var(--button-bluesky);
+}
+.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-modules-list:hover,
+.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-modules-list:focus,
+.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-modules-list:active{
+  background-image: var(--icon-puzzle), var(--button-bluesky-light);
+}
+
+/* Configuration */
+.toolbar-menu-administration a.toolbar-icon-system-admin-config {
+  background-image: var(--icon-gears), var(--button-bluesky-solid);
+}
+.toolbar-menu-administration a.toolbar-icon-system-admin-config:hover,
+.toolbar-menu-administration a.toolbar-icon-system-admin-config:focus{
+  background-image: var(--icon-gears), var(--button-bluesky);
+}
+.toolbar-menu-administration a.toolbar-icon-system-admin-config:active{
+  background-image: var(--icon-gears), var(--button-bluesky-light);
+}
+.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-config {
+  background-image: var(--icon-gears), var(--button-bluesky);
+}
+.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-config:hover,
+.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-config:focus,
+.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-config:active{
+  background-image: var(--icon-gears), var(--button-bluesky-light);
+}
+
+/* People */
+.toolbar-menu-administration a.toolbar-icon-entity-user-collection {
+  background-image: var(--icon-user), var(--button-bluesky-solid);
+}
+.toolbar-menu-administration a.toolbar-icon-entity-user-collection:hover,
+.toolbar-menu-administration a.toolbar-icon-entity-user-collection:focus{
+  background-image: var(--icon-user), var(--button-bluesky);
+}
+.toolbar-menu-administration a.toolbar-icon-entity-user-collection:active{
+  background-image: var(--icon-user), var(--button-bluesky-light);
+}
+.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-entity-user-collection {
+  background-image: var(--icon-user), var(--button-bluesky);
+}
+.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-entity-user-collection:hover,
+.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-entity-user-collection:focus,
+.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-entity-user-collection:active{
+  background-image: var(--icon-user), var(--button-bluesky-light);
+}
+
+/* Report */
+.toolbar-menu-administration a.toolbar-icon-system-admin-reports {
+  background-image: var(--icon-piechart), var(--button-bluesky-solid);
+}
+.toolbar-menu-administration a.toolbar-icon-system-admin-reports:hover,
+.toolbar-menu-administration a.toolbar-icon-system-admin-reports:focus{
+  background-image: var(--icon-piechart), var(--button-bluesky);
+}
+.toolbar-menu-administration a.toolbar-icon-system-admin-reports:active{
+  background-image: var(--icon-piechart), var(--button-bluesky-light);
+}
+.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-reports {
+  background-image: var(--icon-piechart), var(--button-bluesky);
+}
+.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-reports:hover,
+.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-reports:focus,
+.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-reports:active{
+  background-image: var(--icon-piechart), var(--button-bluesky-light);
+}
 
 /* -----------------------------------------------------------------------------
 VERTICAL TRAY variation
@@ -212,33 +443,119 @@ VERTICAL TRAY variation
     background: rgba(240, 240, 240, 0.8);
   }
 }
-
 .toolbar-vertical .toolbar-menu a {
-  display: block;
-  height: 2rem;
-  margin: 0;
-  padding: 0 0.5rem 0 2.5rem ;
-  border: none;
-  border-bottom: 1px solid var(--gravel);
-  outline: none;
-  background-image: var(--icon-heart), var(--button-bluesky);
-  background-repeat: no-repeat;
-  background-position: 0.5rem 0.5rem,  0 0;
-  background-size: auto;
-  color: var(--white);
-  line-height: 2rem;
+  border-bottom: 1px solid var(--bluesky);
 }
-.toolbar-vertical .toolbar-menu a:hover {
-  background-image: var(--icon-heart), var(--button-bluesky-light);
-}
+
 .toolbar-vertical .toolbar-menu .level-2 a {
-  border-bottom-color: var(--concrete-light);
+  border-right: none;
+  border-bottom: 1px solid var(--gravel);
   background-image: var(--button-gravel);
   background-position: 0 0;
   color: var(--asphalt-light);
 }
 .toolbar-vertical .toolbar-menu .level-2 a:hover {
   background-image: var(--button-gravel-light);
+  color: var(--bluesky);
+}
+
+/*
+2nd level: Shortcuts icons
+*/
+nav[aria-label="User-defined shortcuts"] a {
+  background-image: var(--icon-heart), var(--button-bluesky-solid);
+}
+nav[aria-label="User-defined shortcuts"] a:hover {
+  background-image: var(--icon-heart), var(--button-bluesky);
+}
+
+.toolbar-vertical nav[aria-label="User-defined shortcuts"] a {
+  background-image: var(--icon-heart), var(--button-bluesky);
+}
+.toolbar-vertical nav[aria-label="User-defined shortcuts"] a:hover {
+  background-image: var(--icon-heart), var(--button-bluesky-light);
+}
+
+nav[aria-label="User-defined shortcuts"] a.edit-shortcuts {
+  position: absolute;
+  right: 2rem;
+  height: 2rem;
+  margin: 0;
+  padding: 0 0.5rem 0 2.5rem ;
+  outline: none;
+  background-image: var(--icon-pen), var(--button-rasberry);
+  background-repeat: no-repeat;
+  background-position: 0.5rem 0.5rem,
+  0 0;
+  background-size: auto;
+  color: var(--white);
+  font-size: 1rem;
+  line-height: 2rem;
+}
+nav[aria-label="User-defined shortcuts"]  a.edit-shortcuts:hover {
+  background-image: var(--icon-pen), var(--button-rasberry-rev);
+}
+nav[aria-label="User-defined shortcuts"]  a.edit-shortcuts:active {
+  background-image: var(--icon-pen), var(--button-rasberry-active);
+}
+.toolbar-vertical  nav[aria-label="User-defined shortcuts"]  a.edit-shortcuts {
+  position: relative;
+  right: 0;
+  padding: 0 0 0 2.5rem;
+  text-align: left;
+}
+
+/*
+2nd level User
+*/
+
+/* User 2nd level:  view profile */
+.toolbar-tray .account a {
+  background-image: var(--icon-user), var(--button-bluesky-solid);
+}
+.toolbar-tray .account a:hover {
+  background-image: var(--icon-user), var(--button-bluesky);
+}
+.toolbar-vertical .toolbar-tray .account a {
+  background-image: var(--icon-user), var(--button-bluesky);
+}
+.toolbar-vertical .toolbar-tray .account a:hover {
+  background-image: var(--icon-user), var(--button-bluesky-light);
+}
+
+/* User 2nd level:   Edit profile */
+.toolbar-tray .account-edit a {
+  background-image: var(--icon-pen), var(--button-bluesky-solid);
+}
+.toolbar-tray .account-edit a:hover {
+  background-image: var(--icon-pen), var(--button-bluesky);
+}
+.toolbar-vertical .toolbar-tray .account-edit a {
+  background-image: var(--icon-pen), var(--button-bluesky);
+}
+.toolbar-vertical .toolbar-tray .account-edit a:hover {
+  background-image: var(--icon-pen), var(--button-bluesky-light);
+}
+
+/* User 2nd level:  logout */
+.toolbar-tray li.logout {
+  float: right;
+  padding-right: 1rem;
+}
+.toolbar-vertical .toolbar-tray li.logout {
+  float: none;
+  padding: 0;
+}
+.toolbar-tray .logout a {
+  background-image: var(--icon-logout),var(--button-strawberry);
+  background-position: 0.5rem 0.5rem,  0 0;
+  background-size: auto;
+}
+.toolbar-tray .logout a:hover {
+  background-image: var(--icon-logout),var(--button-strawberry-rev);
+}
+.toolbar-tray .logout a:active {
+  background-image: var(--icon-logout),var(--button-strawberry-active);
 }
 
 
@@ -277,10 +594,25 @@ VERTICAL TRAY variation
 }
 .toolbar button.toolbar-handle:hover {
   background-color: var(--bluesky);
+  animation: handle_slide 1.5s infinite;
 }
 .toolbar button.toolbar-handle.open {
   background-image: var(--icon-up);
 }
+
+
+@keyframes handle_slide {
+  0% {
+    background-position: center center,  0 0;
+  }
+  25% {
+    background-position: center bottom,  0 0;
+  }
+  100% {
+    background-position: center top,  0 0;
+  }
+}
+
 
 body.toolbar-vertical .toolbar-menu .level-2 button.toolbar-handle {
   background-color: var(--gravel);
@@ -295,101 +627,6 @@ body.toolbar-vertical .toolbar-menu .level-2 button.toolbar-handle.open {
 
 
 /*------------------------------------------------------------------------------
-2nd level Icons
-------------------------------------------------------------------------------*/
-/*
-  Manage icons
-*/
-/*.menu-item a.toolbar-icon {
-  background-image: var(--icon-heart), var(--button-bluesky);
-}
-.menu-item a.toolbar-icon-system-admin-content {
-  background-image: var(--icon-heart), var(--button-bluesky);
-}
-.menu-item a.toolbar-icon-system-admin-structure {
-  background-image: var(--icon-heart), var(--button-bluesky);
-}
-.menu-item a.toolbar-icon-system-themes-page {
-    background-image: var(--icon-heart), var(--button-bluesky);
-}
-.menu-item a.toolbar-icon-system-modules-list {
-  background-image: var(--icon-heart), var(--button-bluesky);
-}
-.menu-item a.toolbar-icon-system-admin-config {
-  background-image: var(--icon-heart), var(--button-bluesky);
-}
-.menu-item a.toolbar-icon-entity-user-collection {
-  background-image: var(--icon-heart), var(--button-bluesky);
-}
-.menu-item a.toolbar-icon-system-admin-reports {
-  background-image: var(--icon-heart), var(--button-bluesky);
-}
-.menu-item a.toolbar-icon-help-main {
-  background-image: var(--icon-heart), var(--button-bluesky);
-}*/
-
-/*
-Shortcuts icons
-*/
-nav[aria-label="User-defined shortcuts"] a {
-  background-image: var(--icon-heart);
-}
-.toolbar-tray a.edit-shortcuts {
-  position: absolute;
-  right: 2rem;
-  height: 2rem;
-  margin: 0;
-  padding: 0 0.5rem 0 2.5rem ;
-  border-left: 1px solid var(--bluesky-light);
-  outline: none;
-  background-image: var(--icon-pen), var(--button-rasberry);
-  background-repeat: no-repeat;
-  background-position: 0.5rem 0.5rem,
-  0 0;
-  background-size: auto;
-  color: var(--white);
-  font-size: 1rem;
-  line-height: 2rem;
-}
-.toolbar-tray a.edit-shortcuts:hover {
-  background-image: var(--icon-heart), var(--button-rasberry-rev);
-}
-.toolbar-tray a.edit-shortcuts:active {
-  background-image: var(--icon-heart), var(--button-rasberry-active);
-}
-
-/*
-User
-*/
-.toolbar-tray .account a {
-  background-image: var(--icon-user), var(--button-bluesky);
-}
-.toolbar-tray .account-edit a {
-  background-image: var(--icon-pen), var(--button-bluesky);
-}
-.toolbar-tray li.logout {
-  float: right;
-  padding-right: 1rem;
-}
-
-.toolbar-vertical .toolbar-tray li.logout{
-  float: none;
-  padding: 0
-}
-
-.toolbar-tray .logout a {
-  background-image: var(--icon-user),var(--button-strawberry);
-  background-position: 0.5rem 0.5rem,  0 0;
-  background-size: auto;
-}
-.toolbar-tray .logout a:hover {
-  background-image: var(--icon-user),var(--button-strawberry-rev);
-}
-.toolbar-tray .logout a:active {
-  background-image: var(--icon-user),var(--button-strawberry-active);
-}
-
-/*------------------------------------------------------------------------------
   toggle navbar button
 ------------------------------------------------------------------------------*/
 .toolbar-tab button.toolbar-icon-toggle-vertical,
@@ -400,7 +637,7 @@ User
   height: 2rem;
   margin: 0;
   padding: 0;
-  /*border-left: 1px solid var(--bluesky-light);*/
+  border-left: 1px solid var(--bluesky-light);
   background-color: var(--bluesky-light);
   background-image: url("data:image/svg+xml,%0A%3Csvg width='11px' height='16px' viewBox='0 0 11 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 42 %2836781%29 - http://www.bohemiancoding.com/sketch --%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3C/defs%3E%3Cpath d='M10.0593246,2.93555429 C10.2984829,2.69639543 10.2984829,2.31374229 10.0593246,2.074584 L8.47131257,0.486571429 C8.23215429,0.247413143 7.84950057,0.247413143 7.61034229,0.486571429 L0.512119429,7.58479429 C0.272961143,7.82395257 0.272961143,8.20660629 0.512119429,8.44576457 L7.61034229,15.5439874 C7.84950057,15.7831457 8.23215429,15.7831457 8.47131257,15.5439874 L10.0593246,13.9559754 C10.2984829,13.7168171 10.2984829,13.3341634 10.0593246,13.0950051 L4.97959886,8.01527943 L10.0593246,2.93555429 Z' id='Shape' stroke='none' fill='%23FFFFFF' fill-rule='nonzero'%3E%3C/path%3E%3C/svg%3E");
   text-indent: -999rem;
@@ -409,12 +646,7 @@ User
   background-color: var(--bluesky-20);
 }
 
-.toolbar-vertical .toolbar-tray a.edit-shortcuts {
-  position: relative;
-  right: 0;
-  padding: 0 0 0 2.5rem;
-  text-align: left;
-}
+
 
 
 .toolbar-tab button.toolbar-icon-toggle-horizontal,
