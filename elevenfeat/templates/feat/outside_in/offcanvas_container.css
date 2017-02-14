@@ -1,35 +1,78 @@
-.ui-dialog-offcanvas {
-  background: red;
-  border: 0;
+.ui-dialog-offcanvas.ui-widget-content {
+  background: var(--asphalt-light);
+  background-color: var(--asphalt-light);
+  border: 1px solid var(--black);
   z-index: 501;
 }
 
-
 .ui-dialog-offcanvas .ui-dialog-titlebar {
-
+  background-color: var(--asphalt);
+  color: var(--white);
 }
 
 
 /**/
 .ui-dialog-offcanvas .ui-dialog-titlebar-close {
-  background-image: url(icons/x.svg);
-  background-position-x: center;
+  background-image: var(--icon-pen);
+  background-position: center center;
   background-repeat: no-repeat;
-  background-position-y: center;
-  background-color: transparent;
-  border: 0;
+  border: 0px solid red;
   position: absolute;
-  right: 20px;
+  right: 1rem;
 }
-.ui-dialog-offcanvas .ui-dialog-titlebar-close:hover {
-  background-image: url(icons/x.svg);
-}
-[dir="rtl"] .ui-dialog-offcanvas .ui-dialog-titlebar-close {
-  left: 20px;
-  right: auto;
+.ui-dialog-offcanvas .ui-dialog-titlebar-close:hover { }
+
+.ui-dialog-offcanvas .ui-dialog-content{
+  margin: 0;
+  padding: 0.5rem
 }
 
+.form-item {
+  padding: 0.5rem 0;
+  border-bottom:1px solid var(--concrete);
 
+}
+
+label{
+  color: var(--gravel);
+  font-weight: bold;
+  font-size: 1rem;
+  padding-right: 1rem
+}
+label.form-required{
+  color: var(--rasberry-light);
+}
+
+input[type='text'].required{
+  color: var(--rasberry-light);
+}
+
+/* text */
+input[type='text']{
+  border: 0 solid ;
+  border-bottom: 1px solid var(--gravel);
+  height: 1.5rem;
+  line-height: 1rem;
+  padding: 0 0.5rem 0 1rem;
+  width: 20rem;
+  color: var(--asphalt-light);
+  background-color: var(--gravel-light);
+  transition: all .5s ease-in-out;
+
+}
+input[type='text']:hover{
+  color: var(--bluesky);
+  background-color: var(--gravel);
+  border-bottom: 1px solid var(--bluesky);
+}
+input[type='text']:focus{
+  color: var(--bluesky-light);
+  background-color: var(--gravel-light);
+  border-bottom: 1px solid var(--bluesky-light);
+  outline: 0;
+  padding: 0 0.5rem 0 0.5rem;
+  width: 20.5rem
+}
 
 
 /* Style content in the tray. */

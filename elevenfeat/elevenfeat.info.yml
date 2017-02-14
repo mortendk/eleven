@@ -106,3 +106,12 @@ libraries-override:
     css:
       theme:
         assets/vendor/jquery.ui/themes/base/theme.css: false
+
+  # classy
+  # TODO: fix the cssspecificity so we dont have to remove potential elements
+  classy/base:
+    css:
+      component:
+        css/components/details.css: false
+        css/components/form.css: false
+        css/components/form.css: false

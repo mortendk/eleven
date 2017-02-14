@@ -133,9 +133,11 @@
 colors
 ------------------------------------------------------------------------------*/
 
+/*
+#main-canvas.js-outside-in-edit-mode .outside-in-editable,
 .js-outside-in-edit-mode .contextual-region.node,
-.contextual-region.focus,
-#main-canvas.js-outside-in-edit-mode .outside-in-editable {
+*/
+.contextual-region.focus{
   outline: 1px dashed var(--rasberry-light-50);
   background-color: var(--rasberry-light-20);
 }

@@ -1,18 +1,132 @@
-/**
- * @file
- * Seven styles for jQuery UI.
- * Overrides /core/assets/vendor/jquery.ui/themes/base/theme.css.
- */
-
-/**
- * Component containers
- */
 .ui-widget {
-  background: none;
+  background-color: var(--gravel-light);
 }
 .ui-widget-content {
-  border: none;
+  border: 1px solid var(--gravel);
 }
+
+/* title bar */
+.ui-dialog-titlebar{
+  font-size: 1rem;
+  font-weight: normal;
+  padding: 0.5rem 0;
+  text-align: center;
+  border-bottom: 1px solid var(--concrete);
+  background-color: var(--concrete-light);
+}
+
+.ui-dialog-titlebar-close{
+  background-image: var(--icon-action);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 1rem
+}
+.ui-dialog-titlebar-close:hover{
+  background-image: var(--icon-contextual);
+}
+
+/* Content */
+.ui-dialog-content {
+  padding: 0;
+  margin: 0
+}
+
+/* custom block */
+.ui-dialog .action-links{
+  margin: 1rem
+}
+.ui-dialog .action-links li{
+  width: 100%
+}
+
+/* button
+TODO: this should be a standard button
+*/
+a.button-action,
+.dropbutton-single a{
+  font-weight: bold;
+  border: 0;
+  background-image: var(--icon-heart), var(--button-rasberry);
+  background-repeat: no-repeat;
+  background-position: 0.5rem 0.5rem, 0 0;
+  height: 2rem;
+  line-height: 2rem;
+  color: var(--white);
+  text-decoration: none;
+  /*display: block;*/
+  padding: 0 2rem 0 2.5rem;
+}
+
+a.button-action:hover,
+.dropbutton-single a:hover{
+  background-image: var(--icon-heart), var(--button-rasberry-rev);
+}
+
+
+/*button-action*/
+.ui-dialog .action-links a.button-action{
+
+}
+.ui-dialog .dropbutton .dropbutton-action > *{
+  padding: 0 0.5rem 0 2.5rem;
+}
+
+
+/* table */
+.ui-dialog table{
+  width: 90%;
+  margin: 1rem auto;
+
+}
+.ui-dialog tr{
+  border-bottom: 1px solid var(--gravel);
+  background-color: var(--gravel-light);
+}
+.ui-dialog tr:hover{
+  background-color: var(--gravel);
+}
+.ui-dialog td {
+  padding: 0.25rem  0.5rem 0.25rem 0;
+}
+
+
+
+
+
+/*form */
+.ui-dialog .form-item,
+.ui-dialog .form-actions{
+  margin: 0
+}
+
+.ui-dialog .form-type-search {
+  margin: 0;
+}
+.ui-dialog .form-type-search input[type=search] {
+  height: 1.5rem;
+  border: 1px solid var(--concrete);
+  background-color: var(--gravel);
+  width: 15rem;
+  margin: 0 auto;
+  transition: all .5s ease-in-out;
+  color: var(--asphalt);
+  padding: 0 0.5rem;
+  font-size: 1rem;
+}
+.ui-dialog .form-type-search input[type=search]:focus {
+  outline: 0;
+  border: 1px solid var(--rasberry);
+  color: var(--rasberry);
+  background-color: var(--gravel-light);
+}
+
+
+
+
+
+
+
+
 
 /**
  * Interaction states

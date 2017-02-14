@@ -34,7 +34,7 @@ TODO:
 /* change the toolbar bg color to indicate that were editing stuff */
 body.is-edit-ui-toolbar-opened .toolbar-bar,
 .toolbar-bar.js-outside-in-edit-mode {
-  background-color: var(--asphalt-light);
+  background-color: var(--asphalt);
 }
 
 
@@ -186,6 +186,7 @@ body.is-edit-ui-toolbar-opened .toolbar-bar,
 /* Editing */
 .toolbar-tab button.toolbar-icon-edit {
   background-image: var(--icon-pen), var(--button-asphalt);
+  border-left: 1px solid var(--black);
 }
 .toolbar-tab button.toolbar-icon-edit:hover,
 .toolbar-tab button.toolbar-icon-edit.is-active {

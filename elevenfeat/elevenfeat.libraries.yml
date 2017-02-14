@@ -3,7 +3,7 @@ global:
     base:
       css/root.css: {}
     layout:
-      css/layout.css: {}
+      # css/layout.css: {}
     component:
     theme:
       css/type.css: {}
