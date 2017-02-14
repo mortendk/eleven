@@ -1,22 +1,10 @@
-/* Style the editables while in edit mode. */
-#main-canvas.js-outside-in-edit-mode .outside-in-editable {
-  outline: 1px dashed var(--strawberry);
-}
-#main-canvas.js-outside-in-edit-mode .outside-in-editable:hover,
-#main-canvas.js-outside-in-edit-mode .outside-in-editable.outside-in-active-editable {
-  background-color: rgba(250,0,0,0.2);
-}
-
-
-
 /* Override default styling from jquery UI. */
 .ui-state-default,
 .ui-widget-content .ui-state-default,
 .ui-widget-header .ui-state-default {
   border: 0;
   font-weight: normal;
-  font-size: 14px;
-  color: #333;
+  font-size: 1rem;
 }
 /* Hide the defauld Jquery UI dialog close button. */
 .ui-dialog-offcanvas .ui-icon-closethick {
@@ -41,11 +29,11 @@
 .ui-dialog-offcanvas .button {
   width: 100%;
   height: auto;
-  margin: 1em auto;
-  padding: 6px 1em;
+  margin: 1rem auto;
+  padding: 0.5rem 1em;
   background: #7b7b7b;
   border-radius: 1em;
-  font-size: 14px;
+  font-size: 1rem;
   color: #fff;
   transition: all .5s ease;
 }

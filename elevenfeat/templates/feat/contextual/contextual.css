@@ -6,16 +6,20 @@
   transition: all 0.5s ease-in-out;
 }
 
+.contextual.open{
+  z-index:600;
+}
 [dir="rtl"] .contextual {
   right: auto;
   left: 0.5rem;
 }
 
+/* region */
+.contextual-region {
+  transition: background-color 1s ease-in-out;
+}
 .contextual-region.focus {
   min-height: 2rem;
-  outline: 1px dotted var(--rasberry-light);
-  background-color: var(--rasberry-light-20);
-  transition: background-color 0.5s ease-in-out;
 }
 
 /**
@@ -30,9 +34,10 @@
   height: 1.5rem !important;
   margin: 0;
   padding: 0;
-  border: 1px dotted var(--rasberry-light);
+  border: 0;
   border-radius: 0;
-  background-color: var(--white);
+  outline: 0;
+  background-color: transparent;
   background-image: var(--icon-contextual);
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -40,19 +45,26 @@
   background-size: 1rem;
   text-indent: -999rem;
   cursor: pointer;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-out;
 }
+.contextual .trigger:hover {
+  background-size: 1.5rem;
+}
+
 [dir="rtl"] .contextual .trigger {
   right: auto;
   left: 0;
   float: left;
 }
+
 .contextual.open .trigger {
   z-index: 2;
-  border: 1px dotted var(--rasberry-light);
   border-bottom-color: transparent;
   border-radius: 0;
   box-shadow: none;
+}
+.contextual.open .trigger:hover {
+  background-size: 1rem;
 }
 
 .contextual-region .contextual .contextual-links {
@@ -62,10 +74,8 @@
   float: right; /* LTR */
   clear: both;
   margin: 0;
-  padding: 0.5rem 0;
-  border: 1px dotted var(--rasberry-light);
+  padding: 0 0;
   border-radius: 0; /* LTR */
-  background-color: var(--white);
   text-align: left; /* LTR */
   white-space: nowrap;
 }
@@ -76,6 +86,7 @@
   border-radius: 0;
   text-align: right;
 }
+
 .contextual-region .contextual .contextual-links li {
   margin: 0;
   padding: 0;
@@ -85,13 +96,12 @@
   background-color: var(--white);
   line-height: 100%;
 }
-.contextual-region .contextual .contextual-links a {
+.contextual .contextual-links a {
   display: block;
   margin: 0;
   padding: 0 0.5rem;
   padding-left: 2rem;
-  background-color: var(--white);
-  background-image: var(--icon-contextual);
+  background-image: var(--icon-default);
   background-repeat: no-repeat;
   background-position: 0.5rem 0.5rem;
   background-size: 1rem;
@@ -101,22 +111,94 @@
   text-decoration: none;
   transition: all 0.5s ease-in-out;
 }
-.touchevents .contextual-region .contextual .contextual-links a {
-  /*font-size: large;*/
-}
 
-.contextual-region .contextual .contextual-links a:hover,
-.no-touchevents .contextual-region .contextual .contextual-links li a:hover {
-  background-color: var(--rasberry-light);
-  background-image: var(--icon-pen);
-  color: var(--white);
+.contextual .contextual-links a,
+.contextual .contextual-links a:hover,
+.no-touchevents .contextual .contextual-links li a:hover {
   text-decoration: none;
 }
+
+/* outside in */
+.js-outside-in-edit-mode .contextual {
+  top: 0;
+  right: 0;
+}
+
+.js-outside-in-edit-mode .contextual-region{
+  min-height: 2.5rem
+}
+
+
+/*------------------------------------------------------------------------------
+colors
+------------------------------------------------------------------------------*/
+
+.js-outside-in-edit-mode .contextual-region.node,
+.contextual-region.focus,
+#main-canvas.js-outside-in-edit-mode .outside-in-editable {
+  outline: 1px dashed var(--rasberry-light-50);
+  background-color: var(--rasberry-light-20);
+}
+.contextual.open .trigger {
+  border: 1px solid var(--bluesky);
+  border-bottom-color: transparent;
+  background-color: var(--white);
+}
+.contextual-region .contextual .contextual-links {
+  border: 1px solid var(--grass);
+  background-color: var(--white);
+}
+.contextual-region .contextual .contextual-links li {
+  background-color: var(--gravel);
+}
+.contextual .contextual-links a {
+  background-color: var(--white);
+}
+.contextual .contextual-links a:hover,
+.no-touchevents .contextual .contextual-links li a:hover {
+  background-color: var(--rasberry-light-50);
+  color: var(--rasberry);
+}
+
+/* -----------------------------------------------------------------------------
+contextual links icon
+ -----------------------------------------------------------------------------*/
+/* block config */
+.contextual .contextual-links .block-configure a {
+  background-image: var(--icon-gears);
+}
+
+/* quick edit */
+.contextual .contextual-links .outside-inblock-configure a,
+.contextual .contextual-links .quickedit a {
+  background-image: var(--icon-action);
+}
+
+/* translate */
+.contextual .contextual-links .config-translationcontextual-linksentityblockconfig-translation-overview a,
+.contextual .contextual-links .config-translationcontextual-linksentitymenuconfig-translation-overview a,
+.contextual .contextual-links .config-translationcontextual-linksentityviewconfig-translation-overview a {
+  background-image: var(--icon-gears);
+}
+
+/* edit */
+.contextual .contextual-links .entitymenuedit-form a,
+.contextual .contextual-links .entitynodeedit-form a,
+.contextual .contextual-links .entityviewedit-form a {
+  background-image: var(--icon-pen);
+}
+
+/* delete */
+.contextual .contextual-links .entitynodedelete-form a {
+  background-image: var(--icon-thrash);
+}
+
+
 
 /**
  * Toolbar tab icon.
  */
-.toolbar-bar .toolbar-icon-edit:before {
+/*.toolbar-bar .toolbar-icon-edit:before {
   background-image: var(--icon-contextual);
 }
 .toolbar-bar .toolbar-icon-edit:active:before,
@@ -125,4 +207,4 @@
 }
 .contextual .trigger:focus {
   outline: none;
-}
+}*/
