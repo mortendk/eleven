@@ -37,6 +37,26 @@ body.is-edit-ui-toolbar-opened .toolbar-bar,
   background-color: var(--asphalt-light);
 }
 
+
+/* main toolbar icons */
+.toolbar-icon-11home {
+  display: block;
+  float: left;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  background-color: var(--asphalt-light);
+  background-image: var(--icon-drop);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 1rem;
+  text-indent: -999rem;
+}
+/* Home icon */
+.toolbar-icon-11home:hover {
+  background-color: var(--concrete);
+}
+
 /* Toolbar main tabs */
 .toolbar-tab .toolbar-item {
   min-width: 9rem;
@@ -55,7 +75,7 @@ body.is-edit-ui-toolbar-opened .toolbar-bar,
 }
 
 @media (max-width: 47.99rem) {
-  .toolbar-tab .toolbar-item {
+  .toolbar-tab a.toolbar-item {
     width: 3em;
     min-width: 3rem;
     background-position: center center;
@@ -63,13 +83,13 @@ body.is-edit-ui-toolbar-opened .toolbar-bar,
   }
 }
 
-.toolbar-tab .toolbar-item:hover {
+.toolbar-tab a.toolbar-item:hover {
   animation: toolbar_tab_pulse 1.5s infinite;
 }
-.toolbar-tab .toolbar-item.is-active {
+.toolbar-tab a.toolbar-item.is-active {
   background-color: var(--bluesky);
 }
-.toolbar-tab .toolbar-item.is-active:hover {
+.toolbar-tab a.toolbar-item.is-active:hover {
   animation: toolbar_tab_pulse_active 1.5s infinite;
 }
 /* tabs animation */
@@ -101,37 +121,7 @@ body.is-edit-ui-toolbar-opened .toolbar-bar,
   }
 }
 
-.toolbar-tab button.toolbar-icon {
-  margin: 0;
-  padding: 0 0 0 2.5rem ;
-  border: 0;
-  outline: none;
-  background-repeat: no-repeat;
-  background-position: 0.5rem 0.5rem,
-  0 0;
-  background-size: auto;
-  text-align: left;
-  transition: background 0.2s ease-in-out;
-}
 
-/* main toolbar icons */
-.toolbar-icon-11home {
-  display: block;
-  float: left;
-  width: 2rem;
-  min-width: 2rem;
-  height: 2rem;
-  background-color: var(--asphalt-light);
-  background-image: var(--icon-drop);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 1rem;
-  text-indent: -999rem;
-}
-/* Home icon */
-.toolbar-icon-11home:hover {
-  background-color: var(--concrete);
-}
 
 .toolbar-tab .toolbar-icon-escape-admin {
   background-image: url("data:image/svg+xml,%0A%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 42 %2836781%29 - http://www.bohemiancoding.com/sketch --%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3C/defs%3E%3Cpath d='M15.1135128,7.34274701 C15.1135128,6.64441594 14.6514829,6.02824103 13.9122353,6.02824103 L6.684033,6.02824103 L9.69236149,3.01925558 C9.93877734,2.77278525 10.0825204,2.43388923 10.0825204,2.0847237 C10.0825204,1.73555816 9.93877734,1.39666215 9.69236149,1.15019243 L8.92231148,0.390243618 C8.67589562,0.1437739 8.34734094,0 7.99825171,0 C7.64916248,0 7.31034053,0.1437739 7.06392467,0.390243618 L0.37989106,7.06546873 C0.14374248,7.31193845 0,7.65083446 0,8 C0,8.34916554 0.14374248,8.68806155 0.37989106,8.92426175 L7.06392467,15.6200259 C7.31034053,15.8562261 7.64916248,16 7.99825171,16 C8.34734094,16 8.6861629,15.8562261 8.92231148,15.6200259 L9.69236149,14.8395381 C9.93877734,14.6033379 10.0825204,14.2644418 10.0825204,13.9152763 C10.0825204,13.5661108 9.93877734,13.2272141 9.69236149,12.9910139 L6.684033,9.97175897 L13.9122353,9.97175897 C14.6514829,9.97175897 15.1135128,9.35558406 15.1135128,8.65725299 L15.1135128,7.34274701 Z' id='Shape' stroke='none' fill='%23FFFFFF' fill-rule='evenodd'%3E%3C/path%3E%3C/svg%3E");
@@ -140,6 +130,7 @@ body.is-edit-ui-toolbar-opened .toolbar-bar,
 .toolbar-tab .toolbar-icon-escape-admin {
   background-image: url("data:image/svg+xml,%0A%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 42 %2836781%29 - http://www.bohemiancoding.com/sketch --%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3C/defs%3E%3Cpath d='M15.1135128,7.34274701 C15.1135128,6.64441594 14.6514829,6.02824103 13.9122353,6.02824103 L6.684033,6.02824103 L9.69236149,3.01925558 C9.93877734,2.77278525 10.0825204,2.43388923 10.0825204,2.0847237 C10.0825204,1.73555816 9.93877734,1.39666215 9.69236149,1.15019243 L8.92231148,0.390243618 C8.67589562,0.1437739 8.34734094,0 7.99825171,0 C7.64916248,0 7.31034053,0.1437739 7.06392467,0.390243618 L0.37989106,7.06546873 C0.14374248,7.31193845 0,7.65083446 0,8 C0,8.34916554 0.14374248,8.68806155 0.37989106,8.92426175 L7.06392467,15.6200259 C7.31034053,15.8562261 7.64916248,16 7.99825171,16 C8.34734094,16 8.6861629,15.8562261 8.92231148,15.6200259 L9.69236149,14.8395381 C9.93877734,14.6033379 10.0825204,14.2644418 10.0825204,13.9152763 C10.0825204,13.5661108 9.93877734,13.2272141 9.69236149,12.9910139 L6.684033,9.97175897 L13.9122353,9.97175897 C14.6514829,9.97175897 15.1135128,9.35558406 15.1135128,8.65725299 L15.1135128,7.34274701 Z' id='Shape' stroke='none' fill='%23FFFFFF' fill-rule='evenodd'%3E%3C/path%3E%3C/svg%3E");
 }
+
 /* manage */
 .toolbar-tab .toolbar-icon-menu {
   background-image: var(--icon-manage);
@@ -153,6 +144,7 @@ body.is-edit-ui-toolbar-opened .toolbar-bar,
   background-image: var(--icon-user);
 }
 
+
 /* edit */
 .toolbar .toolbar-bar .contextual-toolbar-tab.toolbar-tab {
   float: right;
@@ -161,6 +153,33 @@ body.is-edit-ui-toolbar-opened .toolbar-bar,
 @media (max-width: 61.99em) {
   .toolbar .toolbar-bar .contextual-toolbar-tab.toolbar-tab {
     margin: 0;
+  }
+}
+
+.toolbar-tab button.toolbar-icon {
+  margin: 0;
+  padding: 0 0 0 2.5rem ;
+  border: 0;
+  outline: none;
+  background-image: none;
+  background-image: var(--icon-browser), var(--button-asphalt);
+  background-repeat: no-repeat;
+  background-position: 0.5rem 0.5rem, 0 0;
+  background-size: auto;
+  text-align: left;
+}
+.toolbar-tab button.toolbar-icon:hover {
+  animation: button_active 1.5s infinite;
+}
+@keyframes button_active {
+  0% {
+    background-position: 0.5rem 0.5rem,  0 0;
+  }
+  50% {
+    background-position: 0.5rem top,  0 0;
+  }
+  100% {
+    background-position: 0.5rem bottom,  0 0;
   }
 }
 
@@ -190,8 +209,9 @@ body.is-edit-ui-toolbar-opened .toolbar-bar,
   background-position: 0.5rem 0.5rem, 0 0;
   background-size: auto;
 }
-.toolbar-tab .toolbar-icon-place-block-inactive:hover {
+.toolbar-tab a.toolbar-icon-place-block-inactive:hover {
   background-image: var(--icon-browser), var(--button-rasberry);
+  animation: button_active 1.5s infinite;
 }
 .toolbar-tab .toolbar-icon-place-block-inactive:active {
   background-image: var(--icon-browser), var(--button-rasberry-active);
@@ -252,8 +272,8 @@ body.is-edit-ui-toolbar-opened .toolbar-bar,
   line-height: 2rem;
 }
 .toolbar-menu a:hover {
-  animation: toolbar_slide 2s infinite;
   background-image: var(--icon-default), var(--button-bluesky);
+  animation: toolbar_slide 2s infinite;
 }
 @keyframes toolbar_slide {
   0% {
@@ -284,10 +304,10 @@ body.is-edit-ui-toolbar-opened .toolbar-bar,
   background-image: var(--icon-pen), var(--button-bluesky-solid);
 }
 .toolbar-menu-administration a.toolbar-icon:hover,
-.toolbar-menu-administration a.toolbar-icon:focus{
+.toolbar-menu-administration a.toolbar-icon:focus {
   background-image: var(--icon-pen), var(--button-bluesky);
 }
-.toolbar-menu-administration a.toolbar-icon:active{
+.toolbar-menu-administration a.toolbar-icon:active {
   background-image: var(--icon-pen), var(--button-bluesky-light);
 }
 
@@ -296,10 +316,10 @@ body.is-edit-ui-toolbar-opened .toolbar-bar,
   background-image: var(--icon-content), var(--button-bluesky-solid);
 }
 .toolbar-menu-administration a.toolbar-icon-system-admin-content:hover,
-.toolbar-menu-administration a.toolbar-icon-system-admin-content:focus{
+.toolbar-menu-administration a.toolbar-icon-system-admin-content:focus {
   background-image: var(--icon-content), var(--button-bluesky);
 }
-.toolbar-menu-administration a.toolbar-icon-system-admin-content:active{
+.toolbar-menu-administration a.toolbar-icon-system-admin-content:active {
   background-image: var(--icon-content), var(--button-bluesky-light);
 }
 .toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-content {
@@ -307,7 +327,7 @@ body.is-edit-ui-toolbar-opened .toolbar-bar,
 }
 .toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-content:hover,
 .toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-content:focus,
-.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-content:active{
+.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-content:active {
   background-image: var(--icon-content), var(--button-bluesky-light);
 }
 
@@ -316,10 +336,10 @@ body.is-edit-ui-toolbar-opened .toolbar-bar,
   background-image: var(--icon-structure), var(--button-bluesky-solid);
 }
 .toolbar-menu-administration a.toolbar-icon-system-admin-structure:hover,
-.toolbar-menu-administration a.toolbar-icon-system-admin-structure:focus{
+.toolbar-menu-administration a.toolbar-icon-system-admin-structure:focus {
   background-image: var(--icon-structure), var(--button-bluesky);
 }
-.toolbar-menu-administration a.toolbar-icon-system-admin-structure:active{
+.toolbar-menu-administration a.toolbar-icon-system-admin-structure:active {
   background-image: var(--icon-structure), var(--button-bluesky-light);
 }
 .toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-structure {
@@ -327,7 +347,7 @@ body.is-edit-ui-toolbar-opened .toolbar-bar,
 }
 .toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-structure:hover,
 .toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-structure:focus,
-.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-structure:active{
+.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-structure:active {
   background-image: var(--icon-structure), var(--button-bluesky-light);
 }
 
@@ -336,10 +356,10 @@ body.is-edit-ui-toolbar-opened .toolbar-bar,
   background-image: var(--icon-rocket), var(--button-bluesky-solid);
 }
 .toolbar-menu-administration a.toolbar-icon-system-themes-page:hover,
-.toolbar-menu-administration a.toolbar-icon-system-themes-page:focus{
+.toolbar-menu-administration a.toolbar-icon-system-themes-page:focus {
   background-image: var(--icon-rocket), var(--button-bluesky);
 }
-.toolbar-menu-administration a.toolbar-icon-system-themes-page:active{
+.toolbar-menu-administration a.toolbar-icon-system-themes-page:active {
   background-image: var(--icon-rocket), var(--button-bluesky-light);
 }
 .toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-themes-page {
@@ -347,7 +367,7 @@ body.is-edit-ui-toolbar-opened .toolbar-bar,
 }
 .toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-themes-page:hover,
 .toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-themes-page:focus,
-.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-themes-page:active{
+.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-themes-page:active {
   background-image: var(--icon-rocket), var(--button-bluesky-light);
 }
 
@@ -357,10 +377,10 @@ body.is-edit-ui-toolbar-opened .toolbar-bar,
   background-image: var(--icon-puzzle), var(--button-bluesky-solid);
 }
 .toolbar-menu-administration a.toolbar-icon-system-modules-list:hover,
-.toolbar-menu-administration a.toolbar-icon-system-modules-list:focus{
+.toolbar-menu-administration a.toolbar-icon-system-modules-list:focus {
   background-image: var(--icon-puzzle), var(--button-bluesky);
 }
-.toolbar-menu-administration a.toolbar-icon-system-modules-list:active{
+.toolbar-menu-administration a.toolbar-icon-system-modules-list:active {
   background-image: var(--icon-puzzle), var(--button-bluesky-light);
 }
 .toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-modules-list {
@@ -368,7 +388,7 @@ body.is-edit-ui-toolbar-opened .toolbar-bar,
 }
 .toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-modules-list:hover,
 .toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-modules-list:focus,
-.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-modules-list:active{
+.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-modules-list:active {
   background-image: var(--icon-puzzle), var(--button-bluesky-light);
 }
 
@@ -377,10 +397,10 @@ body.is-edit-ui-toolbar-opened .toolbar-bar,
   background-image: var(--icon-gears), var(--button-bluesky-solid);
 }
 .toolbar-menu-administration a.toolbar-icon-system-admin-config:hover,
-.toolbar-menu-administration a.toolbar-icon-system-admin-config:focus{
+.toolbar-menu-administration a.toolbar-icon-system-admin-config:focus {
   background-image: var(--icon-gears), var(--button-bluesky);
 }
-.toolbar-menu-administration a.toolbar-icon-system-admin-config:active{
+.toolbar-menu-administration a.toolbar-icon-system-admin-config:active {
   background-image: var(--icon-gears), var(--button-bluesky-light);
 }
 .toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-config {
@@ -388,7 +408,7 @@ body.is-edit-ui-toolbar-opened .toolbar-bar,
 }
 .toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-config:hover,
 .toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-config:focus,
-.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-config:active{
+.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-config:active {
   background-image: var(--icon-gears), var(--button-bluesky-light);
 }
 
@@ -397,10 +417,10 @@ body.is-edit-ui-toolbar-opened .toolbar-bar,
   background-image: var(--icon-user), var(--button-bluesky-solid);
 }
 .toolbar-menu-administration a.toolbar-icon-entity-user-collection:hover,
-.toolbar-menu-administration a.toolbar-icon-entity-user-collection:focus{
+.toolbar-menu-administration a.toolbar-icon-entity-user-collection:focus {
   background-image: var(--icon-user), var(--button-bluesky);
 }
-.toolbar-menu-administration a.toolbar-icon-entity-user-collection:active{
+.toolbar-menu-administration a.toolbar-icon-entity-user-collection:active {
   background-image: var(--icon-user), var(--button-bluesky-light);
 }
 .toolbar-vertical .toolbar-menu-administration a.toolbar-icon-entity-user-collection {
@@ -408,7 +428,7 @@ body.is-edit-ui-toolbar-opened .toolbar-bar,
 }
 .toolbar-vertical .toolbar-menu-administration a.toolbar-icon-entity-user-collection:hover,
 .toolbar-vertical .toolbar-menu-administration a.toolbar-icon-entity-user-collection:focus,
-.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-entity-user-collection:active{
+.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-entity-user-collection:active {
   background-image: var(--icon-user), var(--button-bluesky-light);
 }
 
@@ -417,10 +437,10 @@ body.is-edit-ui-toolbar-opened .toolbar-bar,
   background-image: var(--icon-piechart), var(--button-bluesky-solid);
 }
 .toolbar-menu-administration a.toolbar-icon-system-admin-reports:hover,
-.toolbar-menu-administration a.toolbar-icon-system-admin-reports:focus{
+.toolbar-menu-administration a.toolbar-icon-system-admin-reports:focus {
   background-image: var(--icon-piechart), var(--button-bluesky);
 }
-.toolbar-menu-administration a.toolbar-icon-system-admin-reports:active{
+.toolbar-menu-administration a.toolbar-icon-system-admin-reports:active {
   background-image: var(--icon-piechart), var(--button-bluesky-light);
 }
 .toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-reports {
@@ -428,36 +448,10 @@ body.is-edit-ui-toolbar-opened .toolbar-bar,
 }
 .toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-reports:hover,
 .toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-reports:focus,
-.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-reports:active{
+.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-reports:active {
   background-image: var(--icon-piechart), var(--button-bluesky-light);
 }
 
-/* -----------------------------------------------------------------------------
-VERTICAL TRAY variation
------------------------------------------------------------------------------ */
-.toolbar-vertical .toolbar-tray {
-  background-image: repeating-linear-gradient(to right, var(--gravel) 0rem, var(--gravel) 2rem, var(--gravel-light) 2rem, var(--gravel-light) );
-}
-@media (max-width: 47.99em) {
-  .toolbar-vertical .toolbar-tray {
-    background: rgba(240, 240, 240, 0.8);
-  }
-}
-.toolbar-vertical .toolbar-menu a {
-  border-bottom: 1px solid var(--bluesky);
-}
-
-.toolbar-vertical .toolbar-menu .level-2 a {
-  border-right: none;
-  border-bottom: 1px solid var(--gravel);
-  background-image: var(--button-gravel);
-  background-position: 0 0;
-  color: var(--asphalt-light);
-}
-.toolbar-vertical .toolbar-menu .level-2 a:hover {
-  background-image: var(--button-gravel-light);
-  color: var(--bluesky);
-}
 
 /*
 2nd level: Shortcuts icons
@@ -560,7 +554,34 @@ nav[aria-label="User-defined shortcuts"]  a.edit-shortcuts:active {
 
 
 /* -----------------------------------------------------------------------------
-  Handle for vertical
+  3rd level
+----------------------------------------------------------------------------- */
+
+.toolbar-vertical .toolbar-menu .level-2 a {
+  border-right: none;
+  border-bottom: 1px solid var(--gravel);
+  background-image: var(--button-gravel);
+  background-image: var(--button-gravel);
+  background-position: 0 0;
+  color: var(--asphalt-light);
+  transition: background-image 2s ease-in-out;
+}
+.toolbar-vertical .toolbar-menu .level-2 a:hover {
+  background-image: var(--button-gravel-light);
+  background-position: 0 0;
+  color: var(--bluesky);
+  animation: nada 1.5s infinite;
+}
+
+.toolbar-vertical .toolbar-menu .level-3 a {
+  background-image: var(--button-gravel-light);
+}
+.toolbar-vertical .toolbar-menu .level-3 a:hover {
+}
+
+
+/* -----------------------------------------------------------------------------
+  2nd  vertical
 ----------------------------------------------------------------------------- */
 /* Show and hide the sub nav */
 .toolbar .toolbar-tray-horizontal .toolbar-menu .toolbar-handle,
@@ -625,41 +646,70 @@ body.toolbar-vertical .toolbar-menu .level-2 button.toolbar-handle.open {
   background-image: var(--icon-up-small);
 }
 
+/* -----------------------------------------------------------------------------
+VERTICAL TRAY variation
+----------------------------------------------------------------------------- */
+.toolbar-vertical .toolbar-tray {
+  background-image: repeating-linear-gradient(to right, var(--gravel) 0rem, var(--gravel) 2rem, var(--gravel-light) 2rem, var(--gravel-light) );
+}
+@media (max-width: 47.99em) {
+  .toolbar-vertical .toolbar-tray {
+    background: rgba(240, 240, 240, 0.8);
+  }
+}
+.toolbar-vertical .toolbar-menu a {
+  border-bottom: 1px solid var(--bluesky);
+}
+
 
 /*------------------------------------------------------------------------------
   toggle navbar button
 ------------------------------------------------------------------------------*/
 .toolbar-tab button.toolbar-icon-toggle-vertical,
-.toolbar-tab button.toolbar-icon-toggle-vertical:focus {
+.toolbar-tab button.toolbar-icon-toggle-horizontal {
   position: relative;
   float: right;
   width: 2rem;
   height: 2rem;
   margin: 0;
   padding: 0;
+  text-indent: -999rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.toolbar-tab button.toolbar-icon-toggle-vertical,
+.toolbar-tab button.toolbar-icon-toggle-vertical:focus {
   border-left: 1px solid var(--bluesky-light);
   background-color: var(--bluesky-light);
-  background-image: url("data:image/svg+xml,%0A%3Csvg width='11px' height='16px' viewBox='0 0 11 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 42 %2836781%29 - http://www.bohemiancoding.com/sketch --%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3C/defs%3E%3Cpath d='M10.0593246,2.93555429 C10.2984829,2.69639543 10.2984829,2.31374229 10.0593246,2.074584 L8.47131257,0.486571429 C8.23215429,0.247413143 7.84950057,0.247413143 7.61034229,0.486571429 L0.512119429,7.58479429 C0.272961143,7.82395257 0.272961143,8.20660629 0.512119429,8.44576457 L7.61034229,15.5439874 C7.84950057,15.7831457 8.23215429,15.7831457 8.47131257,15.5439874 L10.0593246,13.9559754 C10.2984829,13.7168171 10.2984829,13.3341634 10.0593246,13.0950051 L4.97959886,8.01527943 L10.0593246,2.93555429 Z' id='Shape' stroke='none' fill='%23FFFFFF' fill-rule='nonzero'%3E%3C/path%3E%3C/svg%3E");
-  text-indent: -999rem;
+  background-image: var(--icon-arrow-left);
 }
+
 .toolbar-tab button.toolbar-icon-toggle-vertical:hover {
   background-color: var(--bluesky-20);
+  transform: rotate(-90deg);
+  animation: toolbar_toogle_vertical 1s infinite;
 }
 
-
+@keyframes toolbar_toogle_vertical {
+  0% {
+    background-position: center left;
+  }
+  50% {
+    background-position: center right;
+  }
+  100% {
+    background-position: center left;
+  }
+}
 
 
 .toolbar-tab button.toolbar-icon-toggle-horizontal,
 .toolbar-tab button.toolbar-icon-toggle-horizontal:focus {
-  float: right;
-  width: 2rem;
-  height: 2rem;
   margin: 2rem 0;
-  padding: 0;
   background-color: var(--gravel);
   background-image: var(--icon-up);
-  text-indent: -999rem;
 }
 .toolbar-tab button.toolbar-icon-toggle-horizontal:hover {
   background-color: var(--concrete-light);
+  transform: rotate(90deg);
 }
