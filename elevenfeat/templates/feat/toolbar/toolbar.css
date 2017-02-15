@@ -1,14 +1,7 @@
 /*
 Admin Toolbar
 Dont change the classnames - stuff will break ;)
-
-TODO:
-- cleanup the inline svg files from meta data.
-- add css animation on icons
-- check if we really want the icons as inline css, and if we can animate them then.
-
 */
-
 /* set global toolbar settings*/
 #toolbar-administration {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
@@ -36,13 +29,89 @@ body.is-edit-ui-toolbar-opened .toolbar-bar,
   background-color: var(--rasberry-light-50);
 }
 
-/* main toolbar icons */
+/* Toolbar tabs */
+.toolbar-tab .toolbar-item.trigger {
+  min-width: 9rem;
+  height: 2rem;
+  border-left: 1px solid var(--black);
+  background-color: var(--asphalt);
+  background-image: none;
+  color: var(--white);
+  font-size: 1rem;
+  line-height: 2rem;
+  text-transform: capitalize;
+  transition: 0.2s ease-in-out;
+}
+.toolbar-tab .toolbar-item.trigger:hover {
+  background-color: var(--asphalt-light);
+  color: var(--gravel);
+}
+.toolbar-tab .toolbar-item.trigger.is-active {
+  background-color: var(--bluesky);
+}
+/* Toolbar tab icons colors*/
+.toolbar-tab .toolbar-item.trigger:hover:before {
+  background-color: var(--concrete);
+}
+.toolbar-tab .toolbar-item.is-active.trigger:hover:before {
+  background-color: var(--bluesky-light);
+}
+
+/* toolbar icon */
+.toolbar-icon,
+.toolbar-menu a {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0 0.5rem 0 2.5rem ;
+  outline: none;
+  background-image: none;
+  background-image: var(--button-bluesky-solid);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: auto;
+  color: var(--white);
+  line-height: 2rem;
+  text-align: left;
+}
+button.toolbar-icon {
+  border: 0;
+}
+.toolbar-icon:hover,
+.toolbar-menu a:hover {
+  background-image: var(--button-bluesky-light-solid);
+}
+.toolbar-icon:before,
+.toolbar-menu a:before {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--white);
+  background-image: none ! important; /* yes we wanna make sure no module have fun here */
+  content: "";
+  transition: 0.5s ease-in;
+
+          mask: var(--icon-coffee) no-repeat;
+  -webkit-mask: var(--icon-coffee) no-repeat;
+}
+.toolbar-icon:hover:before,
+.toolbar-menu a:hover:before {
+  transform: scale(1.5);
+}
+/* old browser support */
+html:not(.cssmask) .toolbar-icon::before {
+  background-color: transparent;
+}
+
+/* home icons */
 .toolbar-tab--small {
   width: 2rem;
   height: 2rem;
   background-color: var(--asphalt-light);
 }
-
 .toolbar-icon-11home {
   position: relative;
   width: 1rem;
@@ -66,92 +135,17 @@ body.is-edit-ui-toolbar-opened .toolbar-bar,
 }
 .toolbar-icon-11home:hover:before {
   background-color: hotpink;
-  transform: scale(2);
-}
-
-html:not(.cssmask) .toolbar-icon-11home::before {
-  content: '';
-  width: 1rem;
-  height: 1rem;
-  display: block;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-color: transparent;
-  background-image: var(--icon-drop);
-}
-
-/*toolbar-icon toolbar-icon-menu trigger toolbar-item is-active*/
-/* Toolbar main tabs */
-.toolbar-tab .toolbar-item.trigger {
-  min-width: 9rem;
-  height: 2rem;
-  border-left: 1px solid var(--black);
-  background-color: var(--asphalt);
-  background-image: none;
-  color: var(--white);
-  font-size: 1rem;
-  text-transform: capitalize;
-  transition: 0.2s ease-in-out;
-}
-
-.toolbar-tab .toolbar-item.trigger:hover {
-  background-color: var(--asphalt-light);
-  color: var(--gravel);
-}
-.toolbar-tab .toolbar-item.trigger.is-active {
-  background-color: var(--bluesky);
-}
-
-/* toolbar tab icons colors*/
-.toolbar-tab .toolbar-item.trigger:hover:before {
-  background-color: var(--concrete);
-}
-.toolbar-tab .toolbar-item.is-active.trigger:hover:before {
-  background-color: var(--bluesky-light);
-}
-
-/* toolbar  icons */
-.toolbar-tab .toolbar-icon,
-.toolbar-menu a  {
-  position: relative;
-  display: block;
-  margin: 0;
-  padding: 0 0.5rem 0 2.5rem ;
-  border: 0;
-  outline: none;
-  background-image: none;
-  background-image: var(--button-asphalt);
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: auto;
-  text-align: left;
-  line-height: 2rem;
-  color: var(--white);
-}
-
-.toolbar-tab .toolbar-icon::before,
-.toolbar-menu a::before  {
-  position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
-  display: block;
-  width: 1rem;
-  height: 1rem;
-  background-color: var(--white);
-  background-image: none ! important; /* yes we wanna make sure no module have fun here */
-  content: "";
-  transition: 0.5s ease-in;
-          mask: var(--icon-coffee) no-repeat;
-  -webkit-mask: var(--icon-coffee) no-repeat;
-}
-.toolbar-tab .toolbar-icon:hover:before,
-.toolbar-menu a:hover:before {
   transform: scale(1.5);
 }
-
-/* old browser support */
-html:not(.cssmask) .toolbar-tab .toolbar-icon::before {
+html:not(.cssmask) .toolbar-icon-11home::before {
+  display: block;
+  width: 1rem;
+  height: 1rem;
   background-color: transparent;
+  background-image: var(--icon-drop);
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
 }
 
 @media (max-width: 47.99rem) {
@@ -165,19 +159,22 @@ html:not(.cssmask) .toolbar-tab .toolbar-icon::before {
 /* manage */
 .toolbar-tab .toolbar-icon-menu::before {
   -webkit-mask-image: var(--icon-manage);
+          mask-image: var(--icon-manage);
 }
 /* shortcuts */
 .toolbar-tab .toolbar-icon-shortcut:before {
   background-color: var(--strawberry);
+
   -webkit-mask-image: var(--icon-heart);
-  mask-image: var(--icon-heart);
+          mask-image: var(--icon-heart);
 }
 /* user */
 .toolbar-tab .toolbar-icon-user:before {
   -webkit-mask-image: var(--icon-user);
+          mask-image: var(--icon-user);
 }
 
-/* edit/editing */
+/* edit-editing + place block */
 .toolbar .toolbar-bar .contextual-toolbar-tab.toolbar-tab {
   float: right;
 }
@@ -186,24 +183,31 @@ html:not(.cssmask) .toolbar-tab .toolbar-icon::before {
     margin: 0;
   }
 }
+/* edit & editing*/
 .toolbar-tab button.toolbar-icon-edit {
-  min-width: 7rem
+  min-width: 7rem;
+  background-image: var(--button-asphalt);
+  line-height: 2rem;
 }
-
+.toolbar-tab button.toolbar-icon-edit:before {
+  -webkit-mask-image: var(--icon-pen);
+          mask-image: var(--icon-pen);
+}
+.toolbar-tab button.toolbar-icon-edit:hover:before {
+  background-color: var(--rasberry-light);
+}
+.toolbar-tab button.toolbar-icon-edit.is-active:hover:before {
+  background-color: var(--rasberry);
+}
 .toolbar-tab button.toolbar-icon-edit:hover,
-.toolbar-tab button.toolbar-icon-edit.is-active,
-.toolbar-tab .toolbar-icon-place-block-inactive:hover,
-.toolbar-tab .toolbar-icon-place-block-active {
+.toolbar-tab button.toolbar-icon-edit.is-active {
   background-image: var(--button-rasberry);
 }
-.toolbar-tab button.toolbar-icon-edit.is-active:hover,
-.toolbar-tab .toolbar-icon-place-block-active:hover {
+.toolbar-tab button.toolbar-icon-edit.is-active:hover {
   background-image: var(--button-rasberry-rev);
 }
 .toolbar-tab button.toolbar-icon-edit:active,
-.toolbar-tab button.toolbar-icon-edit.is-active:active,
-.toolbar-tab .toolbar-icon-place-block-inactive:active,
-.toolbar-tab .toolbar-icon-place-block-active:active {
+.toolbar-tab button.toolbar-icon-edit.is-active:active {
   background-image: var(--button-rasberry-active);
 }
 
@@ -213,305 +217,104 @@ html:not(.cssmask) .toolbar-tab .toolbar-icon::before {
   margin-right: 2rem;
 }
 
+/* place-block inactive */
+.toolbar-tab .toolbar-icon-place-block-inactive,
+.toolbar-tab .toolbar-icon-place-block-active {
+  min-width: 7rem;
+  background-image: var(--button-asphalt);
+  line-height: 2rem;
+}
+.toolbar-tab .toolbar-icon-place-block-inactive:before,
+.toolbar-tab .toolbar-icon-place-block-active:before {
+  -webkit-mask-image: var(--icon-browser);
+          mask-image: var(--icon-browser);
+}
+.toolbar-tab .toolbar-icon-place-block-inactive:hover {
+  background-image: var(--button-rasberry);
+}
+.toolbar-tab .toolbar-icon-place-block-inactive:active {
+  background-image: var(--button-rasberry-active);
+}
+.toolbar-tab .toolbar-icon-place-block-inactive:hover:before {
+  background-color: var(--rasberry-light);
+}
+
+
+/* place block active */
+.toolbar-tab .toolbar-icon-place-block-active {
+  background-image: var(--button-rasberry);
+}
+.toolbar-tab .toolbar-icon-place-block-active:hover {
+  background-image: var(--button-rasberry-rev);
+}
+.toolbar-tab .toolbar-icon-place-block-active:active {
+  background-image: var(--button-rasberry-active);
+}
+.toolbar-tab .toolbar-icon-place-block-active:hover:before {
+  background-color: var(--rasberry);
+}
+
+
 /* -----------------------------------------------------------------------------
- TRAY - 2nd level
+ TRAY
 ----------------------------------------------------------------------------- */
 .toolbar-horizontal .toolbar-tray {
   border-top: 1px solid var(--bluesky-light);
   background-color: var(--bluesky);
 }
 
-.toolbar-menu a{
-  background-image: var(--button-bluesky-solid);
+.toolbar-horizontal .toolbar-menu a {
   border-left: 1px solid var(--bluesky-light);
 }
-.toolbar-menu a:hover {
-  background-image: var(--button-bluesky-light-solid);
-}
-
-/*------------------------------------------------------------------------------
-2nd level Icons
-------------------------------------------------------------------------------*/
-/*
-  2nd level: Manage icons
-*/
-/* set defaults */
-.toolbar-menu-administration a.toolbar-icon {
-  background-image: var(--icon-drop), var(--button-bluesky-solid);
-}
-.toolbar-menu-administration a.toolbar-icon {
-  background-image: var(--icon-pen), var(--button-bluesky-solid);
-}
-.toolbar-menu-administration a.toolbar-icon:hover,
-.toolbar-menu-administration a.toolbar-icon:focus {
-  background-image: var(--icon-pen), var(--button-bluesky);
-}
-.toolbar-menu-administration a.toolbar-icon:active {
-  background-image: var(--icon-pen), var(--button-bluesky-light);
-}
-
-/* content */
-.toolbar-menu-administration a.toolbar-icon-system-admin-content {
-  background-image: var(--icon-content), var(--button-bluesky-solid);
-}
-.toolbar-menu-administration a.toolbar-icon-system-admin-content:hover,
-.toolbar-menu-administration a.toolbar-icon-system-admin-content:focus {
-  background-image: var(--icon-content), var(--button-bluesky);
-}
-.toolbar-menu-administration a.toolbar-icon-system-admin-content:active {
-  background-image: var(--icon-content), var(--button-bluesky-light);
-}
-.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-content {
-  background-image: var(--icon-content), var(--button-bluesky);
-}
-.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-content:hover,
-.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-content:focus,
-.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-content:active {
-  background-image: var(--icon-content), var(--button-bluesky-light);
-}
-
-/* Structure */
-.toolbar-menu-administration a.toolbar-icon-system-admin-structure {
-  background-image: var(--icon-structure), var(--button-bluesky-solid);
-}
-.toolbar-menu-administration a.toolbar-icon-system-admin-structure:hover,
-.toolbar-menu-administration a.toolbar-icon-system-admin-structure:focus {
-  background-image: var(--icon-structure), var(--button-bluesky);
-}
-.toolbar-menu-administration a.toolbar-icon-system-admin-structure:active {
-  background-image: var(--icon-structure), var(--button-bluesky-light);
-}
-.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-structure {
-  background-image: var(--icon-structure), var(--button-bluesky);
-}
-.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-structure:hover,
-.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-structure:focus,
-.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-structure:active {
-  background-image: var(--icon-structure), var(--button-bluesky-light);
-}
-
-/* Apperance */
-.toolbar-menu-administration a.toolbar-icon-system-themes-page {
-  background-image: var(--icon-rocket), var(--button-bluesky-solid);
-}
-.toolbar-menu-administration a.toolbar-icon-system-themes-page:hover,
-.toolbar-menu-administration a.toolbar-icon-system-themes-page:focus {
-  background-image: var(--icon-rocket), var(--button-bluesky);
-}
-.toolbar-menu-administration a.toolbar-icon-system-themes-page:active {
-  background-image: var(--icon-rocket), var(--button-bluesky-light);
-}
-.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-themes-page {
-  background-image: var(--icon-rocket), var(--button-bluesky);
-}
-.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-themes-page:hover,
-.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-themes-page:focus,
-.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-themes-page:active {
-  background-image: var(--icon-rocket), var(--button-bluesky-light);
-}
-
-
-/* Extend */
-.toolbar-menu-administration a.toolbar-icon-system-modules-list {
-  background-image: var(--icon-puzzle), var(--button-bluesky-solid);
-}
-.toolbar-menu-administration a.toolbar-icon-system-modules-list:hover,
-.toolbar-menu-administration a.toolbar-icon-system-modules-list:focus {
-  background-image: var(--icon-puzzle), var(--button-bluesky);
-}
-.toolbar-menu-administration a.toolbar-icon-system-modules-list:active {
-  background-image: var(--icon-puzzle), var(--button-bluesky-light);
-}
-.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-modules-list {
-  background-image: var(--icon-puzzle), var(--button-bluesky);
-}
-.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-modules-list:hover,
-.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-modules-list:focus,
-.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-modules-list:active {
-  background-image: var(--icon-puzzle), var(--button-bluesky-light);
-}
-
-/* Configuration */
-.toolbar-menu-administration a.toolbar-icon-system-admin-config {
-  background-image: var(--icon-gears), var(--button-bluesky-solid);
-}
-.toolbar-menu-administration a.toolbar-icon-system-admin-config:hover,
-.toolbar-menu-administration a.toolbar-icon-system-admin-config:focus {
-  background-image: var(--icon-gears), var(--button-bluesky);
-}
-.toolbar-menu-administration a.toolbar-icon-system-admin-config:active {
-  background-image: var(--icon-gears), var(--button-bluesky-light);
-}
-.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-config {
-  background-image: var(--icon-gears), var(--button-bluesky);
-}
-.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-config:hover,
-.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-config:focus,
-.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-config:active {
-  background-image: var(--icon-gears), var(--button-bluesky-light);
-}
-
-/* People */
-.toolbar-menu-administration a.toolbar-icon-entity-user-collection {
-  background-image: var(--icon-user), var(--button-bluesky-solid);
-}
-.toolbar-menu-administration a.toolbar-icon-entity-user-collection:hover,
-.toolbar-menu-administration a.toolbar-icon-entity-user-collection:focus {
-  background-image: var(--icon-user), var(--button-bluesky);
-}
-.toolbar-menu-administration a.toolbar-icon-entity-user-collection:active {
-  background-image: var(--icon-user), var(--button-bluesky-light);
-}
-.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-entity-user-collection {
-  background-image: var(--icon-user), var(--button-bluesky);
-}
-.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-entity-user-collection:hover,
-.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-entity-user-collection:focus,
-.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-entity-user-collection:active {
-  background-image: var(--icon-user), var(--button-bluesky-light);
-}
-
-/* Report */
-.toolbar-menu-administration a.toolbar-icon-system-admin-reports {
-  background-image: var(--icon-piechart), var(--button-bluesky-solid);
-}
-.toolbar-menu-administration a.toolbar-icon-system-admin-reports:hover,
-.toolbar-menu-administration a.toolbar-icon-system-admin-reports:focus {
-  background-image: var(--icon-piechart), var(--button-bluesky);
-}
-.toolbar-menu-administration a.toolbar-icon-system-admin-reports:active {
-  background-image: var(--icon-piechart), var(--button-bluesky-light);
-}
-.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-reports {
-  background-image: var(--icon-piechart), var(--button-bluesky);
-}
-.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-reports:hover,
-.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-reports:focus,
-.toolbar-vertical .toolbar-menu-administration a.toolbar-icon-system-admin-reports:active {
-  background-image: var(--icon-piechart), var(--button-bluesky-light);
-}
-
-
-/*
-2nd level: Shortcuts icons
-*/
-nav[aria-label="User-defined shortcuts"] a {
-  background-image: var(--icon-heart), var(--button-bluesky-solid);
-}
-nav[aria-label="User-defined shortcuts"] a:hover {
-  background-image: var(--icon-heart), var(--button-bluesky);
-}
-
-.toolbar-vertical nav[aria-label="User-defined shortcuts"] a {
-  background-image: var(--icon-heart), var(--button-bluesky);
-}
-.toolbar-vertical nav[aria-label="User-defined shortcuts"] a:hover {
-  background-image: var(--icon-heart), var(--button-bluesky-light);
-}
-
-nav[aria-label="User-defined shortcuts"] a.edit-shortcuts {
-  position: absolute;
-  right: 2rem;
-  height: 2rem;
-  margin: 0;
-  padding: 0 0.5rem 0 2.5rem ;
-  outline: none;
-  background-image: var(--icon-pen), var(--button-rasberry);
-  background-repeat: no-repeat;
-  background-position: 0.5rem 0.5rem,
-  0 0;
-  background-size: auto;
-  color: var(--white);
-  font-size: 1rem;
-  line-height: 2rem;
-}
-nav[aria-label="User-defined shortcuts"]  a.edit-shortcuts:hover {
-  background-image: var(--icon-pen), var(--button-rasberry-rev);
-}
-nav[aria-label="User-defined shortcuts"]  a.edit-shortcuts:active {
-  background-image: var(--icon-pen), var(--button-rasberry-active);
-}
-.toolbar-vertical  nav[aria-label="User-defined shortcuts"]  a.edit-shortcuts {
-  position: relative;
-  right: 0;
-  padding: 0 0 0 2.5rem;
-  text-align: left;
-}
-
-/*
-2nd level User
-*/
-
-/* User 2nd level:  view profile */
-.toolbar-tray .account a:{ }
-
-/* User 2nd level:   Edit profile */
-.toolbar-tray .account-edit a {
-
-}
-.toolbar-tray .account-edit a:hover {
-
-}
-.toolbar-vertical .toolbar-tray .account-edit a {
-
-}
-.toolbar-vertical .toolbar-tray .account-edit a:hover {
-
-}
-
-/* User 2nd level:  logout */
-.toolbar-tray li.logout {
-  float: right;
-  padding-right: 1rem;
-}
-.toolbar-vertical .toolbar-tray li.logout {
-  float: none;
-  padding: 0;
-}
-.toolbar-tray .logout a {
-  background-image: var(--icon-logout),var(--button-strawberry);
-  background-position: 0.5rem 0.5rem,  0 0;
-  background-size: auto;
-}
-.toolbar-tray .logout a:hover {
-  background-image: var(--icon-logout),var(--button-strawberry-rev);
-}
-.toolbar-tray .logout a:active {
-  background-image: var(--icon-logout),var(--button-strawberry-active);
-}
-
 
 /* -----------------------------------------------------------------------------
-  3rd level
+Vertical menu variation
 ----------------------------------------------------------------------------- */
+.toolbar-vertical .toolbar-menu a {
+  background-image: var(--button-rasberry);
+}
+.toolbar-vertical .toolbar-menu a,
+.toolbar-vertical .toolbar-menu .level-1 a {
+  border-bottom: 1px solid var(--bluesky);
+  background-image: var(--button-bluesky);
+}
+.toolbar-vertical .toolbar-menu a:hover,
+.toolbar-vertical .toolbar-menu .level-1 a:hover {
+  border-bottom: 1px solid var(--bluesky-light);
+  background-image: var(--button-bluesky-light);
+}
 
 .toolbar-vertical .toolbar-menu .level-2 a {
-  border-right: none;
-  border-bottom: 1px solid var(--gravel);
-  background-image: var(--button-gravel);
-  background-image: var(--button-gravel);
-  background-position: 0 0;
-  color: var(--asphalt-light);
-  transition: background-image 2s ease-in-out;
+  border-bottom: 1px solid var(--bluesky);
+  background-image: var(--button-bluesky-light);
+  color: var(--white);
 }
 .toolbar-vertical .toolbar-menu .level-2 a:hover {
-  background-image: var(--button-gravel-light);
-  background-position: 0 0;
   color: var(--bluesky);
-  animation: nada 1.5s infinite;
 }
-
+.toolbar-vertical .toolbar-menu .level-2 a:before {
+  -webkit-mask-image: var(--icon-default);
+          mask-image: var(--icon-default);
+}
 .toolbar-vertical .toolbar-menu .level-3 a {
-  background-image: var(--button-gravel-light);
+  border-bottom: 1px solid var(--concrete);
+  background-image: var(--button-gravel);
+  color: var(--asphalt-light);
 }
 .toolbar-vertical .toolbar-menu .level-3 a:hover {
+  border-bottom: 1px solid var(--asphalt-light);
+  background-image: var(--button-gravel-light);
+  color: var(--asphalt-light);
 }
+.toolbar-vertical .toolbar-menu .level-3 a:before {
+  background-color: var(--concrete);
 
-
+  -webkit-mask-image: var(--icon-pen);
+          mask-image: var(--icon-pen);
+}
 /* -----------------------------------------------------------------------------
-  2nd  vertical
+  Show and hide the sub nav
 ----------------------------------------------------------------------------- */
-/* Show and hide the sub nav */
 .toolbar .toolbar-tray-horizontal .toolbar-menu .toolbar-handle,
 .toolbar .toolbar-tray-horizontal .toolbar-menu ul,
 .toolbar .toolbar-tray-vertical .toolbar-menu ul {
@@ -524,58 +327,192 @@ nav[aria-label="User-defined shortcuts"]  a.edit-shortcuts:active {
   position: relative;
   display: block;
 }
-/* up and down icons */
-.toolbar button.toolbar-handle,
-.toolbar button.toolbar-handle:hover,
-.toolbar button.toolbar-handle:focus {
+
+/* up and down icons position */
+.toolbar-icon.toolbar-handle {
   position: absolute;
   top: 0;
   right: 0;
   width: 2rem ;
-  height: calc(2rem - 1px);
+  height: 2rem;
   margin: 0;
   padding: 0;
   border: none;
-  background-color: var(--bluesky-40);
-  background-image: var(--icon-down);
-  background-position: center center;
+  background-image: none;
   text-indent: -999rem;
 }
-.toolbar button.toolbar-handle:hover {
+
+/* button handler */
+.toolbar-icon.toolbar-handle {
+  background-color: var(--bluesky-20);
+}
+.toolbar-icon.toolbar-handle:before {
+  -webkit-mask-image: var(--icon-down);
+          mask-image: var(--icon-down);
+}
+
+.toolbar-icon.toolbar-handle:hover {
+  background-color: var(--blueskye-light);
+}
+.toolbar-icon.toolbar-handle.open {
+  background-color: var(--bluesky-50);
+}
+.toolbar-icon.toolbar-handle.open:before {
+  -webkit-mask-image: var(--icon-up);
+          mask-image: var(--icon-up);
+}
+.toolbar-icon.toolbar-handle.open:hover {
+  background-color: var(--bluesky-light);
+}
+
+/* button handler lvl 2*/
+.level-2 .toolbar-icon.toolbar-handle {
+  background-color: var(--blueskye);
+}
+.level-2 .toolbar-icon.toolbar-handle:before {
+  left: 50%;
+  top: 1rem;
+  -webkit-mask-image: var(--icon-down-small);
+          mask-image: var(--icon-down-small);
+
+}
+.level-2 .toolbar-icon.toolbar-handle:hover {
+  background-color: var(--bluesky-light);
+}
+.level-2 .toolbar-icon.toolbar-handle.open {
+  background-color: var(--bluesky-light);
+}
+.level-2 .toolbar-icon.toolbar-handle.open:before {
+  -webkit-mask-image: var(--icon-up-small);
+          mask-image: var(--icon-up-small);
+}
+.level-2 .toolbar-icon.toolbar-handle.open:hover {
   background-color: var(--bluesky);
-  animation: handle_slide 1.5s infinite;
-}
-.toolbar button.toolbar-handle.open {
-  background-image: var(--icon-up);
 }
 
-
-@keyframes handle_slide {
-  0% {
-    background-position: center center,  0 0;
-  }
-  25% {
-    background-position: center bottom,  0 0;
-  }
-  100% {
-    background-position: center top,  0 0;
-  }
+/*------------------------------------------------------------------------------
+2nd level Icons
+------------------------------------------------------------------------------*/
+/* content */
+.toolbar-menu-administration a.toolbar-icon-system-admin-content:before {
+  -webkit-mask-image: var(--icon-user);
+          mask-image: var(--icon-user);
+}
+/* Structure */
+.toolbar-menu-administration a.toolbar-icon-system-admin-structure:before {
+  -webkit-mask-image: var(--icon-structure);
+          mask-image: var(--icon-structure);
+}
+/* Apperance */
+.toolbar-menu-administration a.toolbar-icon-system-themes-page:before {
+  -webkit-mask-image: var(--icon-rocket);
+          mask-image: var(--icon-rocket);
+}
+/* Extend */
+.toolbar-menu-administration a.toolbar-icon-system-modules-list:before {
+  -webkit-mask-image: var(--icon-puzzle);
+          mask-image: var(--icon-puzzle);
+}
+/* Configuration */
+.toolbar-menu-administration a.toolbar-icon-system-admin-config:before {
+  -webkit-mask-image: var(--icon-gears);
+          mask-image: var(--icon-gears);
+}
+/* People */
+.toolbar-menu-administration a.toolbar-icon-entity-user-collection:before {
+  -webkit-mask-image: var(--icon-user);
+          mask-image: var(--icon-user);
+}
+/* Report */
+.toolbar-menu-administration a.toolbar-icon-system-admin-reports:before {
+  -webkit-mask-image: var(--icon-piechart);
+          mask-image: var(--icon-piechart);
 }
 
+/*
+ Shortcuts icons
+*/
+nav[aria-label="User-defined shortcuts"] a:before {
+  -webkit-mask-image: var(--icon-heart);
+          mask-image: var(--icon-heart);
+}
+nav[aria-label="User-defined shortcuts"] a.edit-shortcuts {
+  position: absolute;
+  right: 2rem;
+  display: block;
+  height: 2rem;
+  margin: 0;
+  padding: 0 0.5rem 0 2.5rem ;
+  outline: none;
+  background-image: var(--button-asphalt);
+  color: var(--white);
+  line-height: 2rem;
+}
+nav[aria-label="User-defined shortcuts"] a.edit-shortcuts:hover {
+  background-image: var(--button-rasberry);
+}
+nav[aria-label="User-defined shortcuts"] a.edit-shortcuts:before {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--white);
+  background-image: none ! important; /* yes we wanna make sure no module have fun here */
+  content: "";
+  transition: 0.5s ease-in;
 
-body.toolbar-vertical .toolbar-menu .level-2 button.toolbar-handle {
-  background-color: var(--gravel);
-  background-image: var(--icon-down-small);
+  -webkit-mask-image: var(--icon-pen);
+          mask-image: var(--icon-pen);
 }
-body.toolbar-vertical .toolbar-menu .level-2 button.toolbar-handle:hover {
-  background-color: var(--gravel-light);
+
+.toolbar-vertical  nav[aria-label="User-defined shortcuts"]  a.edit-shortcuts {
+  position: relative;
+  right: 0;
+  padding: 0 0 0 2.5rem;
+  text-align: left;
 }
-body.toolbar-vertical .toolbar-menu .level-2 button.toolbar-handle.open {
-  background-image: var(--icon-up-small);
+
+/* view profile */
+.toolbar-tray .account a:before {
+  -webkit-mask-image: var(--icon-user);
+          mask-image: var(--icon-user);
 }
+/* Edit profile */
+.toolbar-tray .account-edit a:before {
+  -webkit-mask-image: var(--icon-pen);
+          mask-image: var(--icon-pen);
+}
+
+/* Logout */
+.toolbar-tray li.logout {
+  float: right;
+  padding-right: 2rem;
+}
+.toolbar-vertical .toolbar-tray li.logout {
+  float: none;
+  padding: 0;
+}
+
+/* Logout button colors */
+.toolbar-tray .logout a {
+  background-image: var(--button-strawberry);
+}
+.toolbar-tray .logout a:hover {
+  background-image: var(--button-strawberry-rev);
+}
+.toolbar-tray .logout a:active {
+  background-image: var(--button-strawberry-active);
+}
+.toolbar-tray .logout a:before {
+  -webkit-mask-image: var(--icon-logout);
+          mask-image: var(--icon-logout);
+}
+
 
 /* -----------------------------------------------------------------------------
-VERTICAL TRAY variation
+VERTICAL TRAY
 ----------------------------------------------------------------------------- */
 .toolbar-vertical .toolbar-tray {
   background-image: repeating-linear-gradient(to right, var(--gravel) 0rem, var(--gravel) 2rem, var(--gravel-light) 2rem, var(--gravel-light) );
@@ -588,7 +525,6 @@ VERTICAL TRAY variation
 .toolbar-vertical .toolbar-menu a {
   border-bottom: 1px solid var(--bluesky);
 }
-
 
 /*------------------------------------------------------------------------------
   toggle navbar button
@@ -609,40 +545,36 @@ VERTICAL TRAY variation
 .toolbar-tab button.toolbar-icon-toggle-vertical:focus {
   border-left: 1px solid var(--bluesky-light);
   background-color: var(--bluesky-light);
-  background-image: var(--icon-arrow-left);
 }
 
 .toolbar-tab button.toolbar-icon-toggle-vertical:hover {
   background-color: var(--bluesky-20);
+}
+
+.toolbar-tab button.toolbar-icon-toggle-vertical:before {
+  -webkit-mask-image: var(--icon-arrow-left);
+          mask-image: var(--icon-arrow-left);
+}
+.toolbar-tab button.toolbar-icon-toggle-vertical:hover:before {
   transform: rotate(-90deg);
-  animation: toolbar_toogle_vertical 1s infinite;
 }
-
-@keyframes toolbar_toogle_vertical {
-  0% {
-    background-position: center left;
-  }
-  50% {
-    background-position: center right;
-  }
-  100% {
-    background-position: center left;
-  }
-}
-
 
 .toolbar-tab button.toolbar-icon-toggle-horizontal,
 .toolbar-tab button.toolbar-icon-toggle-horizontal:focus {
   margin: 2rem 0;
-  background-color: var(--gravel);
-  background-image: var(--icon-up);
+  background-color: var(--concrete);
+  background-image: none;
 }
 .toolbar-tab button.toolbar-icon-toggle-horizontal:hover {
-  background-color: var(--concrete-light);
+  background-color: var(--asphalt-light);
+}
+.toolbar-tab button.toolbar-icon-toggle-horizontal:before {
+  -webkit-mask-image: var(--icon-up);
+          mask-image: var(--icon-up);
+}
+.toolbar-tab button.toolbar-icon-toggle-horizontal:hover:before {
   transform: rotate(90deg);
 }
-
-
 /* -----------------------------------------------------------------------------
 overwrites for old browsers
 ------------------------------------------------------------------------------*/
