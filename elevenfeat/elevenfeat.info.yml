@@ -6,6 +6,11 @@ package: eleven
 core: '8.x'
 
 hidden: TRUE
+
+# -- dependencies -----------------------------------------------------------------
+dependencies:
+- core/modernizr
+
 # -- Libraries -----------------------------------------------------------------
 libraries:
   - elevenfeat/global
@@ -107,11 +112,21 @@ libraries-override:
       theme:
         assets/vendor/jquery.ui/themes/base/theme.css: false
 
+  # modernizr custom build
+  # https://modernizr.com/download/?cssmask-details-inputtypes-touchevents-addtest-prefixes-setclasses-teststyles&q=mask
+  core/modernizr:
+    js:
+      assets/vendor/modernizr/modernizr.min.js: js/modernizr-custom.js
+
+
   # classy
   # TODO: fix the cssspecificity so we dont have to remove potential elements
-  classy/base:
-    css:
-      component:
-        css/components/details.css: false
-        css/components/form.css: false
-        css/components/form.css: false
+  # classy/base:
+  #   css:
+  #     component:
+  #       css/components/details.css: false
+  #       css/components/form.css: false
+  #       css/components/form.css: false
+
+
+#

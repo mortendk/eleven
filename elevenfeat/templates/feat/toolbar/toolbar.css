@@ -14,7 +14,6 @@ TODO:
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
   font-size: 1rem;
 }
-
 .toolbar a,
 .toolbar a:hover {
   text-decoration: none;
@@ -34,214 +33,184 @@ TODO:
 /* change the toolbar bg color to indicate that were editing stuff */
 body.is-edit-ui-toolbar-opened .toolbar-bar,
 .toolbar-bar.js-outside-in-edit-mode {
-  background-color: var(--asphalt);
+  background-color: var(--rasberry-light-50);
 }
-
 
 /* main toolbar icons */
-.toolbar-icon-11home {
-  display: block;
-  float: left;
+.toolbar-tab--small {
   width: 2rem;
-  min-width: 2rem;
   height: 2rem;
   background-color: var(--asphalt-light);
-  background-image: var(--icon-drop);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 1rem;
-  text-indent: -999rem;
-}
-/* Home icon */
-.toolbar-icon-11home:hover {
-  background-color: var(--concrete);
 }
 
+.toolbar-icon-11home {
+  position: relative;
+  width: 1rem;
+  height: 1rem;
+  text-indent: -999rem;
+}
+.toolbar-icon-11home::before {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--white);
+  content: "";
+  transition: 0.5s ease-in;
+
+  -webkit-mask-image: var(--icon-drop);
+  -webkit-mask-size: cover;
+          mask-size: cover;
+}
+.toolbar-icon-11home:hover:before {
+  background-color: hotpink;
+  transform: scale(2);
+}
+
+html:not(.cssmask) .toolbar-icon-11home::before {
+  content: '';
+  width: 1rem;
+  height: 1rem;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  background-image: var(--icon-drop);
+}
+
+/*toolbar-icon toolbar-icon-menu trigger toolbar-item is-active*/
 /* Toolbar main tabs */
-.toolbar-tab .toolbar-item {
+.toolbar-tab .toolbar-item.trigger {
   min-width: 9rem;
   height: 2rem;
-  padding-top: 0.5rem;
-  padding-left: 2.5rem;
   border-left: 1px solid var(--black);
   background-color: var(--asphalt);
-  background-repeat: no-repeat;
-  background-position: 1rem 0.5rem;
-  background-size: 1rem;
+  background-image: none;
   color: var(--white);
   font-size: 1rem;
   text-transform: capitalize;
-  transition: background 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.toolbar-tab .toolbar-item.trigger:hover {
+  background-color: var(--asphalt-light);
+  color: var(--gravel);
+}
+.toolbar-tab .toolbar-item.trigger.is-active {
+  background-color: var(--bluesky);
+}
+
+/* toolbar tab icons colors*/
+.toolbar-tab .toolbar-item.trigger:hover:before {
+  background-color: var(--concrete);
+}
+.toolbar-tab .toolbar-item.is-active.trigger:hover:before {
+  background-color: var(--bluesky-light);
+}
+
+/* toolbar  icons */
+.toolbar-tab .toolbar-icon,
+.toolbar-menu a  {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0 0.5rem 0 2.5rem ;
+  border: 0;
+  outline: none;
+  background-image: none;
+  background-image: var(--button-asphalt);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: auto;
+  text-align: left;
+  line-height: 2rem;
+  color: var(--white);
+}
+
+.toolbar-tab .toolbar-icon::before,
+.toolbar-menu a::before  {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--white);
+  background-image: none ! important; /* yes we wanna make sure no module have fun here */
+  content: "";
+  transition: 0.5s ease-in;
+          mask: var(--icon-coffee) no-repeat;
+  -webkit-mask: var(--icon-coffee) no-repeat;
+}
+.toolbar-tab .toolbar-icon:hover:before,
+.toolbar-menu a:hover:before {
+  transform: scale(1.5);
+}
+
+/* old browser support */
+html:not(.cssmask) .toolbar-tab .toolbar-icon::before {
+  background-color: transparent;
 }
 
 @media (max-width: 47.99rem) {
   .toolbar-tab a.toolbar-item {
     width: 3em;
     min-width: 3rem;
-    background-position: center center;
     text-indent: -999rem;
   }
 }
 
-.toolbar-tab a.toolbar-item:hover {
-  animation: toolbar_tab_pulse 1.5s infinite;
-}
-.toolbar-tab a.toolbar-item.is-active {
-  background-color: var(--bluesky);
-}
-.toolbar-tab a.toolbar-item.is-active:hover {
-  animation: toolbar_tab_pulse_active 1.5s infinite;
-}
-/* tabs animation */
-@keyframes toolbar_tab_pulse {
-  0% {
-    background-size: 1rem;
-  }
-  50% {
-    background-color: var(--asphalt-light);
-    background-size: 1.2rem;
-    color: var(--concrete);
-  }
-  100% {
-    background-size: 1rem;
-  }
-}
-@keyframes toolbar_tab_pulse_active {
-  0% {
-    background-size: 1rem;
-    color: var(--white);
-  }
-  50% {
-    background-color: var(--bluesky-light);
-    background-size: 1.2rem;
-    color: var(--bluesky-50);
-  }
-  100% {
-    background-size: 1rem;
-  }
-}
-
-
-
-.toolbar-tab .toolbar-icon-escape-admin {
-  background-image: url("data:image/svg+xml,%0A%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 42 %2836781%29 - http://www.bohemiancoding.com/sketch --%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3C/defs%3E%3Cpath d='M15.1135128,7.34274701 C15.1135128,6.64441594 14.6514829,6.02824103 13.9122353,6.02824103 L6.684033,6.02824103 L9.69236149,3.01925558 C9.93877734,2.77278525 10.0825204,2.43388923 10.0825204,2.0847237 C10.0825204,1.73555816 9.93877734,1.39666215 9.69236149,1.15019243 L8.92231148,0.390243618 C8.67589562,0.1437739 8.34734094,0 7.99825171,0 C7.64916248,0 7.31034053,0.1437739 7.06392467,0.390243618 L0.37989106,7.06546873 C0.14374248,7.31193845 0,7.65083446 0,8 C0,8.34916554 0.14374248,8.68806155 0.37989106,8.92426175 L7.06392467,15.6200259 C7.31034053,15.8562261 7.64916248,16 7.99825171,16 C8.34734094,16 8.6861629,15.8562261 8.92231148,15.6200259 L9.69236149,14.8395381 C9.93877734,14.6033379 10.0825204,14.2644418 10.0825204,13.9152763 C10.0825204,13.5661108 9.93877734,13.2272141 9.69236149,12.9910139 L6.684033,9.97175897 L13.9122353,9.97175897 C14.6514829,9.97175897 15.1135128,9.35558406 15.1135128,8.65725299 L15.1135128,7.34274701 Z' id='Shape' stroke='none' fill='%23FFFFFF' fill-rule='evenodd'%3E%3C/path%3E%3C/svg%3E");
-}
-/* back to site*/
-.toolbar-tab .toolbar-icon-escape-admin {
-  background-image: url("data:image/svg+xml,%0A%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 42 %2836781%29 - http://www.bohemiancoding.com/sketch --%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3C/defs%3E%3Cpath d='M15.1135128,7.34274701 C15.1135128,6.64441594 14.6514829,6.02824103 13.9122353,6.02824103 L6.684033,6.02824103 L9.69236149,3.01925558 C9.93877734,2.77278525 10.0825204,2.43388923 10.0825204,2.0847237 C10.0825204,1.73555816 9.93877734,1.39666215 9.69236149,1.15019243 L8.92231148,0.390243618 C8.67589562,0.1437739 8.34734094,0 7.99825171,0 C7.64916248,0 7.31034053,0.1437739 7.06392467,0.390243618 L0.37989106,7.06546873 C0.14374248,7.31193845 0,7.65083446 0,8 C0,8.34916554 0.14374248,8.68806155 0.37989106,8.92426175 L7.06392467,15.6200259 C7.31034053,15.8562261 7.64916248,16 7.99825171,16 C8.34734094,16 8.6861629,15.8562261 8.92231148,15.6200259 L9.69236149,14.8395381 C9.93877734,14.6033379 10.0825204,14.2644418 10.0825204,13.9152763 C10.0825204,13.5661108 9.93877734,13.2272141 9.69236149,12.9910139 L6.684033,9.97175897 L13.9122353,9.97175897 C14.6514829,9.97175897 15.1135128,9.35558406 15.1135128,8.65725299 L15.1135128,7.34274701 Z' id='Shape' stroke='none' fill='%23FFFFFF' fill-rule='evenodd'%3E%3C/path%3E%3C/svg%3E");
-}
-
 /* manage */
-.toolbar-tab .toolbar-icon-menu {
-  background-image: var(--icon-manage);
+.toolbar-tab .toolbar-icon-menu::before {
+  -webkit-mask-image: var(--icon-manage);
 }
 /* shortcuts */
-.toolbar-tab .toolbar-icon-shortcut {
-  background-image: var(--icon-heart);
+.toolbar-tab .toolbar-icon-shortcut:before {
+  background-color: var(--strawberry);
+  -webkit-mask-image: var(--icon-heart);
+  mask-image: var(--icon-heart);
 }
 /* user */
-.toolbar-tab .toolbar-icon-user {
-  background-image: var(--icon-user);
+.toolbar-tab .toolbar-icon-user:before {
+  -webkit-mask-image: var(--icon-user);
 }
 
-
-/* edit */
+/* edit/editing */
 .toolbar .toolbar-bar .contextual-toolbar-tab.toolbar-tab {
   float: right;
-  margin: 0 0 0 1rem;
 }
 @media (max-width: 61.99em) {
   .toolbar .toolbar-bar .contextual-toolbar-tab.toolbar-tab {
     margin: 0;
   }
 }
-
-.toolbar-tab button.toolbar-icon {
-  margin: 0;
-  padding: 0 0 0 2.5rem ;
-  border: 0;
-  outline: none;
-  background-image: none;
-  background-image: var(--icon-browser), var(--button-asphalt);
-  background-repeat: no-repeat;
-  background-position: 0.5rem 0.5rem, 0 0;
-  background-size: auto;
-  text-align: left;
-}
-.toolbar-tab button.toolbar-icon:hover {
-  animation: button_active 1.5s infinite;
-}
-@keyframes button_active {
-  0% {
-    background-position: 0.5rem 0.5rem,  0 0;
-  }
-  50% {
-    background-position: 0.5rem top,  0 0;
-  }
-  100% {
-    background-position: 0.5rem bottom,  0 0;
-  }
-}
-
-/* Editing */
 .toolbar-tab button.toolbar-icon-edit {
-  background-image: var(--icon-pen), var(--button-asphalt);
-  border-left: 1px solid var(--black);
+  min-width: 7rem
 }
+
 .toolbar-tab button.toolbar-icon-edit:hover,
-.toolbar-tab button.toolbar-icon-edit.is-active {
-  background-image: var(--icon-pen), var(--button-rasberry);
+.toolbar-tab button.toolbar-icon-edit.is-active,
+.toolbar-tab .toolbar-icon-place-block-inactive:hover,
+.toolbar-tab .toolbar-icon-place-block-active {
+  background-image: var(--button-rasberry);
 }
-.toolbar-tab button.toolbar-icon-edit.is-active:hover {
-  background-image: var(--icon-pen), var(--button-rasberry-rev);
+.toolbar-tab button.toolbar-icon-edit.is-active:hover,
+.toolbar-tab .toolbar-icon-place-block-active:hover {
+  background-image: var(--button-rasberry-rev);
 }
 .toolbar-tab button.toolbar-icon-edit:active,
-.toolbar-tab button.toolbar-icon-edit.is-active:active {
-  background-image: var(--icon-pen), var(--button-rasberry-active);
+.toolbar-tab button.toolbar-icon-edit.is-active:active,
+.toolbar-tab .toolbar-icon-place-block-inactive:active,
+.toolbar-tab .toolbar-icon-place-block-active:active {
+  background-image: var(--button-rasberry-active);
 }
 
 /* Place block */
 .toolbar .toolbar-bar .block-place-toolbar-tab {
   float: right;
-  margin: 0 1rem 0 0;
-}
-.toolbar-tab .toolbar-icon-place-block-inactive {
-  background-image: var(--icon-browser), var(--button-asphalt);
-  background-position: 0.5rem 0.5rem, 0 0;
-  background-size: auto;
-}
-.toolbar-tab a.toolbar-icon-place-block-inactive:hover {
-  background-image: var(--icon-browser), var(--button-rasberry);
-  animation: button_active 1.5s infinite;
-}
-.toolbar-tab .toolbar-icon-place-block-inactive:active {
-  background-image: var(--icon-browser), var(--button-rasberry-active);
-}
-.toolbar-tab .toolbar-icon-place-block-active {
-  background-image: var(--icon-browser), var(--button-rasberry);
-  background-position: 0.5rem 0.5rem, 0 0;
-  background-size: auto;
-}
-.toolbar-tab .toolbar-icon-place-block-active:hover {
-  background-image: var(--icon-browser), var(--button-rasberry-rev);
-}
-.toolbar-tab .toolbar-icon-place-block-active:active {
-  background-image: var(--icon-browser), var(--button-rasberry-active);
-}
-
-/* block layout  */
-.toolbar .toolbar-bar .toolbar-tab > .edit-ui__toolbar-icon.toolbar-icon {
-  padding-left: 2.5rem;
-}
-.toolbar-tab .edit-ui__toolbar-icon {
-  background-image: var(--icon-browser), var(--button-asphalt);
-}
-.toolbar-tab .edit-ui__toolbar-icon:hover,
-.toolbar-tab .edit-ui__toolbar-icon.is-active {
-  background-image: var(--icon-browser), var(--button-rasberry);
-}
-.toolbar-tab .edit-ui__toolbar-icon:active {
-  background-image: var(--icon-browser), var(--button-rasberry-rev);
+  margin-right: 2rem;
 }
 
 /* -----------------------------------------------------------------------------
@@ -252,43 +221,12 @@ body.is-edit-ui-toolbar-opened .toolbar-bar,
   background-color: var(--bluesky);
 }
 
-/*
-  Setting all menu item links
-*/
-.toolbar-menu a {
-  display: block;
-  min-width: 8rem;
-  height: 2rem;
-  margin: 0;
-  padding: 0 0.5rem 0 2.5rem ;
-  border: none;
-  border-right: 1px solid var(--bluesky-light);
-  outline: none;
-  background-image: var(--icon-default), var(--button-bluesky-solid);
-  background-repeat: no-repeat;
-  background-position: 0.5rem 0.5rem,  0 0;
-  background-size: auto;
-  color: var(--white);
-  font-size: 1rem;
-  line-height: 2rem;
+.toolbar-menu a{
+  background-image: var(--button-bluesky-solid);
+  border-left: 1px solid var(--bluesky-light);
 }
 .toolbar-menu a:hover {
-  background-image: var(--icon-default), var(--button-bluesky);
-  animation: toolbar_slide 2s infinite;
-}
-@keyframes toolbar_slide {
-  0% {
-    background-position: 0.5rem 0.5rem,  0 0;
-  }
-  25% {
-    background-position: 0.5rem 0.7rem,  0 0;
-  }
-  80% {
-    background-position: 0.5rem 0.3rem,  0 0;
-  }
-  100% {
-    background-position: 0.5rem 0.5rem,  0 0;
-  }
+  background-image: var(--button-bluesky-light-solid);
 }
 
 /*------------------------------------------------------------------------------
@@ -505,31 +443,20 @@ nav[aria-label="User-defined shortcuts"]  a.edit-shortcuts:active {
 */
 
 /* User 2nd level:  view profile */
-.toolbar-tray .account a {
-  background-image: var(--icon-user), var(--button-bluesky-solid);
-}
-.toolbar-tray .account a:hover {
-  background-image: var(--icon-user), var(--button-bluesky);
-}
-.toolbar-vertical .toolbar-tray .account a {
-  background-image: var(--icon-user), var(--button-bluesky);
-}
-.toolbar-vertical .toolbar-tray .account a:hover {
-  background-image: var(--icon-user), var(--button-bluesky-light);
-}
+.toolbar-tray .account a:{ }
 
 /* User 2nd level:   Edit profile */
 .toolbar-tray .account-edit a {
-  background-image: var(--icon-pen), var(--button-bluesky-solid);
+
 }
 .toolbar-tray .account-edit a:hover {
-  background-image: var(--icon-pen), var(--button-bluesky);
+
 }
 .toolbar-vertical .toolbar-tray .account-edit a {
-  background-image: var(--icon-pen), var(--button-bluesky);
+
 }
 .toolbar-vertical .toolbar-tray .account-edit a:hover {
-  background-image: var(--icon-pen), var(--button-bluesky-light);
+
 }
 
 /* User 2nd level:  logout */
@@ -713,4 +640,12 @@ VERTICAL TRAY variation
 .toolbar-tab button.toolbar-icon-toggle-horizontal:hover {
   background-color: var(--concrete-light);
   transform: rotate(90deg);
+}
+
+
+/* -----------------------------------------------------------------------------
+overwrites for old browsers
+------------------------------------------------------------------------------*/
+html:not(.cssmask) .toolbar-tab .toolbar-item::before {
+  background-color: transparent;
 }
