@@ -82,7 +82,8 @@ button.toolbar-icon {
   background-image: var(--button-bluesky-light-solid);
 }
 .toolbar-icon:before,
-.toolbar-menu a:before {
+.toolbar-menu a:before,
+.toolbar-icon-11home::before {
   position: absolute;
   top: 0.5rem;
   left: 0.5rem;
@@ -96,8 +97,8 @@ button.toolbar-icon {
 
           mask: var(--icon-coffee) no-repeat;
   -webkit-mask: var(--icon-coffee) no-repeat;
-  -webkit-mask-size: 1rem;
-          mask-size: 1rem;
+  -webkit-mask-size: contain;
+          mask-size: contain;
 }
 .toolbar-icon:hover:before,
 .toolbar-menu a:hover:before {
@@ -116,27 +117,18 @@ html:not(.cssmask) .toolbar-icon::before {
 }
 .toolbar-icon-11home {
   position: relative;
-  width: 1rem;
-  height: 1rem;
   text-indent: -999rem;
+  line-height: 2rem;
+  height: 2rem
 }
 .toolbar-icon-11home::before {
-  position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
-  display: block;
-  width: 1rem;
-  height: 1rem;
-  background-color: var(--white);
-  content: "";
-  transition: 0.5s ease-in;
-
+  background-color: var(--bluesky);
   -webkit-mask-image: var(--icon-drop);
-  /*-webkit-mask-size: 1rem;
-          mask-size: 1rem;*/
+  -webkit-mask-size: .8rem;
+          mask-size: .8rem;
 }
 .toolbar-icon-11home:hover:before {
-  background-color: hotpink;
+  background-color: var(--bluesky);
   transform: scale(1.5);
 }
 html:not(.cssmask) .toolbar-icon-11home::before {
@@ -561,7 +553,7 @@ VERTICAL TRAY
   background-color: var(--bluesky-20);
 }
 
-.toolbar-tab button.toolbar-icon-toggle-vertical:before {
+.toolbar-tab button.toolbar-icon.toolbar-icon-toggle-vertical:before {
   -webkit-mask-image: var(--icon-arrow-left);
           mask-image: var(--icon-arrow-left);
 }
