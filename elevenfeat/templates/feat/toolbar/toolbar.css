@@ -96,6 +96,8 @@ button.toolbar-icon {
 
           mask: var(--icon-coffee) no-repeat;
   -webkit-mask: var(--icon-coffee) no-repeat;
+  -webkit-mask-size: 1rem;
+          mask-size: 1rem;
 }
 .toolbar-icon:hover:before,
 .toolbar-menu a:hover:before {
@@ -130,8 +132,8 @@ html:not(.cssmask) .toolbar-icon::before {
   transition: 0.5s ease-in;
 
   -webkit-mask-image: var(--icon-drop);
-  -webkit-mask-size: cover;
-          mask-size: cover;
+  /*-webkit-mask-size: 1rem;
+          mask-size: 1rem;*/
 }
 .toolbar-icon-11home:hover:before {
   background-color: hotpink;
@@ -149,10 +151,13 @@ html:not(.cssmask) .toolbar-icon-11home::before {
 }
 
 @media (max-width: 47.99rem) {
-  .toolbar-tab a.toolbar-item {
+  .toolbar-tab .toolbar-item.trigger {
     width: 3em;
     min-width: 3rem;
     text-indent: -999rem;
+  }
+  .toolbar-icon.trigger:before {
+    left: 1rem
   }
 }
 
@@ -258,48 +263,63 @@ html:not(.cssmask) .toolbar-icon-11home::before {
 /* -----------------------------------------------------------------------------
  TRAY
 ----------------------------------------------------------------------------- */
+/*horizontal  */
 .toolbar-horizontal .toolbar-tray {
   border-top: 1px solid var(--bluesky-light);
   background-color: var(--bluesky);
 }
-
 .toolbar-horizontal .toolbar-menu a {
   border-left: 1px solid var(--bluesky-light);
+}
+/* vertical */
+.toolbar-vertical .toolbar-tray {
+  background-image: repeating-linear-gradient(to right, var(--gravel) 0rem, var(--gravel) 2rem, var(--gravel-light) 2rem, var(--gravel-light) );
+}
+@media (max-width: 47.99em) {
+  .toolbar-vertical .toolbar-tray {
+    background: rgba(240, 240, 240, 0.8);
+  }
 }
 
 /* -----------------------------------------------------------------------------
 Vertical menu variation
 ----------------------------------------------------------------------------- */
-.toolbar-vertical .toolbar-menu a {
-  background-image: var(--button-rasberry);
-}
 .toolbar-vertical .toolbar-menu a,
 .toolbar-vertical .toolbar-menu .level-1 a {
   border-bottom: 1px solid var(--bluesky);
-  background-image: var(--button-bluesky);
+  background-image: var(--button-bluesky-50);
+  color: var(--white);
+  font-size: .875rem;
+  line-height: 2rem;
+  transition: 1s ease-in-out;
 }
 .toolbar-vertical .toolbar-menu a:hover,
 .toolbar-vertical .toolbar-menu .level-1 a:hover {
   border-bottom: 1px solid var(--bluesky-light);
   background-image: var(--button-bluesky-light);
+  color: var(--bluesky);
 }
 
 .toolbar-vertical .toolbar-menu .level-2 a {
-  border-bottom: 1px solid var(--bluesky);
-  background-image: var(--button-bluesky-light);
-  color: var(--white);
+  border-bottom: 1px solid var(--concrete);
+  background-image: var(--button-gravel);
+  color: var(--asphalt);
 }
 .toolbar-vertical .toolbar-menu .level-2 a:hover {
   color: var(--bluesky);
+  background-image: var(--button-gravel-light);
 }
 .toolbar-vertical .toolbar-menu .level-2 a:before {
-  -webkit-mask-image: var(--icon-default);
-          mask-image: var(--icon-default);
+  -webkit-mask-image: var(--icon-arrow-right);
+          mask-image: var(--icon-arrow-right);
+          background-color: var(--concrete);
 }
+
 .toolbar-vertical .toolbar-menu .level-3 a {
   border-bottom: 1px solid var(--concrete);
   background-image: var(--button-gravel);
   color: var(--asphalt-light);
+  padding-left: 3rem
 }
 .toolbar-vertical .toolbar-menu .level-3 a:hover {
   border-bottom: 1px solid var(--asphalt-light);
@@ -307,13 +327,11 @@ Vertical menu variation
   color: var(--asphalt-light);
 }
 .toolbar-vertical .toolbar-menu .level-3 a:before {
-  background-color: var(--concrete);
-
-  -webkit-mask-image: var(--icon-pen);
-          mask-image: var(--icon-pen);
+  background-color: transparent;
 }
+
 /* -----------------------------------------------------------------------------
-  Show and hide the sub nav
+  Show and hide the toolbar handle
 ----------------------------------------------------------------------------- */
 .toolbar .toolbar-tray-horizontal .toolbar-menu .toolbar-handle,
 .toolbar .toolbar-tray-horizontal .toolbar-menu ul,
@@ -323,6 +341,7 @@ Vertical menu variation
 .toolbar .toolbar-tray-vertical li.open > ul {
   display: block;
 }
+
 .toolbar-box {
   position: relative;
   display: block;
@@ -344,51 +363,50 @@ Vertical menu variation
 
 /* button handler */
 .toolbar-icon.toolbar-handle {
-  background-color: var(--bluesky-20);
-}
-.toolbar-icon.toolbar-handle:before {
-  -webkit-mask-image: var(--icon-down);
-          mask-image: var(--icon-down);
-}
-
-.toolbar-icon.toolbar-handle:hover {
-  background-color: var(--blueskye-light);
-}
-.toolbar-icon.toolbar-handle.open {
-  background-color: var(--bluesky-50);
-}
-.toolbar-icon.toolbar-handle.open:before {
-  -webkit-mask-image: var(--icon-up);
-          mask-image: var(--icon-up);
-}
-.toolbar-icon.toolbar-handle.open:hover {
   background-color: var(--bluesky-light);
 }
+  .toolbar-icon.toolbar-handle:before {
+    -webkit-mask-image: var(--icon-down);
+            mask-image: var(--icon-down);
+    background-color: var(--white);
+  }
+  .toolbar-icon.toolbar-handle:hover:before {
+    transform: scale(1) translateY(0.5rem) ;
+  }
+  .toolbar-icon.toolbar-handle.open:before {
+    -webkit-mask-image: var(--icon-up);
+            mask-image: var(--icon-up);
+  }
+  .toolbar-icon.toolbar-handle.open:hover:before {
+    transform: scale(1) translateY(-0.5rem) ;
+  }
 
-/* button handler lvl 2*/
+
+/* Button handler lvl 2 */
 .level-2 .toolbar-icon.toolbar-handle {
-  background-color: var(--blueskye);
+  background-color: var(--gravel);
 }
-.level-2 .toolbar-icon.toolbar-handle:before {
-  left: 50%;
-  top: 1rem;
-  -webkit-mask-image: var(--icon-down-small);
-          mask-image: var(--icon-down-small);
+  .level-2 .toolbar-icon.toolbar-handle:before {
+    background-color: var(--asphalt);
+    -webkit-mask-image: var(--icon-down-small);
+            mask-image: var(--icon-down-small);
+            -webkit-mask-size: 0.5rem;
+                    mask-size: 0.5rem;
 
-}
-.level-2 .toolbar-icon.toolbar-handle:hover {
-  background-color: var(--bluesky-light);
-}
-.level-2 .toolbar-icon.toolbar-handle.open {
-  background-color: var(--bluesky-light);
-}
+    transform: scale(1) translateY(0.3rem) translateX(0.2rem);
+  }
+  .level-2 .toolbar-icon.toolbar-handle:hover:before {
+    transform: scale(1) translateY(0.6rem) translateX(0.2rem);
+  }
+
 .level-2 .toolbar-icon.toolbar-handle.open:before {
   -webkit-mask-image: var(--icon-up-small);
           mask-image: var(--icon-up-small);
 }
-.level-2 .toolbar-icon.toolbar-handle.open:hover {
-  background-color: var(--bluesky);
+.level-2 .toolbar-icon.toolbar-handle.open:hover:before {
+    transform: scale(1) translateY(-0.3rem) translateX(0.2rem);
 }
+
 
 /*------------------------------------------------------------------------------
 2nd level Icons
@@ -444,12 +462,10 @@ nav[aria-label="User-defined shortcuts"] a.edit-shortcuts {
   margin: 0;
   padding: 0 0.5rem 0 2.5rem ;
   outline: none;
-  background-image: var(--button-asphalt);
+  background-image: var(--button-rasberry);
   color: var(--white);
   line-height: 2rem;
-}
-nav[aria-label="User-defined shortcuts"] a.edit-shortcuts:hover {
-  background-image: var(--button-rasberry);
+
 }
 nav[aria-label="User-defined shortcuts"] a.edit-shortcuts:before {
   position: absolute;
@@ -466,12 +482,16 @@ nav[aria-label="User-defined shortcuts"] a.edit-shortcuts:before {
   -webkit-mask-image: var(--icon-pen);
           mask-image: var(--icon-pen);
 }
+nav[aria-label="User-defined shortcuts"] a.edit-shortcuts:hover {
+  background-image: var(--button-rasberry-rev);
+}
 
 .toolbar-vertical  nav[aria-label="User-defined shortcuts"]  a.edit-shortcuts {
   position: relative;
   right: 0;
   padding: 0 0 0 2.5rem;
   text-align: left;
+  /*background-image: var(--button-rasberry);*/
 }
 
 /* view profile */
@@ -514,17 +534,7 @@ nav[aria-label="User-defined shortcuts"] a.edit-shortcuts:before {
 /* -----------------------------------------------------------------------------
 VERTICAL TRAY
 ----------------------------------------------------------------------------- */
-.toolbar-vertical .toolbar-tray {
-  background-image: repeating-linear-gradient(to right, var(--gravel) 0rem, var(--gravel) 2rem, var(--gravel-light) 2rem, var(--gravel-light) );
-}
-@media (max-width: 47.99em) {
-  .toolbar-vertical .toolbar-tray {
-    background: rgba(240, 240, 240, 0.8);
-  }
-}
-.toolbar-vertical .toolbar-menu a {
-  border-bottom: 1px solid var(--bluesky);
-}
+
 
 /*------------------------------------------------------------------------------
   toggle navbar button
