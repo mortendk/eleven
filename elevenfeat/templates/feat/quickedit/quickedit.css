@@ -1,178 +1,141 @@
-/**
- * @file
- * Styling for Quick Edit module.
- */
-
-/**
- * Editable.
- */
-.quickedit-field.quickedit-editable,
-.quickedit-field .quickedit-editable {
-  box-shadow: 0 0 0 2px #74b7ff;
+/* indicator of the elements that we can quick edit*/
+.quickedit-field{
+  transition: all .5s ease-in-out;
 }
-
-/**
- * Highlighted (hovered) editable.
- */
-.quickedit-field.quickedit-highlighted,
-.quickedit-form.quickedit-highlighted,
-.quickedit-field .quickedit-highlighted {
-  box-shadow: 0 0 0 1px #74b7ff, 0 0 0 2px #007fff;
+.quickedit-editable {
+  box-shadow: 0 0 0 1px var(--rasberry-light-20);
 }
-.quickedit-field.quickedit-changed,
-.quickedit-form.quickedit-changed,
-.quickedit-field .quickedit-changed {
-  box-shadow: 0 0 0 1px #fec17e, 0 0 0 2px #f7870a;
+.quickedit-highlighted{
+  box-shadow: 0 0 0 1px var(--rasberry);
+  background-color: var(--rasberry-light-20);
 }
-.quickedit-editing.quickedit-validation-error,
-.quickedit-form.quickedit-validation-error {
-  box-shadow: 0 0 0px 1px #ee8b74, 0 0 0 2px #fa2209;
+.quickedit-changed {
+  box-shadow: 0 0 0 2px var(--pumpkin);
+}
+.quickedit-validation-error {
+  box-shadow: 0 0 0px 1px var(--strawberry);
 }
 .quickedit-editing.quickedit-editor-is-popup {
   box-shadow: none;
 }
 .quickedit-form .form-item .error {
-  border: 1px solid #eea0a0;
+  border: 1px solid var(--rasberry);
 }
 
-/**
- * Default form styling overrides.
- */
-.quickedit-form form {
-  padding: 0.5em;
-}
-.quickedit-form .form-item {
-  margin: 0;
-}
-.quickedit-form .form-wrapper {
-  margin: .5em;
-}
 
-/**
- * Animations.
- */
-.quickedit-animate-invisible {
-  opacity: 0;
+/* Quickedit toolbar */
+.quickedit-toolbar{
+  background-color: var(--black);
+  color: var(--concrete);
 }
-.quickedit-animate-default {
-  -webkit-transition: all .4s ease;
-  transition: all .4s ease;
-}
-.quickedit-animate-slow {
-  -webkit-transition: all .6s ease;
-  transition: all .6s ease;
-}
-.quickedit-animate-delay-veryfast {
-  -webkit-transition-delay: .05s;
-  transition-delay: .05s;
-}
-.quickedit-animate-delay-fast {
-  -webkit-transition-delay: .2s;
-  transition-delay: .2s;
-}
-.quickedit-animate-disable-width {
-  -webkit-transition: width 0s;
-  transition: width 0s;
-}
-.quickedit-animate-only-visibility {
-  -webkit-transition: opacity .2s ease;
-  transition: opacity .2s ease;
-}
-
-/**
- * In-place editors that don't use a popup.
- */
-.quickedit-validation-errors .messages.error {
-  box-shadow: 0 0 1px 1px red, 0 0 3px 3px rgba(153, 153, 153, .5);
-  background-color: white;
-}
-
-/**
- * Styling specific to the 'form' in-place editor.
- */
-.quickedit-form {
-  box-shadow: 0 0 30px 4px #4f4f4f;
-  background-color: white;
-}
-
-/**
- * Toolbars.
- */
 .quickedit-toolbar-container {
-  font-family: 'Source Sans Pro','Lucida Grande', sans-serif;
-  padding-bottom: 7px;
-  padding-top: 7px;
-  -webkit-transition: all 1s;
+  height: 2rem;
   transition: all 1s;
 }
-.quickedit-toolbar-container > .quickedit-toolbar-content {
-  background-image: -webkit-linear-gradient(top, #fff, #e4e4e4);
-  background-image:   linear-gradient(to bottom, #fff, #e4e4e4);
-  box-sizing: border-box;
-  color: black;
-  padding: 0.1667em;
+.quickedit-toolbar-content {
   position: relative;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  z-index: 2;
-}
-.quickedit-toolbar-container > .quickedit-toolbar-pointer {
-  background-color: #e4e4e4;
-  bottom: 2px;
-  box-shadow: 0 0 0 1px #818181, 0px 0px 0 4px rgba(150, 150, 150, 0.5);
-  display: block;
-  height: 16px;
-  left: 18px; /* LTR */
-  position: absolute;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  width: 16px;
-  z-index: 1;
-}
-[dir="rtl"] .quickedit-toolbar-container > .quickedit-toolbar-pointer {
-  left: auto;
-  right: 18px;
-}
-.quickedit-toolbar-container.quickedit-toolbar-pointer-top > .quickedit-toolbar-pointer {
-  bottom: auto;
-  top: 2px;
-}
-.quickedit-toolbar-container > .quickedit-toolbar-lining {
-  bottom: 7px;
-  box-shadow: 0 0 0 1px #818181, 0px 3px 0px 1px rgba(150, 150, 150, 0.5);
-  display: block;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 7px;
-  z-index: 0;
 }
 
+/* Label */
 .quickedit-toolbar-label {
-  font-style: italic;
-  overflow: hidden;
-  padding: 0.333em 0.4em;
-  text-overflow: ellipsis;
+  font-size: 1rem;
   white-space: nowrap;
+  background-color: var(--black);
+  padding: 0.5rem 0
 }
-.quickedit-toolbar-label .field:after {
-  content: ' → '; /* LTR */
+.quickedit-toolbar-label .field{
+  background-color: var(--asphalt);
+  font-weight: bold;
+  padding: 0.5rem;
+  margin-right: 0.5rem
 }
 
-[dir="rtl"] .quickedit-toolbar-label .field:after {
-  content: ' ← ';
+/* quickedit action buttons */
+button.quickedit-button{
+  border: none !important;
+  border-radius: 0;
+  color: var(--white);
+  background-color: var(--black);
+  height: 2rem;
+  text-shadow: none !important;
+  font-weight: bold;
+}
+.quickedit-button.action-save{
+  background-image: var(--button-bluesky);
+  margin-top: 0;
 }
 
-/* The toolbar; these are not necessarily visible. */
-.quickedit-toolbar {
-  font-family: 'Droid sans', 'Lucida Grande', sans-serif;
+.quickedit-button.action-cancel{
+  width: 1rem;
+  height: 1rem;
+  margin: 0.5rem;
+  border:none;
+  background-color: var(--gravel);
+          mask: var(--icon-close) no-repeat;
+  -webkit-mask: var(--icon-close) no-repeat;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  text-indent: -999rem;
+  transition: all 0.2s;
+  padding: 0;
+  background-image: none
 }
-.quickedit-toolbar-entity {
-  padding: 0.1667em 0.2em;
+.quickedit-button.action-cancel:before{
+  display: none
 }
+.quickedit-button.action-cancel:hover{
+  background-color: var(--asphalt);
+  cursor: pointer;
+  transform: scale(.8);
+}
+
+/* -----------------------------------------------------------------------------
+Quick edit Form
+------------------------------------------------------------------------------*/
+.quickedit-form-container .quickedit-highlighted{
+  background-color: var(--asphalt);
+  color: var(--concrete);
+  box-shadow: 0 0 0 1px var(--asphalt);
+  margin-top: 1rem;
+}
+.quickedit-form-container a{
+  color: var(--bluesky);
+}
+
+.quickedit-form-container form{
+  margin: 1rem 0.5rem;
+}
+.quickedit-form-container label,
+.quickedit-form-container .label {
+  color: var(--concrete-light);
+}
+
+.quickedit-form-container input{ }
+.quickedit-form-container textarea{ }
+
+.quickedit-form-container select{
+  border: 1px solid var(--bluesky-light);
+  background-color: var(--concrete-light);
+  color: var(--asphalt);
+}
+
+
+.quickedit-form-container .description{
+  color: var(--gravel);
+}
+.quickedit-form-container button.link{
+  color: var(--bluesky-light);
+}
+
+
+
+
+
+
+
+
+
+
 
  /**
   * Info toolgroup.
@@ -200,131 +163,70 @@
  * Buttons.
  */
 .quickedit-button {
-  background-color: #e4e4e4;
-  border: 1px solid #d2d2d2;
-  color: #5a5a5a;
-  cursor: pointer;
-  display: inline-block;
-  margin: 0;
-  opacity: 1;
-  padding: 0.345em;
-  -webkit-transition: opacity .1s ease;
-  transition: opacity .1s ease;
 }
 .quickedit-button[aria-hidden="true"] {
   visibility: hidden;
   opacity: 0;
 }
 .quickedit-button + .quickedit-button {
-  margin-left: 0.2em; /* LTR */
+
 }
 [dir="rtl"] .quickedit-button + .quickedit-button {
-  margin-left: auto;
-  margin-right: 0.25em;
 }
 /* Button with icons. */
 .quickedit-button:hover,
 .quickedit-button:active {
-  background-color: #c8c8c8;
-  border: 1px solid #a0a0a0;
-  color: #2e2e2e;
 }
 .quickedit-toolbar-container .quickedit-button.action-cancel {
-  background-color: transparent;
-  border: 1px solid transparent;
 }
-.quickedit-button.action-save {
-  color: white;
-  background-color: #50a0e9;
-  background-image: -webkit-linear-gradient(top, #50a0e9, #4481dc);
-  background-image:   linear-gradient(to bottom, #50a0e9, #4481dc);
-  border: 1px solid transparent;
-}
+/* Save */
+.quickedit-button.action-save { }
 .quickedit-button.action-save:hover,
 .quickedit-button.action-save:active {
-  border: 1px solid #a0a0a0;
+
 }
 .quickedit-button.action-saving,
 .quickedit-button.action-saving:hover,
 .quickedit-button.action-saving:active {
-  background-color: #e4e4e4;
-  background-image: none;
-  border-color: #d2d2d2;
-  color: #5a5a5a;
 }
+
+
+
+.quickedit .icon { }
+.quickedit .icon-only { }
+.quickedit .icon-end { }
+.quickedit .icon {}
+.quickedit button.icon { }
+.quickedit .icon-close {}
+.quickedit .icon-throbber {}
+.quickedit .icon-pencil {}
+
+
+
+
 
 
 /**
- * @file
- * Icons for Quick Edit module.
+ * Animations.
  */
-
-.quickedit .icon {
-  min-height: 1em;
-  min-width: 2.5em;
-  position: relative;
+.quickedit-animate-invisible {
+  opacity: 0;
 }
-.quickedit .icon.icon-only {
-  text-indent: -9999px;
+.quickedit-animate-default {
+  transition: all .4s ease;
 }
-.quickedit .icon.icon-end {
-  padding-right: 2.5em; /* LTR */
+.quickedit-animate-slow {
+  transition: all .6s ease;
 }
-[dir="rtl"] .quickedit .icon.icon-end {
-  padding-left: 2.5em;
-  padding-right: 0;
+.quickedit-animate-delay-veryfast {
+  transition-delay: .05s;
 }
-.quickedit .icon:before {
-  background-attachment: scroll;
-  background-color: transparent;
-  background-position: center center;
-  background-repeat: no-repeat;
-  content: '';
-  display: block;
-  height: 100%;
-  left: 0; /* LTR */
-  position: absolute;
-  top: 0;
-  width: 100%;
+.quickedit-animate-delay-fast {
+  transition-delay: .2s;
 }
-[dir="rtl"] .quickedit .icon:before {
-  left: auto;
-  right: 0;
+.quickedit-animate-disable-width {
+  transition: width 0s;
 }
-.quickedit .icon-end:before {
-  left: auto; /* LTR */
-  right: 0.5em; /* LTR */
-  width: 18px;
-}
-[dir="rtl"] .quickedit .icon-end:before {
-  left: 0.5em;
-  right: auto;
-}
-.quickedit button.icon {
-  font-size: 1em;
-}
-.quickedit .icon-pencil {
-  margin-left: .5em;
-  padding-left: 1.5em;
-}
-
-/**
- * Images.
- */
-.quickedit .icon-close:before {
-  background-image: url(../../images/core/icons/787878/ex.svg);
-  height: 12px;
-  top: 10px;
-}
-.quickedit .icon-close:hover:before,
-.quickedit .icon-close:active:before {
-  background-image: url(../../images/core/icons/000000/ex.svg);
-}
-.quickedit .icon-throbber:before {
-  background-image: url(../../images/quickedit/icon-throbber.gif);
-}
-.quickedit .icon-pencil:before {
-  background-image: url(../../images/core/icons/5181c6/pencil.svg);
-  background-position: left center;
-  background-size: 1.3em;
+.quickedit-animate-only-visibility {
+  transition: opacity .2s ease;
 }

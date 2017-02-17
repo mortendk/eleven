@@ -107,26 +107,19 @@ libraries-override:
         css/block-place.icons.theme.css: false
 
   # jquery ui
+  # look at #/core/core.libraries.yml for my libs
   core/jquery.ui:
     css:
       theme:
         assets/vendor/jquery.ui/themes/base/theme.css: false
+
+  core/jquery.ui.button:
+    css:
+      component:
+        assets/vendor/jquery.ui/themes/base/button.css: false
 
   # modernizr custom build
   # https://modernizr.com/download/?cssmask-details-inputtypes-touchevents-addtest-prefixes-setclasses-teststyles&q=mask
   core/modernizr:
     js:
       assets/vendor/modernizr/modernizr.min.js: js/modernizr-custom.js
-
-
-  # classy
-  # TODO: fix the cssspecificity so we dont have to remove potential elements
-  # classy/base:
-  #   css:
-  #     component:
-  #       css/components/details.css: false
-  #       css/components/form.css: false
-  #       css/components/form.css: false
-
-
-#

@@ -1,95 +1,63 @@
+/* ui dialog components */
+
+/* -----------------------------------------------------------------------------
+ui dialog Titlebar
+------------------------------------------------------------------------------*/
+
+/* title bar */
+.ui-dialog .ui-dialog-titlebar {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--asphalt-light);
+  background-color: var(--asphalt);
+  color: var(--concrete-light);
+  font-size: 1rem;
+  font-weight: normal;
+  text-align: center;
+}
+/* close button*/
+.ui-dialog  .ui-dialog-titlebar-close {
+  position: relative;
+}
+.ui-dialog .ui-dialog-titlebar-close:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-color: white;
+  background-image: none ! important; /* yes we wanna make sure no module have fun here */
+  text-indent: -999rem;
+  content: "";
+  transition: 0.5s ease-in;
+
+          mask: var(--icon-coffee) no-repeat;
+  -webkit-mask: var(--icon-coffee) no-repeat;
+  -webkit-mask-size: contain ! important;
+          mask-size: contain ! important;
+}
+.ui-dialog  .ui-dialog-titlebar-close:before {
+  top: 0.5rem;
+  left: 0.5rem;
+  background-color: var(--concrete-light);
+
+          mask: var(--icon-close) no-repeat;
+  -webkit-mask: var(--icon-close) no-repeat;
+}
+.ui-dialog  .ui-dialog-titlebar-close:hover:before,
+.ui-dialog  .ui-dialog-titlebar-close:active:before {
+  background-color: var(--asphalt-light);
+  transform: scale(0.7);
+}
+
+/* offcanvas */
 .ui-dialog-offcanvas.ui-widget-content {
+  z-index: 501;
+  border: 1px solid var(--asphalt);
   background: var(--asphalt-light);
   background-color: var(--asphalt-light);
-  border: 1px solid var(--black);
-  z-index: 501;
 }
 
-.ui-dialog-offcanvas .ui-dialog-titlebar {
-  background-color: var(--asphalt);
-  color: var(--white);
-}
-
-
-/* close button*/
-
-
-.ui-dialog-offcanvas .ui-dialog-content{
-  margin: 0;
-  padding: 0.5rem
-}
-
-.form-item {
-  padding: 0.5rem 0;
-  border-bottom:1px solid var(--concrete);
-
-}
-
-label{
-  color: var(--gravel);
-  font-weight: bold;
-  font-size: 1rem;
-  padding-right: 1rem
-}
-label.form-required{
-  color: var(--rasberry-light);
-}
-
-input[type='text'].required{
-  color: var(--rasberry-light);
-}
-
-/* text */
-input[type='text']{
-  border: 0 solid ;
-  border-bottom: 1px solid var(--gravel);
-  height: 1.5rem;
-  line-height: 1rem;
-  padding: 0 0.5rem 0 1rem;
-  width: 20rem;
-  color: var(--asphalt-light);
-  background-color: var(--gravel-light);
-  transition: all .5s ease-in-out;
-
-}
-input[type='text']:hover{
-  color: var(--bluesky);
-  background-color: var(--gravel);
-  border-bottom: 1px solid var(--bluesky);
-}
-input[type='text']:focus{
-  color: var(--bluesky-light);
-  background-color: var(--gravel-light);
-  border-bottom: 1px solid var(--bluesky-light);
-  outline: 0;
-  padding: 0 0.5rem 0 0.5rem;
-  width: 20.5rem
-}
-
-
-/* Style content in the tray. */
-.ui-dialog-offcanvas p,
-.ui-dialog-offcanvas h1,
-.ui-dialog-offcanvas h2,
-.ui-dialog-offcanvas h3,
-.ui-dialog-offcanvas h4,
-.ui-dialog-offcanvas h5,
-.ui-dialog-offcanvas h6,
-.ui-dialog-offcanvas pre,
-.ui-dialog-offcanvas legend,
-.ui-dialog-offcanvas cite,
-.ui-dialog-offcanvas span,
-.ui-dialog-offcanvas summary,
-.ui-dialog-offcanvas details,
-.ui-dialog-offcanvas .form-item {
-}
-
-.ui-dialog-offcanvas a,
-.ui-dialog-offcanvas .link {
-}
-.ui-dialog-offcanvas a:focus,
-.ui-dialog-offcanvas .link:focus,
-.ui-dialog-offcanvas a:hover,
-.ui-dialog-offcanvas .link:hover {
-
+.ui-dialog-offcanvas .ui-dialog-content {
+  margin: 0 0.5rem;
 }

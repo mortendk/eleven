@@ -1,73 +1,35 @@
-.ui-widget {
-  background-color: var(--gravel-light);
-}
-.ui-widget-content {
-  border: 1px solid var(--gravel);
+/* overlay */
+.ui-widget-overlay{
+  background-color: var(--white-90);
 }
 
+
+.ui-widget { }
+.ui-widget-content { }
+
+/* dialog */
+.ui-dialog .ui-dialog-buttonpane button{
+  margin: 0 0.25rem
+}
+
+.ui-dialog{
+  position: absolute;
+  z-index: 6666;
+  overflow: visible;
+  background-color: var(--asphalt-light);
+  color: var(--gravel);
+}
+.ui-dialog .ui-dialog-buttonpane{
+  background-color: var(--asphalt);
+}
+
+.ui-button-text{
+  text-align: left
+}
 /* title bar */
 .ui-dialog-titlebar {
-  padding: 0.5rem 0;
-  border-bottom: 1px solid var(--concrete);
-  background-color: var(--concrete-light);
-  font-size: 1rem;
-  font-weight: normal;
-  text-align: center;
 }
 
-
-.ui-dialog-offcanvas .ui-dialog-titlebar-close {
-  position: relative;
-}
-.ui-dialog-offcanvas .ui-dialog-titlebar-close:before {
-  position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
-  display: block;
-  width: 1rem;
-  height: 1rem;
-  background-color: white;
-  background-image: none ! important; /* yes we wanna make sure no module have fun here */
-  text-indent: -999rem;
-  content: "";
-  transition: 0.5s ease-in;
-
-          mask: var(--icon-coffee) no-repeat;
-  -webkit-mask: var(--icon-coffee) no-repeat;
-  -webkit-mask-size: contain ! important;
-          mask-size: contain ! important;
-}
-
-.ui-dialog-offcanvas .ui-dialog-titlebar-close:before {
-  background-color: var(--concrete-light);
-
-          mask: var(--icon-close) no-repeat;
-  -webkit-mask: var(--icon-close) no-repeat;
-}
-.ui-dialog-offcanvas .ui-dialog-titlebar-close:hover:before,
-.ui-dialog-offcanvas .ui-dialog-titlebar-close:active:before {
-  background-color: var(--asphalt-light);
-}
-
-
-.ui-dialog-offcanvas .ui-dialog-titlebar-close {
-}
-.ui-dialog-offcanvas .ui-dialog-titlebar-close:hover {
-}
-
-
-
-
-
-.ui-dialog-titlebar-close {
-  /*background-image: var(--icon-action);*/
-  /*background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 1rem*/
-}
-.ui-dialog-titlebar-close:hover {
-  /*background-image: var(--icon-contextual);*/
-}
 
 /* Content */
 .ui-dialog-content {

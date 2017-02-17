@@ -47,6 +47,7 @@
   background-color: transparent;
   text-indent: -999rem;
   cursor: pointer;
+  background-image: none
 }
 
 [dir="rtl"] .contextual .trigger {

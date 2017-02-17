@@ -1,0 +1,246 @@
+/*
+TODO: needs a bunch of prefix for:
+  .ui-dialog
+
+ */
+form { }
+.form-item { }
+
+label,
+.label {
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/*------------------------------------------------------------------------------
+  input
+------------------------------------------------------------------------------*/
+input {
+  padding: 0 0 0 0.5rem;
+  border: 0 solid transparent ;
+  border-bottom: 2px solid var(--bluesky);
+  background-color: var(--gravel);
+  color: var(--asphalt);
+  line-height: 2rem;
+  transition: all 0.5s ease-in-out;
+}
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus {
+  border-bottom-color: var(--bluesky-light);
+  background-color: var(--gravel-light);
+  color: var(--bluesky);
+}
+textarea:focus,
+input:focus,
+select:focus {
+  outline: 0;
+  background-color: var(--bluesky-light-light);
+}
+
+textarea {
+  border: 1px solid var(--asphalt-light);
+  border-bottom: 2px solid var(--bluesky);
+  background-color: var(--gravel);
+  color: var(--asphalt);
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+select {
+  border: 1px solid var(--asphalt-light);
+  -webkit-border-radius: 1rem;
+          border-radius: 0;
+  background-color: var(--gravel);
+}
+
+/*------------------------------------------------------------------------------
+checkbox + radio
+------------------------------------------------------------------------------*/
+input[type="checkbox"]{
+  border: 1px solid var(--bluesky);
+  background-color: var(--gravel);
+}
+
+input[type="radio"]{}
+
+/*------------------------------------------------------------------------------
+Buttons
+------------------------------------------------------------------------------*/
+button,
+input[type="submit"] {
+  position: relative;
+  height: 2rem;
+  margin: 0;
+  padding: 0 0.5rem 0 2.5rem ;
+  border: 0;
+  outline: none;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: auto;
+  color: white;
+  text-align: left;
+  text-align: left;
+  text-decoration: none;
+}
+button:before,
+input[type="submit"]:before {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--white);
+  background-image: none ! important; /* yes we wanna make sure no module have fun here */
+  content: "";
+  transition: 0.5s ease-in;
+
+  -webkit-mask-size: contain ! important;
+          mask-size: contain ! important;
+}
+
+button,
+input[type="submit"] {
+  background-image: var(--button-concrete);
+  color: var(--white);
+}
+button:hover,
+input[type="submit"]:hover {
+  background-image: var(--button-concrete-rev);
+}
+button:before,
+input[type="submit"]:before {
+  background-color: var(--white);
+
+          mask: var(--icon-coffee) no-repeat;
+  -webkit-mask: var(--icon-coffee) no-repeat;
+}
+button:hover:before,
+input[type="submit"]:hover:before {
+  background-color: var(--bluesky);
+  background-color: var(--white);
+}
+
+/* button variations */
+.button--primary, {
+  background-image: var(--button-bluesky);
+}
+.button--primary:hover {
+  background-image: var(--button-bluesky-rev);
+}
+.button--primary:before,
+.action-save:before{
+        mask: var(--icon-save) no-repeat;
+-webkit-mask: var(--icon-save) no-repeat;
+}
+
+/*
+  input wont accept before cause ... something
+  anyways we cant change the icon color now
+*/
+input[type="submit"]{
+  background-image: var(--icon-save), var(--button-bluesky) ;
+  background-position: 0.5rem 0.5rem, 0 0;
+  background-size: 1rem, auto
+}
+input[type="submit"]:hover{
+  background-image: var(--icon-save), var(--button-bluesky-rev) ;
+  background-position: 0.2rem 0.2rem, 0 0;
+  background-size: 1.5rem, auto
+}
+
+button span {
+  padding-left: 3rem;
+}
+
+.form-actions{
+  margin: 1rem 0
+}
+
+
+
+/*------------------------------------------------------------------------------
+Details
+------------------------------------------------------------------------------*/
+form details {
+  border: none;
+  margin: 0;
+  background-color: red
+}
+
+form details > .details-wrapper {
+  padding: 0;
+}
+
+/*------------------------------------------------------------------------------
+Summary
+------------------------------------------------------------------------------*/
+details summary{
+  padding: 0;
+  border-bottom: 1px solid var(--grass);
+  background-color: var(--grass-light);
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 2rem;
+  position: relative;
+  width: 100%
+}
+details summary::after{
+  display: block;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  content: '';
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--bluesky);
+  mask: var(--icon-coffee) no-repeat;
+  -webkit-mask: var(--icon-coffee) no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  transition: all .5s ease-in-out;
+}
+details[open] summary::after{
+  background-color: var(--rasberry);
+  transform: rotate(90deg);
+}
+details summary::-webkit-details-marker {
+  display:none;
+}
+details summary:focus{
+    outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+.filter-wrapper {
+  padding: 0;
+  border: 0;
+}
+.filter-help a {
+  margin: 0 2rem 0 0;
+  color: var(--yellowsnow);
+}
+.filter-help a:after {
+  background-image: none;
+}
+.description {
+  margin: 0.5rem 0;
+  font-size: 0.875rem;
+  line-height: 1rem;
+}
+
+button.link {
+  color: var(--bluesky-light);
+}
