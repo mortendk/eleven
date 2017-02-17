@@ -1,7 +1,7 @@
 global:
   css:
     base:
-      css/root.css: {}
+      css/root.css: { weight: -200}
       css/form.css: {}
     layout:
       # css/layout.css: {}

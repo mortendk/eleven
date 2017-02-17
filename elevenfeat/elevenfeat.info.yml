@@ -5,7 +5,7 @@ base theme: classy
 package: eleven
 core: '8.x'
 
-hidden: TRUE
+# hidden: TRUE
 
 # -- dependencies -----------------------------------------------------------------
 dependencies:

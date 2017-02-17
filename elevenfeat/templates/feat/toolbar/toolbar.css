@@ -7,11 +7,11 @@ Dont change the classnames - stuff will break ;)
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
   font-size: 1rem;
 }
-.toolbar a,
-.toolbar a:hover {
+#toolbar-bar a,
+#toolbar-bar a:hover {
   text-decoration: none;
 }
-.toolbar .toolbar-menu {
+#toolbar-bar .toolbar-menu {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -20,17 +20,17 @@ Dont change the classnames - stuff will break ;)
 /*------------------------------------------------------------------------------
   Main Toolbar (toolbar-tabs)
 ------------------------------------------------------------------------------*/
-.toolbar-bar {
+#toolbar-bar .toolbar-bar {
   background-color: var(--black);
 }
 /* change the toolbar bg color to indicate that were editing stuff */
-body.is-edit-ui-toolbar-opened .toolbar-bar,
-.toolbar-bar.js-outside-in-edit-mode {
+body.is-edit-ui-toolbar-opened #toolbar-bar .toolbar-bar,
+#toolbar-bar .toolbar-bar.js-outside-in-edit-mode {
   background-color: var(--rasberry-light-50);
 }
 
 /* Toolbar tabs */
-.toolbar-tab .toolbar-item.trigger {
+#toolbar-bar .toolbar-tab .toolbar-item.trigger {
   min-width: 9rem;
   height: 2rem;
   border-left: 1px solid var(--black);
@@ -38,28 +38,29 @@ body.is-edit-ui-toolbar-opened .toolbar-bar,
   background-image: none;
   color: var(--white);
   font-size: 1rem;
+  font-weight: normal;
   line-height: 2rem;
   text-transform: capitalize;
   transition: 0.2s ease-in-out;
 }
-.toolbar-tab .toolbar-item.trigger:hover {
+#toolbar-bar .toolbar-item.trigger:hover {
   background-color: var(--asphalt-light);
   color: var(--gravel);
 }
-.toolbar-tab .toolbar-item.trigger.is-active {
+#toolbar-bar .toolbar-item.trigger.is-active {
   background-color: var(--bluesky);
 }
 /* Toolbar tab icons colors*/
-.toolbar-tab .toolbar-item.trigger:hover:before {
+#toolbar-bar .toolbar-item.trigger:hover:before {
   background-color: var(--concrete);
 }
-.toolbar-tab .toolbar-item.is-active.trigger:hover:before {
+#toolbar-bar .toolbar-item.is-active.trigger:hover:before {
   background-color: var(--bluesky-light);
 }
 
 /* toolbar icon */
-.toolbar-icon,
-.toolbar-menu a {
+#toolbar-bar .toolbar-icon,
+#toolbar-bar .toolbar-menu a {
   position: relative;
   display: block;
   margin: 0;
@@ -73,17 +74,21 @@ body.is-edit-ui-toolbar-opened .toolbar-bar,
   color: var(--white);
   line-height: 2rem;
   text-align: left;
+  font-size: 1rem;
+  font-weight: normal;
+
 }
-button.toolbar-icon {
+#toolbar-bar button.toolbar-icon {
   border: 0;
 }
-.toolbar-icon:hover,
-.toolbar-menu a:hover {
+#toolbar-bar .toolbar-icon:hover,
+#toolbar-bar .toolbar-menu a:hover {
   background-image: var(--button-bluesky-light-solid);
+  text-decoration: none
 }
-.toolbar-icon:before,
-.toolbar-menu a:before,
-.toolbar-icon-11home::before {
+#toolbar-bar .toolbar-icon:before,
+#toolbar-bar .toolbar-menu a:before,
+#toolbar-bar .toolbar-icon-11home::before {
   position: absolute;
   top: 0.5rem;
   left: 0.5rem;
@@ -100,38 +105,39 @@ button.toolbar-icon {
   -webkit-mask-size: contain;
           mask-size: contain;
 }
-.toolbar-icon:hover:before,
-.toolbar-menu a:hover:before {
+#toolbar-bar .toolbar-icon:hover:before,
+#toolbar-bar .toolbar-menu a:hover:before {
   transform: scale(1.5);
 }
 /* old browser support */
-html:not(.cssmask) .toolbar-icon::before {
+html:not(.cssmask) #toolbar-bar .toolbar-icon::before {
   background-color: transparent;
 }
 
 /* home icons */
-.toolbar-tab--small {
+#toolbar-bar .toolbar-tab--small {
   width: 2rem;
   height: 2rem;
   background-color: var(--asphalt-light);
 }
-.toolbar-icon-11home {
+#toolbar-bar .toolbar-icon-11home {
   position: relative;
-  text-indent: -999rem;
+  height: 2rem;
   line-height: 2rem;
-  height: 2rem
+  text-indent: -999rem;
 }
-.toolbar-icon-11home::before {
+#toolbar-bar .toolbar-icon-11home::before {
   background-color: var(--bluesky);
+
   -webkit-mask-image: var(--icon-drop);
-  -webkit-mask-size: .8rem;
-          mask-size: .8rem;
+  -webkit-mask-size: 0.8rem;
+          mask-size: 0.8rem;
 }
-.toolbar-icon-11home:hover:before {
+#toolbar-bar .toolbar-icon-11home:hover:before {
   background-color: var(--bluesky);
   transform: scale(1.5);
 }
-html:not(.cssmask) .toolbar-icon-11home::before {
+html:not(.cssmask) #toolbar-bar .toolbar-icon-11home::before {
   display: block;
   width: 1rem;
   height: 1rem;
@@ -143,132 +149,140 @@ html:not(.cssmask) .toolbar-icon-11home::before {
 }
 
 @media (max-width: 47.99rem) {
-  .toolbar-tab .toolbar-item.trigger {
+  #toolbar-bar .toolbar-tab .toolbar-item.trigger {
     width: 3em;
     min-width: 3rem;
     text-indent: -999rem;
   }
-  .toolbar-icon.trigger:before {
-    left: 1rem
+  #toolbar-bar .toolbar-icon.trigger:before {
+    left: 1rem;
   }
 }
 
 /* manage */
-.toolbar-tab .toolbar-icon-menu::before {
+#toolbar-bar .toolbar-icon-menu::before {
   -webkit-mask-image: var(--icon-manage);
           mask-image: var(--icon-manage);
 }
 /* shortcuts */
-.toolbar-tab .toolbar-icon-shortcut:before {
+#toolbar-bar .toolbar-tab .toolbar-icon-shortcut:before {
   background-color: var(--strawberry);
 
   -webkit-mask-image: var(--icon-heart);
           mask-image: var(--icon-heart);
 }
 /* user */
-.toolbar-tab .toolbar-icon-user:before {
+#toolbar-bar .toolbar-tab .toolbar-icon-user:before {
   -webkit-mask-image: var(--icon-user);
           mask-image: var(--icon-user);
 }
 
 /* edit-editing + place block */
-.toolbar .toolbar-bar .contextual-toolbar-tab.toolbar-tab {
+#toolbar-bar .contextual-toolbar-tab.toolbar-tab {
   float: right;
 }
 @media (max-width: 61.99em) {
-  .toolbar .toolbar-bar .contextual-toolbar-tab.toolbar-tab {
+  #toolbar-bar .contextual-toolbar-tab.toolbar-tab {
     margin: 0;
   }
 }
-/* edit & editing*/
-.toolbar-tab button.toolbar-icon-edit {
+/* edit & editing */
+#toolbar-bar button.toolbar-icon-edit {
   min-width: 7rem;
   background-image: var(--button-asphalt);
   line-height: 2rem;
 }
-.toolbar-tab button.toolbar-icon-edit:before {
+#toolbar-bar button.toolbar-icon-edit:before {
   -webkit-mask-image: var(--icon-pen);
           mask-image: var(--icon-pen);
 }
-.toolbar-tab button.toolbar-icon-edit:hover:before {
+#toolbar-bar button.toolbar-icon-edit:hover:before {
   background-color: var(--rasberry-light);
 }
-.toolbar-tab button.toolbar-icon-edit.is-active:hover:before {
+#toolbar-bar button.toolbar-icon-edit.is-active:hover:before {
   background-color: var(--rasberry);
 }
-.toolbar-tab button.toolbar-icon-edit:hover,
-.toolbar-tab button.toolbar-icon-edit.is-active {
+#toolbar-bar button.toolbar-icon-edit:hover,
+#toolbar-bar button.toolbar-icon-edit.is-active {
   background-image: var(--button-rasberry);
 }
-.toolbar-tab button.toolbar-icon-edit.is-active:hover {
+#toolbar-bar button.toolbar-icon-edit.is-active:hover {
   background-image: var(--button-rasberry-rev);
 }
-.toolbar-tab button.toolbar-icon-edit:active,
-.toolbar-tab button.toolbar-icon-edit.is-active:active {
+#toolbar-bar button.toolbar-icon-edit:active,
+#toolbar-bar button.toolbar-icon-edit.is-active:active {
   background-image: var(--button-rasberry-active);
 }
 
 /* Place block */
-.toolbar .toolbar-bar .block-place-toolbar-tab {
+#toolbar-bar .block-place-toolbar-tab {
   float: right;
   margin-right: 2rem;
 }
 
 /* place-block inactive */
-.toolbar-tab .toolbar-icon-place-block-inactive,
-.toolbar-tab .toolbar-icon-place-block-active {
+#toolbar-bar .toolbar-icon-place-block-inactive,
+#toolbar-bar .toolbar-icon-place-block-active {
   min-width: 7rem;
   background-image: var(--button-asphalt);
   line-height: 2rem;
 }
-.toolbar-tab .toolbar-icon-place-block-inactive:before,
-.toolbar-tab .toolbar-icon-place-block-active:before {
+#toolbar-bar .toolbar-icon-place-block-inactive:before,
+#toolbar-bar .toolbar-icon-place-block-active:before {
   -webkit-mask-image: var(--icon-browser);
           mask-image: var(--icon-browser);
 }
-.toolbar-tab .toolbar-icon-place-block-inactive:hover {
+#toolbar-bar .toolbar-icon-place-block-inactive:hover {
   background-image: var(--button-rasberry);
 }
-.toolbar-tab .toolbar-icon-place-block-inactive:active {
+#toolbar-bar .toolbar-icon-place-block-inactive:active {
   background-image: var(--button-rasberry-active);
 }
-.toolbar-tab .toolbar-icon-place-block-inactive:hover:before {
+#toolbar-bar .toolbar-icon-place-block-inactive:hover:before {
   background-color: var(--rasberry-light);
 }
 
-
 /* place block active */
-.toolbar-tab .toolbar-icon-place-block-active {
+#toolbar-bar .toolbar-icon-place-block-active {
   background-image: var(--button-rasberry);
 }
-.toolbar-tab .toolbar-icon-place-block-active:hover {
+#toolbar-bar .toolbar-icon-place-block-active:hover {
   background-image: var(--button-rasberry-rev);
 }
-.toolbar-tab .toolbar-icon-place-block-active:active {
+#toolbar-bar .toolbar-icon-place-block-active:active {
   background-image: var(--button-rasberry-active);
 }
-.toolbar-tab .toolbar-icon-place-block-active:hover:before {
+#toolbar-bar .toolbar-icon-place-block-active:hover:before {
   background-color: var(--rasberry);
 }
-
 
 /* -----------------------------------------------------------------------------
  TRAY
 ----------------------------------------------------------------------------- */
+#toolbar-bar .menu-item,
+#toolbar-bar .toolbar-toggle-orientation {
+  border: none;
+}
+
+#toolbar-bar .toolbar-tray-vertical .toolbar-toggle-orientation {
+  float: none;
+}
+
+
 /*horizontal  */
-.toolbar-horizontal .toolbar-tray {
+.toolbar-horizontal #toolbar-bar .toolbar-tray {
   border-top: 1px solid var(--bluesky-light);
   background-color: var(--bluesky);
 }
-.toolbar-horizontal .toolbar-menu a {
+.toolbar-horizontal #toolbar-bar .toolbar-menu a {
   border-left: 1px solid var(--bluesky-light);
 }
 /* vertical */
-.toolbar-vertical .toolbar-tray {
+.toolbar-vertical #toolbar-bar .toolbar-tray {
   background-image: repeating-linear-gradient(to right, var(--gravel) 0rem, var(--gravel) 2rem, var(--gravel-light) 2rem, var(--gravel-light) );
 }
 @media (max-width: 47.99em) {
-  .toolbar-vertical .toolbar-tray {
+  .toolbar-vertical #toolbar-bar .toolbar-tray {
     background: rgba(240, 240, 240, 0.8);
   }
 }
@@ -276,71 +290,72 @@ html:not(.cssmask) .toolbar-icon-11home::before {
 /* -----------------------------------------------------------------------------
 Vertical menu variation
 ----------------------------------------------------------------------------- */
-.toolbar-vertical .toolbar-menu a,
-.toolbar-vertical .toolbar-menu .level-1 a {
+.toolbar-vertical #toolbar-bar .toolbar-menu a,
+.toolbar-vertical #toolbar-bar .toolbar-menu .level-1 a {
   border-bottom: 1px solid var(--bluesky);
   background-image: var(--button-bluesky-50);
   color: var(--white);
-  font-size: .875rem;
+  font-size: 0.875rem;
   line-height: 2rem;
   transition: 1s ease-in-out;
 }
-.toolbar-vertical .toolbar-menu a:hover,
-.toolbar-vertical .toolbar-menu .level-1 a:hover {
+.toolbar-vertical #toolbar-bar .toolbar-menu a:hover,
+.toolbar-vertical #toolbar-bar .toolbar-menu .level-1 a:hover {
   border-bottom: 1px solid var(--bluesky-light);
   background-image: var(--button-bluesky-light);
   color: var(--bluesky);
 }
 
-.toolbar-vertical .toolbar-menu .level-2 a {
+.toolbar-vertical #toolbar-bar .toolbar-menu .level-2 a {
   border-bottom: 1px solid var(--concrete);
   background-image: var(--button-gravel);
   color: var(--asphalt);
 }
-.toolbar-vertical .toolbar-menu .level-2 a:hover {
-  color: var(--bluesky);
+.toolbar-vertical #toolbar-bar .toolbar-menu .level-2 a:hover {
   background-image: var(--button-gravel-light);
+  color: var(--bluesky);
 }
-.toolbar-vertical .toolbar-menu .level-2 a:before {
+.toolbar-vertical #toolbar-bar .toolbar-menu .level-2 a:before {
+  background-color: var(--concrete);
+
   -webkit-mask-image: var(--icon-arrow-right);
           mask-image: var(--icon-arrow-right);
-          background-color: var(--concrete);
 }
 
-.toolbar-vertical .toolbar-menu .level-3 a {
+.toolbar-vertical #toolbar-bar .toolbar-menu .level-3 a {
+  padding-left: 3rem;
   border-bottom: 1px solid var(--concrete);
   background-image: var(--button-gravel);
   color: var(--asphalt-light);
-  padding-left: 3rem
 }
-.toolbar-vertical .toolbar-menu .level-3 a:hover {
+.toolbar-vertical #toolbar-bar .toolbar-menu .level-3 a:hover {
   border-bottom: 1px solid var(--asphalt-light);
   background-image: var(--button-gravel-light);
   color: var(--asphalt-light);
 }
-.toolbar-vertical .toolbar-menu .level-3 a:before {
+.toolbar-vertical #toolbar-bar .toolbar-menu .level-3 a:before {
   background-color: transparent;
 }
 
 /* -----------------------------------------------------------------------------
   Show and hide the toolbar handle
 ----------------------------------------------------------------------------- */
-.toolbar .toolbar-tray-horizontal .toolbar-menu .toolbar-handle,
-.toolbar .toolbar-tray-horizontal .toolbar-menu ul,
-.toolbar .toolbar-tray-vertical .toolbar-menu ul {
+#toolbar-bar .toolbar-tray-horizontal .toolbar-menu .toolbar-handle,
+#toolbar-bar .toolbar-tray-horizontal .toolbar-menu ul,
+#toolbar-bar .toolbar-tray-vertical .toolbar-menu ul {
   display: none;
 }
-.toolbar .toolbar-tray-vertical li.open > ul {
+#toolbar-bar .toolbar-tray-vertical li.open > ul {
   display: block;
 }
 
-.toolbar-box {
+#toolbar-bar .toolbar-box {
   position: relative;
   display: block;
 }
 
 /* up and down icons position */
-.toolbar-icon.toolbar-handle {
+#toolbar-bar .toolbar-icon.toolbar-handle {
   position: absolute;
   top: 0;
   right: 0;
@@ -354,49 +369,50 @@ Vertical menu variation
 }
 
 /* button handler */
-.toolbar-icon.toolbar-handle {
+#toolbar-bar .toolbar-icon.toolbar-handle {
   background-color: var(--bluesky-light);
 }
-  .toolbar-icon.toolbar-handle:before {
-    -webkit-mask-image: var(--icon-down);
-            mask-image: var(--icon-down);
-    background-color: var(--white);
-  }
-  .toolbar-icon.toolbar-handle:hover:before {
-    transform: scale(1) translateY(0.5rem) ;
-  }
-  .toolbar-icon.toolbar-handle.open:before {
-    -webkit-mask-image: var(--icon-up);
-            mask-image: var(--icon-up);
-  }
-  .toolbar-icon.toolbar-handle.open:hover:before {
-    transform: scale(1) translateY(-0.5rem) ;
-  }
+#toolbar-bar .toolbar-icon.toolbar-handle:before {
+  background-color: var(--white);
+
+  -webkit-mask-image: var(--icon-down);
+          mask-image: var(--icon-down);
+}
+#toolbar-bar .toolbar-icon.toolbar-handle:hover:before {
+  transform: scale(1) translateY(0.5rem) ;
+}
+#toolbar-bar .toolbar-icon.toolbar-handle.open:before {
+  -webkit-mask-image: var(--icon-up);
+          mask-image: var(--icon-up);
+}
+#toolbar-bar .toolbar-icon.toolbar-handle.open:hover:before {
+  transform: scale(1) translateY(-0.5rem) ;
+}
 
 
 /* Button handler lvl 2 */
-.level-2 .toolbar-icon.toolbar-handle {
+#toolbar-bar .level-2 .toolbar-icon.toolbar-handle {
   background-color: var(--gravel);
 }
-  .level-2 .toolbar-icon.toolbar-handle:before {
-    background-color: var(--asphalt);
-    -webkit-mask-image: var(--icon-down-small);
-            mask-image: var(--icon-down-small);
-            -webkit-mask-size: 0.5rem;
-                    mask-size: 0.5rem;
+#toolbar-bar .level-2 .toolbar-icon.toolbar-handle:before {
+  background-color: var(--asphalt);
+  transform: scale(1) translateY(0.3rem) translateX(0.2rem);
 
-    transform: scale(1) translateY(0.3rem) translateX(0.2rem);
-  }
-  .level-2 .toolbar-icon.toolbar-handle:hover:before {
-    transform: scale(1) translateY(0.6rem) translateX(0.2rem);
-  }
+  -webkit-mask-image: var(--icon-down-small);
+          mask-image: var(--icon-down-small);
+  -webkit-mask-size: 0.5rem;
+          mask-size: 0.5rem;
+}
+#toolbar-bar .level-2 .toolbar-icon.toolbar-handle:hover:before {
+  transform: scale(1) translateY(0.6rem) translateX(0.2rem);
+}
 
-.level-2 .toolbar-icon.toolbar-handle.open:before {
+#toolbar-bar .level-2 .toolbar-icon.toolbar-handle.open:before {
   -webkit-mask-image: var(--icon-up-small);
           mask-image: var(--icon-up-small);
 }
-.level-2 .toolbar-icon.toolbar-handle.open:hover:before {
-    transform: scale(1) translateY(-0.3rem) translateX(0.2rem);
+#toolbar-bar .level-2 .toolbar-icon.toolbar-handle.open:hover:before {
+  transform: scale(1) translateY(-0.3rem) translateX(0.2rem);
 }
 
 
@@ -404,37 +420,37 @@ Vertical menu variation
 2nd level Icons
 ------------------------------------------------------------------------------*/
 /* content */
-.toolbar-menu-administration a.toolbar-icon-system-admin-content:before {
+#toolbar-bar a.toolbar-icon-system-admin-content:before {
   -webkit-mask-image: var(--icon-user);
           mask-image: var(--icon-user);
 }
 /* Structure */
-.toolbar-menu-administration a.toolbar-icon-system-admin-structure:before {
+#toolbar-bar a.toolbar-icon-system-admin-structure:before {
   -webkit-mask-image: var(--icon-structure);
           mask-image: var(--icon-structure);
 }
 /* Apperance */
-.toolbar-menu-administration a.toolbar-icon-system-themes-page:before {
+#toolbar-bar a.toolbar-icon-system-themes-page:before {
   -webkit-mask-image: var(--icon-rocket);
           mask-image: var(--icon-rocket);
 }
 /* Extend */
-.toolbar-menu-administration a.toolbar-icon-system-modules-list:before {
+#toolbar-bar a.toolbar-icon-system-modules-list:before {
   -webkit-mask-image: var(--icon-puzzle);
           mask-image: var(--icon-puzzle);
 }
 /* Configuration */
-.toolbar-menu-administration a.toolbar-icon-system-admin-config:before {
+#toolbar-bar a.toolbar-icon-system-admin-config:before {
   -webkit-mask-image: var(--icon-gears);
           mask-image: var(--icon-gears);
 }
 /* People */
-.toolbar-menu-administration a.toolbar-icon-entity-user-collection:before {
+#toolbar-bar a.toolbar-icon-entity-user-collection:before {
   -webkit-mask-image: var(--icon-user);
           mask-image: var(--icon-user);
 }
 /* Report */
-.toolbar-menu-administration a.toolbar-icon-system-admin-reports:before {
+#toolbar-bar a.toolbar-icon-system-admin-reports:before {
   -webkit-mask-image: var(--icon-piechart);
           mask-image: var(--icon-piechart);
 }
@@ -442,11 +458,11 @@ Vertical menu variation
 /*
  Shortcuts icons
 */
-nav[aria-label="User-defined shortcuts"] a:before {
+#toolbar-bar nav[aria-label="User-defined shortcuts"] a:before {
   -webkit-mask-image: var(--icon-heart);
           mask-image: var(--icon-heart);
 }
-nav[aria-label="User-defined shortcuts"] a.edit-shortcuts {
+#toolbar-bar nav[aria-label="User-defined shortcuts"] a.edit-shortcuts {
   position: absolute;
   right: 2rem;
   display: block;
@@ -457,9 +473,8 @@ nav[aria-label="User-defined shortcuts"] a.edit-shortcuts {
   background-image: var(--button-rasberry);
   color: var(--white);
   line-height: 2rem;
-
 }
-nav[aria-label="User-defined shortcuts"] a.edit-shortcuts:before {
+#toolbar-bar nav[aria-label="User-defined shortcuts"] a.edit-shortcuts:before {
   position: absolute;
   top: 0.5rem;
   left: 0.5rem;
@@ -474,65 +489,63 @@ nav[aria-label="User-defined shortcuts"] a.edit-shortcuts:before {
   -webkit-mask-image: var(--icon-pen);
           mask-image: var(--icon-pen);
 }
-nav[aria-label="User-defined shortcuts"] a.edit-shortcuts:hover {
+#toolbar-bar nav[aria-label="User-defined shortcuts"] a.edit-shortcuts:hover {
   background-image: var(--button-rasberry-rev);
 }
 
-.toolbar-vertical  nav[aria-label="User-defined shortcuts"]  a.edit-shortcuts {
+.toolbar-vertical #toolbar-bar nav[aria-label="User-defined shortcuts"] a.edit-shortcuts {
   position: relative;
   right: 0;
   padding: 0 0 0 2.5rem;
   text-align: left;
-  /*background-image: var(--button-rasberry);*/
 }
 
 /* view profile */
-.toolbar-tray .account a:before {
+#toolbar-bar .account a:before {
   -webkit-mask-image: var(--icon-user);
           mask-image: var(--icon-user);
 }
 /* Edit profile */
-.toolbar-tray .account-edit a:before {
+#toolbar-bar .account-edit a:before {
   -webkit-mask-image: var(--icon-pen);
           mask-image: var(--icon-pen);
 }
 
 /* Logout */
-.toolbar-tray li.logout {
-  float: right;
+#toolbar-bar .toolbar-tray-horizontal > .toolbar-lining {
   padding-right: 2rem;
 }
-.toolbar-vertical .toolbar-tray li.logout {
+.toolbar-horizontal #toolbar-bar li.logout {
+  float: right;
+}
+.toolbar-vertical #toolbar-bar li.logout {
   float: none;
   padding: 0;
+  border: none;
 }
-
+.toolbar-vertical #toolbar-bar .logout a {
+  border-bottom: none;
+}
 /* Logout button colors */
-.toolbar-tray .logout a {
+#toolbar-bar .toolbar-menu .logout a {
   background-image: var(--button-strawberry);
 }
-.toolbar-tray .logout a:hover {
+#toolbar-bar .toolbar-menu .logout a:hover {
   background-image: var(--button-strawberry-rev);
 }
-.toolbar-tray .logout a:active {
+#toolbar-bar .toolbar-menu .logout a:active {
   background-image: var(--button-strawberry-active);
 }
-.toolbar-tray .logout a:before {
+#toolbar-bar .toolbar-menu .logout a:before {
   -webkit-mask-image: var(--icon-logout);
           mask-image: var(--icon-logout);
 }
 
-
-/* -----------------------------------------------------------------------------
-VERTICAL TRAY
------------------------------------------------------------------------------ */
-
-
 /*------------------------------------------------------------------------------
   toggle navbar button
 ------------------------------------------------------------------------------*/
-.toolbar-tab button.toolbar-icon-toggle-vertical,
-.toolbar-tab button.toolbar-icon-toggle-horizontal {
+#toolbar-bar button.toolbar-icon-toggle-vertical,
+#toolbar-bar button.toolbar-icon-toggle-horizontal {
   position: relative;
   float: right;
   width: 2rem;
@@ -543,43 +556,43 @@ VERTICAL TRAY
   transition: all 0.5s ease-in-out;
 }
 
-.toolbar-tab button.toolbar-icon-toggle-vertical,
-.toolbar-tab button.toolbar-icon-toggle-vertical:focus {
+#toolbar-bar button.toolbar-icon-toggle-vertical,
+#toolbar-bar button.toolbar-icon-toggle-vertical:focus {
   border-left: 1px solid var(--bluesky-light);
   background-color: var(--bluesky-light);
 }
 
-.toolbar-tab button.toolbar-icon-toggle-vertical:hover {
+#toolbar-bar button.toolbar-icon-toggle-vertical:hover {
   background-color: var(--bluesky-20);
 }
 
-.toolbar-tab button.toolbar-icon.toolbar-icon-toggle-vertical:before {
+#toolbar-bar button.toolbar-icon.toolbar-icon-toggle-vertical:before {
   -webkit-mask-image: var(--icon-arrow-left);
           mask-image: var(--icon-arrow-left);
 }
-.toolbar-tab button.toolbar-icon-toggle-vertical:hover:before {
+#toolbar-bar button.toolbar-icon-toggle-vertical:hover:before {
   transform: rotate(-90deg);
 }
 
-.toolbar-tab button.toolbar-icon-toggle-horizontal,
-.toolbar-tab button.toolbar-icon-toggle-horizontal:focus {
+#toolbar-bar button.toolbar-icon-toggle-horizontal,
+#toolbar-bar button.toolbar-icon-toggle-horizontal:focus {
   margin: 2rem 0;
   background-color: var(--concrete);
   background-image: none;
 }
-.toolbar-tab button.toolbar-icon-toggle-horizontal:hover {
+#toolbar-bar button.toolbar-icon-toggle-horizontal:hover {
   background-color: var(--asphalt-light);
 }
-.toolbar-tab button.toolbar-icon-toggle-horizontal:before {
+#toolbar-bar button.toolbar-icon-toggle-horizontal:before {
   -webkit-mask-image: var(--icon-up);
           mask-image: var(--icon-up);
 }
-.toolbar-tab button.toolbar-icon-toggle-horizontal:hover:before {
+#toolbar-bar button.toolbar-icon-toggle-horizontal:hover:before {
   transform: rotate(90deg);
 }
 /* -----------------------------------------------------------------------------
 overwrites for old browsers
 ------------------------------------------------------------------------------*/
-html:not(.cssmask) .toolbar-tab .toolbar-item::before {
+html:not(.cssmask) #toolbar-bar .toolbar-item::before {
   background-color: transparent;
 }

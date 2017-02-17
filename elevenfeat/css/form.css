@@ -208,6 +208,13 @@ details[open] summary::after{
   background-color: var(--rasberry);
   transform: rotate(90deg);
 }
+details summary:hover{
+  background-color: var(--bluesky);
+}
+details summary:hover:after {
+  background-color: var(--white);
+}
+
 details summary::-webkit-details-marker {
   display:none;
 }

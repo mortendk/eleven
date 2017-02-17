@@ -2,8 +2,6 @@
 /*.contextual .contextual-links[hidden] {
   display: block !important;
 }*/
-
-
 .contextual {
   position: absolute;
   z-index: 500;
@@ -47,6 +45,10 @@
   background-color: transparent;
   text-indent: -999rem;
   cursor: pointer;
+  background-image: none;
+}
+.contextual .trigger:hover,
+.contextual .trigger:focus{
   background-image: none
 }
 
@@ -91,6 +93,8 @@
   background-color: var(--white);
   line-height: 100%;
 }
+
+.contextual-region .contextual .contextual-links a,
 .contextual .contextual-links a {
   position: relative;
   display: block;
@@ -148,8 +152,9 @@ colors
 .contextual .contextual-links a {
   background-color: var(--white);
 }
-.contextual .contextual-links a:hover,
-.no-touchevents .contextual .contextual-links li a:hover {
+
+.contextual .contextual-region .contextual-links a:hover,
+.no-touchevents .contextual-region .contextual .contextual-links li a:hover {
   background-color: var(--rasberry-light-50);
   color: var(--rasberry);
 }
