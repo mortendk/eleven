@@ -5,8 +5,8 @@
 .contextual {
   position: absolute;
   z-index: 500;
-  top: 0.5rem;
-  right: 0.5rem; /* LTR */
+  top: 8px;
+  right: 8px; /* LTR */
   transition: all 0.5s ease-in-out;
 }
 
@@ -15,7 +15,7 @@
 }
 [dir="rtl"] .contextual {
   right: auto;
-  left: 0.5rem;
+  left: 8px;
 }
 
 /* region */
@@ -23,7 +23,7 @@
   transition: background-color 1s ease-in-out;
 }
 .contextual-region.focus {
-  min-height: 2rem;
+  min-height: 32px;
 }
 
 /**
@@ -31,25 +31,25 @@
  */
 .contextual .trigger {
   position: relative;
-  top: 0rem;
-  right: 0rem; /* LTR */
+  top: 0;
+  right: 0;
   float: right; /* LTR */
   overflow: hidden;
-  width: 2rem !important;
-  height: 2rem !important;
+  width: 32px !important;
+  height: 32px !important;
   margin: 0;
   padding: 0;
   border: 0;
   border-radius: 0;
   outline: 0;
   background-color: transparent;
+  background-image: none;
   text-indent: -999rem;
   cursor: pointer;
-  background-image: none;
 }
 .contextual .trigger:hover,
-.contextual .trigger:focus{
-  background-image: none
+.contextual .trigger:focus {
+  background-image: none;
 }
 
 [dir="rtl"] .contextual .trigger {
@@ -99,11 +99,11 @@
   position: relative;
   display: block;
   margin: 0;
-  padding: 0 0.5rem;
-  padding-left: 2rem;
+  padding: 0 8px;
+  padding-left: 32px;
   color: var(--rasberry);
-  font-size: 1rem;
-  line-height: 2rem;
+  font-size: 16px;
+  line-height: 32px;
   text-decoration: none;
   transition: all 0.5s ease-in-out;
 }
@@ -121,7 +121,7 @@
 }
 
 .js-outside-in-edit-mode .contextual-region {
-  min-height: 2.5rem;
+  min-height: calc(2.5 * 16px);
 }
 
 
@@ -146,9 +146,9 @@ colors
 }
 .contextual-region .contextual .contextual-links {
   border: 1px solid var(--rasberry);
-
 }
-.contextual-region .contextual .contextual-links li { }
+.contextual-region .contextual .contextual-links li {
+}
 .contextual .contextual-links a {
   background-color: var(--white);
 }
@@ -164,41 +164,42 @@ contextual links icon
  -----------------------------------------------------------------------------*/
 
 
- /* icons default  */
- .contextual .trigger:before,
- .contextual .contextual-links a:before {
-   position: absolute;
-   top: 0.5rem;
-   left: 0.5rem;
-   display: block;
-   width: 1rem;
-   height: 1rem;
-   background-image: none ! important; /* yes we wanna make sure no module have fun here */
-   content: "";
-   transition: 0.1s ease-in;
+/* icons default  */
+.contextual .trigger:before,
+.contextual .contextual-links a:before {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: var(--rasberry);
+  background-image: none ! important; /* yes we wanna make sure no module have fun here */
+  content: "";
+  transition: 0.1s ease-in;
 
-   -webkit-mask: var(--icon-coffee) no-repeat;
-           mask: var(--icon-coffee) no-repeat;
-   -webkit-mask-size: contain ! important;
-           mask-size: contain ! important;
-   background-color: var(--rasberry);
- }
+  -webkit-mask: var(--icon-coffee) no-repeat;
+          mask: var(--icon-coffee) no-repeat;
+  -webkit-mask-size: contain ! important;
+          mask-size: contain ! important;
+}
 
- .contextual .trigger:hover:before,
- .contextual .contextual-links  a:hover:before {
-   background-color: var(--rasberry-light);
-   transform: scale(1.5);
- }
+.contextual .trigger:hover:before,
+.contextual .contextual-links  a:hover:before {
+  background-color: var(--rasberry-light);
+  transform: scale(1.5);
+}
 
 /* trigger */
- .contextual .trigger:before {
-   top: calc(50% - 0.5rem);
-   left: calc(50% - 0.5rem);
+.contextual .trigger:before {
+  top: calc(50% - 8px);
+  left: calc(50% - 8px);
 
-   -webkit-mask: var(--icon-contextual) no-repeat;
-           mask: var(--icon-contextual) no-repeat;
- }
- .contextual .trigger:hover:before { }
+  -webkit-mask: var(--icon-contextual) no-repeat;
+          mask: var(--icon-contextual) no-repeat;
+}
+.contextual .trigger:hover:before {
+}
 
 
 /* block config */
@@ -208,14 +209,15 @@ contextual links icon
 }
 
 /* quick edit */
-.contextual .contextual-links .outside-inblock-configure a{
+.contextual .contextual-links .outside-inblock-configure a {
   color: var(--bluesky);
 }
 .contextual .contextual-links .outside-inblock-configure a:before,
 .contextual .contextual-links .quickedit a:before {
+  background-color: var(--bluesky);
+
   -webkit-mask: var(--icon-action) no-repeat;
           mask: var(--icon-action) no-repeat;
-  background-color: var(--bluesky);
 }
 
 /* translate */
@@ -230,16 +232,18 @@ contextual links icon
 .contextual .contextual-links .entitymenuedit-form a:before,
 .contextual .contextual-links .entitynodeedit-form a:before,
 .contextual .contextual-links .entityviewedit-form a:before {
+  background-color: var(--grass);
+
   -webkit-mask: var(--icon-pen) no-repeat;
           mask: var(--icon-pen) no-repeat;
-    background-color: var(--grass);
 }
 
 /* delete */
 .contextual .contextual-links .entitynodedelete-form a:before {
+  background-color: var(--strawberry);
+
   -webkit-mask: var(--icon-trash) no-repeat;
           mask: var(--icon-trash) no-repeat;
-          background-color: var(--strawberry);
 }
 
 

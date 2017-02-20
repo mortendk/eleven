@@ -1,0 +1,110 @@
+/*
+template: form-element--radio.html.twig
+*/
+.form-item--radio input[type="radio"] {
+  visibility: hidden;
+}
+
+
+/* radio ------------------------------------------------------------------*/
+.radio {
+  position: relative;
+  display: inline-block;
+  margin-right: 0.5rem;
+  line-height: 1rem;
+}
+.radio input[type=radio] + label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1rem;
+  height: 1rem;
+  padding: 0;
+  border-radius: 0.5rem;
+  line-height: 1rem;
+  text-indent: -999rem;
+  cursor: pointer;
+}
+.radio input[type=radio] + label::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  content: "";
+  transition: all 0.5s ease-in-out;
+
+  -webkit-mask-size: contain ! important;
+          mask-size: contain ! important;
+}
+
+.radio__title {
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+.radio__title label {
+  padding: 0;
+}
+.radio input[type=radio]:focus + label + .radio__title label,
+.radio input[type=radio]:hover + label + .radio__title label {
+  outline: 0;
+}
+
+/*-- colors ---------------------------------------------------------*/
+
+/* radio input color */
+.radio input[type=radio] + label {
+  background-color: var(--bluesky);
+}
+.radio input[type=radio]:checked + label {
+  background-color: var(--bluesky-light);
+}
+.radio input[type=radio]:focus + label,
+.radio input[type=radio]:hover + label {
+  background-color: var(--bluesky-light);
+}
+.form-item--disabled .radio input[type=radio] + label,
+.form-item--disabled .radio input[type=radio]:checked + label,
+.form-item--disabled .radio input[type=radio]:focus + label,
+.form-item--disabled .radio input[type=radio]:hover + label {
+  background-color: var(--concrete);
+}
+
+/* radio icon */
+.radio input[type=radio] + label:before {
+  background-color: var(--bluesky-30);
+
+          mask: var(--icon-circle) no-repeat;
+  -webkit-mask: var(--icon-circle) no-repeat;
+}
+.radio input[type=radio]:checked + label:before,
+.radio input[type=radio]:checked:focus + label:before,
+.radio input[type=radio]:checked:hover + label:before {
+  background-color: white;
+
+          mask: var(--icon-circle-dot) no-repeat;
+  -webkit-mask: var(--icon-circle-dot) no-repeat;
+}
+.radio input[type=radio]:focus + label:before,
+.radio input[type=radio]:hover + label:before {
+  background-color: var(--gravel);
+
+          mask: var(--icon-circle) no-repeat;
+  -webkit-mask: var(--icon-circle) no-repeat;
+}
+
+
+/* title */
+.radio input[type=radio]:checked + label + .radio__title label {
+  color: var(--bluesky);
+}
+
+/*
+fixes for views tables with the select all functions
+ex: /admin/content
+adds in the visually-hidden class we wanna overwrite
+*/
+.radio .visually-hidden {
+  clip: inherit;
+}

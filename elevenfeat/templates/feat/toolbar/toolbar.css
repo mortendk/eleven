@@ -5,8 +5,9 @@ Dont change the classnames - stuff will break ;)
 /* set global toolbar settings*/
 #toolbar-administration {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
-  font-size: 1rem;
+  font-size: 16px;
 }
+/**/
 #toolbar-bar a,
 #toolbar-bar a:hover {
   text-decoration: none;
@@ -16,12 +17,18 @@ Dont change the classnames - stuff will break ;)
   padding: 0;
   list-style: none;
 }
-
+#toolbar-bar li {
+  margin: 0;
+}
+#toolbar-bar button {
+  height: 32px;
+  line-height: 32px;
+}
 /*------------------------------------------------------------------------------
   Main Toolbar (toolbar-tabs)
 ------------------------------------------------------------------------------*/
-#toolbar-bar .toolbar-bar {
-  background-color: var(--black);
+#toolbar-bar {
+  background-color: var(--black-80);
 }
 /* change the toolbar bg color to indicate that were editing stuff */
 body.is-edit-ui-toolbar-opened #toolbar-bar .toolbar-bar,
@@ -31,15 +38,15 @@ body.is-edit-ui-toolbar-opened #toolbar-bar .toolbar-bar,
 
 /* Toolbar tabs */
 #toolbar-bar .toolbar-tab .toolbar-item.trigger {
-  min-width: 9rem;
-  height: 2rem;
+  min-width: calc( 9 * 16px);
+  height: 32px;
   border-left: 1px solid var(--black);
   background-color: var(--asphalt);
   background-image: none;
   color: var(--white);
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: normal;
-  line-height: 2rem;
+  line-height: 32px;
   text-transform: capitalize;
   transition: 0.2s ease-in-out;
 }
@@ -64,7 +71,7 @@ body.is-edit-ui-toolbar-opened #toolbar-bar .toolbar-bar,
   position: relative;
   display: block;
   margin: 0;
-  padding: 0 0.5rem 0 2.5rem ;
+  padding: 0 calc( 0.5 * 16px ) 0 calc( 2.5 * 16px );
   outline: none;
   background-image: none;
   background-image: var(--button-bluesky-solid);
@@ -72,11 +79,10 @@ body.is-edit-ui-toolbar-opened #toolbar-bar .toolbar-bar,
   background-position: 0 0;
   background-size: auto;
   color: var(--white);
-  line-height: 2rem;
-  text-align: left;
-  font-size: 1rem;
+  font-size: calc( 1 * 16px );
   font-weight: normal;
-
+  line-height: calc( 2 * 16px );
+  text-align: left;
 }
 #toolbar-bar button.toolbar-icon {
   border: 0;
@@ -84,17 +90,17 @@ body.is-edit-ui-toolbar-opened #toolbar-bar .toolbar-bar,
 #toolbar-bar .toolbar-icon:hover,
 #toolbar-bar .toolbar-menu a:hover {
   background-image: var(--button-bluesky-light-solid);
-  text-decoration: none
+  text-decoration: none;
 }
 #toolbar-bar .toolbar-icon:before,
 #toolbar-bar .toolbar-menu a:before,
 #toolbar-bar .toolbar-icon-11home::before {
   position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
+  top: calc( 0.5 * 16px );
+  left: calc( 0.5 * 16px );
   display: block;
-  width: 1rem;
-  height: 1rem;
+  width: calc( 1 * 16px );
+  height: calc( 1 * 16px );
   background-color: var(--white);
   background-image: none ! important; /* yes we wanna make sure no module have fun here */
   content: "";
@@ -116,22 +122,22 @@ html:not(.cssmask) #toolbar-bar .toolbar-icon::before {
 
 /* home icons */
 #toolbar-bar .toolbar-tab--small {
-  width: 2rem;
-  height: 2rem;
+  width: calc( 2 * 16px );
+  height: calc( 2 * 16px );
   background-color: var(--asphalt-light);
 }
 #toolbar-bar .toolbar-icon-11home {
   position: relative;
-  height: 2rem;
-  line-height: 2rem;
+  height: calc( 2 * 16px );
+  line-height: calc( 2 * 16px );
   text-indent: -999rem;
 }
 #toolbar-bar .toolbar-icon-11home::before {
   background-color: var(--bluesky);
 
   -webkit-mask-image: var(--icon-drop);
-  -webkit-mask-size: 0.8rem;
-          mask-size: 0.8rem;
+  -webkit-mask-size: calc( 0.8 * 16px );
+          mask-size: calc( 0.8 * 16px );
 }
 #toolbar-bar .toolbar-icon-11home:hover:before {
   background-color: var(--bluesky);
@@ -139,8 +145,8 @@ html:not(.cssmask) #toolbar-bar .toolbar-icon::before {
 }
 html:not(.cssmask) #toolbar-bar .toolbar-icon-11home::before {
   display: block;
-  width: 1rem;
-  height: 1rem;
+  width: calc( 1 * 16px );
+  height: calc( 1 * 16px );
   background-color: transparent;
   background-image: var(--icon-drop);
   background-repeat: no-repeat;
@@ -150,12 +156,12 @@ html:not(.cssmask) #toolbar-bar .toolbar-icon-11home::before {
 
 @media (max-width: 47.99rem) {
   #toolbar-bar .toolbar-tab .toolbar-item.trigger {
-    width: 3em;
-    min-width: 3rem;
+    width: calc( 3 * 16px );
+    min-width: calc( 3 * 16px );
     text-indent: -999rem;
   }
   #toolbar-bar .toolbar-icon.trigger:before {
-    left: 1rem;
+    left: calc( 3 * 16px );
   }
 }
 
@@ -188,9 +194,9 @@ html:not(.cssmask) #toolbar-bar .toolbar-icon-11home::before {
 }
 /* edit & editing */
 #toolbar-bar button.toolbar-icon-edit {
-  min-width: 7rem;
+  min-width: calc( 7 * 16px );
   background-image: var(--button-asphalt);
-  line-height: 2rem;
+  line-height: calc( 2 * 16px );
 }
 #toolbar-bar button.toolbar-icon-edit:before {
   -webkit-mask-image: var(--icon-pen);
@@ -217,15 +223,15 @@ html:not(.cssmask) #toolbar-bar .toolbar-icon-11home::before {
 /* Place block */
 #toolbar-bar .block-place-toolbar-tab {
   float: right;
-  margin-right: 2rem;
+  margin-right: calc( 2 * 16px );
 }
 
 /* place-block inactive */
 #toolbar-bar .toolbar-icon-place-block-inactive,
 #toolbar-bar .toolbar-icon-place-block-active {
-  min-width: 7rem;
+  min-width: calc( 7 * 16px );
   background-image: var(--button-asphalt);
-  line-height: 2rem;
+  line-height: calc( 2 * 16px );
 }
 #toolbar-bar .toolbar-icon-place-block-inactive:before,
 #toolbar-bar .toolbar-icon-place-block-active:before {
@@ -279,7 +285,10 @@ html:not(.cssmask) #toolbar-bar .toolbar-icon-11home::before {
 }
 /* vertical */
 .toolbar-vertical #toolbar-bar .toolbar-tray {
-  background-image: repeating-linear-gradient(to right, var(--gravel) 0rem, var(--gravel) 2rem, var(--gravel-light) 2rem, var(--gravel-light) );
+  width: calc(15 * 16px);
+  background-image: repeating-linear-gradient(to right, var(--gravel) 0, var(--gravel) 32px, var(--gravel-light) 32px, var(--gravel-light) );
+  border-right: 1px solid var(--gravel;);
+
 }
 @media (max-width: 47.99em) {
   .toolbar-vertical #toolbar-bar .toolbar-tray {
@@ -295,8 +304,8 @@ Vertical menu variation
   border-bottom: 1px solid var(--bluesky);
   background-image: var(--button-bluesky-50);
   color: var(--white);
-  font-size: 0.875rem;
-  line-height: 2rem;
+  font-size: calc( 0.875 * 16px );
+  line-height: calc( 2 * 16px );
   transition: 1s ease-in-out;
 }
 .toolbar-vertical #toolbar-bar .toolbar-menu a:hover,
@@ -323,10 +332,10 @@ Vertical menu variation
 }
 
 .toolbar-vertical #toolbar-bar .toolbar-menu .level-3 a {
-  padding-left: 3rem;
+  padding-left: calc( 3 * 16px );
   border-bottom: 1px solid var(--concrete);
   background-image: var(--button-gravel);
-  color: var(--asphalt-light);
+  color: var(--asphalt-light);;
 }
 .toolbar-vertical #toolbar-bar .toolbar-menu .level-3 a:hover {
   border-bottom: 1px solid var(--asphalt-light);
@@ -359,8 +368,8 @@ Vertical menu variation
   position: absolute;
   top: 0;
   right: 0;
-  width: 2rem ;
-  height: 2rem;
+  width: calc( 2 * 16px );
+  height: calc( 2 * 16px );
   margin: 0;
   padding: 0;
   border: none;
@@ -464,23 +473,23 @@ Vertical menu variation
 }
 #toolbar-bar nav[aria-label="User-defined shortcuts"] a.edit-shortcuts {
   position: absolute;
-  right: 2rem;
+  right: calc( 2 * 16px );
   display: block;
-  height: 2rem;
+  height: calc( 2 * 16px );
   margin: 0;
-  padding: 0 0.5rem 0 2.5rem ;
+  padding: 0 calc( 0.5 * 16px ) 0 calc( 2.5 * 16px );
   outline: none;
   background-image: var(--button-rasberry);
   color: var(--white);
-  line-height: 2rem;
+  line-height: calc( 2 * 16px );
 }
 #toolbar-bar nav[aria-label="User-defined shortcuts"] a.edit-shortcuts:before {
   position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
+  top: calc( 0.5 * 16px );
+  left: calc( 0.5 * 16px );
   display: block;
-  width: 1rem;
-  height: 1rem;
+  width: calc( 1 * 16px );
+  height: calc( 1 * 16px );
   background-color: var(--white);
   background-image: none ! important; /* yes we wanna make sure no module have fun here */
   content: "";
@@ -496,8 +505,8 @@ Vertical menu variation
 .toolbar-vertical #toolbar-bar nav[aria-label="User-defined shortcuts"] a.edit-shortcuts {
   position: relative;
   right: 0;
-  padding: 0 0 0 2.5rem;
-  text-align: left;
+  padding: 0 0 0 calc( 2.5 * 16px );
+  text-align: left;;
 }
 
 /* view profile */
@@ -513,7 +522,7 @@ Vertical menu variation
 
 /* Logout */
 #toolbar-bar .toolbar-tray-horizontal > .toolbar-lining {
-  padding-right: 2rem;
+  padding-right: calc( 2 * 16px );;
 }
 .toolbar-horizontal #toolbar-bar li.logout {
   float: right;
@@ -548,8 +557,8 @@ Vertical menu variation
 #toolbar-bar button.toolbar-icon-toggle-horizontal {
   position: relative;
   float: right;
-  width: 2rem;
-  height: 2rem;
+  width: calc( 2 * 16px );
+  height: calc( 2 * 16px );
   margin: 0;
   padding: 0;
   text-indent: -999rem;
@@ -576,7 +585,7 @@ Vertical menu variation
 
 #toolbar-bar button.toolbar-icon-toggle-horizontal,
 #toolbar-bar button.toolbar-icon-toggle-horizontal:focus {
-  margin: 2rem 0;
+  margin: calc( 2 * 16px ) 0;
   background-color: var(--concrete);
   background-image: none;
 }

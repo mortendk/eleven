@@ -1,11 +1,11 @@
-name: Eleven FEAT
+name: elevenfeat
 type: theme
-description: 'Seperation of the frontend Admin tools for the Eleven theme'
-base theme: classy
+description: 'FEAT - Seperation of the frontend Admin tools for the Eleven theme'
+#base theme: classy
 package: eleven
 core: '8.x'
 
-# hidden: TRUE
+hidden: TRUE
 
 # -- dependencies -----------------------------------------------------------------
 dependencies:

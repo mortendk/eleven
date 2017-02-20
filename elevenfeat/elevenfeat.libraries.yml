@@ -1,8 +1,11 @@
 global:
   css:
     base:
-      css/root.css: { weight: -200}
+      css/root.css: { weight: -200 }
       css/form.css: {}
+      templates/form/checkbox/form-checkbox.css: {}
+      templates/form/radio/form-radio.css: {}
+      templates/form/select/form-select.css: {}
     layout:
       # css/layout.css: {}
     component:

@@ -18,58 +18,11 @@
 
 .ui-dialog-offcanvas a,
 .ui-dialog-offcanvas .link {
-  color: var(--yellowsnow);
+
 }
 .ui-dialog-offcanvas a:focus,
 .ui-dialog-offcanvas .link:focus,
 .ui-dialog-offcanvas a:hover,
 .ui-dialog-offcanvas .link:hover {
-  color: var(--yellowsnow-light);
-}
 
-/* form elements */
-.ui-dialog-offcanvas .form-item {
-  padding: 0.5rem 0;
-}
-
-details{
-  background-color: var(--asphalt);
-}
-
-/* label */
-.ui-dialog-offcanvas label {
-  padding: 0.5rem 0;
-  color: var(--gravel);
-  font-size: 1rem;
-  font-weight: bold;
-  font-weight: normal;
-  line-height: 1.5rem;
-}
-
-/* text */
-.ui-dialog-offcanvas input[type="text"] {
-  height: 2rem;
-  padding: 0 0 0 0.5rem;
-  border: 0 solid transparent ;
-  border-bottom: 2px solid var(--bluesky);
-  background-color: var(--gravel);
-  color: var(--asphalt);
-  line-height: 2rem;
-  transition: all 0.5s ease-in-out;
-}
-.ui-dialog-offcanvas input[type="text"]:hover,
-.ui-dialog-offcanvas input[type="text"]:focus {
-  border-bottom-color: var(--bluesky-light);
-  background-color: var(--gravel-light);
-  color: var(--bluesky);
-
-}
-.ui-dialog-offcanvas input[type="text"]:focus {
-  outline: 0;
-  background-color: var(--bluesky-light-light);
-}
-
-.ui-dialog .form-item,
-.ui-dialog .form-actions{
-  margin: 0.5rem 0
 }
