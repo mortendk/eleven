@@ -2,6 +2,7 @@
 /*.contextual .contextual-links[hidden] {
   display: block !important;
 }*/
+
 .contextual {
   position: absolute;
   z-index: 500;
@@ -9,7 +10,6 @@
   right: 8px; /* LTR */
   transition: all 0.5s ease-in-out;
 }
-
 .contextual.open {
   z-index: 600;
 }
@@ -23,7 +23,7 @@
   transition: background-color 1s ease-in-out;
 }
 .contextual-region.focus {
-  min-height: 32px;
+  /*min-height: 32px;*/
 }
 
 /**
@@ -67,12 +67,12 @@
 .contextual-region .contextual .contextual-links {
   position: relative;
   top: -1px;
-  right: 0; /* LTR */
+  right: 0;
   float: right; /* LTR */
   clear: both;
   margin: 0;
   padding: 0 0;
-  border-radius: 0; /* LTR */
+  border-radius: 0;
   text-align: left; /* LTR */
   white-space: nowrap;
 }
@@ -84,7 +84,7 @@
   text-align: right;
 }
 
-.contextual-region .contextual .contextual-links li {
+.contextual-region .contextual ul.contextual-links li {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -92,20 +92,20 @@
   border: none;
   background-color: var(--white);
   line-height: 100%;
+  display: block
 }
 
-.contextual-region .contextual .contextual-links a,
+.contextual-region .contextual ul.contextual-links a,
 .contextual .contextual-links a {
   position: relative;
   display: block;
   margin: 0;
   padding: 0 8px;
   padding-left: 32px;
-  color: var(--rasberry);
   font-size: 16px;
   line-height: 32px;
   text-decoration: none;
-  transition: all 0.5s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .contextual .contextual-links a,
@@ -124,46 +124,6 @@
   min-height: calc(2.5 * 16px);
 }
 
-
-/*------------------------------------------------------------------------------
-colors
-------------------------------------------------------------------------------*/
-/*
-#main-canvas.js-outside-in-edit-mode .outside-in-editable,
-.js-outside-in-edit-mode .contextual-region.node,
-*/
-
-/* color for the region */
-.contextual-region.focus {
-  outline: 1px dashed var(--rasberry-light-50);
-  background-color: var(--rasberry-light-20);
-}
-
-.contextual.open .trigger {
-  border: 1px solid var(--rasberry-light);
-  border-bottom-color: transparent;
-  background-color: var(--white);
-}
-.contextual-region .contextual .contextual-links {
-  border: 1px solid var(--rasberry);
-}
-.contextual-region .contextual .contextual-links li {
-}
-.contextual .contextual-links a {
-  background-color: var(--white);
-}
-
-.contextual .contextual-region .contextual-links a:hover,
-.no-touchevents .contextual-region .contextual .contextual-links li a:hover {
-  background-color: var(--rasberry-light-50);
-  color: var(--rasberry);
-}
-
-/* -----------------------------------------------------------------------------
-contextual links icon
- -----------------------------------------------------------------------------*/
-
-
 /* icons default  */
 .contextual .trigger:before,
 .contextual .contextual-links a:before {
@@ -173,7 +133,6 @@ contextual links icon
   display: block;
   width: 16px;
   height: 16px;
-  background-color: var(--rasberry);
   background-image: none ! important; /* yes we wanna make sure no module have fun here */
   content: "";
   transition: 0.1s ease-in;
@@ -184,9 +143,55 @@ contextual links icon
           mask-size: contain ! important;
 }
 
+/*------------------------------------------------------------------------------
+colors
+------------------------------------------------------------------------------*/
+/* color for the region */
+.contextual-region.focus {
+  outline: 1px dotted var(--bluesky-light);
+  background-color: var(--white-20);
+}
+.js-outside-in-edit-mode .contextual-region{
+  outline: 1px dotted var(--bluesky-light);
+}
+
+/* trigger */
+.contextual.open .trigger {
+  border: 1px solid var(--bluesky-light);
+  border-bottom-color: transparent;
+  background-color: var(--white-90);
+}
+.contextual-region .contextual .contextual-links {
+  border: 1px solid var(--bluesky-light);
+}
+.contextual-region .contextual .contextual-links li {
+  border-bottom: 1px solid var(--gravel);
+}
+.contextual-region .contextual .contextual-links li:last-child {
+  border: none;
+}
+/* link colors */
+.contextual-region .contextual .contextual-links a,
+.contextual .contextual-links a {
+  background-color: var(--white);
+  color: var(--bluesky);
+}
+.contextual .contextual-region .contextual-links a:hover,
+.no-touchevents .contextual-region .contextual .contextual-links li a:hover {
+  background-color: var(--bluesky-light);
+  color: var(--white);
+}
+
+/* -----------------------------------------------------------------------------
+contextual links icon colors
+ -----------------------------------------------------------------------------*/
+/* icons default  */
+.contextual .trigger:before,
+.contextual .contextual-links a:before {
+  background-color: var(--bluesky);
+}
 .contextual .trigger:hover:before,
 .contextual .contextual-links  a:hover:before {
-  background-color: var(--rasberry-light);
   transform: scale(1.5);
 }
 
@@ -198,10 +203,10 @@ contextual links icon
   -webkit-mask: var(--icon-contextual) no-repeat;
           mask: var(--icon-contextual) no-repeat;
 }
-.contextual .trigger:hover:before {
-}
 
-
+/* -----------------------------------------------------------------------------
+Contextual links icons
+----------------------------------------------------------------------------- */
 /* block config */
 .contextual .contextual-links .block-configure a:before {
   -webkit-mask: var(--icon-gears) no-repeat;
@@ -209,12 +214,13 @@ contextual links icon
 }
 
 /* quick edit */
-.contextual .contextual-links .outside-inblock-configure a {
-  color: var(--bluesky);
+.contextual .contextual-links .outside-inblock-configure a,
+.contextual .contextual-links .quickedit a {
+  color: var(--rasberry);
 }
 .contextual .contextual-links .outside-inblock-configure a:before,
 .contextual .contextual-links .quickedit a:before {
-  background-color: var(--bluesky);
+  background-color: var(--rasberry-light);
 
   -webkit-mask: var(--icon-action) no-repeat;
           mask: var(--icon-action) no-repeat;
@@ -232,8 +238,6 @@ contextual links icon
 .contextual .contextual-links .entitymenuedit-form a:before,
 .contextual .contextual-links .entitynodeedit-form a:before,
 .contextual .contextual-links .entityviewedit-form a:before {
-  background-color: var(--grass);
-
   -webkit-mask: var(--icon-pen) no-repeat;
           mask: var(--icon-pen) no-repeat;
 }
@@ -245,19 +249,3 @@ contextual links icon
   -webkit-mask: var(--icon-trash) no-repeat;
           mask: var(--icon-trash) no-repeat;
 }
-
-
-
-/**
- * Toolbar tab icon.
- */
-/*.toolbar-bar .toolbar-icon-edit:before {
-  background-image: var(--icon-contextual);
-}
-.toolbar-bar .toolbar-icon-edit:active:before,
-.toolbar-bar .toolbar-icon-edit.is-active:before {
-  background-image: var(--icon-contextual);
-}
-.contextual .trigger:focus {
-  outline: none;
-}*/

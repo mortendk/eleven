@@ -83,6 +83,7 @@ body.is-edit-ui-toolbar-opened #toolbar-bar .toolbar-bar,
   font-weight: normal;
   line-height: calc( 2 * 16px );
   text-align: left;
+  border-radius: 0
 }
 #toolbar-bar button.toolbar-icon {
   border: 0;
@@ -279,6 +280,7 @@ html:not(.cssmask) #toolbar-bar .toolbar-icon-11home::before {
 .toolbar-horizontal #toolbar-bar .toolbar-tray {
   border-top: 1px solid var(--bluesky-light);
   background-color: var(--bluesky);
+  border-bottom: 1px solid var(--asphalt);
 }
 .toolbar-horizontal #toolbar-bar .toolbar-menu a {
   border-left: 1px solid var(--bluesky-light);
