@@ -1,15 +1,14 @@
 name: elevenfeat
 type: theme
 description: 'FEAT - Seperation of the frontend Admin tools for the Eleven theme'
-#base theme: classy
-package: eleven
+base theme: classy
 core: '8.x'
 
 hidden: TRUE
 
 # -- dependencies -----------------------------------------------------------------
 dependencies:
-- core/modernizr
+#  - core/modernizr
 
 # -- Libraries -----------------------------------------------------------------
 libraries:
