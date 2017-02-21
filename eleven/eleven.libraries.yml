@@ -1,0 +1,48 @@
+global:
+  css:
+    base:
+      css/root.css: { weight: -200 }
+      css/base/base.css: {}
+      css/base/image.css: {}
+      css/base/list.css: {}
+      css/base/nav.css: {}
+      css/base/table.css: {}
+    layout:
+      css/layout/layout.css: {}
+      css/layout/layout-admin.css: {}
+#    component:
+    theme:
+      css/font.css: {}
+#  js:
+  dependencies:
+    - system/admin
+    - core/modernizr
+
+# ------------------------------------------------------------------------------
+#
+# ------------------------------------------------------------------------------
+# shortcut:
+#   css:
+#     theme:
+      # templates/shortcut/shortcut.css: {}
+
+# jquery_ui:
+#   css:
+#     theme:
+      # templates/jquery_ui/jquery_ui.css: {}
+
+# ------------------------------------------------------------------------------
+# Forms
+# ------------------------------------------------------------------------------
+form.form:
+  css:
+    theme:
+      templates/form/checkbox/form-checkbox.css: {}
+      templates/form/radio/form-radio.css: {}
+      templates/form/select/form-select.css: {}
+
+
+form.ckeditor:
+  css:
+    theme:
+      templates/form/ckeditor/ckeditortheme.css: { }

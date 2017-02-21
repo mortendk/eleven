@@ -1,0 +1,19 @@
+{#
+  favicons
+  howto make a new set of favicons.
+  http://realfavicongenerator.net
+
+  all paths must be pointing to the downloaded folder href="/{{ active_theme_path() }}/favicons/
+
+  add
+  <link rel="shortcut icon" href="/{{ active_theme_path() }}/favicons/favicon.ico">
+  to overwrite drupals favicon 
+#}
+<link rel="apple-touch-icon" sizes="180x180" href="/{{ active_theme_path() }}/favicons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/{{ active_theme_path() }}/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/{{ active_theme_path() }}/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/{{ active_theme_path() }}/favicons/manifest.json">
+<link rel="mask-icon" href="/{{ active_theme_path() }}/favicons/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="shortcut icon" href="/{{ active_theme_path() }}/favicons/favicon.ico">

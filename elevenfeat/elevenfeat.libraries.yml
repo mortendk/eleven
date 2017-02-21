@@ -2,10 +2,10 @@ global:
   css:
     base:
       css/root.css: { weight: -200 }
-      css/form.css: {}
-      templates/form/checkbox/form-checkbox.css: {}
-      templates/form/radio/form-radio.css: {}
-      templates/form/select/form-select.css: {}
+      # css/form.css: {}
+      # templates/form/checkbox/form-checkbox.css: {}
+      # templates/form/radio/form-radio.css: {}
+      # templates/form/select/form-select.css: {}
     layout:
       # css/layout.css: {}
     component:
@@ -14,6 +14,7 @@ global:
   js:
   dependencies:
     - system/admin
+    # - core/modernizr
 
 # ------------------------------------------------------------------------------
 # Front End Admin Tools:
@@ -43,11 +44,6 @@ feat.quickedit:
   css:
     theme:
       templates/feat/quickedit/quickedit.css: {}
-
-feat.shortcut:
-  css:
-    theme:
-      templates/feat/shortcut/shortcut.css: {}
 
 feat.jquery_ui:
   css:

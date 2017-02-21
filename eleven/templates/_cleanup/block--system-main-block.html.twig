@@ -1,0 +1,35 @@
+{#
+block--system-main-block.html.twig
+this template is used as a wrapper for the main content
+#}
+{%
+  set classes = [
+    admin ? 'admincontent',
+    admin ? 'pagewidth',
+    nodeedit ? 'nodeeditwidth',
+    'L',
+  ]
+%}
+
+
+
+{% if admin or nodeedit %}
+<section{{ attributes.addClass(classes).removeAttribute('id') }}>
+<h2 class="admincontent__title">{{ title }}</h2>
+{% endif %}
+
+{{ title_prefix }}
+{% if label %}
+  <h2{{ title_attributes }}>{{ label }}</h2>
+{% endif %}
+{{ title_suffix }}
+
+
+
+{% block content %}
+  {{ content }}
+{% endblock %}
+
+{% if admin or nodeedit %}
+</section>
+{% endif %}

@@ -1,13 +1,73 @@
 name: Eleven
 type: theme
-description: 'a new modern disruptive, responsive HTML5 based admin theme for Drupal8'
-base theme: elevenfeat # Seperated the Front End Admin Tools.
+description: 'Admin theme for Drupal8'
+# base theme: elevenfeat # Seperated the Front End Admin Tools.
 core: '8.x'
 screenshot: goes-to-eleven.jpg
 
 # -- regions -------------------------------------------------------------------
+regions:
+  header: 'Header'
+  header_first:  ' - Header 1'
+  header_second: ' - Header 2'
+  navigation: 'Navigation'
+  messages: 'Messages'
+  top_first: 'top 1'
+  top_second: 'top 2'
+  #content
+  content: Content
+  #footer
+  footer:  'Footer'
+  footer_first:  ' - Footer 1'
+  footer_second: ' - Footer 2'
+  footer_third:  ' - Footer 3'
+  footer_fourth: ' - Footer 4'
+  footer_bottom: ' - Footer Bottom'
 
 
 # -- Libraries -----------------------------------------------------------------
 libraries:
   - eleven/global
+
+#-------------------------------------------------------------------------------
+# LIBRARIES EXTEND
+#-------------------------------------------------------------------------------
+libraries-extend:
+#  shortcut/drupal.shortcut:
+#  - eleven/shortcut
+#  core/jquery.ui:
+#  - eleven/jquery_ui
+
+  #Forms
+  ckeditor/drupal.ckeditor:
+  - eleven/form.ckeditor
+
+#-------------------------------------------------------------------------------
+# LIBRARIES OVERRIDE
+# Remove css files, use libraries-extend to add in new libs with elevens css files
+# templates & icons
+#-------------------------------------------------------------------------------
+libraries-override:
+  # shotcut
+  shortcut/drupal.shortcut:
+    css:
+      theme:
+        css/shortcut.theme.css: false
+        css/shortcut.icons.theme.css: false
+  # jquery ui
+  # look at #/core/core.libraries.yml for my libs
+  # core/jquery.ui:
+  #   css:
+  #     theme:
+  #       assets/vendor/jquery.ui/themes/base/theme.css: false
+  #
+  # core/jquery.ui.button:
+  #   css:
+  #     component:
+  #       assets/vendor/jquery.ui/themes/base/button.css: false
+
+  # modernizr custom build
+  # https://modernizr.com/download/?cssmask-details-inputtypes-touchevents-addtest-prefixes-setclasses-teststyles&q=mask
+  # core/modernizr:
+  #   js:
+  #     assets/vendor/modernizr/modernizr.min.js: js/modernizr-custom.js

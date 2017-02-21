@@ -48,8 +48,8 @@
 /* button
 TODO: this should be a standard button
 */
-a.button-action,
-.dropbutton-single a {
+.ui-dialog a.button-action,
+.ui-dialog .dropbutton-single a {
   /*background-image: var(--icon-heart), var(--button-rasberry);
   background-repeat: no-repeat;
   background-position: 0.5rem 0.5rem, 0 0;*/
@@ -63,8 +63,8 @@ a.button-action,
   text-decoration: none;
 }
 
-a.button-action:hover,
-.dropbutton-single a:hover {
+.ui-dialog a.button-action:hover,
+.ui-dialog .dropbutton-single a:hover {
   /*background-image: var(--icon-heart), var(--button-rasberry-rev);*/
 }
 

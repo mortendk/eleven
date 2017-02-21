@@ -4,7 +4,7 @@ use Drupal\Core\Render\Element;
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
-function flatearth_theme_suggestions_container_alter(array &$suggestions, array $variables) {
+function eleven_theme_suggestions_container_alter(array &$suggestions, array $variables) {
 
   if (!empty($variables['element'])) {
     $element = $variables['element'];
@@ -59,7 +59,7 @@ function flatearth_theme_suggestions_container_alter(array &$suggestions, array 
 // ----------------------------------------------------------------------------
 use Drupal\Core\Form\FormStateInterface;
 
-function flatearth_form_node_form_alter(&$form, FormStateInterface $form_state) {
+function eleven_form_node_form_alter(&$form, FormStateInterface $form_state) {
   $node = $form_state->getFormObject()->getEntity();
 
   $form['#theme'] = array('node_edit_form');

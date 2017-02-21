@@ -1,14 +1,10 @@
 name: elevenfeat
 type: theme
-description: 'FEAT - Seperation of the frontend Admin tools for the Eleven theme'
+description: 'FEAT - Seperation of the FrontEnd Admin Tools for the Eleven theme'
 base theme: classy
 core: '8.x'
 
 hidden: TRUE
-
-# -- dependencies -----------------------------------------------------------------
-dependencies:
-#  - core/modernizr
 
 # -- Libraries -----------------------------------------------------------------
 libraries:
@@ -31,8 +27,6 @@ libraries-extend:
     - elevenfeat/feat.placeblock
   quickedit/quickedit:
   - elevenfeat/feat.quickedit
-  shortcut/drupal.shortcut:
-  - elevenfeat/feat.shortcut
   core/jquery.ui:
   - elevenfeat/feat.jquery_ui
 
@@ -75,13 +69,6 @@ libraries-override:
       theme:
         css/quickedit.theme.css: false
         css/quickedit.icons.theme.css: false
-
-  # shotcut
-  shortcut/drupal.shortcut:
-    css:
-      theme:
-        css/shortcut.theme.css: false
-        css/shortcut.icons.theme.css: false
 
   # outside_in
   outside_in/drupal.outside_in:

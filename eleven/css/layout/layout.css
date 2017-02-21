@@ -335,17 +335,17 @@ known issues
   width: 100%;
   padding: 0 10px;
 }
-@media screen and (min-width: 38em) and (max-width: 48em) {
+@media (min-width: 38em) and (max-width: 48em) {
   .pagewidth {
     padding: 0 20px;
   }
 }
-@media screen and (min-width: 48em) and (max-width: 62em) {
+@media (min-width: 48em) and (max-width: 62em) {
   .pagewidth {
     padding: 0 calc( (100% - 60rem) / 2 );
   }
 }
-@media screen and (min-width: 75em) {
+@media (min-width: 75em) {
   .pagewidth {
     padding: 0 calc( (100% - 75rem) / 2 );
 
@@ -385,7 +385,7 @@ known issues
 
 
 /* Nesting */
-/*@media (max-width: 47.99em) {
+@media (max-width: 47.99em) {
   .L{
     margin-left: -0.2rem !important;
   }
@@ -394,7 +394,7 @@ known issues
   .L{
     margin-left: -0.5rem;
   }
-}*/
+}
 
 /*fix  for nested tables */
 [class^="w-"] table  .L,
@@ -780,25 +780,11 @@ table  .L{
 
 /* -- testing --------------------------------------------------------------- */
 ._testlayout {
-  background-color: lightblue;
-  text-align: center;
+  /*background-color: lightblue;
+  text-align: center;*/
   min-height: 300px;
   overflow: auto;
 }
-._testlayout > [class^="w-"] {
-  margin-bottom: 0.2rem;
-  min-height: 50px;
-  color: white;
-  font-weight: bold
-}
-
-/*@TODO better names for these .L-place--first ? */
-.place-first{
-  order: -1;
-}
-.w-place-nutral{
-  order: 1;
-}
-.w-place-last{
-  order: 2;
+._testlayout [class^="w-"] {
+  outline: 1px solid red
 }

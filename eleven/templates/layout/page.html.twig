@@ -1,0 +1,69 @@
+{#
+{{ base_path }} : The base URL path of the Drupal installation.
+{{ is_front }}  : A flag indicating if the current page is the front page.
+{{ logged_in }} : A flag indicating if the user is registered and signed in.
+{{ is_admin }} : A flag indicating if the user has permission to access administration pages.
+<img src="{{ active_theme_path() }}/images/d8.png">
+#}
+
+{%
+  set main_classes = [
+    is_front ? '' : '',
+    taxonomy ? '' : '',
+    node.bundle ? 'type' ~ node.bundle|clean_class,
+   ]
+%}
+
+<header class="L pagewidth" role="banner" aria-label="{{ 'Site header'|t }}">
+  {% if page.header_first %}
+    <div class="w-12">{{ page.header }}</div>
+  {% endif %}
+
+  {% if page.header_first %}
+    <div class="w-6">{{ page.header_first }}</div>
+  {% endif %}
+  {% if page.header_second %}
+    <div class="w-6">{{ page.header_second }}</div>
+  {% endif %}
+</header>
+
+{% if page.navigation %}
+  <div class="L pagewidth w-12"> {{ page.navigation }}</div>
+{% endif %}
+
+{% if page.messages %}
+  <aside role="complementary"  class="w-8">
+    {{ page.messages }}
+  </aside>
+{% endif %}
+
+  <div class="L pagewidth">
+    <div class="w-6">{{ page.top_first }}</div>
+    <div class="w-6">{{ page.top_second }}</div>
+  </div>
+
+
+
+<main role="main" id="main" class="pagewidth">
+  <a id="main-content" tabindex="-1"></a>
+  {{ page.content }}
+</main>
+
+<footer class="L site-footer">
+  {% if page.footer %}
+    {{ page.footer }}
+  {% endif %}
+
+  {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
+    {% if page.header_first %}<div class="w-3 site-footer__first">{{ page.footer_first }}</div>{% endif %}
+    {% if page.footer_second %}<div class="w-3 site-footer__second">{{ page.footer_second }}</div>{% endif %}
+    {% if page.footer_third %}<div class="w-3 site-footer__third">{{ page.footer_third }}</div>{% endif %}
+    {% if page.footer_fourth %}<div class="w-3 site-footer__fourth">{{ page.footer_fourth }}</div>{% endif %}
+  {% endif %}
+
+  {% if page.footer_bottom %}
+    <div class="site-footer__bottom w-12">
+      {{ page.footer_bottom }}
+    </div>
+  {% endif %}
+</footer>

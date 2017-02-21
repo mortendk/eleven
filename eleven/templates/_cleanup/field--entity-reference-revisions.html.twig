@@ -1,0 +1,19 @@
+{%
+  set classes = [
+    '_t-' ~ bundle,
+    '_t-' ~ view_mode,
+    '_t-' ~ field_name,
+    '_t-' ~ field_type,
+    label_hidden ? '_t-label-false' : '_t-label-true',
+    multiple ? '_t-multiple-true' : '_t-multiple-false',
+  ]
+%}
+{%
+  set title_classes = [
+    label_display == 'visually_hidden' ? 'visually-hidden',
+  ]
+%}
+{# no reason for a wrapper on a paragraph field  #}
+{% for item in items %}
+  {{ item.content }}
+{% endfor %}

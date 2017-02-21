@@ -1,0 +1,18 @@
+{# remove the outer div of title block #}
+
+{#
+drupal throws a js error if this div wrapper is removed -> facepalm
+@TODO do a bug submit on it
+ #}
+<div{{ attributes.addClass(classes)|without('id') }}>
+
+{{ title_prefix }}
+{% if label %}
+  <h2{{ title_attributes }}>{{ label }}</h2>
+{% endif %}
+{{ title_suffix }}
+{% block content %}
+  {{ content }}
+{% endblock %}
+
+</div>

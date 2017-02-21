@@ -1,0 +1,14 @@
+{# @TODO move to comment component #}
+{% extends 'page.html.twig' %}
+
+{% block pagemain %}
+  {{ attach_library(active_theme()~'/page.error') }}
+  <article class="pagewidth">
+  <h2>OMG</h2>
+  <p>
+    kill it iwth ze fire
+  </p>
+  alsoo:
+    {{ page.content }}
+  </article>
+{% endblock %}
