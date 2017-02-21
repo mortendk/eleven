@@ -7,7 +7,7 @@ html {
   -webkit-overflow-scrolling: touch;
   -webkit-tap-highlight-color: #f3f5f6;
   text-size-adjust: 100%; /*ios only*/
-  background: red;
+  font-size: 16px
 }
 iframe {
   max-width: 100%;
@@ -25,6 +25,7 @@ body {
   flex-direction: column;
   margin:0;
   background-color: white;
+  fon
 }
 main {
   flex: 1;

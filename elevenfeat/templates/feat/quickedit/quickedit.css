@@ -1,15 +1,65 @@
+[contenteditable="true"]:hover{
+  border: 1px dashed hotpink
+}
+[contenteditable="true"]:focus{
+  border:0;
+  outline: 1px solid red;
+  background: white;
+  cursor:text;
+}
+
+a:hover{
+  text-decoration: none
+}
+
+
+
+
 /* indicator of the elements that we can quick edit*/
 .quickedit-field{
   transition: all .5s ease-in-out;
 }
+
+.quickedit-candidate {
+  color: var(--white);
+}
+
+.quickedit-field.quickedit-editable,
+.quickedit-field .quickedit-editable {
+  /*box-shadow: 0 0 0 2px yellow;*/
+  outline: 1px dashed var(--yellowsnow-light);
+}
+
 .quickedit-editable {
-  box-shadow: 0 0 0 1px var(--rasberry-light-20);
+  /*box-shadow: 0 0 0 1px var(--bluesky-light);*/
+  /*outline: 1px dotted var(--rasberry-light);*/
+}
+.quickedit-entity-active:focus a{
+  outline-color: yellow;
+  outline-width: 1px;
+  outline-offset: 0;
+  outline-style: dotted;
+}
+a:hover .quickedit-editable{
+  text-decoration: none;
+  outline: 1px dotted var(--rasberry-light);
+  background-color: hotpink;
+  outline: none
+}
+.quickedit-editing{
+  background-color: var(--rasberry-light);
+  color: var(--white);
+}
+.quickedit-editable:focus{
+  outline: 3px solid hotpink
 }
 .quickedit-highlighted{
   box-shadow: 0 0 0 1px var(--rasberry);
-  background-color: var(--rasberry-light-20);
+  color: var(--black);
+  background-color: var(--white-20);
 }
 .quickedit-changed {
+  font-style: italic;
   box-shadow: 0 0 0 2px var(--pumpkin);
 }
 .quickedit-validation-error {
@@ -19,8 +69,11 @@
   box-shadow: none;
 }
 .quickedit-form .form-item .error {
-  border: 1px solid var(--rasberry);
+  border: 1px solid var(--strawberry);
 }
+
+
+
 
 
 /* Quickedit toolbar */
@@ -97,6 +150,7 @@ Quick edit Form
   color: var(--concrete);
   box-shadow: 0 0 0 1px var(--asphalt);
   margin-top: 1rem;
+  width: 100%;
 }
 .quickedit-form-container a{
   color: var(--bluesky);

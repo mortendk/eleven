@@ -5,7 +5,7 @@ TODO: needs a bunch of prefix for:
 */
 
 /* for debug  on style */
-body {
+/*body {
   background-color: var(--asphalt-light);
   color: var(--concrete);
 }
@@ -20,7 +20,7 @@ hr {
   margin: 0.5rem 0;
   border: 0;
   border-bottom: 1px solid var(--asphalt);
-}
+}*/
 
 /*
 TODO: prefix it all
@@ -392,13 +392,13 @@ button.link {
 
 
 /* search */
-form[action="/search/node"] {
+/*form[action="/search/node"] {
   border: 1px solid hotpink;
 }
 .form-type-search {
   border: 1px solid red;
   background-color: var(--rasberry);
-}
+}*/
 
 
 /* admin link in forms */
