@@ -333,9 +333,42 @@ known issues
 /* -- page width -------------------------------------------------------------*/
 .pagewidth {
   width: 100%;
-  padding: 0 10px;
+  padding: 0 1rem;
 }
-@media (min-width: 38em) and (max-width: 48em) {
+
+/* small */
+@media (max-width: 47.99rem){
+  .pagewidth {
+    padding: 0 20px;
+    background-color: gray;
+  }
+}
+
+/* medium */
+@media (min-width: 48rem) and (max-width: 61.99rem){
+  .pagewidth {
+    padding: 0 calc( (100% - 91rem) / 2 );
+    background-color: blue;
+  }
+}
+
+/* large */
+@media (min-width: 62rem) and (max-width: 79.99rem){
+  .pagewidth {
+    /*padding: 0 calc( (100% - 75rem) / 2 );*/
+    background-color: green;
+    padding: 0 1rem;
+  }
+}
+@media (min-width: 82rem){
+  .pagewidth {
+    padding: 0 5rem;
+  }
+}
+
+
+
+/*@media (min-width: 38em) and (max-width: 48em) {
   .pagewidth {
     padding: 0 20px;
   }
@@ -348,9 +381,8 @@ known issues
 @media (min-width: 75em) {
   .pagewidth {
     padding: 0 calc( (100% - 75rem) / 2 );
-
   }
-}
+}*/
 
 .pagewidth-nopadding {
   max-width: 75rem;
@@ -785,6 +817,7 @@ table  .L{
   min-height: 300px;
   overflow: auto;
 }
-._testlayout [class^="w-"] {
-  outline: 1px solid red
+._testlayout [class^="w-"],
+._testlayout [class^=" w-"] {
+  /*outline: 1px solid red*/
 }

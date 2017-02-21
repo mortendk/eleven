@@ -1,0 +1,19 @@
+{{ attach_library(active_theme()~'/messages') }}
+{#
+/**
+ * @file
+ * Theme override for the messages block.
+ *
+ * Removes wrapper elements from block so that empty block does not appear when
+ * there are no messages.
+ *
+ * Available variables:
+ * - content: The content of this block.
+ */
+#}
+{# Why is there a div wrapped around here its completely blank ? #}
+
+{# lets taste on it and then only output if we need it  #}
+{% if content|render %}
+  {{ content }}
+{% endif %}

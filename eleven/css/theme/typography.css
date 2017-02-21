@@ -1,0 +1,289 @@
+/* -----------------------------------------------------------------------------
+Typography
+------------------------------------------------------------------------------*/
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+}
+body {
+  color: var(--black);
+}
+
+/* -- Headers ----------------------------------------------------------------*/
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  margin: 0.5rem 0;
+  padding: 0;
+  color: var(--asphalt);
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+}
+h1,
+.h1 {
+  margin: 0;
+  font-size: 5rem;
+  font-weight: 100;
+  font-style: normal;
+}
+h2,
+.h2 {
+  font-size: 4rem;
+  font-weight: 300;
+  font-style: normal;
+}
+h3,
+.h3 {
+  font-size: 3rem;
+  font-weight: 300;
+  font-style: normal;
+}
+h4,
+.h4 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-style: normal;
+}
+h5,
+.h5 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+h6,
+.h6 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.page-title {
+  margin-top: 1rem;
+  font-size: 3rem;
+  color: var(--bluesky);
+}
+
+/* -- P ----------------------------------------------------------------------*/
+p {
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+p + p {
+  margin: 1rem 0;
+}
+
+/* -- selection color ------------------------------------------------------- */
+p::-moz-selection {
+  background-color: var(--bluesky-50);
+  color: var(--white);
+}
+p::selection {
+  background-color: var(--bluesky-50);
+  color: var(--white);
+}
+
+/* -- blockquote -------------------------------------------------------------*/
+blockquote {
+  padding: 0 8em;
+}
+@media (max-width: 47.99em) {
+  blockquote {
+    padding: 0;
+  }
+}
+blockquote p {
+  display: inline;
+  font-size: 2rem;
+  font-style: italic;
+  color: var(--asphalt);
+}
+blockquote:before,
+blockquote:after {
+  font-family: serif;
+  font-size: 7rem;
+  line-height: 0;
+  color: var(--asphalt-light);
+}
+blockquote:before {
+  vertical-align: -3rem;
+  content: open-quote;
+}
+blockquote:after {
+  vertical-align: -5rem;
+  content: close-quote;
+}
+/* quote */
+q{
+  color: var(--bluesky);
+}
+q:before,
+q:after {
+  color: var(--bluesky-light);
+  font-size: 1.5rem;
+}
+
+/* -- code / pre / samp ------------------------------------------------------*/
+code {
+  display: block;
+  margin: 0;
+  margin-top: 0.2rem;
+  padding: 0;
+  padding-top: 0.2rem;
+  padding-bottom: 2rem;
+  background-color: #f5f2f0;
+  font-family: "droid-sans-mono", monospace;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+pre {
+  display: block;
+  margin: 1rem 0 1rem;
+  padding: 0.5rem;
+  border-top: 1px solid var(--gray500);
+  border-bottom: 1px solid var(--pink750);
+  background-color: #f5f2f0;
+  font-family: "droid-sans-mono", monospace;
+  white-space: pre;
+}
+samp {
+  background-color: var(--bluegray600);
+  color: var(--bluegray100);
+  font-family: "droid-sans-mono", monospace;
+}
+
+/* -- bold -------------------------------------------------------------------*/
+strong,
+b {
+  font-weight: bold;
+  font-style: normal;
+}
+/* -- italic------------------------------------------------------------------*/
+em,
+i {
+  font-style: italic;
+}
+
+/* -- underlined -------------------------------------------------------------*/
+u {
+  border-bottom: 1px solid var(--concrete-light);
+  text-decoration: none;
+}
+
+/* -- small ---- -------------------------------------------------------------*/
+small {
+  font-size: 0.75rem;
+}
+sub,
+sup {
+  font-size: 0.75rem;
+  background-color: var(--gravel);
+}
+
+
+/* -- mark -------------------------------------------------------------------*/
+mark {
+  background-color: var(--rasberry);
+  color: var(--white);
+}
+
+del {
+  background-color: var(--pumpkin-light);
+  color: var(--strawberry);
+}
+/* strike throught */
+s {
+  font-style: italic;
+  color: var(--asphalt-light);
+}
+
+abbr {
+}
+
+kbd {
+}
+cite {
+  font-style: italic;
+}
+dfn {
+}
+
+var {
+}
+
+.marker{
+  color: var(--rasberry);
+}
+
+/* -- links ------------------------------------------------------------------*/
+a {
+  color: var(--bluesky);
+  text-decoration: none;
+}
+a:hover,
+a:active {
+  color: var(--bluesky-light);
+  text-decoration: underline;
+  background-color: var(--white);
+}
+a:focus {
+  outline: 0;
+  text-decoration: none;
+}
+
+
+/* -- content text -----------------------------------------------------------*/
+/*
+@TODO: this belongs in layout
+
+.content{
+  max-width: 45rem;
+  margin: 0 auto;
+}
+@media (min-width: 62em) {
+  .content{
+    max-width: 55rem;
+  }
+}
+*/
+p a,
+.content a {
+  border-bottom: 1px dashed var(--bluesky);
+  text-decoration: none;
+  transition: all 0.2s ease-in;
+  background-color: var(--bluesky-light-light);
+}
+p a:hover,
+.content a:hover {
+  text-decoration: underline;
+}
+p a:active,
+.content a:active {
+  text-decoration: underline;
+}
+p a:focus,
+.content a:focus {
+  outline: 0;
+  text-decoration: none;
+}
+
+.content h2 {
+  margin-bottom: 1rem;
+}
+.content p {
+
+}
+
+
+.dropcap {
+  font-size: 4rem;
+}

@@ -1,7 +1,7 @@
 global:
   css:
     base:
-      css/root.css: { weight: -200 }
+      # css/root.css: { weight: -200 }
       css/base/base.css: {}
       css/base/image.css: {}
       css/base/list.css: {}
@@ -10,10 +10,10 @@ global:
     layout:
       css/layout/layout.css: {}
       css/layout/layout-admin.css: {}
-#    component:
     theme:
-      css/font.css: {}
-#  js:
+      css/theme/typography.css: {}
+    component:
+      css/component/tabs.css: {}
   dependencies:
     - system/admin
     - core/modernizr
@@ -32,17 +32,36 @@ global:
       # templates/jquery_ui/jquery_ui.css: {}
 
 # ------------------------------------------------------------------------------
+# System
+# ------------------------------------------------------------------------------
+messages:
+  css:
+    theme:
+      templates/component/messages/messages.css: {}
+
+# ------------------------------------------------------------------------------
+# navigation
+# ------------------------------------------------------------------------------
+nav.breadcrumb:
+  css:
+    theme:
+      templates/component/navigation/breadcrumb/breadcrumb.css: {}
+
+nav.tabs:
+  css:
+    theme:
+      css/component/tabs.css: {}
+      templates/component/navigation/localtask/localtask-icons.css: {}
+
+
+
+# ------------------------------------------------------------------------------
 # Forms
 # ------------------------------------------------------------------------------
 form.form:
   css:
     theme:
-      templates/form/checkbox/form-checkbox.css: {}
-      templates/form/radio/form-radio.css: {}
-      templates/form/select/form-select.css: {}
-
-
-form.ckeditor:
-  css:
-    theme:
-      templates/form/ckeditor/ckeditortheme.css: { }
+      templates/component/form/form.css: {}
+      templates/component/form/checkbox/form-checkbox.css: {}
+      templates/component/form/radio/form-radio.css: {}
+      templates/component/form/select/form-select.css: {}

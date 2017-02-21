@@ -14,7 +14,7 @@ iframe {
   border: 0;
 }
 hr {
-  border-top: 1px solid #666;
+  border-top: 1px solid var(--bluesky-light);
   width: 100%;
 }
 

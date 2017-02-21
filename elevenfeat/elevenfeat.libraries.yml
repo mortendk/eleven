@@ -6,12 +6,10 @@ global:
       # templates/form/checkbox/form-checkbox.css: {}
       # templates/form/radio/form-radio.css: {}
       # templates/form/select/form-select.css: {}
-    layout:
+    # layout:
       # css/layout.css: {}
-    component:
     theme:
-      css/type.css: {}
-  js:
+      css/theme/type.css
   dependencies:
     - system/admin
     # - core/modernizr

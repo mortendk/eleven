@@ -292,8 +292,9 @@ html:not(.cssmask) #toolbar-bar .toolbar-icon-11home::before {
   border-right: 1px solid var(--gravel;);
 
 }
-@media (max-width: 47.99em) {
+@media (max-width: 79.99em) {
   .toolbar-vertical #toolbar-bar .toolbar-tray {
+    background-image: none;
     background: rgba(240, 240, 240, 0.8);
   }
 }

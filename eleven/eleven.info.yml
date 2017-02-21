@@ -1,7 +1,7 @@
 name: Eleven
 type: theme
 description: 'Admin theme for Drupal8'
-# base theme: elevenfeat # Seperated the Front End Admin Tools.
+base theme: elevenfeat # Seperated the Front End Admin Tools.
 core: '8.x'
 screenshot: goes-to-eleven.jpg
 
@@ -33,14 +33,15 @@ libraries:
 # LIBRARIES EXTEND
 #-------------------------------------------------------------------------------
 libraries-extend:
-#  shortcut/drupal.shortcut:
-#  - eleven/shortcut
-#  core/jquery.ui:
-#  - eleven/jquery_ui
+  # shortcut/drupal.shortcut:
+  # - eleven/shortcut
+
+  # core/jquery.ui:
+  # - eleven/jquery_ui
 
   #Forms
-  ckeditor/drupal.ckeditor:
-  - eleven/form.ckeditor
+  # ckeditor/drupal.ckeditor:
+  # - eleven/form.ckeditor
 
 #-------------------------------------------------------------------------------
 # LIBRARIES OVERRIDE
@@ -48,19 +49,53 @@ libraries-extend:
 # templates & icons
 #-------------------------------------------------------------------------------
 libraries-override:
+  # core/themes/classy/classy.libraries.yml
+  classy/base:
+    css:
+      component:
+        css/components/action-links.css: false
+        css/components/breadcrumb.css: false
+        css/components/button.css: false
+        css/components/collapse-processed.css: false
+        css/components/container-inline.css: false
+        css/components/details.css: false
+        css/components/exposed-filters.css: false
+        css/components/field.css: false
+        css/components/form.css: false
+        css/components/icons.css: false
+        css/components/inline-form.css: false
+        css/components/item-list.css: false
+        css/components/link.css: false
+        css/components/links.css: false
+        css/components/menu.css: false
+        css/components/more-link.css: false
+        css/components/pager.css: false
+        css/components/tabledrag.css: false
+        css/components/tableselect.css: false
+        css/components/tablesort.css: false
+        css/components/tabs.css: false
+        css/components/textarea.css: false
+        css/components/ui-dialog.css: false
+
+  classy/messages:
+    css:
+      component:
+        css/components/messages.css: false
+
   # shotcut
   shortcut/drupal.shortcut:
     css:
       theme:
         css/shortcut.theme.css: false
         css/shortcut.icons.theme.css: false
+
   # jquery ui
   # look at #/core/core.libraries.yml for my libs
   # core/jquery.ui:
   #   css:
   #     theme:
   #       assets/vendor/jquery.ui/themes/base/theme.css: false
-  #
+
   # core/jquery.ui.button:
   #   css:
   #     component:
@@ -71,3 +106,14 @@ libraries-override:
   # core/modernizr:
   #   js:
   #     assets/vendor/modernizr/modernizr.min.js: js/modernizr-custom.js
+
+
+#-------------------------------------------------------------------------------
+# Remove stylesheets
+# TODO: depricated overwrite the libraries instead...
+#-------------------------------------------------------------------------------
+
+stylesheets-remove:
+  - core/modules/system/css/components/fieldgroup.module.css
+  - core/themes/stable/css/system/system.admin.css
+  - '@classy/css/layout.css'

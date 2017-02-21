@@ -1,0 +1,49 @@
+/* -- Messages from the system -----------------------------------------------*/
+.messages {
+  width: 50rem;
+  min-height: 10rem;
+  margin: 1rem auto;
+  opacity: 1;
+  border: 1px solid black;
+  border-left: 1rem solid  black;
+  transition: all 1s ease-out;
+  color: var(--white);
+}
+.messages__content {
+  padding: 1rem;
+}
+.messages a {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+/* color */
+.messages--status {
+  background-color: var(--bluesky-light-light);
+  border-color: var(--bluesky-light);
+  color: var(--bluesky);
+}
+
+.messages--warning {
+  background-color: var(--yellowsnow-light);
+  border-color: var(--yellowsnow);
+    color: var(--rasberry);
+}
+
+.messages--error {
+  background-color: var(--strawberry-light);
+  border-color: var(--strawberry);
+
+}
+
+.messages + .messages {
+}
+.messages__list {
+}
+
+
+/*help message */
+.message-help {
+}
+.message-help__content {
+}

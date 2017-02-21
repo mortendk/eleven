@@ -1,13 +1,9 @@
-{# remove the id from blocks #}
-
 {%
   set classes = [
-    'block',
-    'block--' ~ plugin_id|clean_class
   ]
 %}
-<div{{ attributes.addClass(classes).removeAttribute('id') }}>
 
+<div{{ attributes.addClass(classes).removeAttribute('id') }}>
   {{ title_prefix }}
   {% if label %}
     <h2{{ title_attributes.addClass('block-title') }}>{{ label }}</h2>

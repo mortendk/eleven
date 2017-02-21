@@ -1,0 +1,20 @@
+{%
+  set classes = [
+    'localtask',
+    'w-12',
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+
+
+  {% if content %}
+    <nav class="localtask" role="navigation" aria-label="{{ 'Tabs'|t }}">
+      {{ content }}
+    </nav>
+  {% endif %}
+</div>

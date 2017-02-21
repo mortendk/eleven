@@ -93,7 +93,7 @@ libraries-override:
         css/block-place.icons.theme.css: false
 
   # jquery ui
-  # look at #/core/core.libraries.yml for my libs
+  # look at #/core/core.libraries.yml for more libs
   core/jquery.ui:
     css:
       theme:

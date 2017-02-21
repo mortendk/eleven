@@ -15,7 +15,7 @@
 %}
 
 <header class="L pagewidth" role="banner" aria-label="{{ 'Site header'|t }}">
-  {% if page.header_first %}
+  {% if page.header %}
     <div class="w-12">{{ page.header }}</div>
   {% endif %}
 
@@ -28,7 +28,11 @@
 </header>
 
 {% if page.navigation %}
-  <div class="L pagewidth w-12"> {{ page.navigation }}</div>
+  <div class="L pagewidth">
+    <div class=" w-12">
+      {{ page.navigation }}
+    </div>
+  </div>
 {% endif %}
 
 {% if page.messages %}

@@ -1,0 +1,180 @@
+.form-item--select {
+}
+.form-item--select label {
+  display: inline-block;
+}
+.form-select {
+  display: inline-block;
+}
+
+/* -- select -----------------------------------------------------------------*/
+select {
+  width: 100%;
+  min-width: 10rem;
+  height: 2rem;
+  margin: 0;
+  padding: 0 0.5rem;
+  border-radius: 0;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 2;
+  text-transform: none;
+
+  -webkit-appearance: none;
+     -moz-appearance: none;
+}
+select:hover,
+select:focus {
+  outline: 0;
+  cursor: pointer;
+}
+
+/*
+select wrappper class for the arrow
+we have added a select wrapper class on the select box to control it and add the
+arrow
+*/
+.select {
+  position: relative;
+  min-width: 10rem;
+}
+
+/* arrow */
+.select__arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2rem;
+  height: 2rem;
+  pointer-events: none;
+}
+.select__arrow::before {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  content: "";
+}
+select.form-select[multiple] + .select__arrow {
+  display: none;
+}
+
+/* -----------------------------------------------------------------------------
+colors
+ -----------------------------------------------------------------------------*/
+select {
+  border: 1px solid var(--concrete);
+  background-color: var(--gravel-light);
+  color: var(--bluesky);
+  transition: all .5s ease-in-out;
+}
+select:hover,
+select:focus {
+  border-color: var(--bluesky-light);
+  background-color: var(--white);
+  color: var(--bluesky-light);
+}
+
+/* arrow */
+.select__arrow {
+  border-left: 1px solid var(--bluesky-light);
+  background-color: var(--bluesky);
+}
+select:hover + .select__arrow,
+select:focus + .select__arrow {
+  background-color: var(--bluesky-light);
+}
+
+.select__arrow::before {
+  background-color: var(--gravel-light);
+
+          mask: var(--icon-coffee) no-repeat;
+  -webkit-mask: var(--icon-coffee) no-repeat;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  transition: all .5s ease-in-out;
+}
+select:hover + .select__arrow::before,
+select:focus + .select__arrow::before {
+  background-color: var(--gravel);
+  transform: rotate(90deg);
+}
+
+
+
+
+.required select {
+}
+.required .select__arrow {
+}
+.required select:hover + .select__arrow,
+.required select:focus + .select__arrow {
+}
+
+
+/* Select multiple option */
+select[multiple] {
+  height: auto;
+  min-height: 6rem;
+  font-size: 1rem;
+}
+option {
+  border-bottom: 1px dotted #ddd;
+}
+option:focus {
+  outline: 0;
+}
+
+option:checked {
+  box-shadow: inset 20px 30px #1397cb;
+}
+
+/* Elements that were selecting */
+/*
+option:checked {
+  box-shadow: inset 20px 30px red;
+  color: white;
+}
+select option:before{
+}
+
+option:checked:before {
+  background: url(../icons/checkbox-on.svg) no-repeat center center ;
+  background-size: 1rem;
+  width: 1rem;
+  padding-left: 2rem;
+}
+select option:not(:checked) {
+  background: url(../icons/checkbox.svg) no-repeat center center ;
+  background-size: 1rem;
+  width: 1rem;
+  padding-left: 2rem;
+}
+
+/* was selected */
+option[selected] {
+}
+option[selected]:before {
+  width: 1rem;
+  padding-left: 2rem;
+  background: url(../icons/checkbox.svg) no-repeat center center ;
+  background-size: 1rem;
+}
+option[selected]:checked:before {
+  width: 1rem;
+  padding-left: 2rem;
+  background: url(../icons/checkbox-on.svg) no-repeat center center ;
+  background-size: 1rem;
+}
+select option:hover {
+  background-color: var(--brown100);
+}
+
+
+optgroup {
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  font-weight: bold;
+}

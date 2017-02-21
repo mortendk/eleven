@@ -1,0 +1,94 @@
+/*
+TODO: move into templates
+*/
+/* tabs */
+.tabs {
+  padding-left: 1rem;
+  border-bottom: 1px solid var(--concrete);
+}
+.tabs li {
+  overflow: hidden;
+  margin: 0;
+  border: 0;
+  border-right: 1px solid var(--white);
+}
+.tabs li a {
+  position: relative;
+  display: block;
+  min-width: 7rem;
+  margin: 0;
+  padding: 0 0.5rem 0 2.5rem ;
+  border: none;
+  outline: none;
+  background-image: var(--button-bluesky);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: auto;
+  color: var(--white);
+  font-weight: 400;
+  line-height: 2rem;
+  text-align: left;
+  text-decoration: none;
+}
+.tabs li a:hover {
+  background-image: var(--button-bluesky-rev);
+}
+.tabs li a:before {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-color: white;
+  background-image: none ! important; /* yes we wanna make sure no module have fun here */
+  content: "";
+  transition: 0.5s ease-in;
+
+          mask: var(--icon-coffee) no-repeat;
+  -webkit-mask: var(--icon-coffee) no-repeat;
+  -webkit-mask-size: contain ! important;
+          mask-size: contain ! important;
+}
+.tabs li a:hover:before {
+  transform: scale(1.5) rotate(90deg);
+}
+
+/* -- color */
+.tabs li a {
+  background-color: var(--concrete-light);
+  background-image: none;
+  color: var(--asphalt);
+}
+.tabs li a:hover {
+  background-color: var(--concrete);
+  background-image: none;
+  color: var(--asphalt);
+}
+.tabs li.is-active a {
+  background-color: var(--concrete);
+}
+.tabs li.is-active a:hover {
+  background-color: var(--concrete-light);
+}
+
+/* tabs small*/
+.tabs-small {
+  padding: 0.5rem 0;
+}
+.tabs-small li {
+  margin: 0;
+  border: 0;
+  border-right: 1px solid var(--concrete-light);
+}
+.tabs-small li a {
+  display: block;
+  padding: 0.5rem 1rem;
+}
+.tabs-small li a:hover {
+  background-color: var(--bluesky-light-light);
+}
+.tabs-small li a.is-active {
+  background-color: var(--bluesky-light);
+  color: var(--white);
+}

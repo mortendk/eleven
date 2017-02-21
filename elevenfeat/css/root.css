@@ -79,7 +79,7 @@
   --button-concrete: repeating-linear-gradient(to right, var(--concrete) 0rem, var(--concrete) 32px, var(--concrete-light) 32px, var(--concrete-light) );
   --button-concrete-rev: repeating-linear-gradient(to right, var(--concrete-light) 0rem, var(--concrete-light) 32px,  var(--concrete) 32px,  var(--concrete) );
   --button-gravel: repeating-linear-gradient(to right, var(--gravel) 0rem, var(--gravel) 32px, var(--gravel-light) 32px, var(--gravel-light) );
-  --button-gravel-light: repeating-linear-gradient(to right, var(--gravel-light) 0rem, var(--gravel-light) 32px, #fff 32px, #fff );
+    --button-gravel-light: repeating-linear-gradient(to right, var(--gravel-light) 0rem, var(--gravel-light) 32px, #fff 32px, #fff );
 
   --button-rasberry: repeating-linear-gradient(to right, var(--rasberry) 0rem, var(--rasberry) 32px, var(--rasberry-light) 32px, var(--rasberry-light) );
   --button-rasberry-rev: repeating-linear-gradient(to right, var(--rasberry-light) 0rem, var(--rasberry-light) 32px, var(--rasberry) 32px, var(--rasberry) );
