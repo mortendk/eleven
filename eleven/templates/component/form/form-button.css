@@ -1,9 +1,7 @@
 /*------------------------------------------------------------------------------
 Buttons
 ------------------------------------------------------------------------------*/
-.button,
-button,
-input[type="submit"] {
+button {
   position: relative;
   height: 2rem;
   margin: 0;
@@ -24,9 +22,8 @@ a.button {
   height: auto;
   line-height: 2rem;
 }
-.button:before,
-button:before,
-input[type="submit"]:before {
+
+button:before{
   position: absolute;
   top: 0.5rem;
   left: 0.5rem;
@@ -43,28 +40,21 @@ input[type="submit"]:before {
 }
 
 /* button colors */
-.button,
-button,
-input[type="submit"] {
+button {
   background-image: var(--button-concrete);
   color: var(--white);
 }
-.button:hover,
-button:hover,
-input[type="submit"]:hover {
+button:hover {
   background-image: var(--button-concrete-rev);
 }
-.button:before,
-button:before,
-input[type="submit"]:before {
+button:before{
   background-color: var(--white);
 
           mask: var(--icon-coffee) no-repeat;
   -webkit-mask: var(--icon-coffee) no-repeat;
 }
-.button:hover:before,
-button:hover:before,
-input[type="submit"]:hover:before {
+
+button:hover:before{
   background-color: var(--bluesky);
   background-color: var(--white);
 }
@@ -92,21 +82,6 @@ input[type="submit"]:hover:before {
 .button[data-drupal-selector="edit-cancel"]:before {
           mask: var(--icon-trash) no-repeat;
   -webkit-mask: var(--icon-trash) no-repeat;
-}
-
-/*
-  input wont accept before cause ... something
-  anyways we cant change the icon color now
-*/
-input[type="submit"] {
-  background-image: var(--icon-save), var(--button-bluesky) ;
-  background-position: 0.5rem 0.5rem, 0 0;
-  background-size: 1rem, auto;
-}
-input[type="submit"]:hover {
-  background-image: var(--icon-save), var(--button-bluesky-rev) ;
-  background-position: 0.2rem 0.2rem, 0 0;
-  background-size: 1.5rem, auto;
 }
 
 button span {

@@ -121,6 +121,19 @@ html:not(.cssmask) #toolbar-bar .toolbar-icon::before {
   background-color: transparent;
 }
 
+
+#toolbar-bar .toolbar-icon-escape-admin{
+  background-image: var(--button-asphalt);
+}
+#toolbar-bar .toolbar-icon-escape-admin:hover{
+  background-image: var(--button-asphalt-rev);
+}
+#toolbar-bar .toolbar-icon-escape-admin:before{
+  mask-image: var(--icon-arrow-left);
+-webkit-mask-image: var(--icon-arrow-left);
+
+}
+
 /* home icons */
 #toolbar-bar .toolbar-tab--small {
   width: calc( 2 * 16px );
@@ -135,7 +148,7 @@ html:not(.cssmask) #toolbar-bar .toolbar-icon::before {
 }
 #toolbar-bar .toolbar-icon-11home::before {
   background-color: var(--bluesky);
-
+    mask-image: var(--icon-drop);
   -webkit-mask-image: var(--icon-drop);
   -webkit-mask-size: calc( 0.8 * 16px );
           mask-size: calc( 0.8 * 16px );
@@ -264,7 +277,7 @@ html:not(.cssmask) #toolbar-bar .toolbar-icon-11home::before {
 }
 
 /* -----------------------------------------------------------------------------
- TRAY
+ TRAY aka 2nd level menu
 ----------------------------------------------------------------------------- */
 #toolbar-bar .menu-item,
 #toolbar-bar .toolbar-toggle-orientation {
@@ -274,7 +287,6 @@ html:not(.cssmask) #toolbar-bar .toolbar-icon-11home::before {
 #toolbar-bar .toolbar-tray-vertical .toolbar-toggle-orientation {
   float: none;
 }
-
 
 /*horizontal  */
 .toolbar-horizontal #toolbar-bar .toolbar-tray {
@@ -298,6 +310,23 @@ html:not(.cssmask) #toolbar-bar .toolbar-icon-11home::before {
     background: rgba(240, 240, 240, 0.8);
   }
 }
+
+
+/* active menu item */
+#toolbar-bar .toolbar-tray .toolbar-icon.is-active::before{
+  background-color: var(--yellowsnow);
+}
+
+.toolbar-vertical #toolbar-bar .toolbar-tray .toolbar-icon.menu-item--active{
+  color: var(--bluesky);
+  font-weight: bold
+}
+/*#toolbar-bar .toolbar-icon.is-active{
+  background-image: var(--button-rasberry);
+  color: var(--white);
+}*/
+
+
 
 /* -----------------------------------------------------------------------------
 Vertical menu variation

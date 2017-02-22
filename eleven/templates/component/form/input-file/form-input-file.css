@@ -1,0 +1,30 @@
+/*
+file upload tricks
+*/
+.form-item--file .form-file {
+  position: absolute;
+  z-index: -1;
+  overflow: hidden;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+}
+.form-item--file .form-file + label {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  font-size: 1.25em;
+  font-weight: 700;
+}
+
+.form-item--file .form-file:focus + label,
+.form-item--file .form-file + label:hover {
+  background-color: red;
+}
+.form-item--file .form-file + label {
+  cursor: pointer; /* "hand" cursor */
+}
+.form-item--file .form-file:focus + label {
+  outline: 1px dotted #000;
+  outline: -webkit-focus-ring-color auto 5px;
+}

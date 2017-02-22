@@ -32,19 +32,19 @@ h6,
 h1,
 .h1 {
   margin: 0;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 100;
   font-style: normal;
 }
 h2,
 .h2 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 300;
   font-style: normal;
 }
 h3,
 .h3 {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 300;
   font-style: normal;
 }
@@ -261,7 +261,6 @@ p a,
   border-bottom: 1px dashed var(--bluesky);
   text-decoration: none;
   transition: all 0.2s ease-in;
-  background-color: var(--bluesky-light-light);
 }
 p a:hover,
 .content a:hover {

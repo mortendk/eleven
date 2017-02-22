@@ -1,8 +1,17 @@
 /*
 template: form-element--checkbox.html.twig
 */
-.form-item--checkbox input[type=checkbox] {
-  visibility: hidden;
+input[type=checkbox] {
+  height: 1rem
+}
+.form-checkboxes {
+  margin: 1rem
+}
+.form-checkboxes .form-item__description{
+  margin-left: 1rem
+}
+.form-item--checkbox{
+  margin-bottom: 0.5rem
 }
 
 /* checkbox ------------------------------------------------------------------*/
@@ -12,6 +21,12 @@ template: form-element--checkbox.html.twig
   margin-right: 0.5rem;
   line-height: 1rem;
 }
+
+/* hide the checkbox and use the label for visual */
+.form-item--checkbox input[type=checkbox] {
+  visibility: hidden;
+}
+
 .checkbox input[type=checkbox] + label {
   position: absolute;
   top: 0;

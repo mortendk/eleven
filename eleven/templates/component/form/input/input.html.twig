@@ -9,11 +9,14 @@
 
 {% set input_type = element['#type'] %}
 
+
 {# set a range of types we want to test on #}
 {% set test = [
   'date',
-  'password'
-
+  'password',
+  'search',
+  'submit',
+  'button',
   ]
 %}
 
@@ -26,8 +29,4 @@
 
 {% if input_type in test  %}
   <div class="form-item__icon form-item__icon--{{ input_type}}"></div>
-{% endif %}
-
-
-{% if input_type in test  %}
 {% endif %}

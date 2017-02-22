@@ -19,17 +19,17 @@ hr {
 }
 
 /* flex fix to make sure the footer is always placed at the bottom */
-body {
+/*body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
   margin:0;
-  background-color: white;
-  fon
+  background-color: red;
 }
+
 main {
   flex: 1;
-}
+}*/
 
 /* basic links */
 a{

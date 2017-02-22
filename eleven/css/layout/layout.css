@@ -1,4 +1,3 @@
-
 /*
 OLD fashioned layout flexed to the max
 ---------------
@@ -755,8 +754,8 @@ table  .L{
 ._testlayout {
   /*background-color: lightblue;
   text-align: center;*/
-  min-height: 300px;
-  overflow: auto;
+  /*min-height: 300px;
+  overflow: auto;*/
 }
 ._testlayout [class^="w-"],
 ._testlayout [class^=" w-"] {

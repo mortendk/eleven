@@ -1,8 +1,14 @@
 /*
 template: form-element--radio.html.twig
 */
-.form-item--radio input[type="radio"] {
-  visibility: hidden;
+input[type=radio] {
+  height: 1rem
+}
+.form-radios {
+  margin: 1rem
+}
+.form-item--radio{
+  margin-bottom: 0.5rem
 }
 
 
@@ -13,6 +19,11 @@ template: form-element--radio.html.twig
   margin-right: 0.5rem;
   line-height: 1rem;
 }
+.form-item--radio input[type="radio"] {
+  visibility: hidden;
+}
+
+
 .radio input[type=radio] + label {
   position: absolute;
   top: 0;

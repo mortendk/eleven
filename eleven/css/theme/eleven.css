@@ -1,6 +1,25 @@
 body{
-  background-color: var(--white);
+
 }
 main{
   background-color: var(--gravel-light);
+}
+
+
+.site-footer {
+  background-color: var(--gravel);
+}
+
+
+.stickyfooter {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin:0;
+  background-color: red;
+}
+
+main {
+  flex: 1;
+  min-height: 50vh;
 }
