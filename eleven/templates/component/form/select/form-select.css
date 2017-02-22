@@ -19,6 +19,10 @@ select {
   font-weight: normal;
   line-height: 2;
   text-transform: none;
+  border: 1px solid var(--asphalt-light);
+  -webkit-border-radius: 1rem;
+          border-radius: 0;
+  background-color: var(--gravel);
 
   -webkit-appearance: none;
      -moz-appearance: none;

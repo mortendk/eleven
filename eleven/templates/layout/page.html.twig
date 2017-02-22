@@ -3,9 +3,8 @@
 {{ is_front }}  : A flag indicating if the current page is the front page.
 {{ logged_in }} : A flag indicating if the user is registered and signed in.
 {{ is_admin }} : A flag indicating if the user has permission to access administration pages.
-<img src="{{ active_theme_path() }}/images/d8.png">
+  <img src="{{ active_theme_path() }}/images/d8.png">
 #}
-
 {%
   set main_classes = [
     is_front ? '' : '',
@@ -27,32 +26,32 @@
   {% endif %}
 </header>
 
+{# navigation #}
 {% if page.navigation %}
-  <div class="L pagewidth">
-    <div class=" w-12">
-      {{ page.navigation }}
-    </div>
-  </div>
+  {{ page.navigation }}
 {% endif %}
 
+{# messages #}
 {% if page.messages %}
-  <aside role="complementary"  class="w-8">
+  <aside role="complementary"  class="L w-8">
     {{ page.messages }}
   </aside>
 {% endif %}
 
-  <div class="L pagewidth">
-    <div class="w-6">{{ page.top_first }}</div>
-    <div class="w-6">{{ page.top_second }}</div>
-  </div>
-
-
+{# pagetop #}
+{% if page.top_first or page.top_second %}
+<div class="L pagewidth">
+  {% if page.top_first %}<div class="w-6">{{ page.top_first }}</div>{% endif %}
+  {% if page.top_second %}<div class="w-6">{{ page.top_second }}</div>{% endif %}
+</div>
+{% endif %}
 
 <main role="main" id="main" class="pagewidth">
   <a id="main-content" tabindex="-1"></a>
   {{ page.content }}
 </main>
 
+{# footer #}
 <footer class="L site-footer">
   {% if page.footer %}
     {{ page.footer }}

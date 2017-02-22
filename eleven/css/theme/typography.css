@@ -22,7 +22,7 @@ h5,
 .h5,
 h6,
 .h6 {
-  margin: 0.5rem 0;
+  margin: 0;
   padding: 0;
   color: var(--asphalt);
   font-weight: normal;
@@ -144,6 +144,7 @@ code {
   font-family: "droid-sans-mono", monospace;
   font-size: 1rem;
   white-space: nowrap;
+  overflow: auto;
 }
 pre {
   display: block;

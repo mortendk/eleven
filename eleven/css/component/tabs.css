@@ -3,8 +3,6 @@ TODO: move into templates
 */
 /* tabs */
 .tabs {
-  padding-left: 1rem;
-  border-bottom: 1px solid var(--concrete);
 }
 .tabs li {
   overflow: hidden;
@@ -15,7 +13,7 @@ TODO: move into templates
 .tabs li a {
   position: relative;
   display: block;
-  min-width: 7rem;
+  min-width: 9rem;
   margin: 0;
   padding: 0 0.5rem 0 2.5rem ;
   border: none;
@@ -74,21 +72,23 @@ TODO: move into templates
 
 /* tabs small*/
 .tabs-small {
-  padding: 0.5rem 0;
+  padding+top: 0.5rem;
 }
 .tabs-small li {
   margin: 0;
   border: 0;
-  border-right: 1px solid var(--concrete-light);
 }
 .tabs-small li a {
   display: block;
   padding: 0.5rem 1rem;
+  border-bottom: 1px solid transparent;
 }
 .tabs-small li a:hover {
-  background-color: var(--bluesky-light-light);
+  text-decoration: none;
+  border-bottom: 1px solid var(--concrete);
 }
 .tabs-small li a.is-active {
-  background-color: var(--bluesky-light);
-  color: var(--white);
+  border-bottom: 1px solid var(--asphalt-light);
+  color: var(--asphalt-light);
+  font-weight: bold;
 }

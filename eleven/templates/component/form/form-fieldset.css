@@ -1,0 +1,16 @@
+/*------------------------------------------------------------------------------
+Fieldset
+------------------------------------------------------------------------------*/
+fieldset {
+  padding: 0 0.5rem;
+  border: 0;
+  border-top: 1px solid var(--concrete);
+  border-bottom: 1px solid var(--concrete);
+}
+.fieldset-legend {
+  font-weight: bold;
+}
+
+fieldset > .fieldset-wrapper > .form-item {
+  margin-top: 0;
+}

@@ -1,0 +1,73 @@
+
+/*------------------------------------------------------------------------------
+  input
+------------------------------------------------------------------------------*/
+input {
+  padding: 0;
+  border: 0 solid transparent ;
+  border-bottom: 1px solid var(--bluesky);
+  background-color: var(--gravel);
+  color: var(--asphalt);
+  line-height: 2rem;
+  transition: all 0.5s ease-in-out;
+  height: 2rem
+}
+input:hover,
+input:focus {
+  border-bottom-color: var(--bluesky-light);
+  background-color: var(--gravel-light);
+  color: var(--bluesky);
+}
+input:focus {
+  outline: 0;
+  background-color: var(--bluesky-light-light);
+}
+input[type="text"] {
+  width: 100%;
+}
+
+
+/* form inputs dont work with before so addind in  icons is a pita */
+.form-item__icon{
+  background-color: var(--rasberry);
+  position: relative;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  float: left;
+}
+.form-item__icon::before{
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--white);
+  background-image: none ! important; /* yes we wanna make sure no module have fun here */
+  content: "";
+  transition: 0.5s ease-in;
+
+  mask: var(--icon-coffee) no-repeat;
+-webkit-mask: var(--icon-coffee) no-repeat;
+
+  -webkit-mask-size: contain ! important;
+          mask-size: contain ! important;
+
+}
+.form-item__icon:hover::before{
+  transform: rotate(-90deg);
+}
+
+.form-item__icon--date::before{
+  background-color: var(--grass-light);
+}
+
+
+/**/
+input:focus  + .form-item__icon {
+  background-color: red;
+}
+input:focus  + .form-item__icon::before {
+  transform: rotate(90deg);  
+}

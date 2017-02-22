@@ -1,0 +1,76 @@
+/*------------------------------------------------------------------------------
+Details & Summary
+------------------------------------------------------------------------------*/
+form details {
+  margin: 0;
+  border: none;
+  background-color: var(--concrete-light);
+  color: var(--asphalt-light);
+}
+
+form details > .details-wrapper {
+  padding: 0.5rem;
+}
+/* resets */
+details summary::-webkit-details-marker {
+  display: none;
+}
+details summary:focus {
+  outline: none;
+}
+
+details summary {
+  position: relative;
+  width: calc(100% - 0.5rem);
+  padding: 0 0 0 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 2rem;
+}
+details summary::after {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  content: "";
+  transition: all 0.5s ease-in-out;
+
+          mask: var(--icon-arrow-right) no-repeat;
+  -webkit-mask: var(--icon-arrow-right) no-repeat;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+}
+
+/* details colors */
+details summary {
+  border-bottom: 1px solid var(--concrete-light);
+  background-color: var(--concrete);
+  color: var(--gravel);
+}
+details summary:hover {
+  background-color: var(--concrete-light);
+  color: var(--concrete);
+}
+details[open] summary:hover {
+  border-bottom: 1px solid var(--concrete);
+  color: var(--concrete);
+}
+
+/* details icon */
+details summary::after {
+  background-color: var(--gravel);
+}
+details[open] summary::after {
+  background-color: var(--gravel);
+  transform: rotate(90deg);
+}
+details summary:hover:after {
+  background-color: var(--white);
+  transform: rotate(90deg);
+}
+details[open] summary:hover:after {
+  background-color: var(--concrete);
+  transform: rotate(-90deg);
+}

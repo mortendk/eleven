@@ -1,9 +1,7 @@
 /* -- Messages from the system -----------------------------------------------*/
 .messages {
-  width: 50rem;
-  min-height: 10rem;
+  min-height: 5rem;
   margin: 1rem auto;
-  opacity: 1;
   border: 1px solid black;
   border-left: 1rem solid  black;
   transition: all 1s ease-out;
@@ -15,6 +13,14 @@
 .messages a {
   color: var(--white);
   text-decoration: underline;
+}
+.messages em{
+  font-weight: bold;
+}
+
+.messages .backtrace{
+  background-color: var(--rasberry);
+
 }
 
 /* color */
@@ -38,6 +44,7 @@
 
 .messages + .messages {
 }
+
 .messages__list {
 }
 
