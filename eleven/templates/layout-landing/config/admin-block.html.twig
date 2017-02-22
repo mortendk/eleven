@@ -1,0 +1,19 @@
+{#
+  wrapper for /admin/config
+  wraps each of the admin-block-content.html.twig templates
+
+ #}
+
+{{ attach_library(active_theme()~'/admin.config') }}
+
+<section>
+  <h3 class="icon-11 icon--{{block.title|clean_class}}"">{{ block.title }}</h3>
+  <hr>
+
+  {% if block.content %}
+      {{ block.content }}
+  {% elseif block.description %}
+    {{ block.description }}
+  {% endif %}
+
+</section>

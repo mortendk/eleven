@@ -1,0 +1,517 @@
+.admin-overview {
+  margin-top: 3rem;
+}
+
+
+/* -- card ------------------------------------------------------------------ */
+.card {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid #efefef;
+  background: white;
+  transition: all 0.2s ease-in-out;
+}
+.card__icon {
+  width: 5rem;
+  height: 5rem;
+  margin: 0 auto;
+  border: 2px solid #d3eaf3;
+  border-radius: 50%;
+  background-color: #fff;
+  background-image: url(icons/settings.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background 3s ease-in-out;
+}
+
+
+.card__title {
+  padding-top: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+.card__text {
+  padding: 1rem;
+  font-size: 0.8rem;
+  min-height: 5rem;
+}
+.card:hover {
+  background: #eff4f6;
+}
+.card a:hover {
+  text-decoration: none;
+}
+.card:hover .card__icon {
+  background-size: 150%;
+}
+.card:hover .card__icon--fieldtype {
+  background-size: 50%
+}
+
+/*-- admin icons -------------------------------------------------------------*/
+
+/* /admin overview*/
+.card__icon--admin-content {
+  background-image: url(icons/archive.svg);
+}
+.card__icon--admin-structure {
+  background-image: url(icons/workspace.svg);
+}
+.card__icon--admin-appearance {
+  background-image: url(icons/pantone.svg);
+}
+.card__icon--admin-modules {
+  background-image: url(icons/lego.svg);
+}
+.card__icon--admin-config {
+  background-image: url(icons/hammer.svg);
+}
+.card__icon--admin-people {
+  background-image: url(icons/badge.svg);
+}
+.card__icon--admin-reports {
+  background-image: url(icons/graph.svg);
+}
+.card__icon--admin-help {
+  background-image: url(icons/help.svg);
+}
+
+/* admin/structure overview*/
+.card__icon--admin-structure-block {
+  background-image: url(icons/blueprints.svg);
+}
+
+.card__icon--admin-structure-comment {
+  background-image: url(icons/chat.svg);
+}
+.card__icon--admin-structure-contact {
+  background-image: url(icons/letter.svg);
+}
+.card__icon--admin-structure-types {
+  background-image: url(icons/browser.svg);
+}
+.card__icon--admin-structure-display-modes {
+  background-image: url(icons/cinema.svg);
+}
+.card__icon--admin-structure-display-modes-form {
+  background-image: url(icons/cinema.svg);
+}
+.card__icon--admin-structure-display-modes-view {
+  background-image: url(icons/cinema.svg);
+}
+.card__icon--admin-structure-display-modes-view-add-block-content,
+.card__icon--admin-structure-display-modes-view-add-contact-message,
+.card__icon--admin-structure-display-modes-view-add-media,
+.card__icon--admin-structure-display-modes-view-add-scheduled-update,
+.card__icon--admin-structure-display-modes-view-add-taxonomy-term,
+.card__icon--admin-structure-display-modes-view-add-user,
+.card__icon--admin-structure-display-modes-view-add-node,
+.card__icon--admin-structure-display-modes-form-add-block-content,
+.card__icon--admin-structure-display-modes-form-add-contact-message,
+.card__icon--admin-structure-display-modes-form-add-media,
+.card__icon--admin-structure-display-modes-form-add-node,
+.card__icon--admin-structure-display-modes-form-add-scheduled-update,
+.card__icon--admin-structure-display-modes-form-add-taxonomy-term,
+.card__icon--admin-structure-display-modes-form-add-user
+{
+  background-image: url(icons/cinema.svg);
+}
+
+
+.card__icon--admin-structure-menu {
+  background-image: url(icons/pointer.svg);
+}
+
+.card__icon--admin-structure-taxonomy {
+  background-image: url(icons/discount.svg);
+}
+.card__icon--admin-structure-views {
+  background-image: url(icons/beacon.svg);
+}
+
+.card__icon--admin-structure-media {
+  background-image: url(icons/polaroid.svg);
+}
+
+/* admin/config */
+.card__icon--admin-config-people-accounts {
+  background-image: url(icons/badge.svg);
+}
+.card__icon--admin-config-content-formats {
+  background-image: url(icons/typewriter.svg);
+}
+
+.card__icon--admin-config-development-performance {
+  background-image: url(icons/speed.svg);
+}
+.card__icon--admin-config-development-logging {
+  background-image: url(icons/player.svg);
+}
+.card__icon--admin-config-development-maintenance {
+  background-image: url(icons/hospital.svg);
+}
+.card__icon--admin-config-development-maintenance{
+
+}
+
+.card__icon--admin-config-development-configuration {
+  background-image: url(icons/server.svg);
+}
+.card__icon--admin-config-search-pages {
+  background-image: url(icons/search.svg);
+}
+.card__icon--admin-config-search-path {
+  background-image: url(icons/target.svg);
+}
+.card__icon--admin-config-services-rss-publishing {
+  background-image: url(icons/waterbottle.svg);
+}
+.card__icon--admin-config-system-site-information {
+  background-image: url(icons/clipboard.svg);
+}
+.card__icon--admin-config-system-cron {
+  background-image: url(icons/factory.svg);
+}
+.card__icon--admin-config-user-interface-shortcut {
+  background-image: url(icons/star.svg);
+}
+.card__icon--admin-config-media-file-system {
+  background-image: url(icons/box.svg);
+}
+.card__icon--admin-config-media-image-styles {
+  background-image: url(icons/picture.svg);
+}
+.card__icon--admin-config-media-image-toolkit {
+  background-image: url(icons/config.svg);
+}
+.card__icon--admin-config-regional-settings {
+  background-image: url(icons/globe.svg);
+}
+.card__icon--admin-config-regional-date-time {
+  background-image: url(icons/calendar.svg);
+}
+
+.card__icon--admin-reports-updates {
+  background-image: url(icons/monitor.svg);
+}
+
+.card__icon--admin-reports-dblog {
+  background-image: url(icons/document.svg);
+}
+.card__icon--admin-reports-fields {
+  background-image: url(icons/document.svg);
+}
+.card__icon--admin-reports-status {
+  background-image: url(icons/monitor.svg);
+}
+.card__icon--admin-reports-access-denied {
+  background-image: url(icons/graph.svg);
+}
+.card__icon--admin-reports-page-not-found {
+  background-image: url(icons/graph.svg);
+}
+.card__icon--admin-reports-search {
+  background-image: url(icons/statistic.svg);
+}
+.card__icon--admin-reports-views-plugins {
+  background-image: url(icons/beacon.svg);
+}
+
+
+.card__icon--addnode {
+  background-image: url(icons/browser.svg);
+}
+
+.card__icon--admin-structure-workbench-moderation {
+  background-image: url(icons/compass.svg);
+}
+
+
+.card__icon--admin-config-system-lightning{
+  background-image: url(icons/lightning.png);
+}
+.card__icon--admin-config-content-entity-browser{
+  background-image: url(icons/box.svg);
+}
+.card__icon--admin-config-search-metatag{
+  background-image: url(icons/discount.svg);
+}
+.card__icon--admin-config-workflow-scheduled-update-type{
+  background-image: url(icons/discount.svg);
+}
+.card__icon--admin-config-content-embed{
+
+}
+
+.card__icon--admin-config-regional-language{
+  background-image: url(icons/ufo.svg);
+}
+.card__icon--admin-config-regional-content-language{
+  background-image: url(icons/ufo.svg);
+}
+
+.card__icon--admin-config-media-responsive-image-style{
+  background-image: url(icons/responsive.svg);
+}
+.card__icon--admin-config-content-scheduler{
+  background-image: url(icons/calendar.svg)
+}
+.card__icon--admin-config-system-actions{
+  background-image: url(icons/rocket.svg)
+}
+.card__icon--admin-config-thunder-media-configuration{
+  background-image: url(icons/polaroid.svg)
+}
+
+/*-- field types -------------------------------------------------------------*/
+.card__icon--fieldtype-image{
+  background-image: url(icons/fieldtype/image.svg);
+}
+.card__icon--fieldtype-comments{
+  background-image: url(icons/fieldtype/comment.svg);
+}
+.card__icon--fieldtype-text-formatted-long-with-summary{
+  background-image: url(icons/fieldtype/text-with-summary.svg);
+}
+.card__icon--fieldtype-entity-reference{
+  background-image: url(icons/fieldtype/entity-reference.svg);
+}
+.card__icon--fieldtype-entity-reference-revisions{
+  background-image: url(icons/fieldtype/entity-reference.svg);
+}
+.card__icon--fieldtype-list-text{
+  background-image: url(icons/fieldtype/list.svg);
+}
+.card__icon--fieldtype-text-formatted-long{
+  background-image: url(icons/fieldtype/text.svg);
+}
+.card__icon--fieldtype-text-plain{
+  background-image: url(icons/fieldtype/text.svg);
+}
+.card__icon--fieldtype-text-plain-long{
+  background-image: url(icons/fieldtype/text.svg);
+}
+.card__icon--fieldtype-meta-tags{
+  background-image: url(icons/fieldtype/metatags.svg);
+}
+.card__icon--fieldtype-date{
+  background-image: url(icons/fieldtype/date.svg);
+}
+
+/* -- admin cards ------------------------------------------------------------*/
+/**/
+.admincards {
+  margin: 1rem 0;
+}
+.admincards .admin-overview {
+  margin-top: 0;
+}
+.admincards__title {
+  color: #0080ad;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.admincards hr {
+  border-top: 1px solid #0080ad;
+}
+
+.admincards__icon {
+  width: 4rem;
+  height: 4rem;
+  margin: 0.5rem auto;
+  border: 2px solid #d3eaf3;
+  border-radius: 50%;
+  background-color: #fff;
+  background-image: url(icons/settings.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 4rem;
+}
+
+.admincards__icon--people {
+  background-image: url(icons/badge.svg);
+}
+.admincards__icon--people {
+  background-image: url(icons/badge.svg);
+}
+.admincards__icon--content-authoring {
+  background-image: url(icons/typewriter.svg);
+}
+.admincards__icon--development {
+  background-image: url(icons/monitor.svg);
+}
+.admincards__icon--search-and-metadata {
+  background-image: url(icons/search.svg);
+}
+.admincards__icon--web-services {
+  background-image: url(icons/statistic.svg);
+}
+.admincards__icon--system {
+  background-image: url(icons/speed.svg);
+}
+
+.admincards__icon--media {
+  background-image: url(icons/picture.svg);
+}
+
+.admincards__icon--regional-and-language {
+  background-image: url(icons/globe.svg);
+}
+
+.admincards__icon--workflow {
+  background-image: url(icons/compass.svg);
+}
+
+.admincards__icon--user-interface {
+  background-image: url(icons/blueprints.svg);
+}
+
+
+.admincards__icon--block{
+  background-image: url(icons/blueprints.svg);
+}
+.admincards__icon--contact{
+  background-image: url(icons/letter.svg);
+}
+.admincards__icon--database-logging{
+  background-image: url(icons/server.svg);
+}
+.admincards__icon--field-ui{
+  background-image: url(icons/cinema.svg);
+}
+.admincards__icon--filter{
+  background-image: url(icons/server.svg);
+}
+.admincards__icon--image{
+  background-image: url(icons/picture.svg);
+}
+.admincards__icon--image{
+  background-image: url(icons/picture.svg);
+}
+.admincards__icon--media-entity{
+  background-image: url(icons/camera.svg);
+}
+.admincards__icon--metatag{
+  background-image: url(icons/discount.svg);
+}
+.admincards__icon--page-manager{
+  background-image: url(icons/lego.svg);
+}
+.admincards__icon--panels{
+  background-image: url(icons/lego.svg);
+}
+.admincards__icon--path{
+  background-image: url(icons/browser.svg);
+}
+.admincards__icon--scheduled-updates{
+  background-image: url(icons/calendar.svg);
+}
+.admincards__icon--toolbar{
+  background-image: url(icons/wrench.svg);
+}
+.admincards__icon--user{
+  background-image: url(icons/badge.svg);
+}
+.admincards__icon--views-ui{
+  background-image: url(icons/beacon.svg);
+}
+.admincards__icon--configuration-manager{
+  background-image: url(icons/wrench.svg);
+}
+.admincards__icon--contextual-links{
+  background-image: url(icons/wrench.svg);
+}
+.admincards__icon--devel-kint{
+  background-image: url(icons/wrench.svg);
+}
+.admincards__icon--entity-browser{
+  background-image: url(icons/box.svg);
+}
+.admincards__icon--file{
+  background-image: url(icons/archive.svg);
+}
+.admincards__icon--help{
+  background-image: url(icons/help.svg);
+}
+.admincards__icon--lightning{
+  background-image: url(icons/lightning.png);
+}
+.admincards__icon--menu-ui{
+  background-image: url(icons/pointer.svg);
+}
+.admincards__icon--node{
+  background-image: url(icons/clipboard.svg);
+}
+.admincards__icon--taxonomy{
+  background-image: url(icons/discount.svg);
+}
+.admincards__icon--shortcut{
+  background-image: url(icons/star.svg);
+}
+
+.admincards__icon--update-manager{
+  background-image: url(icons/monitor.svg);
+}
+.admincards__icon--video-embed-field{
+  background-image: url(icons/camera.svg);
+}
+.admincards__icon--panelizer{
+  background-image: url(icons/lego.svg);
+}
+.admincards__icon--panels-ipe{
+  background-image: url(icons/lego.svg);
+}
+
+
+.card__icon--admin-people-permissions{
+  background-image: url(icons/key.svg);
+}
+
+/*smaller version for config overview*/
+.admincards .card {
+  padding: 0;
+  border: none;
+}
+.admincards .card__icon {
+  width: 2rem;
+  height: 2rem;
+  background-size: 2rem;
+}
+.admincards .card__title {
+  font-size: 0.7rem;
+  text-align: left;
+  margin: 0 0.5rem
+}
+.admincards .card__text {
+  padding: 0.5rem;
+}
+
+
+
+
+/*-- admin module pages move to other page later */
+
+/*
+.region-title {
+  border-top: 2px solid var(--bluegray100);
+  border-bottom: 3px solid var(--bluegray100);
+  color: var(--pink900);
+  color: var(--bluegray500);
+  font-family: "open-sans-extra-bold", sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.region-title__action {
+  float: right;
+}
+
+.js td .dropbutton-multiple {
+  padding-right: 10rem;
+}
+
+.compact-link{
+  margin: 1rem 0
+}*/

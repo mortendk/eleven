@@ -10,6 +10,13 @@
 {% set input_type = element['#type'] %}
 
 
+<input
+{{ attributes.
+  removeClass(remove_classes).
+  removeAttribute('size')
+}}
+/>{{ children }}
+
 {# set a range of types we want to test on #}
 {% set test = [
   'date',
@@ -20,12 +27,6 @@
   ]
 %}
 
-<input
-{{ attributes.
-  removeClass(remove_classes).
-  removeAttribute('size')
-}}
-/>{{ children }}
 
 {% if input_type in test  %}
   <div class="form-item__icon form-item__icon--{{ input_type}}"></div>

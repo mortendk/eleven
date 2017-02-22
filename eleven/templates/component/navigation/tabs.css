@@ -1,7 +1,7 @@
 /*
-TODO: move into templates
+tabs
+
 */
-/* tabs */
 .tabs {
 }
 .tabs li {
@@ -52,27 +52,29 @@ TODO: move into templates
   transform: scale(1.5) rotate(90deg);
 }
 
-/* -- color */
+/*------------------------------------------------------------------------------
+color
+----------------------------------------------------------------------------- */
 .tabs li a {
-  background-color: var(--concrete-light);
+  background-color: var(--bluesky-light);
   background-image: none;
-  color: var(--asphalt);
+  color: var(--white);
 }
 .tabs li a:hover {
-  background-color: var(--concrete);
+  background-color: var(--bluesky);
   background-image: none;
-  color: var(--asphalt);
+  color: var(--white);
 }
 .tabs li.is-active a {
-  background-color: var(--concrete);
+  background-color: var(--bluesky);
 }
 .tabs li.is-active a:hover {
-  background-color: var(--concrete-light);
+  background-color: var(--bluesky-light);
 }
 
 /* tabs small*/
 .tabs-small {
-  padding+top: 0.5rem;
+  padding-top: 0.5rem;
 }
 .tabs-small li {
   margin: 0;
@@ -85,10 +87,10 @@ TODO: move into templates
 }
 .tabs-small li a:hover {
   text-decoration: none;
-  border-bottom: 1px solid var(--concrete);
+  border-bottom: 1px solid var(--bluesky);
 }
 .tabs-small li a.is-active {
-  border-bottom: 1px solid var(--asphalt-light);
-  color: var(--asphalt-light);
+  border-bottom: 1px solid var(--bluesky-light);
+  color: var(--bluesky-light);
   font-weight: bold;
 }

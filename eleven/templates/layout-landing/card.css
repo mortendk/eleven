@@ -1,0 +1,116 @@
+.cards {
+  padding-top: 4rem;
+}
+
+.card {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--gravel);
+  background-color: var(--white);
+  transition: all 0.5s ease-in-out;
+}
+.card:hover {
+  border-color: var(--concrete-light);
+  cursor: pointer;
+}
+.card a {
+  color: var(--black);
+}
+.card a:hover {
+  text-decoration: none;
+}
+
+/* title */
+.card__title {
+  color: var(--black);
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 4rem;
+}
+.card a:hover .card__title {
+  color: var(--asphalt);
+}
+
+/* text */
+.card__text {
+  margin-top: 1rem;
+}
+.card a:hover .card__text {
+  color: var(--bluesky);
+}
+
+/* icons ---------------------------------------------------------------------*/
+.card__icon {
+  float: left;
+  width: 4rem;
+  height: 4rem;
+  margin-right: 1rem;
+  background-color: var(--bluesky);
+  transition: all 0.5s ease-in-out;
+}
+.card__icon::before {
+  top: 0.5rem;
+  left: 0.5rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--white);
+}
+.card__icon:hover:before {
+  background-color: var(--white);
+}
+
+.card:hover .card__icon {
+  animation: iconpulse 1s infinite;
+}
+@keyframes iconpulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* color variations  ---------------------------------------------------------*/
+.card:nth-of-type(8n+1) .card__icon {
+  background-color: var(--grass);
+}
+.card:nth-of-type(8n+2) .card__icon {
+  background-color: var(--strawberry);
+}
+.card:nth-of-type(8n+3) .card__icon {
+  background-color: var(--yellowsnow);
+}
+.card:nth-of-type(8n+4) .card__icon {
+  background-color: var(--bluesky-light);
+}
+.card:nth-of-type(8n+5) .card__icon {
+  background-color: var(--asphalt-light);
+}
+.card:nth-of-type(8n+6) .card__icon {
+  background-color: var(--pumpkin);
+}
+.card:nth-of-type(8n+7) .card__icon {
+  background-color: var(--strawberry-light);
+}
+.card:nth-of-type(8n+8) .card__icon {
+  background-color: var(--pumpkin-light);
+}
+
+
+/* card size variations */
+.card--small{
+  padding: 0.5rem
+}
+.card--small  .card__icon{
+  width: 100%;
+  height: 6rem
+}
+.card--small  .card__title{
+  line-height: 1rem;
+  font-size: 1rem
+}
+
+.card--small  .card__text{
+  display: none
+}

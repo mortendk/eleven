@@ -1,0 +1,19 @@
+{#
+  wrapper for /admin/config
+  parts the cards out into 2 columns
+  this template is the same patterns as system-admin-index.html.twig
+#}
+
+{{ attach_library(active_theme()~'/admin.config') }}
+
+{{ system_compact_link }}
+
+<div class="L">
+  {% for container in containers %}
+    <div class="w-6">
+      {% for block in container.blocks %}
+        {{ block }}
+      {% endfor %}
+    </div>
+  {% endfor %}
+</div>

@@ -3,21 +3,21 @@
 
 /*content*/
 .tabs li a[href="/admin/content"]:before{
-  background-image: url(icons/content.svg);
+  -webkit-mask: url(icons/content.svg);
 }
 /*comments */
 .tabs li a[href="/admin/content/comment"]:before{
-  background-image: url(icons/comments.svg);
+  -webkit-mask: url(icons/comments.svg);
 }
 .localtask__lvl2 li a[href="/admin/content/comment"]:before{
-  background-image: url(icons/comments-published.svg);
+  -webkit-mask: url(icons/comments-published.svg);
 }
 .localtask__lvl2 li a[href="/admin/content/comment/approval"]:before{
-  background-image: url(icons/comments-unpublished.svg);
+  -webkit-mask: url(icons/comments-unpublished.svg);
 }
 /*files */
 .tabs li a[href="/admin/content/files"]:before{
-  background-image: url(icons/files.svg);
+  -webkit-mask: url(icons/files.svg);
 }
 
 /*apperance ------------------------------------------------------------------*/
@@ -27,77 +27,77 @@
   -webkit-mask: url(icons/theme-list.svg);
 }
 .tabs li a[href="/admin/theme/update"]:before{
-  background-image: url(icons/theme-update.svg);
+  -webkit-mask: url(icons/theme-update.svg);
 }
 .tabs li a[href="/admin/appearance/settings"]:before{
-  background-image: url(icons/theme-settings.svg);
+  -webkit-mask: url(icons/theme-settings.svg);
 }
 .localtask__lvl2 li a[href^="/admin/appearance/settings"]:before{
-  background-image: url(icons/theme-settings-theme.svg);
+  -webkit-mask: url(icons/theme-settings-theme.svg);
 }
 
 /*modules*/
 .tabs li a[href="/admin/modules"]:before{
-  background-image: url(icons/module.svg);
+  -webkit-mask: url(icons/module.svg);
 }
 .tabs li a[href="/admin/modules/update"]:before{
-  background-image: url(icons/module-update.svg);
+  -webkit-mask: url(icons/module-update.svg);
 }
 .tabs li a[href="/admin/modules/uninstall"]:before{
-  background-image: url(icons/module-uninstall.svg);
+  -webkit-mask: url(icons/module-uninstall.svg);
 }
 
 /*people*/
 .tabs li a[href="/admin/people"]:before{
-  background-image: url(icons/people.svg);
+  -webkit-mask: url(icons/people.svg);
 }
 .tabs li a[href="/admin/people/permissions"]:before{
-  background-image: url(icons/people-permission.svg);
+  -webkit-mask: url(icons/people-permission.svg);
 }
 .tabs li a[href="/admin/people/roles"]:before{
-  background-image: url(icons/people-roles.svg);
+  -webkit-mask: url(icons/people-roles.svg);
 }
 
 /* block*/
 .tabs li a[href="/admin/structure/block"]:before{
-  background-image: url(icons/block.svg);
+  -webkit-mask: url(icons/block.svg);
 }
 .localtask__lvl2 li a[href^="/admin/structure/block"]:before{
-  background-image: url(icons/block.svg);
+  -webkit-mask: url(icons/block.svg);
 }
 
 .tabs li a[href="/admin/structure/block/block-content"]:before{
-  background-image: url(icons/block-custom.svg);
+  -webkit-mask: url(icons/block-custom.svg);
 }
 .localtask__lvl2 li a[href^="/admin/structure/block/block-content"]:before{
-  background-image: url(icons/block-custom.svg);
+  -webkit-mask: url(icons/block-custom.svg);
 }
 
 /* comments */
 .tabs li a[href="/admin/structure/comment/manage/comment"]:before{
-  background-image: url(icons/comment-type.svg);
+  -webkit-mask: url(icons/comment-type.svg);
 }
 .tabs li a[href="admin/structure/comment/manage/comment/fields"]:before{
-  background-image: url(icons/comment-type.svg);
+  -webkit-mask: url(icons/comment-type.svg);
 }
 .tabs li a[href="/admin/structure/comment/manage/comment/form-display"]:before{
-  background-image: url(icons/comment-type.svg);
+  -webkit-mask: url(icons/comment-type.svg);
 }
 .tabs li a[href="/admin/structure/comment/manage/comment/display"]:before{
-  background-image: url(icons/comment-type.svg);
+  -webkit-mask: url(icons/comment-type.svg);
 }
 
 /*contact forms*/
 
 .tabs li a[href*="/admin/structure/contact/"]:before{
-  background-image: url(icons/mailform.svg);
+  -webkit-mask: url(icons/mailform.svg);
 }
 /*@TODO make a better selection this can easy be overwritten */
 .tabs li a[href$="/form-display"]:before{
-  background-image: url(icons/display-form.svg);
+  -webkit-mask: url(icons/display-form.svg);
 }
 .tabs li a[href$="/display"]:before{
-  background-image: url(icons/display-manage.svg);
+  -webkit-mask: url(icons/display-manage.svg);
 }
 
 
@@ -108,17 +108,17 @@
 
 /* taxonomy*/
 .tabs li a[href="/admin/structure/taxonomy/manage/tags/overview"]:before{
-  background-image: url(icons/tags.svg);
+  -webkit-mask: url(icons/tags.svg);
 }
 .tabs li a[href="/admin/structure/taxonomy/manage/tags"]:before{
-  background-image: url(icons/tags.svg);
+  -webkit-mask: url(icons/tags.svg);
 }
 .tabs li a[href="/admin/structure/taxonomy/manage/tags/overview/fields"]:before{
-  background-image: url(icons/tags.svg);
+  -webkit-mask: url(icons/tags.svg);
 }
 .tabs li a[href="/admin/structure/taxonomy/manage/tags/overview/form-display"]:before{
-  background-image: url(icons/tags.svg);
+  -webkit-mask: url(icons/tags.svg);
 }
 .tabs li a[href="/admin/structure/taxonomy/manage/tags/overview/display"]:before{
-  background-image: url(icons/tags.svg);
+  -webkit-mask: url(icons/tags.svg);
 }

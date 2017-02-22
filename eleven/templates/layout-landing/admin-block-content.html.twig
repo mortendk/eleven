@@ -1,0 +1,69 @@
+{#
+  admin overview pages
+  admin/
+  admin/structure
+  admin/reports
+  admin/config
+
+  admin/index
+#}
+
+{{ attach_library(active_theme()~'/admin.card') }}
+
+{# set a range of types we want to test on #}
+{% set test = [
+  '/admin/index',
+  '/admin/config',
+  ]
+%}
+
+{% if path not in test  %}
+  {# lets show a small change thingie for the card layouts #}
+  {%
+    set classes = [
+      'L',
+      'LW-third',
+    ]
+  %}
+
+  <div class="pagewidth L-right">
+    <ul class="L-right tabs-small">
+      <li><a href="#" class="button">1</a> </li>
+      <li><a href="#" class="button">2</a> </li>
+      <li><a href="#" class="button">3</a> </li>
+    </ul>
+  </div>
+{% else %}
+  {# its wrapped into admin-block #}
+  {%
+    set classes = [
+      'L',
+      'LW-fourth'
+    ]
+  %}
+  {% set cardclasses %} card--small {% endset %}
+
+{% endif %}
+
+
+{% if content %}
+  <section{{ attributes.addClass(classes) }}>
+
+  {% for item in content %}
+    <article class="w card {{ cardclasses }}">
+      <a href="{{ item.url }}">
+
+      <div class="card__icon icon-11 card__icon--{{ item.url.getInternalPath()|clean_class }}"></div>
+
+      <h3 class="card__title">{{ item.title}}</h3>
+      {% if item.description %}
+        <p class="card__text">
+          {{ item.description }}
+        </p>
+      {% endif %}
+      </a>
+    </article>
+  {% endfor %}
+
+  </section>
+{% endif %}
