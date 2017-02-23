@@ -1,5 +1,6 @@
 .localtask__lvl1{
   border-bottom: 1px solid var(--concrete);
+  padding-left: 3rem
 }
 .localtask__lvl2{
   border-bottom: 1px solid var(--concrete-light);

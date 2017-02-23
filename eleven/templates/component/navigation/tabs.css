@@ -18,18 +18,19 @@ tabs
   padding: 0 0.5rem 0 2.5rem ;
   border: none;
   outline: none;
-  background-image: var(--button-bluesky);
+  /*background-image: var(--button-gravel);*/
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: auto;
-  color: var(--white);
+  color: var(--asphalt);
   font-weight: 400;
   line-height: 2rem;
   text-align: left;
   text-decoration: none;
+  transition: all .5s ease-in-out;
 }
 .tabs li a:hover {
-  background-image: var(--button-bluesky-rev);
+  /*background-image: var(--button-bluesky-rev);*/
 }
 .tabs li a:before {
   position: absolute;
@@ -49,27 +50,38 @@ tabs
           mask-size: contain ! important;
 }
 .tabs li a:hover:before {
-  transform: scale(1.5) rotate(90deg);
+  transform: scale(1.5);
 }
 
 /*------------------------------------------------------------------------------
 color
 ----------------------------------------------------------------------------- */
 .tabs li a {
-  background-color: var(--bluesky-light);
-  background-image: none;
-  color: var(--white);
+  background-color: var(--gravel);
+  color: var(--asphalt-light);
+
+}
+.tabs li a::before {
+  background-color: var(--concrete);
 }
 .tabs li a:hover {
-  background-color: var(--bluesky);
-  background-image: none;
-  color: var(--white);
+  background-color: var(--concrete-light);
+  color: var(--gravel-light);
 }
+.tabs li a:hover::before {
+  background-color: var(--asphalt-light);
+}
+
+/* acitve */
 .tabs li.is-active a {
-  background-color: var(--bluesky);
+  background-color: var(--concrete-light);
+  color: var(--asphalt);
+}
+.tabs li.is-active a::before {
+  background-color: var(--asphalt-light);
 }
 .tabs li.is-active a:hover {
-  background-color: var(--bluesky-light);
+
 }
 
 /* tabs small*/
@@ -86,8 +98,8 @@ color
   border-bottom: 1px solid transparent;
 }
 .tabs-small li a:hover {
-  text-decoration: none;
   border-bottom: 1px solid var(--bluesky);
+  text-decoration: none;
 }
 .tabs-small li a.is-active {
   border-bottom: 1px solid var(--bluesky-light);

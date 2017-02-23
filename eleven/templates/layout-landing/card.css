@@ -100,7 +100,8 @@
 
 /* card size variations */
 .card--small{
-  padding: 0.5rem
+  padding: 0.5rem;
+  border: 1px solid var(--rasberry);
 }
 .card--small  .card__icon{
   width: 100%;
