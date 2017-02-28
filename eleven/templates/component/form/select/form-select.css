@@ -9,7 +9,6 @@ select {
   border-right: 0;
   -webkit-border-radius: 1rem;
           border-radius: 0;
-          border-radius: 0;
   background-color: var(--gravel);
   font-size: 1rem;
   font-weight: normal;
@@ -55,6 +54,13 @@ arrow
   width: 1rem;
   height: 1rem;
   content: "";
+
+          mask-image: url(icons/angle-down.svg);
+  -webkit-mask-image: url(icons/angle-down.svg);
+  -webkit-mask-size: contain !important;
+          mask-size: contain !important;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
 }
 select.form-select[multiple] + .select__arrow {
   display: none;
@@ -62,14 +68,14 @@ select.form-select[multiple] + .select__arrow {
 
 /*correct the width for the arrow added */
 .form-item--select {
-  padding-right: 2rem
+  padding-right: 2rem;
 }
 
 /* -----------------------------------------------------------------------------
 colors
  -----------------------------------------------------------------------------*/
 select {
-  border-color:var(--bluesky);
+  border-color: var(--bluesky);
   background-color: var(--gravel-light);
   color: var(--bluesky);
   transition: all 0.5s ease-in-out;
@@ -94,19 +100,12 @@ select:focus + .select__arrow {
 .select__arrow::before {
   background-color: var(--gravel-light);
   transition: all 0.5s ease-in-out;
-
-          mask: var(--icon-coffee) no-repeat;
-  -webkit-mask: var(--icon-coffee) no-repeat;
-  -webkit-mask-size: contain;
-          mask-size: contain;
 }
 select:hover + .select__arrow::before,
 select:focus + .select__arrow::before {
   background-color: var(--gravel);
-  transform: rotate(90deg);
+  transform: translateY(0.5rem);
 }
-
-
 
 
 .required select {

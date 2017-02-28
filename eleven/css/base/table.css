@@ -236,18 +236,64 @@ a.tabledrag-handle .handle {
   background-color: var(--rasberry);
 }
 
-.warning a{
-  color: var(--strawberry);
-}
-
+/* prvius drag */
 .drag-previous td{
-  outline: 1px solid var(--rasberry);
-
+  background-color: var(--yellowsnow-light);
+  color: var(--pumpkin);
 }
+.drag-previous td.block{
+  color: var(--pumpkin);
+}
+.drag-previous.draggable a.tabledrag-handle{
+  background-color: var(--pumpkin);
+}
+
 
 
 /*-- "add a new ..." button ----------*/
 table tr:last-child td[colspan="2"] a{
   display: inline-block;
   background-color: var(--grass);
+}
+
+
+/*
+-------------------------------------------------------------------------------
+BLOCK LAYOUT PAGE
+TODO: seperate library for this page
+block layout page variation
+
+-------------------------------------------------------------------------------
+*/
+#blocks .region-title{
+   background-color: var(--gravel);
+   color: var(--bluesky-light);
+   padding-top: 2rem;
+}
+#blocks .region-title td{
+  font-size: 2rem;
+  font-weight: 200;
+  border-bottom-color: var(--bluesky-light);
+}
+#blocks .region-title__action{
+  padding-left: 2rem;
+}
+
+td.block {
+  font-weight: bold;
+  color: var(--asphalt-light);
+}
+
+.region-message  td{
+  background-color: var(--concrete);
+  color: var(--concrete-light);
+  text-align: center
+}
+
+select.block-weight{
+  min-width: 3rem;
+  width: 3rem;
+}
+.js td .dropbutton-multiple{
+  padding-right: 5rem
 }

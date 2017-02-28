@@ -3,14 +3,14 @@
   margin: 1rem 0
 }
 
-a.button-action {
+a.button.button-action {
   display: block;
   min-width: 9rem;
   margin: 0;
   padding: 0 1rem 0 2.5rem ;
   border: none;
   outline: none;
-  background-image: var(--button-gravel);
+  background-image: var(--button-rasberry);
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: auto;
@@ -20,12 +20,12 @@ a.button-action {
   text-align: left;
   text-decoration: none;
   transition: all 0.1s ease-in-out;
-  width: 12rem
+  width: 15rem
 }
-a.button-action:hover{
+a.button.button-action:hover{
   text-decoration: none
 }
-a.button-action:before {
+a.button.button-action:before {
   position: absolute;
   top: 0.5rem;
   left: 0.5rem;
@@ -36,27 +36,26 @@ a.button-action:before {
   content: "";
   transition: all 0.2s ease-in-out;
 
-          mask-image: var(--icon-coffee);
-  -webkit-mask-image: var(--icon-coffee);
+          mask-image: url(icons/plus-circle.svg);
+  -webkit-mask-image: url(icons/plus-circle.svg);
   -webkit-mask-size: contain !important;
           mask-size: contain !important;
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
 }
 /* color ---------------------------------------------------------------------*/
-a.button-action {
+a.button.button-action {
   background-image: var(--button-rasberry);
   color: var(--white);
 }
-a.button-action:hover{
+a.button.button-action:hover{
   background-image: var(--button-rasberry-rev);
   color: var(--white);
 }
-a.button-action:before{
-  mask-image: var(--icon-heart);
-  -webkit-mask-image: var(--icon-heart);
+a.button.button-action:before{
   background-color: var(--white);
 }
-a.button-action:hover:before {
-  background-color: var(--rasberry);
+a.button.button-action:hover:before {
+  background-color: var(--white);
+
 }

@@ -16,7 +16,7 @@ button {
   text-align: left;
   text-decoration: none;
 }
-button:before{
+button:before {
   position: absolute;
   top: 0.5rem;
   left: 0.5rem;
@@ -28,13 +28,12 @@ button:before{
   content: "";
   transition: 0.5s ease-in;
 
-
-            mask-image: var(--icon-coffee);
-    -webkit-mask-image: var(--icon-coffee);
-    -webkit-mask-size: contain !important;
-            mask-size: contain !important;
-    -webkit-mask-repeat: no-repeat;
-            mask-repeat: no-repeat;
+          mask-image: var(--icon-coffee);
+  -webkit-mask-image: var(--icon-coffee);
+  -webkit-mask-size: contain !important;
+          mask-size: contain !important;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
 }
 
 /* button colors */
@@ -45,14 +44,14 @@ button {
 button:hover {
   background-image: var(--button-concrete-rev);
 }
-button:before{
+button:before {
   background-color: var(--white);
 
           mask-image: var(--icon-coffee);
   -webkit-mask-image: var(--icon-coffee);
 }
 
-button:hover:before{
+button:hover:before {
   background-color: var(--bluesky);
   background-color: var(--white);
 }
@@ -85,4 +84,15 @@ button.action-save:before {
 
 button span {
   padding-left: 3rem;
+}
+
+/* table toggle */
+button.tabledrag-toggle-weight {
+  background-image: var(--button-asphalt);
+  color: var(--white);
+}
+
+button.tabledrag-toggle-weight:before {
+          mask-image: url(icons/eye.svg);
+  -webkit-mask-image: url(icons/eye.svg);
 }

@@ -45,17 +45,25 @@ a.button:hover:before {
   transform: rotate(90deg);
 }
 
+/* button variations */
 a.button--small {
-  font-weight: normal;
-  font-size: 0.875rem;
-  line-height: 1.5rem;
   width: auto;
   min-width: 9rem;
-
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.5rem;
 }
 a.button:before {
   top: 0.25rem;
   left: 0.5rem;
   width: 1rem;
   height: 1rem;
+}
+
+a.button.use-ajax {
+  background-image: var(--button-rasberry);
+}
+a.button.use-ajax:before {
+          mask-image: url(../../icons/plus-circle.svg);
+  -webkit-mask-image: url(../../icons/plus-circle.svg);
 }
