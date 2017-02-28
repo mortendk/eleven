@@ -1,124 +1,203 @@
 /* icons */
 
+/* general */
+.tabs li a[href$="/form-display"]:before {
+  -webkit-mask-image: url(icons/columns.svg);
+          mask-image: url(icons/columns.svg);
+}
+.tabs li a[href$="/display"]:before {
+  -webkit-mask-image: url(icons/desktop.svg);
+          mask-image: url(icons/desktop.svg);
+}
 
-/*content*/
-.tabs li a[href="/admin/content"]:before{
-  -webkit-mask: url(icons/content.svg);
+.tabs li a[href$="/fields"]:before {
+  -webkit-mask-image: url(icons/list-alt.svg);
+          mask-image: url(icons/list-alt.svg);
 }
-/*comments */
-.tabs li a[href="/admin/content/comment"]:before{
-  -webkit-mask: url(icons/comments.svg);
+
+.tabs li a[href$="/translate"]:before {
+  -webkit-mask-image: url(icons/flag.svg);
+          mask-image: url(icons/flag.svg);
 }
-.localtask__lvl2 li a[href="/admin/content/comment"]:before{
-  -webkit-mask: url(icons/comments-published.svg);
+
+.tabs li a[href$="/moderation"]:before {
+  -webkit-mask-image: url(icons/child.svg);
+          mask-image: url(icons/child.svg);
 }
-.localtask__lvl2 li a[href="/admin/content/comment/approval"]:before{
-  -webkit-mask: url(icons/comments-unpublished.svg);
+
+.tabs li a[href$="/storage"]:before {
+  -webkit-mask-image: url(icons/database.svg);
+          mask-image: url(icons/database.svg);
 }
-/*files */
-.tabs li a[href="/admin/content/files"]:before{
-  -webkit-mask: url(icons/files.svg);
+
+.tabs li a[href*="/admin/structure/contact/"]:before {
+}
+
+
+/*content --------------------------------------------------------------------*/
+.tabs li a[href="/admin/content"]:before {
+  -webkit-mask-image: url(icons/file-text.svg);
+          mask-image: url(icons/file-text.svg);
+}
+.tabs li a[href="/admin/content/comment"]:before {
+  -webkit-mask-image: url(icons/comments.svg);
+          mask-image: url(icons/comments.svg);
+}
+.tabs li a[href="/admin/content/files"]:before {
+  -webkit-mask-image: url(icons/file-picture-o.svg);
+          mask-image: url(icons/file-picture-o.svg);
+
 }
 
 /*apperance ------------------------------------------------------------------*/
+.tabs li a[href="/admin/appearance"]:before {
+  -webkit-mask-image: url(icons/rocket.svg);
+          mask-image: url(icons/rocket.svg);
+}
+.tabs li a[href="/admin/theme/update"]:before {
+  -webkit-mask-image: url(icons/plug.svg);
+          mask-image: url(icons/plug.svg);
+}
+.tabs li a[href="/admin/appearance/settings"]:before {
+  -webkit-mask-image: url(icons/gears.svg);
+          mask-image: url(icons/gears.svg);
+}
+.tabs li a[href="/admin/appearance/styleguide"]:before {
+  -webkit-mask-image: url(icons/paint-brush.svg);
+          mask-image: url(icons/paint-brush.svg);
+}
 
-.tabs li a[href="/admin/appearance"]:before{
-      mask: url(icons/theme-list.svg);
-  -webkit-mask: url(icons/theme-list.svg);
-}
-.tabs li a[href="/admin/theme/update"]:before{
-  -webkit-mask: url(icons/theme-update.svg);
-}
-.tabs li a[href="/admin/appearance/settings"]:before{
-  -webkit-mask: url(icons/theme-settings.svg);
-}
-.localtask__lvl2 li a[href^="/admin/appearance/settings"]:before{
-  -webkit-mask: url(icons/theme-settings-theme.svg);
-}
+
 
 /*modules*/
-.tabs li a[href="/admin/modules"]:before{
-  -webkit-mask: url(icons/module.svg);
+.tabs li a[href="/admin/modules"]:before {
+  -webkit-mask-image: url(icons/puzzle-piece.svg);
+          mask-image: url(icons/puzzle-piece.svg);
 }
-.tabs li a[href="/admin/modules/update"]:before{
-  -webkit-mask: url(icons/module-update.svg);
+.tabs li a[href="/admin/modules/update"]:before {
+  -webkit-mask-image: url(icons/plug.svg);
+          mask-image: url(icons/plug.svg);
 }
-.tabs li a[href="/admin/modules/uninstall"]:before{
-  -webkit-mask: url(icons/module-uninstall.svg);
+.tabs li a[href="/admin/modules/uninstall"]:before {
+  -webkit-mask-image: url(icons/power-off.svg);
+          mask-image: url(icons/power-off.svg);
+
 }
 
-/*people*/
-.tabs li a[href="/admin/people"]:before{
-  -webkit-mask: url(icons/people.svg);
+/*people ---------------------------------------------------------------------*/
+.tabs li a[href="/admin/people"]:before {
+  -webkit-mask-image: url(icons/people.svg);
 }
-.tabs li a[href="/admin/people/permissions"]:before{
-  -webkit-mask: url(icons/people-permission.svg);
+.tabs li a[href="/admin/people/permissions"]:before {
+  -webkit-mask-image: url(icons/people-permission.svg);
 }
-.tabs li a[href="/admin/people/roles"]:before{
-  -webkit-mask: url(icons/people-roles.svg);
-}
-
-/* block*/
-.tabs li a[href="/admin/structure/block"]:before{
-  -webkit-mask: url(icons/block.svg);
-}
-.localtask__lvl2 li a[href^="/admin/structure/block"]:before{
-  -webkit-mask: url(icons/block.svg);
+.tabs li a[href="/admin/people/roles"]:before {
+  -webkit-mask-image: url(icons/people-roles.svg);
 }
 
-.tabs li a[href="/admin/structure/block/block-content"]:before{
-  -webkit-mask: url(icons/block-custom.svg);
+/*  block --------------------------------------------------------------------*/
+.tabs li a[href="/admin/structure/block"]:before {
+  -webkit-mask-image: url(icons/columns.svg);
+          mask-image: url(icons/columns.svg);
 }
-.localtask__lvl2 li a[href^="/admin/structure/block/block-content"]:before{
-  -webkit-mask: url(icons/block-custom.svg);
-}
-
-/* comments */
-.tabs li a[href="/admin/structure/comment/manage/comment"]:before{
-  -webkit-mask: url(icons/comment-type.svg);
-}
-.tabs li a[href="admin/structure/comment/manage/comment/fields"]:before{
-  -webkit-mask: url(icons/comment-type.svg);
-}
-.tabs li a[href="/admin/structure/comment/manage/comment/form-display"]:before{
-  -webkit-mask: url(icons/comment-type.svg);
-}
-.tabs li a[href="/admin/structure/comment/manage/comment/display"]:before{
-  -webkit-mask: url(icons/comment-type.svg);
-}
-
-/*contact forms*/
-
-.tabs li a[href*="/admin/structure/contact/"]:before{
-  -webkit-mask: url(icons/mailform.svg);
-}
-/*@TODO make a better selection this can easy be overwritten */
-.tabs li a[href$="/form-display"]:before{
-  -webkit-mask: url(icons/display-form.svg);
-}
-.tabs li a[href$="/display"]:before{
-  -webkit-mask: url(icons/display-manage.svg);
+.tabs li a[href="/admin/structure/block/block-content"]:before {
+  -webkit-mask-image: url(icons/cubes.svg);
+          mask-image: url(icons/cubes.svg);
 }
 
 
-
-
-
-
-
-/* taxonomy*/
-.tabs li a[href="/admin/structure/taxonomy/manage/tags/overview"]:before{
-  -webkit-mask: url(icons/tags.svg);
+/* taxonomy ------------------------------------------------------------------*/
+.tabs li a[href="/admin/structure/taxonomy/manage/tags/overview"]:before {
+  -webkit-mask-image: url(icons/tag.svg);
+          mask-image: url(icons/tag.svg);
 }
-.tabs li a[href="/admin/structure/taxonomy/manage/tags"]:before{
-  -webkit-mask: url(icons/tags.svg);
+.tabs li a[href="/admin/structure/taxonomy/manage/tags"]:before {
+  -webkit-mask-image: url(icons/pencil.svg);
+          mask-image: url(icons/pencil.svg);
 }
-.tabs li a[href="/admin/structure/taxonomy/manage/tags/overview/fields"]:before{
-  -webkit-mask: url(icons/tags.svg);
+
+/*menu -----------------------------------------------------------------------*/
+.tabs li a[href="/admin/structure/menu/manage/admin"]:before {
+  -webkit-mask-image: url(icons/list.svg);
+          mask-image: url(icons/list.svg);
 }
-.tabs li a[href="/admin/structure/taxonomy/manage/tags/overview/form-display"]:before{
-  -webkit-mask: url(icons/tags.svg);
+
+/* form */
+.tabs li a[href*="/admin/structure/display-modes/form/manage/"]:before {
+  -webkit-mask-image: url(icons/pencil.svg);
+          mask-image: url(icons/pencil.svg);
 }
-.tabs li a[href="/admin/structure/taxonomy/manage/tags/overview/display"]:before{
-  -webkit-mask: url(icons/tags.svg);
+
+/* views */
+.tabs li a[href="/admin/structure/views"]:before{
+  -webkit-mask-image: url(icons/list.svg);
+          mask-image: url(icons/list.svg);
+}
+.tabs li a[href="/admin/structure/views/settings"]:before{
+  -webkit-mask-image: url(icons/gear.svg);
+          mask-image: url(icons/gear.svg);
+}
+
+/* account*/
+.tabs li a[href="/admin/config/people/accounts"]:before{
+  -webkit-mask-image: url(icons/userid.svg);
+          mask-image: url(icons/userid.svg);
+}
+
+/*site settings */
+.tabs li a[href="/admin/config/system/site-information"]:before{
+  -webkit-mask-image: url(icons/info-circle.svg);
+          mask-image: url(icons/info-circle.svg);
+}
+
+/* translate */
+.tabs li a[href="/admin/config/regional/translate/import"]:before{
+  -webkit-mask-image: url(icons/cloud-upload.svg);
+          mask-image: url(icons/cloud-upload.svg);
+}
+
+.tabs li a[href="/admin/config/regional/translate/export"]:before{
+  -webkit-mask-image: url(icons/cloud-download.svg);
+          mask-image: url(icons/cloud-download.svg);
+}
+
+.tabs li a[href="/admin/config/regional/translate/settings"]:before{
+  -webkit-mask-image: url(icons/gears.svg);
+          mask-image: url(icons/gears.svg);
+}
+
+/* RSS */
+.tabs li a[href="/admin/config/services/rss-publishing"]:before{
+  -webkit-mask-image: url(icons/rss.svg);
+          mask-image: url(icons/rss.svg);
+}
+
+.tabs li a[href="/admin/config/services/aggregator"]:before{
+  -webkit-mask-image: url(icons/rss.svg);
+          mask-image: url(icons/rss.svg);
+}
+.tabs li a[href="/admin/config/services/aggregator/settings"]:before{
+  -webkit-mask-image: url(icons/gears.svg);
+          mask-image: url(icons/gears.svg);
+}
+
+/* maintainenec */
+.tabs li a[href="/admin/config/development/maintenance"]:before{
+  -webkit-mask-image: url(icons/gears.svg);
+          mask-image: url(icons/gears.svg);
+}
+
+/* CMI */
+.tabs li a[href="/admin/config/development/configuration"]:before{
+  -webkit-mask-image: url(icons/rotate-right.svg);
+          mask-image: url(icons/rotate-right.svg);
+}
+
+.tabs li a[href="/admin/config/development/configuration/full/import"]:before{
+  -webkit-mask-image: url(icons/cloud-upload.svg);
+          mask-image: url(icons/cloud-upload.svg);
+}
+.tabs li a[href="/admin/config/development/configuration/full/export"]:before{
+  -webkit-mask-image: url(icons/cloud-download.svg);
+          mask-image: url(icons/cloud-download.svg);
 }

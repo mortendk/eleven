@@ -17,7 +17,6 @@ tabs
   padding: 0 0.5rem 0 2.5rem ;
   border: none;
   outline: none;
-  /*background-image: var(--button-gravel);*/
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: auto;
@@ -26,7 +25,7 @@ tabs
   line-height: 2rem;
   text-align: left;
   text-decoration: none;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .tabs li a:hover {
   /*background-image: var(--button-bluesky-rev);*/
@@ -43,10 +42,12 @@ tabs
   content: "";
   transition: 0.5s ease-in;
 
-          mask: var(--icon-coffee) no-repeat;
-  -webkit-mask: var(--icon-coffee) no-repeat;
-  -webkit-mask-size: contain ! important;
-          mask-size: contain ! important;
+          mask-image: var(--icon-coffee);
+  -webkit-mask-image: var(--icon-coffee);
+  -webkit-mask-size: contain !important;
+          mask-size: contain !important;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
 }
 .tabs li a:hover:before {
   transform: scale(1.5);
@@ -58,7 +59,6 @@ color
 .tabs li a {
   background-color: var(--gravel);
   color: var(--asphalt-light);
-
 }
 .tabs li a::before {
   background-color: var(--concrete);
@@ -80,8 +80,9 @@ color
   background-color: var(--asphalt-light);
 }
 .tabs li.is-active a:hover {
-
 }
+
+
 
 /* tabs small*/
 .tabs-small {

@@ -28,8 +28,13 @@ button:before{
   content: "";
   transition: 0.5s ease-in;
 
-  -webkit-mask-size: contain ! important;
-          mask-size: contain ! important;
+
+            mask-image: var(--icon-coffee);
+    -webkit-mask-image: var(--icon-coffee);
+    -webkit-mask-size: contain !important;
+            mask-size: contain !important;
+    -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
 }
 
 /* button colors */
@@ -43,8 +48,8 @@ button:hover {
 button:before{
   background-color: var(--white);
 
-          mask: var(--icon-coffee) no-repeat;
-  -webkit-mask: var(--icon-coffee) no-repeat;
+          mask-image: var(--icon-coffee);
+  -webkit-mask-image: var(--icon-coffee);
 }
 
 button:hover:before{
@@ -61,8 +66,8 @@ button.button--primary:hover {
 }
 button.button--primary:before,
 button.action-save:before {
-          mask: var(--icon-save) no-repeat;
-  -webkit-mask: var(--icon-save) no-repeat;
+          mask-image: var(--icon-save);
+  -webkit-mask-image: var(--icon-save);
 }
 
 /* cancel */
@@ -74,8 +79,8 @@ button.action-save:before {
   background-image: var(--button-concrete-rev);
 }
 .button[data-drupal-selector="edit-cancel"]:before {
-          mask: var(--icon-trash) no-repeat;
-  -webkit-mask: var(--icon-trash) no-repeat;
+          mask-image: var(--icon-trash);
+  -webkit-mask-image: var(--icon-trash);
 }
 
 button span {

@@ -34,7 +34,6 @@ input[type="submit"].js-hide + .form-item__icon {
 }
 
 /* links  buttons */
-.dropbutton-single .dropbutton-action a,
 .form-actions a.button {
   position: relative;
   display: inline-block;
@@ -54,7 +53,6 @@ input[type="submit"].js-hide + .form-item__icon {
   font-weight: bold
 }
 
-.dropbutton-single .dropbutton-action a:before,
 .form-actions a.button:before {
   position: absolute;
   top: 0.5rem;
@@ -75,11 +73,9 @@ input[type="submit"].js-hide + .form-item__icon {
           mask-repeat: no-repeat;
 }
 
-.dropbutton-single .dropbutton-action a:hover,
 .form-actions a.button:hover {
   background-image: var(--button-bluesky-rev);
 }
-.dropbutton-single .dropbutton-action a:hover:before,
 .form-actions a.button:hover:before {
   transform: rotate(90deg);
 }

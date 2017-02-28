@@ -5,8 +5,8 @@ input {
   height: 2rem;
   padding-left: 0.5rem;
   border: 0 solid transparent ;
-  border-bottom: 1px solid var(--bluesky);
-  background-color: var(--gravel);
+  border: 1px solid var(--bluesky);
+  background-color: var(--white);
   color: var(--asphalt);
   line-height: 2rem;
   transition: all 0.5s ease-in-out;
