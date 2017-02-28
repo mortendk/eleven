@@ -1,9 +1,9 @@
 /*
 debug
 */
-.dropbutton-multiple .dropbutton .secondary-action {
+/*.dropbutton-multiple .dropbutton .secondary-action {
   display: block;
-}
+}*/
 
 
 /* if the dropbutton is inside a flexbox its expanding heres a fix */
@@ -27,13 +27,14 @@ debug
   margin-right: -2rem;
 }
 
+
 /* drop button widths */
 .dropbutton-multiple .dropbutton-widget {
   width: 15rem;
 }
-table .dropbutton-multiple .dropbutton-widget {
+/*table .dropbutton-multiple .dropbutton-widget {
   width: auto;
-}
+}*/
 .dropbutton-single .dropbutton-widget {
   width: auto;
 }

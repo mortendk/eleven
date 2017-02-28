@@ -54,10 +54,10 @@ th.is-active a {
   height: 0.7rem;
 }
 .tablesort--asc {
-  background-image: url(../../icons/table-arrow-up.svg);
+  /*background-image: url(../../icons/table-arrow-up.svg);*/
 }
 .tablesort--desc {
-  background-image: url(../../icons/table-arrow-down.svg);
+  /*background-image: url(../../icons/table-arrow-down.svg);*/
 }
 .sticky-header th {
   border-right: 1px solid #ddd;
@@ -68,31 +68,32 @@ th.views-field-operations {
 
 
 /* row background colors */
+/* odd */
 tr:nth-of-type(odd) {
-  background-color: white;
+  background-color: var(--white);
 }
 tr:nth-of-type(odd):hover {
-  background-color: #eee;
-  color: #77afef;
+  background-color: var(--gravel);
 }
 tr.selected:nth-of-type(odd) {
-  background: #edf4fe;
+  background-color: var(--gravel-light);
 }
 tr:nth-of-type(odd):hover td {
-  border-color: white;
+  border-bottom-color: var(--bluesky);
 }
+/* even */
 tr:nth-of-type(even) {
-  background-color: #f7f7f7;
+  background-color: var(--gravel-light);
 }
 tr:nth-of-type(even):hover {
-  background-color: #eee;
-  color: #77afef;
+  background-color: var(--gravel);
+
 }
 tr.selected:nth-of-type(even) {
-  background: rgba(237, 244, 254, 0.56);
+
 }
 tr:nth-of-type(even):hover td {
-  border-color: white;
+  border-bottom-color: var(--bluesky);
 }
 
 /*cells*/
@@ -209,6 +210,41 @@ names for each field.
     display: inline-block !important;
   }
 }
+
+/* dragagle handle -----------------------------------------------------------*/
+a.tabledrag-handle .handle {
+  display: none
+}
+
+.draggable a.tabledrag-handle{
+  width: 1rem;
+  height: 1rem;
+  display: block;
+  margin: 0 0.5rem;
+  padding: 0;
+  background-color: var(--asphalt);
+  transition: 0.5s ease-in;
+
+          mask-image: url(../../icons/arrows.svg);
+  -webkit-mask-image: url(../../icons/arrows.svg);
+  -webkit-mask-size: contain !important;
+          mask-size: contain !important;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+}
+.draggable a.tabledrag-handle:hover {
+  background-color: var(--rasberry);
+}
+
+.warning a{
+  color: var(--strawberry);
+}
+
+.drag-previous td{
+  outline: 1px solid var(--rasberry);
+
+}
+
 
 /*-- "add a new ..." button ----------*/
 table tr:last-child td[colspan="2"] a{
