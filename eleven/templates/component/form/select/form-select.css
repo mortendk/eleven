@@ -60,6 +60,11 @@ select.form-select[multiple] + .select__arrow {
   display: none;
 }
 
+/*correct the width for the arrow added */
+.form-item--select {
+  padding-right: 2rem
+}
+
 /* -----------------------------------------------------------------------------
 colors
  -----------------------------------------------------------------------------*/

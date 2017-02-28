@@ -1,0 +1,23 @@
+{{ attach_library(active_theme()~'/card') }}
+
+{% if rows %}
+<section class="L LW-third">
+
+  {% for row in rows %}
+    <article {{ row.attributes.addClass('card', 'w') }}>
+      <div class="card__icon card__icon card__icon--admin-structure-types"></div>
+
+      <h3 class="card__title">{{ row.cells.title.content}}</h3>
+      <p class="card__text">
+        {{ row.cells.description.content['#markup']}}
+      </p>
+
+
+      <div class="card__operations">
+        {{ row.cells.operations.content }}
+      </div>
+
+    </article>
+  {% endfor %}
+</section>
+{% endif %}

@@ -47,8 +47,11 @@
       <label for="{{ label['#id']}}"></label>
     {% endif %}
 
-    {# yes repeating the label  #}
-    <div class="checkbox__title">{{ label }}</div>
+    {% if label %}
+      {# yes repeating the label  #}
+      <div class="checkbox__title">{{ label }}</div>
+    {% endif %}
+
   </div>
 
   <div{{ description.attributes }}>

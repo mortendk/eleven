@@ -6,6 +6,8 @@ table {
   border-collapse: collapse;
   color: black;
   font-size: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 caption,
 th,
@@ -15,52 +17,52 @@ td {
   vertical-align: top;
 }
 caption {
-  border-bottom: 1px solid white;
-  color: #666;
+  border-bottom: 1px solid color: var(--black);
+  color: var(--black);
   text-align: center;
-  text-transform: uppercase;
+  text-transform: uppercase;;
 }
 /* header --------------------------------------------------------------------*/
 th {
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  border-left: 1px solid #ddd;
-  background-color: #f7f7f7;
+  border: 1px solid var(--concrete-light);
+  border-right:0;
+  background-color: var(--gravel);
   color: white;
-  font-family: "Lato", sans-serif;
-  font-size: 0.7rem;
+  font-size: 1rem;
   font-weight: bold;
   text-align: left;
   white-space: nowrap;
   text-transform: uppercase;
+  padding: 0.5rem 0.2rem;
 }
 th:last-child {
-  border-right: 1px solid #ddd;
+  border-right: 1px solid var(--concrete);
 }
 th,
 th a {
-  color: #0080AD
+  color: var(--bluesky-light);
+  font-size: 0.8rem;
 }
 th a:hover {
-  color: #1397CB
+  color: #1397cb;
 }
 th.is-active a {
-  color: #1397CB
+  color: #1397cb;
 }
-.tablesort{
+.tablesort {
   width: 0.7rem;
   height: 0.7rem;
 }
-.tablesort--asc{
-  background-image: url(../../icons/table-arrow-up.svg)
+.tablesort--asc {
+  background-image: url(../../icons/table-arrow-up.svg);
 }
-.tablesort--desc{
-  background-image: url(../../icons/table-arrow-down.svg)
+.tablesort--desc {
+  background-image: url(../../icons/table-arrow-down.svg);
 }
-.sticky-header th{
+.sticky-header th {
   border-right: 1px solid #ddd;
 }
-th.views-field-operations{
+th.views-field-operations {
   width: 7rem;
 }
 
@@ -71,26 +73,26 @@ tr:nth-of-type(odd) {
 }
 tr:nth-of-type(odd):hover {
   background-color: #eee;
-  color:#77AFEF;
+  color: #77afef;
 }
-tr.selected:nth-of-type(odd){
+tr.selected:nth-of-type(odd) {
   background: #edf4fe;
 }
-tr:nth-of-type(odd):hover td{
-  border-color:white
+tr:nth-of-type(odd):hover td {
+  border-color: white;
 }
 tr:nth-of-type(even) {
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
 }
 tr:nth-of-type(even):hover {
   background-color: #eee;
-    color:#77AFEF;
+  color: #77afef;
 }
-tr.selected:nth-of-type(even){
-  background: rgba(237, 244, 254, 0.56)
+tr.selected:nth-of-type(even) {
+  background: rgba(237, 244, 254, 0.56);
 }
-tr:nth-of-type(even):hover td{
-  border-color:white
+tr:nth-of-type(even):hover td {
+  border-color: white;
 }
 
 /*cells*/
@@ -99,12 +101,20 @@ td {
   border-left: 1px solid #eee;
 }
 td:last-child {
-  border-right: 1px solid #eee
+  border-right: 1px solid #eee;
 }
-td a{
-  color: #666
+td a {
+  color: #666;
 }
 
+/* form element corrections --------------------------------------------------*/
+td .form-item{
+  margin: 0;
+  padding: 0
+}
+td .form-item .checkbox{
+  margin-right: 0
+}
 
 
 /* -- responsive table -------------------------------------------------------*/
@@ -154,15 +164,15 @@ names for each field.
     width: 7.4rem;
     margin: 0;
     padding: 0.5rem;
+    color: #77afef;
     font-family: sans-serif;
     font-weight: bold;
     white-space: nowrap;
     text-overflow: ellipsis;
-    color: #77AFEF;
   }
 
   .responsive-enabled tr td:before,
-  .responsive-enabled tr td{
+  .responsive-enabled tr td {
   }
 
   /*
@@ -172,129 +182,36 @@ names for each field.
     content: attr(data-title);
   }
   .views-form table.responsive-enabled tbody > tr > td:first-child,
-  table.responsive-enabled tbody > tr > td:first-child{
-    text-align: center;
+  table.responsive-enabled tbody > tr > td:first-child {
     width: 100%;
+    text-align: center;
   }
 
   /* hardcoded js stuff... lets fix that */
-  .sticky-header[style]{
+  .sticky-header[style] {
     top: 0 !important;
-
   }
-  .sticky-header thead tr{
-    background: #77AFEF;
-    border-bottom: 1px solid #1397CB;
+  .sticky-header thead tr {
+    border-bottom: 1px solid #1397cb;
+    background: #77afef;
     color: white;
   }
-  .sticky-header thead tr a{
+  .sticky-header thead tr a {
     color: white;
   }
-  .sticky-header thead th{
+  .sticky-header thead th {
+    border: none;
+    border-right: 1px solid #1397cb;
     background-color: transparent;
-    border:none;
     color: white;
-    border-right: 1px solid #1397CB
   }
-  .sticky-header th[style]{
+  .sticky-header th[style] {
     display: inline-block !important;
   }
-
 }
 
-/* -- views & admin table's  ----------------------------------------------------*/
-
-table.admintable {
-  font-size: 0.8rem;
-  width: 100%;;
-  margin: 0 auto;
-  margin-bottom: 1rem;
-
-}
-table.admintable tr{ }
-
-table.admintable .view-operations-table-column{
-  width: 7rem;
-}
-
-table.admintable .select-all input[type="checkbox"]{
-  margin: 0;
-  padding:0;
-  width: 1rem;
-  height: 1rem;
-}
-table.admintable .form-item{
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  border:none;
-}
-table.admintable .checkbox__title{
-  display: block
-}
-
-
-@media only screen and (max-width: 48em) {
-  table.admintable .checkbox--check{
-    height: 2rem;
-    margin-top: 0.5rem
-  }
-  table.admintable .checkbox--check label{
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-
-}
-
-
-/* -- block admin page */
-.region-title td {
-  background-color: white;
-  border-bottom: 1px solid #0080AD;
-  border-top: 1px solid #eee;
-  color: #333;
-  font-size: 1rem;
-  text-transform: uppercase;
-  color: #0080AD;
-}
-
-table.admintable tbody > tr.region-title > td:first-child{
-  width:100%;
-  padding: 0.5rem
-}
-
-
-
-/* checkbox*/
-.admintable .checkbox,
-.views-form table .checkbox{
-  margin-left: 0;
-}
-.admintable .checkbox--check label,
-.views-form table .checkbox--check label{
-  background-image: url(../../templates/base/form/icons/checkbox--red.svg);
-}
-.admintable .checkbox--check input[type=checkbox]:checked + label,
-.views-form table .checkbox--check input[type=checkbox]:checked + label{
-  background-image: url(../../templates/base/form/icons/checkbox-on--red.svg);
-}
-
-/*selected elements  background */
-.admintable tr.selected:nth-of-type(even),
-.views-form tr.selected:nth-of-type(even){
-  background-color: #e9769f;
-  color: #C24F78
-}
-.admintable tr.selected:nth-of-type(even) a,
-.views-form tr.selected:nth-of-type(even) a{
-  color: #C24F78;
-}
-.admintable tr.selected:nth-of-type(odd),
-.views-form tr.selected:nth-of-type(odd){
-  background-color: #d65c88;
-  color: #eee
-}
-.admintable tr.selected:nth-of-type(odd) a
-.views-form tr.selected:nth-of-type(odd) a{
-  color: #eee;
+/*-- "add a new ..." button ----------*/
+table tr:last-child td[colspan="2"] a{
+  display: inline-block;
+  background-color: var(--grass);
 }

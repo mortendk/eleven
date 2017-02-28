@@ -1,6 +1,5 @@
 /*
 tabs
-
 */
 .tabs {
 }
@@ -13,7 +12,7 @@ tabs
 .tabs li a {
   position: relative;
   display: block;
-  min-width: 9rem;
+  min-width: 7rem;
   margin: 0;
   padding: 0 0.5rem 0 2.5rem ;
   border: none;

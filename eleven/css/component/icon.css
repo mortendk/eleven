@@ -14,13 +14,70 @@
   content: "";
   transition: 0.5s ease-in;
 
-          mask: var(--icon-coffee) no-repeat;
-  -webkit-mask: var(--icon-coffee) no-repeat;
+          mask-image: var(--icon-coffee);
+  -webkit-mask-image: var(--icon-coffee);
   -webkit-mask-size: contain !important;
           mask-size: contain !important;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
 }
 
 .icon-11:hover:before {
   /*transform: scale(1.5);*/
   background-color: var(--bluesky-light);
+}
+
+
+
+/*
+TODO: move to a better spot
+button small is used on the theme page for the links
+and its not good ;)
+
+*/
+.button-small ul {
+  margin-top: 1rem;
+}
+
+.button-small ul li a {
+  position: relative;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  margin-left: 1px;
+  background-color: var(--gravel);
+  text-indent: -999rem;
+  transition: all 0.5s ease-in-out;
+}
+.button-small ul li a::before {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--bluesky);
+  background-image: none ! important; /* yes we wanna make sure no module have fun here */
+  content: "";
+  transition: 0.5s ease-in;
+  transition: all 0.5s ease-in-out;
+
+          mask-image: var(--icon-coffee);
+  -webkit-mask-image: var(--icon-coffee);
+  -webkit-mask-size: contain !important;
+          mask-size: contain !important;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+}
+.button-small ul li a {
+  background-color: var(--concrete-light);
+}
+.button-small ul li a::before {
+  background-color: var(--concrete);
+}
+.button-small ul li a:hover {
+  background-color: var(--concrete);
+}
+.button-small ul li a:hover::before {
+  background-color: var(--gravel);
 }

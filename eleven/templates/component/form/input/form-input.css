@@ -22,9 +22,13 @@ input:focus {
   background-color: var(--bluesky-light-light);
 }
 input[type="text"] {
-  width: 100%;
+  width: auto;
+  min-width: 30rem
 }
 
+input[type="text"].form-autocomplete{
+  min-width: 20rem
+}
 
 /* icons */
 .form-item__icon {
@@ -47,11 +51,14 @@ input[type="text"] {
   content: "";
   transition: 0.5s ease-in;
 
-          mask: var(--icon-coffee) no-repeat;
-  -webkit-mask: var(--icon-coffee) no-repeat;
-  -webkit-mask-size: contain ! important;
-          mask-size: contain ! important;
+          mask-image: var(--icon-coffee);
+  -webkit-mask-image: var(--icon-coffee);
+  -webkit-mask-size: contain !important;
+          mask-size: contain !important;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
 }
+
 .form-item__icon:hover::before {
   transform: rotate(-90deg);
 }
@@ -74,10 +81,40 @@ input:hover + .form-item__icon::before {
 .form-item__icon--search::before {
   background-color: var(--rasberry);
 }
+.form-item__icon--password::before {
+  background-color: var(--bluesky);
+}
 
-.form-item--search{
+.form-item--search {
 }
 
 .form-item__icon--file {
   background-color: var(--rasberry-light);
+}
+
+
+
+
+/* admin link in forms */
+small .admin-link {
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+small .admin-link button.link {
+  color: var(--bluesky-light);
+}
+small .admin-link button.link:hover {
+  color: var(--bluesky-10);
+}
+small .admin-link:before {
+  content: "";
+}
+small .admin-link:after {
+  content: "";
+}
+.admin-link button:before {
+  background-color: var(--transparent);
+
+          mask: none;
+  -webkit-mask: none;
 }

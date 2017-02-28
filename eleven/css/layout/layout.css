@@ -767,13 +767,15 @@ table  .L{
 /* -- page width -------------------------------------------------------------*/
 .pagewidth {
   width: 100%;
-  padding: 0 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 /* small */
 @media (max-width: 47.99rem){
   .pagewidth {
-    padding: 0 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 /* medium */
@@ -786,12 +788,15 @@ table  .L{
 @media (min-width: 62rem) and (max-width: 79.99rem){
   .pagewidth {
     /*padding: 0 calc( (100% - 75rem) / 2 );*/
-    padding: 0 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 @media (min-width: 80rem){
   .pagewidth {
-    padding: 0 1rem;
+    padding-left:  5rem;
+    padding-right: 5rem;
+
   }
 }
 
@@ -823,9 +828,9 @@ test:
     margin: 0.5rem;
 }
 .LW-ten    .w { flex-basis: calc(10% - 1rem);}
-.LW-nine   .w { flex-basis: calc(11.11 - 1rem);}
-.LW-eight  .w { flex-basis: calc(12.5 - 1rem);}
-.LW-seven  .w { flex-basis: calc(14.28 - 1rem);}
+.LW-nine   .w { flex-basis: calc(11.11% - 1rem);}
+.LW-eight  .w { flex-basis: calc(12.5% - 1rem);}
+.LW-seven  .w { flex-basis: calc(14.28% - 1rem);}
 .LW-sixth  .w { flex-basis: calc(16.66% - 1rem);}
 .LW-fifth  .w { flex-basis: calc(20% - 1rem);}
 .LW-fourth .w { flex-basis: calc(25% - 1rem);}

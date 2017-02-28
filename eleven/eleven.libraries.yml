@@ -34,6 +34,13 @@ global:
 #     theme:
       # templates/jquery_ui/jquery_ui.css: {}
 
+
+card:
+  css:
+    theme:
+      templates/layout-landing/card.css: {weight: -20}
+
+
 # ------------------------------------------------------------------------------
 # System
 # ------------------------------------------------------------------------------
@@ -42,18 +49,21 @@ messages:
     theme:
       templates/component/messages/messages.css: {}
 
+
 # ------------------------------------------------------------------------------
 # Admin landing pages
 # ------------------------------------------------------------------------------
-admin.card:
-  css:
-    theme:
-      templates/layout-landing/card.css: {}
-
 admin.config:
   css:
     theme:
       templates/layout-landing/config/admin-config.css: {}
+
+views:
+  css:
+    theme:
+      templates/layout-landing/views/structure-table-views.css: {}
+      templates/layout-landing/views/views-admin.css: {}
+      
 # ------------------------------------------------------------------------------
 # navigation
 # ------------------------------------------------------------------------------
@@ -69,8 +79,6 @@ nav.tabs:
       templates/component/navigation/localtask/localtask.css: {}
       templates/component/navigation/localtask/localtask-icons.css: {}
 
-
-
 # ------------------------------------------------------------------------------
 # Forms
 # ------------------------------------------------------------------------------
@@ -78,11 +86,13 @@ form.form:
   css:
     theme:
       templates/component/form/form.css: {}
-      templates/component/form/form-button.css: {}
-      templates/component/form/form-details.css: {}
-      templates/component/form/form-fieldset.css: {}
-      templates/component/form/form-textarea.css: {}
+      templates/component/form/button/form-button.css: {}
+
+      templates/component/form/details/form-details.css: {}
+      templates/component/form/fieldset/form-fieldset.css: {}
+      templates/component/form/textarea/form-textarea.css: {}
       templates/component/form/input/form-input.css: {}
+      templates/component/form/input/form-input-submit.css: {}
       templates/component/form/checkbox/form-checkbox.css: {}
       templates/component/form/radio/form-radio.css: {}
       templates/component/form/select/form-select.css: {}
@@ -93,3 +103,22 @@ form.file:
       templates/component/form/input-file/form-input-file.css: {}
   js:
     templates/component/form/input-file/form-input-file.js: {}
+
+
+button.action:
+  css:
+    theme:
+      templates/component/button-action/button-action.css: {}
+# ------------------------------------------------------------------------------
+# Modules
+# ------------------------------------------------------------------------------
+modules:
+  css:
+    theme:
+      templates/layout-landing/modules/modules.css: {}
+      templates/layout-landing/modules/modules-icons.css: {}
+
+themes:
+  css:
+    theme:
+      templates/layout-landing/themes/themes.css: {}

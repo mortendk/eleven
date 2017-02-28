@@ -82,12 +82,23 @@ libraries-override:
       component:
         css/components/messages.css: false
 
+  classy/dropbutton:
+    css:
+      component:
+        css/components/dropbutton.css: templates/component/navigation/dropbutton/dropbutton.css
+
   # shotcut
   shortcut/drupal.shortcut:
     css:
       theme:
         css/shortcut.theme.css: false
         css/shortcut.icons.theme.css: false
+
+  views_ui/admin.styling:
+    css:
+      theme:
+        /core/themes/stable/css/views_ui/views_ui.admin.theme.css: false
+        # /core/themes/stable/css/views_ui/views_ui.admin.theme.css: templates/admin/views/css/views-admin.css
 
   # jquery ui
   # look at #/core/core.libraries.yml for my libs
@@ -115,5 +126,6 @@ libraries-override:
 
 stylesheets-remove:
   - core/modules/system/css/components/fieldgroup.module.css
+  - core/themes/stable/css/filter/filter.admin.css
   - core/themes/stable/css/system/system.admin.css
   - '@classy/css/layout.css'

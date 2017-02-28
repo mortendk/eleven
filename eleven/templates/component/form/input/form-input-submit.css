@@ -1,0 +1,98 @@
+input[type="submit"] {
+  padding: 0 1rem 0 0.5rem;
+  border-bottom: 0;
+  background-color: var(--bluesky);
+  color: var(--white);
+  font-weight: bold;
+  line-height: 2;
+}
+input[type="submit"] + .form-item__icon {
+  background-color: var(--bluesky-light);
+}
+input[type="submit"] + .form-item__icon::before {
+  background-color: var(--white);
+}
+
+input[type="submit"]:hover {
+  background-color: var(--bluesky-light);
+}
+/* hide icon */
+input[type="submit"].visually-hidden + .form-item__icon,
+input[type="submit"].js-hide + .form-item__icon {
+  display: none;
+}
+
+
+.form-item--input {
+  display: inline-block;
+}
+
+/* -- form actions ---------------------------------------------------------- */
+.form-actions {
+  position: relative;
+  margin: 1rem 0;
+}
+
+/* links  buttons */
+.dropbutton-single .dropbutton-action a,
+.form-actions a.button {
+  position: relative;
+  display: inline-block;
+  height: 2rem;
+  margin: 0;
+  padding: 0 0.5rem 0 2.5rem ;
+  border: 0;
+  outline: none;
+  background-image: var(--button-bluesky);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: auto;
+  color: var(--white);
+  line-height: 2rem;
+  text-align: left;
+  text-decoration: none;
+  font-weight: bold
+}
+
+.dropbutton-single .dropbutton-action a:before,
+.form-actions a.button:before {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--white);
+  background-image: none ! important; /* yes we wanna make sure no module have fun here */
+  content: "";
+  transition: 0.5s ease-in;
+
+          mask-image: var(--icon-coffee);
+  -webkit-mask-image: var(--icon-coffee);
+  -webkit-mask-size: contain !important;
+          mask-size: contain !important;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+}
+
+.dropbutton-single .dropbutton-action a:hover,
+.form-actions a.button:hover {
+  background-image: var(--button-bluesky-rev);
+}
+.dropbutton-single .dropbutton-action a:hover:before,
+.form-actions a.button:hover:before {
+  transform: rotate(90deg);
+}
+
+
+
+/* button link colors  */
+.form-actions a.button--danger {
+  background-image: var(--button-strawberry);
+}
+.form-actions a.button--danger:hover {
+  background-image: var(--button-strawberry-rev);
+}
+.form-actions a.button--danger:active {
+  background-image: var(--button-strawberry-active);
+}

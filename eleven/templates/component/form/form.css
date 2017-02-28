@@ -1,5 +1,8 @@
 form { }
-.form-item { }
+.form-item {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
 
 .label,
 .form-item label,

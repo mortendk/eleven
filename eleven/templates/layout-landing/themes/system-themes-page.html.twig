@@ -1,0 +1,73 @@
+{{ attach_library(active_theme()~'/card') }}
+{{ attach_library(active_theme()~'/themes') }}
+
+{% for theme_group in theme_groups %}
+
+<h2>{{ theme_group.title }}</h2>
+
+<section{{ theme_group.attributes.addClass('L', 'LW-fifth') }}>
+{% for theme in theme_group.themes %}
+
+  {%
+    set theme_classes = [
+    'card',
+    'card--theme',
+    'w',
+    ]
+  %}
+
+  <article{{ theme.attributes.addClass(theme_classes) }}>
+
+    {%
+      set theme_flags = [
+      theme_group.state == "installed" ? 'card__flag--ok': 'card__flag--notok',
+      theme.is_default ? 'card__flag--hot',
+      theme.is_admin ? 'card__flag--superhot',
+      ]
+    %}
+    <div class="icon-11 card__flag {% for item in theme_flags %}{{ item }} {% endfor %}"></div>
+
+
+    {% if theme.screenshot %}
+      <figure class="card__image">
+        {{ theme.screenshot }}
+      </figure>
+    {% endif %}
+
+    <h3 class="card__title">{{ theme.name }}</h3>
+
+    <div class="card__text">
+      {# stop adding links n crap into the desctiption #}
+      {{ theme.description|striptags }}
+
+      {% if theme.notes %}
+      <small>{{ theme.notes|safe_join(' | ') }}</small>
+      {%- endif -%}
+
+    </div>
+
+
+    {% if theme.version %}
+    <div class="card__notes">
+      version: {{ theme.version }}
+    </div>
+
+    {% endif %}
+
+    {# Display operation links if the theme is compatible. #}
+    {% if theme.incompatible %}
+      <div class="theme__incompatible">{{ theme.incompatible }}</div>
+    {% else %}
+      <nav class="button-small">
+      {# look at links.html.twig #}
+      {{ theme.operations }}
+      </nav>
+
+    {% endif %}
+
+
+
+  </article>
+  {% endfor %}
+</section>
+{% endfor %}

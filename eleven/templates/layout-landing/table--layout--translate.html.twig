@@ -1,0 +1,31 @@
+{#
+template overwrite for tables layouts with translate
+
+ #}
+{{ attach_library(active_theme()~'/card') }}
+
+{% if rows %}
+<section class="L LW-third">
+
+  {% for row in rows %}
+  <article {{ row.attributes.addClass('w','card') }}>
+
+    <a href="/{{ row.cells.1.content['#links'].edit.url.getInternalPath() }}">
+      <div class="card__icon"></div>
+
+      <h3 class="card__title">
+        {{ row.cells.0.content['#markup']|striptags }}
+      </h3>
+      <p class="card__text">
+      </p>
+    </a>
+
+    <div class="card__operations">
+      {{ row.cells.1.content }}
+    </div>
+
+  </article>
+  {% endfor %}
+</section>
+
+{% endif %}

@@ -13,8 +13,6 @@ function eleven_preprocess_html(&$variables){
 }
 
 
-
-
 // ----------------------------------------------------------------------------
 // admin blocks wrappers for
 ///admin
@@ -24,10 +22,9 @@ function eleven_preprocess_html(&$variables){
 function eleven_preprocess_admin_block_content(&$variables) {
   // this is not pretty but lets taste on the path and grap the
   // section of it so we can
-  $path = explode('/', \Drupal::service('path.current')->getPath());
-
   $variables['path'] = \Drupal::service('path.current')->getPath() ;
 
+  $path = explode('/', \Drupal::service('path.current')->getPath());
   if($path[1] == "admin") {
     $variables['admin'] = true;
   }
@@ -42,15 +39,18 @@ function eleven_preprocess_admin_block_content(&$variables) {
 }
 
 
-
 // ----------------------------------------------------------------------------
 // Tables
+// dont want to use tables for layouts of admin pages content.
 //
 // ----------------------------------------------------------------------------
-
 function eleven_theme_suggestions_table_alter(array &$suggestions, array $variables) {
-
+  // TODO we can do better here use layout fields suggestion and translate suggestion
   $path = explode('/', \Drupal::service('path.current')->getPath());
+  //
+  // echo "<pre>";
+  // var_dump($path);
+  // echo "</pre>";
 
   if($path[1] == "admin") {
     $variables['admin'] = true;
@@ -69,8 +69,13 @@ function eleven_theme_suggestions_table_alter(array &$suggestions, array $variab
 
   if(isset( $path[6])) {
     if($path[4] == "manage" AND $path[6] =="fields") {
-      $suggestions[] = 'table__' .$path[2] .'_' . $path[3] .'_' . $path[4] .'_' . $path[6];;
+      $suggestions[] ='table__layout__fields';
     }
+    if($path[4] == "manage" AND $path[6] =="translate") {
+      $suggestions[] ='table__layout__translate';
+    }
+
+
   }
 
   if(isset( $path[7])) {
@@ -79,8 +84,22 @@ function eleven_theme_suggestions_table_alter(array &$suggestions, array $variab
     }
   }
 
+  //$suggestions[] = 'table__layout__translate' ;
+
 }
 
+
+// -----------------------------------------------------------------------------
+// provide an alternative template for links
+// -----------------------------------------------------------------------------
+function eleven_theme_suggestions_links_alter(array &$suggestions, array $variables) {
+  $path = explode('/', \Drupal::service('path.current')->getPath());
+
+  if( isset($path[2]) ) {
+    $suggestions[] = 'links__' . $path[2];
+  }
+
+}
 
 
 

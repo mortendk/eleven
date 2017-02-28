@@ -1,0 +1,170 @@
+/*reset */
+div.dropbutton-multiple .dropbutton .dropbutton-action > * {
+  margin-right: 0;
+  padding: 0 1rem 0 2rem;
+}
+.js div.dropbutton-widget .dropbutton {
+  border-right: none;
+}
+.dropbutton li {
+  margin-left: 0;
+}
+.js div.dropbutton-multiple .dropbutton-widget {
+  padding-right: 1rem;
+}
+.dropbutton-toggle > button {
+  border: none;
+  background-image: none;
+}
+
+/* -- main drop button ------------------------------------------------------ */
+.js div.dropbutton-widget {
+  border: none;
+  border-radius: 0;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+
+/*set height for the buttons content */
+div.dropbutton-multiple .dropbutton .dropbutton-action > * {
+  line-height: 1.85rem;
+}
+.dropbutton-action a,
+.dropbutton-action input,
+.dropbutton-action button {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-radius: 0.1rem;
+}
+
+
+/* -- dropdown trigger ------------------------------------------------------ */
+.dropbutton-arrow {
+  top: 0;
+  right: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
+  border: none;
+  background: url(../icons/arrow-down.svg) no-repeat center 0.6rem;
+  background-size: 1rem;
+}
+
+.dropbutton-multiple.open .dropbutton-arrow {
+  top: 0;
+  border-bottom: 0;
+  background: url(../icons/arrow-up.svg) no-repeat center 0.6rem;
+}
+
+/*-- COLORS ------------------------------------------------------------------*/
+/* main button */
+.dropbutton-action a,
+.dropbutton-action input,
+.dropbutton-action button {
+  border-left: 0.5rem solid #82a913;
+  border-left-color: #82a913;
+  background-image: url(../icons/button-add.svg), repeating-linear-gradient(to right, #82a913 0rem, #82a913 1.5rem, #99c127 1.5rem, #99c127 );
+  background-repeat: no-repeat;
+  background-position: left center;
+  color: white;
+}
+/* hover & open main drop button */
+.dropbutton-action a:hover,
+.dropbutton-action button:hover,
+.dropbutton-action input:hover,
+.dropbutton-action a:focus,
+.dropbutton-action button:focus,
+.dropbutton-action input:focus,
+.dropbutton-action a:active,
+.dropbutton-action input:active,
+.dropbutton-action button:active,
+.open .dropbutton-action a,
+.open .dropbutton-action input,
+.open .dropbutton-action button {
+  border-left-color: #b1da3b;
+  background-image: url(../icons/button-add.svg), repeating-linear-gradient(to right, #b1da3b 0rem, #b1da3b 1.5rem, #99c127 1.5rem, #99c127 );
+  color: white;
+  text-decoration: none;
+}
+
+/* tricker background */
+.dropbutton-toggle button {
+  background-color: #82a913;
+}
+.dropbutton-toggle button:hover,
+.dropbutton-toggle button:focus,
+.dropbutton-toggle button:active {
+  background-color: #b1da3b;
+}
+
+/* the revealed buttons */
+.dropbutton-multiple.open .dropbutton-toggle button {
+  background-color: #99c127;
+}
+/* divider for the revealed buttons */
+.dropbutton li.secondary-action {
+  border-top: 1px solid #b1da3b;
+}
+
+.dropbutton-action.secondary-action a,
+.dropbutton-action.secondary-action input,
+.dropbutton-action.secondary-action button {
+  border-left-color: #82a913;
+  background-image: url(../icons/ok-button.svg), repeating-linear-gradient(to right, #82a913 0rem, #82a913 1.5rem, #99c127 1.5rem, #99c127 );
+}
+
+
+/* --  drop button icons -----------------------------------------------------*/
+
+/* edit */
+.edit.dropbutton-action a{
+  border-left-color: #82a913;
+  background-image: url(../icons/button-pen.svg), repeating-linear-gradient(to right, #82a913 0rem, #82a913 1.5rem, #99c127 1.5rem, #99c127 );
+}
+.edit.dropbutton-action a:hover{
+  border-left-color: #99c127;
+  background-image: url(../icons/button-pen.svg), repeating-linear-gradient(to right, #99c127 0rem, #99c127 1.5rem, #82a913 1.5rem, #82a913 );
+}
+
+.manage-fields.dropbutton-action a{
+  border-left-color: #82a913;
+  background-image: url(../icons/button-manage-fields.svg), repeating-linear-gradient(to right, #82a913 0rem, #82a913 1.5rem, #99c127 1.5rem, #99c127 );
+}
+.manage-fields.dropbutton-action a:hover{
+  border-left-color: #99c127;
+  background-image: url(../icons/button-manage-fields.svg), repeating-linear-gradient(to right, #99c127 0rem, #99c127 1.5rem, #82a913 1.5rem, #82a913 );
+}
+
+.manage-display.dropbutton-action a{
+  border-left-color: #82a913;
+  background-image: url(../icons/button-manage-display.svg), repeating-linear-gradient(to right, #82a913 0rem, #82a913 1.5rem, #99c127 1.5rem, #99c127 );
+}
+.manage-display.dropbutton-action a:hover{
+  border-left-color: #99c127;
+  background-image: url(../icons/button-manage-display.svg), repeating-linear-gradient(to right, #99c127 0rem, #99c127 1.5rem, #82a913 1.5rem, #82a913 );
+}
+
+
+.delete.dropbutton-action a{
+  border-left-color: #A84065;
+  background-image: url(../icons/button-delete.svg), repeating-linear-gradient(to right, #A84065 0rem, #A84065 1.5rem, #C24F78 1.5rem, #C24F78 );
+}
+.delete.dropbutton-action a:hover,
+.delete.dropbutton-action a:focus{
+  border-left-color: #C24F78;
+  background-image: url(../icons/button-delete.svg), repeating-linear-gradient(to right, #C24F78 0rem, #C24F78 1.5rem, #A84065 1.5rem, #A84065 );
+}
+
+
+
+/* -- single button ------------------------------------------------------ */
+.dropbutton-single .dropbutton-action a {
+  min-width: 5rem;
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+
+}
+
+table.admintable .dropbutton-single .dropbutton-action a:hover { }

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="80px" height="27px" viewBox="0 0 80 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>checkbox--module-notinstalled</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Admin-pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Block-layout-Copy" transform="translate(-897.000000, -1534.000000)">
+            <g id="checkbox--module-notinstalled" transform="translate(897.000000, 1534.000000)">
+                <rect id="Rectangle-14" fill="#A84065" x="0" y="0" width="80" height="27" rx="4"></rect>
+                <rect id="Rectangle-14" fill="#C24F78" x="40" y="0" width="40" height="27"></rect>
+                <text id="off" font-family="OpenSans-Bold, Open Sans" font-size="12" font-weight="bold" fill="#FFFFFF">
+                    <tspan x="13" y="18">off</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

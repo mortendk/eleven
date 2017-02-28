@@ -1,0 +1,190 @@
+.table-filter {
+  width: 40rem;
+}
+.table-filter .form-item__description {
+  text-align: left;
+}
+form > details.package-listing {
+  margin: 0.5rem 0;
+}
+/*group wrappers*/
+.system-modules details {
+
+}
+
+.system-modules details summary{
+  width: 100%;
+}
+.system-modules .details-wrapper {
+  padding-top: 0.5rem;
+}
+
+/* module listing */
+
+/* -- table resets  ----------------------------------------------------------*/
+.system-modules tbody tr.module:nth-of-type(odd),
+.system-modules tbody tr.module:nth-of-type(even) {
+  margin-bottom: 0.5rem;
+  border: none;
+  border-bottom: none;
+  background-color: #fff;
+  color: black;
+}
+.system-modules .form-item {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+.system-modules tbody td {
+  display: block;
+  border: none;
+}
+
+/*modules status */
+.system-modules tbody tr.module--notinstalled {
+}
+.system-modules tbody tr.module--installed {
+}
+
+/* group indicator */
+.system-modules .module--group-core {
+}
+
+/*-- modules -----------------------------------------------------------------*/
+.module{}
+
+.module__title {
+  margin: 0.5rem;
+  padding: 0 0.5rem 0.5rem 1.5rem;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+  color: #333;
+  font-size: 0.9rem;
+  font-weight: normal;
+  text-align: center;
+
+
+}
+label.module__title[for]:hover {
+  color: black;
+}
+
+.system-modules .module__description {
+  min-height: 3rem;
+  padding: 0.5rem;
+  font-size: 0.7rem;
+  line-height: 1;
+}
+
+.system-modules .module__information summary{
+  font-size: 0.8rem;
+
+  text-transform: none;
+  padding: 0
+
+}
+
+
+/* -- links bar --------------------------------------------------------------*/
+.module__links {
+  background-color: #f3f3f3;
+}
+.module__links li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  border-left: 1px solid #d8d8d8;
+  background-color: #f3f3f3;
+}
+
+.module__links li:last-child a {
+  border-right: 1px solid #d8d8d8;
+}
+
+/* -- links --*/
+a.module-link {
+  display: block;
+  width: 1rem;
+  background: url("icons/module-help.svg") no-repeat center center;
+  background-size: 0.7rem;
+  text-indent: -999px;
+}
+a.module-link:hover {
+  background-color: #d8d8d8;
+}
+a.module-link-help {
+  background-image: url("icons/module-help.svg");
+}
+a.module-link-configure {
+  background-image: url("icons/module-config.svg");
+}
+a.module-link-permissions {
+  background-image: url("icons/module-permission.svg");
+}
+a.module-link-uninstall {
+  background-image: url("icons/module-uninstall.svg");
+}
+
+
+
+/* -- checkbox for the module install state ----------------------------------*/
+
+/* not installed */
+.system-modules .checkbox label {
+  margin-left: 5rem;
+}
+/* ready to be installed */
+.system-modules .checkbox input[type=checkbox]:checked + label {
+
+}
+
+/*module is  installed*/
+.system-modules .form-item--disabled .checkbox input[type=checkbox]:checked + label {
+  background-color: #1397CB;
+  border-left: 0.5rem solid #1397CB;
+  width: 2rem;
+  padding: 0.5rem;
+  border-radius: 0.1rem;
+  background-image: url(icons/module-status--installed.svg), repeating-linear-gradient(to right, #1397CB 0rem, #1397CB 1rem, #1397CB 1rem, #1397CB );
+}
+
+/* module cant be installed */
+.system-modules .form-item--disabled .checkbox input[type=checkbox] + label {
+  background-color: #1397CB;
+  border-left: 0.5rem solid #94270E;
+  background-image: url(icons/module-status--cantbeinstalled.svg), repeating-linear-gradient(to right, #94270E 0rem, #94270E 1rem, #EE1919 1rem, #EE1919 );
+}
+
+
+.system-modules  .checkbox input[type="checkbox"] {
+  visibility: hidden;
+}
+
+/* -- submit button ----------------------------------------------------------*/
+.system-modules .form-actions{
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  width: 100%;
+  height: 5rem;
+  bottom: 0;
+  z-index: 100;
+  left:0;
+  margin: 0;
+}
+.system-modules .form-actions .button{
+  float:right;
+  margin: 1rem;
+}
+
+/* Primary (save etc)*/
+.system-modules .button.button--primary {
+  border-left-color:#82a913;
+  border-radius: 0.1rem;
+  background-image: url(icons/button-install-module.svg), repeating-linear-gradient(to right, #82a913 0rem, #82a913 1.5rem, #99c127 1.5rem, #99c127 );
+}
+.system-modules .button.button--primary:hover,
+.system-modules .button.button--primary:focus {
+  border-left-color: #99c127;
+  border-radius: 0.1rem;
+  background-image: url(icons/button-install-module.svg), repeating-linear-gradient(to right, #99c127 0rem, #99c127 1.5rem, #82a913 1.5rem, #82a913 );
+}

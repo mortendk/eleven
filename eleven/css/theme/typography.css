@@ -24,7 +24,7 @@ h6,
 .h6 {
   margin: 0;
   padding: 0;
-  color: var(--asphalt);
+  color: var(--black);
   font-weight: normal;
   font-style: normal;
   line-height: 1;
@@ -32,20 +32,20 @@ h6,
 h1,
 .h1 {
   margin: 0;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 100;
   font-style: normal;
 }
 h2,
 .h2 {
-  font-size: 3rem;
-  font-weight: 300;
+  font-size: 2rem;
+  font-weight: 200;
   font-style: normal;
 }
 h3,
 .h3 {
-  font-size: 2rem;
-  font-weight: 300;
+  font-size: 1.5rem;
+  font-weight: 400;
   font-style: normal;
 }
 h4,
@@ -67,7 +67,6 @@ h6,
 
 .page-title {
   margin-top: 1rem;
-  font-size: 3rem;
   color: var(--bluesky);
   padding-left: 3rem
 }
@@ -235,7 +234,6 @@ a:hover,
 a:active {
   color: var(--bluesky-light);
   text-decoration: underline;
-  background-color: var(--white);
 }
 a:focus {
   outline: 0;

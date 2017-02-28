@@ -1,0 +1,40 @@
+{#
+  path
+  node/add
+ #}
+{{ attach_library(active_theme()~'/card') }}
+
+{% if types is not empty %}
+
+<div class="pagewidth L-right">
+  <ul class="L-right tabs-small">
+    <li><a href="#" class="button">1</a> </li>
+    <li><a href="#" class="button">2</a> </li>
+    <li><a href="#" class="button">3</a> </li>
+  </ul>
+</div>
+
+
+<section class="L LW-third cards">
+
+    {% for type in types %}
+      <article class="card w">
+        <div class="card__icon icon-11 card__icon--addnode"></div>
+        <h3 class="card__title">{{ type.add_link }}</h3>
+        <p class="card__text">{{ type.description }}</p>
+        <div class="button">
+          {{ type.add_link }}
+        </div>
+      </article>
+    {% endfor %}
+
+  </section>
+
+{% else %}
+  <p>
+    {% set create_content = path('node.type_add') %}
+    {% trans %}
+      You have not created any content types yet. Go to the <a href="{{ create_content }}">content type creation page</a> to add a new content type.
+    {% endtrans %}
+  </p>
+{% endif %}

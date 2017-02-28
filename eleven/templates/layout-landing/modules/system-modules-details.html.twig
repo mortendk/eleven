@@ -1,0 +1,97 @@
+{{ attach_library(active_theme()~'/modules') }}
+
+
+<table class="responsive-enabled" data-striping="1">
+  <thead>
+    <tr>
+      <th class="checkbox visually-hidden">{{ 'Installed'|t }}</th>
+      <th class="name visually-hidden">{{ 'Name'|t }}</th>
+      <th class="description visually-hidden priority-low">{{ 'Description'|t }}</th>
+    </tr>
+  </thead>
+  <tbody class="L L--nooverflow LW-eight">
+
+    {% for module in modules %}
+
+
+    {% set classes = [
+      'module',
+      module.checkbox['#checked'] ? 'module--installed' : 'module--notinstalled',
+      'module--group-' ~ module.name['#parents'].1|clean_class,
+      'module-name--' ~ module.name['#markup']|clean_class,
+      'w',
+      'L',
+      'L--horizontal',
+      ]
+    %}
+
+      <tr{{ module.attributes.addClass(classes) }}>
+        <td>
+
+          <div class="module__icon module__icon--{{ module.name['#markup']|clean_class }}"></div>
+          <label id="{{ module.id }}" for="{{ module.enable_id }}" class="module__title">
+            {{ module.name }}
+          </label>
+
+          {{ module.checkbox }}
+
+          <p class="module__description">
+            {{ module.description }}
+          </p>
+
+          {# links #}
+          {% if module.links %}
+            <nav class="module__links">
+            <ul class="L L-space">
+              {% for link_type in ['help', 'permissions', 'configure'] %}
+                {% if module.links[link_type] is defined %}
+                  <li>{{ module.links[link_type] }}</li>
+                {% endif %}
+              {% endfor %}
+              {# lets add a link to the uninstall page so users dont get to confused #}
+              {% if module.checkbox['#checked'] %}
+                <li><a href="admin/modules/uninstall" class="module-link module-link-uninstall">{{ "uninstall"|t }}</a></li>
+              {% endif %}
+            </ul>
+            </nav>
+          {% endif %}
+
+
+          <details class="module__information">
+            <summary>more info</summary>
+            {% if module.version %}
+              <div class="module__description">{{ 'Version: @module-version'|t({'@module-version': module.version }) }}</div>
+            {% endif %}
+
+
+            {% if module.requires %}
+              <div class="module__description">{{ 'Requires: @module-list'|t({'@module-list': module.requires }) }}</div>
+            {% endif %}
+            {% if module.required_by %}
+              <div class="module__description">{{ 'Required by: @module-list'|t({'@module-list': module.required_by }) }}</div>
+            {% endif %}
+
+          </details>
+
+
+
+
+
+          {# yes this is dirty but else filter wont work #}
+          <details class="js-form-wrapper form-wrapper visually-hidden" id="{{ module.enable_id }}-description">
+            <summary aria-controls="{{ module.enable_id }}-description" role="button" aria-expanded="false"><span class="text module-description">{{ module.description }}</span></summary>
+            <div class="details-wrapper">
+              <div class="details-description">
+                <div class="requirements">
+                  <div class="admin-requirements">{{ 'Machine name: <span dir="ltr" class="table-filter-text-source">@machine-name</span>'|t({'@machine-name': module.machine_name }) }}</div>
+                </div>
+              </div>
+            </div>
+          </details>
+
+
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>

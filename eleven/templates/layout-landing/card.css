@@ -8,10 +8,10 @@
   border: 1px solid var(--gravel);
   background-color: var(--white);
   transition: all 0.5s ease-in-out;
+  position: relative;
 }
 .card:hover {
   border-color: var(--concrete-light);
-  cursor: pointer;
 }
 .card a {
   color: var(--black);
@@ -38,6 +38,35 @@
 .card a:hover .card__text {
   color: var(--bluesky);
 }
+
+
+
+
+
+.card__notes {
+  margin: 0;
+  padding: 0;
+  background-color: var(--gravel-light);
+  color: var(--concrete);
+  font-size: 0.875rem;
+  line-height: 1rem;
+  /*padding-top: 1rem;
+  padding-bottom: 1rem;*/
+  height: 1rem
+}
+.card__notes:before {
+  display: block;
+  float: left;
+  width: 0.5rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+  background-color: var(--gravel);
+  content: "";
+}
+
+
+
+
 
 /* icons ---------------------------------------------------------------------*/
 .card__icon {
