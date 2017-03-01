@@ -289,11 +289,3 @@ td.block {
   color: var(--concrete-light);
   text-align: center
 }
-
-select.block-weight{
-  min-width: 3rem;
-  width: 3rem;
-}
-.js td .dropbutton-multiple{
-  padding-right: 5rem
-}

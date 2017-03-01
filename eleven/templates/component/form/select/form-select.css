@@ -17,6 +17,7 @@ select {
 
   -webkit-appearance: none;
      -moz-appearance: none;
+  transition: all 0.5s ease-in-out;
 }
 select:hover,
 select:focus {
@@ -71,6 +72,34 @@ select.form-select[multiple] + .select__arrow {
   padding-right: 2rem;
 }
 
+/* size variabtions  -------------------------------------------------------- */
+
+/* inside a table we want it to have the same size as the text */
+td select {
+  height: 1.5rem;
+  line-height: 1.5rem;
+}
+/* arrow */
+td .select__arrow {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: -1.5rem;
+
+}
+td .select__arrow::before {
+  top: 0.5rem;
+  left: 0.25rem;
+  width: 1rem;
+  height: 1rem;
+}
+
+/* block admin page variant */
+select.block-weight{
+  min-width: 3rem;
+  width: 3rem;
+}
+
+
 /* -----------------------------------------------------------------------------
 colors
  -----------------------------------------------------------------------------*/
@@ -78,7 +107,7 @@ select {
   border-color: var(--bluesky);
   background-color: var(--gravel-light);
   color: var(--bluesky);
-  transition: all 0.5s ease-in-out;
+
 }
 select:hover,
 select:focus {
@@ -118,7 +147,7 @@ select:focus + .select__arrow::before {
 
 
 /* Select multiple option */
-select[multiple] {
+/*select[multiple] {
   height: auto;
   min-height: 6rem;
   font-size: 1rem;
@@ -132,7 +161,7 @@ option:focus {
 
 option:checked {
   box-shadow: inset 20px 30px #1397cb;
-}
+}*/
 
 /* Elements that were selecting */
 /*
@@ -157,7 +186,7 @@ select option:not(:checked) {
 }
 
 /* was selected */
-option[selected] {
+/*option[selected] {
 }
 option[selected]:before {
   width: 1rem;
@@ -173,7 +202,7 @@ option[selected]:checked:before {
 }
 select option:hover {
   background-color: var(--brown100);
-}
+}*/
 
 
 optgroup {
