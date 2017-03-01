@@ -39,12 +39,12 @@
 {% endif %}
 
 
-<main role="main" id="main" class="pagewidth">
+<main role="main" id="main">
   <a id="main-content" tabindex="-1"></a>
 
   {# pagetop #}
   {% if page.top_first or page.top_second %}
-  <div class="L">
+  <div class="L pagewidth">
     {% if page.top_first %}<div class="w-6">{{ page.top_first }}</div>{% endif %}
     {% if page.top_second %}<div class="w-6">{{ page.top_second }}</div>{% endif %}
   </div>

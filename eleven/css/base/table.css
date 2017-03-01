@@ -1,13 +1,13 @@
 /* -- base table -------------------------------------------------------------*/
 table {
   width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   table-layout: auto;
   border-spacing: 0;
   border-collapse: collapse;
   color: black;
   font-size: 1rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
 }
 caption,
 th,
@@ -24,46 +24,41 @@ caption {
 }
 /* header --------------------------------------------------------------------*/
 th {
+  padding-left: 0.5rem;
   border: 1px solid var(--concrete-light);
-  border-right:0;
-  background-color: var(--gravel);
-  color: white;
+  border-right: 0;
+  background-color: var(--concrete);
   font-size: 1rem;
   font-weight: bold;
   text-align: left;
   white-space: nowrap;
-  text-transform: uppercase;
-  padding: 0.5rem 0.2rem;
 }
 th:last-child {
   border-right: 1px solid var(--concrete);
 }
 th,
 th a {
-  color: var(--bluesky-light);
-  font-size: 0.8rem;
+  color: var(--asphalt);
 }
 th a:hover {
-  color: #1397cb;
+  color: var(--white);
+  text-decoration: none
 }
 th.is-active a {
-  color: #1397cb;
+  color: var(--white);
 }
 .tablesort {
   width: 0.7rem;
   height: 0.7rem;
 }
 .tablesort--asc {
-  /*background-image: url(../../icons/table-arrow-up.svg);*/
+  background-image: url(icons/caret-up.svg);
 }
 .tablesort--desc {
-  /*background-image: url(../../icons/table-arrow-down.svg);*/
-}
-.sticky-header th {
-  border-right: 1px solid #ddd;
+  background-image: url(icons/caret-down.svg);
 }
 th.views-field-operations {
-  width: 7rem;
+  width: 6rem;
 }
 
 
@@ -75,22 +70,16 @@ tr:nth-of-type(odd) {
 tr:nth-of-type(odd):hover {
   background-color: var(--gravel);
 }
-tr.selected:nth-of-type(odd) {
-  background-color: var(--gravel-light);
-}
 tr:nth-of-type(odd):hover td {
   border-bottom-color: var(--bluesky);
 }
+
 /* even */
 tr:nth-of-type(even) {
   background-color: var(--gravel-light);
 }
 tr:nth-of-type(even):hover {
   background-color: var(--gravel);
-
-}
-tr.selected:nth-of-type(even) {
-
 }
 tr:nth-of-type(even):hover td {
   border-bottom-color: var(--bluesky);
@@ -105,121 +94,62 @@ td:last-child {
   border-right: 1px solid #eee;
 }
 td a {
-  color: #666;
+  color: var(--bluesky-light);
+  border-bottom: 1px solid var(--bluesky-light);
 }
 
+
+
+/* sticky header -------------------------------------------------------------*/
+.sticky-header th {
+  border-right: 1px solid #ddd;
+}
+
+
+/*selected */
+tr.selected:nth-of-type(odd) {
+  background-color: var(--rasberry-light);
+  color: var(--white);
+}
+tr.selected:nth-of-type(odd) a{
+  color: var(--white);
+  border-color:var(--white);
+}
+tr.selected:nth-of-type(even) {
+  color: var(--white);
+  background-color: var(--rasberry);
+}
+tr.selected:nth-of-type(even) a{
+  color: var(--white);
+  border-color:var(--white);
+}
+tr.selected td{
+  border-color: var(--rasberry);
+}
 /* form element corrections --------------------------------------------------*/
-td .form-item{
+td .form-item {
   margin: 0;
-  padding: 0
+  padding: 0;
 }
-td .form-item .checkbox{
-  margin-right: 0
+td .form-item .checkbox {
+  margin-right: 0;
 }
 
 
-/* -- responsive table -------------------------------------------------------*/
-/*
-The responsive table needs a little bit of js magic so we can add in the add
-names for each field.
-*/
-@media only screen and (max-width: 48em) {
-  .tableresponsive-enabled,
-  .responsive-enabled thead,
-  .responsive-enabled tbody,
-  .responsive-enabled th,
-  .responsive-enabled td,
-  .responsive-enabled tr,
-  .responsive-enabled caption {
-    display: block;
-  }
 
-  .tableresponsive-enabled {
-    overflow-x: auto;
-  }
 
-  /* Hide table headers. */
-  .responsive-enabled th {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-  }
 
-  .responsive-enabled tr {
-  }
 
-  .responsive-enabled tr td,
-  .responsive-enabled tr td:first-child,
-  .responsive-enabled .cke_editable tr th:first-child,
-  .responsive-enabled .cke_editable tr td:first-child {
-    position: relative;
-    padding: 0.5rem 0.5rem 0.5rem 8rem; /* Makes space for the :before data. */
-  }
-
-  /* Adds a "fake cell" that we can use as placeholder for the titles. */
-  .responsive-enabled tr td:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    width: 7.4rem;
-    margin: 0;
-    padding: 0.5rem;
-    color: #77afef;
-    font-family: sans-serif;
-    font-weight: bold;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-
-  .responsive-enabled tr td:before,
-  .responsive-enabled tr td {
-  }
-
-  /*
-  Reads the data-title atribute set found in  js/scripts.js ResponsiveTablefix
-  */
-  .responsive-enabled td:before {
-    content: attr(data-title);
-  }
-  .views-form table.responsive-enabled tbody > tr > td:first-child,
-  table.responsive-enabled tbody > tr > td:first-child {
-    width: 100%;
-    text-align: center;
-  }
-
-  /* hardcoded js stuff... lets fix that */
-  .sticky-header[style] {
-    top: 0 !important;
-  }
-  .sticky-header thead tr {
-    border-bottom: 1px solid #1397cb;
-    background: #77afef;
-    color: white;
-  }
-  .sticky-header thead tr a {
-    color: white;
-  }
-  .sticky-header thead th {
-    border: none;
-    border-right: 1px solid #1397cb;
-    background-color: transparent;
-    color: white;
-  }
-  .sticky-header th[style] {
-    display: inline-block !important;
-  }
-}
 
 /* dragagle handle -----------------------------------------------------------*/
 a.tabledrag-handle .handle {
-  display: none
+  display: none;
 }
 
-.draggable a.tabledrag-handle{
+.draggable a.tabledrag-handle {
+  display: block;
   width: 1rem;
   height: 1rem;
-  display: block;
   margin: 0 0.5rem;
   padding: 0;
   background-color: var(--asphalt);
@@ -237,24 +167,27 @@ a.tabledrag-handle .handle {
 }
 
 /* prvius drag */
-.drag-previous td{
+.drag-previous td {
   background-color: var(--yellowsnow-light);
   color: var(--pumpkin);
 }
-.drag-previous td.block{
+.drag-previous td.block {
   color: var(--pumpkin);
 }
-.drag-previous.draggable a.tabledrag-handle{
+.drag-previous.draggable a.tabledrag-handle {
   background-color: var(--pumpkin);
 }
 
 
 
 /*-- "add a new ..." button ----------*/
-table tr:last-child td[colspan="2"] a{
+table tr:last-child td[colspan="2"] a {
   display: inline-block;
   background-color: var(--grass);
 }
+
+
+
 
 
 /*
@@ -265,27 +198,27 @@ block layout page variation
 
 -------------------------------------------------------------------------------
 */
-#blocks .region-title{
-   background-color: var(--gravel);
-   color: var(--bluesky-light);
-   padding-top: 2rem;
+#blocks .region-title {
+  padding-top: 2rem;
+  background-color: var(--gravel);
+  color: var(--bluesky-light);
 }
-#blocks .region-title td{
+#blocks .region-title td {
+  border-bottom-color: var(--bluesky-light);
   font-size: 2rem;
   font-weight: 200;
-  border-bottom-color: var(--bluesky-light);
 }
-#blocks .region-title__action{
+#blocks .region-title__action {
   padding-left: 2rem;
 }
 
 td.block {
-  font-weight: bold;
   color: var(--asphalt-light);
+  font-weight: bold;
 }
 
-.region-message  td{
+.region-message  td {
   background-color: var(--concrete);
   color: var(--concrete-light);
-  text-align: center
+  text-align: center;
 }

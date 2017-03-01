@@ -55,12 +55,9 @@ debug
   display: block;
   width: 1rem;
   height: 1rem;
-  /*background-color: var(--white);*/
   content: "";
   transition: all 0.2s ease-in-out;
 
-          /*mask-image: var(--icon-coffee);
-  -webkit-mask-image: var(--icon-coffee);*/
   -webkit-mask-size: contain !important;
           mask-size: contain !important;
   -webkit-mask-repeat: no-repeat;
@@ -71,7 +68,7 @@ debug
 .dropbutton-toggle button,
 .dropbutton-toggle button:hover {
   height: 2rem;
-  border-left: 1px solid var(--bluesky);
+  border-left: 1px solid black;
   background-image: none;
 }
 .dropbutton-toggle button:hover:before {
@@ -83,7 +80,7 @@ ul.dropbutton > li.dropbutton-action:first-child a {
 }
 
 
-/* variations ----------------------------------------------------------------*/
+/* TD variations ----------------------------------------------------------------*/
 .js td .dropbutton-wrapper {
   min-height: 1rem;
 }
@@ -93,16 +90,20 @@ ul.dropbutton > li.dropbutton-action:first-child a {
   padding-right: 0;
 }
 
+/* small colors */
 td ul.dropbutton > li.dropbutton-action:first-child a {
-  background-image: var(--button-bluesky-small);
+  background-image: var(--button-concrete-small-rev);
   font-size: 0.875rem
 }
 td ul.dropbutton > li.dropbutton-action:first-child a:hover {
-  background-image: var(--button-bluesky-small-rev);
+  background-image: var(--button-concrete-small);
 }
 td .dropbutton-multiple.open ul.dropbutton > li.dropbutton-action:first-child a {
-  background-image: var(--button-bluesky-small-rev);
+  background-image: var(--button-concrete-small-rev);
 }
+td .dropbutton-toggle button {
+}
+
 
 td .dropbutton li a {
   padding-right: 2rem;
@@ -111,7 +112,6 @@ td .dropbutton li a {
   line-height: 1.5rem;
 
 }
-
 td .dropbutton li a:before {
   top: 0.25rem;
   left: 0.25rem;
@@ -132,35 +132,57 @@ td .dropbutton-toggle button:before {
   height: 0.75rem;
 }
 
+/* small */
+@media (max-width: 47.99em) {
+
+  .dropbutton-multiple{
+    margin-bottom: 1rem;
+    min-height: 2rem
+  }
+  .dropbutton-multiple .dropbutton li{
+    float: left
+  }
+  .dropbutton-multiple .dropbutton li a{
+    background-image: var(--button-bluesky);
+    color: var(--white);
+  }
+  .dropbutton-multiple .dropbutton .secondary-action{
+    display: block
+  }
+
+
+}/* small */
+
+
 /* drop button colors --------------------------------------------------------*/
 
 /* main button */
 ul.dropbutton > li.dropbutton-action:first-child a {
-  background-image: var(--button-bluesky);
+  background-image: var(--button-concrete);
   color: var(--white);
 }
 ul.dropbutton > li.dropbutton-action:first-child a {
-  background-image: var(--button-bluesky);
+  background-image: var(--button-concrete);
 }
 ul.dropbutton > li.dropbutton-action:first-child a:hover {
-  background-image: var(--button-bluesky-rev);
+  background-image: var(--button-concrete-rev);
 }
 .dropbutton-multiple.open ul.dropbutton > li.dropbutton-action:first-child a {
-  background-image: var(--button-bluesky-rev);
+  background-image: var(--button-concrete-rev);
 }
 
 /* toggle button icon */
 .dropbutton-toggle button {
-  border-color: var(--bluesky);
-  background-color: var(--bluesky-light);
+  border-color: var(--white-20);
+  background-color: var(--concrete);
 }
 .dropbutton-toggle button:before {
           mask-image: url(icons/reorder.svg);
   -webkit-mask-image: url(icons/reorder.svg);
 }
 .dropbutton-toggle button:hover {
-  border-color: var(--bluesky-light);
-  background-color: var(--bluesky);
+  border-color: var(--concrete-light);
+  background-color: var(--concrete);
 }
 .dropbutton-toggle button:hover:before {
           mask-image: var(--icon-down);
@@ -172,28 +194,28 @@ ul.dropbutton > li.dropbutton-action:first-child a:hover {
 
 /* secondary  */
 .dropbutton-action.secondary-action a {
-  border: 1px solid var(--bluesky-light-light);
+  border: 1px solid var(--gravel);
   border-bottom: none;
   transition: all 0.5s ease-in-out;
 }
 .dropbutton-action.secondary-action:last-child a {
-  border-bottom: 1px solid var(--bluesky-light-light);
+  border-bottom: 1px solid var(--gravel);
 }
 .dropbutton .secondary-action a {
-  background-color: var(--white-90);
+  background-color: var(--gravel-light);
   color: var(--bluesky);
   font-weight: normal;
 }
 .dropbutton .secondary-action a:hover {
-  background-color: var(--bluesky-light);
-  color: var(--white);
+  background-color: var(--gravel);
+  color: var(--bluesky);
 }
 .dropbutton .secondary-action a:before {
-  background-color: var(--bluesky-light);
+  background-color: var(--bluesky);
   transition: all 0.5s ease-in-out;
 }
 .dropbutton .secondary-action a:hover:before {
-  background-color: var(--bluesky-light-light);
+  background-color: var(--bluesky);
   transform: scale(1.2);
 }
 

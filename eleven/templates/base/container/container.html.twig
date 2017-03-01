@@ -1,0 +1,26 @@
+{%
+  set remove_classes = [
+
+  ]
+%}
+
+{%
+  set classes = [
+    has_parent ? 'js-form-wrapper',
+    attributes.id =='edit-header' ? 'view-filters-actions',
+    attributes.id =='edit-header' ? 'form-item-smallvariant',
+    attributes.id =='edit-header' ? 'pagewidth',    
+    attributes.data-drupal-selector =='edit-node-bulk-form' ? 'L-left-bottom',
+    attributes.data-drupal-selector =='edit-node-bulk-form' ? 'L-left-bottom',
+    attributes.hasclass('entity-meta') ? 'editform-sidebar',
+    attributes.hasclass('field') ? 'editform-sidebar',
+  ]
+%}
+{# attributes.hasClass('filter-guidelines') ? 'hidden':'', #}
+{# @TODO: test on classes if we wanna show this template #}
+
+<div{{ attributes.removeClass(remove_classes).addClass(classes) }}>
+
+  {{ children }}
+
+</div>

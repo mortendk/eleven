@@ -800,12 +800,12 @@ table  .L{
   }
 }
 
-.pagewidth--nopadding {
-  padding: 0;
-  margin: 0 auto;
+.fullwidth {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
 }
-
-
 /*------------------------------------------------------------------------------
 LW-[n]
 LW-[width of children elements with the class w]

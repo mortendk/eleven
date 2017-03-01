@@ -1,0 +1,94 @@
+.views-exposed-form{
+  background-color: var(--white);
+  border-top:1px solid var(--gravel-light);
+}
+.view-filters-actions{
+border-top:1px solid var(--gravel-light);
+  background-color: var(--white);
+}
+
+/*
+Form item small variants wrapper class
+*/
+
+.form-item-smallvariant .form-item{
+  padding-top: 0;
+  padding-right: 2rem
+}
+/* label */
+.form-item-smallvariant label{
+  display: block;
+  font-weight: bold;
+  font-size: 0.75rem;
+  /*color: var(--ashalt-light);*/
+}
+
+/* select form small */
+.form-item-smallvariant form-item--select{
+  padding-right: 0
+}
+.form-item-smallvariant select {
+  height: 1.5rem;
+  /*border-color: var(--concrete);
+  background-color: var(--concrete-light);
+  color: var(--asphalt-light);*/
+  max-width: 15rem
+}
+.form-item-smallvariant .select__arrow {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-right: -1.5rem;
+  /*background-color: var(--concrete);*/
+  border: 0
+}
+.form-item-smallvariant select:hover + .select__arrow,
+.form-item-smallvariant select:focus + .select__arrow {
+  /*background-color: var(--concrete-light);*/
+}
+.form-item-smallvariant .select__arrow:before {
+  top: 0.5rem;
+  left: 0.25rem;
+}
+
+/* input */
+.form-item-smallvariant input{
+  height:1.5rem;
+  min-width:10rem;
+  line-height: 1.5rem
+}
+
+.form-item-smallvariant input[type="submit"]{
+  min-width: auto
+}
+.form-item-smallvariant .form-item__icon{
+  height: 1.5rem;
+  width: 1.5rem
+}
+.form-item-smallvariant .form-item__icon:before{
+  top: 0.25rem;
+  left: 0.25rem
+}
+
+/* form actions */
+.form-item-smallvariant .form-actions{
+  margin: 0
+}
+
+
+/*- colors -------------------------------------------------------------------*/
+.form-item-smallvariant label{
+  color: var(--ashalt-light);
+}
+/* select form small */
+.form-item-smallvariant select {
+  border-color: var(--concrete);
+  background-color: var(--gravel-light);
+  color: var(--asphalt-light);
+}
+.form-item-smallvariant .select__arrow {
+  background-color: var(--concrete);
+}
+.form-item-smallvariant select:hover + .select__arrow,
+.form-item-smallvariant select:focus + .select__arrow {
+  background-color: var(--concrete-light);
+}

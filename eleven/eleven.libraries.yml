@@ -15,7 +15,7 @@ global:
       css/theme/typography.css: {}
     component:
       css/component/icon.css: {}
-      css/component/button.css: {}      
+      css/component/button.css: {}
   js:
     js/eleven.js: {}
   dependencies:
@@ -59,11 +59,14 @@ admin.config:
     theme:
       templates/layout-landing/config/admin-config.css: {}
 
+# TODO: add a more specific lib name ala views.overview
 views:
   css:
     theme:
       templates/layout-landing/views/structure-table-views.css: {}
       templates/layout-landing/views/views-admin.css: {}
+
+
 
 # ------------------------------------------------------------------------------
 # navigation
@@ -110,6 +113,23 @@ button.action:
   css:
     theme:
       templates/component/button-action/button-action.css: {}
+
+# table
+table:
+  css:
+    theme:
+      templates/component/table/table.css: {}
+  js:
+    templates/component/table/table.js: {}
+
+# ------------------------------------------------------------------------------
+# views
+# ------------------------------------------------------------------------------
+views.exposed:
+  css:
+    theme:
+      templates/component/views/exposed/views-exposed-form.css: {}
+
 # ------------------------------------------------------------------------------
 # Modules
 # ------------------------------------------------------------------------------
@@ -118,6 +138,10 @@ modules:
     theme:
       templates/layout-landing/modules/modules.css: {}
       templates/layout-landing/modules/modules-icons.css: {}
+
+# ------------------------------------------------------------------------------
+# themes
+# ------------------------------------------------------------------------------
 
 themes:
   css:

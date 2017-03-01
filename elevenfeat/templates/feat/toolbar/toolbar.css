@@ -302,7 +302,6 @@ html:not(.cssmask) #toolbar-bar .toolbar-icon-11home::before {
   width: calc(15 * 16px);
   background-image: repeating-linear-gradient(to right, var(--gravel) 0, var(--gravel) 32px, var(--gravel-light) 32px, var(--gravel-light) );
   border-right: 1px solid var(--gravel;);
-
 }
 @media (max-width: 79.99em) {
   .toolbar-vertical #toolbar-bar .toolbar-tray {
@@ -310,7 +309,9 @@ html:not(.cssmask) #toolbar-bar .toolbar-icon-11home::before {
     background: rgba(240, 240, 240, 0.8);
   }
 }
-
+.toolbar-vertical .toolbar-menu{
+  width: 100%
+}
 
 /* active menu item */
 #toolbar-bar .toolbar-tray .toolbar-icon.is-active::before{

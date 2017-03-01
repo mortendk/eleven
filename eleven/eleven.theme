@@ -12,7 +12,6 @@ function eleven_preprocess_html(&$variables){
  }
 }
 
-
 // ----------------------------------------------------------------------------
 // admin blocks wrappers for
 ///admin

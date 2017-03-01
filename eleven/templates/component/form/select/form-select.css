@@ -5,19 +5,16 @@ select {
   height: 2rem;
   margin: 0;
   padding: 0 0.5rem;
-  border: 1px solid var(--gravel-light);
   border-right: 0;
   -webkit-border-radius: 1rem;
           border-radius: 0;
-  background-color: var(--gravel);
   font-size: 1rem;
   font-weight: normal;
-  line-height: 2;
   text-transform: none;
+  transition: all 0.5s ease-in-out;
 
   -webkit-appearance: none;
      -moz-appearance: none;
-  transition: all 0.5s ease-in-out;
 }
 select:hover,
 select:focus {
@@ -56,8 +53,6 @@ arrow
   height: 1rem;
   content: "";
 
-          mask-image: url(icons/angle-down.svg);
-  -webkit-mask-image: url(icons/angle-down.svg);
   -webkit-mask-size: contain !important;
           mask-size: contain !important;
   -webkit-mask-repeat: no-repeat;
@@ -84,7 +79,6 @@ td .select__arrow {
   width: 1.5rem;
   height: 1.5rem;
   margin-right: -1.5rem;
-
 }
 td .select__arrow::before {
   top: 0.5rem;
@@ -94,9 +88,9 @@ td .select__arrow::before {
 }
 
 /* block admin page variant */
-select.block-weight{
-  min-width: 3rem;
+select.block-weight {
   width: 3rem;
+  min-width: 3rem;
 }
 
 
@@ -107,7 +101,6 @@ select {
   border-color: var(--bluesky);
   background-color: var(--gravel-light);
   color: var(--bluesky);
-
 }
 select:hover,
 select:focus {
@@ -129,85 +122,13 @@ select:focus + .select__arrow {
 .select__arrow::before {
   background-color: var(--gravel-light);
   transition: all 0.5s ease-in-out;
+
+          mask-image: url(icons/angle-down.svg);
+  -webkit-mask-image: url(icons/angle-down.svg);
 }
+
 select:hover + .select__arrow::before,
 select:focus + .select__arrow::before {
   background-color: var(--gravel);
-  transform: translateY(0.5rem);
-}
-
-
-.required select {
-}
-.required .select__arrow {
-}
-.required select:hover + .select__arrow,
-.required select:focus + .select__arrow {
-}
-
-
-/* Select multiple option */
-/*select[multiple] {
-  height: auto;
-  min-height: 6rem;
-  font-size: 1rem;
-}
-option {
-  border-bottom: 1px dotted #ddd;
-}
-option:focus {
-  outline: 0;
-}
-
-option:checked {
-  box-shadow: inset 20px 30px #1397cb;
-}*/
-
-/* Elements that were selecting */
-/*
-option:checked {
-  box-shadow: inset 20px 30px red;
-  color: white;
-}
-select option:before{
-}
-
-option:checked:before {
-  background: url(../icons/checkbox-on.svg) no-repeat center center ;
-  background-size: 1rem;
-  width: 1rem;
-  padding-left: 2rem;
-}
-select option:not(:checked) {
-  background: url(../icons/checkbox.svg) no-repeat center center ;
-  background-size: 1rem;
-  width: 1rem;
-  padding-left: 2rem;
-}
-
-/* was selected */
-/*option[selected] {
-}
-option[selected]:before {
-  width: 1rem;
-  padding-left: 2rem;
-  background: url(../icons/checkbox.svg) no-repeat center center ;
-  background-size: 1rem;
-}
-option[selected]:checked:before {
-  width: 1rem;
-  padding-left: 2rem;
-  background: url(../icons/checkbox-on.svg) no-repeat center center ;
-  background-size: 1rem;
-}
-select option:hover {
-  background-color: var(--brown100);
-}*/
-
-
-optgroup {
-  margin: 0;
-  color: inherit;
-  font: inherit;
-  font-weight: bold;
+  transform: translateY(0.25rem);
 }
