@@ -1,16 +1,19 @@
 /* primary action local */
-.block--local-actions-block{
-  margin-bottom: 1rem
+.block--local-actions-block {
+  margin-bottom: 1rem;
 }
 
+/*-- "add a new ..." button ----------*/
+tr:last-child td[data-title="Name"] a,
 a.button.button-action {
+  position: relative;
   display: block;
   min-width: 9rem;
+  max-width: 25rem;
   margin: 0;
   padding: 0 1rem 0 2.5rem ;
   border: none;
   outline: none;
-  background-image: var(--button-rasberry);
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: auto;
@@ -20,11 +23,15 @@ a.button.button-action {
   text-align: left;
   text-decoration: none;
   transition: all 0.1s ease-in-out;
-  width: 15rem
 }
-a.button.button-action:hover{
-  text-decoration: none
+tr:last-child td[data-title="Name"] a {
+  display: inline-block;
 }
+tr:last-child td[data-title="Name"] a:hover,
+a.button.button-action:hover {
+  text-decoration: none;
+}
+tr:last-child td[data-title="Name"] a:before,
 a.button.button-action:before {
   position: absolute;
   top: 0.5rem;
@@ -32,7 +39,6 @@ a.button.button-action:before {
   display: block;
   width: 1rem;
   height: 1rem;
-  background-color: var(--rasberry-light);
   content: "";
   transition: all 0.2s ease-in-out;
 
@@ -44,18 +50,21 @@ a.button.button-action:before {
           mask-repeat: no-repeat;
 }
 /* color ---------------------------------------------------------------------*/
+tr:last-child td[data-title="Name"] a,
 a.button.button-action {
   background-image: var(--button-rasberry);
   color: var(--white);
 }
-a.button.button-action:hover{
+tr:last-child td[data-title="Name"] a:hover,
+a.button.button-action:hover {
   background-image: var(--button-rasberry-rev);
   color: var(--white);
 }
-a.button.button-action:before{
+tr:last-child td[data-title="Name"] a:before,
+a.button.button-action:before {
   background-color: var(--white);
 }
+tr:last-child td[data-title="Name"] a:hover:before,
 a.button.button-action:hover:before {
   background-color: var(--white);
-
 }

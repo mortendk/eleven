@@ -191,14 +191,6 @@ td .tabledrag-changed {
 
 
 
-/*-- "add a new ..." button ----------*/
-table tr:last-child td[colspan="2"] a {
-  display: inline-block;
-  background-color: var(--grass);
-}
-
-
-
 
 
 /*
