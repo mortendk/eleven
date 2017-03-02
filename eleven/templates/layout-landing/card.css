@@ -3,12 +3,12 @@
 }
 
 .card {
+  position: relative;
   margin-bottom: 1rem;
   padding: 1rem;
   border: 1px solid var(--gravel);
   background-color: var(--white);
   transition: all 0.5s ease-in-out;
-  position: relative;
 }
 .card:hover {
   border-color: var(--concrete-light);
@@ -40,19 +40,16 @@
 }
 
 
-
-
-
 .card__notes {
+  /*padding-top: 1rem;
+  padding-bottom: 1rem;*/
+  height: 1rem;
   margin: 0;
   padding: 0;
   background-color: var(--gravel-light);
   color: var(--concrete);
   font-size: 0.875rem;
   line-height: 1rem;
-  /*padding-top: 1rem;
-  padding-bottom: 1rem;*/
-  height: 1rem
 }
 .card__notes:before {
   display: block;
@@ -66,10 +63,9 @@
 
 
 
-
-
-/* icons ---------------------------------------------------------------------*/
+/* card icons ---------------------------------------------------------------------*/
 .card__icon {
+  position: relative;
   float: left;
   width: 4rem;
   height: 4rem;
@@ -78,18 +74,30 @@
   transition: all 0.5s ease-in-out;
 }
 .card__icon::before {
+  position: absolute;
   top: 0.5rem;
   left: 0.5rem;
+  display: block;
   width: 3rem;
   height: 3rem;
   background-color: var(--white);
+  background-image: none ! important; /* yes we wanna make sure no module have fun here */
+  content: "";
+  transition: 0.5s ease-in;
+
+          mask-image: var(--icon-coffee);
+  -webkit-mask-image: var(--icon-coffee);
+  -webkit-mask-size: contain !important;
+          mask-size: contain !important;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
 }
 .card__icon:hover:before {
   background-color: var(--white);
 }
 
 .card:hover .card__icon {
-  animation: iconpulse 1s infinite;
+  animation: iconpulse 1.5s infinite;
 }
 @keyframes iconpulse {
   0% {
@@ -104,43 +112,78 @@
 .card:nth-of-type(8n+1) .card__icon {
   background-color: var(--grass);
 }
+.card:nth-of-type(8n+1) .card__icon:before {
+  background-color: var(--grass-light);
+}
+
 .card:nth-of-type(8n+2) .card__icon {
   background-color: var(--strawberry);
 }
+.card:nth-of-type(8n+2) .card__icon:before {
+  background-color: var(--strawberry-light);
+}
+
 .card:nth-of-type(8n+3) .card__icon {
   background-color: var(--yellowsnow);
 }
+.card:nth-of-type(8n+3) .card__icon:before {
+  background-color: var(--yellowsnow-light);
+}
+
 .card:nth-of-type(8n+4) .card__icon {
   background-color: var(--bluesky-light);
 }
+.card:nth-of-type(8n+4) .card__icon:before {
+  background-color: var(--bluesky-50);
+}
+
 .card:nth-of-type(8n+5) .card__icon {
   background-color: var(--asphalt-light);
 }
+.card:nth-of-type(8n+5) .card__icon:before {
+  background-color: var(--asphalt);
+}
+
 .card:nth-of-type(8n+6) .card__icon {
   background-color: var(--pumpkin);
 }
+.card:nth-of-type(8n+6) .card__icon:before {
+  background-color: var(--pumpkin-light);
+}
+
 .card:nth-of-type(8n+7) .card__icon {
   background-color: var(--strawberry-light);
 }
+.card:nth-of-type(8n+7) .card__icon:before {
+  background-color: var(--strawberry);
+}
+
 .card:nth-of-type(8n+8) .card__icon {
   background-color: var(--pumpkin-light);
+}
+.card:nth-of-type(8n+8) .card__icon:before {
+  background-color: var(--pumpkin);
 }
 
 
 /* card size variations */
-.card--small{
+.card--small {
   padding: 0.5rem;
-  border: 1px solid var(--rasberry);
 }
-.card--small  .card__icon{
+.card--small  .card__icon {
   width: 100%;
-  height: 6rem
-}
-.card--small  .card__title{
-  line-height: 1rem;
-  font-size: 1rem
+  height: 6rem;
 }
 
-.card--small  .card__text{
-  display: none
+.card--small  .card__title {
+  font-size: 1rem;
+  line-height: 1rem;
+}
+.card--small  .card__text {
+  display: none;
+}
+
+/* operations */
+.card__operations .dropbutton-multiple .dropbutton-widget {
+  width: 20rem;
 }

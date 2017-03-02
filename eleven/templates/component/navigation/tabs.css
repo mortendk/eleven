@@ -50,7 +50,7 @@ tabs
           mask-repeat: no-repeat;
 }
 .tabs li a:hover:before {
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 
 /*------------------------------------------------------------------------------
@@ -65,7 +65,7 @@ color
 }
 .tabs li a:hover {
   background-color: var(--concrete-light);
-  color: var(--gravel-light);
+  color: var(--bluesky-light);
 }
 .tabs li a:hover::before {
   background-color: var(--asphalt-light);

@@ -14,9 +14,12 @@
       <p class="card__text">
         {{ row.cells.form.content }}
         selected:? {{ row.cells.selected.content }}
-
       </p>
-      {{ row.cells.operations.content }}
+
+      <div class="card__operations">
+        {{ row.cells.operations.content }}
+      </div>
+
     </article>
   {% endfor %}
 {% endif %}

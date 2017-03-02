@@ -95,13 +95,19 @@
 
 /*people ---------------------------------------------------------------------*/
 .tabs li a[href="/admin/people"]:before {
-  -webkit-mask-image: url(icons/people.svg);
+  -webkit-mask-image: url(icons/list.svg);
+          mask-image: url(icons/list.svg);
+
 }
 .tabs li a[href="/admin/people/permissions"]:before {
-  -webkit-mask-image: url(icons/people-permission.svg);
+  -webkit-mask-image: url(icons/lock.svg);
+          mask-image: url(icons/lock.svg);
+
 }
 .tabs li a[href="/admin/people/roles"]:before {
-  -webkit-mask-image: url(icons/people-roles.svg);
+  -webkit-mask-image: url(icons/child.svg);
+          mask-image: url(icons/child.svg);
+
 }
 
 /*  block --------------------------------------------------------------------*/

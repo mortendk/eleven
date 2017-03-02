@@ -2,7 +2,9 @@ body {
 }
 main {
   background-color: var(--gravel-light);
-  padding-top: 1rem
+  padding-top: 1rem;
+  border-top: 1px solid var(--bluesky-light-light);
+
 }
 
 

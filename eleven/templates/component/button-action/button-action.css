@@ -4,10 +4,11 @@
 }
 
 /*-- "add a new ..." button ----------*/
+/**/
 tr:last-child td[data-title="Name"] a,
 a.button.button-action {
   position: relative;
-  display: block;
+  display: inline-block;
   min-width: 9rem;
   max-width: 25rem;
   margin: 0;
@@ -23,9 +24,6 @@ a.button.button-action {
   text-align: left;
   text-decoration: none;
   transition: all 0.1s ease-in-out;
-}
-tr:last-child td[data-title="Name"] a {
-  display: inline-block;
 }
 tr:last-child td[data-title="Name"] a:hover,
 a.button.button-action:hover {

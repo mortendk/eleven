@@ -1,7 +1,6 @@
 a.button {
   position: relative;
-  display: block;
-  width: 12rem;
+  display: inline-block;
   min-width: 9rem;
   margin: 0;
   padding: 0 1rem 0 2.5rem ;
