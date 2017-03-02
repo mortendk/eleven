@@ -108,23 +108,23 @@ td a {
 
 /*selected */
 tr.selected:nth-of-type(odd) {
-  background-color: var(--rasberry-light);
-  color: var(--white);
+  background-color: var(--bluesky-light-light);
+  color: var(--bluesky);
 }
 tr.selected:nth-of-type(odd) a{
-  color: var(--white);
-  border-color:var(--white);
+  color: var(--bluesky);
+  border-color:var(--bluesky);
 }
 tr.selected:nth-of-type(even) {
   color: var(--white);
-  background-color: var(--rasberry);
+  background-color: var(--bluesky-light);
 }
 tr.selected:nth-of-type(even) a{
   color: var(--white);
   border-color:var(--white);
 }
 tr.selected td{
-  border-color: var(--rasberry);
+  /*border-color: var(--rasberry);*/
 }
 /* form element corrections --------------------------------------------------*/
 td .form-item {
@@ -168,14 +168,25 @@ a.tabledrag-handle .handle {
 
 /* prvius drag */
 .drag-previous td {
-  background-color: var(--yellowsnow-light);
-  color: var(--pumpkin);
+  background-color: var(--bluesky-light-light);
+  color: var(--bluesky);
 }
 .drag-previous td.block {
-  color: var(--pumpkin);
+  color: var(--bluesky);
 }
 .drag-previous.draggable a.tabledrag-handle {
-  background-color: var(--pumpkin);
+  background-color: var(--bluesky);
+}
+
+td .tabledrag-changed {
+  background-color: var(--bluesky);
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--bluesky-light-light);
+  line-height: 1.5rem;
+  text-align: center;
+  margin-left: 1rem
 }
 
 

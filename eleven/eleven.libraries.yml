@@ -9,7 +9,7 @@ global:
       css/base/table.css: {}
     layout:
       css/layout/layout.css: {}
-      css/layout/layout-admin.css: {}
+      # css/layout/layout-admin.css: {}
     theme:
       css/theme/eleven.css: { weight: -20}
       css/theme/typography.css: {}

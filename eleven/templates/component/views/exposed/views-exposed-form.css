@@ -1,15 +1,27 @@
 .views-exposed-form{
   background-color: var(--white);
-  border-top:1px solid var(--gravel-light);
+  border-top:1px solid var(--bluesky-light-light);
+}
+.views-exposed-form:hover {
+  background-color: var(--bluesky-light-light);
+  border-top:1px solid var(--bluesky-light);
 }
 .view-filters-actions{
-border-top:1px solid var(--gravel-light);
+  border-top:1px solid var(--bluesky-light-light);
   background-color: var(--white);
 }
+.view-filters-actions:hover {
+  background-color: var(--bluesky-light-light);
+  border-top:1px solid var(--bluesky-light);
+}
 
-/*
+
+/* ----------------------------------------------------------------------------
 Form item small variants wrapper class
-*/
+
+
+TODO move into the right places ?
+------------------------------------------------------------------------------*/
 
 .form-item-smallvariant .form-item{
   padding-top: 0;

@@ -1,10 +1,10 @@
 {{ attach_library(active_theme()~'/card') }}
 
 {% if rows %}
-<section class="L LW-third">
+<section class="L LW-third pagewidth">
 
   {% for row in rows %}
-    <article {{ row.attributes.addClass('card', 'w') }}>
+    <article {{ row.attributes.addClass('w', 'card') }}>
 
       <div class="card__icon card__icon--admin-structure-contact"></div>
 

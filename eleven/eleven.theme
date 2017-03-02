@@ -12,6 +12,7 @@ function eleven_preprocess_html(&$variables){
  }
 }
 
+
 // ----------------------------------------------------------------------------
 // admin blocks wrappers for
 ///admin
@@ -73,8 +74,6 @@ function eleven_theme_suggestions_table_alter(array &$suggestions, array $variab
     if($path[4] == "manage" AND $path[6] =="translate") {
       $suggestions[] ='table__layout__translate';
     }
-
-
   }
 
   if(isset( $path[7])) {
@@ -84,7 +83,6 @@ function eleven_theme_suggestions_table_alter(array &$suggestions, array $variab
   }
 
   //$suggestions[] = 'table__layout__translate' ;
-
 }
 
 
@@ -101,6 +99,10 @@ function eleven_theme_suggestions_links_alter(array &$suggestions, array $variab
 }
 
 
+// form
+function eleven_theme_suggestions_form_alter(array &$suggestions, array $variables) {
+  $suggestions[] = 'form__' . $variables['element']['#form_id'];
+}
 
 
 use Drupal\Core\Render\Element;

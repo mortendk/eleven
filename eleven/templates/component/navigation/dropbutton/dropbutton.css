@@ -38,7 +38,6 @@ debug
   padding: 0 1rem 0 2.5rem ;
   border: none;
   outline: none;
-  color: var(--white);
   font-weight: bold;
   line-height: 2rem;
   text-align: left;
@@ -80,7 +79,10 @@ ul.dropbutton > li.dropbutton-action:first-child a {
 }
 
 
-/* TD variations ----------------------------------------------------------------*/
+/*  ---------------------------------------------------------------
+Small dropbutton
+  used in tables
+   --------------------------------------------------------------- */
 .js td .dropbutton-wrapper {
   min-height: 1rem;
 }
@@ -90,27 +92,11 @@ ul.dropbutton > li.dropbutton-action:first-child a {
   padding-right: 0;
 }
 
-/* small colors */
-td ul.dropbutton > li.dropbutton-action:first-child a {
-  background-image: var(--button-concrete-small-rev);
-  font-size: 0.875rem
-}
-td ul.dropbutton > li.dropbutton-action:first-child a:hover {
-  background-image: var(--button-concrete-small);
-}
-td .dropbutton-multiple.open ul.dropbutton > li.dropbutton-action:first-child a {
-  background-image: var(--button-concrete-small-rev);
-}
-td .dropbutton-toggle button {
-}
-
-
 td .dropbutton li a {
   padding-right: 2rem;
   padding-left: 2rem;
   font-weight: normal;
   line-height: 1.5rem;
-
 }
 td .dropbutton li a:before {
   top: 0.25rem;
@@ -132,26 +118,43 @@ td .dropbutton-toggle button:before {
   height: 0.75rem;
 }
 
+/*
+drop button on a mobile is not a good idea they are haarder to navigate so lets split em out
+*/
+
 /* small */
 @media (max-width: 47.99em) {
-
-  .dropbutton-multiple{
+  .dropbutton-multiple {
+    min-height: 2rem;
     margin-bottom: 1rem;
-    min-height: 2rem
   }
-  .dropbutton-multiple .dropbutton li{
-    float: left
+  .dropbutton-multiple .dropbutton li {
+    float: left;
   }
-  .dropbutton-multiple .dropbutton li a{
+  .dropbutton-multiple .dropbutton li a {
     background-image: var(--button-bluesky);
     color: var(--white);
   }
-  .dropbutton-multiple .dropbutton .secondary-action{
-    display: block
+  .dropbutton-multiple .dropbutton .secondary-action {
+    display: block;
   }
+}
 
 
-}/* small */
+
+/* small colors -------------------------------------------------------------*/
+td ul.dropbutton > li.dropbutton-action:first-child a {
+  background-image: var(--button-asphalt-small);
+  font-size: 0.875rem;
+}
+td ul.dropbutton > li.dropbutton-action:first-child a:hover {
+  background-image: var(--button-asphalt-small-rev);
+}
+td .dropbutton-multiple.open ul.dropbutton > li.dropbutton-action:first-child a {
+  background-image: var(--button-asphalt-small-rev);
+}
+td .dropbutton-toggle button { }
+
 
 
 /* drop button colors --------------------------------------------------------*/
@@ -174,11 +177,12 @@ ul.dropbutton > li.dropbutton-action:first-child a:hover {
 /* toggle button icon */
 .dropbutton-toggle button {
   border-color: var(--white-20);
-  background-color: var(--concrete);
+  background-color: var(--asphalt);
 }
 .dropbutton-toggle button:before {
           mask-image: url(icons/reorder.svg);
   -webkit-mask-image: url(icons/reorder.svg);
+  background-color: var(--concrete);
 }
 .dropbutton-toggle button:hover {
   border-color: var(--concrete-light);
@@ -189,8 +193,7 @@ ul.dropbutton > li.dropbutton-action:first-child a:hover {
   -webkit-mask-image: var(--icon-down);
 }
 
-.open .dropbutton-toggle button:before {
-}
+.open .dropbutton-toggle button:before { }
 
 /* secondary  */
 .dropbutton-action.secondary-action a {
@@ -224,8 +227,9 @@ ul.dropbutton > li.dropbutton-action:first-child a:hover {
 
 /* edit */
 .dropbutton .edit a:before {
-  /*-webkit-mask-image: url(icons/gears.svg);
-          mask-image: url(icons/gears.svg);*/
+  -webkit-mask-image: url(icons/pencil-square-o.svg);
+          mask-image: url(icons/pencil-square-o.svg);
+  background-color: var(--white);
 }
 
 /* storage-settings*/

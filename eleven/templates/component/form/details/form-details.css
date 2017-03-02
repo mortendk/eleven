@@ -55,6 +55,23 @@ details[open] summary::after {
   transform: rotate(90deg);
 }
 
+/* wrapper options */
+.wrapper--pagewidth-details details {
+  background-color: var(--white);
+  padding: 1rem 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--white);
+  border-top:1px solid var(--bluesky-light-light);
+  border-bottom:1px solid var(--bluesky-light-light);
+}
+.wrapper--pagewidth-details details:hover{
+  background-color: var(--bluesky-light-light);
+}
+.wrapper--pagewidth-details details .details-wrapper{
+  background-color: var(--gravel-light);
+}
+
 /* -- details colors ---------------------------------------------------------*/
 form details {
   outline: 1px solid var(--gravel);

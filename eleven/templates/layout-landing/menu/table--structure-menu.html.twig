@@ -1,12 +1,12 @@
 {{ attach_library(active_theme()~'/card') }}
 
 {% if rows %}
-<section class="L LW-third">
+<section class="L LW-third pagewidth">
 
   {% for row in rows %}
     <article {{ row.attributes.addClass('card', 'w') }}>
 
-      {{ kint(rows) }}
+
       <div class="card__icon card__icon--admin-structure-menu"></div>
       <h3 class="card__title">{{ row.cells.title.content}}</h3>
       <p class="card__text">

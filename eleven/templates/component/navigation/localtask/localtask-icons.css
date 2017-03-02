@@ -78,10 +78,19 @@
   -webkit-mask-image: url(icons/plug.svg);
           mask-image: url(icons/plug.svg);
 }
+.tabs li a[href="/admin/modules/uninstall"]{
+  background-image: var(--button-strawberry);
+  color: var(--white);
+}
+.tabs li a[href="/admin/modules/uninstall"]:hover{
+  background-image: var(--button-strawberry-rev);
+  color: var(--white);
+}
+
 .tabs li a[href="/admin/modules/uninstall"]:before {
   -webkit-mask-image: url(icons/power-off.svg);
           mask-image: url(icons/power-off.svg);
-
+  background-color: var(--white);
 }
 
 /*people ---------------------------------------------------------------------*/
@@ -200,4 +209,34 @@
 .tabs li a[href="/admin/config/development/configuration/full/export"]:before{
   -webkit-mask-image: url(icons/cloud-download.svg);
           mask-image: url(icons/cloud-download.svg);
+}
+
+
+/* delete */
+.tabs li a[href="/admin/reports/dblog/confirm"]{
+  background-image: var(--button-strawberry);
+  color: var(--white);
+}
+.tabs li a[href="/admin/reports/dblog/confirm"]:hover{
+  background-image: var(--button-strawberry-rev);
+  color: var(--white);
+}
+.tabs li a[href="/admin/reports/dblog/confirm"]::before{
+  -webkit-mask-image: var(--icon-trash);
+          mask-image: var(--icon-trash);
+          background-color: white
+}
+
+/*node delete*/
+.tabs li a[href$="/delete"]{
+  background-image: var(--button-strawberry);
+  color: var(--white);
+}
+.tabs li a[href$="/delete"]:hover{
+  background-image: var(--button-strawberry-rev);
+}
+.tabs li a[href$="/delete"]:before {
+  -webkit-mask-image: var(--icon-trash);
+          mask-image: var(--icon-trash);
+          background-color: white
 }
