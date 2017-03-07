@@ -45,14 +45,14 @@ main {
   }
 }
 /* large */
-@media (min-width: 62rem) and (max-width: 79.99rem){
+@media (min-width: 62rem) and (max-width: 81.99rem){
   .pagewidth {
     /*padding: 0 calc( (100% - 75rem) / 2 );*/
     padding-left: 1rem;
     padding-right: 1rem;
   }
 }
-@media (min-width: 80rem){
+@media (min-width: 82rem){
   .pagewidth {
     padding-left:  5rem;
     padding-right: 5rem;

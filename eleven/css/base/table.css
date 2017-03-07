@@ -12,7 +12,7 @@ table {
 caption,
 th,
 td {
-  padding: 0.5rem 0.2rem;
+  padding: 0.5rem 0;
   text-align: left;
   vertical-align: top;
 }
@@ -22,12 +22,35 @@ caption {
   text-align: center;
   text-transform: uppercase;;
 }
+
+/*cells ---------------------------------------------------------------------*/
+td {
+  border-bottom: 1px solid var(--bluesky-light-20);
+  border-left: 1px solid var(--bluesky-light-20);
+  padding-left: 0.5rem;
+}
+td:first-child {
+  border-left: none
+}
+td:last-child {
+  border-left: none
+}
+td a {
+  border-bottom: 1px solid var(--bluesky-light);
+  color: var(--bluesky-light);
+}
+
+tr:hover td {
+  border-color: var(--bluesky-50);
+}
+
+
 /* header --------------------------------------------------------------------*/
 th {
   padding-left: 0.5rem;
   border: 1px solid var(--concrete-light);
   border-right: 0;
-  background-color: var(--concrete);
+  background-color: var(--concrete-light);
   font-size: 1rem;
   font-weight: bold;
   text-align: left;
@@ -38,11 +61,11 @@ th:last-child {
 }
 th,
 th a {
-  color: var(--asphalt);
+  color: var(--black);
 }
 th a:hover {
   color: var(--white);
-  text-decoration: none
+  text-decoration: none;
 }
 th.is-active a {
   color: var(--white);
@@ -67,37 +90,13 @@ th.views-field-operations {
 tr:nth-of-type(odd) {
   background-color: var(--white);
 }
-tr:nth-of-type(odd):hover {
-  background-color: var(--gravel);
-}
-tr:nth-of-type(odd):hover td {
-  border-bottom-color: var(--bluesky);
-}
-
-/* even */
 tr:nth-of-type(even) {
   background-color: var(--gravel-light);
 }
-tr:nth-of-type(even):hover {
-  background-color: var(--gravel);
-}
-tr:nth-of-type(even):hover td {
-  border-bottom-color: var(--bluesky);
-}
 
-/*cells*/
-td {
-  border-bottom: 1px solid #eee;
-  border-left: 1px solid #eee;
+tr:hover {
+  
 }
-td:last-child {
-  border-right: 1px solid #eee;
-}
-td a {
-  color: var(--bluesky-light);
-  border-bottom: 1px solid var(--bluesky-light);
-}
-
 
 
 /* sticky header -------------------------------------------------------------*/
@@ -111,21 +110,22 @@ tr.selected:nth-of-type(odd) {
   background-color: var(--bluesky-light-light);
   color: var(--bluesky);
 }
-tr.selected:nth-of-type(odd) a{
+tr.selected:nth-of-type(odd) a {
+  border-color: var(--bluesky);
   color: var(--bluesky);
-  border-color:var(--bluesky);
 }
 tr.selected:nth-of-type(even) {
-  color: var(--white);
   background-color: var(--bluesky-light);
-}
-tr.selected:nth-of-type(even) a{
   color: var(--white);
-  border-color:var(--white);
 }
-tr.selected td{
+tr.selected:nth-of-type(even) a {
+  border-color: var(--white);
+  color: var(--white);
+}
+tr.selected td {
   /*border-color: var(--rasberry);*/
 }
+
 /* form element corrections --------------------------------------------------*/
 td .form-item {
   margin: 0;
@@ -133,95 +133,4 @@ td .form-item {
 }
 td .form-item .checkbox {
   margin-right: 0;
-}
-
-
-
-
-
-
-
-/* dragagle handle -----------------------------------------------------------*/
-a.tabledrag-handle .handle {
-  display: none;
-}
-
-.draggable a.tabledrag-handle {
-  display: block;
-  width: 1rem;
-  height: 1rem;
-  margin: 0 0.5rem;
-  padding: 0;
-  background-color: var(--asphalt);
-  transition: 0.5s ease-in;
-
-          mask-image: url(../../icons/arrows.svg);
-  -webkit-mask-image: url(../../icons/arrows.svg);
-  -webkit-mask-size: contain !important;
-          mask-size: contain !important;
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-}
-.draggable a.tabledrag-handle:hover {
-  background-color: var(--rasberry);
-}
-
-/* prvius drag */
-.drag-previous td {
-  background-color: var(--bluesky-light-light);
-  color: var(--bluesky);
-}
-.drag-previous td.block {
-  color: var(--bluesky);
-}
-.drag-previous.draggable a.tabledrag-handle {
-  background-color: var(--bluesky);
-}
-
-td .tabledrag-changed {
-  background-color: var(--bluesky);
-  display: inline-block;
-  width: 1.5rem;
-  height: 1.5rem;
-  color: var(--bluesky-light-light);
-  line-height: 1.5rem;
-  text-align: center;
-  margin-left: 1rem
-}
-
-
-
-
-
-/*
--------------------------------------------------------------------------------
-BLOCK LAYOUT PAGE
-TODO: seperate library for this page
-block layout page variation
-
--------------------------------------------------------------------------------
-*/
-#blocks .region-title {
-  padding-top: 2rem;
-  background-color: var(--gravel);
-  color: var(--bluesky-light);
-}
-#blocks .region-title td {
-  border-bottom-color: var(--bluesky-light);
-  font-size: 2rem;
-  font-weight: 200;
-}
-#blocks .region-title__action {
-  padding-left: 2rem;
-}
-
-td.block {
-  color: var(--asphalt-light);
-  font-weight: bold;
-}
-
-.region-message  td {
-  background-color: var(--concrete);
-  color: var(--concrete-light);
-  text-align: center;
 }

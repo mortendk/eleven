@@ -3,9 +3,8 @@
 ------------------------------------------------------------------------------*/
 textarea {
   width: 100%;
-  border: 1px solid var(--asphalt-light);
-  border-bottom: 1px solid var(--bluesky);
-  background-color: var(--gravel);
+  border: 1px solid var(--bluesky-light);
+  background-color: var(--gravel-light);
   color: var(--asphalt);
   font-size: 1rem;
   line-height: 1.5rem;
@@ -14,7 +13,7 @@ textarea {
 textarea:focus {
   border: 1px solid var(--bluesky-light);
   outline: 0;
-  background-color: var(--gravel-light);
+  background-color: var(--white);
 }
 
 textarea.form-textarea{

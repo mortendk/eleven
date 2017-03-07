@@ -13,6 +13,10 @@
   --bluesky-30: #5dc2e9;
   --bluesky-40: #74cbec;
   --bluesky-50: #8bd4ef;
+  --bluesky-light-50: rgba(107, 190, 228, 0.5);
+  --bluesky-light-20: rgba(107, 190, 228, 0.2);
+
+
   --rasberry: #cd255c;
   --rasberry-light: #f8608c;
   --rasberry-light-50: rgba(248, 96, 140, 0.5);
@@ -25,6 +29,11 @@
   --pumpkin-light: #f87e51;
   --yellowsnow: #f5ba41;
   --yellowsnow-light: #fcce54;
+  --yellowsnow-light-50: rgba(252, 206, 84, 0.5);
+  --yellowsnow-light-20: rgba(252, 206, 84, 0.2);
+
+
+
   --black: #000;
   --black-80: rgba(0, 0, 0, 0.8);
   --black-50: rgba(0, 0, 0, 0.5);

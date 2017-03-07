@@ -24,6 +24,10 @@ select:focus {
 .form-item--select label {
   display: inline-block;
 }
+select[multiple] {
+  height: auto;
+}
+
 
 /*
 select wrappper class for the arrow

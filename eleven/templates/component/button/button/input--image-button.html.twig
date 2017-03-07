@@ -1,0 +1,28 @@
+{{ attach_library(active_theme()~'/button') }}
+{{ attach_library(active_theme()~'/form.form') }}
+
+{% set classes = [
+  attributes.hasClass('field-plugin-settings-edit') ? 'button--edit' : '',
+  ]
+%}
+
+{% set remove_classes = [
+  'field-plugin-settings-edit',
+  'image-button'
+  ]
+%}
+
+<span class="form-item--input">
+
+{# image buttons are obsolete in html5 #}
+<input
+{{ attributes.
+  removeAttribute('src').
+  setAttribute('type','submit').
+  setAttribute('value','edit').
+  removeClass(remove_classes).
+  addClass(classes)
+}}
+/>{{ children }}
+  <div class="form-item__icon form-item__icon--{{ input_type}}"></div>
+</span>

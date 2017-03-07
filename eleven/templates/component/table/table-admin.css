@@ -1,0 +1,98 @@
+
+/* draggable -----------------------------------------------------------------*/
+a.tabledrag-handle .handle {
+  display: none;
+}
+
+.draggable a.tabledrag-handle {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  margin: 0 0.5rem;
+  padding: 0;
+  background-color: var(--bluesky);
+  transition: 0.5s ease-in;
+
+          mask-image: url(icons/arrows.svg);
+  -webkit-mask-image: url(icons/arrows.svg);
+  -webkit-mask-size: contain !important;
+          mask-size: contain !important;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+}
+.draggable a.tabledrag-handle:hover {
+  background-color: var(--rasberry);
+}
+
+.draggable td:first-child{
+  color: var(--bluesky);
+}
+
+/* previus drag */
+.drag-previous td {
+  background-color: var(--yellowsnow-light-20);
+  color: var(--pumpkin-light);
+  border-color: var(--yellowsnow);
+
+}
+.drag-previous.draggable a.tabledrag-handle {
+  background-color: var(--strawberry);
+}
+.drag-previous.draggable td:first-child{
+  color: var(--pumpkin);
+}
+/* indicator */
+td .tabledrag-changed {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 1rem;
+  color: var(--strawberry);
+  line-height: 1.5rem;
+  text-align: center;
+  border: none
+}
+
+/* form settings edit */
+.ajax-new-content {
+  background-color: var(--bluesky-light-20);
+  padding: 0.5rem;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+  margin-bottom: -0.5rem;
+}
+
+
+
+/*
+-------------------------------------------------------------------------------
+BLOCK LAYOUT PAGE
+-------------------------------------------------------------------------------
+*/
+#blocks .region-title {
+  padding-top: 2rem;
+  /*background-color: var(--bluesky-light-20);*/
+  /*color: var(--bluesky-light);*/
+}
+#blocks tr.region-title td {
+  padding: 1rem;
+  border-top: 1px solid var(--bluesky-light);
+  border-bottom: 1px solid  var(--bluesky-light);
+  font-size: 1.5rem;
+  font-weight: 100;
+
+}
+#blocks .region-title__action {
+
+}
+.region-message  td {
+  background-color: var(--gravel-light);
+  color: var(--pumpkin);
+  text-align: center;
+}
+
+
+td input.field-weight {
+  width: 3rem;
+  min-width: 3rem
+}

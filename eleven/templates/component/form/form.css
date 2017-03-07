@@ -1,10 +1,25 @@
 form { }
 
+form.pagewidth{
+  border-top: 1px solid var(--rasberry);
+  padding: 0 3rem
+}
+
+.form-item--inline {
+  display: inline-block;
+}
+
 .form-item,
 .form-actions {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
+.ajax-new-content .form-item {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+
 
 .label,
 .form-item label,
@@ -33,6 +48,7 @@ form { }
   font-size: 0.875rem;
   line-height: 1rem;
   color: var(--asphalt-light);
+  max-width: 40rem
 }
 
 
@@ -46,9 +62,6 @@ form { }
 
 
 
-button.link {
-  color: var(--bluesky-light);
-}
 
 .container-inline div,
 .container-inline label {
@@ -60,35 +73,6 @@ button.link {
 /*------------------------------------------------------------------------------
   widgets
 ------------------------------------------------------------------------------*/
-
-/* vertical tabs */
-/*.vertical-tabs__menu {
-  border-color: var(--concrete-light);
-}
-.vertical-tabs__menu-item {
-  border: 1px solid var(--concrete-light);
-}
-.vertical-tabs__menu-item a{
-  background-color: var(--concrete);
-  text-decoration: none
-}
-.vertical-tabs__menu-item a .vertical-tabs__menu-item-title{
-  color: var(--gravel);
-}
-.vertical-tabs__menu-item a:hover{
-  text-decoration: none;
-  background-color: var(--concrete-light);
-}
-.vertical-tabs__menu-item.is-selected a{
-  background-color: var(--concrete-light);
-}
-.vertical-tabs__menu-item.is-selected a .vertical-tabs__menu-item-title{
-  color: var(--asphalt-light);
-}
-.vertical-tabs__panes details{
-  background-color: var(--concrete-light);
-}*/
-
 
 /* admin edit  link in forms */
 .form-item .admin-link {

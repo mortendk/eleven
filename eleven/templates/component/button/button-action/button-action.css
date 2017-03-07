@@ -40,8 +40,8 @@ a.button.button-action:before {
   content: "";
   transition: all 0.2s ease-in-out;
 
-          mask-image: url(icons/plus-circle.svg);
-  -webkit-mask-image: url(icons/plus-circle.svg);
+          mask-image: url(../icons/plus-circle.svg);
+  -webkit-mask-image: url(../icons/plus-circle.svg);
   -webkit-mask-size: contain !important;
           mask-size: contain !important;
   -webkit-mask-repeat: no-repeat;

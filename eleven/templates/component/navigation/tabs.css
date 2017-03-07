@@ -36,7 +36,7 @@ tabs
   display: block;
   width: 1rem;
   height: 1rem;
-  background-color: white;
+  background-color: var(--bluesky);
   background-image: none ! important; /* yes we wanna make sure no module have fun here */
   content: "";
   transition: 0.5s ease-in;
@@ -47,6 +47,7 @@ tabs
           mask-size: contain !important;
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
+
 }
 .tabs li a:hover:before {
   transform: scale(1.2);
@@ -69,7 +70,7 @@ color
   color: var(--white);
 }
 .tabs li a::before {
-  background-color: var(--bluesky-light-light);
+  background-color: var(--bluesky);
 }
 .tabs li a:hover {
   background-color: var(--bluesky-light);

@@ -15,7 +15,7 @@ global:
       css/theme/typography.css: {}
     component:
       css/component/icon.css: {}
-      templates/component/button/button.css: {}
+      templates/component/button/link-button.css: {}
   js:
     js/eleven.js: {}
   dependencies:
@@ -110,19 +110,24 @@ button:
       templates/component/button/button/form-button.css: {}
       templates/component/button/button/form-input-submit.css: {}
 
-
 button.action:
   css:
     theme:
       templates/component/button/button-action/button-action.css: {}
 
 # table
-table:
+table.responsive:
   css:
     theme:
-      templates/component/table/table.css: {}
+      templates/component/table/table-responsive.css: {}
   js:
     templates/component/table/table.js: {}
+
+table.admin:
+  css:
+    theme:
+      templates/component/table/table-admin.css: {}
+
 
 # ------------------------------------------------------------------------------
 # views

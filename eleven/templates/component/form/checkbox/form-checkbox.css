@@ -13,26 +13,36 @@ input[type=checkbox] {
 .form-item--checkbox {
   margin-bottom: 0.5rem;
 }
+.form-item--checkbox .form-item__description {
+  margin-left: 2rem;
+  max-width: 40rem
 
-/* checkbox ------------------------------------------------------------------*/
+}
+
 .checkbox {
   position: relative;
   display: inline-block;
   margin-right: 0.5rem;
-  line-height: 1rem;
+  line-height: 1.5rem;
 }
-
 /* hide the checkbox and use the label for visual */
 .form-item--checkbox input[type=checkbox] {
   visibility: hidden;
 }
 
+
+
+/* checkbox ------------------------------------------------------------------*/
+/*
+the trick is simpel were using 2 * label and using the first as the visual checkbox
+*/
+
 .checkbox input[type=checkbox] + label {
   position: absolute;
   top: 0;
   left: 0;
-  width: 1rem;
-  height: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
   padding: 0;
   line-height: 1rem;
   text-indent: -999rem;
@@ -41,16 +51,17 @@ input[type=checkbox] {
 }
 .checkbox input[type=checkbox] + label::before {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0.25rem;
+  left: 0.25rem;
   display: block;
   width: 1rem;
   height: 1rem;
+  background-color: white;
   content: "";
   transition: all 0.5s ease-in-out;
 
-          mask-image: var(--icon-coffee);
-  -webkit-mask-image: var(--icon-coffee);
+          mask-image: url(icons/check.svg);
+  -webkit-mask-image: url(icons/check.svg);
   -webkit-mask-size: contain !important;
           mask-size: contain !important;
   -webkit-mask-repeat: no-repeat;
@@ -59,10 +70,12 @@ input[type=checkbox] {
 
 .checkbox__title {
   display: inline-block;
-  margin-left: 0.5rem;
+  margin-left: 1rem;
+
 }
 .checkbox__title label {
   padding: 0;
+  line-height: 1.5rem;
 }
 .checkbox input[type=checkbox]:focus + label + .checkbox__title label,
 .checkbox input[type=checkbox]:hover + label + .checkbox__title label {
@@ -70,98 +83,53 @@ input[type=checkbox] {
 }
 
 
-/* -- Checkbox Slide ---------------------------------------------------------*/
-.checkbox--slide {
-  position: relative;
-  display: inline-block;
-  width: 3rem;
-  height: 2rem;
-  background-color: var(--bluesky-light);
-  line-height: 1.5rem;
-}
-
-.checkbox--slide input[type=checkbox] + label {
-  top: 0.5rem;
-  left: 0.25rem;
-  width: 1rem;
-  height: 1rem;
-}
-.checkbox--slide input[type=checkbox]:checked + label {
-  left: 1.75rem;
-}
-
-.checkbox--slide input[type=checkbox] + label::before {
-  background-color: var(--white);
-
-  width: 1rem;
-  height: 1rem;
-
-          mask-image: url(icons/times.svg);
-  -webkit-mask-image: url(icons/times.svg);
-}
-
-.checkbox--slide input[type=checkbox]:checked + label::before {
-  background-color: var(--white);
-
-          mask-image: url(icons/check.svg);
-  -webkit-mask-image: url(icons/check.svg);
-}
-
-
-
 /*--  colors ---------------------------------------------------------*/
-/* checkbox input color */
 
-/*
 .checkbox input[type=checkbox] + label {
+  border: 1px solid var(--bluesky);
+  background-color: var(--white);
+}
+.checkbox input[type=checkbox] + label:before {
+  background-color: var(--white);
+}
+/*hover*/
+.checkbox input[type=checkbox] + label:hover {
+  background-color: var(--white);
+  border-color: var(--bluesky);
+}
+.checkbox input[type=checkbox] + label:hover:before {
   background-color: var(--bluesky);
 }
+/* checked */
 .checkbox input[type=checkbox]:checked + label {
-  background-color: var(--bluesky);
-}
-.checkbox input[type=checkbox]:focus + label,
-.checkbox input[type=checkbox]:hover + label {
+  border-color: var(--bluesky);
   background-color: var(--bluesky-light);
 }
-.form-item--disabled .checkbox input[type=checkbox] + label,
-.form-item--disabled .checkbox input[type=checkbox]:checked + label,
-.form-item--disabled .checkbox input[type=checkbox]:focus + label,
-.form-item--disabled .checkbox input[type=checkbox]:hover + label {
-  background-color: var(--concrete);
+.checkbox input[type=checkbox]:checked + label:before {
+  background-color: var(--white);
 }
-*/
-
-/* radio icon */
-/*.checkbox input[type=checkbox] + label:before {
-  background-color: var(--bluesky-light);
-
-          mask: var(--icon-square) no-repeat;
-  -webkit-mask: var(--icon-square) no-repeat;
-}
-
-.checkbox input[type=checkbox]:checked + label:before{
-  background-color: var(--gravel-light);
-
-          mask: var(--icon-square-check) no-repeat;
-  -webkit-mask: var(--icon-square-check) no-repeat;
-}
-.checkbox input[type=checkbox]:focus + label:before,
-.checkbox input[type=checkbox]:hover + label:before {
-  background-color: var(--bluesky-10);
-
-          mask: var(--icon-square-check) no-repeat;
-  -webkit-mask: var(--icon-square-check) no-repeat;
-}
-.checkbox input[type=checkbox]:checked:focus + label:before,
-.checkbox input[type=checkbox]:checked:hover + label:before {
-    background-color: var(--gravel-light);
-}*/
-
-
-/* title when an element is checked */
 .checkbox input[type=checkbox]:checked + label + .checkbox__title label {
   color: var(--bluesky);
 }
+
+
+/* disabled */
+.checkbox input[type=checkbox]:disabled + label {
+  border-color: var(--concrete);
+  background-color: var(--concrete-light);
+}
+.checkbox input[type=checkbox]:disabled + label:before {
+  mask-image: url(icons/times.svg);
+  -webkit-mask-image: url(icons/times.svg);
+  background-color: var(--gravel);
+  width: 0.875rem
+}
+.checkbox input[type=checkbox]:disabled+ label + .checkbox__title label {
+  color: var(--concrete);
+  font-weight: 100
+
+}
+
 
 
 /*

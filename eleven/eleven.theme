@@ -38,7 +38,6 @@ function eleven_preprocess_admin_block_content(&$variables) {
 
 }
 
-
 // ----------------------------------------------------------------------------
 // Tables
 // dont want to use tables for layouts of admin pages content.
