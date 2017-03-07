@@ -5,6 +5,7 @@ input[type="submit"] {
   color: var(--white);
   font-weight: bold;
   line-height: 2;
+  border: none
 }
 input[type="submit"] + .form-item__icon {
   background-color: var(--bluesky-light);
@@ -77,12 +78,12 @@ input[type="submit"].js-hide + .form-item__icon {
   background-image: var(--button-bluesky-rev);
 }
 .form-actions a.button:hover:before {
-  transform: rotate(90deg);
+  transform: rotate(180deg);
 }
 
 
 
-/* button link colors  */
+/* button delete  */
 .form-actions a.button--danger {
   background-image: var(--button-strawberry);
 }
@@ -91,4 +92,25 @@ input[type="submit"].js-hide + .form-item__icon {
 }
 .form-actions a.button--danger:active {
   background-image: var(--button-strawberry-active);
+}
+.form-actions a.button:before {
+  mask-image: var(--icon-trash);
+-webkit-mask-image: var(--icon-trash);
+
+}
+
+
+/* primary */
+input[type="submit"].button--primary{
+  background-color: var(--grass-light);
+  margin-right: 1rem
+}
+input[type="submit"].button--primary + .form-item__icon {
+  background-color: var(--grass);
+}
+input[type="submit"].button--primary:hover{
+  background-color: var(--grass);
+}
+input[type="submit"].button--primary:hover + .form-item__icon {
+  background-color: var(--grass-light);
 }

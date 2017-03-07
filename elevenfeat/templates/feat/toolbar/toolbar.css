@@ -71,7 +71,7 @@ body.is-edit-ui-toolbar-opened #toolbar-bar .toolbar-bar,
   position: relative;
   display: block;
   margin: 0;
-  padding: 0 calc( 0.5 * 16px ) 0 calc( 2.5 * 16px );
+  padding: 0 8px 0 calc( 2.5 * 16px );
   outline: none;
   background-image: none;
   background-image: var(--button-bluesky-solid);
@@ -170,12 +170,12 @@ html:not(.cssmask) #toolbar-bar .toolbar-icon-11home::before {
 
 @media (max-width: 47.99rem) {
   #toolbar-bar .toolbar-tab .toolbar-item.trigger {
-    width: calc( 3 * 16px );
-    min-width: calc( 3 * 16px );
+    width: 48px;
+    min-width:  48px;
     text-indent: -999rem;
   }
   #toolbar-bar .toolbar-icon.trigger:before {
-    left: calc( 3 * 16px );
+    left: 1rem;
   }
 }
 

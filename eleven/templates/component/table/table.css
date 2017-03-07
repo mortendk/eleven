@@ -3,6 +3,14 @@ table{
   margin-left: auto;
   margin-right: auto;
 }
+@media (min-width: 80em) {
+  .pagewidth table.fullwidth-fix{
+    margin-left: -4.5rem;
+    width: calc(100% + 9rem);
+
+  }
+}
+
 
 /* -- responsive table -------------------------------------------------------*/
 /*

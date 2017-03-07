@@ -8,3 +8,8 @@
 .localtask__lvl2 a{
   color: var(--concrete);
 }
+@media (max-width: 47.99em) {
+  .localtask__lvl1{
+    padding-left: 0
+  }
+}

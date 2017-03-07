@@ -2,15 +2,14 @@
 template: form-element--radio.html.twig
 */
 input[type=radio] {
-  height: 1rem
+  height: 1rem;
 }
 .form-radios {
-  margin: 1rem
+  margin: 1rem;
 }
-.form-item--radio{
-  margin-bottom: 0.5rem
+.form-item--radio {
+  margin-bottom: 0.5rem;
 }
-
 
 /* radio ------------------------------------------------------------------*/
 .radio {
@@ -23,31 +22,33 @@ input[type=radio] {
   visibility: hidden;
 }
 
-
 .radio input[type=radio] + label {
   position: absolute;
   top: 0;
   left: 0;
-  width: 1rem;
-  height: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
   padding: 0;
-  border-radius: 0.5rem;
-  line-height: 1rem;
+  border-radius: 1rem;
+  line-height: 1.5rem;
   text-indent: -999rem;
   cursor: pointer;
+  border:1px solid var(--bluesky);
 }
 .radio input[type=radio] + label::before {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0.3rem;
+  left: 0.2rem;
   display: block;
   width: 1rem;
   height: 1rem;
   content: "";
   transition: all 0.5s ease-in-out;
 
-  -webkit-mask-size: contain ! important;
-          mask-size: contain ! important;
+  -webkit-mask-size: contain !important;
+          mask-size: contain !important;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
 }
 
 .radio__title {
@@ -66,14 +67,15 @@ input[type=radio] {
 
 /* radio input color */
 .radio input[type=radio] + label {
-  background-color: var(--bluesky);
+  background-color: var(--white);
+  border-color:var(--bluesky);
 }
 .radio input[type=radio]:checked + label {
   background-color: var(--bluesky-light);
 }
 .radio input[type=radio]:focus + label,
 .radio input[type=radio]:hover + label {
-  background-color: var(--bluesky-light);
+  background-color: var(--bluesky-light-light);
 }
 .form-item--disabled .radio input[type=radio] + label,
 .form-item--disabled .radio input[type=radio]:checked + label,
@@ -84,25 +86,26 @@ input[type=radio] {
 
 /* radio icon */
 .radio input[type=radio] + label:before {
-  background-color: var(--bluesky-30);
+  background-color: var(--gravel);
 
-          mask: var(--icon-circle) no-repeat;
-  -webkit-mask: var(--icon-circle) no-repeat;
+          mask-image: url(icons/check.svg);
+  -webkit-mask-image: url(icons/check.svg);
+
 }
 .radio input[type=radio]:checked + label:before,
 .radio input[type=radio]:checked:focus + label:before,
 .radio input[type=radio]:checked:hover + label:before {
   background-color: white;
 
-          mask: var(--icon-circle-dot) no-repeat;
-  -webkit-mask: var(--icon-circle-dot) no-repeat;
+          mask-image: url(icons/check.svg);
+  -webkit-mask-image: url(icons/check.svg);
 }
 .radio input[type=radio]:focus + label:before,
 .radio input[type=radio]:hover + label:before {
-  background-color: var(--gravel);
+  background-color: var(--bluesky-light);
 
-          mask: var(--icon-circle) no-repeat;
-  -webkit-mask: var(--icon-circle) no-repeat;
+  mask-image: url(icons/check.svg);
+-webkit-mask-image: url(icons/check.svg);
 }
 
 

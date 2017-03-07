@@ -28,7 +28,6 @@ tabs
   transition: all 0.5s ease-in-out;
 }
 .tabs li a:hover {
-  /*background-image: var(--button-bluesky-rev);*/
 }
 .tabs li a:before {
   position: absolute;
@@ -53,35 +52,42 @@ tabs
   transform: scale(1.2);
 }
 
+@media (max-width: 47.99em) {
+  .localtask__lvl1{
+    padding-left: 0
+  }
+  .tabs li {
+    width: 100%;
+  }
+}
+
 /*------------------------------------------------------------------------------
 color
 ----------------------------------------------------------------------------- */
 .tabs li a {
-  background-color: var(--gravel);
-  color: var(--asphalt-light);
+  background-color: var(--bluesky-50);
+  color: var(--white);
 }
 .tabs li a::before {
-  background-color: var(--concrete);
+  background-color: var(--bluesky-light-light);
 }
 .tabs li a:hover {
-  background-color: var(--concrete-light);
-  color: var(--bluesky-light);
+  background-color: var(--bluesky-light);
 }
 .tabs li a:hover::before {
-  background-color: var(--asphalt-light);
+  background-color: var(--white);
 }
 
 /* acitve */
 .tabs li.is-active a {
-  background-color: var(--concrete-light);
-  color: var(--asphalt);
+  background-color: var(--bluesky);
+  color: var(--white);
 }
 .tabs li.is-active a::before {
-  background-color: var(--asphalt-light);
+  background-color: var(--white);
 }
 .tabs li.is-active a:hover {
 }
-
 
 
 /* tabs small*/

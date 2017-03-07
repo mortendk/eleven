@@ -764,49 +764,6 @@ table  .L{
 
 
 
-/* -- page width -------------------------------------------------------------*/
-.pagewidth {
-  width: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-/* small */
-@media (max-width: 47.99rem){
-  .pagewidth {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-/* medium */
-@media (min-width: 48rem) and (max-width: 61.99rem){
-  .pagewidth {
-    padding: 0 calc( (100% - 91rem) / 2 );
-  }
-}
-/* large */
-@media (min-width: 62rem) and (max-width: 79.99rem){
-  .pagewidth {
-    /*padding: 0 calc( (100% - 75rem) / 2 );*/
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-@media (min-width: 80rem){
-  .pagewidth {
-    padding-left:  5rem;
-    padding-right: 5rem;
-  }
-}
-
-
-
-.fullwidth {
-  width: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem;
-
-}
 /*------------------------------------------------------------------------------
 LW-[n]
 LW-[width of children elements with the class w]

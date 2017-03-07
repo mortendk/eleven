@@ -87,6 +87,15 @@ libraries-override:
       component:
         css/components/dropbutton.css: templates/component/navigation/dropbutton/dropbutton.css
 
+
+  core/drupal.vertical-tabs:
+    css:
+      component:
+        /core/themes/stable/css/core/vertical-tabs.css: templates/component/navigation/vertical-tabs/vertical-tabs.css
+        # misc/vertical-tabs.css: css/core/vertical-tabs.css
+
+
+
   # shotcut
   shortcut/drupal.shortcut:
     css:

@@ -31,6 +31,7 @@
 
   {# -- checkbox--slide / checkbox--check --------------------------------------#}
   <div class="checkbox">
+    <div class="checkbox--slide">
     {# checkbox #}
     {{ children }}
 
@@ -40,12 +41,10 @@
     this is used for the module pages admin/modules
      #}
 
-    {% if label['#title'] %}
-      {# form-element-label.html.twig #}
+        {# form-element-label.html.twig #}
       {{ label }}
-    {% else %}
-      <label for="{{ label['#id']}}"></label>
-    {% endif %}
+
+    </div>
 
     {% if label %}
       {# yes repeating the label  #}

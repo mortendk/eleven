@@ -93,16 +93,18 @@ views
 -------------------------------------------------------------------------------*/
 td[headers="view-operations-table-column"] {
 }
-
+td[data-title="Operations"] .dropbutton li.dropbutton-toggle,
 td[headers="view-operations-table-column"] .dropbutton li.dropbutton-toggle {
   display: none;
 }
+td[data-title="Operations"] .dropbutton li,
 td[headers="view-operations-table-column"] .dropbutton li {
   border: none;
   float: left;
   width: 1.5rem;
   margin-right: 0.5rem;
 }
+td[data-title="Operations"] .dropbutton li a,
 td[headers="view-operations-table-column"] .dropbutton li a {
   display: block;
   width: 1.5rem;
@@ -110,14 +112,16 @@ td[headers="view-operations-table-column"] .dropbutton li a {
   padding: 2px;
   text-indent: -9999px;
 }
-
+td[data-title="Operations"] .dropbutton li a:before,
 td[headers="view-operations-table-column"] .dropbutton li a:before{
   top: 0.25rem;
   left: 0.25rem
 }
+td[data-title="Operations"]  .dropbutton-wrapper,
 td[headers="view-operations-table-column"]  .dropbutton-wrapper {
   min-height: 1rem
 }
+td[data-title="Operations"] .dropbutton-multiple .dropbutton .secondary-action,
 td[headers="view-operations-table-column"] .dropbutton-multiple .dropbutton .secondary-action {
   display: block;
 }
