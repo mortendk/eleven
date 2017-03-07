@@ -15,7 +15,7 @@ global:
       css/theme/typography.css: {}
     component:
       css/component/icon.css: {}
-      css/component/button.css: {}
+      templates/component/button/button.css: {}
   js:
     js/eleven.js: {}
   dependencies:
@@ -40,7 +40,6 @@ card:
   css:
     theme:
       templates/layout-landing/card.css: {weight: -20}
-
 
 # ------------------------------------------------------------------------------
 # System
@@ -90,13 +89,10 @@ form.form:
   css:
     theme:
       templates/component/form/form.css: {}
-      templates/component/form/button/form-button.css: {}
-
       templates/component/form/details/form-details.css: {}
       templates/component/form/fieldset/form-fieldset.css: {}
       templates/component/form/textarea/form-textarea.css: {}
       templates/component/form/input/form-input.css: {}
-      templates/component/form/input/form-input-submit.css: {}
       templates/component/form/checkbox/form-checkbox.css: {}
       templates/component/form/radio/form-radio.css: {}
       templates/component/form/select/form-select.css: {}
@@ -108,11 +104,17 @@ form.file:
   js:
     templates/component/form/input-file/form-input-file.js: {}
 
+button:
+  css:
+    theme:
+      templates/component/button/button/form-button.css: {}
+      templates/component/button/button/form-input-submit.css: {}
+
 
 button.action:
   css:
     theme:
-      templates/component/button-action/button-action.css: {}
+      templates/component/button/button-action/button-action.css: {}
 
 # table
 table:
