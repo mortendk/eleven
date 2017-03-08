@@ -1,4 +1,7 @@
-form { }
+main form {
+  /*background-color: var(--white);*/
+  /*border-top: 1px solid var(--bluesky-light-20);*/
+}
 
 form.pagewidth{
   border-top: 1px solid var(--rasberry);

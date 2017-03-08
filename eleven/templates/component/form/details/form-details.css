@@ -6,8 +6,6 @@ form details {
   margin-top: 1rem;
   margin-bottom: 1rem;
   border: none;
-  background-color: var(--concrete-light);
-  color: var(--asphalt-light);
 }
 
 form details > .details-wrapper {
@@ -21,16 +19,34 @@ details summary:focus {
   outline: none;
 }
 
+/* summary bar ---------------------------------------------------------------*/
 details summary {
   position: relative;
   width: 100%;
-  padding: 0 0 0 0.5rem;
-  border-bottom: 1px solid black;
+  padding: 0 0 0 2.5rem;
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 100;
   line-height: 2rem;
   cursor: pointer;
 }
+/* menu icon */
+details summary::before {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  content: "";
+  transition: all 0.5s ease-in-out;
+
+  -webkit-mask-size: contain !important;
+          mask-size: contain !important;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+}
+
+
 details summary::after {
   position: absolute;
   top: 0.5rem;
@@ -41,34 +57,25 @@ details summary::after {
   content: "";
   transition: all 0.5s ease-in-out;
 
-          mask-image: var(--icon-arrow-right);
-  -webkit-mask-image: var(--icon-arrow-right);
   -webkit-mask-size: contain !important;
           mask-size: contain !important;
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
 }
-details summary:hover:after {
-  transform: rotate(90deg);
-}
-details[open] summary::after {
-  transform: rotate(90deg);
-}
+
 
 /* wrapper options */
 .wrapper--pagewidth-details details {
-  background-color: var(--white);
-  padding: 1rem 5rem;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
+  border-top: 1px solid var(--bluesky-light-light);
+  border-bottom: 1px solid var(--bluesky-light-light);
   background-color: var(--white);
-  border-top:1px solid var(--bluesky-light-light);
-  border-bottom:1px solid var(--bluesky-light-light);
 }
-.wrapper--pagewidth-details details:hover{
+.wrapper--pagewidth-details details:hover {
   background-color: var(--bluesky-light-light);
 }
-.wrapper--pagewidth-details details .details-wrapper{
+.wrapper--pagewidth-details details .details-wrapper {
   background-color: var(--gravel-light);
 }
 
@@ -80,35 +87,44 @@ form details {
 
 /* summary bar closed */
 details summary {
-  border-color: var(--concrete-light);
-  background-color: var(--gravel);
-  color: var(--bluesky-light);
+  background-image: var(--button-bluesky);
+  color: var(--white);
 }
-details summary:hover {
-  color: var(--bluesky);
+details summary::before {
+  background-color: var(--white);
+
+          mask-image: url(icons/reorder.svg);
+  -webkit-mask-image: url(icons/reorder.svg);
 }
 details summary::after {
-  background-color: var(--bluesky-light);
+  background-color: var(--white);
+
+          mask-image: url(icons/arrow-down.svg);
+  -webkit-mask-image: url(icons/arrow-down.svg);
 }
-details summary:hover:after {
-  background-color: var(--bluesky);
+details[open] summary::after {
+          mask-image: url(icons/arrow-up.svg);
+  -webkit-mask-image: url(icons/arrow-up.svg);
+}
+
+
+details summary:hover:before {
+  background-color: var(--white);
 }
 
 /* summary bar open */
 details[open] summary {
-  border-color: var(--concrete-light);
-  background-color: var(--gravel);
-  color: var(--bluesky);
+  background-image: var(--button-bluesky-rev);
+  color: var(--white);
 }
 details[open] summary:hover {
-  border-color: var(--concrete);
-  color: var(--bluesky-light);
+  background-image: var(--button-bluesky);
+  color: var(--bluesky-light-light);
 }
-details[open] summary::after {
-  background-color: var(--bluesky);
-  transform: rotate(90deg);
+details[open] summary::before {
+  background-color: var(--bluesky-light-light);
 }
-details[open] summary:hover:after {
-  background-color: var(--concrete);
-  transform: rotate(-90deg);
+details[open] summary:hover:before {
+  background-color: var(--white);
+  /*transform: rotate(-90deg);*/
 }

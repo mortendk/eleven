@@ -36,7 +36,6 @@ td:last-child {
   border-left: none
 }
 td a {
-  border-bottom: 1px solid var(--bluesky-light);
   color: var(--bluesky-light);
 }
 
@@ -95,7 +94,7 @@ tr:nth-of-type(even) {
 }
 
 tr:hover {
-  
+
 }
 
 

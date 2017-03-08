@@ -4,13 +4,29 @@ Fieldset
 fieldset {
   padding: 0 0.5rem;
   border: 0;
-  border-top: 1px solid var(--concrete);
-  border-bottom: 1px solid var(--concrete);
-  background-color: var(--white);
+  border-bottom: 1px solid var(--concrete-light);
+  background-color: var(--gravel-light);
 }
-.fieldset-legend {
-  font-weight: bold;
+
+fieldset > legend{
+  width: 100%;
+  margin-left: -0.5rem;
+  margin-right: 1rem;
+  width: calc(100% + 1rem);
+  background-color: var(--white);
+  border-top: 1px solid var(--concrete-light);
+}
+
+.fieldset-legend{
+  font-weight: 100;
   color: var(--bluesky);
+  border-bottom: 1px solid var(--bluesky-light);
+  width: 100%;
+  display: block;
+  line-height: 2rem
+
+
+
 }
 
 fieldset > .fieldset-wrapper > .form-item {

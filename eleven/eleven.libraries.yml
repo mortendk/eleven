@@ -40,6 +40,7 @@ card:
   css:
     theme:
       templates/layout-landing/card.css: {weight: -20}
+      templates/layout-landing/card-icons.css: {}
 
 # ------------------------------------------------------------------------------
 # System

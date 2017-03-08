@@ -1,0 +1,259 @@
+/* card icons ---------------------------------------------------------------------*/
+.card__icon {
+  position: relative;
+  float: left;
+  width: 4rem;
+  height: 4rem;
+  margin-right: 1rem;
+  transition: all 0.5s ease-in-out;
+  border: 1px solid var(--gravel);
+
+}
+.card__icon::before {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--white);
+  background-image: none ! important; /* yes we wanna make sure no module have fun here */
+  content: "";
+  transition: 0.5s ease-in;
+
+          mask-image: var(--icon-coffee);
+  -webkit-mask-image: var(--icon-coffee);
+  -webkit-mask-size: contain !important;
+          mask-size: contain !important;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+}
+
+.card__icon:hover:before {
+  background-color: var(--white);
+}
+.card:hover .card__icon {
+  animation: iconpulse 1.5s infinite;
+}
+@keyframes iconpulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* color variations  ---------------------------------------------------------*/
+.card:nth-of-type(8n+1) .card__icon {
+  /*background-color: var(--grass);*/
+}
+.card:nth-of-type(8n+1) .card__icon:before {
+  background-color: var(--grass-light);
+}
+
+.card:nth-of-type(8n+2) .card__icon {
+  /*background-color: var(--strawberry);*/
+}
+.card:nth-of-type(8n+2) .card__icon:before {
+  background-color: var(--strawberry-light);
+}
+
+.card:nth-of-type(8n+3) .card__icon {
+  /*background-color: var(--yellowsnow);*/
+}
+.card:nth-of-type(8n+3) .card__icon:before {
+  background-color: var(--yellowsnow-light);
+}
+
+.card:nth-of-type(8n+4) .card__icon {
+  /*background-color: var(--bluesky-light);*/
+}
+.card:nth-of-type(8n+4) .card__icon:before {
+  background-color: var(--bluesky-50);
+}
+
+.card:nth-of-type(8n+5) .card__icon {
+  /*background-color: var(--asphalt-light);*/
+}
+.card:nth-of-type(8n+5) .card__icon:before {
+  background-color: var(--asphalt);
+}
+
+.card:nth-of-type(8n+6) .card__icon {
+  /*background-color: var(--pumpkin);*/
+}
+.card:nth-of-type(8n+6) .card__icon:before {
+  background-color: var(--pumpkin-light);
+}
+
+.card:nth-of-type(8n+7) .card__icon {
+  /*background-color: var(--strawberry-light);*/
+}
+.card:nth-of-type(8n+7) .card__icon:before {
+  background-color: var(--strawberry);
+}
+
+.card:nth-of-type(8n+8) .card__icon {
+  /*background-color: var(--pumpkin-light);*/
+}
+.card:nth-of-type(8n+8) .card__icon:before {
+  background-color: var(--pumpkin);
+}
+
+
+/* icons ---------------------------------------------------------------------*/
+.card__icon--admin-structure-block::before {
+          mask-image: url(icons/th.svg);
+  -webkit-mask-image: url(icons/th.svg);
+}
+.card__icon--admin-structure-comment::before {
+          mask-image: url(icons/comments-o.svg);
+  -webkit-mask-image: url(icons/comments-o.svg);
+}
+.card__icon--admin-structure-contact::before {
+          mask-image: url(icons/envelope.svg);
+  -webkit-mask-image: url(icons/envelope.svg);
+}
+.card__icon--admin-structure-types::before {
+          mask-image: url(icons/briefcase.svg);
+  -webkit-mask-image: url(icons/briefcase.svg);
+}
+
+[class*="card__icon--admin-structure-display-modes"]::before,
+.card__icon--admin-structure-display-modes::before {
+          mask-image: url(icons/desktop.svg);
+  -webkit-mask-image: url(icons/desktop.svg);
+}
+.card__icon--admin-structure-menu::before {
+          mask-image: url(icons/reorder.svg);
+  -webkit-mask-image: url(icons/reorder.svg);
+}
+
+.card__icon--tags::before,
+.card__icon--admin-structure-taxonomy::before {
+          mask-image: url(icons/tags.svg);
+  -webkit-mask-image: url(icons/tags.svg);
+}
+.card__icon--admin-structure-views::before {
+          mask-image: url(icons/th-list.svg);
+  -webkit-mask-image: url(icons/th-list.svg);
+}
+
+/**/
+.card__icon--admin-config-people-accounts::before {
+          mask-image: url(icons/id-card.svg);
+  -webkit-mask-image: url(icons/id-card.svg);
+}
+.card__icon--admin-config-content-formats:before {
+          mask-image: url(icons/pencil.svg);
+  -webkit-mask-image: url(icons/pencil.svg);
+}
+
+
+[class*="card__icon--admin-config-search"]::before {
+          mask-image: url(icons/search.svg);
+  -webkit-mask-image: url(icons/search.svg);
+}
+
+[class*="card__icon--admin-config-services"]::before {
+          mask-image: url(icons/rss.svg);
+  -webkit-mask-image: url(icons/rss.svg);
+}
+
+
+
+
+
+[class*="card__icon--admin-config-development"]::before {
+          mask-image: url(icons/desktop.svg);
+  -webkit-mask-image: url(icons/desktop.svg);
+}
+
+[class*="card__icon--admin-config-search"]::before {
+}
+
+.card__icon--admin-config-services-rss-publishing::before {
+}
+.card__icon--admin-config-services-aggregator::before {
+}
+
+.card__icon--admin-config-system-site-information::before {
+}
+
+
+[class*="card__icon--admin-config-system-"]::before {
+          mask-image: url(icons/gears.svg);
+  -webkit-mask-image: url(icons/gears.svg);
+}
+
+.card__icon--admin-config-user-interface-shortcut::before {
+          mask-image: url(icons/bookmark-o.svg);
+  -webkit-mask-image: url(icons/bookmark-o.svg);
+}
+
+[class*="card__icon--admin-config-media-"]::before {
+          mask-image: url(icons/picture-o.svg);
+  -webkit-mask-image: url(icons/picture-o.svg);
+}
+
+[class*="card__icon--admin-config-regional-"]::before {
+          mask-image: url(icons/flag.svg);
+  -webkit-mask-image: url(icons/flag.svg);
+}
+
+.card__icon--admin-config-workflow-moderation::before {
+          mask-image: url(icons/sliders.svg);
+  -webkit-mask-image: url(icons/sliders.svg);
+}
+
+
+/* fieldtypes ----------------------------------------------------------------*/
+.card__icon--fieldtype::before {
+}
+
+.card__icon--fieldtype-text-formatted-long::before {
+          mask-image: url(icons/file-text-o.svg);
+  -webkit-mask-image: url(icons/file-text-o.svg);
+}
+
+.card__icon--fieldtype-text-formatted-long-with-summary::before {
+          mask-image: url(icons/file-text-o.svg);
+  -webkit-mask-image: url(icons/file-text-o.svg);
+}
+
+.card__icon--fieldtype-text-plain-long:before {
+          mask-image: url(icons/file-text-o.svg);
+  -webkit-mask-image: url(icons/file-text-o.svg);
+}
+
+.card__icon--fieldtype-comments::before {
+          mask-image: url(icons/comments-o.svg);
+  -webkit-mask-image: url(icons/comments-o.svg);
+}
+
+.card__icon--fieldtype-image::before {
+          mask-image: url(icons/picture-o.svg);
+  -webkit-mask-image: url(icons/picture-o.svg);
+}
+.card__icon--fieldtype-entity-reference::before {
+          mask-image: url(icons/share-alt.svg);
+  -webkit-mask-image: url(icons/share-alt.svg);
+}
+
+.card__icon--fieldtype-boolean::before {
+}
+.card__icon--fieldtype-file::before {
+          mask-image: url(icons/file-o.svg);
+  -webkit-mask-image: url(icons/file-o.svg);
+}
+.card__icon--fieldtype-list-text::before {
+          mask-image: url(icons/file-o.svg);
+  -webkit-mask-image: url(icons/file-o.svg);
+}
+
+.card__icon--fieldtype-list-text::before{
+  mask-image: url(icons/check-square.svg);
+-webkit-mask-image: url(icons/check-square.svg);
+
+}

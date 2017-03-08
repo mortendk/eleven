@@ -83,12 +83,12 @@ a.button.use-ajax:before {
           mask-image: url(icons/desktop.svg);
 }*/
 
-
+ a[href="/admin/structure/display-modes/view"],
 .form-item__description a[href="/admin/config/media/image-styles"]  {
   position: relative;
   display: inline-block;
   min-width: 9rem;
-  margin: 0;
+  margin: 0.5rem 0;
   padding: 0 1rem 0 2.5rem ;
   border: none;
   outline: none;
@@ -103,11 +103,13 @@ a.button.use-ajax:before {
   text-decoration: none;
   transition: all 0.1s ease-in-out;
 }
+a[href="/admin/structure/display-modes/view"]:hover,
 .form-item__description a[href="/admin/config/media/image-styles"]:hover {
   background-image: var(--button-bluesky-rev);
   color: var(--bluesky-light-light);
   text-decoration: none;
 }
+a[href="/admin/structure/display-modes/view"]::before,
 .form-item__description a[href="/admin/config/media/image-styles"]:before {
   position: absolute;
   top: 0.5rem;

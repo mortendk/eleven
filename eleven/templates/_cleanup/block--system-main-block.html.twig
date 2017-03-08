@@ -12,9 +12,10 @@ this template is used as a wrapper for the main content
   ]
 %}
 
-<section{{ attributes.addClass(classes).removeAttribute('id') }}>
-<h2 class="admincontent__title">{{ title }}</h2>
 {% if admin or nodeedit %}
+<section{{ attributes.addClass(classes).removeAttribute('id') }}>
+  <h2 class="admincontent__title">{{ title }}</h2>
+
 {% endif %}
 
 {{ title_prefix }}
@@ -29,7 +30,7 @@ this template is used as a wrapper for the main content
   {{ content }}
 {% endblock %}
 
-
-</section>
 {% if admin or nodeedit %}
+</section>
+
 {% endif %}
