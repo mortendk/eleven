@@ -1,0 +1,34 @@
+{% if links -%}
+<nav class="card__buttons">
+
+  <ul class="L-space width-{{ links|length}}">
+    {%- for item in links -%}
+
+
+
+      <li>
+        {%- if item.link -%}
+
+          {% if item.link['#title'].getUntranslatedString() == 'Set as default' %}
+            <a href="{{ item.link['#url']}}" title="{{ item.link['#title']}}" class="button button--theme-default">Default</a>
+          {% elseif item.link['#title'].getUntranslatedString() == 'Uninstall' %}
+            <a href="{{ item.link['#url']}}" title="{{ item.link['#title']}}" class="button button--theme-uninstall">power off  </a>
+          {% elseif item.link['#title'].getUntranslatedString() == 'Settings' %}
+            <a href="{{ item.link['#url']}}" title="{{ item.link['#title']}}" class="button button--theme-settings">prefs  </a>
+          {% elseif item.link['#title'].getUntranslatedString() == 'Install' %}
+            <a href="{{ item.link['#url']}}" title="{{ item.link['#title']}}" class="button button--theme-install">install </a>
+          {% elseif item.link['#title'].getUntranslatedString() == 'Install and set as default' %}
+            <a href="{{ item.link['#url']}}" title="{{ item.link['#title']}}" class="button button--theme-install-default">Default</a>
+          {% endif %}
+
+
+
+        {%- else -%}
+          {{ item.text }}
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+</nav>
+
+{%- endif %}

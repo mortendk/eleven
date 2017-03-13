@@ -1,15 +1,19 @@
-.table-filter {
+/*.table-filter {
   width: 40rem;
+
 }
 .table-filter .form-item__description {
   text-align: left;
-}
-form > details.package-listing {
-  margin: 0.5rem 0;
-}
-/*group wrappers*/
-.system-modules details {
+}*/
 
+
+/*form > details.package-listing {
+  margin: 0.5rem 0;
+}*/
+
+
+/*group wrappers*/
+/*.system-modules details {
 }
 
 .system-modules details summary{
@@ -17,174 +21,160 @@ form > details.package-listing {
 }
 .system-modules .details-wrapper {
   padding-top: 0.5rem;
-}
+}*/
 
 /* module listing */
 
 /* -- table resets  ----------------------------------------------------------*/
-.system-modules tbody tr.module:nth-of-type(odd),
-.system-modules tbody tr.module:nth-of-type(even) {
-  margin-bottom: 0.5rem;
-  border: none;
-  border-bottom: none;
-  background-color: #fff;
-  color: black;
-}
-.system-modules .form-item {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background-color: transparent;
-}
 .system-modules tbody td {
   display: block;
   border: none;
 }
-
 /*modules status */
 .system-modules tbody tr.module--notinstalled {
 }
 .system-modules tbody tr.module--installed {
 }
 
-/* group indicator */
-.system-modules .module--group-core {
+/*-- cards -----------------------------------------------------------------*/
+tr.card {
+  overflow: none;
+  padding: 0.5rem;
+  background-color: var(--white);
+  color: var(--black);
+}
+.card td {
+  margin: 0;
+  border: none;
 }
 
-/*-- modules -----------------------------------------------------------------*/
-.module{}
-
-.module__title {
-  margin: 0.5rem;
-  padding: 0 0.5rem 0.5rem 1.5rem;
-  border-bottom: 1px solid #eee;
-  background: #fff;
-  color: #333;
-  font-size: 0.9rem;
-  font-weight: normal;
+.card--module .card__title {
+  padding-bottom: 0.5rem;
+  color: var(--asphalt-light);
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.5rem;
   text-align: center;
-
-
-}
-label.module__title[for]:hover {
-  color: black;
 }
 
-.system-modules .module__description {
-  min-height: 3rem;
-  padding: 0.5rem;
-  font-size: 0.7rem;
+.card--module .card__icon {
+  width: calc(100% + 1.5rem);
+  height: 6rem;
+  margin-left: -1rem;
+  border: none;
+  background-color: var(--gravel-light);
+}
+.card--module .card__icon::before {
+  top: calc(50% - 1.5rem);
+  left: calc(50% - 2rem);
+  width: 4rem;
+  background-color: var(--concrete) ! important;
+}
+
+.card--module .card__text {
+  font-size: 0.875rem;
   line-height: 1;
+  color: var(--asphalt-light);
+}
+/* checkbox */
+.card--module .checkbox input[type=checkbox] + label::before {
+  top: 0.5rem;
+  left: 0.5rem;
 }
 
-.system-modules .module__information summary{
-  font-size: 0.8rem;
-
-  text-transform: none;
-  padding: 0
-
-}
-
-
-/* -- links bar --------------------------------------------------------------*/
-.module__links {
-  background-color: #f3f3f3;
-}
-.module__links li a {
-  display: block;
-  padding: 0.5rem 1rem;
-  border-left: 1px solid #d8d8d8;
-  background-color: #f3f3f3;
-}
-
-.module__links li:last-child a {
-  border-right: 1px solid #d8d8d8;
-}
-
-/* -- links --*/
-a.module-link {
-  display: block;
-  width: 1rem;
-  background: url("icons/module-help.svg") no-repeat center center;
-  background-size: 0.7rem;
-  text-indent: -999px;
-}
-a.module-link:hover {
-  background-color: #d8d8d8;
-}
-a.module-link-help {
-  background-image: url("icons/module-help.svg");
-}
-a.module-link-configure {
-  background-image: url("icons/module-config.svg");
-}
-a.module-link-permissions {
-  background-image: url("icons/module-permission.svg");
-}
-a.module-link-uninstall {
-  background-image: url("icons/module-uninstall.svg");
-}
-
-
-
-/* -- checkbox for the module install state ----------------------------------*/
-
-/* not installed */
-.system-modules .checkbox label {
-  margin-left: 5rem;
-}
-/* ready to be installed */
-.system-modules .checkbox input[type=checkbox]:checked + label {
-
-}
-
-/*module is  installed*/
-.system-modules .form-item--disabled .checkbox input[type=checkbox]:checked + label {
-  background-color: #1397CB;
-  border-left: 0.5rem solid #1397CB;
-  width: 2rem;
-  padding: 0.5rem;
-  border-radius: 0.1rem;
-  background-image: url(icons/module-status--installed.svg), repeating-linear-gradient(to right, #1397CB 0rem, #1397CB 1rem, #1397CB 1rem, #1397CB );
-}
-
-/* module cant be installed */
-.system-modules .form-item--disabled .checkbox input[type=checkbox] + label {
-  background-color: #1397CB;
-  border-left: 0.5rem solid #94270E;
-  background-image: url(icons/module-status--cantbeinstalled.svg), repeating-linear-gradient(to right, #94270E 0rem, #94270E 1rem, #EE1919 1rem, #EE1919 );
-}
-
-
-.system-modules  .checkbox input[type="checkbox"] {
+/* hide the status if the module is enabled */
+.card__modulebutton .form-item--disabled {
   visibility: hidden;
 }
+/* not installed */
+.card--module .checkbox input[type=checkbox] + label {
+  width: 10rem;
+  height: 2rem;
+  background-image: var(--button-bluesky);
+}
+.card--module .checkbox input[type=checkbox] + label:before {
+          mask-image: url(icons/plus.svg);
+  -webkit-mask-image: url(icons/plus.svg);
+}
 
-/* -- submit button ----------------------------------------------------------*/
-.system-modules .form-actions{
-  background: rgba(0, 0, 0, 0.7);
-  position: fixed;
-  width: 100%;
-  height: 5rem;
-  bottom: 0;
-  z-index: 100;
-  left:0;
+/* module set to be installed */
+.card--module .checkbox input[type=checkbox]:checked + label {
+  background-image: var(--button-grass);
+}
+.card--module .checkbox input[type=checkbox]:checked + label::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
+}
+
+/* buttons -------------------------------------------------------------------------*/
+a.module-link {
+  position: relative;
+  display: inline-block;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
   margin: 0;
-}
-.system-modules .form-actions .button{
-  float:right;
-  margin: 1rem;
+  padding: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background-image: var(--button-asphalt);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: auto;
+  color: var(--white);
+  font-weight: bold;
+  line-height: 2rem;
+  text-align: left;
+  text-decoration: none;
+  text-indent: -999px;
+  transition: all 0.1s ease-in-out;
+  overflow: hidden;
 }
 
-/* Primary (save etc)*/
-.system-modules .button.button--primary {
-  border-left-color:#82a913;
-  border-radius: 0.1rem;
-  background-image: url(icons/button-install-module.svg), repeating-linear-gradient(to right, #82a913 0rem, #82a913 1.5rem, #99c127 1.5rem, #99c127 );
+a.module-link:hover {
+  background-image: var(--button-asphalt-rev);
+  color: var(--bluesky-light-light);
+  text-decoration: none;
 }
-.system-modules .button.button--primary:hover,
-.system-modules .button.button--primary:focus {
-  border-left-color: #99c127;
-  border-radius: 0.1rem;
-  background-image: url(icons/button-install-module.svg), repeating-linear-gradient(to right, #99c127 0rem, #99c127 1.5rem, #82a913 1.5rem, #82a913 );
+a.module-link:before {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--white);
+  content: "";
+  transition: all 0.2s ease-in-out;
+
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
+  -webkit-mask-size: contain !important;
+          mask-size: contain !important;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+}
+a.module-link:hover:before {
+  transform: scale(1.2);
+}
+
+a.module-link-permissions{
+  background-image: var(--button-bluesky);
+}
+a.module-link-permissions:before {
+          mask-image: url(icons/lock.svg);
+  -webkit-mask-image: url(icons/lock.svg);
+}
+a.module-link-configure:before {
+          mask-image: url(icons/gear.svg);
+  -webkit-mask-image: url(icons/gear.svg);
+}
+a.module-link-uninstall{
+  background-image: var(--button-rasberry);
+}
+a.module-link-uninstall::before {
+  mask-image: url(icons/trash.svg);
+-webkit-mask-image: url(icons/trash.svg);
+
 }

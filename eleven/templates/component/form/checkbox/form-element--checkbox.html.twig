@@ -41,21 +41,21 @@
     this is used for the module pages admin/modules
      #}
 
-        {# form-element-label.html.twig #}
+    {# form-element-label.html.twig #}
+    {% if label['#title'] %}
       {{ label }}
-
-
-
-    {% if label %}
-      {# yes repeating the label  #}
-      <div class="checkbox__title">{{ label }}</div>
+    {% else %}
+      <label for="{{ label['#id']}}"></label>
     {% endif %}
+
+    <div class="checkbox__title">{{ label }}</div>
   </div>
 
-  <div{{ description.attributes.addClass(description_classes) }}>
-
-    {{ description.content }}
-  </div>
+  {% if description.content %}
+    <div{{ description.attributes.addClass(description_classes) }}>
+      {{ description.content }}
+    </div>
+  {% endif %}
 
   {# suffix #}
   {% if suffix is not empty %}

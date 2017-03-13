@@ -20,11 +20,11 @@
 /* card flags look at themes */
 .card__flag {
   position: absolute;
+  z-index: 2;
   top: 0;
   right: 1rem;
   width: 2rem;
   height: 2rem;
-  z-index: 2
 }
 
 .card__flag.icon-11::before {
@@ -78,10 +78,6 @@
 
 
 
-
-
-
-
 .card--theme .card__image {
   overflow: hidden;
   height: 8rem;
@@ -93,4 +89,80 @@
 
 .theme__image figcaption {
   /*display: none;*/
+}
+
+
+
+/* nav button fix */
+.width-3 li a.button{
+  min-width: 2rem;
+  width: 4rem;
+  height: 2rem;
+  overflow: hidden;
+}
+.width-2 li a.button{
+  min-width: 2rem;
+  width: 8rem
+}
+.width-1 li a.button{
+  /*min-width: 2rem;
+  width: 8rem*/
+}
+
+/* card buttons --------------------------------------------------------------*/
+.card__buttons {
+  margin-top: 1rem;
+}
+
+.card .button {
+  color: var(--white);
+}
+
+/* install */
+a.button--theme-install {
+  font-weight: 100;
+  background-image: var(--button-rasberry);
+}
+a.button--theme-install::before {
+  mask-image: url(icons/plug.svg);
+-webkit-mask-image: url(icons/plug.svg);
+}
+
+/* install as default */
+a.button--theme-install-default {
+  font-weight: 100;
+  background-image: var(--button-grass);
+}
+a.button--theme-install-default::before {
+          mask-image: url(icons/heart-o.svg);
+  -webkit-mask-image: url(icons/heart-o.svg);
+}
+
+/* set as default */
+a.button--theme-default {
+  font-weight: 100;
+  background-image: var(--button-grass);
+}
+a.button--theme-default::before {
+          mask-image: url(icons/heart.svg);
+  -webkit-mask-image: url(icons/heart.svg);
+}
+
+/* unistal*/
+a.button--theme-uninstall {
+  font-weight: 100;
+  background-image: var(--button-asphalt);
+}
+a.button--theme-uninstall::before {
+          mask-image: url(icons/power-off.svg);
+  -webkit-mask-image: url(icons/power-off.svg);
+}
+
+a.button--theme-settings {
+  font-weight: 100;
+  background-image: var(--button-bluesky);
+}
+a.button--theme-settings::before {
+          mask-image: url(icons/gears.svg);
+  -webkit-mask-image: url(icons/gears.svg);
 }

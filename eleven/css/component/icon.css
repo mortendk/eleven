@@ -35,7 +35,8 @@ button small is used on the theme page for the links
 and its not good ;)
 
 */
-.button-small ul {
+
+/*.button-small ul {
   margin-top: 1rem;
 }
 
@@ -57,7 +58,7 @@ and its not good ;)
   width: 1rem;
   height: 1rem;
   background-color: var(--bluesky);
-  background-image: none ! important; /* yes we wanna make sure no module have fun here */
+  background-image: none ! important;
   content: "";
   transition: 0.5s ease-in;
   transition: all 0.5s ease-in-out;
@@ -80,4 +81,47 @@ and its not good ;)
 }
 .button-small ul li a:hover::before {
   background-color: var(--gravel);
+}*/
+
+
+
+/*nav.icon-buttons ul {
+  margin-top: 1rem;
 }
+.icon-buttons li{
+  width: 40%;
+  display: block
+}
+.icon-buttons li a {
+  position: relative;
+  display: block;
+  background-image: var(--button-bluesky);
+  padding-left: 2rem;
+  color: var(--white);
+  height: 2rem;
+  transition: all 0.5s ease-in-out;
+
+}
+.icon-buttons ul li a::before {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--bluesky);
+  background-image: none ! important;
+  content: "";
+  transition: 0.5s ease-in;
+  transition: all 0.5s ease-in-out;
+
+          mask-image: var(--icon-coffee);
+  -webkit-mask-image: var(--icon-coffee);
+  -webkit-mask-size: contain !important;
+          mask-size: contain !important;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+}
+.icon-buttons ul li a {
+  background-color: var(--concrete-light);
+}*/

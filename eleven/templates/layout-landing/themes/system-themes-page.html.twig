@@ -3,7 +3,7 @@
 
 {% for theme_group in theme_groups %}
 
-<h2>{{ theme_group.title }}</h2>
+<h2 class="pagewidth">{{ theme_group.title }}</h2>
 
 <section{{ theme_group.attributes.addClass('L', 'LW-fifth','pagewidth') }}>
 {% for theme in theme_group.themes %}
@@ -58,10 +58,9 @@
     {% if theme.incompatible %}
       <div class="theme__incompatible">{{ theme.incompatible }}</div>
     {% else %}
-      <nav class="button-small">
-      {# look at links.html.twig #}
-      {{ theme.operations }}
-      </nav>
+
+    {# template : links-apperance.html.twig #}
+    {{ theme.operations }}
 
     {% endif %}
 

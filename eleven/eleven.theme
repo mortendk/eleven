@@ -38,14 +38,6 @@ function eleven_preprocess_admin_block_content(&$variables) {
 
 }
 
-// fix that we cant access data-drupal-selector cause of dashes in the name
-function eleven_preprocess_container(&$variables) {
-  if( isset( $variables['element']['#attributes']['data-drupal-selector'])){
-    $variables['data_drupal_selector'] = $variables['element']['#attributes']['data-drupal-selector'];
-  }  
-}
-
-
 // ----------------------------------------------------------------------------
 // Tables
 // dont want to use tables for layouts of admin pages content.

@@ -6,10 +6,10 @@
 
 {%
   set classes = [
+    attributes['data-drupal-selector'] == 'edit-node-bulk-form' ? 'L-left-bottom',
     has_parent ? 'js-form-wrapper',
     attributes.id =='edit-header' ? 'view-filters-actions',
     attributes.id =='edit-header' ? 'form-item-smallvariant',
-    data_drupal_selector == 'edit-node-bulk-form' ? 'L-left-bottom',
     attributes.hasclass('entity-meta') ? 'editform-sidebar',
     attributes.hasclass('field') ? 'editform-sidebar',
   ]
