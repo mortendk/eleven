@@ -74,7 +74,6 @@ input:placeholder-shown {
 input {
   border-color:var(--bluesky-light);
   background-color: var(--white);
-  border-left: none
 }
 .form-item__icon {
   background-color: var(--white);
@@ -108,6 +107,7 @@ input:hover + .form-item__icon::before {
 
 .form-item--search input{
   width: calc( 100% - 3rem);
+  border-left: none
 }
 .form-item__icon--search::before {
           mask-image: url(icons/search.svg);

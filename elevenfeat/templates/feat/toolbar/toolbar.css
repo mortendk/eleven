@@ -463,8 +463,8 @@ Vertical menu variation
 ------------------------------------------------------------------------------*/
 /* content */
 #toolbar-bar a.toolbar-icon-system-admin-content:before {
-  -webkit-mask-image: var(--icon-user);
-          mask-image: var(--icon-user);
+  -webkit-mask-image: var(--icon-content);
+          mask-image: var(--icon-content);
 }
 /* Structure */
 #toolbar-bar a.toolbar-icon-system-admin-structure:before {

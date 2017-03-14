@@ -4,7 +4,6 @@ main form {
 }
 
 form.pagewidth{
-  border-top: 1px solid var(--rasberry);
   padding: 0 3rem
 }
 

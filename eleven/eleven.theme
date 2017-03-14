@@ -38,14 +38,6 @@ function eleven_preprocess_admin_block_content(&$variables) {
 
 }
 
-// function eleven_preprocess_item_list(&$variables) {
-//   kint($variables);
-//
-// }
-
-
-
-
 
 // ----------------------------------------------------------------------------
 // Tables
@@ -55,7 +47,7 @@ function eleven_preprocess_admin_block_content(&$variables) {
 function eleven_theme_suggestions_table_alter(array &$suggestions, array $variables) {
   // TODO we can do better here use layout fields suggestion and translate suggestion
   $path = explode('/', \Drupal::service('path.current')->getPath());
-  //
+
   // echo "<pre>";
   // var_dump($path);
   // echo "</pre>";
@@ -92,19 +84,26 @@ function eleven_theme_suggestions_table_alter(array &$suggestions, array $variab
     $suggestions[] ='table__layout__fields';
   }
 
-  // if($path[4] == "manage" AND $path[7] =="fields") {
-  //   $suggestions[] ='table__layout__fields';
-  // }
   if(isset( $path[5])) {
     if($path[2] == "config" AND $path[5] =="fields") {
       $suggestions[] ='table__layout__fields';
     }
-  }
 
+
+    if($path[3] == "block" AND $path[5] =="types") {
+      $suggestions[] ='table__layout__customblocks';
+    }
+  }
 
 
   //$suggestions[] = 'table__layout__translate' ;
 }
+
+
+// function eleven_preprocess_dropbutton_wrapper(&$variables) {
+//   kint($variables);
+// }
+
 
 
 // -----------------------------------------------------------------------------

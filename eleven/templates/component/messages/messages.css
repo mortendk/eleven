@@ -6,6 +6,7 @@
   border-left: 1rem solid  black;
   transition: all 1s ease-out;
   color: var(--white);
+  padding: 1rem 2rem;
 }
 .messages__content {
   padding: 1rem;

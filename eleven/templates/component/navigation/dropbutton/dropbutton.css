@@ -88,11 +88,9 @@ ul.dropbutton > li.dropbutton-action:first-child a {
 }
 
 /* ----------------------------------------------------------------------------
-TD variations
-views
+Table TD variations used for views admin/content
 -------------------------------------------------------------------------------*/
-td[headers="view-operations-table-column"] {
-}
+/*td[headers="view-operations-table-column"] { }
 td[data-title="Operations"] .dropbutton li.dropbutton-toggle,
 td[headers="view-operations-table-column"] .dropbutton li.dropbutton-toggle {
   display: none;
@@ -101,16 +99,15 @@ td[data-title="Operations"] .dropbutton li,
 td[headers="view-operations-table-column"] .dropbutton li {
   border: none;
   float: left;
-  width: 1.5rem;
+  width: auto;
   margin-right: 0.5rem;
 }
 td[data-title="Operations"] .dropbutton li a,
 td[headers="view-operations-table-column"] .dropbutton li a {
   display: block;
-  width: 1.5rem;
+  width: auto;
   height: 1.5rem;
   padding: 2px;
-  text-indent: -9999px;
 }
 td[data-title="Operations"] .dropbutton li a:before,
 td[headers="view-operations-table-column"] .dropbutton li a:before{
@@ -124,7 +121,7 @@ td[headers="view-operations-table-column"]  .dropbutton-wrapper {
 td[data-title="Operations"] .dropbutton-multiple .dropbutton .secondary-action,
 td[headers="view-operations-table-column"] .dropbutton-multiple .dropbutton .secondary-action {
   display: block;
-}
+}*/
 
 /*  ---------------------------------------------------------------
 Small dropbutton
@@ -244,8 +241,7 @@ ul.dropbutton > li.dropbutton-action:first-child a:before {
   -webkit-mask-image: var(--icon-down);
 }
 
-.open .dropbutton-toggle button:before {
-}
+.open .dropbutton-toggle button:before { }
 
 /* secondary  */
 .dropbutton-action.secondary-action a,
