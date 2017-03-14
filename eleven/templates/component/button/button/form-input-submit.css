@@ -32,7 +32,8 @@ input[type="submit"].js-hide + .form-item__icon {
   margin: 1rem 0;
 }
 
-/* form actions */
+/* form actions -------------------------------------------------------------*/
+.system-modules .form-actions,
 .entity-view-display-edit-form  #edit-actions,
 .entity-form-display-edit-form #edit-actions,
 .block-admin-display-form #edit-actions {
@@ -46,19 +47,6 @@ input[type="submit"].js-hide + .form-item__icon {
   border-top: 1px solid var(--grass);
   margin: 0;
 }
-
-/*#edit-actions {
-  position: fixed;
-  z-index: 100;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 4rem;
-  margin: 0;
-  padding: 1rem;
-  border-top: 1px solid var(--grass);
-  background-color: var(--white-90);
-}*/
 
 /* links  buttons */
 .form-actions a.button {

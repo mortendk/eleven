@@ -7,6 +7,7 @@
   margin-right: 1rem;
   transition: all 0.5s ease-in-out;
   border: 1px solid var(--gravel);
+  display: block;
 
 }
 .card__icon::before {
@@ -33,7 +34,7 @@
   background-color: var(--white);
 }
 .card:hover .card__icon {
-  animation: iconpulse 1.5s infinite;
+  /*animation: iconpulse 1.5s infinite;*/
 }
 @keyframes iconpulse {
   0% {

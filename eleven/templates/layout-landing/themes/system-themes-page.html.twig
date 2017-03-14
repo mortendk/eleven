@@ -19,13 +19,13 @@
   <article{{ theme.attributes.addClass(theme_classes) }}>
 
     {%
-      set theme_flags = [
-      theme_group.state == "installed" ? 'card__flag--ok': 'card__flag--notok',
-      theme.is_default ? 'card__flag--hot',
-      theme.is_admin ? 'card__flag--superhot',
+      set theme_status = [
+      theme_group.state == "installed" ? 'card__status--installed': 'card__status--notinstalled',
+      theme.is_default ? 'card__status--themedefault',
+      theme.is_admin ? 'card__status--themeadmin',
       ]
     %}
-    <div class="icon-11 card__flag {% for item in theme_flags %}{{ item }} {% endfor %}"></div>
+    <div class="card__status {% for item in theme_status %}{{ item }} {% endfor %}"></div>
 
 
     {% if theme.screenshot %}
@@ -36,34 +36,32 @@
 
     <h3 class="card__title">{{ theme.name }}</h3>
 
-    <div class="card__text">
-      {# stop adding links n crap into the desctiption #}
-      {{ theme.description|striptags }}
-
-      {% if theme.notes %}
-      <small>{{ theme.notes|safe_join(' | ') }}</small>
-      {%- endif -%}
-
-    </div>
-
-
-    {% if theme.version %}
-    <div class="card__notes">
-      version: {{ theme.version }}
-    </div>
-
-    {% endif %}
-
     {# Display operation links if the theme is compatible. #}
     {% if theme.incompatible %}
       <div class="theme__incompatible">{{ theme.incompatible }}</div>
     {% else %}
-
-    {# template : links-apperance.html.twig #}
-    {{ theme.operations }}
-
+      {# template : links-apperance.html.twig #}
+      {{ theme.operations }}
     {% endif %}
 
+    <details class="details-summary-link">
+      <summary>{{ 'Theme information'|t }}</summary>
+
+      <ul class="card__notes">
+        {% if theme.version %}
+        <li>{{ theme.version }}</li>
+        {% endif %}
+        {% if theme.notes %}
+          <li><bold>{{ theme.notes|safe_join(' | ') }}</bold></li>
+        {%- endif -%}
+      </ul>
+
+      <div class="card__text card__text--small">
+        {# stop adding links n crap into the desctiption |striptags #}
+        {{ theme.description }}
+      </div>
+
+    </details>
 
 
   </article>

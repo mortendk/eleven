@@ -1,186 +1,229 @@
+.module__icon--::before {
+          mask-image: url(moduleicons/rss.svg);
+  -webkit-mask-image: url(moduleicons/rss.svg);
+}
+
 /*-- module icons ------------------------------------------------------------*/
-.module__icon{
-  background: url(moduleicons/drop.svg) no-repeat center center;
-  background-size: 2rem;
-  width: 2rem;
-  height:2rem;
-  margin: 0 auto;
+.module__icon--actions:before {
+          mask-image: url(moduleicons/clock-o.svg);
+  -webkit-mask-image: url(moduleicons/clock-o.svg);
+}
+.module__icon--aggregator::before {
+          mask-image: url(moduleicons/rss.svg);
+  -webkit-mask-image: url(moduleicons/rss.svg);
+}
+.module__icon--ban::before {
+          mask-image: url(moduleicons/ban.svg);
+  -webkit-mask-image: url(moduleicons/ban.svg);
+}
+.module__icon--block::before,
+.module__icon--custom-block::before {
+          mask-image: url(moduleicons/cube.svg);
+  -webkit-mask-image: url(moduleicons/cube.svg);
+}
+.module__icon--book::before {
+          mask-image: url(moduleicons/book.svg);
+  -webkit-mask-image: url(moduleicons/book.svg);
+}
+.module__icon--breakpoint::before {
+          mask-image: url(moduleicons/desktop.svg);
+  -webkit-mask-image: url(moduleicons/desktop.svg);
+}
+.module__icon--ckeditor::before,
+.module__icon--text-editor::before {
+          mask-image: url(moduleicons/italic.svg);
+  -webkit-mask-image: url(moduleicons/italic.svg);
+}
+.module__icon--automated-cron::before {
+          mask-image: url(moduleicons/truck.svg);
+  -webkit-mask-image: url(moduleicons/truck.svg);
 }
 
-.module__icon--actions{
-  background-image:url(moduleicons/module-actions.svg);
-}
-.module__icon--aggregator{
-  background-image:url(moduleicons/rss.svg);
-}
-.module__icon--block{
-  background-image:url(moduleicons/block.svg);
-}
-.module__icon--book{
-  background-image:url(moduleicons/book.svg);
-}
-.module__icon--color{
-  background-image:url(moduleicons/color.svg);
-}
-.module__icon--comment{
-  background-image:url(moduleicons/comment.svg);
-}
-.module__icon--configuration-manager{
-    background-image:url(moduleicons/configuration-manager.svg);
-}
-.module__icon--contact{
-    background-image:url(moduleicons/contact.svg);
-}
-.module__icon--custom-menu-links{
-  background-image:url(moduleicons/menu.svg);
-}
-.module__icon--menu-ui{
-  background-image:url(moduleicons/menu.svg);
-}
-.module__icon--forum{
-  background-image:url(moduleicons/forum.svg);
-}
-.module__icon--help{
-  background-image:url(moduleicons/help.svg);
-}
-.module__icon--filter{
-  background-image:url(moduleicons/filter.svg);
-}
-.module__icon--quick-edit{
-    background-image:url(moduleicons/quickedit.svg);
+.module__icon--color::before {
+          mask-image: url(moduleicons/paint-brush.svg);
+  -webkit-mask-image: url(moduleicons/paint-brush.svg);
 }
 
-.module__icon--responsive-image{
-  background-image:url(moduleicons/images.svg);
+.module__icon--comment::before {
+          mask-image: url(moduleicons/comments-o.svg);
+  -webkit-mask-image: url(moduleicons/comments-o.svg);
 }
-.module__icon--search{
-    background-image:url(moduleicons/search.svg);
+
+.module__icon--configuration-manager::before {
+          mask-image: url(moduleicons/plug.svg);
+  -webkit-mask-image: url(moduleicons/plug.svg);
 }
-.module__icon--activity-tracker{
-  background-image:url(moduleicons/tracker.svg);
+.module__icon--contact::before {
+          mask-image: url(moduleicons/plug.svg);
+  -webkit-mask-image: url(moduleicons/plug.svg);
 }
-.module__icon--automated-cron{
-  background-image:url(moduleicons/cron.svg);
+.module__icon--contextual-links::before {
+          mask-image: url(moduleicons/plug.svg);
+  -webkit-mask-image: url(moduleicons/plug.svg);
 }
-.module__icon--ban{
-  background-image:url(moduleicons/ban.svg);
+
+.module__icon--database-logging::before {
+          mask-image: url(moduleicons/plug.svg);
+  -webkit-mask-image: url(moduleicons/plug.svg);
 }
-.module__icon--ckeditor{
-  background-image:url(moduleicons/ckeditor.svg);
+
+.module__icon--field,
+.module__icon--field-ui::before {
+          mask-image: url(moduleicons/plug.svg);
+  -webkit-mask-image: url(moduleicons/plug.svg);
 }
-.module__icon--breakpoint{
-  background-image:url(moduleicons/breakpoint.svg);
+.module__icon--filter::before {
+          mask-image: url(moduleicons/plug.svg);
+  -webkit-mask-image: url(moduleicons/plug.svg);
 }
-.module__icon--contextual-links{
-  background-image:url(moduleicons/contextualinks.svg);
+
+.module__icon--forum::before {
+          mask-image: url(moduleicons/plug.svg);
+  -webkit-mask-image: url(moduleicons/plug.svg);
 }
-.module__icon--custom-block{
-  background-image:url(moduleicons/block.svg);
+.module__icon--help::before {
+          mask-image: url(moduleicons/plug.svg);
+  -webkit-mask-image: url(moduleicons/plug.svg);
 }
-.module__icon--database-logging{
-  background-image:url(moduleicons/database.svg);
+.module__icon--history::before {
+          mask-image: url(moduleicons/plug.svg);
+  -webkit-mask-image: url(moduleicons/plug.svg);
 }
-.module__icon--field{
-  background-image:url(moduleicons/field.svg);
+
+.module__icon--menu-ui::before,
+.module__icon--custom-menu-links::before {
+          mask-image: url(moduleicons/plug.svg);
+  -webkit-mask-image: url(moduleicons/plug.svg);
 }
-.module__icon--field-ui{
-  background-image:url(moduleicons/field.svg);
+
+
+.module__icon--internal-dynamic-page-cache::before {
+          mask-image: url(moduleicons/plug.svg);
+  -webkit-mask-image: url(moduleicons/plug.svg);
 }
-.module__icon--history{
-  background-image:url(moduleicons/history.svg);
+.module__icon--internal-page-cache::before {
+          mask-image: url(moduleicons/plug.svg);
+  -webkit-mask-image: url(moduleicons/plug.svg);
 }
-.module__icon--internal-dynamic-page-cache,
-.module__icon--internal-page-cache{
-  background-image:url(moduleicons/cache.svg);
+
+.module__icon--node::before {
+          mask-image: url(moduleicons/plug.svg);
+  -webkit-mask-image: url(moduleicons/plug.svg);
 }
-.module__icon--path{
-  background-image:url(moduleicons/path.svg);
+.module__icon--path::before {
+          mask-image: url(moduleicons/plug.svg);
+  -webkit-mask-image: url(moduleicons/plug.svg);
 }
-.module__icon--statistics,
-.module__icon--syslog
-{
-  background-image:url(moduleicons/chart.svg);
+
+.module__icon--quick-edit::before {
+          mask-image: url(moduleicons/plug.svg);
+  -webkit-mask-image: url(moduleicons/plug.svg);
 }
-.module__icon--tour{
-  background-image:url(moduleicons/tour.svg);
+.module__icon--responsive-image::before {
+          mask-image: url(moduleicons/plug.svg);
+  -webkit-mask-image: url(moduleicons/plug.svg);
 }
-.module__icon--system{
-  background-image:url(moduleicons/system.svg);
+.module__icon--search::before {
+          mask-image: url(moduleicons/plug.svg);
+  -webkit-mask-image: url(moduleicons/plug.svg);
 }
-.module__icon--testing{
-  background-image:url(moduleicons/test.svg);
+.module__icon--short::before {
+          mask-image: url(moduleicons/plug.svg);
+  -webkit-mask-image: url(moduleicons/plug.svg);
 }
-.module__icon--views,
-.module__icon--views-ui{
-  background-image:url(moduleicons/views.svg);
+.module__icon--statistics::before {
+          mask-image: url(moduleicons/plug.svg);
+  -webkit-mask-image: url(moduleicons/plug.svg);
 }
-.module__icon--node{
-  background-image:url(moduleicons/node.svg);
+.module__icon--syslog::before {
+          mask-image: url(moduleicons/plug.svg);
+  -webkit-mask-image: url(moduleicons/plug.svg);
 }
-.module__icon--shortcut{
-  background-image:url(moduleicons/shortcut.svg);
+
+.module__icon--system::before {
+          mask-image: url(moduleicons/plug.svg);
+  -webkit-mask-image: url(moduleicons/plug.svg);
 }
-.module__icon--text-editor{
-  background-image:url(moduleicons/texteditor.svg);
+.module__icon--taxonomy::before {
+          mask-image: url(moduleicons/plug.svg);
+  -webkit-mask-image: url(moduleicons/plug.svg);
 }
-.module__icon--update-manager{
-  background-image:url(moduleicons/updatemananager.svg);
+.module__icon--testing::before {
+          mask-image: url(moduleicons/plug.svg);
+  -webkit-mask-image: url(moduleicons/plug.svg);
 }
-.module__icon--taxonomy{
-  background-image:url(moduleicons/label.svg);
+.module__icon--toolbar::before {
+          mask-image: url(moduleicons/plug.svg);
+  -webkit-mask-image: url(moduleicons/plug.svg);
 }
-.module__icon--toolbar{
-  background-image:url(moduleicons/toolbar.svg);
+.module__icon--tour::before {
+          mask-image: url(moduleicons/plug.svg);
+  -webkit-mask-image: url(moduleicons/plug.svg);
 }
-.module__icon--user{
-  background-image:url(moduleicons/user.svg);
+
+.module__icon--update-manager::before {
+          mask-image: url(moduleicons/plug.svg);
+  -webkit-mask-image: url(moduleicons/plug.svg);
 }
-.module__icon--bigpipe{
-  background-image:url(moduleicons/bigpibe.svg);
+
+.module__icon--user::before {
+          mask-image: url(moduleicons/plug.svg);
+  -webkit-mask-image: url(moduleicons/plug.svg);
 }
+
+.module__icon--view::before,
+.module__icon--views-ui::before {
+          mask-image: url(moduleicons/plug.svg);
+  -webkit-mask-image: url(moduleicons/plug.svg);
+}
+
+
+.module__icon--bigpipe::before {
+          mask-image: url(moduleicons/plug.svg);
+  -webkit-mask-image: url(moduleicons/plug.svg);
+}
+.module__icon--content-moderation::before {
+          mask-image: url(moduleicons/plug.svg);
+  -webkit-mask-image: url(moduleicons/plug.svg);
+}
+.module__icon--datetime-range::before {
+          mask-image: url(moduleicons/plug.svg);
+  -webkit-mask-image: url(moduleicons/plug.svg);
+}
+
+.module__icon--inline-form-errors::before {
+          mask-image: url(moduleicons/plug.svg);
+  -webkit-mask-image: url(moduleicons/plug.svg);
+}
+
+
 .module__icon--migrate,
 .module__icon--migrate-drupal,
-.module__icon--migrate-drupal-ui{
-  background-image:url(moduleicons/migrate.svg);
+.module__icon--migrate-drupal-ui::before {
+          mask-image: url(moduleicons/plug.svg);
+  -webkit-mask-image: url(moduleicons/plug.svg);
 }
 
-.module__icon--inline-form-errors{
-  background-image:url(moduleicons/form-errors.svg);
+
+.module__icon--place-blocks::before {
+          mask-image: url(moduleicons/plug.svg);
+  -webkit-mask-image: url(moduleicons/plug.svg);
+}
+.module__icon--settings-tray::before {
+          mask-image: url(moduleicons/plug.svg);
+  -webkit-mask-image: url(moduleicons/plug.svg);
 }
 
-.module__icon--telephone{
-  background-image:url(moduleicons/telephone.svg);
-}
 
-.module__icon--datetime{
-  background-image:url(moduleicons/date.svg);
-}
-.module__icon--file{
-  background-image:url(moduleicons/file.svg);
-}
-.module__icon--image{
-  background-image:url(moduleicons/image.svg);
-}
-.module__icon--link{
-  background-image:url(moduleicons/link.svg);
-}
-.module__icon--text{
-  background-image:url(moduleicons/text.svg);
-}
-.module__icon--configuration-translation,
-.module__icon--content-translation,
-.module__icon--interface-translation,
-.module__icon--language{
-  background-image:url(moduleicons/translate.svg);
-}
+
 
 .module__icon--devel,
 .module__icon--devel-generate,
 .module__icon--devel-kint,
 .module__icon--devel-node-access,
-.module__icon--web-profiler{
-  background-image:url(moduleicons/develop.svg);
+.module__icon--web-profiler {
+
 }
-.module__icon--libraries-ui{
-  background-image:url(moduleicons/library.svg);
+.module__icon--libraries-ui {
+  background-image: url(moduleicons/library.svg);
 }

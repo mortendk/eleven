@@ -1,180 +1,111 @@
-/*.table-filter {
-  width: 40rem;
-
-}
-.table-filter .form-item__description {
-  text-align: left;
-}*/
-
-
-/*form > details.package-listing {
-  margin: 0.5rem 0;
-}*/
-
-
-/*group wrappers*/
-/*.system-modules details {
+.table-filter {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--bluesky-light-20);
+  padding: 0 3rem
 }
 
-.system-modules details summary{
-  width: 100%;
-}
-.system-modules .details-wrapper {
-  padding-top: 0.5rem;
-}*/
 
 /* module listing */
 
-/* -- table resets  ----------------------------------------------------------*/
+/* -- table resets  ----------------------------------------------------------------*/
 .system-modules tbody td {
   display: block;
   border: none;
 }
-/*modules status */
-.system-modules tbody tr.module--notinstalled {
-}
-.system-modules tbody tr.module--installed {
-}
 
-/*-- cards -----------------------------------------------------------------*/
+/*-- module cards ------------------------------------------------------------------*/
 tr.card {
   overflow: none;
-  padding: 0.5rem;
+  padding: 0;
   background-color: var(--white);
-  color: var(--black);
+  color: var(--asphalt);
 }
 .card td {
   margin: 0;
+  padding: 0.5rem;
   border: none;
 }
 
+/* card mdodule variations */
 .card--module .card__title {
-  padding-bottom: 0.5rem;
   color: var(--asphalt-light);
   font-size: 1rem;
   font-weight: bold;
   line-height: 1.5rem;
-  text-align: center;
+  text-align: left;
 }
 
+/* icon */
 .card--module .card__icon {
-  width: calc(100% + 1.5rem);
+  float: none;
+  width: 100%;
   height: 6rem;
-  margin-left: -1rem;
   border: none;
   background-color: var(--gravel-light);
 }
-.card--module .card__icon::before {
+.card.card--module .card__icon::before {
   top: calc(50% - 1.5rem);
   left: calc(50% - 2rem);
   width: 4rem;
-  background-color: var(--concrete) ! important;
+  background-color: var(--concrete);
 }
 
-.card--module .card__text {
-  font-size: 0.875rem;
-  line-height: 1;
-  color: var(--asphalt-light);
-}
-/* checkbox */
-.card--module .checkbox input[type=checkbox] + label::before {
-  top: 0.5rem;
-  left: 0.5rem;
+.card--module label{
+  cursor: pointer
 }
 
+/* card status --------------------------------------------------------------------*/
+/* status  installed */
+.card--module .card__status--installed::before {
+          mask-image: url(icons/check.svg);
+  -webkit-mask-image: url(icons/check.svg);
+}
+/* status ready to be installed */
+.card--module .card__status--notinstalled::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
+}
+/*status error */
+.card--module .card__status--error::before {
+          mask-image: url(icons/frown-o.svg);
+  -webkit-mask-image: url(icons/frown-o.svg);
+}
+
+.card--module.card--status-error {
+  border-color: var(--strawberry);
+}
+.card--module.card--status-error .card__icon::before{
+  background-color: var(--rasberry);
+}
+
+/* checkbox ------------------------------------------------------------------------*/
 /* hide the status if the module is enabled */
-.card__modulebutton .form-item--disabled {
-  visibility: hidden;
+.card__instalmodule{
+  margin: 0.5rem
 }
-/* not installed */
-.card--module .checkbox input[type=checkbox] + label {
-  width: 10rem;
-  height: 2rem;
-  background-image: var(--button-bluesky);
+.card__instalmodule .form-item--checkbox{
+  float: left
 }
-.card--module .checkbox input[type=checkbox] + label:before {
-          mask-image: url(icons/plus.svg);
-  -webkit-mask-image: url(icons/plus.svg);
+.card__instalmodule-title {
+  color: var(--bluesky);
+  font-weight: bold
+}
+.card--status-installed .card__instalmodule,
+.card--status-error .card__instalmodule{
+  display: none
 }
 
 /* module set to be installed */
-.card--module .checkbox input[type=checkbox]:checked + label {
-  background-image: var(--button-grass);
-}
+.card--module .checkbox input[type=checkbox]:checked + label { }
 .card--module .checkbox input[type=checkbox]:checked + label::before {
-          mask-image: url(icons/plug.svg);
-  -webkit-mask-image: url(icons/plug.svg);
-}
-
-/* buttons -------------------------------------------------------------------------*/
-a.module-link {
-  position: relative;
-  display: inline-block;
-  width: 2rem;
-  min-width: 2rem;
-  height: 2rem;
-  margin: 0;
-  padding: 0;
-  padding: 0;
-  border: none;
-  outline: none;
-  background-image: var(--button-asphalt);
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: auto;
   color: var(--white);
-  font-weight: bold;
-  line-height: 2rem;
-  text-align: left;
-  text-decoration: none;
-  text-indent: -999px;
-  transition: all 0.1s ease-in-out;
-  overflow: hidden;
 }
+.card__list--modules-required-by li{ }
+.card__list--modules-requires li{ }
+.card__list--modules-required li{ }
 
-a.module-link:hover {
-  background-image: var(--button-asphalt-rev);
-  color: var(--bluesky-light-light);
-  text-decoration: none;
-}
-a.module-link:before {
-  position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
-  display: block;
-  width: 1rem;
-  height: 1rem;
-  background-color: var(--white);
-  content: "";
-  transition: all 0.2s ease-in-out;
-
+/* -- submit -----------------------------------------------------------------------*/
+.system-modules .form-actions input[type="submit"].button--primary + .form-item__icon::before {
           mask-image: url(icons/plug.svg);
   -webkit-mask-image: url(icons/plug.svg);
-  -webkit-mask-size: contain !important;
-          mask-size: contain !important;
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-}
-a.module-link:hover:before {
-  transform: scale(1.2);
-}
-
-a.module-link-permissions{
-  background-image: var(--button-bluesky);
-}
-a.module-link-permissions:before {
-          mask-image: url(icons/lock.svg);
-  -webkit-mask-image: url(icons/lock.svg);
-}
-a.module-link-configure:before {
-          mask-image: url(icons/gear.svg);
-  -webkit-mask-image: url(icons/gear.svg);
-}
-a.module-link-uninstall{
-  background-image: var(--button-rasberry);
-}
-a.module-link-uninstall::before {
-  mask-image: url(icons/trash.svg);
--webkit-mask-image: url(icons/trash.svg);
-
 }

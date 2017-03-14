@@ -24,6 +24,7 @@ input[type=checkbox] {
   margin-right: 0.5rem;
   line-height: 1.5rem;
 }
+
 /* hide the checkbox and use the label for visual */
 .form-item--checkbox input[type=checkbox] {
   visibility: hidden;

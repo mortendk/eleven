@@ -11,33 +11,24 @@ input {
   line-height: 2rem;
   transition: all 0.5s ease-in-out;
 }
-input:hover,
-input:focus {
-  border-bottom-color: var(--bluesky-light);
-  background-color: var(--gravel-light);
-  color: var(--bluesky);
-}
 input:focus {
   outline: 0;
-  background-color: var(--bluesky-light-light);
 }
 input[type="text"] {
   width: auto;
-  min-width: 30rem
+  min-width: 30rem;
+}
+input[type="text"].form-autocomplete {
+  min-width: 20rem;
 }
 
-input[type="text"].form-autocomplete{
-  min-width: 20rem
-}
-
-/* icons */
+/* input icons -------------------------------------------------------------- */
 .form-item__icon {
   position: relative;
   display: block;
   float: left;
   width: 2rem;
-  height: 2rem;
-  background-color: var(--concrete-light);
+  height: calc( 2rem + 4px);
 }
 .form-item__icon::before {
   position: absolute;
@@ -46,7 +37,6 @@ input[type="text"].form-autocomplete{
   display: block;
   width: 1rem;
   height: 1rem;
-  background-color: var(--concrete);
   background-image: none ! important; /* yes we wanna make sure no module have fun here */
   content: "";
   transition: 0.5s ease-in;
@@ -60,37 +50,73 @@ input[type="text"].form-autocomplete{
 }
 
 .form-item__icon:hover::before {
-  transform: rotate(-90deg);
+  transform: scale(1.2);
 }
 
-/* active icons */
-input:focus + .form-item__icon {
+/* colors  ------------------------------------------------------------------*/
+::-webkit-input-placeholder {
+  color: var(--bluesky);
+}
+::-moz-placeholder {
+  color: var(--white);
+}
+:-ms-input-placeholder {
+  color: var(--white);
+}
+:-moz-placeholder {
+  color: var(--white);
+}
+input:placeholder-shown {
+  background-color: var(--white);
+}
+
+/* default */
+input {
+  border-color:var(--bluesky-light);
+  background-color: var(--white);
+  border-left: none
+}
+.form-item__icon {
+  background-color: var(--white);
+  border: 1px solid var(--bluesky-light);
+  border-right: none
+}
+.form-item__icon::before {
   background-color: var(--bluesky);
+}
+
+/* focus*/
+input:hover,
+input:focus {
+  border-color: var(--bluesky-light);
+  color: var(--bluesky);
+  background-color: var(--bluesky-light-20);
+}
+input:hover + .form-item__icon,
+input:focus + .form-item__icon {
+  background-color: var(--bluesky-light-20);
+
 }
 input:focus + .form-item__icon::before,
 input:hover + .form-item__icon::before {
-  transform: rotate(90deg);
+  background-color: var(--bluesky);
 }
 
 
 /* type icons */
-.form-item__icon--date::before {
-  background-color: var(--grass-light);
-}
+.form-item__icon--date::before { }
 
+.form-item--search input{
+  width: calc( 100% - 3rem);
+}
 .form-item__icon--search::before {
-  background-color: var(--rasberry);
-}
-.form-item__icon--password::before {
-  background-color: var(--bluesky);
+          mask-image: url(icons/search.svg);
+  -webkit-mask-image: url(icons/search.svg);
 }
 
-.form-item--search {
-}
 
-.form-item__icon--file {
-  background-color: var(--rasberry-light);
-}
+.form-item__icon--password::before {}
+.form-item__icon--file { }
 
 
 
