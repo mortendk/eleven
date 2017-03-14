@@ -6,6 +6,7 @@ input[type="submit"] {
   color: var(--white);
   font-weight: normal;
   line-height: 2;
+  height: 2rem
 }
 input[type="submit"] + .form-item__icon {
   background-color: var(--bluesky-light);

@@ -79,9 +79,8 @@ function eleven_theme_suggestions_table_alter(array &$suggestions, array $variab
   if(isset( $path[7])) {
     if($path[4] == "manage" AND $path[7] =="fields") {
       $suggestions[] = 'table__' .$path[2] .'_' . $path[3] .'_' . $path[4] .'_' . $path[7];;
-    }
-
     $suggestions[] ='table__layout__fields';
+    }
   }
 
   if(isset( $path[5])) {

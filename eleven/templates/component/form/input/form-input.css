@@ -2,14 +2,15 @@
   input
 ------------------------------------------------------------------------------*/
 input {
-  height: 2rem;
+  height: calc(2rem - 2px);
   padding-left: 0.5rem;
-  border: 0 solid transparent ;
   border: 1px solid var(--bluesky);
   background-color: var(--white);
   color: var(--asphalt);
   line-height: 2rem;
   transition: all 0.5s ease-in-out;
+  padding: 0;
+  border-style: solid;
 }
 input:focus {
   outline: 0;
@@ -28,7 +29,7 @@ input[type="text"].form-autocomplete {
   display: block;
   float: left;
   width: 2rem;
-  height: calc( 2rem + 4px);
+  height: 2rem;
 }
 .form-item__icon::before {
   position: absolute;

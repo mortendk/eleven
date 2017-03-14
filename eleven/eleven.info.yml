@@ -33,8 +33,8 @@ libraries:
 # LIBRARIES EXTEND
 #-------------------------------------------------------------------------------
 libraries-extend:
-  # shortcut/drupal.shortcut:
-  # - eleven/shortcut
+  shortcut/drupal.shortcut:
+  - eleven/shortcut
 
   # core/jquery.ui:
   # - eleven/jquery_ui
@@ -100,8 +100,15 @@ libraries-override:
   shortcut/drupal.shortcut:
     css:
       theme:
-        css/shortcut.theme.css: false
-        css/shortcut.icons.theme.css: false
+        /core/themes/stable/css/shortcut/shortcut.theme.css: false
+        /core/themes/stable/css/shortcut/shortcut.icons.theme.css: false
+
+  # shortcut/drupal.shortcut:
+  #   css:
+  #     theme:
+  #       css/shortcut.theme.css: css/shortcut/shortcut.theme.css
+  #       css/shortcut.icons.theme.css: css/shortcut/shortcut.icons.theme.css
+
 
   views_ui/admin.styling:
     css:

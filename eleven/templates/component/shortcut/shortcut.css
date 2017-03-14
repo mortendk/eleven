@@ -1,0 +1,74 @@
+.shortcut-action {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  display: block;
+}
+.shortcut-action:hover {
+  text-decoration: none;
+}
+
+/* icon */
+.shortcut-action__icon {
+  display: block;
+  float: left;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+  transition: all 0.5s ease-in-out;
+
+          mask-image: url(icons/heart-o.svg);
+  -webkit-mask-image: url(icons/heart-o.svg);
+  -webkit-mask-size: contain !important;
+          mask-size: contain !important;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+}
+/* message */
+.shortcut-action__message {
+  display: inline-block;
+  opacity: 0;
+  font-size: 0.875rem;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: translateY(-12px);
+          transform: translateY(-12px);
+}
+
+.shortcut-action:hover .shortcut-action__message,
+.shortcut-action:focus .shortcut-action__message {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+/* colors --------------------------------------------------------------------*/
+.shortcut-action__icon {
+  background-color: var(--rasberry-light);
+
+          mask-image: url(icons/heart-o.svg);
+  -webkit-mask-image: url(icons/heart-o.svg);
+}
+.shortcut-action:hover .shortcut-action__icon {
+    mask-image: url(icons/heart.svg);
+  -webkit-mask-image: url(icons/heart.svg);
+  background-color: var(--rasberry-light);
+}
+
+/* icon remove */
+.shortcut-action--remove .shortcut-action__icon {
+  background-color: var(--strawberry);
+          mask-image: url(icons/heart.svg);
+  -webkit-mask-image: url(icons/heart.svg);
+}
+
+.shortcut-action--remove:hover .shortcut-action__icon {
+  background-color: var(--strawberry);
+          mask-image: url(icons/heart-o.svg);
+  -webkit-mask-image: url(icons/heart-o.svg);
+}
+
+
+.shortcut-action__message {
+  background-color: var(--white-90);
+  color: var(--strawberry);
+}

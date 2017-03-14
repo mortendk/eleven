@@ -25,10 +25,10 @@ global:
 # ------------------------------------------------------------------------------
 #
 # ------------------------------------------------------------------------------
-# shortcut:
-#   css:
-#     theme:
-      # templates/shortcut/shortcut.css: {}
+shortcut:
+  css:
+    theme:
+      templates/component/shortcut/shortcut.css: {}
 
 # jquery_ui:
 #   css:
@@ -115,7 +115,7 @@ button.action:
   css:
     theme:
       templates/component/button/button-action/button-action.css: {}
-
+# ------------------------------------------------------------------------------
 # table
 table.responsive:
   css:
@@ -151,7 +151,6 @@ modules:
 # ------------------------------------------------------------------------------
 # themes
 # ------------------------------------------------------------------------------
-
 themes:
   css:
     theme:
