@@ -3,19 +3,18 @@
   parts the cards out into 2 columns
   this template is the same patterns as admin-page.html.twig
 #}
-
 {{ attach_library(active_theme()~'/admin.config') }}
 
-
+{# do we really want this ?? #}
 {{ system_compact_link }}
 
-<section class="L pagewidth">
+<div class="L pagewidth LW-third">
   {% for position, blocks in containers %}
-    <div class="w-6">
-      {% for block in blocks %}
-        {{ block }}
-      {% endfor %}
-    </div>
-  {% endfor %}
 
-</section>
+    {% for block in blocks %}
+    {# layout-landing/config/admin-block.html.twig #}
+      {{ block }}
+    {% endfor %}
+
+  {% endfor %}
+</div>

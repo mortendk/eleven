@@ -1,16 +1,17 @@
 {#
-  admin overview pages
+  admin overview pages:
+
   admin/
+  admin/index
   admin/structure
   admin/reports
   admin/config
 
   admin/index
 #}
-
 {{ attach_library(active_theme()~'/card') }}
 
-{# set a range of types we want to test on #}
+{# test if this is the admin index or config page #}
 {% set test = [
   '/admin/index',
   '/admin/config',
@@ -18,7 +19,6 @@
 %}
 
 {% if path not in test  %}
-  {# lets show a small change thingie for the card layouts #}
   {%
     set classes = [
       'L',
@@ -26,46 +26,60 @@
       'pagewidth'
     ]
   %}
-
+  {# lets show a small change number of card  for the card layouts #}
   <div class="pagewidth L-right">
     <ul class="L-right tabs-small">
-      <li><a href="#" class="button">1</a> </li>
-      <li><a href="#" class="button">2</a> </li>
-      <li><a href="#" class="button">3</a> </li>
+      <li><a href="#" class="">1</a> </li>
+      <li><a href="#" class="">2</a> </li>
+      <li><a href="#" class="">3</a> </li>
     </ul>
   </div>
+
+  {% if content %}
+    <section{{ attributes.addClass(classes) }}>
+
+    {% for item in content %}
+      <article class="w card {{ cardclasses }}">
+        <a href="{{ item.url }}">
+
+          <div class="card__icon card__icon--{{ item.url.getInternalPath()|clean_class }}"></div>
+
+          <h3 class="card__title">{{ item.title}}</h3>
+          {% if item.description %}
+            <p class="card__text">
+              {{ item.description }}
+            </p>
+          {% endif %}
+
+        </a>
+      </article>
+    {% endfor %}
+
+    </section>
+  {% endif %}
+
 {% else %}
-  {# its wrapped into admin-block #}
-  {%
-    set classes = [
-      'L',
-      'LW-fourth'
-    ]
-  %}
-  {% set cardclasses %} card--small {% endset %}
 
-{% endif %}
+  {# contents thats wrapped in the  admin-block: config/admin-block.html.twig
+    http://drupal8.dev/admin/config
+    http://drupal8.dev/admin/index
+  #}
+
+  {% if content %}
+
+    {% for item in content %}
+      <article>
+        <a href="{{ item.url }}">{{ item.title}}</a>
+        {% if item.description %}
+          <p>{{ item.description }}</p>
+        {% endif %}
+      </article>
+    {% endfor %}
+
+    </section>
+  {% endif %}
 
 
-{% if content %}
-  <section{{ attributes.addClass(classes) }}>
 
-  {% for item in content %}
-    <article class="w card {{ cardclasses }}">
 
-      <a href="{{ item.url }}">
-
-      <div class="card__icon card__icon--{{ item.url.getInternalPath()|clean_class }}"></div>
-
-      <h3 class="card__title">{{ item.title}}</h3>
-      {% if item.description %}
-        <p class="card__text">
-          {{ item.description }}
-        </p>
-      {% endif %}
-      </a>
-    </article>
-  {% endfor %}
-
-  </section>
 {% endif %}
