@@ -18,7 +18,7 @@ input[type=checkbox] {
   margin-left: 2rem;
 }
 
-.checkbox {
+.checkbox-style-check {
   position: relative;
   display: inline-block;
   margin-right: 0.5rem;
@@ -59,7 +59,7 @@ input[type=checkbox] {
 the trick is simpel were using 2 * label and using the first as the visual checkbox
 */
 
-.checkbox input[type=checkbox] + label {
+.checkbox-style-check input[type=checkbox] + label {
   position: absolute;
   top: 0;
   left: 0;
@@ -71,7 +71,7 @@ the trick is simpel were using 2 * label and using the first as the visual check
   cursor: pointer;
   transition: all 0.5s ease-in-out;
 }
-.checkbox input[type=checkbox] + label::before {
+.checkbox-style-check input[type=checkbox] + label::before {
   position: absolute;
   top: 0.25rem;
   left: 0.25rem;
@@ -99,55 +99,55 @@ the trick is simpel were using 2 * label and using the first as the visual check
   line-height: 1.5rem;
   font-weight: normal;
 }
-.checkbox input[type=checkbox]:focus + label + .checkbox__title label,
-.checkbox input[type=checkbox]:hover + label + .checkbox__title label {
+.checkbox-style-check input[type=checkbox]:focus + label + .checkbox__title label,
+.checkbox-style-check input[type=checkbox]:hover + label + .checkbox__title label {
   outline: 0;
 }
 
 
 /*--  colors ---------------------------------------------------------*/
 
-.checkbox input[type=checkbox] + label {
+.checkbox-style-check input[type=checkbox] + label {
   border: 1px solid var(--bluesky);
   background-color: var(--white);
 }
-.checkbox input[type=checkbox] + label:before {
+.checkbox-style-check input[type=checkbox] + label:before {
   background-color: var(--white);
 }
 /*hover*/
-.checkbox input[type=checkbox] + label:hover {
+.checkbox-style-check input[type=checkbox] + label:hover {
   border-color: var(--bluesky);
   background-color: var(--white);
 }
-.checkbox input[type=checkbox] + label:hover:before {
+.checkbox-style-check input[type=checkbox] + label:hover:before {
   background-color: var(--bluesky);
 }
 /* checked */
-.checkbox input[type=checkbox]:checked + label {
+.checkbox-style-check input[type=checkbox]:checked + label {
   border-color: var(--bluesky);
   background-color: var(--bluesky-light);
 }
-.checkbox input[type=checkbox]:checked + label:before {
+.checkbox-style-check input[type=checkbox]:checked + label:before {
   background-color: var(--white);
 }
-.checkbox input[type=checkbox]:checked + label + .checkbox__title label {
+.checkbox-style-check input[type=checkbox]:checked + label + .checkbox__title label {
   color: var(--bluesky);
 }
 
 
 /* disabled */
-.checkbox input[type=checkbox]:disabled + label {
+.checkbox-style-check input[type=checkbox]:disabled + label {
   border-color: var(--concrete);
   background-color: var(--concrete-light);
 }
-.checkbox input[type=checkbox]:disabled + label:before {
+.checkbox-style-check input[type=checkbox]:disabled + label:before {
   width: 0.875rem;
   background-color: var(--gravel);
 
           mask-image: url(icons/times.svg);
   -webkit-mask-image: url(icons/times.svg);
 }
-.checkbox input[type=checkbox]:disabled + label + .checkbox__title label {
+.checkbox-style-check input[type=checkbox]:disabled + label + .checkbox__title label {
   color: var(--concrete);
   font-weight: 100;
 }
@@ -159,6 +159,6 @@ fixes for views tables with the select all functions
 ex: /admin/content
 adds in the visually-hidden class we wanna overwrite
 */
-.checkbox .visually-hidden {
+.checkbox-style-check .visually-hidden {
   clip: inherit;
 }

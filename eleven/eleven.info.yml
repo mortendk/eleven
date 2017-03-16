@@ -147,3 +147,4 @@ stylesheets-remove:
   - core/themes/stable/css/field_ui/field_ui.admin.css
   - core/themes/stable/css/system/components/fieldgroup.module.css
   - '@classy/css/layout.css'
+  - core/themes/stable/css/user/user.admin.css

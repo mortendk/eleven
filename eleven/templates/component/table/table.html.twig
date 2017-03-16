@@ -1,7 +1,7 @@
 {{ attach_library(active_theme()~'/table.admin') }}
 {{ attach_library(active_theme()~'/table.responsive') }}
 
-<table{{ attributes.addClass('admintable') }}>
+<table{{ attributes }}>
   {% if caption %}
     <caption>{{ caption }}</caption>
   {% endif %}
@@ -46,6 +46,7 @@
         <tr{{ row.attributes.addClass(row_classes) }}>
           {% for cell in row.cells %}
             <{{ cell.tag }}{{ cell.attributes }}>
+
               {{- cell.content -}}
             </{{ cell.tag }}>
           {% endfor %}

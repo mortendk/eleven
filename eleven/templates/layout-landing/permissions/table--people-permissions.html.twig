@@ -1,0 +1,101 @@
+{#
+{{ attach_library(active_theme()~'/table.admin') }}
+{{ attach_library(active_theme()~'/table.responsive') }}
+ #}
+
+{# -----------------------------------------------------------------------------
+  No guts no glory !!
+----------------------------------------------------------------------------- #}
+{{ attach_library(active_theme()~'/card') }}
+{{ attach_library(active_theme()~'/permissions') }}
+
+<div{{ attributes.addClass('L') }}>
+  {# 1. this is dirty - we start with adding in the starter article.card markup here  #}
+  <article{{ row.attributes.addClass('card', 'w')}}>
+
+{% if rows %}
+  {% for row in rows %}
+    {#
+      2. we know that if theres only one cell then its the header for a group of permissions
+      so we stop the aritcle.card tag and start another on so each group of permissions can be stacked into a card
+    #}
+
+    {% if row.cells|length == '1' %}
+
+      {#  alright lets fix the width of a permission group so the node group gets to take up the space it needs  #}
+      {% set permissions_id = [
+        'edit-permissions-comment-0',
+        'edit-permissions-config-0',
+        'edit-permissions-content-moderation-0',
+        'edit-permissions-field-ui-0',
+        'edit-permissions-node-0',
+        'edit-permissions-system-0',
+        'edit-permissions-content-translation-0',
+        'edit-permissions-shortcut-0',
+        'edit-permissions-user-0'
+        ]
+      %}
+
+      {# reset set classes for the epic loop #}
+      {% set classes = '' %}
+      {% set make_card_wide = '' %}
+
+      {% if row.cells.0.content['#id'] in permissions_id  %}
+        {% set make_card_wide = "true" %}
+        {% set classes = ['w-12'  ] %}
+      {% endif %}
+
+        {# this section tag is started  down after the .card__title  - yup not pretty but works#}
+        {% if make_card_wide %}
+          </section>
+        {% endif %}
+
+      </article>
+      <article{{ row.attributes.addClass('card', 'w-12', 'permissions-' ~ row.cells.0.content['#markup']|clean_class|clean_class, classes)}}>
+    {% endif %}
+
+    {% for cell in row.cells %}
+      {# if we got an id then this is a single card so add in title and icon #}
+      {% if cell.attributes.id %}
+        <div class="card__icon card__icon--{{ cell.content['#markup']|clean_class }}" id="{{ cell.attributes.id }}"></div>
+        <h3 class="card__title">{{ cell.content['#markup']}}</h3>
+        {# cell.attributes.id #}
+
+        {% if make_card_wide %}
+          <section class="L LW-5">
+        {% endif %}
+
+      {% endif %}
+
+      {# drupal renders the permissions as inline templetes we can test on stuff #}
+      {% if cell.content['#type'] == 'inline_template' %}
+
+        {# sub group title #}
+        {% if cell.content['#context'].title %}
+          <div class="card__subgroup w {% if cell.content['#context'].warning %}permission--warning{% endif %}">
+            <div class="card__icon card__icon--small"></div>
+            <h4 class="card__subtitle ">{{ cell.content['#context'].title|striptags }}</h4>
+        {% endif %}
+
+          {# warning #}
+          {% if cell.content['#context'].warning %}
+            <div class="messages messages--warning">
+              {{ cell.content['#context'].warning }}
+            </div>
+          {% endif %}
+
+        {# checkboxes #}
+        {% elseif cell.content['#type'] == 'checkbox' %}
+          {{ cell.content }}
+          {% if loop.last %}
+            {# the section tag is wrapping all of the checkboxes for a single group #}
+          </div>
+          {% endif %}
+        {% endif %}
+        {# / checkboxes #}
+
+    {% endfor %}
+
+  {% endfor %}
+{% endif %}
+</div>

@@ -795,3 +795,15 @@ test:
 .LW-third  .w { flex-basis: calc(33.33% - 1rem);}
 .LW-half   .w { flex-basis: calc(50% - 1rem);}
 .LW-full   .w { flex-basis: calc(100% - 1rem);}
+
+
+.LW-10    .w { flex-basis: calc(10% - 1rem);}
+.LW-9   .w { flex-basis: calc(11.11% - 1rem);}
+.LW-8  .w { flex-basis: calc(12.5% - 1rem);}
+.LW-7  .w { flex-basis: calc(14.28% - 1rem);}
+.LW-6  .w { flex-basis: calc(16.66% - 1rem);}
+.LW-5  .w { flex-basis: calc(20% - 1rem);}
+.LW-4 .w { flex-basis: calc(25% - 1rem);}
+.LW-3  .w { flex-basis: calc(33.33% - 1rem);}
+.LW-2   .w { flex-basis: calc(50% - 1rem);}
+.LW-1   .w { flex-basis: calc(100% - 1rem);}

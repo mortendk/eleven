@@ -1,0 +1,77 @@
+/*
+fix the visually-hidden class thats added into the labels display
+its easier to do it with css instead of adding in yet another template to fix this
+*/
+.user-admin-permissions .checkbox__title{
+  max-width: 85%
+}
+.user-admin-permissions .checkbox__title label.visually-hidden {
+  position: relative !important;
+  clip:auto;
+  overflow: auto;
+  height: auto;
+  width: auto;
+
+}
+
+.card__subgroup { }
+
+/* warning */
+.permission--warning{
+  border-top-color: var(--pumpkin);
+}
+
+
+.user-admin-permissions .form-item--checkbox {
+  padding: 0;
+  margin: 0
+}
+
+/* shoulw we move this to card icons _ */
+.permissions-actions .card__icon::before {
+          mask-image: url(icons/comments-o.svg);
+  -webkit-mask-image: url(icons/comments-o.svg);
+}
+
+.permissions-actions .card__icon::before {
+          mask-image: url(icons/comments-o.svg);
+  -webkit-mask-image: url(icons/comments-o.svg);
+}
+/*
+permissions-block
+permissions-comment
+
+permissions-configuration-manager
+permissions-configuration-translation
+
+permissions-contact
+
+permissions-content-moderation
+permissions-content-translation
+
+permissions-contextual-links
+
+permissions-devel-kint
+permissions-devel-generate
+
+permissions-field-ui
+permissions-file
+permissions-filter
+permissions-image
+permissions-interface-translation
+permissions-language
+permissions-node
+
+permissions-path
+permissions-quick-edit
+
+permissions-search
+
+permissions-shortcut
+permissions-style-guide
+permissions-system
+permissions-taxonomy
+permissions-toolbar
+permissions-tour
+permissions-user
+permissions-views-ui*/

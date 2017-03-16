@@ -31,6 +31,20 @@
   color: var(--asphalt);
 }
 
+.card__subtitle{
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.2rem;
+  color: var(--asphalt);
+  padding: 0.5rem
+}
+.card__subgroup {
+  border: 1px solid var(--gravel);
+  background-color: var(--white);
+  padding: 0.5rem
+}
+
+
 /* text */
 .card__text {
   margin-top: 1rem;
