@@ -5,9 +5,7 @@
 {{ attach_library(active_theme()~'/permissions') }}
 {{ attach_library(active_theme()~'/form.form') }}
 
-<div{{ attributes.addClass('L') }}>
-  {# 1. this is dirty - we start with adding in the starter article.card markup here  #}
-  <article{{ row.attributes.addClass('card', 'w')}}>
+<div{{ attributes }}>
 
 {% if rows %}
   {% for row in rows %}
@@ -20,21 +18,14 @@
         {# this section tag is started  down after the .card__title  - yup not pretty but works#}
           </details>
           </section>
-      </article>
-      <article{{ row.attributes.addClass('_card', 'w-12', 'permissions-' ~ row.cells.0.content['#markup']|clean_class|clean_class, classes)}}>
-
-
+        <details open{{ row.attributes.addClass('permissions-' ~ row.cells.0.content['#markup']|clean_class|clean_class, classes)}}>
     {% endif %}
 
     {% for cell in row.cells %}
       {# if we got an id then this is a single card so add in title and icon #}
       {% if cell.attributes.id %}
         {# <div class="card__icon card__icon--{{ cell.content['#markup']|clean_class }}" id="{{ cell.attributes.id }}"></div> #}
-        <details open>
-          <summary>{{ cell.content['#markup']}}</summary>
-
-        <!-- <h2 class="title-permission">{{ cell.content['#markup']}}</h2> -->
-        {# cell.attributes.id #}
+        <summary id="{{ cell.attributes.id }}">{{ cell.content['#markup']}}</summary>
         <section class="L LW-4">
       {% endif %}
 

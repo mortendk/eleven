@@ -1,3 +1,20 @@
+td .checkbox-style-check{
+  margin-right: 0
+}
+td .checkbox-style-check input[type=checkbox] + label {
+  width: 1rem;
+  height: 1rem
+}
+td .checkbox-style-check input[type=checkbox] + label:before {
+  top: 0.1rem;
+  left: 0;
+  width: 0.875rem;
+  height: 0.875rem;
+}
+.js td .dropbutton-wrapper{
+  display: none
+}
+
 
 /* draggable -----------------------------------------------------------------*/
 a.tabledrag-handle .handle {

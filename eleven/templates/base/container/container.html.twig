@@ -7,11 +7,13 @@
 {%
   set classes = [
     attributes['data-drupal-selector'] == 'edit-node-bulk-form' ? 'L-left-bottom',
+    attributes['data-drupal-selector'] == 'edit-user-bulk-form' ? 'L-left-bottom',
     has_parent ? 'js-form-wrapper',
     attributes.id =='edit-header' ? 'view-filters-actions',
     attributes.id =='edit-header' ? 'form-item-smallvariant',
     attributes.hasclass('entity-meta') ? 'editform-sidebar',
     attributes.hasclass('field') ? 'editform-sidebar',
+    attributes.hasclass('compact-link') ? 'pagewidth',
     attributes.hasclass('compact-link') ? 'pagewidth',
   ]
 %}

@@ -31,9 +31,9 @@ input[type=checkbox] {
 }
 
 /* select all element from views slector */
-.select-all input[type=checkbox] {
-  width: 1.5rem;
-  height: 1.5rem;
+th.select-all input[type=checkbox] {
+  width: 1rem;
+  height: 1rem;
   background-color: var(--rasberry-light);
   border: none;
   -webkit-appearance: none;

@@ -70,7 +70,7 @@ permissions:
   css:
     theme:
       templates/layout-landing/permissions/permissions.css: {}
-
+      templates/layout-landing/permissions-icons.css: {}
 # ------------------------------------------------------------------------------
 # navigation
 # ------------------------------------------------------------------------------
@@ -148,7 +148,7 @@ modules:
   css:
     theme:
       templates/layout-landing/modules/modules.css: {}
-      templates/layout-landing/modules/modules-icons.css: {}
+      templates/layout-landing/modules-icons.css: {}
 
 
 # ------------------------------------------------------------------------------

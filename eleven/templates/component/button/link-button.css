@@ -103,7 +103,8 @@ a.button.use-ajax:before {
           mask-image: url(icons/desktop.svg);
 }*/
 
-a[href="/admin/structure/display-modes/view"],
+
+/*a[href="/admin/structure/display-modes/view"],*/
 .form-item__description a[href="/admin/config/media/image-styles"] {
   position: relative;
   display: inline-block;

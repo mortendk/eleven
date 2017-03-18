@@ -1,23 +1,25 @@
 {#
   yet another wrapper for /admin/config + admin/index
   wraps each of the admin-block-content.html.twig
-
- #}
-
+#}
 {{ attach_library(active_theme()~'/admin.config') }}
 {{ attach_library(active_theme()~'/card') }}
 
 <div class="card w">
+  {# TODO: needs the untranslated string here #}
+  <div class="card__icon card__icon--{{ block.title|clean_class }}"></div>
+  <h3 class="card__title ">{{ block.title }}</h3>
 
-
-  <div class="card__icon"></div>
-  <h3 class="card__title">{{ block.title }}</h3>
+  <pre>card__icon--{{ block.title|clean_class }}</pre>
 
   {% if block.content %}
    {# layout-landing/admin-block-content.html.twig #}
     {{ block.content }}
   {% elseif block.description %}
-    {{ block.description }}
+    <p class="card__text">
+      {{ block.description }}
+    </p>
+
   {% endif %}
 
 </div>

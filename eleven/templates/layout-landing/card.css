@@ -13,50 +13,37 @@
 .card:hover {
   border-color: var(--concrete-light);
 }
-.card a {
-
-}
-.card a:hover {
-
-}
 
 /* title */
 .card__title {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
   color: var(--black);
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1;
-  margin-bottom: 0.5rem;
-  min-height: 4rem
-
+}
+.card a {
+  color: var(--black);
 }
 .card a:hover .card__title {
-  color: var(--asphalt);
-}
-
-.card__subtitle{
-  font-size: 1.2rem;
-  font-weight: 500;
-  line-height: 1.2rem;
-  color: var(--asphalt);
-  padding: 0.5rem
-}
-.card__subgroup {
-  border: 1px solid var(--gravel);
-  background-color: var(--white);
-  padding: 0.5rem
-}
-
-
-/* text */
-.card__text {
-  margin-top: 1rem;
-}
-
-.card a:hover .card__text {
   color: var(--bluesky);
 }
 
+/* text */
+.card__text {
+  margin-top: 0.5rem;
+}
+
+/* hovers */
+.card a:hover {
+  text-decoration: none;
+}
+.card a:hover .card__text {
+  color: var(--black);
+}
+
+/* small texr */
 .card__text--small {
   font-size: 0.875rem;
   line-height: 1rem;
@@ -85,7 +72,6 @@
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
-
 .card__list li {
   margin: 0;
   padding: 0;
@@ -97,6 +83,7 @@
   font-size: 0.875rem;
   line-height: 1.5rem;
 }
+
 /*card status ----------------------------------------------------------------*/
 .card__status {
   position: absolute;
@@ -136,13 +123,35 @@
 .card__status--themedefault {
   background-color: var(--rasberry);
 }
-
 .card__status--themeadmin {
   background-color: var(--bluesky);
 }
 
 
-/* card linknks buttons actions  ----------------------------------------------*/
+/* card group elements */
+.card__subelements{
+  clear: both;
+  margin-top: 1rem
+}
+.card__subelements li{
+  margin-left: 0;
+}
+.card__subelement{
+  border-bottom: 1px solid var(--gravel);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  display: block;
+}
+.card__subelement:hover{
+  background-color: var(--gravel-light);
+}
+
+.card__subelements-title {
+  color: var(--bluesky);
+  font-size: 1.2rem;
+  font-weight: 100
+}
+/* card link / buttons actions  ----------------------------------------------*/
 .card__links {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -154,7 +163,6 @@
 .card__links .width-3 li {
   width: 33%;
 }
-
 .card__links li {
   border-right: 1px solid var(--bluesky-light);
 }
@@ -163,9 +171,6 @@
 }
 .card__links li a {
   text-align: center;
-}
-.card__links li:last-child a {
-  /*float: right*/
 }
 
 .card__links a {
@@ -185,7 +190,6 @@
   text-decoration: none;
   text-decoration: underline;
 }
-
 
 .card__links--button  a {
   position: relative;
@@ -211,8 +215,6 @@
   /*transition: all 0.1s ease-in-out;*/
 }
 
-
-
 .card__errors li {
   margin-left: 0;
   padding: 0.5rem;
@@ -228,21 +230,6 @@
 }
 .card__errors li.missing a {
   color: var(--yellowsnow);
-}
-
-/* card size variations -----------------------------------------------------*/
-.card--small {
-  padding: 0.5rem;
-}
-.card--small  .card__icon {
-  width: 2rem;
-  height: 2rem;
-}
-
-.card--small  .card__title {
-}
-.card--small  .card__text {
-
 }
 
 /* operations */

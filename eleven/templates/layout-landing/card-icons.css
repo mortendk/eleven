@@ -1,14 +1,10 @@
 /* card icons ---------------------------------------------------------------------*/
 .card__icon {
   position: relative;
-  float: left;
+  display: block;
   width: 4rem;
   height: 4rem;
-  margin-right: 1rem;
   transition: all 0.5s ease-in-out;
-  border: 1px solid var(--gravel);
-  display: block;
-
 }
 .card__icon::before {
   position: absolute;
@@ -46,23 +42,22 @@
 }
 
 .card__icon--small {
-  width: 3rem;
-  height: 3rem;
-}
-.card__icon--small::before {
-  top: 0.5rem;
-  left: 0.5rem;
   width: 2rem;
   height: 2rem;
-
+  margin-right: 0.5rem;
+}
+.card__icon--small::before {
+  top: 0.25rem;
+  left: 0.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 /* color variations  ---------------------------------------------------------*/
 .card__icon:before {
-  background-color: var(--bluesky-light);
 }
 
-/*.card:nth-of-type(8n+1) .card__icon:before {
+.card:nth-of-type(8n+1) .card__icon:before {
   background-color: var(--grass-light);
 }
 .card:nth-of-type(8n+2) .card__icon:before {
@@ -85,10 +80,254 @@
 }
 .card:nth-of-type(8n+8) .card__icon:before {
   background-color: var(--pumpkin);
-}*/
+}
 
 
 /* icons ---------------------------------------------------------------------*/
+/*http://drupal8.dev/admin*/
+.card__icon--admin-content::before {
+          mask-image: url(icons/file-text-o.svg);
+  -webkit-mask-image: url(icons/file-text-o.svg);
+}
+.card__icon--admin-structure::before {
+          mask-image: url(icons/sitemap.svg);
+  -webkit-mask-image: url(icons/sitemap.svg);
+}
+.card__icon--admin-appearance::before {
+          mask-image: url(icons/desktop.svg);
+  -webkit-mask-image: url(icons/desktop.svg);
+}
+.card__icon--admin-modules::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
+}
+.card__icon--admin-config::before {
+          mask-image: url(icons/gears.svg);
+  -webkit-mask-image: url(icons/gears.svg);
+}
+.card__icon--admin-people::before {
+          mask-image: url(icons/id-card.svg);
+  -webkit-mask-image: url(icons/id-card.svg);
+}
+.card__icon--admin-reports::before {
+          mask-image: url(icons/file-text-o.svg);
+  -webkit-mask-image: url(icons/file-text-o.svg);
+}
+.card__icon--admin-help::before {
+          mask-image: url(icons/ambulance.svg);
+  -webkit-mask-image: url(icons/ambulance.svg);
+}
+
+/*http://drupal8.dev/admin/reports*/
+.card__icon--admin-reports-updates::before {
+          mask-image: url(icons/file-text-o.svg);
+  -webkit-mask-image: url(icons/file-text-o.svg);
+}
+.card__icon--admin-reports-dblog::before {
+          mask-image: url(icons/file-text-o.svg);
+  -webkit-mask-image: url(icons/file-text-o.svg);
+}
+.card__icon--admin-reports-translations::before {
+          mask-image: url(icons/file-text-o.svg);
+  -webkit-mask-image: url(icons/file-text-o.svg);
+}
+.card__icon--admin-reports-fields::before {
+          mask-image: url(icons/file-text-o.svg);
+  -webkit-mask-image: url(icons/file-text-o.svg);
+}
+.card__icon--admin-reports-status::before {
+          mask-image: url(icons/file-text-o.svg);
+  -webkit-mask-image: url(icons/file-text-o.svg);
+}
+.card__icon--admin-reports-access-denied::before {
+          mask-image: url(icons/file-text-o.svg);
+  -webkit-mask-image: url(icons/file-text-o.svg);
+}
+.card__icon--admin-reports-page-not-found::before {
+          mask-image: url(icons/file-text-o.svg);
+  -webkit-mask-image: url(icons/file-text-o.svg);
+}
+.card__icon--admin-reports-search::before {
+          mask-image: url(icons/file-text-o.svg);
+  -webkit-mask-image: url(icons/file-text-o.svg);
+}
+.card__icon--admin-reports-views-plugins::before {
+          mask-image: url(icons/file-text-o.svg);
+  -webkit-mask-image: url(icons/file-text-o.svg);
+}
+
+
+/*http://drupal8.dev/admin/config*/
+.card__icon--people::before {
+          mask-image: url(icons/id-card.svg);
+  -webkit-mask-image: url(icons/id-card.svg);
+}
+.card__icon--content-authoring::before {
+          mask-image: url(icons/pencil.svg);
+  -webkit-mask-image: url(icons/pencil.svg);
+}
+.card__icon--development::before {
+          mask-image: url(icons/terminal.svg);
+  -webkit-mask-image: url(icons/terminal.svg);
+}
+.card__icon--search-and-metadata::before {
+          mask-image: url(icons/search.svg);
+  -webkit-mask-image: url(icons/search.svg);
+}
+.card__icon--web-services::before {
+          mask-image: url(icons/rss.svg);
+  -webkit-mask-image: url(icons/rss.svg);
+}
+.card__icon--system::before {
+          mask-image: url(icons/drupal.svg);
+  -webkit-mask-image: url(icons/drupal.svg);
+}
+.card__icon--user-interface::before {
+          mask-image: url(icons/heart.svg);
+  -webkit-mask-image: url(icons/heart.svg);
+}
+.card__icon--media::before {
+          mask-image: url(icons/picture-o.svg);
+  -webkit-mask-image: url(icons/picture-o.svg);
+}
+.card__icon--regional-and-language::before {
+          mask-image: url(icons/flag.svg);
+  -webkit-mask-image: url(icons/flag.svg);
+}
+.card__icon--workflow::before {
+          mask-image: url(icons/truck.svg);
+  -webkit-mask-image: url(icons/truck.svg);
+}
+
+
+/*http://drupal8.dev/admin/index*/
+.card__icon--actions::before {
+          mask-image: url(icons/id-card.svg);
+  -webkit-mask-image: url(icons/id-card.svg);
+}
+.card__icon--block::before {
+          mask-image: url(icons/cube.svg);
+  -webkit-mask-image: url(icons/cube.svg);
+}
+.card__icon--configuration-manager::before {
+          mask-image: url(icons/id-card.svg);
+  -webkit-mask-image: url(icons/id-card.svg);
+}
+.card__icon--contact::before {
+          mask-image: url(icons/envelope.svg);
+  -webkit-mask-image: url(icons/envelope.svg);
+}
+.card__icon--content-translation::before {
+          mask-image: url(icons/flag.svg);
+  -webkit-mask-image: url(icons/flag.svg);
+}
+.card__icon--database-logging::before {
+          mask-image: url(icons/database.svg);
+  -webkit-mask-image: url(icons/database.svg);
+}
+.card__icon--user::before {
+          mask-image: url(icons/id-card.svg);
+  -webkit-mask-image: url(icons/id-card.svg);
+}
+.card__icon--aggregator::before {
+          mask-image: url(icons/rss.svg);
+  -webkit-mask-image: url(icons/rss.svg);
+}
+.card__icon--comment::before {
+          mask-image: url(icons/comments-o.svg);
+  -webkit-mask-image: url(icons/comments-o.svg);
+}
+.card__icon--file::before {
+          mask-image: url(icons/file-o.svg);
+  -webkit-mask-image: url(icons/file-o.svg);
+}
+.card__icon--help::before {
+          mask-image: url(icons/ambulance.svg);
+  -webkit-mask-image: url(icons/ambulance.svg);
+}
+.card__icon--language::before,
+.card__icon--configuration-translation::before,
+.card__icon--interface-translation::before {
+          mask-image: url(icons/flag.svg);
+  -webkit-mask-image: url(icons/flag.svg);
+}
+.card__icon--libraries-ui::before {
+          mask-image: url(icons/book.svg);
+  -webkit-mask-image: url(icons/book.svg);
+}
+.card__icon--node::before {
+          mask-image: url(icons/sticky-note.svg);
+  -webkit-mask-image: url(icons/sticky-note.svg);
+}
+.card__icon--shortcut::before {
+          mask-image: url(icons/heart.svg);
+  -webkit-mask-image: url(icons/heart.svg);
+}
+.card__icon--content-moderation::before {
+          mask-image: url(icons/truck.svg);
+  -webkit-mask-image: url(icons/truck.svg);
+}
+.card__icon--field-ui::before {
+          mask-image: url(icons/sliders.svg);
+  -webkit-mask-image: url(icons/sliders.svg);
+}
+.card__icon--filter::before {
+          mask-image: url(icons/filter.svg);
+  -webkit-mask-image: url(icons/filter.svg);
+}
+.card__icon--image::before {
+          mask-image: url(icons/picture-o.svg);
+  -webkit-mask-image: url(icons/picture-o.svg);
+}
+.card__icon--search::before {
+          mask-image: url(icons/search.svg);
+  -webkit-mask-image: url(icons/search.svg);
+}
+.card__icon--taxonomy::before {
+          mask-image: url(icons/tags.svg);
+  -webkit-mask-image: url(icons/tags.svg);
+}
+.card__icon--quick-edit::before {
+          mask-image: url(icons/flash.svg);
+  -webkit-mask-image: url(icons/flash.svg);
+}
+.card__icon--menu-ui::before,
+.card__icon--contextual-links::before {
+          mask-image: url(icons/bullseye.svg);
+  -webkit-mask-image: url(icons/bullseye.svg);
+}
+
+.card__icon--devel-kint::before {
+          mask-image: url(icons/terminal.svg);
+  -webkit-mask-image: url(icons/terminal.svg);
+}
+.card__icon--tour {
+}
+.card__icon--devel-generate::before {
+          mask-image: url(icons/terminal.svg);
+  -webkit-mask-image: url(icons/terminal.svg);
+}
+
+.card__icon--style-guide {
+}
+.card__icon--toolbar {
+}
+.card__icon--update-manager {
+}
+.card__icon--views-ui::before {
+          mask-image: url(icons/th-list.svg);
+  -webkit-mask-image: url(icons/th-list.svg);
+}
+
+/*
+./admin/people/permissions#module-devel_generate
+
+*/
+
+
+
+
+/*http://drupal8.dev/admin/structure*/
 .card__icon--admin-structure-block::before {
           mask-image: url(icons/th.svg);
   -webkit-mask-image: url(icons/th.svg);
@@ -150,8 +389,8 @@
 
 
 [class*="card__icon--admin-config-development"]::before {
-          mask-image: url(icons/desktop.svg);
-  -webkit-mask-image: url(icons/desktop.svg);
+          mask-image: url(icons/terminal.svg);
+  -webkit-mask-image: url(icons/terminal.svg);
 }
 
 [class*="card__icon--admin-config-search"]::before {
@@ -236,9 +475,9 @@
   -webkit-mask-image: url(icons/file-o.svg);
 }
 
-.card__icon--fieldtype-list-text::before{
-  mask-image: url(icons/check-square.svg);
--webkit-mask-image: url(icons/check-square.svg);
+.card__icon--fieldtype-list-text::before {
+          mask-image: url(icons/check-square.svg);
+  -webkit-mask-image: url(icons/check-square.svg);
 }
 
 

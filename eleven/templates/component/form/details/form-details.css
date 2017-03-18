@@ -46,7 +46,6 @@ details summary::before {
           mask-repeat: no-repeat;
 }
 
-
 details summary::after {
   position: absolute;
   top: 0.5rem;
@@ -81,7 +80,7 @@ details summary::after {
 
 /* -- details colors ---------------------------------------------------------*/
 form details {
-  outline: 1px solid var(--gravel);
+  outline: 1px solid var(--bluesky-light);
   background-color: var(--white);
 }
 

@@ -40,16 +40,14 @@
 
     {% for item in content %}
       <article class="w card {{ cardclasses }}">
-        <a href="{{ item.url }}">
 
-          <div class="card__icon card__icon--{{ item.url.getInternalPath()|clean_class }}"></div>
+        <a href="{{ item.url }}" class="L">
+          <div class="w-3 card__icon card__icon--{{ item.url.getInternalPath()|clean_class }}"></div>
+          <h3 class="w-9 card__title">{{ item.title}}</h3>
 
-          <h3 class="card__title">{{ item.title}}</h3>
-          {% if item.description %}
-            <p class="card__text">
+            <p class="w-12 card__text">
               {{ item.description }}
             </p>
-          {% endif %}
 
         </a>
       </article>
@@ -66,20 +64,21 @@
   #}
 
   {% if content %}
-
+    <ul class="card__subelements">
     {% for item in content %}
-      <article>
-        <a href="{{ item.url }}">{{ item.title}}</a>
-        {% if item.description %}
-          <p>{{ item.description }}</p>
-        {% endif %}
-      </article>
+        <li>
+          <a href="{{ item.url }}" class="card__subelement">
+            <div class="card__subelement-text">
+              <h4 class="card__subelements-title">{{ item.title}}</h4>
+              {% if item.description %}
+                {{ item.description }}
+              {% endif %}
+            </div>
+          </a>
+          </li>
+
     {% endfor %}
-
-    </section>
+  </ul>
   {% endif %}
-
-
-
 
 {% endif %}

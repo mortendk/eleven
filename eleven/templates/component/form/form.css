@@ -3,8 +3,8 @@ main form {
   /*border-top: 1px solid var(--bluesky-light-20);*/
 }
 
-form.pagewidth{
-  padding: 0 3rem
+form.pagewidth {
+  /*padding: 0 3rem;*/
 }
 
 .form-item--inline {
@@ -46,11 +46,11 @@ form.pagewidth{
 /* description */
 .description,
 .form-item__description {
+  max-width: 40rem;
   margin: 0.5rem 0;
+  color: var(--asphalt-light);
   font-size: 0.875rem;
   line-height: 1rem;
-  color: var(--asphalt-light);
-  max-width: 40rem
 }
 
 
@@ -81,7 +81,7 @@ form.pagewidth{
   display: inline-block;
   margin-left: 0.5rem;
 }
-.form-item .admin-link button.link{
+.form-item .admin-link button.link {
   color: var(--bluesky-light);
 }
 .form-item .admin-link button.link:hover {
