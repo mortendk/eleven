@@ -1,45 +1,32 @@
 /*------------------------------------------------------------------------------
 bloack layout page
 -------------------------------------------------------------------------------*/
-
-/* header */
-#blocks th{
-  background-color: var(--bluesky);
-  border: 1px solid var(--bluesky-light);
-  margin: 0;
-  padding: 0.25rem 1rem;
-  line-height: 1rem
-}
-
-
-/* region title */
+/* Region title */
 #blocks .region-title {
   border-top: 1px dashed var(--bluesky);
 }
-#blocks .region-title:first-child{
-  border-top: 0rem
+#blocks .region-title:first-child {
+  border-top: 0rem;
+}
+#blocks tr.region-title {
+  background-color: var(--bluesky-light-20);
 }
 #blocks tr.region-title td {
   margin: 0;
+  padding-right: 3rem;
   border-top: 1px solid var(--bluesky-light);
   border-bottom: 1px solid  var(--bluesky-light);
-  background-color: var(--bluesky-light-50);
-  font-size: 1.5rem;
   color: var(--white);
+  font-size: 1.5rem;
   font-weight: normal;
-  padding-right:3rem;
-  /*text-align: center;*/
 }
 
-.region-title__name{
-  display: inline-block;
-}
-
+/* Region name */
 .region-title__name {
+  display: inline-block;
   position: relative;
-  padding-left: 2rem
+  padding-left: 2rem;
 }
-
 .region-title__name:before {
   position: absolute;
   top: 0.2rem;
@@ -60,33 +47,24 @@ bloack layout page
           mask-repeat: no-repeat;
 }
 
-.icon-11:hover:before {
-  /*transform: scale(1.5);*/
-  background-color: var(--bluesky-light);
-}
-
-
-
-
+/* Place blocks */
 #blocks .region-title__action {
   float: right;
-
-  /*float: left;
-  display: inline-block;
-  margin:0;*/
 }
 
 /* messages */
 #blocks .region-message  td {
+  padding: 2rem;
   background-color: var(--gravel);
   color: var(--pumpkin);
   text-align: center;
-  padding: 2rem
 }
 
-#blocks .draggable a.tabledrag-handle{
+/* Draggable handle */
+#blocks .draggable a.tabledrag-handle {
   background-color: var(--grass);
 }
-#blocks .block{
 
+#blocks .block {
+  font-weight: bold;
 }
