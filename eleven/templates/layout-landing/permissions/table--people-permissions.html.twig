@@ -18,7 +18,7 @@
         {# this section tag is started  down after the .card__title  - yup not pretty but works#}
           </details>
           </section>
-        <details open{{ row.attributes.addClass('permissions-' ~ row.cells.0.content['#markup']|clean_class|clean_class, classes)}}>
+        <details open{{ row.attributes.addClass('permissions-' ~ row.cells.0.content['#markup']|clean_class, classes)}}>
     {% endif %}
 
     {% for cell in row.cells %}
@@ -36,6 +36,7 @@
         {% if cell.content['#context'].title %}
           <div class="card w {% if cell.content['#context'].warning %}permission--warning{% endif %}">
             <div class="card__icon card__icon--small"></div>
+
             <h4 class="card__title ">{{ cell.content['#context'].title|striptags }}</h4>
 
         {% endif %}

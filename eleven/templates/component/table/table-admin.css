@@ -11,10 +11,6 @@ td .checkbox-style-check input[type=checkbox] + label:before {
   width: 0.875rem;
   height: 0.875rem;
 }
-.js td .dropbutton-wrapper{
-  display: none
-}
-
 
 /* draggable -----------------------------------------------------------------*/
 a.tabledrag-handle .handle {

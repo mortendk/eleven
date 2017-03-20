@@ -5,12 +5,11 @@
 {{ attach_library(active_theme()~'/admin.config') }}
 {{ attach_library(active_theme()~'/card') }}
 
-<div class="card w">
+<div class="card w L">
   {# TODO: needs the untranslated string here #}
   <div class="card__icon card__icon--{{ block.title|clean_class }}"></div>
   <h3 class="card__title ">{{ block.title }}</h3>
 
-  <pre>card__icon--{{ block.title|clean_class }}</pre>
 
   {% if block.content %}
    {# layout-landing/admin-block-content.html.twig #}

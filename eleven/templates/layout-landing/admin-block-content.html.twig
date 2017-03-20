@@ -22,11 +22,12 @@
   {%
     set classes = [
       'L',
-      'LW-third',
+      'LW-4',
       'pagewidth'
     ]
   %}
   {# lets show a small change number of card  for the card layouts #}
+  {#
   <div class="pagewidth L-right">
     <ul class="L-right tabs-small">
       <li><a href="#" class="">1</a> </li>
@@ -34,6 +35,7 @@
       <li><a href="#" class="">3</a> </li>
     </ul>
   </div>
+  #}
 
   {% if content %}
     <section{{ attributes.addClass(classes) }}>
@@ -42,10 +44,10 @@
       <article class="w card {{ cardclasses }}">
 
         <a href="{{ item.url }}" class="L">
-          <div class="w-3 card__icon card__icon--{{ item.url.getInternalPath()|clean_class }}"></div>
-          <h3 class="w-9 card__title">{{ item.title}}</h3>
+          <div class="card__icon card__icon--{{ item.url.getInternalPath()|clean_class }}"></div>
+          <h3 class="card__title">{{ item.title}}</h3>
 
-            <p class="w-12 card__text">
+            <p class="card__text">
               {{ item.description }}
             </p>
 

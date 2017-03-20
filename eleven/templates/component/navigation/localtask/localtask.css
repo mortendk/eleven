@@ -1,12 +1,11 @@
 .localtask__lvl1{
-  border-bottom: 1px solid var(--concrete);
+  border-bottom: 1px solid var(--bluesky-light);
   padding-left: 3rem
 }
 .localtask__lvl2{
-  border-bottom: 1px solid var(--concrete-light);
+  border-bottom: 1px solid var(--bluesky-light);
 }
 .localtask__lvl2 a{
-  color: var(--concrete);
 }
 @media (max-width: 47.99em) {
   .localtask__lvl1{
