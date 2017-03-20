@@ -8,21 +8,21 @@ screenshot: goes-to-eleven.jpg
 # -- regions -------------------------------------------------------------------
 regions:
   header: 'Header'
-  header_first:  ' - Header 1'
-  header_second: ' - Header 2'
+  header_first:  'Header 1'
+  header_second: 'Header 2'
   navigation: 'Navigation'
   messages: 'Messages'
-  top_first: 'top 1'
-  top_second: 'top 2'
+  top_first: 'Top 1'
+  top_second: 'Top 2'
   #content
   content: Content
   #footer
   footer:  'Footer'
-  footer_first:  ' - Footer 1'
-  footer_second: ' - Footer 2'
-  footer_third:  ' - Footer 3'
-  footer_fourth: ' - Footer 4'
-  footer_bottom: ' - Footer Bottom'
+  footer_first:  'Footer 1'
+  footer_second: 'Footer 2'
+  footer_third:  'Footer 3'
+  footer_fourth: 'Footer 4'
+  footer_bottom: 'Footer Bottom'
 
 
 # -- Libraries -----------------------------------------------------------------

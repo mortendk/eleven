@@ -1,0 +1,70 @@
+/*------------------------------------------------------------------------------
+bloack layout page
+-------------------------------------------------------------------------------*/
+/* Region title */
+#blocks .region-title {
+  border-top: 1px dashed var(--bluesky);
+}
+#blocks .region-title:first-child {
+  border-top: 0rem;
+}
+#blocks tr.region-title {
+  background-color: var(--bluesky-light-20);
+}
+#blocks tr.region-title td {
+  margin: 0;
+  padding-right: 3rem;
+  border-top: 1px solid var(--bluesky-light);
+  border-bottom: 1px solid  var(--bluesky-light);
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+/* Region name */
+.region-title__name {
+  display: inline-block;
+  position: relative;
+  padding-left: 2rem;
+}
+.region-title__name:before {
+  position: absolute;
+  top: 0.2rem;
+  left: 0rem;
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: var(--bluesky);
+  background-image: none ! important; /* yes we wanna make sure no module have fun here */
+  content: "";
+  transition: 0.5s ease-in;
+
+          mask-image: url(icons/cubes.svg);
+  -webkit-mask-image: url(icons/cubes.svg);
+  -webkit-mask-size: contain !important;
+          mask-size: contain !important;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+}
+
+/* Place blocks */
+#blocks .region-title__action {
+  float: right;
+}
+
+/* messages */
+#blocks .region-message  td {
+  padding: 2rem;
+  background-color: var(--gravel);
+  color: var(--pumpkin);
+  text-align: center;
+}
+
+/* Draggable handle */
+#blocks .draggable a.tabledrag-handle {
+  background-color: var(--grass);
+}
+
+#blocks .block {
+  font-weight: bold;
+}

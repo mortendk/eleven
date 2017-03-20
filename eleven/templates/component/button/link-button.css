@@ -53,9 +53,9 @@ a.button--small {
   font-weight: normal;
   line-height: 1.5rem;
 }
-a.button-small:before {
+a.button--small:before {
   top: 0.25rem;
-  left: 0.5rem;
+  left: 0.25rem;
   width: 1rem;
   height: 1rem;
 }
