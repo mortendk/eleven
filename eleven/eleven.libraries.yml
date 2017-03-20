@@ -71,6 +71,11 @@ permissions:
     theme:
       templates/layout-landing/permissions/permissions.css: {}
       templates/layout-landing/permissions-icons.css: {}
+
+blocklayout:
+  css:
+    theme:
+      templates/layout-landing/block/block-layout.css: {}
 # ------------------------------------------------------------------------------
 # navigation
 # ------------------------------------------------------------------------------

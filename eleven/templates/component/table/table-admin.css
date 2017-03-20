@@ -130,33 +130,6 @@ td.views-field-filename a[href$=".xlsx"]::before {
 
 
 
-
-/*
--------------------------------------------------------------------------------
-BLOCK LAYOUT PAGE
--------------------------------------------------------------------------------
-*/
-#blocks .region-title {
-  padding-top: 2rem;
-  /*background-color: var(--bluesky-light-20);*/
-  /*color: var(--bluesky-light);*/
-}
-#blocks tr.region-title td {
-  padding: 1rem;
-  border-top: 1px solid var(--bluesky-light);
-  border-bottom: 1px solid  var(--bluesky-light);
-  font-size: 1.5rem;
-  font-weight: 100;
-}
-#blocks .region-title__action {
-}
-.region-message  td {
-  background-color: var(--gravel-light);
-  color: var(--pumpkin);
-  text-align: center;
-}
-
-
 td input.field-weight {
   width: 3rem;
   min-width: 3rem;

@@ -41,7 +41,7 @@ function eleven_preprocess_admin_block_content(&$variables) {
 
 // ----------------------------------------------------------------------------
 // Tables
-// dont want to use tables for layouts of admin pages content.
+// dont tables for layouts of admin pages content + cause were grownups
 //
 // ----------------------------------------------------------------------------
 function eleven_theme_suggestions_table_alter(array &$suggestions, array $variables) {
@@ -65,6 +65,11 @@ function eleven_theme_suggestions_table_alter(array &$suggestions, array $variab
     if( isset($path[3]) ) {
       $suggestions[] = 'table__' .$path[2] .'_' . $path[3];
     }
+  }
+
+  // block list
+  if( isset($path[4]) ) {
+    $suggestions[] = 'table__' .$path[2] .'_'  .$path[3] .'_' . $path[4];
   }
 
   if(isset( $path[6])) {
