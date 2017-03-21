@@ -1,0 +1,48 @@
+{{ attach_library(active_theme()~'/views') }}
+{{ attach_library(active_theme()~'/card') }}
+
+<section{{ attributes.addClass('L','LW-4') }}>
+
+{% if rows %}
+  {% for row in rows %}
+
+
+
+  <article{{ row.attributes.addClass('w', 'L', 'card') }}>
+
+    {{ row.cells.view_name.content }}
+
+    {{ row.cells.description.content }}
+
+    <div class="">
+      <strong>path:</strong><br>
+      {{ row.cells.path.content }}
+    </div>
+
+    <div class="">
+      {{ row.cells.operations.content }}
+    </div>
+
+    {#
+    {% for cell in row.cells %}
+      {% if cell.attributes|render %}<div{{ cell.attributes }}>{% endif %}
+
+        {% if cell.attributes['data-drupal-selector'] == 'views-table-filter-text-source' %}
+        {% endif %}
+
+        {{ cell.content }}
+
+        {% if cell.attributes|render %}</div>{% endif %}
+
+    {% endfor %}
+     #}
+   </article>
+
+
+
+
+
+  {% endfor %}
+{% endif %}
+
+</section>

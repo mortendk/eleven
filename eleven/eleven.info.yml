@@ -110,6 +110,11 @@ libraries-override:
   #       css/shortcut.icons.theme.css: css/shortcut/shortcut.icons.theme.css
 
 
+  views_ui/views_ui.listing:
+    js:
+      js/views_ui.listing.js: templates/layout-landing/views/views_ui.listing.js
+
+
   views_ui/admin.styling:
     css:
       theme:

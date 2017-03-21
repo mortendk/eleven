@@ -4,7 +4,6 @@
   padding: 0 3rem
 }
 
-
 /* module listing */
 
 /* -- table resets  ----------------------------------------------------------------*/
@@ -14,17 +13,6 @@
 }
 
 /*-- module cards ------------------------------------------------------------------*/
-tr.card {
-  overflow: none;
-  padding: 0;
-  background-color: var(--white);
-  color: var(--asphalt);
-}
-.card td {
-  margin: 0;
-  padding: 0.5rem;
-  border: none;
-}
 
 /* card mdodule variations */
 .card--module .card__title {

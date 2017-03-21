@@ -14,6 +14,20 @@
   border-color: var(--concrete-light);
 }
 
+/**/
+tr.card {
+  overflow: none;
+  padding: 0;
+  background-color: var(--white);
+  color: var(--asphalt);
+}
+.card td:first-child {
+  margin: 0;
+  padding: 0.5rem;
+  border: none;
+}
+
+
 /* title */
 .card__title {
   margin-top: 1rem;
