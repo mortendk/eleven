@@ -30,40 +30,19 @@
     </div>
     {% endif %}
 
-
-
     <details class="details-summary-link">
         <summary>{{ 'More info'|t }}</summary>
 
         <strong>{{ 'machine name'|t }} </strong>
         {{row.cells.view_name.content['#view'].id}}
 
+        <strong{{ 'paths'|t }} </strong>
         {{ row.cells.path.content }}
-
     </details>
 
 
     {{ row.cells.operations.content }}
-
-
-    {#
-    {% for cell in row.cells %}
-      {% if cell.attributes|render %}<div{{ cell.attributes }}>{% endif %}
-
-        {% if cell.attributes['data-drupal-selector'] == 'views-table-filter-text-source' %}
-        {% endif %}
-
-        {{ cell.content }}
-
-        {% if cell.attributes|render %}</div>{% endif %}
-
-    {% endfor %}
-     #}
    </article>
-
-
-
-
 
   {% endfor %}
 {% endif %}

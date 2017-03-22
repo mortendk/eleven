@@ -126,11 +126,36 @@ tr.card {
           mask-repeat: no-repeat;
 }
 
+/* status  installed */
+.cards--enabled .card__status,
 .card__status--installed {
   background-color: var(--grass);
 }
+.cards--enabled .card__status:before,
+.card__status--installed::before {
+          mask-image: url(icons/check.svg);
+  -webkit-mask-image: url(icons/check.svg);
+}
+
+/* status ready to be installed */
+.cards--disabled .card__status,
 .card__status--notinstalled {
   background-color: var(--concrete);
+}
+
+.cards--disabled .card__status::before,
+.card__status--notinstalled::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
+}
+
+/*status error */
+.card--module.card--status-error {
+  border-color: var(--strawberry);
+}
+.card__status--error::before {
+          mask-image: url(icons/frown-o.svg);
+  -webkit-mask-image: url(icons/frown-o.svg);
 }
 .card__status--error {
   background-color: var(--strawberry);

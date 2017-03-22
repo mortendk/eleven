@@ -44,21 +44,6 @@
 
 /* card status --------------------------------------------------------------------*/
 /* status  installed */
-.card--module .card__status--installed::before {
-          mask-image: url(icons/check.svg);
-  -webkit-mask-image: url(icons/check.svg);
-}
-/* status ready to be installed */
-.card--module .card__status--notinstalled::before {
-          mask-image: url(icons/plug.svg);
-  -webkit-mask-image: url(icons/plug.svg);
-}
-/*status error */
-.card--module .card__status--error::before {
-          mask-image: url(icons/frown-o.svg);
-  -webkit-mask-image: url(icons/frown-o.svg);
-}
-
 .card--module.card--status-error {
   border-color: var(--strawberry);
 }
