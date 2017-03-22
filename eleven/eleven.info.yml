@@ -36,6 +36,9 @@ libraries-extend:
   shortcut/drupal.shortcut:
   - eleven/shortcut
 
+  views_ui/admin.styling:
+  - eleven/views
+
   # core/jquery.ui:
   # - eleven/jquery_ui
 
@@ -103,23 +106,15 @@ libraries-override:
         /core/themes/stable/css/shortcut/shortcut.theme.css: false
         /core/themes/stable/css/shortcut/shortcut.icons.theme.css: false
 
-  # shortcut/drupal.shortcut:
-  #   css:
-  #     theme:
-  #       css/shortcut.theme.css: css/shortcut/shortcut.theme.css
-  #       css/shortcut.icons.theme.css: css/shortcut/shortcut.icons.theme.css
-
-
+# views
   views_ui/views_ui.listing:
     js:
       js/views_ui.listing.js: templates/layout-landing/views/cards/views_ui.listing.js
-
 
   views_ui/admin.styling:
     css:
       theme:
         /core/themes/stable/css/views_ui/views_ui.admin.theme.css: false
-        # /core/themes/stable/css/views_ui/views_ui.admin.theme.css: templates/admin/views/css/views-admin.css
 
   # jquery ui
   # look at #/core/core.libraries.yml for my libs
@@ -135,9 +130,9 @@ libraries-override:
 
   # modernizr custom build
   # https://modernizr.com/download/?cssmask-details-inputtypes-touchevents-addtest-prefixes-setclasses-teststyles&q=mask
-  # core/modernizr:
-  #   js:
-  #     assets/vendor/modernizr/modernizr.min.js: js/modernizr-custom.js
+  core/modernizr:
+    js:
+      assets/vendor/modernizr/modernizr.min.js: js/modernizr-custom.js
 
 
 #-------------------------------------------------------------------------------
@@ -146,10 +141,10 @@ libraries-override:
 #-------------------------------------------------------------------------------
 
 stylesheets-remove:
+  - '@classy/css/layout.css'
   - core/modules/system/css/components/fieldgroup.module.css
   - core/themes/stable/css/filter/filter.admin.css
   - core/themes/stable/css/system/system.admin.css
   - core/themes/stable/css/field_ui/field_ui.admin.css
   - core/themes/stable/css/system/components/fieldgroup.module.css
-  - '@classy/css/layout.css'
   - core/themes/stable/css/user/user.admin.css

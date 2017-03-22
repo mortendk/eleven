@@ -25,10 +25,7 @@ global:
 # ------------------------------------------------------------------------------
 #
 # ------------------------------------------------------------------------------
-shortcut:
-  css:
-    theme:
-      templates/component/shortcut/shortcut.css: {}
+
 
 # jquery_ui:
 #   css:
@@ -50,6 +47,10 @@ messages:
     theme:
       templates/component/messages/messages.css: {}
 
+shortcut:
+  css:
+    theme:
+      templates/component/shortcut/shortcut.css: {}
 
 # ------------------------------------------------------------------------------
 # Admin landing pages
@@ -63,7 +64,7 @@ admin.config:
 views:
   css:
     theme:
-      templates/layout-landing/views/structure-table-views.css: {}
+      templates/layout-landing/views/views-admin.css: {}
 
 views.cards:
   css:
