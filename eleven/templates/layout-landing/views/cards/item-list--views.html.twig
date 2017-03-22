@@ -1,11 +1,8 @@
 {% if items or empty %}
-  <h4 class="card__subelements-title">{{ 'paths'|t }}</h4>
   {%- if items -%}
     <ul class="card__list">
       {%- for item in items -%}
-
         <li{{ item.attributes }}>{{ item.value }}</li>
-
       {%- endfor -%}
     </ul>
   {%- else -%}

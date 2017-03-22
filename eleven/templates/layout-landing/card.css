@@ -36,6 +36,7 @@ tr.card {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1;
+  width: 100%;
 }
 .card a {
   color: var(--black);
