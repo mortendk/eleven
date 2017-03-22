@@ -38,6 +38,7 @@ libraries-extend:
 
   views_ui/admin.styling:
   - eleven/views
+  - eleven/nav.tabs
 
   # core/jquery.ui:
   # - eleven/jquery_ui
@@ -95,8 +96,6 @@ libraries-override:
     css:
       component:
         /core/themes/stable/css/core/vertical-tabs.css: templates/component/navigation/vertical-tabs/vertical-tabs.css
-        # misc/vertical-tabs.css: css/core/vertical-tabs.css
-
 
 
   # shotcut
@@ -134,12 +133,10 @@ libraries-override:
     js:
       assets/vendor/modernizr/modernizr.min.js: js/modernizr-custom.js
 
-
 #-------------------------------------------------------------------------------
 # Remove stylesheets
 # TODO: depricated overwrite the libraries instead...
 #-------------------------------------------------------------------------------
-
 stylesheets-remove:
   - '@classy/css/layout.css'
   - core/modules/system/css/components/fieldgroup.module.css
