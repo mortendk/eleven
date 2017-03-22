@@ -115,6 +115,11 @@ libraries-override:
       theme:
         /core/themes/stable/css/views_ui/views_ui.admin.theme.css: false
 
+  views_ui/views_ui.admin:
+    js:
+      js/views-admin.js: templates/layout-landing/views/views-admin.js
+
+
   # jquery ui
   # look at #/core/core.libraries.yml for my libs
   # core/jquery.ui:
