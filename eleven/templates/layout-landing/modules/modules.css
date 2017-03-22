@@ -4,7 +4,6 @@
   padding: 0 3rem
 }
 
-
 /* module listing */
 
 /* -- table resets  ----------------------------------------------------------------*/
@@ -14,17 +13,6 @@
 }
 
 /*-- module cards ------------------------------------------------------------------*/
-tr.card {
-  overflow: none;
-  padding: 0;
-  background-color: var(--white);
-  color: var(--asphalt);
-}
-.card td {
-  margin: 0;
-  padding: 0.5rem;
-  border: none;
-}
 
 /* card mdodule variations */
 .card--module .card__title {
@@ -56,21 +44,6 @@ tr.card {
 
 /* card status --------------------------------------------------------------------*/
 /* status  installed */
-.card--module .card__status--installed::before {
-          mask-image: url(icons/check.svg);
-  -webkit-mask-image: url(icons/check.svg);
-}
-/* status ready to be installed */
-.card--module .card__status--notinstalled::before {
-          mask-image: url(icons/plug.svg);
-  -webkit-mask-image: url(icons/plug.svg);
-}
-/*status error */
-.card--module .card__status--error::before {
-          mask-image: url(icons/frown-o.svg);
-  -webkit-mask-image: url(icons/frown-o.svg);
-}
-
 .card--module.card--status-error {
   border-color: var(--strawberry);
 }

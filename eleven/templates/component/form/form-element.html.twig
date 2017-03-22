@@ -11,7 +11,7 @@
   set classes = [
     'form-item',
     'form-item--' ~ type|clean_class ,
-    element['#type'] == 'select' ? 'form-item--inline': 'nope',
+    element['#type'] == 'select' ? 'form-item--inline' ,
     errors ? 'form-item--error',
     disabled == 'disabled' ? 'form-item--disabled',
     'js-form-item',

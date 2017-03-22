@@ -1,0 +1,50 @@
+{{ attach_library(active_theme()~'/views') }}
+{{ attach_library(active_theme()~'/card') }}
+
+<section{{ attributes.addClass('L','LW-4') }}>
+
+{% if rows %}
+  {% for row in rows %}
+
+  <article{{ row.attributes.addClass('w', 'card') }}>
+    <div class="card__status"></div>
+
+    <h3 class="card__title card__title--icon card__title--icon-views " data-drupal-selector="views-table-filter-text-source">
+      {{row.cells.view_name.content['#view'].label}}
+    </h3>
+
+    {% if row.cells.description.content|render %}
+      <div class="card__text">
+        {{ row.cells.description.content }}
+      </div>
+    {% endif %}
+
+    {% if row.cells.view_name.content['#displays'] %}
+    <div class="card__text">
+      <strong>{{ 'View Displays'|t }}: </strong>
+      <ul class="card__list">
+      {% for display in row.cells.view_name.content['#displays'] %}
+        <li>{{ display}}</li>
+      {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+    <details class="details-summary-link">
+        <summary>{{ 'More info'|t }}</summary>
+
+        <strong>{{ 'machine name'|t }} </strong>
+        {{row.cells.view_name.content['#view'].id}}
+
+        <strong{{ 'paths'|t }} </strong>
+        {{ row.cells.path.content }}
+    </details>
+
+
+    {{ row.cells.operations.content }}
+   </article>
+
+  {% endfor %}
+{% endif %}
+
+</section>

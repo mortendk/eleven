@@ -19,7 +19,13 @@ debug
 .js .dropbutton-multiple.dropbutton-widget {
   position: absolute;
 }
-/* were ::before */
+.js .dropbutton-wrapper, .js .dropbutton-widget{
+  /*position: absolute;*/
+}
+.js .dropbutton-multiple.open{
+  /*z-index: 666;*/
+}
+/* we are using ::before to place icons ...*/
 .dropbutton-arrow {
   display: none;
 }

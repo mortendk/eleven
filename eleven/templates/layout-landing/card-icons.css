@@ -84,6 +84,8 @@
 
 
 /* icons ---------------------------------------------------------------------*/
+
+
 /*http://drupal8.dev/admin*/
 .card__icon--admin-content::before {
           mask-image: url(icons/file-text-o.svg);
@@ -152,8 +154,8 @@
   -webkit-mask-image: url(icons/file-text-o.svg);
 }
 .card__icon--admin-reports-views-plugins::before {
-          mask-image: url(icons/file-text-o.svg);
-  -webkit-mask-image: url(icons/file-text-o.svg);
+          mask-image: url(icons/tasks.svg);
+  -webkit-mask-image: url(icons/tasks.svg);
 }
 
 
@@ -315,8 +317,8 @@
 .card__icon--update-manager {
 }
 .card__icon--views-ui::before {
-          mask-image: url(icons/th-list.svg);
-  -webkit-mask-image: url(icons/th-list.svg);
+          mask-image: url(icons/tasks.svg);
+  -webkit-mask-image: url(icons/tasks.svg);
 }
 
 /*
@@ -361,8 +363,8 @@
   -webkit-mask-image: url(icons/tags.svg);
 }
 .card__icon--admin-structure-views::before {
-          mask-image: url(icons/th-list.svg);
-  -webkit-mask-image: url(icons/th-list.svg);
+          mask-image: url(icons/tasks.svg);
+  -webkit-mask-image: url(icons/tasks.svg);
 }
 
 /**/
@@ -481,4 +483,36 @@
 }
 
 
+
+
+
 /**/
+.card__title--icon {
+  position: relative;
+  padding-left: 3rem
+}
+.card__title--icon::before {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--bluesky-light);
+  background-image: none ! important; /* yes we wanna make sure no module have fun here */
+  content: "";
+  transition: 0.5s ease-in;
+
+          mask-image: var(--icon-coffee);
+  -webkit-mask-image: var(--icon-coffee);
+  -webkit-mask-size: contain !important;
+          mask-size: contain !important;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+}
+
+
+.card__title--icon-views::before {
+          mask-image: url(icons/tasks.svg);
+  -webkit-mask-image: url(icons/tasks.svg);
+}

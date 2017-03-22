@@ -15,6 +15,11 @@
     attributes.hasclass('field') ? 'editform-sidebar',
     attributes.hasclass('compact-link') ? 'pagewidth',
     attributes.hasclass('compact-link') ? 'pagewidth',
+    attributes.id == 'views-entity-list' ? 'pagewidth',
+
+    attributes.hasclass('views-list-section') ? 'cards',
+    attributes.hasclass('views-list-section') and attributes.hasclass('enabled')  ? 'cards--enabled',
+    attributes.hasclass('views-list-section') and attributes.hasclass('disabled')  ? 'cards--disabled',
   ]
 %}
 
