@@ -64,7 +64,13 @@ views:
   css:
     theme:
       templates/layout-landing/views/structure-table-views.css: {}
-      templates/layout-landing/views/views-admin.css: {}
+
+views.cards:
+  css:
+    theme:
+      templates/layout-landing/views/cards/structure-table-views.css: {}
+
+
 
 permissions:
   css:
