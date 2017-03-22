@@ -43,10 +43,10 @@ feat.quickedit:
     theme:
       templates/feat/quickedit/quickedit.css: {}
 
-feat.jquery_ui:
-  css:
-    theme:
-      templates/feat/jquery_ui/jquery_ui.css: {}
+# feat.jquery_ui:
+#   css:
+#     theme:
+#       templates/feat/jquery_ui/jquery_ui.css: {}
 
 # ------------------------------------------------------------------------------
 # Forms
