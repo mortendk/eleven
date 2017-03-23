@@ -36,9 +36,9 @@ libraries-extend:
   shortcut/drupal.shortcut:
   - eleven/shortcut
 
-  views_ui/admin.styling:
-  - eleven/views
-  - eleven/nav.tabs
+  # views_ui/admin.styling:
+  # - eleven/views
+  # - eleven/nav.tabs
 
   # core/jquery.ui:
   # - eleven/jquery_ui
@@ -106,18 +106,18 @@ libraries-override:
         /core/themes/stable/css/shortcut/shortcut.icons.theme.css: false
 
 # views
-  views_ui/views_ui.listing:
-    js:
-      js/views_ui.listing.js: templates/layout-landing/views/cards/views_ui.listing.js
-
-  views_ui/admin.styling:
-    css:
-      theme:
-        /core/themes/stable/css/views_ui/views_ui.admin.theme.css: false
-
-  views_ui/views_ui.admin:
-    js:
-      js/views-admin.js: templates/layout-landing/views/views-admin.js
+  # views_ui/views_ui.listing:
+  #   js:
+  #     js/views_ui.listing.js: templates/layout-landing/views/cards/views_ui.listing.js
+  #
+  # views_ui/admin.styling:
+  #   css:
+  #     theme:
+  #       /core/themes/stable/css/views_ui/views_ui.admin.theme.css: false
+  #
+  # views_ui/views_ui.admin:
+  #   js:
+  #     js/views-admin.js: templates/layout-landing/views/views-admin.js
 
 
   # jquery ui
