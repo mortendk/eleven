@@ -109,7 +109,7 @@ libraries-override:
   # views_ui/views_ui.listing:
   #   js:
   #     js/views_ui.listing.js: templates/layout-landing/views/cards/views_ui.listing.js
-  #
+
   # views_ui/admin.styling:
   #   css:
   #     theme:
