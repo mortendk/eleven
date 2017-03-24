@@ -83,7 +83,7 @@ debug
 /* main button general style -------------------------------------------------*/
 .dropbutton > .dropbutton-action:first-child > a {
   padding-right: 2rem;
-  min-width: 10rem
+  min-width: 5rem
 }
 
 /* dropbutton toggle icon   general style ------------------------------------*/
