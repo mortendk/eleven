@@ -141,7 +141,7 @@ table.admin:
 views:
   css:
     theme:
-      templates/layout-landing/views/views-admin.css: {}
+      templates/layout-landing/views/viewsui/views-admin.css: {}
 
 views.cards:
   css:

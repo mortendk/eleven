@@ -3,7 +3,6 @@
 
   ]
 %}
-
 {%
   set classes = [
     attributes['data-drupal-selector'] == 'edit-node-bulk-form' ? 'L-left-bottom',
@@ -17,6 +16,10 @@
     attributes.hasclass('compact-link') ? 'pagewidth',
     attributes.id == 'views-entity-list' ? 'pagewidth',
 
+    attributes.id =='edit-display-settings-details' ? '',
+    attributes.id =='edit-display-settings' ? 'pagewidth',
+
+    attributes.hasclass('views-display-columns') ? '',
     attributes.hasclass('views-list-section') ? 'cards',
     attributes.hasclass('views-list-section') and attributes.hasclass('enabled')  ? 'cards--enabled',
     attributes.hasclass('views-list-section') and attributes.hasclass('disabled')  ? 'cards--disabled',

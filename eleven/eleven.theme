@@ -143,7 +143,6 @@ function eleven_theme_suggestions_input_alter(array &$suggestions, array $variab
     $suggestions[] = 'input__submit__view_admin_ui';
   }
 
-
 }
 
 

@@ -8,6 +8,8 @@
  * - children: The remaining elements such as dropbuttons and tabs.
  */
 #}
-<div{{ attributes }}>
+{#   {{ 'displays'|t }}: #}
+{{ attach_library(active_theme()~'/nav.tabs') }}
+<div{{ attributes.removeClass('clearfix').addClass('') }}>
   {{ children }}
 </div>

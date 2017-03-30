@@ -38,9 +38,19 @@ tr.card {
   line-height: 1;
   width: 100%;
 }
-.card a {
-  color: var(--black);
+.card--small .card__title{
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: var(--asphalt);
 }
+.card a {
+  text-decoration: underline;
+}
+.card .card__title a {
+  color: var(--black);
+  text-decoration: none
+}
+.card .card__title a:hover,
 .card a:hover .card__title {
   color: var(--bluesky);
 }

@@ -1,6 +1,6 @@
 name: Eleven
 type: theme
-description: 'Admin theme for Drupal8'
+description: 'Admin Theme that goes to 11'
 base theme: elevenfeat # Seperated the Front End Admin Tools.
 core: '8.x'
 screenshot: goes-to-eleven.jpg
@@ -36,9 +36,9 @@ libraries-extend:
   shortcut/drupal.shortcut:
   - eleven/shortcut
 
-  # views_ui/admin.styling:
-  # - eleven/views
-  # - eleven/nav.tabs
+  views_ui/admin.styling:
+  - eleven/views
+  - eleven/card
 
   # core/jquery.ui:
   # - eleven/jquery_ui
@@ -81,24 +81,26 @@ libraries-override:
         css/components/textarea.css: false
         css/components/ui-dialog.css: false
 
+#messages
   classy/messages:
     css:
       component:
         css/components/messages.css: false
 
+# dropbutton
   classy/dropbutton:
     css:
       component:
         css/components/dropbutton.css: templates/component/navigation/dropbutton/dropbutton.theme.css
 
-
+# vertical tabs
   core/drupal.vertical-tabs:
     css:
       component:
         /core/themes/stable/css/core/vertical-tabs.css: templates/component/navigation/vertical-tabs/vertical-tabs.css
 
 
-  # shotcut
+# shotcut
   shortcut/drupal.shortcut:
     css:
       theme:
@@ -106,21 +108,18 @@ libraries-override:
         /core/themes/stable/css/shortcut/shortcut.icons.theme.css: false
 
 # views
-  # views_ui/views_ui.listing:
-  #   js:
-  #     js/views_ui.listing.js: templates/layout-landing/views/cards/views_ui.listing.js
+  views_ui/views_ui.listing:
+    js:
+      js/views_ui.listing.js: templates/layout-landing/views/cards/views_ui.listing.js
 
-  # views_ui/admin.styling:
-  #   css:
-  #     theme:
-  #       /core/themes/stable/css/views_ui/views_ui.admin.theme.css: false
-  #
-  # views_ui/views_ui.admin:
-  #   js:
-  #     js/views-admin.js: templates/layout-landing/views/views-admin.js
+  views_ui/admin.styling:
+    css:
+      theme:
+        /core/themes/stable/css/views_ui/views_ui.admin.theme.css: false
 
 
-  # jquery ui
+
+# jquery ui
   # look at #/core/core.libraries.yml for my libs
   # core/jquery.ui:
   #   css:

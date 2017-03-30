@@ -1,0 +1,207 @@
+/**/
+.views-edit-view {
+}
+/*main bg for the view*/
+#edit-display-settings-details {
+  background-color: var(--gravel-light);
+}
+
+
+
+/* dropbuttons fix */
+.views-display-top {
+  position: relative;
+}
+.views-ui-display-tab-bucket {
+  position: relative;
+}
+/* Hide 'remove' checkboxes. */
+.views-remove-checkbox {
+  display: none;
+}
+
+/* drop button corrections  --------------------------------------------------*/
+.views-ui-display-tab-bucket .dropbutton-wrapper {
+  position: absolute;
+  z-index: 666;
+  top: 0.5rem;
+  right: 0.5rem; /* LTR */
+}
+[dir="rtl"] .views-ui-display-tab-bucket .dropbutton-wrapper {
+  right: auto;
+  left: 0.5rem;
+}
+
+/* tabs  ---------------------------------------------------------------------*/
+/*display tabs bg */
+#views-display-top {
+  background-color: var(--white);
+}
+
+#views-display-menu-tabs {
+  display: -webkit-box;
+  display:    -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:         flex;
+          flex-direction: row;
+  padding-left: 3rem;
+  border-top: 1px solid var(--bluesky-light-light);
+  border-bottom: 1px solid var(--bluesky-light-light);
+
+      -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -ms-flex-justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+          justify-content: flex-start;
+  -ms-flex-align: start;
+  align-items: center;
+  align-content: flex-start;
+}
+.views-display-top .tabs > li {
+  overflow: visible;
+  margin: 0;
+  padding-left: 1px;
+}
+.views-display-top .tabs > li a {
+  display: block;
+  width: 5rem;
+  height: 2rem;
+  background-color: var(--concrete);
+  color: var(--white);
+  line-height: 2rem;
+}
+.views-display-top .tabs > li a::before {
+  display: block;
+  content: "";
+
+  -webkit-mask-image: url(icons/tasks.svg);
+          mask-image: url(icons/tasks.svg);
+}
+
+
+.views-display-top .tabs > li.is-active a {
+  background-color: var(--bluesky-light);
+}
+
+/*
+the add button
+we want this to look like a drop button so its clear to the user that it contains more
+*/
+.views-display-top .tabs > li.add {
+  margin-left: 5rem;
+}
+.views-display-top .tabs > li.add a {
+  position: relative;
+  height: 1.5rem;
+  background-color: var(--gravel-light);
+  color: var(--bluesky);
+  padding-left: 2rem;
+  line-height: 1.5rem
+
+}
+.views-display-top .tabs > li.add a:before {
+  top: 0.25rem;
+background-color: var(--concrete);
+          mask-image: url(icons/plus-circle.svg);
+  -webkit-mask-image: url(icons/plus-circle.svg);
+}
+.views-display-top .tabs > li.add a:hover:before {
+  background-color: var(--bluesky);
+}
+.views-display-top .tabs > li.add a:after {
+  position: absolute;
+  top: 0.25rem;
+  right: 0rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--concrete);
+  content: "";
+
+          mask-image: url(icons/ellipsis-v.svg);
+  -webkit-mask-image: url(icons/ellipsis-v.svg);
+  -webkit-mask-size: contain !important;
+          mask-size: contain !important;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+}
+
+.views-displays .tabs .action-list {
+  z-index: 666;
+  /*display: block !important;*/
+  margin-top: 0.1rem;
+}
+.views-displays .tabs .action-list li input {
+  width: 10rem;
+  padding-left: 1rem;
+  border-bottom: 1px solid var(--gravel);
+  background-color: var(--gravel-light);
+  color: var(--bluesky);
+  text-align: left;
+}
+
+.views-displays .tabs .action-list li input:hover {
+  background-color: var(--bluesky);
+  color: var(--white);
+}
+
+/* correction to the dropbutton */
+.views-display-top .dropbutton-wrapper {
+  position: absolute;
+  top: 0.25rem;
+  right: 0;
+}
+[dir="rtl"] .views-display-top .dropbutton-wrapper {
+  right: auto;
+  left: 2rem;
+}
+
+
+
+
+
+
+
+
+/* emulate the card*/
+.views-ui-display-tab-actions .view__setting{
+  border: 1px solid var(--gravel);
+  width: 100%;
+  background-color: var(--white);
+  margin: 1rem 0;
+  padding: 0.5rem;
+}
+
+
+/* .admin.css overwrites -----------------------------------------------------*/
+.views-display-setting .label,
+.views-display-setting .views-ajax-link {
+  display: inline-block;
+  float: none;
+}
+
+/* errors ------------------------------------------------------------------- */
+.error {
+  border: 2px solid var(--strawberry);
+}
+.overridden,
+.overridden h3 {
+  color: var(--strawberry);
+  font-style: italic;
+}
+
+/* design --------------------------------------------------------------------*/
+h1.unit-title {
+  display: none;
+  color: var(--bluesky);
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.views-edit-view .label {
+  display: inline-block;
+  color: var(--strawberry);
+}

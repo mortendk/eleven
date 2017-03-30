@@ -14,17 +14,24 @@
  *
  * @see template_preprocess_views_ui_display_tab_bucket()
  */
+
 #}
+{#
+
+'views-ui-display-tab-bucket',
+ #}
 {%
   set classes = [
-    'views-ui-display-tab-bucket',
-    name ? name|clean_class,
-    overridden ? 'overridden',
+    'pagewidth',
+    'card',
+    'card--small',
+    name ? 'card--' ~ name|clean_class,
+    overridden ? 'card--overridden',
   ]
 %}
 <div{{ attributes.addClass(classes) }}>
   {% if title -%}
-    <h3 class="views-ui-display-tab-bucket__title">{{ title }}</h3>
+    <h3 class="card__title">{{ title }}</h3>
   {%- endif %}
   {% if actions -%}
     {{ actions }}

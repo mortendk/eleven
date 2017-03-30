@@ -18,9 +18,7 @@
 #}
 {%
   set classes = [
-    'views-display-setting',
-    'clearfix',
-    'views-ui-display-tab-setting',
+    'view__setting',
     defaulted ? 'defaulted',
     overridden ? 'overridden',
 ]
@@ -30,6 +28,6 @@
     <span class="label">{{ description }}</span>
   {%- endif %}
   {% if settings_links %}
-    {{ settings_links|safe_join('<span class="label">&nbsp;|&nbsp;</span>') }}
+    {{ settings_links|safe_join(' | ') }}
   {% endif %}
 </div>

@@ -246,3 +246,10 @@
           mask-image: var(--icon-trash);
           background-color: white
 }
+
+/* views */
+.tabs li a[href="/admin/structure/views/view/content"]:before {
+  -webkit-mask-image: url(icons/pencil.svg);
+          mask-image: url(icons/pencil.svg);
+          background-color: white
+}
