@@ -31,7 +31,7 @@
 %}
 <div{{ attributes.addClass(classes) }}>
   {% if title -%}
-    <h3 class="card__title">{{ title }}</h3>
+    <h3 class="card__title card__title--icon card__title--icon-{{ name|clean_class }}">{{ title }}</h3>
   {%- endif %}
   {% if actions -%}
     {{ actions }}

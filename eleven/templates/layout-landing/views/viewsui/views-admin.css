@@ -23,13 +23,12 @@
 /* drop button corrections  --------------------------------------------------*/
 .views-ui-display-tab-bucket .dropbutton-wrapper {
   position: absolute;
-  z-index: 666;
-  top: 0.5rem;
-  right: 0.5rem; /* LTR */
+  top: 1rem;
+  right: 0rem; /* LTR */
 }
 [dir="rtl"] .views-ui-display-tab-bucket .dropbutton-wrapper {
   right: auto;
-  left: 0.5rem;
+  left: 0rem;
 }
 
 /* tabs  ---------------------------------------------------------------------*/
@@ -96,15 +95,15 @@ we want this to look like a drop button so its clear to the user that it contain
 .views-display-top .tabs > li.add a {
   position: relative;
   height: 1.5rem;
+  padding-left: 2rem;
   background-color: var(--gravel-light);
   color: var(--bluesky);
-  padding-left: 2rem;
-  line-height: 1.5rem
-
+  line-height: 1.5rem;
 }
 .views-display-top .tabs > li.add a:before {
   top: 0.25rem;
-background-color: var(--concrete);
+  background-color: var(--concrete);
+
           mask-image: url(icons/plus-circle.svg);
   -webkit-mask-image: url(icons/plus-circle.svg);
 }
@@ -161,18 +160,13 @@ background-color: var(--concrete);
 
 
 
-
-
-
-
-
 /* emulate the card*/
-.views-ui-display-tab-actions .view__setting{
-  border: 1px solid var(--gravel);
+.views-ui-display-tab-actions .view__setting {
   width: 100%;
-  background-color: var(--white);
   margin: 1rem 0;
   padding: 0.5rem;
+  border: 1px solid var(--gravel);
+  background-color: var(--white);
 }
 
 
@@ -196,12 +190,82 @@ background-color: var(--concrete);
 /* design --------------------------------------------------------------------*/
 h1.unit-title {
   display: none;
-  color: var(--bluesky);
-  font-size: 1.5rem;
-  text-align: center;
 }
 
 .views-edit-view .label {
   display: inline-block;
-  color: var(--strawberry);
+}
+
+/* icons */
+.card__title--icon-title::before {
+          mask-image: url(icons/code.svg);
+  -webkit-mask-image: url(icons/code.svg);
+}
+
+.card__title--icon-format::before {
+          mask-image: url(icons/code.svg);
+  -webkit-mask-image: url(icons/code.svg);
+}
+.card__title--icon-field::before {
+          mask-image: url(icons/filter.svg);
+  -webkit-mask-image: url(icons/filter.svg);
+}
+
+
+.card__title--icon-filter::before {
+          mask-image: url(icons/filter.svg);
+  -webkit-mask-image: url(icons/filter.svg);
+}
+
+.card__title--icon-sort::before {
+          mask-image: url(icons/sort-alpha-asc.svg);
+  -webkit-mask-image: url(icons/sort-alpha-asc.svg);
+}
+
+.card__title--icon-page::before {
+          mask-image: url(icons/page.svg);
+  -webkit-mask-image: url(icons/page.svg);
+}
+
+.card__title--icon-header::before {
+          mask-image: url(icons/page.svg);
+  -webkit-mask-image: url(icons/page.svg);
+}
+.card__title--icon-footer::before {
+          mask-image: url(icons/page.svg);
+  -webkit-mask-image: url(icons/page.svg);
+}
+
+.card__title--icon-empty::before {
+          mask-image: url(icons/page.svg);
+  -webkit-mask-image: url(icons/page.svg);
+}
+
+.card__title--icon-pager::before {
+          mask-image: url(icons/page.svg);
+  -webkit-mask-image: url(icons/page.svg);
+}
+.card__title--icon-language::before {
+          mask-image: url(icons/page.svg);
+  -webkit-mask-image: url(icons/page.svg);
+}
+
+.card__title--icon-argument::before {
+          mask-image: url(icons/page.svg);
+  -webkit-mask-image: url(icons/page.svg);
+}
+
+.card__title--icon-relationship::before {
+          mask-image: url(icons/page.svg);
+  -webkit-mask-image: url(icons/page.svg);
+}
+
+.card__title--icon-exposed::before {
+          mask-image: url(icons/page.svg);
+  -webkit-mask-image: url(icons/page.svg);
+}
+
+.card__title--icon-other::before {
+          mask-image: url(icons/page.svg);
+  -webkit-mask-image: url(icons/page.svg);
 }

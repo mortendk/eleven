@@ -40,8 +40,8 @@ tr.card {
 }
 .card--small .card__title{
   margin-top: 0;
-  font-size: 1.2rem;
-  color: var(--asphalt);
+  font-size: 1rem;
+  color: var(--asphalt-light);
 }
 .card a {
   text-decoration: underline;
