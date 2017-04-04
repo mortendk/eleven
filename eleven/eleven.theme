@@ -3,13 +3,10 @@
 // PREPROCESS
 // ----------------------------------------------------------------------------
 function eleven_preprocess_html(&$variables){
- $system_path = \Drupal::service('path.current')->getPath();
- $variables['path'] = $system_path;
+ $variables['path'] = \Drupal::service('path.current')->getPath();
 
- $path = explode('/', \Drupal::service('path.current')->getPath());
- if( $path == "edit"){
-   $variables['admin'] = true;
- }
+ $variables['systempath'] = explode('/', \Drupal::service('path.current')->getPath());
+
 }
 
 // ----------------------------------------------------------------------------

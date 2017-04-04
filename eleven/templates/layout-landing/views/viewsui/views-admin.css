@@ -1,14 +1,14 @@
+
 /**/
 .views-edit-view {
 }
+
 /*main bg for the view*/
 #edit-display-settings-details {
   background-color: var(--gravel-light);
 }
 
-
-
-/* dropbuttons fix */
+/* dropbuttons postitions fix */
 .views-display-top {
   position: relative;
 }
@@ -32,6 +32,17 @@
 }
 
 /* tabs  ---------------------------------------------------------------------*/
+/*
+tabs arent really local actiona but we will make em look like it cause it make sense!
+*/
+.admin-view main {
+  padding-top: 0;
+  border-top: none
+}
+body.admin-view nav.localtask{
+
+}
+
 /*display tabs bg */
 #views-display-top {
   background-color: var(--white);
@@ -45,9 +56,7 @@
   display:         flex;
           flex-direction: row;
   padding-left: 3rem;
-  border-top: 1px solid var(--bluesky-light-light);
-  border-bottom: 1px solid var(--bluesky-light-light);
-
+  border-bottom: 1px solid var(--bluesky-light);
       -ms-flex-direction: row;
   -webkit-flex-direction: row;
   -webkit-flex-wrap: wrap;
@@ -58,6 +67,7 @@
   -ms-flex-align: start;
   align-items: center;
   align-content: flex-start;
+  padding-left: 5rem
 }
 .views-display-top .tabs > li {
   overflow: visible;
@@ -68,7 +78,7 @@
   display: block;
   width: 5rem;
   height: 2rem;
-  background-color: var(--concrete);
+  background-color: var(--bluesky-50);
   color: var(--white);
   line-height: 2rem;
 }
@@ -79,10 +89,8 @@
   -webkit-mask-image: url(icons/tasks.svg);
           mask-image: url(icons/tasks.svg);
 }
-
-
 .views-display-top .tabs > li.is-active a {
-  background-color: var(--bluesky-light);
+  background-color: var(--bluesky);
 }
 
 /*
@@ -90,34 +98,38 @@ the add button
 we want this to look like a drop button so its clear to the user that it contains more
 */
 .views-display-top .tabs > li.add {
-  margin-left: 5rem;
+  margin-left: 5rem
 }
-.views-display-top .tabs > li.add a {
+.views-display-top li.add a {
   position: relative;
-  height: 1.5rem;
+  height: 2rem;
   padding-left: 2rem;
-  background-color: var(--gravel-light);
-  color: var(--bluesky);
-  line-height: 1.5rem;
+  background-color: var(--rasberry-light);
+  color: var(--white);
+  line-height: 2rem;
 }
-.views-display-top .tabs > li.add a:before {
-  top: 0.25rem;
-  background-color: var(--concrete);
+
+.views-display-top li.add a:hover{
+  background-color: var(--rasberry);
+}
+.views-display-top li.add a:before {
+  top: 0.5rem;
+  background-color: var(--white);
 
           mask-image: url(icons/plus-circle.svg);
   -webkit-mask-image: url(icons/plus-circle.svg);
 }
-.views-display-top .tabs > li.add a:hover:before {
-  background-color: var(--bluesky);
+.views-display-top li.add a:hover:before {
+  background-color: var(--rasberry);
 }
-.views-display-top .tabs > li.add a:after {
+.views-display-top li.add a:after {
   position: absolute;
-  top: 0.25rem;
+  top: 0.5rem;
   right: 0rem;
   display: block;
   width: 1rem;
   height: 1rem;
-  background-color: var(--concrete);
+  background-color: var(--white);
   content: "";
 
           mask-image: url(icons/ellipsis-v.svg);
@@ -131,19 +143,20 @@ we want this to look like a drop button so its clear to the user that it contain
 .views-displays .tabs .action-list {
   z-index: 666;
   /*display: block !important;*/
-  margin-top: 0.1rem;
+  margin-top: 0.5rem;
+  margin-left: 1px;
 }
 .views-displays .tabs .action-list li input {
   width: 10rem;
   padding-left: 1rem;
-  border-bottom: 1px solid var(--gravel);
-  background-color: var(--gravel-light);
-  color: var(--bluesky);
+  border-bottom: 1px solid var(--rasberry-light);
+  background-color: var(--rasberry);
+  color: var(--white);
   text-align: left;
 }
 
 .views-displays .tabs .action-list li input:hover {
-  background-color: var(--bluesky);
+  background-color: var(--rasberry-light);
   color: var(--white);
 }
 
@@ -196,7 +209,25 @@ h1.unit-title {
   display: inline-block;
 }
 
-/* icons */
+
+/* settings */
+.card--small .view__setting{
+  border-bottom: 1px solid var(--gravel);
+  padding: 0.25rem 0;
+  margin-bottom: 0.1rem;
+  border-left: 0.1rem solid var(--gravel);
+}
+.card--small .view__setting:hover{
+  background-color: var(--gravel-light);
+}
+.card--small .view__setting:nth-of-type(even){
+
+
+}
+.card--small .view__setting a{
+  text-decoration: none
+}
+/* icons ---------------------------------------------------------------------*/
 .card__title--icon-title::before {
           mask-image: url(icons/code.svg);
   -webkit-mask-image: url(icons/code.svg);
