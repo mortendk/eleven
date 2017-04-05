@@ -1,9 +1,8 @@
-
 /**/
 .views-edit-view {
 }
 
-/*main bg for the view*/
+/* main bg for the view*/
 #edit-display-settings-details {
   background-color: var(--gravel-light);
 }
@@ -37,10 +36,9 @@ tabs arent really local actiona but we will make em look like it cause it make s
 */
 .admin-view main {
   padding-top: 0;
-  border-top: none
+  border-top: none;
 }
-body.admin-view nav.localtask{
-
+body.admin-view nav.localtask {
 }
 
 /*display tabs bg */
@@ -56,7 +54,9 @@ body.admin-view nav.localtask{
   display:         flex;
           flex-direction: row;
   padding-left: 3rem;
+  padding-left: 5rem;
   border-bottom: 1px solid var(--bluesky-light);
+
       -ms-flex-direction: row;
   -webkit-flex-direction: row;
   -webkit-flex-wrap: wrap;
@@ -67,7 +67,6 @@ body.admin-view nav.localtask{
   -ms-flex-align: start;
   align-items: center;
   align-content: flex-start;
-  padding-left: 5rem
 }
 .views-display-top .tabs > li {
   overflow: visible;
@@ -93,12 +92,12 @@ body.admin-view nav.localtask{
   background-color: var(--bluesky);
 }
 
-/*
+/* -----------------------------------------------------------------------------
 the add button
 we want this to look like a drop button so its clear to the user that it contains more
-*/
+------------------------------------------------------------------------------*/
 .views-display-top .tabs > li.add {
-  margin-left: 5rem
+  margin-left: 5rem;
 }
 .views-display-top li.add a {
   position: relative;
@@ -108,8 +107,7 @@ we want this to look like a drop button so its clear to the user that it contain
   color: var(--white);
   line-height: 2rem;
 }
-
-.views-display-top li.add a:hover{
+.views-display-top li.add a:hover {
   background-color: var(--rasberry);
 }
 .views-display-top li.add a:before {
@@ -120,7 +118,6 @@ we want this to look like a drop button so its clear to the user that it contain
   -webkit-mask-image: url(icons/plus-circle.svg);
 }
 .views-display-top li.add a:hover:before {
-  background-color: var(--rasberry);
 }
 .views-display-top li.add a:after {
   position: absolute;
@@ -160,10 +157,13 @@ we want this to look like a drop button so its clear to the user that it contain
   color: var(--white);
 }
 
+/* -----------------------------------------------------------------------------
+Dropbutton  for edit name / description
+------------------------------------------------------------------------------*/
 /* correction to the dropbutton */
 .views-display-top .dropbutton-wrapper {
   position: absolute;
-  top: 0.25rem;
+  top: 0;
   right: 0;
 }
 [dir="rtl"] .views-display-top .dropbutton-wrapper {
@@ -171,7 +171,54 @@ we want this to look like a drop button so its clear to the user that it contain
   left: 2rem;
 }
 
+.views-display-top  .dropbutton-action:first-child > a {
+  padding-left: 2.5rem;
+  background-image: var(--button-rasberry);
+  color: var(--white);
+  line-height: 2rem;
+}
+.views-display-top  .dropbutton-action:first-child > a:hover {
+  background-image: var(--button-rasberry-rev);
+}
+.views-display-top .dropbutton-action:first-child > a:before {
+  top: 0.5rem;
+  left: 0.5rem;
+  background-color: var(--white);
 
+          mask-image: url(icons/plus-circle.svg);
+  -webkit-mask-image: url(icons/plus-circle.svg);
+}
+
+.views-display-top .dropbutton-toggle button {
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--rasberry);
+}
+.views-display-top .dropbutton-toggle button:hover {
+  background-color: var(--rasberry-light);
+}
+.views-display-top .dropbutton-toggle button:before {
+  top: 0.5rem;
+  left: 0.75rem;
+  background-color: var(--white);
+}
+
+.views-display-top .dropbutton-action.secondary-action a {
+  border-bottom-color: var(--rasberry-light);
+  color: var(--rasberry);
+}
+.views-display-top .dropbutton-action.secondary-action a::before {
+  background-color: var(--rasberry);
+}
+
+/*.views-display-top .dropbutton-multiple .dropbutton .secondary-action {
+  display: block;
+}*/
+
+
+
+
+/* --------------------------------------------------------------------------*/
 
 /* emulate the card*/
 .views-ui-display-tab-actions .view__setting {
@@ -182,7 +229,35 @@ we want this to look like a drop button so its clear to the user that it contain
   background-color: var(--white);
 }
 
+/* drop buttons */
+.js .card--small .dropbutton-wrapper {
+  position: absolute;
+  top:0.5rem;
+  right: 0;
+  font-size: 0.5rem
+}
+.card--small .dropbutton-action a{
+  font-size: 0.75rem;
+  background-color: var(--bluesky-light);
+  color: var(--white);
 
+}
+.card--small .dropbutton-action:first-child a{
+  background-color: var(--bluesky);
+   color: var(--white);
+}
+.card--small .dropbutton-action:first-child a:before{
+  background-color: var(--white);
+}
+.card--small li.dropbutton-toggle{
+  right: 0.5rem
+}
+.card--small .dropbutton-toggle button{
+  background-color: var(--bluesky-light);
+}
+.card--small .dropbutton-toggle button:before{
+  background-color: var(--white);
+}
 /* .admin.css overwrites -----------------------------------------------------*/
 .views-display-setting .label,
 .views-display-setting .views-ajax-link {
@@ -200,7 +275,7 @@ we want this to look like a drop button so its clear to the user that it contain
   font-style: italic;
 }
 
-/* design --------------------------------------------------------------------*/
+/* corrections --------------------------------------------------------------------*/
 h1.unit-title {
   display: none;
 }
@@ -209,94 +284,88 @@ h1.unit-title {
   display: inline-block;
 }
 
+/*advanced */
+form details.views-display-column {
+  margin-top: 0.25rem;
+  outline: none;
+  background-color: transparent
+}
+
 
 /* settings */
-.card--small .view__setting{
-  border-bottom: 1px solid var(--gravel);
-  padding: 0.25rem 0;
+.card--small .view__setting {
   margin-bottom: 0.1rem;
-  border-left: 0.1rem solid var(--gravel);
+
 }
-.card--small .view__setting:hover{
+.card--small .view__setting:nth-of-type(even) {
+  background-color: var(--gravel);
+}
+.card--small .view__setting:hover {
   background-color: var(--gravel-light);
 }
-.card--small .view__setting:nth-of-type(even){
 
+.card--small .view__setting a {
+  text-decoration: none;
+}
 
-}
-.card--small .view__setting a{
-  text-decoration: none
-}
 /* icons ---------------------------------------------------------------------*/
 .card__title--icon-title::before {
           mask-image: url(icons/code.svg);
   -webkit-mask-image: url(icons/code.svg);
 }
-
 .card__title--icon-format::before {
           mask-image: url(icons/code.svg);
   -webkit-mask-image: url(icons/code.svg);
 }
 .card__title--icon-field::before {
-          mask-image: url(icons/filter.svg);
-  -webkit-mask-image: url(icons/filter.svg);
+          mask-image: url(icons/list-alt.svg);
+  -webkit-mask-image: url(icons/list-alt.svg);
 }
-
-
 .card__title--icon-filter::before {
           mask-image: url(icons/filter.svg);
   -webkit-mask-image: url(icons/filter.svg);
 }
-
 .card__title--icon-sort::before {
           mask-image: url(icons/sort-alpha-asc.svg);
   -webkit-mask-image: url(icons/sort-alpha-asc.svg);
 }
-
 .card__title--icon-page::before {
-          mask-image: url(icons/page.svg);
-  -webkit-mask-image: url(icons/page.svg);
+          mask-image: url(icons/sitemap.svg);
+  -webkit-mask-image: url(icons/sitemap.svg);
 }
-
 .card__title--icon-header::before {
           mask-image: url(icons/page.svg);
   -webkit-mask-image: url(icons/page.svg);
 }
 .card__title--icon-footer::before {
-          mask-image: url(icons/page.svg);
-  -webkit-mask-image: url(icons/page.svg);
+          mask-image: url(icons/footer.svg);
+  -webkit-mask-image: url(icons/footer.svg);
 }
-
 .card__title--icon-empty::before {
-          mask-image: url(icons/page.svg);
-  -webkit-mask-image: url(icons/page.svg);
+          mask-image: url(icons/ban.svg);
+  -webkit-mask-image: url(icons/ban.svg);
 }
-
 .card__title--icon-pager::before {
-          mask-image: url(icons/page.svg);
-  -webkit-mask-image: url(icons/page.svg);
+          mask-image: url(icons/arrow-circle-right.svg);
+  -webkit-mask-image: url(icons/arrow-circle-right.svg);
 }
 .card__title--icon-language::before {
-          mask-image: url(icons/page.svg);
-  -webkit-mask-image: url(icons/page.svg);
+          mask-image: url(icons/flag.svg);
+  -webkit-mask-image: url(icons/flag.svg);
 }
-
 .card__title--icon-argument::before {
-          mask-image: url(icons/page.svg);
-  -webkit-mask-image: url(icons/page.svg);
+          mask-image: url(icons/filter.svg);
+  -webkit-mask-image: url(icons/filter.svg);
 }
-
 .card__title--icon-relationship::before {
-          mask-image: url(icons/page.svg);
-  -webkit-mask-image: url(icons/page.svg);
+          mask-image: url(icons/database.svg);
+  -webkit-mask-image: url(icons/database.svg);
 }
-
 .card__title--icon-exposed::before {
-          mask-image: url(icons/page.svg);
-  -webkit-mask-image: url(icons/page.svg);
+          mask-image: url(icons/f245.svg);
+  -webkit-mask-image: url(icons/f245.svg);
 }
-
 .card__title--icon-other::before {
-          mask-image: url(icons/page.svg);
-  -webkit-mask-image: url(icons/page.svg);
+          mask-image: url(icons/gears.svg);
+  -webkit-mask-image: url(icons/gears.svg);
 }

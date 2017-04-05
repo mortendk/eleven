@@ -14,6 +14,14 @@
   border-color: var(--concrete-light);
 }
 
+
+.card--small {
+  font-size: 0.75rem
+}
+.card--small .label{
+  font-size: 0.75rem;
+}
+
 /**/
 tr.card {
   overflow: none;
@@ -41,7 +49,9 @@ tr.card {
 .card--small .card__title{
   margin-top: 0;
   font-size: 1rem;
-  color: var(--asphalt-light);
+  color: var(--bluesky);
+  border-bottom: 1px solid var(--bluesky-light-light);
+  line-height: 1.5rem
 }
 .card a {
   text-decoration: underline;
