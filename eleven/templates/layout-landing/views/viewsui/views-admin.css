@@ -39,6 +39,7 @@ tabs arent really local actiona but we will make em look like it cause it make s
   border-top: none;
 }
 body.admin-view nav.localtask {
+  margin-bottom: 1rem
 }
 
 /*display tabs bg */
