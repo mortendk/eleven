@@ -3,15 +3,17 @@ status: true
 dependencies:
   theme:
     - eleven
-id: eleven_page_title
+id: tabs_2
 theme: eleven
-region: header_first
-weight: -3
+region: navigation
+weight: -2
 provider: null
-plugin: page_title_block
+plugin: local_tasks_block
 settings:
-  id: page_title_block
-  label: 'Page title'
+  id: local_tasks_block
+  label: 'Tabs secondary'
   provider: core
   label_display: '0'
+  primary: false
+  secondary: true
 visibility: {  }

@@ -66,9 +66,9 @@ h6,
 }
 
 .page-title {
-  margin-top: 0rem;
   color: var(--bluesky);
   padding-left: 2rem;
+  margin: 1rem 0
 }
 
 /* -- P ----------------------------------------------------------------------*/
