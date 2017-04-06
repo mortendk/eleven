@@ -261,6 +261,7 @@
           mask-image: url(icons/rss.svg);
   -webkit-mask-image: url(icons/rss.svg);
 }
+.card__title--icon-comments::before,
 .card__title--icon-comment::before {
           mask-image: url(icons/comments-o.svg);
   -webkit-mask-image: url(icons/comments-o.svg);
@@ -495,10 +496,17 @@
 /* fieldtypes ----------------------------------------------------------------*/
 .card__title--icon-fieldtype::before {
 }
+.card__title--icon-text-formatted-long-with-summary:before,
 .card__title--icon-text-formatted-long:before,
 .card__title--icon-fieldtype-text-formatted-long::before {
           mask-image: url(icons/file-text-o.svg);
   -webkit-mask-image: url(icons/file-text-o.svg);
+}
+
+.card__title--icon-entity-reference::before{
+  mask-image: url(icons/sitemap.svg);
+-webkit-mask-image: url(icons/sitemap.svg);
+
 }
 
 .card__title--icon-fieldtype-text-formatted-long-with-summary::before {
