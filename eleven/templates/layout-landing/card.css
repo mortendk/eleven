@@ -14,8 +14,7 @@
   border-color: var(--concrete-light);
 }
 
-
-.card--small {
+.card--small .view__setting {
   font-size: 0.75rem
 }
 .card--small .label{

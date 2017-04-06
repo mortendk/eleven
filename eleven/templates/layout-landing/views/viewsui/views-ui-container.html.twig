@@ -10,6 +10,19 @@
 #}
 {#   {{ 'displays'|t }}: #}
 {{ attach_library(active_theme()~'/nav.tabs') }}
-<div{{ attributes.removeClass('clearfix').addClass('') }}>
+
+
+{% set classes = [
+  attributes.id !='views-display-top' ? 'card',
+  attributes.id !='views-display-top' ? 'card--small',
+  ]
+%}
+
+{% set classes_remove = [
+  'clearfix',
+  ]
+%}
+
+<div{{ attributes.removeClass(classes_remove).addClass(classes) }}>
   {{ children }}
 </div>

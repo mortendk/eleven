@@ -489,7 +489,7 @@
 /* NEW card title icon TODO: needs to update all cards for this */
 .card__title--icon {
   position: relative;
-  padding-left: 3rem
+  padding-left: 3rem;
 }
 .card__title--icon::before {
   position: absolute;
@@ -502,20 +502,21 @@
   background-image: none ! important; /* yes we wanna make sure no module have fun here */
   content: "";
   transition: 0.5s ease-in;
-
-          /*mask-image: var(--icon-coffee);
+  /*mask-image: var(--icon-coffee);
   -webkit-mask-image: var(--icon-coffee);*/
+
   -webkit-mask-size: contain !important;
           mask-size: contain !important;
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
 }
 .card--small .card__title--icon::before {
+  top: 0.25rem;
   width: 1rem;
   height: 1rem;
 }
-.card--small .card__title--icon{
-  padding-left: 1.5rem
+.card--small .card__title--icon {
+  padding-left: 1.5rem;
 }
 
 .card__title--icon-views::before {

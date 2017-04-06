@@ -39,7 +39,7 @@ tabs arent really local actiona but we will make em look like it cause it make s
   border-top: none;
 }
 body.admin-view nav.localtask {
-  margin-bottom: 1rem
+  margin-bottom: 1rem;
 }
 
 /*display tabs bg */
@@ -172,13 +172,13 @@ Dropbutton  for edit name / description
   left: 2rem;
 }
 
-.views-display-top  .dropbutton-action:first-child > a {
+.views-display-top .dropbutton-action:first-child > a {
   padding-left: 2.5rem;
   background-image: var(--button-rasberry);
   color: var(--white);
   line-height: 2rem;
 }
-.views-display-top  .dropbutton-action:first-child > a:hover {
+.views-display-top .dropbutton-action:first-child > a:hover {
   background-image: var(--button-rasberry-rev);
 }
 .views-display-top .dropbutton-action:first-child > a:before {
@@ -217,8 +217,6 @@ Dropbutton  for edit name / description
 }*/
 
 
-
-
 /* --------------------------------------------------------------------------*/
 
 /* emulate the card*/
@@ -231,32 +229,31 @@ Dropbutton  for edit name / description
 }
 
 /* drop buttons */
-.js .card--small .dropbutton-wrapper {
+.js .card--small .card__title + .dropbutton-wrapper {
   position: absolute;
-  top:0.5rem;
-  right: 0;
-  font-size: 0.5rem
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 0.5rem;
 }
-.card--small .dropbutton-action a{
-  font-size: 0.75rem;
+.card--small .dropbutton-action a {
   background-color: var(--bluesky-light);
   color: var(--white);
-
+  font-size: 0.75rem;
 }
-.card--small .dropbutton-action:first-child a{
+.card--small .dropbutton-action:first-child a {
   background-color: var(--bluesky);
-   color: var(--white);
+  color: var(--white);
 }
-.card--small .dropbutton-action:first-child a:before{
+.card--small .dropbutton-action:first-child a:before {
   background-color: var(--white);
 }
-.card--small li.dropbutton-toggle{
-  right: 0.5rem
+.card--small li.dropbutton-toggle {
+  right: 0.5rem;
 }
-.card--small .dropbutton-toggle button{
+.card--small .dropbutton-toggle button {
   background-color: var(--bluesky-light);
 }
-.card--small .dropbutton-toggle button:before{
+.card--small .dropbutton-toggle button:before {
   background-color: var(--white);
 }
 /* .admin.css overwrites -----------------------------------------------------*/
@@ -289,14 +286,13 @@ h1.unit-title {
 form details.views-display-column {
   margin-top: 0.25rem;
   outline: none;
-  background-color: transparent
+  background-color: transparent;
 }
 
 
 /* settings */
 .card--small .view__setting {
   margin-bottom: 0.1rem;
-
 }
 .card--small .view__setting:nth-of-type(even) {
   background-color: var(--gravel);
@@ -311,8 +307,12 @@ form details.views-display-column {
 
 /* icons ---------------------------------------------------------------------*/
 .card__title--icon-title::before {
-          mask-image: url(icons/code.svg);
-  -webkit-mask-image: url(icons/code.svg);
+          mask-image: url(icons/info-circle.svg);
+  -webkit-mask-image: url(icons/info-circle.svg);
+}
+.card__title--icon-content:before {
+          mask-image: url(icons/page.svg);
+  -webkit-mask-image: url(icons/page.svg);
 }
 .card__title--icon-format::before {
           mask-image: url(icons/code.svg);
@@ -322,7 +322,8 @@ form details.views-display-column {
           mask-image: url(icons/list-alt.svg);
   -webkit-mask-image: url(icons/list-alt.svg);
 }
-.card__title--icon-filter::before {
+.card__title--icon-filter::before,
+.card__title--icon-exposed-filters:before {
           mask-image: url(icons/filter.svg);
   -webkit-mask-image: url(icons/filter.svg);
 }
@@ -333,6 +334,10 @@ form details.views-display-column {
 .card__title--icon-page::before {
           mask-image: url(icons/sitemap.svg);
   -webkit-mask-image: url(icons/sitemap.svg);
+}
+.card__title--icon-block:before {
+          mask-image: url(icons/page.svg);
+  -webkit-mask-image: url(icons/page.svg);
 }
 .card__title--icon-header::before {
           mask-image: url(icons/page.svg);
@@ -346,7 +351,8 @@ form details.views-display-column {
           mask-image: url(icons/ban.svg);
   -webkit-mask-image: url(icons/ban.svg);
 }
-.card__title--icon-pager::before {
+.card__title--icon-pager::before,
+.card__title--icon-more:before {
           mask-image: url(icons/arrow-circle-right.svg);
   -webkit-mask-image: url(icons/arrow-circle-right.svg);
 }
@@ -369,4 +375,83 @@ form details.views-display-column {
 .card__title--icon-other::before {
           mask-image: url(icons/gears.svg);
   -webkit-mask-image: url(icons/gears.svg);
+}
+
+
+/* preview -------------------------------------------------------------------*/
+.views-preview-wrapper {
+}
+.view-preview-form {
+  position: relative;
+}
+.view-preview-form__title {
+  border-bottom: 1px solid var(--bluesky);
+  background-color: var(--bluesky-light-light);
+  text-align: left;
+}
+
+/* preview controllers */
+.form-item--name-live-preview {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0.25rem;
+  background-color: var(--bluesky-light);
+}
+
+/* preview textfield */
+.view-preview-form .form-item--textfield {
+  display: inline-block;
+  padding-left: 3rem;
+}
+.view-preview-form .form-item--textfield label {
+  display: inline-block;
+}
+.view-preview-form .form-item--textfield .form-item__description {
+  text-align: right;
+}
+.view-preview-form .form-actions {
+  display: inline-block;
+  margin: 0;
+  vertical-align: top;
+}
+
+/* query card */
+.view-preview-form .views-query-info {
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--gravel);
+  background-color: var(--white);
+}
+
+.views-live-preview .section-title {
+  color: var(--bluesky);
+  font-size: 1rem;
+}
+
+.view-filters .section-title,
+.view-content .section-title {
+  padding-left: 1.5rem;
+  color: var(--bluesky);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+
+.views-live-preview .contextual-region {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--gravel);
+  background-color: var(--white);
+}
+
+
+.preview-section {
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.5rem 0;
+  border: 1px dashed var(--gravel);
+  background-color: var(--white);
 }

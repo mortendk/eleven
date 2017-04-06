@@ -11,7 +11,9 @@
  * @see template_preprocess_views_ui_view_preview_section()
  */
 #}
-<h1 class="section-title">{{ title }}</h1>
+
+
+<h1 class="card__title card__title--icon card__title--icon-{{ title.getUntranslatedString()|clean_class }}">{{ title }}</h1>
 {% if links %}
   <div class="contextual">{{ links }}</div>
 {% endif %}
