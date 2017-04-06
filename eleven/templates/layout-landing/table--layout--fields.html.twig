@@ -10,17 +10,17 @@ fields tables layout
   {% for row in rows %}
   <article {{ row.attributes.addClass('w','card') }}>
 
-    <a href="/{{ row.cells.operations.content['#links'].edit.url.getInternalPath() }}">
+    <h3 class="card__title card__title--icon card__title--icon-{{ row.cells.field_type.content['#title'].getUntranslatedString()|clean_class}}">
+      <a href="/{{ row.cells.operations.content['#links'].edit.url.getInternalPath() }}">
+        {{ row.cells.label.content}}
+      </a>
+    </h3>
 
-    <div class="card__icon card__icon--fieldtype card__icon--fieldtype-{{ row.cells.field_type.content['#title'].getUntranslatedString()|clean_class}}"></div>
-
-    <h3 class="card__title">{{ row.cells.label.content}}</h3>
     <p class="card__text">
-
-      machine name:  {{ row.cells.field_name.content}}<br>
-      field type: {{ row.cells.field_type.content['#title']}}
+      <strong>{{ 'machine name'|t }}: </strong>{{ row.cells.field_name.content}}<br>
+      <strong>{{ 'field type'|t }}: </strong> {{ row.cells.field_type.content['#title']}}
     </p>
-    </a>
+
 
     <div class="card__operations">
       {{ row.cells.operations.content }}

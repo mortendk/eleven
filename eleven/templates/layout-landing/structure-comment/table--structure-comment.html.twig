@@ -5,9 +5,7 @@
   {% for row in rows %}
   <article {{ row.attributes.addClass('w','card') }}>
 
-      <div class="card__icon card__icon--admin-structure-comment"></div>
-
-      <h3 class="card__title">{{ row.cells.type.content}}</h3>
+      <h3 class="card__title card__title--icon card__title--icon-comment">{{ row.cells.type.content}}</h3>
 
       <p class="card__text">
         {{ row.cells.description.content['#markup']}}

@@ -38,7 +38,6 @@ tr.card {
 
 /* title */
 .card__title {
-  margin-top: 1rem;
   margin-bottom: 0.5rem;
   color: var(--black);
   font-size: 1.5rem;
@@ -47,7 +46,7 @@ tr.card {
   width: 100%;
 }
 .card--small .card__title{
-  margin-top: 0;
+
   font-size: 1rem;
   color: var(--bluesky);
   border-bottom: 1px solid var(--bluesky-light-light);
@@ -211,6 +210,7 @@ tr.card {
   font-size: 1.2rem;
   font-weight: 100
 }
+
 /* card link / buttons actions  ----------------------------------------------*/
 .card__links {
   margin-top: 0.5rem;
@@ -295,4 +295,13 @@ tr.card {
 /* operations */
 .card__operations .dropbutton-multiple .dropbutton-widget {
   width: 20rem;
+}
+
+/*Messages */
+.card .messages{
+  width: 100%;
+  margin: 0 0 0.5rem 0;
+  padding: 0.5rem 0;
+  font-size: 0.75rem;
+  min-height: 2rem;
 }
