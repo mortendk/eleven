@@ -27,8 +27,8 @@ libraries-extend:
     - elevenfeat/feat.placeblock
   quickedit/quickedit:
   - elevenfeat/feat.quickedit
-  core/jquery.ui:
-  - elevenfeat/feat.jquery_ui
+  # core/jquery.ui:
+  # - elevenfeat/feat.jquery_ui
 
   #Forms
   ckeditor/drupal.ckeditor:
@@ -87,6 +87,7 @@ libraries-override:
     css:
       theme:
         css/block-place.css: false
+
   block_place/drupal.block_place.icons:
     css:
       theme:
@@ -94,15 +95,15 @@ libraries-override:
 
   # jquery ui
   # look at #/core/core.libraries.yml for more libs
-  core/jquery.ui:
-    css:
-      theme:
-        assets/vendor/jquery.ui/themes/base/theme.css: false
-
-  core/jquery.ui.button:
-    css:
-      component:
-        assets/vendor/jquery.ui/themes/base/button.css: false
+  # core/jquery.ui:
+  #   css:
+  #     theme:
+  #       assets/vendor/jquery.ui/themes/base/theme.css: false
+  #
+  # core/jquery.ui.button:
+  #   css:
+  #     component:
+  #       assets/vendor/jquery.ui/themes/base/button.css: false
 
   # modernizr custom build
   # https://modernizr.com/download/?cssmask-details-inputtypes-touchevents-addtest-prefixes-setclasses-teststyles&q=mask

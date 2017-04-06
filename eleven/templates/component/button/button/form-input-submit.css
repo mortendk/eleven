@@ -34,6 +34,7 @@ input[type="submit"].js-hide + .form-item__icon {
 }
 
 /* form actions -------------------------------------------------------------*/
+#view-edit-form #edit-actions,
 .user-admin-permissions #edit-actions,
 .system-modules .form-actions,
 .entity-view-display-edit-form  #edit-actions,

@@ -23,7 +23,9 @@ main {
   min-height: 50vh;
 }
 
-
+header{
+  margin-bottom: 0.5rem
+}
 /* -- page width -------------------------------------------------------------*/
 .pagewidth {
   width: 100%;

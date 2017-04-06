@@ -1,4 +1,4 @@
-{{ attach_library(active_theme()~'/views') }}
+{{ attach_library(active_theme()~'/views.cards') }}
 {{ attach_library(active_theme()~'/card') }}
 
 <section{{ attributes.addClass('L','LW-4') }}>
@@ -10,7 +10,7 @@
     <div class="card__status"></div>
 
     <h3 class="card__title card__title--icon card__title--icon-views " data-drupal-selector="views-table-filter-text-source">
-      {{row.cells.view_name.content['#view'].label}}
+      <a href="views/view/{{row.cells.view_name.content['#view'].id}}">{{row.cells.view_name.content['#view'].label}}</a>
     </h3>
 
     {% if row.cells.description.content|render %}

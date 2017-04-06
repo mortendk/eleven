@@ -1,6 +1,6 @@
 name: Eleven
 type: theme
-description: 'Admin theme for Drupal8'
+description: 'Admin Theme that goes to 11'
 base theme: elevenfeat # Seperated the Front End Admin Tools.
 core: '8.x'
 screenshot: goes-to-eleven.jpg
@@ -35,6 +35,10 @@ libraries:
 libraries-extend:
   shortcut/drupal.shortcut:
   - eleven/shortcut
+
+  views_ui/admin.styling:
+  - eleven/views
+  - eleven/card
 
   # core/jquery.ui:
   # - eleven/jquery_ui
@@ -77,51 +81,45 @@ libraries-override:
         css/components/textarea.css: false
         css/components/ui-dialog.css: false
 
+#messages
   classy/messages:
     css:
       component:
         css/components/messages.css: false
 
+# dropbutton
   classy/dropbutton:
     css:
       component:
         css/components/dropbutton.css: templates/component/navigation/dropbutton/dropbutton.theme.css
 
-
+# vertical tabs
   core/drupal.vertical-tabs:
     css:
       component:
         /core/themes/stable/css/core/vertical-tabs.css: templates/component/navigation/vertical-tabs/vertical-tabs.css
-        # misc/vertical-tabs.css: css/core/vertical-tabs.css
 
 
-
-  # shotcut
+# shotcut
   shortcut/drupal.shortcut:
     css:
       theme:
         /core/themes/stable/css/shortcut/shortcut.theme.css: false
         /core/themes/stable/css/shortcut/shortcut.icons.theme.css: false
 
-  # shortcut/drupal.shortcut:
-  #   css:
-  #     theme:
-  #       css/shortcut.theme.css: css/shortcut/shortcut.theme.css
-  #       css/shortcut.icons.theme.css: css/shortcut/shortcut.icons.theme.css
-
-
+# views
   views_ui/views_ui.listing:
     js:
-      js/views_ui.listing.js: templates/layout-landing/views/views_ui.listing.js
-
+      js/views_ui.listing.js: templates/layout-landing/views/cards/views_ui.listing.js
 
   views_ui/admin.styling:
     css:
       theme:
         /core/themes/stable/css/views_ui/views_ui.admin.theme.css: false
-        # /core/themes/stable/css/views_ui/views_ui.admin.theme.css: templates/admin/views/css/views-admin.css
 
-  # jquery ui
+
+
+# jquery ui
   # look at #/core/core.libraries.yml for my libs
   # core/jquery.ui:
   #   css:
@@ -135,21 +133,19 @@ libraries-override:
 
   # modernizr custom build
   # https://modernizr.com/download/?cssmask-details-inputtypes-touchevents-addtest-prefixes-setclasses-teststyles&q=mask
-  # core/modernizr:
-  #   js:
-  #     assets/vendor/modernizr/modernizr.min.js: js/modernizr-custom.js
-
+  core/modernizr:
+    js:
+      assets/vendor/modernizr/modernizr.min.js: js/modernizr-custom.js
 
 #-------------------------------------------------------------------------------
 # Remove stylesheets
 # TODO: depricated overwrite the libraries instead...
 #-------------------------------------------------------------------------------
-
 stylesheets-remove:
+  - '@classy/css/layout.css'
   - core/modules/system/css/components/fieldgroup.module.css
   - core/themes/stable/css/filter/filter.admin.css
   - core/themes/stable/css/system/system.admin.css
   - core/themes/stable/css/field_ui/field_ui.admin.css
   - core/themes/stable/css/system/components/fieldgroup.module.css
-  - '@classy/css/layout.css'
   - core/themes/stable/css/user/user.admin.css

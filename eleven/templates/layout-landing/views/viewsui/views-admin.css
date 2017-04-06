@@ -1,0 +1,457 @@
+/**/
+.views-edit-view {
+}
+
+/* main bg for the view*/
+#edit-display-settings-details {
+  background-color: var(--gravel-light);
+}
+
+/* dropbuttons postitions fix */
+.views-display-top {
+  position: relative;
+}
+.views-ui-display-tab-bucket {
+  position: relative;
+}
+/* Hide 'remove' checkboxes. */
+.views-remove-checkbox {
+  display: none;
+}
+
+/* drop button corrections  --------------------------------------------------*/
+.views-ui-display-tab-bucket .dropbutton-wrapper {
+  position: absolute;
+  top: 1rem;
+  right: 0rem; /* LTR */
+}
+[dir="rtl"] .views-ui-display-tab-bucket .dropbutton-wrapper {
+  right: auto;
+  left: 0rem;
+}
+
+/* tabs  ---------------------------------------------------------------------*/
+/*
+tabs arent really local actiona but we will make em look like it cause it make sense!
+*/
+.admin-view main {
+  padding-top: 0;
+  border-top: none;
+}
+body.admin-view nav.localtask {
+  margin-bottom: 1rem;
+}
+
+/*display tabs bg */
+#views-display-top {
+  background-color: var(--white);
+}
+
+#views-display-menu-tabs {
+  display: -webkit-box;
+  display:    -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:         flex;
+          flex-direction: row;
+  padding-left: 3rem;
+  padding-left: 5rem;
+  border-bottom: 1px solid var(--bluesky-light);
+
+      -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -ms-flex-justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+          justify-content: flex-start;
+  -ms-flex-align: start;
+  align-items: center;
+  align-content: flex-start;
+}
+.views-display-top .tabs > li {
+  overflow: visible;
+  margin: 0;
+  padding-left: 1px;
+}
+.views-display-top .tabs > li a {
+  display: block;
+  width: 5rem;
+  height: 2rem;
+  background-color: var(--bluesky-50);
+  color: var(--white);
+  line-height: 2rem;
+}
+.views-display-top .tabs > li a::before {
+  display: block;
+  content: "";
+
+  -webkit-mask-image: url(icons/tasks.svg);
+          mask-image: url(icons/tasks.svg);
+}
+.views-display-top .tabs > li.is-active a {
+  background-color: var(--bluesky);
+}
+
+/* -----------------------------------------------------------------------------
+the add button
+we want this to look like a drop button so its clear to the user that it contains more
+------------------------------------------------------------------------------*/
+.views-display-top .tabs > li.add {
+  margin-left: 5rem;
+}
+.views-display-top li.add a {
+  position: relative;
+  height: 2rem;
+  padding-left: 2rem;
+  background-color: var(--rasberry-light);
+  color: var(--white);
+  line-height: 2rem;
+}
+.views-display-top li.add a:hover {
+  background-color: var(--rasberry);
+}
+.views-display-top li.add a:before {
+  top: 0.5rem;
+  background-color: var(--white);
+
+          mask-image: url(icons/plus-circle.svg);
+  -webkit-mask-image: url(icons/plus-circle.svg);
+}
+.views-display-top li.add a:hover:before {
+}
+.views-display-top li.add a:after {
+  position: absolute;
+  top: 0.5rem;
+  right: 0rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--white);
+  content: "";
+
+          mask-image: url(icons/ellipsis-v.svg);
+  -webkit-mask-image: url(icons/ellipsis-v.svg);
+  -webkit-mask-size: contain !important;
+          mask-size: contain !important;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+}
+
+.views-displays .tabs .action-list {
+  z-index: 666;
+  /*display: block !important;*/
+  margin-top: 0.5rem;
+  margin-left: 1px;
+}
+.views-displays .tabs .action-list li input {
+  width: 10rem;
+  padding-left: 1rem;
+  border-bottom: 1px solid var(--rasberry-light);
+  background-color: var(--rasberry);
+  color: var(--white);
+  text-align: left;
+}
+
+.views-displays .tabs .action-list li input:hover {
+  background-color: var(--rasberry-light);
+  color: var(--white);
+}
+
+/* -----------------------------------------------------------------------------
+Dropbutton  for edit name / description
+------------------------------------------------------------------------------*/
+/* correction to the dropbutton */
+.views-display-top .dropbutton-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+[dir="rtl"] .views-display-top .dropbutton-wrapper {
+  right: auto;
+  left: 2rem;
+}
+
+.views-display-top .dropbutton-action:first-child > a {
+  padding-left: 2.5rem;
+  background-image: var(--button-rasberry);
+  color: var(--white);
+  line-height: 2rem;
+}
+.views-display-top .dropbutton-action:first-child > a:hover {
+  background-image: var(--button-rasberry-rev);
+}
+.views-display-top .dropbutton-action:first-child > a:before {
+  top: 0.5rem;
+  left: 0.5rem;
+  background-color: var(--white);
+
+          mask-image: url(icons/plus-circle.svg);
+  -webkit-mask-image: url(icons/plus-circle.svg);
+}
+
+.views-display-top .dropbutton-toggle button {
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--rasberry);
+}
+.views-display-top .dropbutton-toggle button:hover {
+  background-color: var(--rasberry-light);
+}
+.views-display-top .dropbutton-toggle button:before {
+  top: 0.5rem;
+  left: 0.75rem;
+  background-color: var(--white);
+}
+
+.views-display-top .dropbutton-action.secondary-action a {
+  border-bottom-color: var(--rasberry-light);
+  color: var(--rasberry);
+}
+.views-display-top .dropbutton-action.secondary-action a::before {
+  background-color: var(--rasberry);
+}
+
+/*.views-display-top .dropbutton-multiple .dropbutton .secondary-action {
+  display: block;
+}*/
+
+
+/* --------------------------------------------------------------------------*/
+
+/* emulate the card*/
+.views-ui-display-tab-actions .view__setting {
+  width: 100%;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border: 1px solid var(--gravel);
+  background-color: var(--white);
+}
+
+/* drop buttons */
+.js .card--small .card__title + .dropbutton-wrapper {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 0.5rem;
+}
+.card--small .dropbutton-action a {
+  background-color: var(--bluesky-light);
+  color: var(--white);
+  font-size: 0.75rem;
+}
+.card--small .dropbutton-action:first-child a {
+  background-color: var(--bluesky);
+  color: var(--white);
+}
+.card--small .dropbutton-action:first-child a:before {
+  background-color: var(--white);
+}
+.card--small li.dropbutton-toggle {
+  right: 0.5rem;
+}
+.card--small .dropbutton-toggle button {
+  background-color: var(--bluesky-light);
+}
+.card--small .dropbutton-toggle button:before {
+  background-color: var(--white);
+}
+/* .admin.css overwrites -----------------------------------------------------*/
+.views-display-setting .label,
+.views-display-setting .views-ajax-link {
+  display: inline-block;
+  float: none;
+}
+
+/* errors ------------------------------------------------------------------- */
+.error {
+  border: 2px solid var(--strawberry);
+}
+.overridden,
+.overridden h3 {
+  color: var(--strawberry);
+  font-style: italic;
+}
+
+/* corrections --------------------------------------------------------------------*/
+h1.unit-title {
+  display: none;
+}
+
+.views-edit-view .label {
+  display: inline-block;
+}
+
+/*advanced */
+form details.views-display-column {
+  margin-top: 0.25rem;
+  outline: none;
+  background-color: transparent;
+}
+
+
+/* settings */
+.card--small .view__setting {
+  margin-bottom: 0.1rem;
+}
+.card--small .view__setting:nth-of-type(even) {
+  background-color: var(--gravel);
+}
+.card--small .view__setting:hover {
+  background-color: var(--gravel-light);
+}
+
+.card--small .view__setting a {
+  text-decoration: none;
+}
+
+/* icons ---------------------------------------------------------------------*/
+.card__title--icon-title::before {
+          mask-image: url(icons/info-circle.svg);
+  -webkit-mask-image: url(icons/info-circle.svg);
+}
+.card__title--icon-content:before {
+          mask-image: url(icons/page.svg);
+  -webkit-mask-image: url(icons/page.svg);
+}
+.card__title--icon-format::before {
+          mask-image: url(icons/code.svg);
+  -webkit-mask-image: url(icons/code.svg);
+}
+.card__title--icon-field::before {
+          mask-image: url(icons/list-alt.svg);
+  -webkit-mask-image: url(icons/list-alt.svg);
+}
+.card__title--icon-filter::before,
+.card__title--icon-exposed-filters:before {
+          mask-image: url(icons/filter.svg);
+  -webkit-mask-image: url(icons/filter.svg);
+}
+.card__title--icon-sort::before {
+          mask-image: url(icons/sort-alpha-asc.svg);
+  -webkit-mask-image: url(icons/sort-alpha-asc.svg);
+}
+.card__title--icon-page::before {
+          mask-image: url(icons/sitemap.svg);
+  -webkit-mask-image: url(icons/sitemap.svg);
+}
+.card__title--icon-block:before {
+          mask-image: url(icons/page.svg);
+  -webkit-mask-image: url(icons/page.svg);
+}
+.card__title--icon-header::before {
+          mask-image: url(icons/page.svg);
+  -webkit-mask-image: url(icons/page.svg);
+}
+.card__title--icon-footer::before {
+          mask-image: url(icons/footer.svg);
+  -webkit-mask-image: url(icons/footer.svg);
+}
+.card__title--icon-empty::before {
+          mask-image: url(icons/ban.svg);
+  -webkit-mask-image: url(icons/ban.svg);
+}
+.card__title--icon-pager::before,
+.card__title--icon-more:before {
+          mask-image: url(icons/arrow-circle-right.svg);
+  -webkit-mask-image: url(icons/arrow-circle-right.svg);
+}
+.card__title--icon-language::before {
+          mask-image: url(icons/flag.svg);
+  -webkit-mask-image: url(icons/flag.svg);
+}
+.card__title--icon-argument::before {
+          mask-image: url(icons/filter.svg);
+  -webkit-mask-image: url(icons/filter.svg);
+}
+.card__title--icon-relationship::before {
+          mask-image: url(icons/database.svg);
+  -webkit-mask-image: url(icons/database.svg);
+}
+.card__title--icon-exposed::before {
+          mask-image: url(icons/f245.svg);
+  -webkit-mask-image: url(icons/f245.svg);
+}
+.card__title--icon-other::before {
+          mask-image: url(icons/gears.svg);
+  -webkit-mask-image: url(icons/gears.svg);
+}
+
+
+/* preview -------------------------------------------------------------------*/
+.views-preview-wrapper {
+}
+.view-preview-form {
+  position: relative;
+}
+.view-preview-form__title {
+  border-bottom: 1px solid var(--bluesky);
+  background-color: var(--bluesky-light-light);
+  text-align: left;
+}
+
+/* preview controllers */
+.form-item--name-live-preview {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0.25rem;
+  background-color: var(--bluesky-light);
+}
+
+/* preview textfield */
+.view-preview-form .form-item--textfield {
+  display: inline-block;
+  padding-left: 3rem;
+}
+.view-preview-form .form-item--textfield label {
+  display: inline-block;
+}
+.view-preview-form .form-item--textfield .form-item__description {
+  text-align: right;
+}
+.view-preview-form .form-actions {
+  display: inline-block;
+  margin: 0;
+  vertical-align: top;
+}
+
+/* query card */
+.view-preview-form .views-query-info {
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--gravel);
+  background-color: var(--white);
+}
+
+.views-live-preview .section-title {
+  color: var(--bluesky);
+  font-size: 1rem;
+}
+
+.view-filters .section-title,
+.view-content .section-title {
+  padding-left: 1.5rem;
+  color: var(--bluesky);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+
+.views-live-preview .contextual-region {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--gravel);
+  background-color: var(--white);
+}
+
+
+.preview-section {
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.5rem 0;
+  border: 1px dashed var(--gravel);
+  background-color: var(--white);
+}

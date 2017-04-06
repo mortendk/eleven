@@ -3,15 +3,11 @@
 // PREPROCESS
 // ----------------------------------------------------------------------------
 function eleven_preprocess_html(&$variables){
- $system_path = \Drupal::service('path.current')->getPath();
- $variables['path'] = $system_path;
+ $variables['path'] = \Drupal::service('path.current')->getPath();
 
- $path = explode('/', \Drupal::service('path.current')->getPath());
- if( $path == "edit"){
-   $variables['admin'] = true;
- }
+ $variables['systempath'] = explode('/', \Drupal::service('path.current')->getPath());
+
 }
-
 
 // ----------------------------------------------------------------------------
 // admin blocks wrappers for
@@ -37,7 +33,6 @@ function eleven_preprocess_admin_block_content(&$variables) {
   }
 
 }
-
 
 // ----------------------------------------------------------------------------
 // Tables
@@ -123,13 +118,30 @@ function eleven_theme_suggestions_links_alter(array &$suggestions, array $variab
     $suggestions[] = 'links__' . $path[2];
   }
 
-}
+  //fix for views ui
+  if( isset($path[4]) AND  $path[2] == "structure"  AND $path[3] == "views"  AND  $path[4] == "view" ) {
+    $suggestions[] = 'links__view_admin_ui';
+  }
 
+}
 
 // form
 function eleven_theme_suggestions_form_alter(array &$suggestions, array $variables) {
   $suggestions[] = 'form__' . $variables['element']['#form_id'];
 }
+
+// input fields
+function eleven_theme_suggestions_input_alter(array &$suggestions, array $variables) {
+  $path = explode('/', \Drupal::service('path.current')->getPath());
+
+  //fix for views ui
+  // do an uglye test on the paths then check on the wrapper if its not action then add in the new template suggestion
+  if( (isset($path[4]) AND  $path[2] == "structure"  AND $path[3] == "views"  AND  $path[4] == "view") and ( isset($variables['element']['#array_parents']) and $variables['element']['#array_parents'][0] != 'actions' ) ) {
+    $suggestions[] = 'input__submit__view_admin_ui';
+  }
+
+}
+
 
 //item list
 function eleven_theme_suggestions_item_list_alter(array &$suggestions, array $variables) {
@@ -139,8 +151,6 @@ function eleven_theme_suggestions_item_list_alter(array &$suggestions, array $va
   if( isset($path[3]) and $path[3] == 'views') {
     $suggestions[] = 'item_list__' . $path[3];;
   }
-
-
 
 }
 

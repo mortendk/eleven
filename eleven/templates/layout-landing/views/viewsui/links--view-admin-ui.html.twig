@@ -8,7 +8,8 @@
     {%- endif -%}
   {%- endif -%}
 
-  <ul{{ attributes.addClass('L-space').removeclass('operations', 'clearfix') }}>
+  {# TODO: L-space is messing views admin ui up #}
+  <ul{{ attributes }}>
     {%- for item in links -%}
       <li{{ item.attributes.addClass }}>
         {%- if item.link -%}

@@ -25,10 +25,7 @@ global:
 # ------------------------------------------------------------------------------
 #
 # ------------------------------------------------------------------------------
-shortcut:
-  css:
-    theme:
-      templates/component/shortcut/shortcut.css: {}
+
 
 # jquery_ui:
 #   css:
@@ -50,6 +47,10 @@ messages:
     theme:
       templates/component/messages/messages.css: {}
 
+shortcut:
+  css:
+    theme:
+      templates/component/shortcut/shortcut.css: {}
 
 # ------------------------------------------------------------------------------
 # Admin landing pages
@@ -60,12 +61,6 @@ admin.config:
       templates/layout-landing/config/admin-config.css: {}
 
 # TODO: add a more specific lib name ala views.overview
-views:
-  css:
-    theme:
-      templates/layout-landing/views/structure-table-views.css: {}
-      templates/layout-landing/views/views-admin.css: {}
-
 permissions:
   css:
     theme:
@@ -123,8 +118,10 @@ button.action:
   css:
     theme:
       templates/component/button/button-action/button-action.css: {}
+
 # ------------------------------------------------------------------------------
 # table
+# ------------------------------------------------------------------------------
 table.responsive:
   css:
     theme:
@@ -141,6 +138,16 @@ table.admin:
 # ------------------------------------------------------------------------------
 # views
 # ------------------------------------------------------------------------------
+views:
+  css:
+    theme:
+      templates/layout-landing/views/viewsui/views-admin.css: {}
+
+views.cards:
+  css:
+    theme:
+      templates/layout-landing/views/cards/structure-table-views.css: {}
+
 views.exposed:
   css:
     theme:

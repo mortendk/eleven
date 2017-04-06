@@ -14,6 +14,13 @@
   border-color: var(--concrete-light);
 }
 
+.card--small .view__setting {
+  font-size: 0.75rem
+}
+.card--small .label{
+  font-size: 0.75rem;
+}
+
 /**/
 tr.card {
   overflow: none;
@@ -38,9 +45,21 @@ tr.card {
   line-height: 1;
   width: 100%;
 }
-.card a {
-  color: var(--black);
+.card--small .card__title{
+  margin-top: 0;
+  font-size: 1rem;
+  color: var(--bluesky);
+  border-bottom: 1px solid var(--bluesky-light-light);
+  line-height: 1.5rem
 }
+.card a {
+  text-decoration: underline;
+}
+.card .card__title a {
+  color: var(--black);
+  text-decoration: none
+}
+.card .card__title a:hover,
 .card a:hover .card__title {
   color: var(--bluesky);
 }
