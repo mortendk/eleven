@@ -14,10 +14,6 @@
 %}
 
 <header class="L pagewidth" role="banner" aria-label="{{ 'Site header'|t }}">
-  {% if page.header %}
-    <div class="w-12">{{ page.header }}</div>
-  {% endif %}
-
   {% if page.header_first %}
     <div class="w-9">{{ page.header_first }}</div>
   {% endif %}
@@ -31,14 +27,6 @@
   {{ page.navigation }}
 {% endif %}
 
-{# messages #}
-{% if page.messages %}
-  <aside role="complementary"  class="pagewidth L-center">
-    {{ page.messages }}
-  </aside>
-{% endif %}
-
-
 <main role="main" id="main">
   <a id="main-content" tabindex="-1"></a>
 
@@ -49,6 +37,13 @@
     {% if page.top_first %}<div class="w-6">{{ page.top_first }}</div>{% endif %}
     {% if page.top_second %}<div class="w-6">{{ page.top_second }}</div>{% endif %}
   </div>
+  {% endif %}
+
+  {# messages #}
+  {% if page.messages %}
+    <aside role="complementary"  class="L-center">
+      {{ page.messages }}
+    </aside>
   {% endif %}
 
   {{ page.content }}

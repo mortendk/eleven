@@ -2,9 +2,9 @@
 
 {%
   set classes = [
-    'w-8',
-    'block',
-    'block--' ~ plugin_id|clean_class
+    'messages',
+    'messages--status',
+    'messages--help'
   ]
 %}
 <div{{ attributes.addClass(classes).removeAttribute('id') }}>
@@ -16,7 +16,10 @@
   {{ title_suffix }}
 
   {% block content %}
+    <article class="messages__content">
     {{ content }}
+    </article>
+
   {% endblock %}
 
 </div>
