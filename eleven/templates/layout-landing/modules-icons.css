@@ -1,229 +1,229 @@
-.module__icon--::before {
-          mask-image: url(moduleicons/rss.svg);
-  -webkit-mask-image: url(moduleicons/rss.svg);
+.card__icon--::before {
+          mask-image: url(icons/rss.svg);
+  -webkit-mask-image: url(icons/rss.svg);
 }
 
 /*-- module icons ------------------------------------------------------------*/
-.module__icon--actions:before {
-          mask-image: url(moduleicons/clock-o.svg);
-  -webkit-mask-image: url(moduleicons/clock-o.svg);
+.card__icon--actions:before {
+          mask-image: url(icons/clock-o.svg);
+  -webkit-mask-image: url(icons/clock-o.svg);
 }
-.module__icon--aggregator::before {
-          mask-image: url(moduleicons/rss.svg);
-  -webkit-mask-image: url(moduleicons/rss.svg);
+.card__icon--aggregator::before {
+          mask-image: url(icons/rss.svg);
+  -webkit-mask-image: url(icons/rss.svg);
 }
-.module__icon--ban::before {
-          mask-image: url(moduleicons/ban.svg);
-  -webkit-mask-image: url(moduleicons/ban.svg);
+.card__icon--ban::before {
+          mask-image: url(icons/ban.svg);
+  -webkit-mask-image: url(icons/ban.svg);
 }
-.module__icon--block::before,
-.module__icon--custom-block::before {
-          mask-image: url(moduleicons/cube.svg);
-  -webkit-mask-image: url(moduleicons/cube.svg);
+.card__icon--block::before,
+.card__icon--custom-block::before {
+          mask-image: url(icons/cube.svg);
+  -webkit-mask-image: url(icons/cube.svg);
 }
-.module__icon--book::before {
-          mask-image: url(moduleicons/book.svg);
-  -webkit-mask-image: url(moduleicons/book.svg);
+.card__icon--book::before {
+          mask-image: url(icons/book.svg);
+  -webkit-mask-image: url(icons/book.svg);
 }
-.module__icon--breakpoint::before {
-          mask-image: url(moduleicons/desktop.svg);
-  -webkit-mask-image: url(moduleicons/desktop.svg);
+.card__icon--breakpoint::before {
+          mask-image: url(icons/desktop.svg);
+  -webkit-mask-image: url(icons/desktop.svg);
 }
-.module__icon--ckeditor::before,
-.module__icon--text-editor::before {
-          mask-image: url(moduleicons/italic.svg);
-  -webkit-mask-image: url(moduleicons/italic.svg);
+.card__icon--ckeditor::before,
+.card__icon--text-editor::before {
+          mask-image: url(icons/italic.svg);
+  -webkit-mask-image: url(icons/italic.svg);
 }
-.module__icon--automated-cron::before {
-          mask-image: url(moduleicons/truck.svg);
-  -webkit-mask-image: url(moduleicons/truck.svg);
-}
-
-.module__icon--color::before {
-          mask-image: url(moduleicons/paint-brush.svg);
-  -webkit-mask-image: url(moduleicons/paint-brush.svg);
+.card__icon--automated-cron::before {
+          mask-image: url(icons/truck.svg);
+  -webkit-mask-image: url(icons/truck.svg);
 }
 
-.module__icon--comment::before {
-          mask-image: url(moduleicons/comments-o.svg);
-  -webkit-mask-image: url(moduleicons/comments-o.svg);
+.card__icon--color::before {
+          mask-image: url(icons/paint-brush.svg);
+  -webkit-mask-image: url(icons/paint-brush.svg);
 }
 
-.module__icon--configuration-manager::before {
-          mask-image: url(moduleicons/plug.svg);
-  -webkit-mask-image: url(moduleicons/plug.svg);
-}
-.module__icon--contact::before {
-          mask-image: url(moduleicons/plug.svg);
-  -webkit-mask-image: url(moduleicons/plug.svg);
-}
-.module__icon--contextual-links::before {
-          mask-image: url(moduleicons/plug.svg);
-  -webkit-mask-image: url(moduleicons/plug.svg);
+.card__icon--comment::before {
+          mask-image: url(icons/comments-o.svg);
+  -webkit-mask-image: url(icons/comments-o.svg);
 }
 
-.module__icon--database-logging::before {
-          mask-image: url(moduleicons/plug.svg);
-  -webkit-mask-image: url(moduleicons/plug.svg);
+.card__icon--configuration-manager::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
+}
+.card__icon--contact::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
+}
+.card__icon--contextual-links::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
 }
 
-.module__icon--field,
-.module__icon--field-ui::before {
-          mask-image: url(moduleicons/plug.svg);
-  -webkit-mask-image: url(moduleicons/plug.svg);
-}
-.module__icon--filter::before {
-          mask-image: url(moduleicons/plug.svg);
-  -webkit-mask-image: url(moduleicons/plug.svg);
+.card__icon--database-logging::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
 }
 
-.module__icon--forum::before {
-          mask-image: url(moduleicons/plug.svg);
-  -webkit-mask-image: url(moduleicons/plug.svg);
+.card__icon--field,
+.card__icon--field-ui::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
 }
-.module__icon--help::before {
-          mask-image: url(moduleicons/plug.svg);
-  -webkit-mask-image: url(moduleicons/plug.svg);
-}
-.module__icon--history::before {
-          mask-image: url(moduleicons/plug.svg);
-  -webkit-mask-image: url(moduleicons/plug.svg);
+.card__icon--filter::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
 }
 
-.module__icon--menu-ui::before,
-.module__icon--custom-menu-links::before {
-          mask-image: url(moduleicons/plug.svg);
-  -webkit-mask-image: url(moduleicons/plug.svg);
+.card__icon--forum::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
+}
+.card__icon--help::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
+}
+.card__icon--history::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
 }
 
-
-.module__icon--internal-dynamic-page-cache::before {
-          mask-image: url(moduleicons/plug.svg);
-  -webkit-mask-image: url(moduleicons/plug.svg);
-}
-.module__icon--internal-page-cache::before {
-          mask-image: url(moduleicons/plug.svg);
-  -webkit-mask-image: url(moduleicons/plug.svg);
-}
-
-.module__icon--node::before {
-          mask-image: url(moduleicons/plug.svg);
-  -webkit-mask-image: url(moduleicons/plug.svg);
-}
-.module__icon--path::before {
-          mask-image: url(moduleicons/plug.svg);
-  -webkit-mask-image: url(moduleicons/plug.svg);
-}
-
-.module__icon--quick-edit::before {
-          mask-image: url(moduleicons/plug.svg);
-  -webkit-mask-image: url(moduleicons/plug.svg);
-}
-.module__icon--responsive-image::before {
-          mask-image: url(moduleicons/plug.svg);
-  -webkit-mask-image: url(moduleicons/plug.svg);
-}
-.module__icon--search::before {
-          mask-image: url(moduleicons/plug.svg);
-  -webkit-mask-image: url(moduleicons/plug.svg);
-}
-.module__icon--short::before {
-          mask-image: url(moduleicons/plug.svg);
-  -webkit-mask-image: url(moduleicons/plug.svg);
-}
-.module__icon--statistics::before {
-          mask-image: url(moduleicons/plug.svg);
-  -webkit-mask-image: url(moduleicons/plug.svg);
-}
-.module__icon--syslog::before {
-          mask-image: url(moduleicons/plug.svg);
-  -webkit-mask-image: url(moduleicons/plug.svg);
-}
-
-.module__icon--system::before {
-          mask-image: url(moduleicons/plug.svg);
-  -webkit-mask-image: url(moduleicons/plug.svg);
-}
-.module__icon--taxonomy::before {
-          mask-image: url(moduleicons/plug.svg);
-  -webkit-mask-image: url(moduleicons/plug.svg);
-}
-.module__icon--testing::before {
-          mask-image: url(moduleicons/plug.svg);
-  -webkit-mask-image: url(moduleicons/plug.svg);
-}
-.module__icon--toolbar::before {
-          mask-image: url(moduleicons/plug.svg);
-  -webkit-mask-image: url(moduleicons/plug.svg);
-}
-.module__icon--tour::before {
-          mask-image: url(moduleicons/plug.svg);
-  -webkit-mask-image: url(moduleicons/plug.svg);
-}
-
-.module__icon--update-manager::before {
-          mask-image: url(moduleicons/plug.svg);
-  -webkit-mask-image: url(moduleicons/plug.svg);
-}
-
-.module__icon--user::before {
-          mask-image: url(moduleicons/plug.svg);
-  -webkit-mask-image: url(moduleicons/plug.svg);
-}
-
-.module__icon--view::before,
-.module__icon--views-ui::before {
-          mask-image: url(moduleicons/plug.svg);
-  -webkit-mask-image: url(moduleicons/plug.svg);
+.card__icon--menu-ui::before,
+.card__icon--custom-menu-links::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
 }
 
 
-.module__icon--bigpipe::before {
-          mask-image: url(moduleicons/plug.svg);
-  -webkit-mask-image: url(moduleicons/plug.svg);
+.card__icon--internal-dynamic-page-cache::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
 }
-.module__icon--content-moderation::before {
-          mask-image: url(moduleicons/plug.svg);
-  -webkit-mask-image: url(moduleicons/plug.svg);
-}
-.module__icon--datetime-range::before {
-          mask-image: url(moduleicons/plug.svg);
-  -webkit-mask-image: url(moduleicons/plug.svg);
+.card__icon--internal-page-cache::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
 }
 
-.module__icon--inline-form-errors::before {
-          mask-image: url(moduleicons/plug.svg);
-  -webkit-mask-image: url(moduleicons/plug.svg);
+.card__icon--node::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
+}
+.card__icon--path::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
+}
+
+.card__icon--quick-edit::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
+}
+.card__icon--responsive-image::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
+}
+.card__icon--search::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
+}
+.card__icon--short::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
+}
+.card__icon--statistics::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
+}
+.card__icon--syslog::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
+}
+
+.card__icon--system::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
+}
+.card__icon--taxonomy::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
+}
+.card__icon--testing::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
+}
+.card__icon--toolbar::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
+}
+.card__icon--tour::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
+}
+
+.card__icon--update-manager::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
+}
+
+.card__icon--user::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
+}
+
+.card__icon--view::before,
+.card__icon--views-ui::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
 }
 
 
-.module__icon--migrate,
-.module__icon--migrate-drupal,
-.module__icon--migrate-drupal-ui::before {
-          mask-image: url(moduleicons/plug.svg);
-  -webkit-mask-image: url(moduleicons/plug.svg);
+.card__icon--bigpipe::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
+}
+.card__icon--content-moderation::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
+}
+.card__icon--datetime-range::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
+}
+
+.card__icon--inline-form-errors::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
 }
 
 
-.module__icon--place-blocks::before {
-          mask-image: url(moduleicons/plug.svg);
-  -webkit-mask-image: url(moduleicons/plug.svg);
-}
-.module__icon--settings-tray::before {
-          mask-image: url(moduleicons/plug.svg);
-  -webkit-mask-image: url(moduleicons/plug.svg);
+.card__icon--migrate,
+.card__icon--migrate-drupal,
+.card__icon--migrate-drupal-ui::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
 }
 
 
+.card__icon--place-blocks::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
+}
+.card__icon--settings-tray::before {
+          mask-image: url(icons/plug.svg);
+  -webkit-mask-image: url(icons/plug.svg);
+}
 
 
-.module__icon--devel,
-.module__icon--devel-generate,
-.module__icon--devel-kint,
-.module__icon--devel-node-access,
-.module__icon--web-profiler {
+
+
+.card__icon--devel,
+.card__icon--devel-generate,
+.card__icon--devel-kint,
+.card__icon--devel-node-access,
+.card__icon--web-profiler {
 
 }
-.module__icon--libraries-ui {
-  background-image: url(moduleicons/library.svg);
+.card__icon--libraries-ui {
+  background-image: url(icons/library.svg);
 }

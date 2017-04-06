@@ -35,9 +35,7 @@
         {# sub group title #}
         {% if cell.content['#context'].title %}
           <div class="card w {% if cell.content['#context'].warning %}permission--warning{% endif %}">
-            <div class="card__icon card__icon--small"></div>
-
-            <h4 class="card__title ">{{ cell.content['#context'].title|striptags }}</h4>
+            <h3 class="card__title card__title--icon">{{ cell.content['#context'].title|striptags }}</h3>
 
         {% endif %}
 

@@ -7,8 +7,7 @@
 
 <div class="card w L">
   {# TODO: needs the untranslated string here #}
-  <div class="card__icon card__icon--{{ block.title|clean_class }}"></div>
-  <h3 class="card__title ">{{ block.title }}</h3>
+  <h3 class="card__title card__title--icon card__title--icon-{{ block.title|clean_class }}">{{ block.title }}</h3>
 
 
   {% if block.content %}

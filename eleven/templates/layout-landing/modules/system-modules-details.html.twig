@@ -31,14 +31,13 @@
       'card',
       'card--module',
       'card--status-'  ~ card_status,
-     'card--module-group-' ~ module.name['#parents'].1|clean_class,
-     'card--module-name--' ~ module.name['#markup']|clean_class,
+      'card--module-group-' ~ module.name['#parents'].1|clean_class,
+      'card--module-name--' ~ module.name['#markup']|clean_class,
       ]
     %}
 
     <tr{{ module.attributes.addClass(classes) }}>
       <td>
-
         <div class="card__status card__status--{{ card_status }}"></div>
 
         <div for="{{ module.enable_id }}" class="card__icon card__icon--{{ module.name['#markup']|clean_class }}"></div>

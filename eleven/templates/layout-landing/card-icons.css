@@ -1,4 +1,4 @@
-/* card icons ---------------------------------------------------------------------*/
+/* card icon */
 .card__icon {
   position: relative;
   display: block;
@@ -25,298 +25,311 @@
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
 }
-
-.card__icon:hover:before {
-  background-color: var(--white);
+/* card title  icons ---------------------------------------------------------------------*/
+.card__title--icon {
+  position: relative;
+  padding-left: 3rem;
 }
-.card:hover .card__icon {
-  /*animation: iconpulse 1.5s infinite;*/
-}
-@keyframes iconpulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-}
-
-.card__icon--small {
+.card__title--icon::before {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  display: block;
   width: 2rem;
   height: 2rem;
-  margin-right: 0.5rem;
+  background-color: var(--bluesky-light);
+  background-image: none ! important; /* yes we wanna make sure no module have fun here */
+  content: "";
+  transition: 0.5s ease-in;
+
+  -webkit-mask-size: contain !important;
+          mask-size: contain !important;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
 }
-.card__icon--small::before {
+
+/* small variation */
+.card--small .card__title--icon {
+  padding-left: 1.5rem;
+}
+
+.card--small .card__title--icon::before {
   top: 0.25rem;
-  left: 0.25rem;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1rem;
+  height: 1rem;
 }
 
 /* color variations  ---------------------------------------------------------*/
-.card__icon:before {
-}
-
-.card:nth-of-type(8n+1) .card__icon:before {
+.card:nth-of-type(8n+1) .card__title--icon:before {
   background-color: var(--grass-light);
 }
-.card:nth-of-type(8n+2) .card__icon:before {
+.card:nth-of-type(8n+2) .card__title--icon:before {
   background-color: var(--strawberry-light);
 }
-.card:nth-of-type(8n+3) .card__icon:before {
+.card:nth-of-type(8n+3) .card__title--icon:before {
   background-color: var(--yellowsnow-light);
 }
-.card:nth-of-type(8n+4) .card__icon:before {
+.card:nth-of-type(8n+4) .card__title--icon:before {
   background-color: var(--bluesky-50);
 }
-.card:nth-of-type(8n+5) .card__icon:before {
+.card:nth-of-type(8n+5) .card__title--icon:before {
   background-color: var(--asphalt);
 }
-.card:nth-of-type(8n+6) .card__icon:before {
+.card:nth-of-type(8n+6) .card__title--icon:before {
   background-color: var(--pumpkin-light);
 }
-.card:nth-of-type(8n+7) .card__icon:before {
+.card:nth-of-type(8n+7) .card__title--icon:before {
   background-color: var(--strawberry);
 }
-.card:nth-of-type(8n+8) .card__icon:before {
+.card:nth-of-type(8n+8) .card__title--icon:before {
   background-color: var(--pumpkin);
 }
 
 
 /* icons ---------------------------------------------------------------------*/
+.card__title--icon-views::before {
+          mask-image: url(icons/tasks.svg);
+  -webkit-mask-image: url(icons/tasks.svg);
+}
 
+.card__title--icon-node::before {
+  mask-image: url(icons/file-text-o.svg);
+-webkit-mask-image: url(icons/file-text-o.svg);
+
+}
 
 /*http://drupal8.dev/admin*/
-.card__icon--admin-content::before {
+.card__title--icon-admin-content::before {
           mask-image: url(icons/file-text-o.svg);
   -webkit-mask-image: url(icons/file-text-o.svg);
 }
-.card__icon--admin-structure::before {
+.card__title--icon-admin-structure::before {
           mask-image: url(icons/sitemap.svg);
   -webkit-mask-image: url(icons/sitemap.svg);
 }
-.card__icon--admin-appearance::before {
+.card__title--icon-admin-appearance::before {
           mask-image: url(icons/desktop.svg);
   -webkit-mask-image: url(icons/desktop.svg);
 }
-.card__icon--admin-modules::before {
+.card__title--icon-admin-modules::before {
           mask-image: url(icons/plug.svg);
   -webkit-mask-image: url(icons/plug.svg);
 }
-.card__icon--admin-config::before {
+.card__title--icon-admin-config::before {
           mask-image: url(icons/gears.svg);
   -webkit-mask-image: url(icons/gears.svg);
 }
-.card__icon--admin-people::before {
+.card__title--icon-admin-people::before {
           mask-image: url(icons/id-card.svg);
   -webkit-mask-image: url(icons/id-card.svg);
 }
-.card__icon--admin-reports::before {
+.card__title--icon-admin-reports::before {
           mask-image: url(icons/file-text-o.svg);
   -webkit-mask-image: url(icons/file-text-o.svg);
 }
-.card__icon--admin-help::before {
+.card__title--icon-admin-help::before {
           mask-image: url(icons/ambulance.svg);
   -webkit-mask-image: url(icons/ambulance.svg);
 }
 
 /*http://drupal8.dev/admin/reports*/
-.card__icon--admin-reports-updates::before {
+.card__title--icon-admin-reports-updates::before {
           mask-image: url(icons/file-text-o.svg);
   -webkit-mask-image: url(icons/file-text-o.svg);
 }
-.card__icon--admin-reports-dblog::before {
+.card__title--icon-admin-reports-dblog::before {
           mask-image: url(icons/file-text-o.svg);
   -webkit-mask-image: url(icons/file-text-o.svg);
 }
-.card__icon--admin-reports-translations::before {
+.card__title--icon-admin-reports-translations::before {
           mask-image: url(icons/file-text-o.svg);
   -webkit-mask-image: url(icons/file-text-o.svg);
 }
-.card__icon--admin-reports-fields::before {
+.card__title--icon-admin-reports-fields::before {
           mask-image: url(icons/file-text-o.svg);
   -webkit-mask-image: url(icons/file-text-o.svg);
 }
-.card__icon--admin-reports-status::before {
+.card__title--icon-admin-reports-status::before {
           mask-image: url(icons/file-text-o.svg);
   -webkit-mask-image: url(icons/file-text-o.svg);
 }
-.card__icon--admin-reports-access-denied::before {
+.card__title--icon-admin-reports-access-denied::before {
           mask-image: url(icons/file-text-o.svg);
   -webkit-mask-image: url(icons/file-text-o.svg);
 }
-.card__icon--admin-reports-page-not-found::before {
+.card__title--icon-admin-reports-page-not-found::before {
           mask-image: url(icons/file-text-o.svg);
   -webkit-mask-image: url(icons/file-text-o.svg);
 }
-.card__icon--admin-reports-search::before {
+.card__title--icon-admin-reports-search::before {
           mask-image: url(icons/file-text-o.svg);
   -webkit-mask-image: url(icons/file-text-o.svg);
 }
-.card__icon--admin-reports-views-plugins::before {
+.card__title--icon-admin-reports-views-plugins::before {
           mask-image: url(icons/tasks.svg);
   -webkit-mask-image: url(icons/tasks.svg);
 }
 
 
 /*http://drupal8.dev/admin/config*/
-.card__icon--people::before {
+.card__title--icon-people::before {
           mask-image: url(icons/id-card.svg);
   -webkit-mask-image: url(icons/id-card.svg);
 }
-.card__icon--content-authoring::before {
+.card__title--icon-content-authoring::before {
           mask-image: url(icons/pencil.svg);
   -webkit-mask-image: url(icons/pencil.svg);
 }
-.card__icon--development::before {
+.card__title--icon-development::before {
           mask-image: url(icons/terminal.svg);
   -webkit-mask-image: url(icons/terminal.svg);
 }
-.card__icon--search-and-metadata::before {
+.card__title--icon-search-and-metadata::before {
           mask-image: url(icons/search.svg);
   -webkit-mask-image: url(icons/search.svg);
 }
-.card__icon--web-services::before {
+.card__title--icon-web-services::before {
           mask-image: url(icons/rss.svg);
   -webkit-mask-image: url(icons/rss.svg);
 }
-.card__icon--system::before {
+.card__title--icon-system::before {
           mask-image: url(icons/drupal.svg);
   -webkit-mask-image: url(icons/drupal.svg);
 }
-.card__icon--user-interface::before {
+.card__title--icon-user-interface::before {
           mask-image: url(icons/heart.svg);
   -webkit-mask-image: url(icons/heart.svg);
 }
-.card__icon--media::before {
+.card__title--icon-media::before {
           mask-image: url(icons/picture-o.svg);
   -webkit-mask-image: url(icons/picture-o.svg);
 }
-.card__icon--regional-and-language::before {
+.card__title--icon-regional-and-language::before {
           mask-image: url(icons/flag.svg);
   -webkit-mask-image: url(icons/flag.svg);
 }
-.card__icon--workflow::before {
+.card__title--icon-workflow::before {
           mask-image: url(icons/truck.svg);
   -webkit-mask-image: url(icons/truck.svg);
 }
 
 
 /*http://drupal8.dev/admin/index*/
-.card__icon--actions::before {
+.card__title--icon-actions::before {
           mask-image: url(icons/id-card.svg);
   -webkit-mask-image: url(icons/id-card.svg);
 }
-.card__icon--block::before {
+.card__title--icon-block::before {
           mask-image: url(icons/cube.svg);
   -webkit-mask-image: url(icons/cube.svg);
 }
-.card__icon--configuration-manager::before {
+.card__title--icon-configuration-manager::before {
           mask-image: url(icons/id-card.svg);
   -webkit-mask-image: url(icons/id-card.svg);
 }
-.card__icon--contact::before {
+.card__title--icon-contact::before {
           mask-image: url(icons/envelope.svg);
   -webkit-mask-image: url(icons/envelope.svg);
 }
-.card__icon--content-translation::before {
+.card__title--icon-content-translation::before {
           mask-image: url(icons/flag.svg);
   -webkit-mask-image: url(icons/flag.svg);
 }
-.card__icon--database-logging::before {
+.card__title--icon-database-logging::before {
           mask-image: url(icons/database.svg);
   -webkit-mask-image: url(icons/database.svg);
 }
-.card__icon--user::before {
+.card__title--icon-user::before {
           mask-image: url(icons/id-card.svg);
   -webkit-mask-image: url(icons/id-card.svg);
 }
-.card__icon--aggregator::before {
+.card__title--icon-aggregator::before {
           mask-image: url(icons/rss.svg);
   -webkit-mask-image: url(icons/rss.svg);
 }
-.card__icon--comment::before {
+.card__title--icon-comment::before {
           mask-image: url(icons/comments-o.svg);
   -webkit-mask-image: url(icons/comments-o.svg);
 }
-.card__icon--file::before {
+.card__title--icon-file::before {
           mask-image: url(icons/file-o.svg);
   -webkit-mask-image: url(icons/file-o.svg);
 }
-.card__icon--help::before {
+.card__title--icon-help::before {
           mask-image: url(icons/ambulance.svg);
   -webkit-mask-image: url(icons/ambulance.svg);
 }
-.card__icon--language::before,
-.card__icon--configuration-translation::before,
-.card__icon--interface-translation::before {
+.card__title--icon-language::before,
+.card__title--icon-configuration-translation::before,
+.card__title--icon-interface-translation::before {
           mask-image: url(icons/flag.svg);
   -webkit-mask-image: url(icons/flag.svg);
 }
-.card__icon--libraries-ui::before {
+.card__title--icon-admin-structure-book:before,
+.card__title--icon-libraries-ui::before {
           mask-image: url(icons/book.svg);
   -webkit-mask-image: url(icons/book.svg);
 }
-.card__icon--node::before {
+.card__title--icon-node::before {
           mask-image: url(icons/sticky-note.svg);
   -webkit-mask-image: url(icons/sticky-note.svg);
 }
-.card__icon--shortcut::before {
+.card__title--icon-shortcut::before {
           mask-image: url(icons/heart.svg);
   -webkit-mask-image: url(icons/heart.svg);
 }
-.card__icon--content-moderation::before {
+.card__title--icon-content-moderation::before {
           mask-image: url(icons/truck.svg);
   -webkit-mask-image: url(icons/truck.svg);
 }
-.card__icon--field-ui::before {
+.card__title--icon-field-ui::before {
           mask-image: url(icons/sliders.svg);
   -webkit-mask-image: url(icons/sliders.svg);
 }
-.card__icon--filter::before {
+.card__title--icon-filter::before {
           mask-image: url(icons/filter.svg);
   -webkit-mask-image: url(icons/filter.svg);
 }
-.card__icon--image::before {
+.card__title--icon-image::before {
           mask-image: url(icons/picture-o.svg);
   -webkit-mask-image: url(icons/picture-o.svg);
 }
-.card__icon--search::before {
+.card__title--icon-search::before {
           mask-image: url(icons/search.svg);
   -webkit-mask-image: url(icons/search.svg);
 }
-.card__icon--taxonomy::before {
+.card__title--icon-taxonomy::before {
           mask-image: url(icons/tags.svg);
   -webkit-mask-image: url(icons/tags.svg);
 }
-.card__icon--quick-edit::before {
+.card__title--icon-quick-edit::before {
           mask-image: url(icons/flash.svg);
   -webkit-mask-image: url(icons/flash.svg);
 }
-.card__icon--menu-ui::before,
-.card__icon--contextual-links::before {
+.card__title--icon-menu-ui::before,
+.card__title--icon-contextual-links::before {
           mask-image: url(icons/bullseye.svg);
   -webkit-mask-image: url(icons/bullseye.svg);
 }
 
-.card__icon--devel-kint::before {
+.card__title--icon-devel-kint::before {
           mask-image: url(icons/terminal.svg);
   -webkit-mask-image: url(icons/terminal.svg);
 }
-.card__icon--tour {
+.card__title--icon-tour {
 }
-.card__icon--devel-generate::before {
+.card__title--icon-devel-generate::before {
           mask-image: url(icons/terminal.svg);
   -webkit-mask-image: url(icons/terminal.svg);
 }
 
-.card__icon--style-guide {
+.card__title--icon-style-guide {
 }
-.card__icon--toolbar {
+.card__title--icon-toolbar {
 }
-.card__icon--update-manager {
+.card__title--icon-update-manager {
 }
-.card__icon--views-ui::before {
+.card__title--icon-views-ui::before {
           mask-image: url(icons/tasks.svg);
   -webkit-mask-image: url(icons/tasks.svg);
 }
@@ -330,49 +343,56 @@
 
 
 /*http://drupal8.dev/admin/structure*/
-.card__icon--admin-structure-block::before {
+.card__title--icon-admin-structure-block::before {
           mask-image: url(icons/th.svg);
   -webkit-mask-image: url(icons/th.svg);
 }
-.card__icon--admin-structure-comment::before {
+
+.card__title--icon-admin-structure-forum:before {
+          mask-image: url(icons/comments.svg);
+  -webkit-mask-image: url(icons/comments.svg);
+}
+.card__title--icon-admin-structure-comment::before {
           mask-image: url(icons/comments-o.svg);
   -webkit-mask-image: url(icons/comments-o.svg);
 }
-.card__icon--admin-structure-contact::before {
+.card__title--icon-admin-structure-contact::before {
           mask-image: url(icons/envelope.svg);
   -webkit-mask-image: url(icons/envelope.svg);
 }
-.card__icon--admin-structure-types::before {
+.card__title--icon-admin-structure-types::before {
           mask-image: url(icons/briefcase.svg);
   -webkit-mask-image: url(icons/briefcase.svg);
 }
 
 [class*="card__icon--admin-structure-display-modes"]::before,
-.card__icon--admin-structure-display-modes::before {
+.card__title--icon-admin-structure-display-modes-view:before,
+.card__title--icon-admin-structure-display-modes::before,
+.card__title--icon-admin-structure-display-modes-form:before {
           mask-image: url(icons/desktop.svg);
   -webkit-mask-image: url(icons/desktop.svg);
 }
-.card__icon--admin-structure-menu::before {
+.card__title--icon-admin-structure-menu::before {
           mask-image: url(icons/reorder.svg);
   -webkit-mask-image: url(icons/reorder.svg);
 }
 
-.card__icon--tags::before,
-.card__icon--admin-structure-taxonomy::before {
+.card__title--icon-tags::before,
+.card__title--icon-admin-structure-taxonomy::before {
           mask-image: url(icons/tags.svg);
   -webkit-mask-image: url(icons/tags.svg);
 }
-.card__icon--admin-structure-views::before {
+.card__title--icon-admin-structure-views::before {
           mask-image: url(icons/tasks.svg);
   -webkit-mask-image: url(icons/tasks.svg);
 }
 
 /**/
-.card__icon--admin-config-people-accounts::before {
+.card__title--icon-admin-config-people-accounts::before {
           mask-image: url(icons/id-card.svg);
   -webkit-mask-image: url(icons/id-card.svg);
 }
-.card__icon--admin-config-content-formats:before {
+.card__title--icon-admin-config-content-formats:before {
           mask-image: url(icons/pencil.svg);
   -webkit-mask-image: url(icons/pencil.svg);
 }
@@ -398,12 +418,12 @@
 [class*="card__icon--admin-config-search"]::before {
 }
 
-.card__icon--admin-config-services-rss-publishing::before {
+.card__title--icon-admin-config-services-rss-publishing::before {
 }
-.card__icon--admin-config-services-aggregator::before {
+.card__title--icon-admin-config-services-aggregator::before {
 }
 
-.card__icon--admin-config-system-site-information::before {
+.card__title--icon-admin-config-system-site-information::before {
 }
 
 
@@ -412,7 +432,7 @@
   -webkit-mask-image: url(icons/gears.svg);
 }
 
-.card__icon--admin-config-user-interface-shortcut::before {
+.card__title--icon-admin-config-user-interface-shortcut::before {
           mask-image: url(icons/bookmark-o.svg);
   -webkit-mask-image: url(icons/bookmark-o.svg);
 }
@@ -427,99 +447,57 @@
   -webkit-mask-image: url(icons/flag.svg);
 }
 
-.card__icon--admin-config-workflow-moderation::before {
+.card__title--icon-admin-config-workflow-moderation::before {
           mask-image: url(icons/sliders.svg);
   -webkit-mask-image: url(icons/sliders.svg);
 }
 
 
 /* fieldtypes ----------------------------------------------------------------*/
-.card__icon--fieldtype::before {
+.card__title--icon-fieldtype::before {
 }
-
-.card__icon--fieldtype-text-formatted-long::before {
+.card__title--icon-text-formatted-long:before,
+.card__title--icon-fieldtype-text-formatted-long::before {
           mask-image: url(icons/file-text-o.svg);
   -webkit-mask-image: url(icons/file-text-o.svg);
 }
 
-.card__icon--fieldtype-text-formatted-long-with-summary::before {
+.card__title--icon-fieldtype-text-formatted-long-with-summary::before {
           mask-image: url(icons/file-text-o.svg);
   -webkit-mask-image: url(icons/file-text-o.svg);
 }
 
-.card__icon--fieldtype-text-plain-long:before {
+.card__title--icon-fieldtype-text-plain-long:before {
           mask-image: url(icons/file-text-o.svg);
   -webkit-mask-image: url(icons/file-text-o.svg);
 }
 
-.card__icon--fieldtype-comments::before {
+.card__title--icon-fieldtype-comments::before {
           mask-image: url(icons/comments-o.svg);
   -webkit-mask-image: url(icons/comments-o.svg);
 }
 
-.card__icon--fieldtype-image::before {
+.card__title--icon-fieldtype-image::before {
           mask-image: url(icons/picture-o.svg);
   -webkit-mask-image: url(icons/picture-o.svg);
 }
-.card__icon--fieldtype-entity-reference::before {
+.card__title--icon-fieldtype-entity-reference::before {
           mask-image: url(icons/share-alt.svg);
   -webkit-mask-image: url(icons/share-alt.svg);
 }
 
-.card__icon--fieldtype-boolean::before {
+.card__title--icon-fieldtype-boolean::before {
 }
-.card__icon--fieldtype-file::before {
+.card__title--icon-fieldtype-file::before {
           mask-image: url(icons/file-o.svg);
   -webkit-mask-image: url(icons/file-o.svg);
 }
-.card__icon--fieldtype-list-text::before {
+.card__title--icon-fieldtype-list-text::before {
           mask-image: url(icons/file-o.svg);
   -webkit-mask-image: url(icons/file-o.svg);
 }
 
-.card__icon--fieldtype-list-text::before {
+.card__title--icon-fieldtype-list-text::before {
           mask-image: url(icons/check-square.svg);
   -webkit-mask-image: url(icons/check-square.svg);
-}
-
-
-
-
-
-/* NEW card title icon TODO: needs to update all cards for this */
-.card__title--icon {
-  position: relative;
-  padding-left: 3rem;
-}
-.card__title--icon::before {
-  position: absolute;
-  top: 0rem;
-  left: 0rem;
-  display: block;
-  width: 2rem;
-  height: 2rem;
-  background-color: var(--bluesky-light);
-  background-image: none ! important; /* yes we wanna make sure no module have fun here */
-  content: "";
-  transition: 0.5s ease-in;
-  /*mask-image: var(--icon-coffee);
-  -webkit-mask-image: var(--icon-coffee);*/
-
-  -webkit-mask-size: contain !important;
-          mask-size: contain !important;
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-}
-.card--small .card__title--icon::before {
-  top: 0.25rem;
-  width: 1rem;
-  height: 1rem;
-}
-.card--small .card__title--icon {
-  padding-left: 1.5rem;
-}
-
-.card__title--icon-views::before {
-          mask-image: url(icons/tasks.svg);
-  -webkit-mask-image: url(icons/tasks.svg);
 }
