@@ -45,3 +45,68 @@
           mask-image: url(icons/gears.svg);
   -webkit-mask-image: url(icons/gears.svg);
 }
+
+/* Links -------------------------------------------------------------------- */
+.card__links li a {
+  padding: 0.5rem 0 0.5rem 2rem;
+  text-align: left;
+}
+.card__links li a:before {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--concrete);
+  background-image: none ! important; /* yes we wanna make sure no module have fun here */
+  content: "";
+  transition: 0.5s ease-in;
+
+  -webkit-mask-size: contain !important;
+          mask-size: contain !important;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+}
+/*Settings*/
+.card__links  a[href^="/admin/appearance/settings"] {
+  color: var(--bluesky);
+}
+.card__links  a[href^="/admin/appearance/settings"]:before {
+  background-color: var(--bluesky);
+
+          mask-image: url(icons/gears.svg);
+  -webkit-mask-image: url(icons/gears.svg);
+}
+/* Uninstall */
+.card__links  a[href^="/admin/appearance/uninstall"] {
+  color: var(--strawberry);
+}
+.card__links  a[href^="/admin/appearance/uninstall"]:before {
+  background-color: var(--strawberry);
+
+          mask-image: url(icons/power-off.svg);
+  -webkit-mask-image: url(icons/power-off.svg);
+}
+
+/* Default */
+.card__links  a[href^="/admin/appearance/default"] {
+  color: var(--rasberry);
+}
+.card__links  a[href^="/admin/appearance/default"]:before {
+  background-color: var(--rasberry);
+
+          mask-image: url(icons/heart.svg);
+  -webkit-mask-image: url(icons/heart.svg);
+}
+
+/* Install */
+.card__links  a[href^="/admin/appearance/install"] {
+  color: var(--grass);
+}
+.card__links  a[href^="/admin/appearance/install"]:before {
+  background-color: var(--grass);
+
+          mask-image: url(icons/check.svg);
+  -webkit-mask-image: url(icons/check.svg);
+}
