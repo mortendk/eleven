@@ -216,15 +216,9 @@ tr.card {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
-
-.card__links .width-2 li {
-  width: 50%;
-}
-.card__links .width-3 li {
-  width: 33%;
-}
 .card__links li {
   border-right: 1px solid var(--bluesky-light);
+  padding-right: 0.5rem;
 }
 .card__links li:last-child {
   border: none;

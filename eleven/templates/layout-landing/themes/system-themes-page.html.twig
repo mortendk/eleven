@@ -5,7 +5,7 @@
 
 <h2 class="pagewidth">{{ theme_group.title }}</h2>
 
-<section{{ theme_group.attributes.addClass('L', 'LW-fifth','pagewidth') }}>
+<section{{ theme_group.attributes.addClass('L', 'LW-4','pagewidth') }}>
 {% for theme in theme_group.themes %}
 
   {%
@@ -17,7 +17,6 @@
   %}
 
   <article{{ theme.attributes.addClass(theme_classes) }}>
-
     {%
       set theme_status = [
       theme_group.state == "installed" ? 'card__status--installed': 'card__status--notinstalled',
@@ -26,7 +25,6 @@
       ]
     %}
     <div class="card__status {% for item in theme_status %}{{ item }} {% endfor %}"></div>
-
 
     {% if theme.screenshot %}
       <figure class="card__image">
@@ -41,7 +39,9 @@
       <div class="theme__incompatible">{{ theme.incompatible }}</div>
     {% else %}
       {# template : links-apperance.html.twig #}
+      <nav class="card__links">
       {{ theme.operations }}
+      </nav>
     {% endif %}
 
     <details class="details-summary-link">
