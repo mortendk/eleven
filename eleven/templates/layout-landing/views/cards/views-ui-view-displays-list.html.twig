@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * Theme override for views displays on the views listing page.
+ *
+ * Available variables:
+ * - displays: Contains multiple display instances. Each display contains:
+ *   - display: Display name.
+ *   - path: Path to display, if any.
+ */
+#}
+<ul class="card__list">
+  {% for display in displays %}
+    <li>
+      {% if display.path %}
+        {{ display.display }}: 
+        <span data-drupal-selector="views-table-filter-text-source">{{ display.path }}</span>
+      {% else %}
+        {{ display.display }}
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

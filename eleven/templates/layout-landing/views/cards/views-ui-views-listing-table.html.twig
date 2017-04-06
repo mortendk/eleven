@@ -1,0 +1,49 @@
+{#
+/**
+ * @file
+ * Theme override for views listing table.
+ *
+ * Available variables:
+ * - headers: Contains table headers.
+ * - rows: Contains multiple rows. Each row contains:
+ *   - view_name: The human-readable name of the view.
+ *   - machine_name: Machine name of the view.
+ *   - description: The description of the view.
+ *   - displays: List of displays attached to the view.
+ *   - operations: List of available operations.
+ *
+ * @see template_preprocess_views_ui_views_listing_table()
+ */
+#}
+{{ attach_library(active_theme()~'/views.cards') }}
+{{ attach_library(active_theme()~'/card') }}
+
+<section{{ attributes.addClass('L','LW-4') }}>
+  {% for row in rows %}
+  <article{{ row.attributes.addClass('w', 'card') }}>
+    <div class="card__status"></div>
+    <h3 class="card__title card__title--icon card__title--icon-views" data-drupal-selector="views-table-filter-text-source">
+
+      <a href="views/view/{{row.data.machine_name.data}}">{{ row.data.view_name.data }}</a>
+
+    </h3>
+
+    <div class="card__text">
+      {{ row.data.description.data }}
+    </div>
+
+    <details class="details-summary-link">
+        <summary>{{ 'More info'|t }}</summary>
+
+        <strong>{{ 'Machine name'|t }}</strong>
+        {{ row.data.machine_name.data }}
+
+        <strong>{{ 'Path'|t }}</strong>
+        {{ row.data.displays.data }}
+    </details>
+
+
+        {{ row.data.operations.data }}
+  </article>
+  {% endfor %}
+</section>
