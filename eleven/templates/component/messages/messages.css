@@ -9,6 +9,9 @@
   padding: 1rem 2rem;
   width: 50%;
 }
+@media (max-width: 47.99em) {
+  .messages { width: 100%}
+}
 .messages__content {
   padding: 1rem;
 }

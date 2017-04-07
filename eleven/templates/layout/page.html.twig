@@ -15,10 +15,10 @@
 
 <header class="L pagewidth" role="banner" aria-label="{{ 'Site header'|t }}">
   {% if page.header_first %}
-    <div class="w-9">{{ page.header_first }}</div>
+    <div class="w-9 w-12@s">{{ page.header_first }}</div>
   {% endif %}
   {% if page.header_second %}
-    <div class="w-3">{{ page.header_second }}</div>
+    <div class="w-3 w-12@s">{{ page.header_second }}</div>
   {% endif %}
 </header>
 
@@ -34,8 +34,8 @@
   {# local actions is always printed out into the the page.[region]  so yeah we have an empty div here ....  #}
   {% if page.top_first or page.top_second %}
   <div class="L pagewidth">
-    {% if page.top_first %}<div class="w-6">{{ page.top_first }}</div>{% endif %}
-    {% if page.top_second %}<div class="w-6">{{ page.top_second }}</div>{% endif %}
+    {% if page.top_first %}<div class="w-6 w-12@s">{{ page.top_first }}</div>{% endif %}
+    {% if page.top_second %}<div class="w-6 w-12@s">{{ page.top_second }}</div>{% endif %}
   </div>
   {% endif %}
 

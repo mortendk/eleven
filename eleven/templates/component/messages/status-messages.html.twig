@@ -3,8 +3,7 @@
   {%
     set classes = [
       'messages',
-      'messages--' ~ type,
-      'w-6'
+      'messages--' ~ type
     ]
   %}
   <article role="contentinfo" aria-label="{{ status_headings[type] }}"{{ attributes.addClass(classes)|without('role', 'aria-label') }}>
