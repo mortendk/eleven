@@ -1,0 +1,57 @@
+@media (max-width: 47.99em) {
+
+  .tabledrag {
+    display: block;
+    overflow-y: auto;
+    width: 100%;
+    position: relative;
+    border: 1px solid red
+  }
+
+
+  /* region title */
+  .tabledrag .region-title td,
+  .tabledrag .region-title td:nth-child(1){
+    background-color: var(--bluesky-light);
+    text-align: center;
+    color: var(--white);
+    font-weight: normal;
+  }
+
+  tr.tabledrag-leaf {
+  }
+
+  tr.tabledrag-leaf td {
+
+  }
+
+  .tabledrag-leaf td:nth-child(1) {
+    background-color: var(--black-50);
+    /*position: absolute;*/
+    /*left: 0*/
+
+  }
+  .tabledrag-leaf td:nth-child(2){
+
+    background-color: var(--grass);
+  }
+
+  tr.draggable {
+    padding: 0.5rem 0;
+  }
+
+  /*fix widths on little elements*/
+  .tabledrag td select {
+    width: 6rem;
+    min-width: 6rem;
+  }
+
+
+  .touchevents .draggable .menu-item__link {
+    padding: 0 0.5rem 0 0;
+  }
+  .touchevents .draggable td {
+    padding: 0;
+    vertical-align: middle;
+  }
+}

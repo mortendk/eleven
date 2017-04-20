@@ -11,7 +11,6 @@ table{
   }
 }
 
-
 /* -- responsive table -------------------------------------------------------*/
 /*
 The responsive table needs a little bit of js magic so we can add in the add
@@ -35,12 +34,12 @@ names for each field.
 
   /* Hide table headers. */
   .responsive-enabled th {
-    position: absolute;
+    /*position: absolute;
     top: -9999px;
-    left: -9999px;
+    left: -9999px;*/
+    display: none;
   }
 
-  .responsive-enabled tr {  }
 
   .responsive-enabled tr td,
   .responsive-enabled tr td:first-child,
@@ -69,9 +68,6 @@ names for each field.
   .responsive-enabled  tr.selected td:before{
     color: var(--white);
   }
-  .responsive-enabled tr td:before,
-  .responsive-enabled tr td {
-  }
 
   /*
   Reads the data-title atribute set found in  js/scripts.js ResponsiveTablefix
@@ -79,6 +75,7 @@ names for each field.
   .responsive-enabled td:before {
     content: attr(data-title);
   }
+
   .views-form table.responsive-enabled tbody > tr > td:first-child,
   table.responsive-enabled tbody > tr > td:first-child {
     width: 100%;
