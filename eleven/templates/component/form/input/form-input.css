@@ -23,6 +23,18 @@ input[type="text"].form-autocomplete {
   min-width: 20rem;
 }
 
+@media (max-width: 47.99em) {
+  input[type="text"] {
+    width: 100%;
+    min-width: 10rem;
+  }
+  input[type="text"].form-autocomplete {
+    min-width: 20rem;
+  }
+
+}
+
+
 /* input icons -------------------------------------------------------------- */
 .form-item__icon {
   position: relative;

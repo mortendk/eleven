@@ -1,13 +1,12 @@
 /*
-Admin Toolbar
-Dont change the classnames - stuff will break ;)
+  Admin Toolbar
+  Dont change the classnames - stuff will break ;)
 */
 /* set global toolbar settings*/
 #toolbar-administration {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
   font-size: 16px;
 }
-/**/
 #toolbar-bar a,
 #toolbar-bar a:hover {
   text-decoration: none;
@@ -24,6 +23,15 @@ Dont change the classnames - stuff will break ;)
   height: 32px;
   line-height: 32px;
 }
+
+@media (max-width: 61.99em) {
+  body.toolbar-tray-open.toolbar-vertical.toolbar-fixed {
+    margin-left: 0;
+  }
+}
+
+
+
 /*------------------------------------------------------------------------------
   Main Toolbar (toolbar-tabs)
 ------------------------------------------------------------------------------*/
@@ -121,7 +129,7 @@ html:not(.cssmask) #toolbar-bar .toolbar-icon::before {
   background-color: transparent;
 }
 
-
+/* escape*/
 #toolbar-bar .toolbar-icon-escape-admin{
   background-image: var(--button-asphalt);
 }
@@ -131,8 +139,18 @@ html:not(.cssmask) #toolbar-bar .toolbar-icon::before {
 #toolbar-bar .toolbar-icon-escape-admin:before{
   mask-image: var(--icon-arrow-left);
 -webkit-mask-image: var(--icon-arrow-left);
-
 }
+
+/**/
+@media (max-width: 47.99em) {
+  #toolbar-bar .toolbar-icon-escape-admin{
+    text-indent: -999px;
+    padding: 0;
+    width: 32px;
+  }
+}
+
+
 
 /* home icons */
 #toolbar-bar .toolbar-tab--small {
@@ -146,6 +164,13 @@ html:not(.cssmask) #toolbar-bar .toolbar-icon::before {
   line-height: calc( 2 * 16px );
   text-indent: -999rem;
 }
+@media (max-width: 47.99em) {
+  #toolbar-bar .toolbar-tab--small,
+  #toolbar-bar .toolbar-icon-11home {
+    display: none
+  }
+}
+
 #toolbar-bar .toolbar-icon-11home::before {
   background-color: var(--bluesky);
     mask-image: var(--icon-drop);
@@ -234,6 +259,16 @@ html:not(.cssmask) #toolbar-bar .toolbar-icon-11home::before {
   background-image: var(--button-rasberry-active);
 }
 
+@media (max-width: 47.99em) {
+  .contextual-toolbar-tab{
+    width: 32px
+  }
+  #toolbar-bar button.toolbar-icon-edit{
+    text-indent: -999px;
+    width: 32px
+  }
+}
+
 /* Place block */
 #toolbar-bar .block-place-toolbar-tab {
   float: right;
@@ -274,6 +309,13 @@ html:not(.cssmask) #toolbar-bar .toolbar-icon-11home::before {
 }
 #toolbar-bar .toolbar-icon-place-block-active:hover:before {
   background-color: var(--rasberry);
+}
+
+/*devel */
+#toolbar-bar .toolbar-icon-devel:before{
+  -webkit-mask-image: var(--icon-dev);
+          mask-image: var(--icon-dev);
+
 }
 
 /* -----------------------------------------------------------------------------

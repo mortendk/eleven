@@ -11,6 +11,11 @@ form details {
 form details > .details-wrapper {
   padding: 0.5rem 1rem;
 }
+@media (max-width: 47.99em) {
+  form details > .details-wrapper {
+    padding: 0.5rem;
+  }
+}
 /* resets */
 details summary::-webkit-details-marker {
   display: none;

@@ -134,6 +134,12 @@ table.admin:
     theme:
       templates/component/table/table-admin.css: {}
 
+table.drag:
+  css:
+    theme:
+      templates/component/table/table-drag.css: {}
+  js:
+    templates/component/table/table-drag.js: {}
 
 # ------------------------------------------------------------------------------
 # views

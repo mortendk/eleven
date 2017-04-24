@@ -36,6 +36,7 @@ h1,
   font-weight: 100;
   font-style: normal;
 }
+
 h2,
 .h2 {
   font-size: 2rem;
@@ -70,6 +71,13 @@ h6,
   padding-left: 2rem;
   margin: 1rem 0
 }
+@media (max-width: 47.99em) {
+  .page-title{
+    font-size: 2rem;
+    margin: 0.5rem 0 0 0;
+  }
+}
+
 
 /* -- P ----------------------------------------------------------------------*/
 p {

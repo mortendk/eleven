@@ -34,6 +34,10 @@ libraries-extend:
   - eleven/views
   - eleven/card
 
+  core/drupal.tabledrag:
+    - eleven/table.drag
+
+
   # core/jquery.ui:
   # - eleven/jquery_ui
 

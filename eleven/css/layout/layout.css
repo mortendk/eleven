@@ -807,3 +807,15 @@ test:
 .LW-3  .w { flex-basis: calc(33.33% - 1rem);}
 .LW-2   .w { flex-basis: calc(50% - 1rem);}
 .LW-1   .w { flex-basis: calc(100% - 1rem);}
+
+/* phones landscape*/
+@media (max-width: 39.99em) {
+  .LW-10 .w, .LW-9 .w,.LW-8 .w,.LW-7 .w,.LW-6 .w, .LW-5 .w,.LW-4 .w,.LW-3  .w,.LW-2 .w, .LW-1 .w{
+     flex-basis: calc(100% - 1rem);
+  }
+}
+@media (min-width: 40rem) and (max-width: 61.99rem){
+  .LW-10 .w, .LW-9 .w,.LW-8 .w,.LW-7 .w,.LW-6 .w, .LW-5 .w,.LW-4 .w,.LW-3  .w,.LW-2 .w, .LW-1 .w{
+    flex-basis: calc(50% - 2rem);
+  }
+}/* Medium */

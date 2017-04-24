@@ -37,8 +37,8 @@ header{
 /* small */
 @media (max-width: 47.99rem){
   .pagewidth {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 }
 /* medium */

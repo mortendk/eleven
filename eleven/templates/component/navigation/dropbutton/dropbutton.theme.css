@@ -179,22 +179,57 @@ drop button on a mobile is not a good idea they are harder to navigate so lets s
 */
 
 /* small */
-/*@media (max-width: 47.99em) {
+@media (max-width: 47.99em) {
+  .js td .dropbutton-wrapper.dropbutton-multiple{
+    width: 100%;
+  }
+  .js td .dropbutton-widget{
+    position: relative;
+  }
+  .js .dropbutton-widget .dropbutton{
+    overflow: inherit;
+  }
   .dropbutton-multiple {
     min-height: 2rem;
     margin-bottom: 1rem;
   }
+  /* remove toggle */
+  .dropbutton-multiple .dropbutton li.dropbutton-toggle{
+    display: none
+  }
+
+  .dropbutton > .dropbutton-action:first-child > a{
+    padding: 0;
+    min-width: 0;
+
+  }
+
   .dropbutton-multiple .dropbutton li {
-    float: left;
+    display: inline-block;
+    padding: 0 1rem 0 0
+
   }
-  .dropbutton-multiple .dropbutton li a {
-    background-image: var(--button-bluesky);
+
+  .dropbutton-multiple .dropbutton li.secondary-action {
+    display: inline-block;
+  }
+
+  .dropbutton > .dropbutton-action:first-child > a,
+  .js .dropbutton-action a{
+    padding: 0;
+    display: inline;
+    min-width: 0;
+    font-size: 1rem;
+    padding: 0 0.5rem;
+    background-color: var(--bluesky-light);
     color: var(--white);
+    text-decoration: none;
   }
-  .dropbutton-multiple .dropbutton .secondary-action {
-    display: block;
+
+  .dropbutton-action a:before{
+    display: none
   }
-}*/
+}
 
 
 
