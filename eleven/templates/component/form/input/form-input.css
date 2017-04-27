@@ -23,6 +23,11 @@ input[type="text"].form-autocomplete {
   min-width: 20rem;
 }
 
+.layout-region-node-secondary input[type="text"] {
+  width: 100%;
+  min-width: 10rem;
+}
+
 @media (max-width: 47.99em) {
   input[type="text"] {
     width: 100%;
