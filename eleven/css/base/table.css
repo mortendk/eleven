@@ -27,7 +27,7 @@ caption {
 td {
   border-bottom: 1px solid var(--bluesky-light-20);
   border-left: 1px solid var(--bluesky-light-20);
-  padding-left: 0.5rem;
+  padding: 0.5rem;
 }
 td:first-child {
   border-left: none
@@ -45,7 +45,7 @@ tr:hover td {
 
 /* header --------------------------------------------------------------------*/
 th {
-  padding-left: 0.5rem;
+  padding: 0.5rem;
   border: 1px solid var(--concrete-light);
   border-right: 0;
   background-color: var(--concrete-light);
