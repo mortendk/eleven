@@ -39,12 +39,7 @@ ol li {
   color: gray;
 }
 
-
-li:nth-child(odd) {
-}
-li:nth-child(odd):hover {
-}
-li:nth-child(even) {
-}
-li:nth-child(even):hover {
+/* commalist */
+.item-list__comma-list li{
+  margin-left: 0;
 }
