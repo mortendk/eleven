@@ -120,12 +120,9 @@ th a[href$="sort=desc"]:hover {
 }
 
 
-
-
 th.views-field-operations {
   width: 6rem;
 }
-
 
 /* row background colors */
 /* odd */
@@ -174,4 +171,10 @@ td .form-item {
 }
 td .form-item .checkbox {
   margin-right: 0;
+}
+
+
+td.empty.message{
+  text-align: center;
+  padding: 3rem
 }

@@ -90,8 +90,8 @@ input {
 }
 .form-item__icon {
   background-color: var(--white);
-  border: 1px solid var(--bluesky-light);
-  border-right: none
+  /*border: 1px solid var(--bluesky-light);*/
+  /*border-right: none*/
 }
 .form-item__icon::before {
   background-color: var(--bluesky);

@@ -79,7 +79,9 @@ select.form-select[multiple] + .select__arrow {
   text-align: center;
   border-bottom: 1px solid var(--bluesky);
 }
-
+.form-item--select-multiple label:hover {
+  color: var(--bluesky-light-light);
+}
 .form-item--select-multiple select {
   width: 30rem;
   height: auto;

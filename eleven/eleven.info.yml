@@ -116,6 +116,10 @@ libraries-override:
         /core/themes/stable/css/views_ui/views_ui.admin.theme.css: false
 
 
+  dblog/drupal.dblog:
+    css:
+      component:
+        /core/themes/stable/css/dblog/dblog.module.css: templates/layout-landing/reports/dblog.css
 
 # jquery ui
   # look at #/core/core.libraries.yml for my libs
@@ -134,6 +138,7 @@ libraries-override:
   core/modernizr:
     js:
       assets/vendor/modernizr/modernizr.min.js: js/modernizr-custom.js
+
 
 #-------------------------------------------------------------------------------
 # Remove stylesheets
