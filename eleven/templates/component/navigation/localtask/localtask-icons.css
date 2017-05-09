@@ -218,6 +218,13 @@
 }
 
 
+/*dblog*/
+.tabs li a[href="/admin/reports/dblog"]:before{
+  -webkit-mask-image: url(icons/bullhorn.svg);
+          mask-image: url(icons/bullhorn.svg);
+}
+
+
 /* delete */
 .tabs li a[href="/admin/reports/dblog/confirm"]{
   background-image: var(--button-strawberry);

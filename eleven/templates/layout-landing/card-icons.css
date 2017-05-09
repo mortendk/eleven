@@ -152,8 +152,8 @@
   -webkit-mask-image: url(icons/file-text-o.svg);
 }
 .card__title--icon-admin-reports-dblog::before {
-          mask-image: url(icons/file-text-o.svg);
-  -webkit-mask-image: url(icons/file-text-o.svg);
+          mask-image: url(icons/bullhorn.svg);
+  -webkit-mask-image: url(icons/bullhorn.svg);
 }
 .card__title--icon-admin-reports-translations::before {
           mask-image: url(icons/file-text-o.svg);

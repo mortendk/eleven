@@ -25,15 +25,15 @@ caption {
 
 /*cells ---------------------------------------------------------------------*/
 td {
+  padding-left: 0.5rem;
   border-bottom: 1px solid var(--bluesky-light-20);
   border-left: 1px solid var(--bluesky-light-20);
-  padding-left: 0.5rem;
 }
 td:first-child {
-  border-left: none
+  border-left: none;
 }
 td:last-child {
-  border-right: none
+  border-right: none;
 }
 td a {
   color: var(--bluesky-light);
@@ -45,8 +45,9 @@ tr:hover td {
 
 /* header --------------------------------------------------------------------*/
 th {
-  padding-left: 0.5rem;
-  border: 1px solid var(--concrete-light);
+  position: relative;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--concrete);
   border-right: 0;
   background-color: var(--concrete-light);
   font-size: 1rem;
@@ -54,30 +55,73 @@ th {
   text-align: left;
   white-space: nowrap;
 }
+th:firs-child {
+  border-left: none
+}
 th:last-child {
-  border-right: 1px solid var(--concrete);
+  border-right: none;
 }
-th,
 th a {
-  color: var(--black);
-}
-th a:hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  padding: 0.25rem 0.5rem;
+  background-color: var(--bluesky-light);
   color: var(--white);
-  text-decoration: none;
 }
 th.is-active a {
+  background-color: var(--bluesky);
   color: var(--white);
 }
+th a:hover {
+  background-color: var(--bluesky);
+  color: var(--bluesky-light-light);
+  text-decoration: none;
+  cursor: ns-resize;
+}
+
+th a[href$="sort=asc"]:hover {
+  cursor: n-resize;
+}
+th a[href$="sort=desc"]:hover {
+  cursor: s-resize;
+}
+
+/* tablesorting icons */
 .tablesort {
-  width: 0.7rem;
-  height: 0.7rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+
+          mask-image: var(--icon-coffee);
+  -webkit-mask-image: var(--icon-coffee);
+  -webkit-mask-size: contain !important;
+          mask-size: contain !important;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+}
+.tablesort--asc,
+.tablesort--desc {
+  background-image: none;
+  background-color: var(--white);
 }
 .tablesort--asc {
-  background-image: url(icons/caret-up.svg);
+          mask-image: url(icons/angle-down.svg);
+  -webkit-mask-image: url(icons/angle-down.svg);
 }
 .tablesort--desc {
-  background-image: url(icons/caret-down.svg);
+          mask-image: url(icons/angle-up.svg);
+  -webkit-mask-image: url(icons/angle-up.svg);
 }
+
+
+
+
 th.views-field-operations {
   width: 6rem;
 }
@@ -93,7 +137,6 @@ tr:nth-of-type(even) {
 }
 
 tr:hover {
-
 }
 
 
