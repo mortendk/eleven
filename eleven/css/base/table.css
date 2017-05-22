@@ -40,7 +40,7 @@ td a {
 }
 tr:hover td {
   border-color: var(--bluesky-50);
-  color: var(--bluesky);
+  color: var(--concrete);
 }
 
 /* header --------------------------------------------------------------------*/

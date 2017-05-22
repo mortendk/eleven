@@ -95,47 +95,112 @@ would it make more sense to have em horizonal shown instead ?
 }
 
 /* Emergency */
+tr.dblog-emergency td,
+.dblog-emergency,
+.dblog-emergency a,
+.dblog-emergency a:hover {
+  background-color: var(--rasberry);
+  border-color: var(--rasberry-light);
+  color: var(--white);
+}
+tr.dblog-emergency:hover td,
+tr.dblog-emergency:hover td a{
+  background-color: var(--rasberry-light);
+  border-color: var(--rasberry);
+  color: var(--white);
+}
 .dblog-emergency .icon {
   background-color: var(--rasberry);
+
+  mask-image: url(icons/ambulance.svg);
+-webkit-mask-image: url(icons/ambulance.svg);
+
 }
 
 /* Alert */
+tr.dblog-alert td,
+.dblog-alert,
+.dblog-alert a,
+.dblog-alert a:hover {
+  background-color: var(--rasberry-light);
+  border-color: var(--rasberry);
+  color: var(--white);
+}
+tr.dblog-alert:hover td,
+tr.dblog-alert:hover td a{
+  background-color: var(--rasberry);
+  border-color: var(--rasberry-light);
+  color: var(--white);
+}
 .dblog-alert .icon {
-  background-color: var(--strawberry);
+  background-color: var(--rasberry-light);
+  mask-image: url(icons/times.svg);
+-webkit-mask-image: url(icons/times.svg);
+
 }
 
-
 /* Critical */
+tr.dblog-critical td,
+.dblog-critical,
+.dblog-critical a,
+.dblog-critical a:hover {
+  background-color: var(--strawberry);
+  border-color: var(--strawberry-light);
+  color: var(--white);
+}
+tr.dblog-critical:hover td,
+tr.dblog-critical:hover td a{
+  background-color: var(--strawberry-light);
+  border-color: var(--strawberry);
+  color: var(--white);
+}
 .dblog-critical .icon {
   background-color: var(--rasberry);
+
+  mask-image: url(icons/bomb.svg);
+-webkit-mask-image: url(icons/bomb.svg);
 }
 
 
 /* Error */
+tr.dblog-error td,
+.dblog-error,
+.dblog-error a,
+.dblog-error a:hover {
+  background-color: var(--strawberry-light);
+  border-color: var(--strawberry);
+  color: var(--white);
+}
+tr.dblog-error:hover td,
+tr.dblog-error:hover td a{
+  background-color: var(--strawberry);
+  border-color: var(--strawberry-light);
+  color: var(--yellowsnow);
+}
 .dblog-error .icon {
   background-color: var(--strawberry);
 
           mask-image: url(icons/times-circle.svg);
   -webkit-mask-image: url(icons/times-circle.svg);
 }
-.dblog-error,
-.dblog-error a {
-  color: var(--strawberry);
-  text-decoration: underline;
-}
-.dblog-error a:hover {
-  color: var(--strawberry-light);
-}
 
 /* Warning */
+tr.dblog-warning td,
 .dblog-warning,
 .dblog-warning a,
 .dblog-warning a:hover {
-  color: var(--pumpkin-light);
-  text-decoration: underline;
+  background-color: var(--pumpkin-light);
+  border-color: var(--pumpkin);
+  color: var(--white);
+}
+tr.dblog-warning:hover td,
+tr.dblog-warning:hover td a{
+  background-color: var(--pumpkin);
+  border-color: var(--pumpkin-light);
+  color: var(--yellowsnow);
 }
 .dblog-warning .icon {
-  background-color: var(--yellowsnow);
+  background-color: var(--pumpkin);
 
           mask-image: url(icons/warning.svg);
   -webkit-mask-image: url(icons/warning.svg);
