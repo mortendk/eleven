@@ -34,6 +34,7 @@ input[type="submit"].js-hide + .form-item__icon {
 }
 
 /* form actions -------------------------------------------------------------*/
+.views-form  #edit-actions,
 #view-edit-form #edit-actions,
 .user-admin-permissions #edit-actions,
 .system-modules .form-actions,
@@ -182,8 +183,8 @@ on form-display
 */
 
 
-settings-edit-form-actions-cancel-settings
-settings-edit-form-actions-cancel-settings
+.settings-edit-form-actions-cancel-settings{}
+.settings-edit-form-actions-cancel-settings{}
 
 
 

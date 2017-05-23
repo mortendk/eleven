@@ -1,43 +1,22 @@
 {{ attach_library(active_theme()~'/button') }}
 {{ attach_library(active_theme()~'/form.form') }}
 
-{%
-  set remove_classes = [
-  'text-full',
-  'form-text',
-  ]
-%}
+
 
 {% set classes = [
-
 
 ]
 %}
 
-{% set input_type = element['#type'] %}
-
-
-{# set a range of types we want to test on #}
-{% set test = [
-  'date',
-  'password',
-  'search',
-  'submit',
-  'button',
-  ]
-%}
-
-{% if input_type in test  %}
 <span class="form-item--input">
-{% endif %}
-<input
-{{ attributes.
-  removeClass(remove_classes).
-  addClass(classes).
-  removeAttribute('size')
-}}
-/>{{ children }}
-{% if input_type in test  %}
+
+  <input
+  {{ attributes.
+    removeClass(remove_classes).
+    addClass(classes).
+    removeAttribute('size')
+  }}
+  />{{ children }}
+
   <div class="form-item__icon form-item__icon--{{ input_type}}"></div>
 </span>
-{% endif %}
