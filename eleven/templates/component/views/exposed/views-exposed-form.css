@@ -86,6 +86,75 @@ TODO move into the right places ?
   margin: 0
 }
 
+.form-item-smallvariant input[type="submit"] {
+  height: 2rem
+}
+.form-item-smallvariant input[type="submit"] + .form-item__icon{
+  height: 2rem;
+  width: 2rem
+}
+.form-item-smallvariant input[type="submit"] + .form-item__icon::before {
+  top: 0.5rem;
+  left:0.5rem
+}
+
+/* filter */
+.view-filters input[data-drupal-selector="edit-submit-content"] + .form-item__icon::before{
+  mask-image: url(icons/filter.svg);
+  -webkit-mask-image: url(icons/filter.svg);
+}
+
+/* filter reset */
+.view-filters input[data-drupal-selector="edit-reset"]{
+  background-color: var(--concrete-light);
+}
+.view-filters input[data-drupal-selector="edit-reset"] + .form-item__icon{
+  background-color: var(--concrete);
+}
+.view-filters input[data-drupal-selector="edit-reset"]:hover{
+  background-color: var(--concrete);
+}
+.view-filters input[data-drupal-selector="edit-reset"]:hover + .form-item__icon{
+  background-color: var(--concrete-light);
+}
+.view-filters input[data-drupal-selector="edit-reset"]:active{
+  background-color: var(--concrete);
+}
+.view-filters input[data-drupal-selector="edit-reset"]:active + .form-item__icon{
+  background-color: var(--concrete);
+}
+.view-filters input[data-drupal-selector="edit-reset"] + .form-item__icon::before{
+  mask-image: url(icons/times-circle-o.svg);
+  -webkit-mask-image: url(icons/times-circle-o.svg);
+}
+
+
+
+
+/* submit views form */
+.views-form input[data-drupal-selector="edit-submit"]{
+  background-color: var(--grass-light);
+}
+.views-form input[data-drupal-selector="edit-submit"] + .form-item__icon{
+  background-color: var(--grass);
+}
+.views-form input[data-drupal-selector="edit-submit"]:hover{
+  background-color: var(--grass);
+}
+.views-form input[data-drupal-selector="edit-submit"]:hover + .form-item__icon{
+  background-color: var(--grass-light);
+}
+.views-form input[data-drupal-selector="edit-submit"]:active{
+  background-color: var(--grass);
+}
+.views-form input[data-drupal-selector="edit-submit"]:active + .form-item__icon{
+  background-color: var(--grass);
+}
+.views-form input[data-drupal-selector="edit-submit"] + .form-item__icon::before{
+  mask-image: url(icons/check-circle.svg);
+  -webkit-mask-image: url(icons/check-circle.svg);
+}
+
 
 /*- colors -------------------------------------------------------------------*/
 .form-item-smallvariant label{

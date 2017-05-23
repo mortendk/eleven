@@ -5,7 +5,6 @@
   ]
 %}
 
-
 {% set class = [
     'pagewidth',
     attributes.id == 'comment-admin-overview' ? 'wrapper--pagewidth-details',
@@ -14,10 +13,8 @@
 %}
 
 
-
 {# Dont remove attribute ID will break the module installation  #}
 <form{{ attributes.removeClass(remove_classes).addclass(class) }}>
-
 
   {{ children }}
 </form>
