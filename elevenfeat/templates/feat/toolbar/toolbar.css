@@ -74,12 +74,13 @@ body.is-edit-ui-toolbar-opened #toolbar-bar .toolbar-bar,
 }
 
 /* toolbar icon */
+#toolbar-bar .menu a,
 #toolbar-bar .toolbar-icon,
 #toolbar-bar .toolbar-menu a {
   position: relative;
   display: block;
   margin: 0;
-  padding: 0 8px 0 calc( 2.5 * 16px );
+  padding: 0 8px 0 40px;
   outline: none;
   background-image: none;
   background-image: var(--button-bluesky-solid);
@@ -87,9 +88,9 @@ body.is-edit-ui-toolbar-opened #toolbar-bar .toolbar-bar,
   background-position: 0 0;
   background-size: auto;
   color: var(--white);
-  font-size: calc( 1 * 16px );
+  font-size: 16px;
   font-weight: normal;
-  line-height: calc( 2 * 16px );
+  line-height: 32px;
   text-align: left;
   border-radius: 0
 }
@@ -124,21 +125,24 @@ body.is-edit-ui-toolbar-opened #toolbar-bar .toolbar-bar,
 #toolbar-bar .toolbar-menu a:hover:before {
   transform: scale(1.5);
 }
-/* old browser support */
-html:not(.cssmask) #toolbar-bar .toolbar-icon::before {
-  background-color: transparent;
-}
 
 /* escape*/
 #toolbar-bar .toolbar-icon-escape-admin{
   background-image: var(--button-asphalt);
+  width: 2rem;
+  height: 2rem;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  text-indent: -666px
 }
 #toolbar-bar .toolbar-icon-escape-admin:hover{
-  background-image: var(--button-asphalt-rev);
+  background-image: var(--button-bluesky);
 }
 #toolbar-bar .toolbar-icon-escape-admin:before{
-  mask-image: var(--icon-arrow-left);
--webkit-mask-image: var(--icon-arrow-left);
+        mask-image: var(--icon-drop);
+-webkit-mask-image: var(--icon-drop);
+background-color: var(--bluesky-light);
 }
 
 /**/
@@ -336,6 +340,7 @@ html:not(.cssmask) #toolbar-bar .toolbar-icon-11home::before {
   background-color: var(--bluesky);
   border-bottom: 1px solid var(--asphalt);
 }
+.toolbar-horizontal #toolbar-bar .menu a,
 .toolbar-horizontal #toolbar-bar .toolbar-menu a {
   border-left: 1px solid var(--bluesky-light);
 }
@@ -356,8 +361,11 @@ html:not(.cssmask) #toolbar-bar .toolbar-icon-11home::before {
 }
 
 /* active menu item */
+#toolbar-bar .toolbar-tray .toolbar-icon.is-active{
+  color: var(--bluesky-light-light);
+}
 #toolbar-bar .toolbar-tray .toolbar-icon.is-active::before{
-  background-color: var(--yellowsnow);
+  background-color: var(--bluesky-light-light-light);
 }
 
 .toolbar-vertical #toolbar-bar .toolbar-tray .toolbar-icon.menu-item--active{
@@ -374,6 +382,7 @@ html:not(.cssmask) #toolbar-bar .toolbar-icon-11home::before {
 /* -----------------------------------------------------------------------------
 Vertical menu variation
 ----------------------------------------------------------------------------- */
+.toolbar-vertical #toolbar-bar .menu a,
 .toolbar-vertical #toolbar-bar .toolbar-menu a,
 .toolbar-vertical #toolbar-bar .toolbar-menu .level-1 a {
   border-bottom: 1px solid var(--bluesky);
@@ -383,6 +392,7 @@ Vertical menu variation
   line-height: calc( 2 * 16px );
   transition: 1s ease-in-out;
 }
+.toolbar-vertical #toolbar-bar .menu a:hover,
 .toolbar-vertical #toolbar-bar .toolbar-menu a:hover,
 .toolbar-vertical #toolbar-bar .toolbar-menu .level-1 a:hover {
   border-bottom: 1px solid var(--bluesky-light);
