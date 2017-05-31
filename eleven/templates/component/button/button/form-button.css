@@ -87,12 +87,12 @@ button span {
 }
 
 /* table toggle */
-button.tabledrag-toggle-weight {
+.tabledrag-toggle-weight {
   background-image: var(--button-asphalt);
   color: var(--white);
 }
 
-button.tabledrag-toggle-weight:before {
+.tabledrag-toggle-weight:before {
           mask-image: url(../icons/eye.svg);
   -webkit-mask-image: url(../icons/eye.svg);
 }

@@ -254,9 +254,60 @@
           background-color: white
 }
 
+/*  edit */
+.tabs li a[href="/admin/structure/taxonomy/manage/forums"]:before,
+.tabs li a[href="/admin/structure/types/manage/article"]:before,
+.tabs li a[href="/admin/structure/comment/manage/comment_forum"]:before,
+.tabs li a[href$="/edit"]:before {
+  -webkit-mask-image: url(icons/pencil.svg);
+          mask-image: url(icons/pencil.svg);
+}
+/*devel */
+.tabs li a[href^="/devel"]:before {
+  -webkit-mask-image: url(icons/code-fork.svg);
+          mask-image: url(icons/code-fork.svg);
+}
+/*view node */
+.tabs li a[href^="/node/'[0-9]'"]:before {
+  -webkit-mask-image: url(icons/desktop.svg);
+          mask-image: url(icons/desktop.svg);
+}
+
+/*outline*/
+.tabs li a[href$="/outline"]:before {
+  -webkit-mask-image: url(icons/sitemap.svg);
+          mask-image: url(icons/sitemap.svg);
+}
+
+/*settings */
+.tabs li a[href$="/settings"]:before {
+  -webkit-mask-image: url(icons/gear.svg);
+          mask-image: url(icons/gear.svg);
+}
+
+/*list*/
+.tabs li a[href="/admin/structure/taxonomy/manage/forums/overview"]:before,
+.tabs li a[href="/admin/structure/forum"]:before,
+.tabs li a[href="/admin/structure/book"]:before {
+  -webkit-mask-image: url(icons/list.svg);
+          mask-image: url(icons/list.svg);
+}
+
+.tabs li a[href="/admin/reports/fields/views-fields"]:before {
+  -webkit-mask-image: url(icons/tasks.svg);
+          mask-image: url(icons/tasks.svg);
+
+}
+
 /* views */
 .tabs li a[href="/admin/structure/views/view/content"]:before {
   -webkit-mask-image: url(icons/pencil.svg);
           mask-image: url(icons/pencil.svg);
           background-color: white
+}
+
+.tabs li a[href^="/admin/structure/block/manage/"]:before {
+  -webkit-mask-image: url(icons/pencil.svg);
+          mask-image: url(icons/pencil.svg);
+
 }
