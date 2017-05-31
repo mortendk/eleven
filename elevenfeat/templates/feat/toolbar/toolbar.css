@@ -74,6 +74,7 @@ body.is-edit-ui-toolbar-opened #toolbar-bar .toolbar-bar,
 }
 
 /* toolbar icon */
+#toolbar-bar .menu a,
 #toolbar-bar .toolbar-icon,
 #toolbar-bar .toolbar-menu a {
   position: relative;
@@ -123,10 +124,6 @@ body.is-edit-ui-toolbar-opened #toolbar-bar .toolbar-bar,
 #toolbar-bar .toolbar-icon:hover:before,
 #toolbar-bar .toolbar-menu a:hover:before {
   transform: scale(1.5);
-}
-/* old browser support */
-html:not(.cssmask) #toolbar-bar .toolbar-icon::before {
-  background-color: transparent;
 }
 
 /* escape*/
@@ -336,6 +333,7 @@ html:not(.cssmask) #toolbar-bar .toolbar-icon-11home::before {
   background-color: var(--bluesky);
   border-bottom: 1px solid var(--asphalt);
 }
+.toolbar-horizontal #toolbar-bar .menu a,
 .toolbar-horizontal #toolbar-bar .toolbar-menu a {
   border-left: 1px solid var(--bluesky-light);
 }
@@ -356,8 +354,11 @@ html:not(.cssmask) #toolbar-bar .toolbar-icon-11home::before {
 }
 
 /* active menu item */
+#toolbar-bar .toolbar-tray .toolbar-icon.is-active{
+  color: var(--bluesky-light-light);
+}
 #toolbar-bar .toolbar-tray .toolbar-icon.is-active::before{
-  background-color: var(--yellowsnow);
+  background-color: var(--bluesky-light-light-light);
 }
 
 .toolbar-vertical #toolbar-bar .toolbar-tray .toolbar-icon.menu-item--active{
@@ -374,6 +375,7 @@ html:not(.cssmask) #toolbar-bar .toolbar-icon-11home::before {
 /* -----------------------------------------------------------------------------
 Vertical menu variation
 ----------------------------------------------------------------------------- */
+.toolbar-vertical #toolbar-bar .menu a,
 .toolbar-vertical #toolbar-bar .toolbar-menu a,
 .toolbar-vertical #toolbar-bar .toolbar-menu .level-1 a {
   border-bottom: 1px solid var(--bluesky);
@@ -383,6 +385,7 @@ Vertical menu variation
   line-height: calc( 2 * 16px );
   transition: 1s ease-in-out;
 }
+.toolbar-vertical #toolbar-bar .menu a:hover,
 .toolbar-vertical #toolbar-bar .toolbar-menu a:hover,
 .toolbar-vertical #toolbar-bar .toolbar-menu .level-1 a:hover {
   border-bottom: 1px solid var(--bluesky-light);
