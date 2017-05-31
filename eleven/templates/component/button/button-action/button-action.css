@@ -4,8 +4,6 @@
 }
 
 /*-- "add a new ..." button ----------*/
-/**/
-tr:last-child td[data-title="Name"] a,
 a.button.button-action {
   position: relative;
   display: inline-block;
@@ -25,11 +23,9 @@ a.button.button-action {
   text-decoration: none;
   transition: all 0.1s ease-in-out;
 }
-tr:last-child td[data-title="Name"] a:hover,
 a.button.button-action:hover {
   text-decoration: none;
 }
-tr:last-child td[data-title="Name"] a:before,
 a.button.button-action:before {
   position: absolute;
   top: 0.5rem;
@@ -47,8 +43,10 @@ a.button.button-action:before {
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
 }
+
+
 /* color ---------------------------------------------------------------------*/
-tr:last-child td[data-title="Name"] a,
+/*tr:last-child td[data-title="Name"] a,*/
 a.button.button-action {
   background-image: var(--button-rasberry);
   color: var(--white);
