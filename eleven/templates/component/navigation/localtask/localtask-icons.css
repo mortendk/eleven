@@ -309,5 +309,9 @@
 .tabs li a[href^="/admin/structure/block/manage/"]:before {
   -webkit-mask-image: url(icons/pencil.svg);
           mask-image: url(icons/pencil.svg);
+}
 
+.tabs li a[href="/admin/structure/menu/manage/devel"]:before {
+  -webkit-mask-image: url(icons/reorder.svg);
+          mask-image: url(icons/reorder.svg);
 }
