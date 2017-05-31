@@ -80,7 +80,7 @@ body.is-edit-ui-toolbar-opened #toolbar-bar .toolbar-bar,
   position: relative;
   display: block;
   margin: 0;
-  padding: 0 8px 0 calc( 2.5 * 16px );
+  padding: 0 8px 0 40px;
   outline: none;
   background-image: none;
   background-image: var(--button-bluesky-solid);
@@ -88,9 +88,9 @@ body.is-edit-ui-toolbar-opened #toolbar-bar .toolbar-bar,
   background-position: 0 0;
   background-size: auto;
   color: var(--white);
-  font-size: calc( 1 * 16px );
+  font-size: 16px;
   font-weight: normal;
-  line-height: calc( 2 * 16px );
+  line-height: 32px;
   text-align: left;
   border-radius: 0
 }
@@ -128,16 +128,21 @@ body.is-edit-ui-toolbar-opened #toolbar-bar .toolbar-bar,
 
 /* escape*/
 #toolbar-bar .toolbar-icon-escape-admin{
-  background-image: none;
-  background-color: var(--asphalt-light);
+  background-image: var(--button-asphalt);
+  width: 2rem;
+  height: 2rem;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  text-indent: -666px
 }
 #toolbar-bar .toolbar-icon-escape-admin:hover{
-  background-image: none;
-  background-color: var(--concrete);
+  background-image: var(--button-bluesky);
 }
 #toolbar-bar .toolbar-icon-escape-admin:before{
-  mask-image: var(--icon-arrow-left);
--webkit-mask-image: var(--icon-arrow-left);
+        mask-image: var(--icon-drop);
+-webkit-mask-image: var(--icon-drop);
+background-color: var(--bluesky-light);
 }
 
 /**/
