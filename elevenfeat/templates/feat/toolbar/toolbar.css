@@ -128,10 +128,12 @@ body.is-edit-ui-toolbar-opened #toolbar-bar .toolbar-bar,
 
 /* escape*/
 #toolbar-bar .toolbar-icon-escape-admin{
-  background-image: var(--button-asphalt);
+  background-image: none;
+  background-color: var(--asphalt-light);
 }
 #toolbar-bar .toolbar-icon-escape-admin:hover{
-  background-image: var(--button-asphalt-rev);
+  background-image: none;
+  background-color: var(--concrete);
 }
 #toolbar-bar .toolbar-icon-escape-admin:before{
   mask-image: var(--icon-arrow-left);

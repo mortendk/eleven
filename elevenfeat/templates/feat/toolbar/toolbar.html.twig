@@ -25,11 +25,6 @@
 
     <h2 class="visually-hidden">{{ toolbar_heading }}</h2>
 
-    <div class="toolbar-tab toolbar-tab--small">
-    <a href="{{ url('<front>') }}" class="toolbar-icon-11home">home</a>
-    </div>
-
-
     {% for key, tab in tabs %}
       {% set tray = trays[key] %}
       <div{{ tab.attributes.addClass('toolbar-tab') }}>
