@@ -10,7 +10,7 @@
   position: absolute;
   top: 0.5rem;
   left: 0.5rem;
-  display: block;
+  display: block;©
   width: 3rem;
   height: 3rem;
   background-color: var(--white);
@@ -547,4 +547,21 @@
 .card__title--icon-fieldtype-list-text::before {
           mask-image: url(icons/check-square.svg);
   -webkit-mask-image: url(icons/check-square.svg);
+}
+
+ /*system settings */
+.card__title--icon-admin-config-system-site-information::before {
+  mask-image: url(icons/wrench.svg);
+-webkit-mask-image: url(icons/wrench.svg);
+}
+
+.card__title--icon-admin-config-system-statistics::before{
+  mask-image: url(icons/bar-chart-o.svg);
+-webkit-mask-image: url(icons/bar-chart-o.svg);
+}
+
+.card__title--icon-admin-config-system-cron::before{
+  mask-image: url(icons/clock-o.svg);
+-webkit-mask-image: url(icons/clock-o.svg);
+
 }
