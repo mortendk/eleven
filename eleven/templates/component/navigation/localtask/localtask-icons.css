@@ -315,3 +315,14 @@
   -webkit-mask-image: url(icons/reorder.svg);
           mask-image: url(icons/reorder.svg);
 }
+
+/*devel */
+
+.tabs li a[href="/admin/config/development/devel"]:before {
+  -webkit-mask-image: url(icons/gear.svg);
+          mask-image: url(icons/gear.svg);
+}
+.tabs li a[href="/admin/config/development/devel/toolbar"]:before {
+  -webkit-mask-image: url(icons/reorder.svg);
+          mask-image: url(icons/reorder.svg);
+}
