@@ -30,10 +30,11 @@ input[type="submit"].js-hide + .form-item__icon {
 /* -- form actions ---------------------------------------------------------- */
 .form-actions {
   position: relative;
-  margin: 1rem 0;
+
 }
 
 /* form actions -------------------------------------------------------------*/
+.nodesubmit,
 .views-form  #edit-actions,
 #view-edit-form #edit-actions,
 .user-admin-permissions #edit-actions,
@@ -181,10 +182,73 @@ input[type="submit"].button--edit + .form-item__icon::before {
 /* cancel
 on form-display
 */
-
-
 .settings-edit-form-actions-cancel-settings{}
 .settings-edit-form-actions-cancel-settings{}
+
+
+/*node edit */
+.nodesubmit input {
+  background-color: var(--grass);
+}
+.nodesubmit input + .form-item__icon {
+  background-color: var(--grass-light);
+}
+.nodesubmit input:hover {
+  background-color: var(--grass-light);
+}
+.nodesubmit input:hover + .form-item__icon {
+  background-color: var(--grass);
+}
+
+/*
+node edut submit have to different states
+first one is keeping the state that it have the other changes it to published or unpublished
+*/
+.nodesubmit .form-item--input:nth-child(1) input + .form-item__icon::before{
+  mask-image: url(../icons/thumbs-up.svg);
+-webkit-mask-image: url(../icons/thumbs-up.svg);
+}
+.nodesubmit .form-item--input:nth-child(2) input + .form-item__icon::before{
+  mask-image: url(../icons/thumbs-o-up.svg);
+-webkit-mask-image: url(../icons/thumbs-o-up.svg);
+}
+
+/* small */
+@media (max-width: 47.99em) {
+  .nodesubmit .form-item--input {
+    display: block;
+    margin-bottom: 0.5rem
+  }
+  .nodesubmit input {
+    width: 90%;
+    text-align: left
+  }
+  .nodesubmit a.button--danger {
+    width: 97%
+  }
+}/* small */
+
+
+
+
+/*preview */
+.nodesubmit input[type="submit"]#edit-preview{
+  background-color: var(--bluesky-light);
+}
+.nodesubmit input[type="submit"]#edit-preview + .form-item__icon {
+  background-color: var(--bluesky);
+}
+.nodesubmit input[type="submit"]#edit-preview + .form-item__icon::before {
+          mask-image: url(../icons/desktop.svg);
+  -webkit-mask-image: url(../icons/desktop.svg);
+}
+.nodesubmit input[type="submit"]#edit-preview:hover{
+  background-color: var(--bluesky);
+}
+.nodesubmit input[type="submit"]#edit-preview:hover + .form-item__icon {
+  background-color: var(--bluesky-light);
+}
+
 
 
 

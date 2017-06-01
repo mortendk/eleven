@@ -1,12 +1,17 @@
 {{ attach_library(active_theme()~'/button') }}
 {{ attach_library(active_theme()~'/form.form') }}
 
-
-
 {% set classes = [
 
 ]
 %}
+
+{#
+  implementing the worst cowboy trick ever for node edit submit buttons
+  node/1/edit?destination=/admin/content
+  {{ kint(attributes.value|render()|length ) }}
+ #}
+
 
 <span class="form-item--input">
 
