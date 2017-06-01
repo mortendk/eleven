@@ -255,6 +255,7 @@
 }
 
 /*  edit */
+.tabs li a[href^="/admin/structure/views/view/"]:before,
 .tabs li a[href="/admin/structure/taxonomy/manage/forums"]:before,
 .tabs li a[href="/admin/structure/types/manage/article"]:before,
 .tabs li a[href="/admin/structure/comment/manage/comment_forum"]:before,
