@@ -97,9 +97,15 @@ function eleven_theme_suggestions_table_alter(array &$suggestions, array $variab
 }
 
 
-// function eleven_preprocess_dropbutton_wrapper(&$variables) {
-//   kint($variables);
-// }
+function eleven_preprocess_dropbutton_wrapper(&$variables) {
+  $path = explode('/', \Drupal::service('path.current')->getPath());
+
+  //we want to know if this is a node edit
+  if( isset($path[2]) AND $path[1] == "node" ) {
+    $variables['node_edit'] = TRUE;
+  }
+
+}
 
 
 // function eleven_preprocess_form_element_label(&$variables) {

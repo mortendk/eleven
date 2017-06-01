@@ -1,0 +1,18 @@
+{# eleven.theme eleven_form_node_form_alter() #}
+
+{{ attach_library(active_theme()~'/libname') }}
+
+<div class="L">
+
+  <div class="w-8 w-12@s">
+    {{ form|without('advanced', 'actions') }}
+  </div>
+
+  <div class="w-4 w-12@s">
+    {{ form.advanced }}
+  </div>
+
+  <div class="w-12 nodesubmit">
+    {{ form.actions }}
+  </div>
+</div>
