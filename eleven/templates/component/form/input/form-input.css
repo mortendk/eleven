@@ -9,15 +9,14 @@ input {
   color: var(--asphalt);
   line-height: 2rem;
   transition: all 0.5s ease-in-out;
-  padding: 0;
   border-style: solid;
 }
 input:focus {
   outline: 0;
 }
 input[type="text"] {
-  width: auto;
-  min-width: 30rem;
+  width: 100%;
+  min-width: 20rem;
 }
 input[type="text"].form-autocomplete {
   min-width: 20rem;

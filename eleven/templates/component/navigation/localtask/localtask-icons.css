@@ -269,7 +269,7 @@
           mask-image: url(icons/code-fork.svg);
 }
 /*view node */
-.tabs li a[href^="/node/'[0-9]'"]:before {
+ul.tabs > li:first-child a[href^="/node/"]:before {
   -webkit-mask-image: url(icons/desktop.svg);
           mask-image: url(icons/desktop.svg);
 }
