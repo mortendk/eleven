@@ -122,7 +122,7 @@ function eleven_preprocess_links__dropbutton(&$variables) {
     $variables['node_edit'] = TRUE;
   }
 
-  if( isset($path[4]) AND $path[4] == "view" ) {
+  if( isset($path[4]) AND $path[3]=="views" AND $path[4] == "view" ) {
     $variables['view_edit'] = TRUE;
   }
 

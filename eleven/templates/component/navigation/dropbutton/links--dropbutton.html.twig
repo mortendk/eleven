@@ -14,6 +14,7 @@
     ]
   %}
 
+{# We dont want to remove dropbuttons from views but everyelse ... #}
 {% if view_edit %}
 
   <ul{{ attributes.removeclass(removeclasses) }}>
@@ -31,16 +32,15 @@
   </ul>
 
 {% else %}
-
+  {{ attach_library(active_theme()~'/nav.dropbutton.smallbutton') }}
   {% for item in links %}
     {% if item.link %}
-      {# how do i add attributes to a item.link  #}
 
       {% set helptext %}
-        W! {{item.link['#title'] }} - {{item.link['#options'].attributes.title}}
+        {{item.link['#title'] }} {{item.link['#options'].attributes.title}}
       {% endset %}
 
-      <a href="{{item.link['#url']}}" class="smallbtn"
+      <a href="{{item.link['#url']}}" class="smallbtn smallbtn--{{ item.attributes.class }}"
         title="{{item.link['#options'].attributes.title}}"
         data-helptext="{{ helptext }} "
       >{{item.link['#title'] }} </a>

@@ -91,6 +91,7 @@ libraries-override:
       component:
         css/components/dropbutton.css: templates/component/navigation/dropbutton/dropbutton.theme.css
 
+
 # vertical tabs
   core/drupal.vertical-tabs:
     css:

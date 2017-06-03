@@ -87,6 +87,10 @@ nav.tabs:
       templates/component/navigation/localtask/localtask.css: {}
       templates/component/navigation/localtask/localtask-icons.css: {}
 
+nav.dropbutton.smallbutton:
+  css:
+    theme:
+      templates/component/navigation/dropbutton/smallbuttons.css: {}
 # ------------------------------------------------------------------------------
 # Forms
 # ------------------------------------------------------------------------------
