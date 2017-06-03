@@ -1,0 +1,28 @@
+[data-helptext] {
+  overflow: visible;
+}
+[data-helptext] {
+  position: relative;
+}
+[data-helptext]:after {
+  position: absolute;
+  z-index: 666;
+  bottom: 100%;
+  left: 50%;
+  padding: 0.5rem;
+  opacity: 0;
+  background-color: var(--black-50);
+  color: var(--white);
+  font-size: 0.75rem;
+  white-space: nowrap;
+  text-indent: 0;
+  content: attr(data-helptext);
+  transition: all 0.18s ease-out 0.18s;
+  transform: translate(-50%, 10px);
+  transform-origin: top;
+}
+
+[data-helptext]:hover:after {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}

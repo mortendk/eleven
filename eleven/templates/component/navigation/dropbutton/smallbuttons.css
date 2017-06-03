@@ -1,0 +1,135 @@
+/*-- Temp small buttons ------------------------------------------------------*/
+.smallbtn {
+  position: relative;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  border: 0;
+  outline: none;
+  text-decoration: none;
+  text-indent: -6666px;
+  float: left;
+}
+.smallbtn:before {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--white);
+  background-image: none ! important; /* yes we wanna make sure no module have fun here */
+  content: "";
+  transition: 0.5s ease-in;
+
+          mask-image: var(--icon-coffee);
+  -webkit-mask-image: var(--icon-coffee);
+  -webkit-mask-size: contain !important;
+          mask-size: contain !important;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+}
+
+/* colors */
+.smallbtn {
+  background-color: var(--bluesky-light);
+  color: var(--white);
+  border-right: 1px solid var(--bluesky);
+}
+.smallbtn:hover {
+  background-color: var(--bluesky);
+  border-right: 1px solid var(--bluesky-light);
+}
+.smallbtn:before {
+  background-color: var(--white);
+
+          mask-image: var(--icon-coffee);
+  -webkit-mask-image: var(--icon-coffee);
+}
+
+.smallbtn:hover:before {
+  background-color: var(--bluesky);
+  background-color: var(--white);
+}
+
+/* icons */
+/* edit */
+a.smallbtn--edit:before {
+  -webkit-mask-image: url(icons/pencil.svg);
+          mask-image: url(icons/pencil.svg);
+}
+/* storage-settings*/
+a.smallbtn--storage-settings:before {
+  -webkit-mask-image: url(icons/database.svg);
+          mask-image: url(icons/database.svg);
+}
+/* translate */
+a.smallbtn--translate:before {
+  -webkit-mask-image: url(icons/flag.svg);
+          mask-image: url(icons/flag.svg);
+}
+/*manage-form-display*/
+a.smallbtn--manage-form-display:before {
+  -webkit-mask-image: url(icons/columns.svg);
+          mask-image: url(icons/columns.svg);
+}
+/* .manage-moderation */
+a.smallbtn--manage-moderation:before,
+a.smallbtn--permissions:before {
+  -webkit-mask-image: url(icons/child.svg);
+          mask-image: url(icons/child.svg);
+}
+/*manage-display*/
+a.smallbtn--manage-display:before {
+  -webkit-mask-image: url(icons/desktop.svg);
+          mask-image: url(icons/desktop.svg);
+}
+/*manage-fields*/
+a.smallbtn--manage-fields:before {
+  -webkit-mask-image: url(icons/list-alt.svg);
+          mask-image: url(icons/list-alt.svg);
+}
+/*dd */
+a.smallbtn--add:before {
+  -webkit-mask-image: url(icons/plus-circle.svg);
+          mask-image: url(icons/plus-circle.svg);
+}
+/*duplicate*/
+a.smallbtn--duplicate:before {
+  -webkit-mask-image: url(icons/code-fork.svg);
+          mask-image: url(icons/code-fork.svg);
+}
+/*disable*/
+a.smallbtn--disable:before {
+  -webkit-mask-image: url(icons/power-off.svg);
+          mask-image: url(icons/power-off.svg);
+}
+/* list */
+a.smallbtn--list:before {
+  -webkit-mask-image: url(icons/th-list.svg);
+          mask-image: url(icons/th-list.svg);
+}
+/*view-diff*/
+a.smallbtn--view-diff:before {
+  -webkit-mask-image: url(icons/exchange.svg);
+          mask-image: url(icons/exchange.svg);
+}
+a.smallbtn--devel:before{
+  -webkit-mask-image: url(icons/code-fork.svg);
+          mask-image: url(icons/code-fork.svg);
+
+}
+
+/* delete */
+a.smallbtn--delete:before {
+  -webkit-mask-image: var(--icon-trash);
+          mask-image: var(--icon-trash);
+}
+a.smallbtn--delete:hover {
+  /*background-color: var(--strawberry-light);*/
+  background-image: var(--button-strawberry);
+  color: var(--white);
+}
+a.smallbtn--delete:hover:before {
+  background-color: var(--white);
+}

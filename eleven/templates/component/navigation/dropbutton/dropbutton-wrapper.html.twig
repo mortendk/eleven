@@ -13,15 +13,22 @@
 {% if children %}
 
   {# we dont want dropbuttons on node  #}
-  {% if node_edit %}
-    {{ children }}
-  {% else %}
+  {% if view_edit %}
 
   <div class="dropbutton-wrapper">
     <div class="dropbutton-widget">
+      {# links--dropbutton.html.twig #}
       {{ children }}
     </div>
   </div>
+
+
+
+  {% else %}
+
+  {{ children }}
+
+
 
   {% endif %}
 

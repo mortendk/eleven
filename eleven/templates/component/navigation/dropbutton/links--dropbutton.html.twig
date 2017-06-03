@@ -14,19 +14,9 @@
     ]
   %}
 
-{% if node_edit %}
+{# We dont want to remove dropbuttons from views but everyelse ... #}
+{% if view_edit %}
 
-  {% for item in links %}
-    {% if item.link %}
-      {{ item.link }}
-    {% elseif item.text_attributes %}
-      {{ item.text }}
-    {% else %}
-      {{ item.text }}
-    {% endif %}
-  {%- endfor -%}
-
-{% else %}
   <ul{{ attributes.removeclass(removeclasses) }}>
     {%- for item in links -%}
       <li{{ item.attributes.addClass }}>
@@ -40,6 +30,28 @@
       </li>
     {%- endfor -%}
   </ul>
+
+{% else %}
+  {{ attach_library(active_theme()~'/nav.dropbutton.smallbutton') }}
+  {% for item in links %}
+    {% if item.link %}
+
+      {% set helptext %}
+        {{item.link['#title'] }} {{item.link['#options'].attributes.title}}
+      {% endset %}
+
+      <a href="{{item.link['#url']}}" class="smallbtn smallbtn--{{ item.attributes.class }}"
+        title="{{item.link['#options'].attributes.title}}"
+        data-helptext="{{ helptext }} "
+      >{{item.link['#title'] }} </a>
+
+    {% elseif item.text_attributes %}
+      {{ item.text }}
+    {% else %}
+      {{ item.text }}
+    {% endif %}
+  {%- endfor -%}
+
 {% endif %}
 
 

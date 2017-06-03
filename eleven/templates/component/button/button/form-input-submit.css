@@ -206,11 +206,11 @@ first one is keeping the state that it have the other changes it to published or
 */
 .nodesubmit .form-item--input:nth-child(1) input + .form-item__icon::before{
   mask-image: url(../icons/thumbs-up.svg);
--webkit-mask-image: url(../icons/thumbs-up.svg);
+  -webkit-mask-image: url(../icons/thumbs-up.svg);
 }
 .nodesubmit .form-item--input:nth-child(2) input + .form-item__icon::before{
   mask-image: url(../icons/thumbs-o-up.svg);
--webkit-mask-image: url(../icons/thumbs-o-up.svg);
+  -webkit-mask-image: url(../icons/thumbs-o-up.svg);
 }
 
 /* small */
