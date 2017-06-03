@@ -11,17 +11,22 @@
 #}
 
 {% if children %}
-
   {# we dont want dropbuttons on node  #}
-  {% if node_edit %}
-    {{ children }}
-  {% else %}
+  {% if view_edit %}
 
   <div class="dropbutton-wrapper">
     <div class="dropbutton-widget">
       {{ children }}
     </div>
   </div>
+  
+
+
+  {% else %}
+
+  {{ children }}
+
+
 
   {% endif %}
 
