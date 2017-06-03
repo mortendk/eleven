@@ -114,12 +114,7 @@ a.smallbtn--view-diff:before {
           mask-image: url(icons/exchange.svg);
 }
 /* delete */
-a.smallbtn--delete {
-  color: var(--strawberry);
-}
 a.smallbtn--delete:before {
-  background-color: var(--strawberry);
-
   -webkit-mask-image: var(--icon-trash);
           mask-image: var(--icon-trash);
 }
