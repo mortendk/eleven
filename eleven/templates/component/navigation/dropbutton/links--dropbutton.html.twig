@@ -19,7 +19,8 @@
 
   <ul{{ attributes.removeclass(removeclasses) }}>
     {%- for item in links -%}
-      <li{{ item.attributes.addClass }}>
+      <li{{ item.attributes }}>
+        foo
         {%- if item.link -%}
           {{ item.link }}
         {%- elseif item.text_attributes -%}

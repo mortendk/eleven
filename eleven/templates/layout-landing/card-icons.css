@@ -98,7 +98,27 @@
   -webkit-mask-image: url(icons/file-text-o.svg);
 }
 
+.card__title--icon-admin-config-content-scheduler:before,
+.card__title--icon-date::before{
+  mask-image: url(icons/clock-o.svg);
+-webkit-mask-image: url(icons/clock-o.svg);
+
+}
+
+.card__title--icon-link::before{
+  mask-image: url(icons/globe.svg);
+  -webkit-mask-image: url(icons/globe.svg);
+}
+
+.card__title--icon-video-embed::before{
+  mask-image: url(icons/file-video-o.svg);
+  -webkit-mask-image: url(icons/file-video-o.svg);
+}
+
+
 /*http://drupal8.dev/admin*/
+.card__title--icon-text-plain:before,
+.card__title--icon-text-plain-long:before,
 .card__title--icon-admin-content::before {
           mask-image: url(icons/file-text-o.svg);
   -webkit-mask-image: url(icons/file-text-o.svg);
@@ -144,6 +164,16 @@
 .card__title--icon-path::before{
   mask-image: url(icons/globe.svg);
 -webkit-mask-image: url(icons/globe.svg);
+}
+
+
+.card__title--icon-admin-config-media-image-toolkit:before,
+.card__title--icon-admin-config-media-responsive-image-style:before,
+.card__title--icon-admin-config-media-image-styles:before,
+.card__title--icon-admin-structure-media::before{
+  mask-image: url(icons/picture-o.svg);
+-webkit-mask-image: url(icons/picture-o.svg);
+
 }
 
 /*http://drupal8.dev/admin/reports*/
@@ -563,5 +593,12 @@
 .card__title--icon-admin-config-system-cron::before{
   mask-image: url(icons/clock-o.svg);
 -webkit-mask-image: url(icons/clock-o.svg);
+
+}
+
+.card__title--icon-entity-reference-revisions::before,
+.card__title--icon-admin-structure-paragraphs-type::before{
+  mask-image: url(icons/paragraph.svg);
+-webkit-mask-image: url(icons/paragraph.svg);
 
 }

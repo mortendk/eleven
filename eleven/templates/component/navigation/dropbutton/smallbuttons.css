@@ -96,8 +96,8 @@ a.smallbtn--add:before {
 }
 /*duplicate*/
 a.smallbtn--duplicate:before {
-  -webkit-mask-image: url(icons/code-fork.svg);
-          mask-image: url(icons/code-fork.svg);
+  -webkit-mask-image: url(icons/f24d.svg);
+          mask-image: url(icons/f24d.svg);
 }
 /*disable*/
 a.smallbtn--disable:before {
@@ -117,6 +117,12 @@ a.smallbtn--view-diff:before {
 a.smallbtn--devel:before{
   -webkit-mask-image: url(icons/code-fork.svg);
           mask-image: url(icons/code-fork.svg);
+
+}
+
+a.smallbtn--flush:before{
+  -webkit-mask-image: url(icons/refresh.svg);
+          mask-image: url(icons/refresh.svg);
 
 }
 
