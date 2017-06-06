@@ -1,3 +1,4 @@
+{# adding menu lvl for easier levels  #}
 {#
 /**
  * @file
@@ -30,14 +31,15 @@
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
-      <ul{{ attributes.addClass('toolbar-menu') }}>
+      <ul{{ attributes.addClass('toolbar-menu', 'toolbar-menu--lvl0' ) }}>
     {% else %}
-      <ul class="toolbar-menu">
+      <ul class="toolbar-menu toolbar-menu--lvl{{menu_level}}">
     {% endif %}
     {% for item in items %}
       {%
         set classes = [
           'menu-item',
+          'menu-item--' ~ menu_level,
           item.is_expanded ? 'menu-item--expanded',
           item.is_collapsed ? 'menu-item--collapsed',
           item.in_active_trail ? 'menu-item--active-trail',

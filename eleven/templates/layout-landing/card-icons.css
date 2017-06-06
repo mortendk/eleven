@@ -26,6 +26,8 @@
           mask-repeat: no-repeat;
 }
 
+
+
 /* card title  icons----------------------------------------------------------*/
 .card__title--icon {
   position: relative;
@@ -182,36 +184,36 @@
 
 /*http://drupal8.dev/admin/reports*/
 .card__title--icon-admin-reports-updates::before {
-          mask-image: url(icons/file-text-o.svg);
-  -webkit-mask-image: url(icons/file-text-o.svg);
+          mask-image: url(icons/info-circle.svg);
+  -webkit-mask-image: url(icons/info-circle.svg);
 }
 .card__title--icon-admin-reports-dblog::before {
           mask-image: url(icons/bullhorn.svg);
   -webkit-mask-image: url(icons/bullhorn.svg);
 }
 .card__title--icon-admin-reports-translations::before {
-          mask-image: url(icons/file-text-o.svg);
-  -webkit-mask-image: url(icons/file-text-o.svg);
+          mask-image: url(icons/flag.svg);
+  -webkit-mask-image: url(icons/flag.svg);
 }
 .card__title--icon-admin-reports-fields::before {
           mask-image: url(icons/file-text-o.svg);
   -webkit-mask-image: url(icons/file-text-o.svg);
 }
 .card__title--icon-admin-reports-status::before {
-          mask-image: url(icons/file-text-o.svg);
-  -webkit-mask-image: url(icons/file-text-o.svg);
+          mask-image: url(icons/exclamation-circle.svg);
+  -webkit-mask-image: url(icons/exclamation-circle.svg);
 }
 .card__title--icon-admin-reports-access-denied::before {
-          mask-image: url(icons/file-text-o.svg);
-  -webkit-mask-image: url(icons/file-text-o.svg);
+          mask-image: url(icons/minus-circle.svg);
+  -webkit-mask-image: url(icons/minus-circle.svg);
 }
 .card__title--icon-admin-reports-page-not-found::before {
-          mask-image: url(icons/file-text-o.svg);
-  -webkit-mask-image: url(icons/file-text-o.svg);
+          mask-image: url(icons/times-circle.svg);
+  -webkit-mask-image: url(icons/times-circle.svg);
 }
 .card__title--icon-admin-reports-search::before {
-          mask-image: url(icons/file-text-o.svg);
-  -webkit-mask-image: url(icons/file-text-o.svg);
+          mask-image: url(icons/search.svg);
+  -webkit-mask-image: url(icons/search.svg);
 }
 .card__title--icon-admin-reports-views-plugins::before {
           mask-image: url(icons/tasks.svg);
@@ -641,4 +643,42 @@
 .card__title--icon-admin-config-search-pages:before{
   mask-image: url(icons/search.svg);
   -webkit-mask-image: url(icons/search.svg);
+}
+
+
+.card__title--icon-media-entity::before{
+  mask-image: url(icons/flag.svg);
+  -webkit-mask-image: url(icons/flag.svg);
+}
+
+.card__title--icon-metatag::before{
+  mask-image: url(icons/tags.svg);
+  -webkit-mask-image: url(icons/tags.svg);
+}
+
+.card__title--icon-paragraphs:before{
+  mask-image: url(icons/paragraph.svg);
+  -webkit-mask-image: url(icons/paragraph.svg);
+}
+.card__title--icon-entity-browser:before{
+  mask-image: url(icons/folder-open-o.svg);
+  -webkit-mask-image: url(icons/folder-open-o.svg);
+}
+.card__title--icon-scheduler:before{
+  mask-image: url(icons/clock-o.svg);
+  -webkit-mask-image: url(icons/clock-o.svg);
+}
+.card__title--icon-update-manager:before{
+  mask-image: url(icons/refresh.svg);
+  -webkit-mask-image: url(icons/refresh.svg);
+}
+
+.card__title--icon-video-embed-field:before{
+  mask-image: url(icons/file-video-o.svg);
+  -webkit-mask-image: url(icons/file-video-o.svg);
+}
+
+.card__title--icon-admin-toolbar-extra-tools:before{
+  .ask-image: url(icons/reorder.svg);
+  -webkit-mask-image: url(icons/reorder.svg);
 }
