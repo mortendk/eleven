@@ -48,6 +48,16 @@
   -webkit-mask-image: url(icons/picture-o.svg);
           mask-image: url(icons/picture-o.svg);
 }
+#toolbar-bar a.toolbar-icon-comment-admin:before{
+  -webkit-mask-image: url(icons/clock-o.svg);
+          mask-image: url(icons/clock-o.svg);
+}
+#toolbar-bar a.card__title--icon-admin-toolbar-extra-tools:before{
+  -webkit-mask-image: url(icons/clock-o.svg);
+          mask-image: url(icons/clock-o.svg);
+}
+
+
 
 /*structure */
 #toolbar-bar a.toolbar-icon-block-admin-display:before{
