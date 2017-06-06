@@ -12,7 +12,6 @@
   text-decoration: none;
 }
 #toolbar-bar .toolbar-menu {
-  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -30,50 +29,7 @@
   }
 }
 
-
-
-/*------------------------------------------------------------------------------
-  Main Toolbar (toolbar-tabs)
-------------------------------------------------------------------------------*/
-#toolbar-bar {
-  background-color: var(--black-80);
-}
-/* change the toolbar bg color to indicate that were editing stuff */
-body.is-edit-ui-toolbar-opened #toolbar-bar .toolbar-bar,
-#toolbar-bar .toolbar-bar.js-outside-in-edit-mode {
-  background-color: var(--rasberry-light-50);
-}
-
-/* Toolbar tabs */
-#toolbar-bar .toolbar-tab .toolbar-item.trigger {
-  min-width: calc( 9 * 16px);
-  height: 32px;
-  border-left: 1px solid var(--black);
-  background-color: var(--asphalt);
-  background-image: none;
-  color: var(--white);
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 32px;
-  text-transform: capitalize;
-  transition: 0.2s ease-in-out;
-}
-#toolbar-bar .toolbar-item.trigger:hover {
-  background-color: var(--asphalt-light);
-  color: var(--gravel);
-}
-#toolbar-bar .toolbar-item.trigger.is-active {
-  background-color: var(--bluesky);
-}
-/* Toolbar tab icons colors*/
-#toolbar-bar .toolbar-item.trigger:hover:before {
-  background-color: var(--concrete);
-}
-#toolbar-bar .toolbar-item.is-active.trigger:hover:before {
-  background-color: var(--bluesky-light);
-}
-
-/* toolbar icon */
+/*  icons default */
 #toolbar-bar .menu a,
 #toolbar-bar .toolbar-icon,
 #toolbar-bar .toolbar-menu a {
@@ -81,9 +37,8 @@ body.is-edit-ui-toolbar-opened #toolbar-bar .toolbar-bar,
   display: block;
   margin: 0;
   padding: 0 8px 0 40px;
+  border-radius: 0;
   outline: none;
-  background-image: none;
-  background-image: var(--button-bluesky-solid);
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: auto;
@@ -92,26 +47,23 @@ body.is-edit-ui-toolbar-opened #toolbar-bar .toolbar-bar,
   font-weight: normal;
   line-height: 32px;
   text-align: left;
-  border-radius: 0
 }
 #toolbar-bar button.toolbar-icon {
   border: 0;
 }
+
 #toolbar-bar .toolbar-icon:hover,
 #toolbar-bar .toolbar-menu a:hover {
-  background-image: var(--button-bluesky-light-solid);
   text-decoration: none;
 }
 #toolbar-bar .toolbar-icon:before,
-#toolbar-bar .toolbar-menu a:before,
-#toolbar-bar .toolbar-icon-11home::before {
+#toolbar-bar .toolbar-menu a:before {
   position: absolute;
-  top: calc( 0.5 * 16px );
-  left: calc( 0.5 * 16px );
+  top: 8px;
+  left: 8px;
   display: block;
-  width: calc( 1 * 16px );
-  height: calc( 1 * 16px );
-  background-color: var(--white);
+  width: 16px;
+  height: 16px;
   background-image: none ! important; /* yes we wanna make sure no module have fun here */
   content: "";
   transition: 0.5s ease-in;
@@ -121,83 +73,38 @@ body.is-edit-ui-toolbar-opened #toolbar-bar .toolbar-bar,
   -webkit-mask-size: contain;
           mask-size: contain;
 }
-#toolbar-bar .toolbar-icon:hover:before,
-#toolbar-bar .toolbar-menu a:hover:before {
-  transform: scale(1.5);
+
+/*------------------------------------------------------------------------------
+TABS
+------------------------------------------------------------------------------*/
+/* Toolbar tabs */
+#toolbar-bar .toolbar-tab .toolbar-item.trigger {
+  min-width: 144px;
+  height: 32px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 32px;
+  text-transform: capitalize;
 }
 
-/* escape*/
-#toolbar-bar .toolbar-icon-escape-admin{
-  background-image: var(--button-asphalt);
-  width: 2rem;
-  height: 2rem;
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-  text-indent: -666px
-}
-#toolbar-bar .toolbar-icon-escape-admin:hover{
-  background-image: var(--button-bluesky);
-}
-#toolbar-bar .toolbar-icon-escape-admin:before{
-        mask-image: var(--icon-drop);
--webkit-mask-image: var(--icon-drop);
-background-color: var(--bluesky-light);
-}
-
-/**/
+/*tabs: small device*/
 @media (max-width: 47.99em) {
   #toolbar-bar .toolbar-icon-escape-admin{
     text-indent: -999px;
     padding: 0;
     width: 32px;
   }
-}
 
-
-
-/* home icons */
-#toolbar-bar .toolbar-tab--small {
-  width: calc( 2 * 16px );
-  height: calc( 2 * 16px );
+  #toolbar-bar .toolbar-tab--small {
+  width: 32px;
+  height: 32px;
   background-color: var(--asphalt-light);
-}
-#toolbar-bar .toolbar-icon-11home {
-  position: relative;
-  height: calc( 2 * 16px );
-  line-height: calc( 2 * 16px );
-  text-indent: -999rem;
-}
-@media (max-width: 47.99em) {
-  #toolbar-bar .toolbar-tab--small,
-  #toolbar-bar .toolbar-icon-11home {
+  }
+
+  #toolbar-bar .toolbar-tab--small {
     display: none
   }
-}
 
-#toolbar-bar .toolbar-icon-11home::before {
-  background-color: var(--bluesky);
-    mask-image: var(--icon-drop);
-  -webkit-mask-image: var(--icon-drop);
-  -webkit-mask-size: calc( 0.8 * 16px );
-          mask-size: calc( 0.8 * 16px );
-}
-#toolbar-bar .toolbar-icon-11home:hover:before {
-  background-color: var(--bluesky);
-  transform: scale(1.5);
-}
-html:not(.cssmask) #toolbar-bar .toolbar-icon-11home::before {
-  display: block;
-  width: calc( 1 * 16px );
-  height: calc( 1 * 16px );
-  background-color: transparent;
-  background-image: var(--icon-drop);
-  background-repeat: no-repeat;
-  background-size: contain;
-  content: "";
-}
-
-@media (max-width: 47.99rem) {
   #toolbar-bar .toolbar-tab .toolbar-item.trigger {
     width: 48px;
     min-width:  48px;
@@ -208,25 +115,7 @@ html:not(.cssmask) #toolbar-bar .toolbar-icon-11home::before {
   }
 }
 
-/* manage */
-#toolbar-bar .toolbar-icon-menu::before {
-  -webkit-mask-image: var(--icon-manage);
-          mask-image: var(--icon-manage);
-}
-/* shortcuts */
-#toolbar-bar .toolbar-tab .toolbar-icon-shortcut:before {
-  background-color: var(--strawberry);
-
-  -webkit-mask-image: var(--icon-heart);
-          mask-image: var(--icon-heart);
-}
-/* user */
-#toolbar-bar .toolbar-tab .toolbar-icon-user:before {
-  -webkit-mask-image: var(--icon-user);
-          mask-image: var(--icon-user);
-}
-
-/* edit-editing + place block */
+/* tabs: Edit + place block */
 #toolbar-bar .contextual-toolbar-tab.toolbar-tab {
   float: right;
 }
@@ -235,32 +124,9 @@ html:not(.cssmask) #toolbar-bar .toolbar-icon-11home::before {
     margin: 0;
   }
 }
-/* edit & editing */
 #toolbar-bar button.toolbar-icon-edit {
-  min-width: calc( 7 * 16px );
-  background-image: var(--button-asphalt);
-  line-height: calc( 2 * 16px );
-}
-#toolbar-bar button.toolbar-icon-edit:before {
-  -webkit-mask-image: var(--icon-pen);
-          mask-image: var(--icon-pen);
-}
-#toolbar-bar button.toolbar-icon-edit:hover:before {
-  background-color: var(--rasberry-light);
-}
-#toolbar-bar button.toolbar-icon-edit.is-active:hover:before {
-  background-color: var(--rasberry);
-}
-#toolbar-bar button.toolbar-icon-edit:hover,
-#toolbar-bar button.toolbar-icon-edit.is-active {
-  background-image: var(--button-rasberry);
-}
-#toolbar-bar button.toolbar-icon-edit.is-active:hover {
-  background-image: var(--button-rasberry-rev);
-}
-#toolbar-bar button.toolbar-icon-edit:active,
-#toolbar-bar button.toolbar-icon-edit.is-active:active {
-  background-image: var(--button-rasberry-active);
+  min-width: 112px;
+  line-height: 32px;
 }
 
 @media (max-width: 47.99em) {
@@ -273,420 +139,130 @@ html:not(.cssmask) #toolbar-bar .toolbar-icon-11home::before {
   }
 }
 
-/* Place block */
+/*tabs Place block */
 #toolbar-bar .block-place-toolbar-tab {
   float: right;
-  margin-right: calc( 2 * 16px );
+  margin-right: 32px;
 }
-
-/* place-block inactive */
-#toolbar-bar .toolbar-icon-place-block-inactive,
-#toolbar-bar .toolbar-icon-place-block-active {
-  min-width: calc( 7 * 16px );
-  background-image: var(--button-asphalt);
-  line-height: calc( 2 * 16px );
-}
-#toolbar-bar .toolbar-icon-place-block-inactive:before,
-#toolbar-bar .toolbar-icon-place-block-active:before {
-  -webkit-mask-image: var(--icon-browser);
-          mask-image: var(--icon-browser);
-}
-#toolbar-bar .toolbar-icon-place-block-inactive:hover {
-  background-image: var(--button-rasberry);
-}
-#toolbar-bar .toolbar-icon-place-block-inactive:active {
-  background-image: var(--button-rasberry-active);
-}
-#toolbar-bar .toolbar-icon-place-block-inactive:hover:before {
-  background-color: var(--rasberry-light);
-}
-
-/* place block active */
-#toolbar-bar .toolbar-icon-place-block-active {
-  background-image: var(--button-rasberry);
-}
-#toolbar-bar .toolbar-icon-place-block-active:hover {
-  background-image: var(--button-rasberry-rev);
-}
-#toolbar-bar .toolbar-icon-place-block-active:active {
-  background-image: var(--button-rasberry-active);
-}
-#toolbar-bar .toolbar-icon-place-block-active:hover:before {
-  background-color: var(--rasberry);
-}
-
-/*devel */
-#toolbar-bar .toolbar-icon-devel:before{
-  -webkit-mask-image: var(--icon-dev);
-          mask-image: var(--icon-dev);
-
-}
-
-/* -----------------------------------------------------------------------------
- TRAY aka 2nd level menu
------------------------------------------------------------------------------ */
-#toolbar-bar .menu-item,
-#toolbar-bar .toolbar-toggle-orientation {
-  border: none;
-}
-
-#toolbar-bar .toolbar-tray-vertical .toolbar-toggle-orientation {
-  float: none;
-}
-
-/*horizontal  */
-.toolbar-horizontal #toolbar-bar .toolbar-tray {
-  border-top: 1px solid var(--bluesky-light);
-  background-color: var(--bluesky);
-  border-bottom: 1px solid var(--asphalt);
-}
-.toolbar-horizontal #toolbar-bar .menu a,
-.toolbar-horizontal #toolbar-bar .toolbar-menu a {
-  border-left: 1px solid var(--bluesky-light);
-}
-/* vertical */
-.toolbar-vertical #toolbar-bar .toolbar-tray {
-  width: calc(15 * 16px);
-  background-image: repeating-linear-gradient(to right, var(--gravel) 0, var(--gravel) 32px, var(--gravel-light) 32px, var(--gravel-light) );
-  border-right: 1px solid var(--gravel;);
-}
-@media (max-width: 79.99em) {
-  .toolbar-vertical #toolbar-bar .toolbar-tray {
-    background-image: none;
-    background: rgba(240, 240, 240, 0.8);
-  }
-}
-.toolbar-vertical .toolbar-menu{
-  width: 100%
-}
-
-/* active menu item */
-#toolbar-bar .toolbar-tray .toolbar-icon.is-active{
-  color: var(--bluesky-light-light);
-}
-#toolbar-bar .toolbar-tray .toolbar-icon.is-active::before{
-  background-color: var(--bluesky-light-light-light);
-}
-
-.toolbar-vertical #toolbar-bar .toolbar-tray .toolbar-icon.menu-item--active{
-  color: var(--bluesky);
-  font-weight: bold
-}
-/*#toolbar-bar .toolbar-icon.is-active{
-  background-image: var(--button-rasberry);
-  color: var(--white);
-}*/
-
 
 
 /* -----------------------------------------------------------------------------
-Vertical menu variation
+Level 1 horizontal
 ----------------------------------------------------------------------------- */
-.toolbar-vertical #toolbar-bar .menu a,
-.toolbar-vertical #toolbar-bar .toolbar-menu a,
-.toolbar-vertical #toolbar-bar .toolbar-menu .level-1 a {
-  border-bottom: 1px solid var(--bluesky);
-  background-image: var(--button-bluesky-50);
-  color: var(--white);
-  font-size: calc( 0.875 * 16px );
-  line-height: calc( 2 * 16px );
-  transition: 1s ease-in-out;
-}
-.toolbar-vertical #toolbar-bar .menu a:hover,
-.toolbar-vertical #toolbar-bar .toolbar-menu a:hover,
-.toolbar-vertical #toolbar-bar .toolbar-menu .level-1 a:hover {
-  border-bottom: 1px solid var(--bluesky-light);
-  background-image: var(--button-bluesky-light);
-  color: var(--bluesky);
-}
-
-.toolbar-vertical #toolbar-bar .toolbar-menu .level-2 a {
-  border-bottom: 1px solid var(--concrete);
-  background-image: var(--button-gravel);
-  color: var(--asphalt);
-}
-.toolbar-vertical #toolbar-bar .toolbar-menu .level-2 a:hover {
-  background-image: var(--button-gravel-light);
-  color: var(--bluesky);
-}
-.toolbar-vertical #toolbar-bar .toolbar-menu .level-2 a:before {
-  background-color: var(--concrete);
-
-  -webkit-mask-image: var(--icon-arrow-right);
-          mask-image: var(--icon-arrow-right);
-}
-
-.toolbar-vertical #toolbar-bar .toolbar-menu .level-3 a {
-  padding-left: calc( 3 * 16px );
-  border-bottom: 1px solid var(--concrete);
-  background-image: var(--button-gravel);
-  color: var(--asphalt-light);;
-}
-.toolbar-vertical #toolbar-bar .toolbar-menu .level-3 a:hover {
-  border-bottom: 1px solid var(--asphalt-light);
-  background-image: var(--button-gravel-light);
-  color: var(--asphalt-light);
-}
-.toolbar-vertical #toolbar-bar .toolbar-menu .level-3 a:before {
-  background-color: transparent;
+.toolbar-tray-horizontal ul li.menu-item {
+  border: none
 }
 
 /* -----------------------------------------------------------------------------
-  Show and hide the toolbar handle
+Level 1 Vertical:
 ----------------------------------------------------------------------------- */
-#toolbar-bar .toolbar-tray-horizontal .toolbar-menu .toolbar-handle,
-#toolbar-bar .toolbar-tray-horizontal .toolbar-menu ul,
+#toolbar-bar .toolbar-tray-vertical  .toolbar-icon-admin-toolbar-tools-help{
+  text-indent: 0
+}
+/* show and hide the lower levels of the admin bar when vertical */
 #toolbar-bar .toolbar-tray-vertical .toolbar-menu ul {
   display: none;
 }
 #toolbar-bar .toolbar-tray-vertical li.open > ul {
   display: block;
 }
-
 #toolbar-bar .toolbar-box {
   position: relative;
   display: block;
 }
 
-/* up and down icons position */
-#toolbar-bar .toolbar-icon.toolbar-handle {
+
+/* -----------------------------------------------------------------------------
+Vertical open and close 2+3rd level menus
+----------------------------------------------------------------------------- */
+#toolbar-bar .toolbar-tray-vertical  .toolbar-icon.toolbar-handle {
   position: absolute;
   top: 0;
   right: 0;
-  width: calc( 2 * 16px );
-  height: calc( 2 * 16px );
+  width: 32px;
+  height: 32px;
   margin: 0;
   padding: 0;
   border: none;
   background-image: none;
   text-indent: -999rem;
 }
-
-/* button handler */
-#toolbar-bar .toolbar-icon.toolbar-handle {
-  background-color: var(--bluesky-light);
-}
-#toolbar-bar .toolbar-icon.toolbar-handle:before {
-  background-color: var(--white);
-
-  -webkit-mask-image: var(--icon-down);
-          mask-image: var(--icon-down);
-}
-#toolbar-bar .toolbar-icon.toolbar-handle:hover:before {
-  transform: scale(1) translateY(0.5rem) ;
-}
-#toolbar-bar .toolbar-icon.toolbar-handle.open:before {
-  -webkit-mask-image: var(--icon-up);
-          mask-image: var(--icon-up);
-}
-#toolbar-bar .toolbar-icon.toolbar-handle.open:hover:before {
-  transform: scale(1) translateY(-0.5rem) ;
+#toolbar-bar .toolbar-tray-horizontal  .toolbar-icon.toolbar-handle {
+  display: none
 }
 
-
-/* Button handler lvl 2 */
-#toolbar-bar .level-2 .toolbar-icon.toolbar-handle {
-  background-color: var(--gravel);
-}
-#toolbar-bar .level-2 .toolbar-icon.toolbar-handle:before {
-  background-color: var(--asphalt);
-  transform: scale(1) translateY(0.3rem) translateX(0.2rem);
-
-  -webkit-mask-image: var(--icon-down-small);
-          mask-image: var(--icon-down-small);
-  -webkit-mask-size: 0.5rem;
-          mask-size: 0.5rem;
-}
-#toolbar-bar .level-2 .toolbar-icon.toolbar-handle:hover:before {
-  transform: scale(1) translateY(0.6rem) translateX(0.2rem);
-}
-
-#toolbar-bar .level-2 .toolbar-icon.toolbar-handle.open:before {
-  -webkit-mask-image: var(--icon-up-small);
-          mask-image: var(--icon-up-small);
-}
-#toolbar-bar .level-2 .toolbar-icon.toolbar-handle.open:hover:before {
-  transform: scale(1) translateY(-0.3rem) translateX(0.2rem);
-}
-
-
-/*------------------------------------------------------------------------------
-2nd level Icons
-------------------------------------------------------------------------------*/
-/* content */
-#toolbar-bar a.toolbar-icon-system-admin-content:before {
-  -webkit-mask-image: var(--icon-content);
-          mask-image: var(--icon-content);
-}
-/* Structure */
-#toolbar-bar a.toolbar-icon-system-admin-structure:before {
-  -webkit-mask-image: var(--icon-structure);
-          mask-image: var(--icon-structure);
-}
-/* Apperance */
-#toolbar-bar a.toolbar-icon-system-themes-page:before {
-  -webkit-mask-image: var(--icon-rocket);
-          mask-image: var(--icon-rocket);
-}
-/* Extend */
-#toolbar-bar a.toolbar-icon-system-modules-list:before {
-  -webkit-mask-image: var(--icon-puzzle);
-          mask-image: var(--icon-puzzle);
-}
-/* Configuration */
-#toolbar-bar a.toolbar-icon-system-admin-config:before {
-  -webkit-mask-image: var(--icon-gears);
-          mask-image: var(--icon-gears);
-}
-/* People */
-#toolbar-bar a.toolbar-icon-entity-user-collection:before {
-  -webkit-mask-image: var(--icon-user);
-          mask-image: var(--icon-user);
-}
-/* Report */
-#toolbar-bar a.toolbar-icon-system-admin-reports:before {
-  -webkit-mask-image: var(--icon-piechart);
-          mask-image: var(--icon-piechart);
-}
-
-/*
- Shortcuts icons
-*/
-#toolbar-bar nav[aria-label="User-defined shortcuts"] a:before {
-  -webkit-mask-image: var(--icon-heart);
-          mask-image: var(--icon-heart);
-}
-#toolbar-bar nav[aria-label="User-defined shortcuts"] a.edit-shortcuts {
-  position: absolute;
-  right: calc( 2 * 16px );
-  display: block;
-  height: calc( 2 * 16px );
-  margin: 0;
-  padding: 0 calc( 0.5 * 16px ) 0 calc( 2.5 * 16px );
-  outline: none;
-  background-image: var(--button-rasberry);
-  color: var(--white);
-  line-height: calc( 2 * 16px );
-}
-#toolbar-bar nav[aria-label="User-defined shortcuts"] a.edit-shortcuts:before {
-  position: absolute;
-  top: calc( 0.5 * 16px );
-  left: calc( 0.5 * 16px );
-  display: block;
-  width: calc( 1 * 16px );
-  height: calc( 1 * 16px );
-  background-color: var(--white);
-  background-image: none ! important; /* yes we wanna make sure no module have fun here */
-  content: "";
-  transition: 0.5s ease-in;
-
-  -webkit-mask-image: var(--icon-pen);
-          mask-image: var(--icon-pen);
-}
-#toolbar-bar nav[aria-label="User-defined shortcuts"] a.edit-shortcuts:hover {
-  background-image: var(--button-rasberry-rev);
-}
-
-.toolbar-vertical #toolbar-bar nav[aria-label="User-defined shortcuts"] a.edit-shortcuts {
-  position: relative;
-  right: 0;
-  padding: 0 0 0 calc( 2.5 * 16px );
-  text-align: left;;
-}
-
-/* view profile */
-#toolbar-bar .account a:before {
-  -webkit-mask-image: var(--icon-user);
-          mask-image: var(--icon-user);
-}
-/* Edit profile */
-#toolbar-bar .account-edit a:before {
-  -webkit-mask-image: var(--icon-pen);
-          mask-image: var(--icon-pen);
-}
-
-/* Logout */
-#toolbar-bar .toolbar-tray-horizontal > .toolbar-lining {
-  padding-right: calc( 2 * 16px );;
-}
-.toolbar-horizontal #toolbar-bar li.logout {
-  float: right;
-}
-.toolbar-vertical #toolbar-bar li.logout {
-  float: none;
-  padding: 0;
+/* -----------------------------------------------------------------------------
+ toggle orientation
+----------------------------------------------------------------------------- */
+#toolbar-bar .toolbar-toggle-orientation {
   border: none;
 }
-.toolbar-vertical #toolbar-bar .logout a {
-  border-bottom: none;
-}
-/* Logout button colors */
-#toolbar-bar .toolbar-menu .logout a {
-  background-image: var(--button-strawberry);
-}
-#toolbar-bar .toolbar-menu .logout a:hover {
-  background-image: var(--button-strawberry-rev);
-}
-#toolbar-bar .toolbar-menu .logout a:active {
-  background-image: var(--button-strawberry-active);
-}
-#toolbar-bar .toolbar-menu .logout a:before {
-  -webkit-mask-image: var(--icon-logout);
-          mask-image: var(--icon-logout);
+#toolbar-bar .toolbar-tray-vertical .toolbar-toggle-orientation {
+  float: none;
 }
 
-/*------------------------------------------------------------------------------
-  toggle navbar button
-------------------------------------------------------------------------------*/
 #toolbar-bar button.toolbar-icon-toggle-vertical,
 #toolbar-bar button.toolbar-icon-toggle-horizontal {
   position: relative;
   float: right;
-  width: calc( 2 * 16px );
-  height: calc( 2 * 16px );
+  width: 32px;
+  height: 32px;
   margin: 0;
   padding: 0;
   text-indent: -999rem;
   transition: all 0.5s ease-in-out;
 }
-
-#toolbar-bar button.toolbar-icon-toggle-vertical,
-#toolbar-bar button.toolbar-icon-toggle-vertical:focus {
-  border-left: 1px solid var(--bluesky-light);
-  background-color: var(--bluesky-light);
-}
-
-#toolbar-bar button.toolbar-icon-toggle-vertical:hover {
-  background-color: var(--bluesky-20);
-}
-
-#toolbar-bar button.toolbar-icon.toolbar-icon-toggle-vertical:before {
-  -webkit-mask-image: var(--icon-arrow-left);
-          mask-image: var(--icon-arrow-left);
-}
-#toolbar-bar button.toolbar-icon-toggle-vertical:hover:before {
-  transform: rotate(-90deg);
-}
-
 #toolbar-bar button.toolbar-icon-toggle-horizontal,
 #toolbar-bar button.toolbar-icon-toggle-horizontal:focus {
-  margin: calc( 2 * 16px ) 0;
-  background-color: var(--concrete);
-  background-image: none;
+  margin: 32px 0;
 }
-#toolbar-bar button.toolbar-icon-toggle-horizontal:hover {
-  background-color: var(--asphalt-light);
-}
-#toolbar-bar button.toolbar-icon-toggle-horizontal:before {
-  -webkit-mask-image: var(--icon-up);
-          mask-image: var(--icon-up);
-}
-#toolbar-bar button.toolbar-icon-toggle-horizontal:hover:before {
-  transform: rotate(90deg);
-}
-/* -----------------------------------------------------------------------------
-overwrites for old browsers
+
+
+
+/*------------------------------------------------------------------------------
+admin toolbar module corrections
 ------------------------------------------------------------------------------*/
-html:not(.cssmask) #toolbar-bar .toolbar-item::before {
-  background-color: transparent;
+.toolbar-tray-horizontal ul li.menu-item,
+.toolbar .toolbar-tray-horizontal .menu-item:last-child,
+.toolbar .toolbar-tray-horizontal ul ul li.menu-item:first-child {
+  border: none
+}
+.toolbar-tray-horizontal ul li.menu-item--expanded:hover ul {
+    box-shadow: none
+}
+.toolbar-tray-horizontal li.menu-item--expanded:hover ul ul,
+.toolbar-tray-horizontal li.menu-item--expanded:hover ul ul ul,
+.toolbar-tray-horizontal li.menu-item--expanded:hover ul ul ul ul,
+.toolbar-tray-horizontal li.menu-item--expanded:hover ul ul ul ul ul {
+  display: none;
+  left: -999em;
+}
+
+/* Lists nested under hovered list items */
+.toolbar-tray-horizontal li.menu-item--expanded:hover ul,
+.toolbar-tray-horizontal li li.menu-item--expanded:hover ul,
+.toolbar-tray-horizontal li li li.menu-item--expanded:hover ul,
+.toolbar-tray-horizontal li li li li.menu-item--expanded:hover ul,
+.toolbar-tray-horizontal li li li li li.menu-item--expanded:hover ul {
+  display: block;
+  left: auto;
+}
+
+.toolbar-tray-horizontal ul li.menu-item--expanded:hover ul {
+  display: block;
+  position: absolute;
+  width: 208px;
+  z-index: 1;
+  background-color: red! important
+}
+.toolbar-tray-horizontal ul li.menu-item--expanded .menu-item > ul {
+  display: none;
+}
+
+.toolbar-tray-horizontal ul li.menu-item--expanded .menu-item:hover ul {
+  display: block;
+  margin: -33px 0 0 208px;
+}
+.toolbar-tray-horizontal li:hover ul li {
+  float: none;
 }

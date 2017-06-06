@@ -21,6 +21,8 @@ feat.toolbar:
   css:
     theme:
       templates/feat/toolbar/toolbar.css: {}
+      templates/feat/toolbar/toolbar.theme.css: {}
+      templates/feat/toolbar/toolbar.icons.css: {}
       # templates/feat/toolbar/toolbar_edit.css: {}
 feat.contextual:
   css:

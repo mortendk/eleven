@@ -1,0 +1,243 @@
+#toolbar-bar .level-2 a:before {
+  -webkit-mask-image: var(--icon-arrow-right);
+          mask-image: var(--icon-arrow-right);
+  background-color: var(--asphalt);
+}
+
+/* admin toolbar help */
+#toolbar-bar a.toolbar-icon-admin-toolbar-tools-help:before{
+  -webkit-mask-image: url(icons/drupal.svg);
+          mask-image: url(icons/drupal.svg);
+}
+#toolbar-bar a.toolbar-icon-system-admin-index:before{
+  -webkit-mask-image: url(icons/drupal.svg);
+          mask-image: url(icons/drupal.svg);
+}
+#toolbar-bar a.toolbar-icon-admin-toolbar-tools-flush:before{
+  -webkit-mask-image: url(icons/spinner.svg);
+          mask-image: url(icons/spinner.svg);
+}
+#toolbar-bar a.toolbar-icon-admin-development:before{
+  -webkit-mask-image: url(icons/terminal.svg);
+          mask-image: url(icons/terminal.svg);
+}
+#toolbar-bar a.toolbar-icon-system-run-cron:before{
+  -webkit-mask-image: url(icons/clock-o.svg);
+          mask-image: url(icons/clock-o.svg);
+}
+#toolbar-bar a.toolbar-icon-system-db-update:before{
+  -webkit-mask-image: url(icons/refresh.svg);
+          mask-image: url(icons/refresh.svg);
+}
+#toolbar-bar a.toolbar-icon-admin-toolbar-tools-drupalorg:before{
+  -webkit-mask-image: url(icons/drupal.svg);
+          mask-image: url(icons/drupal.svg);
+}
+#toolbar-bar a.toolbar-icon-admin-toolbar-tools-user-logout:before{
+  -webkit-mask-image: url(icons/sign-out.svg);
+          mask-image: url(icons/sign-out.svg);
+}
+
+
+/* content */
+#toolbar-bar a.toolbar-icon-node-add-page:before{
+  -webkit-mask-image: url(icons/plus.svg);
+          mask-image: url(icons/plus.svg);
+}
+#toolbar-bar a.toolbar-icon-entity-media-collection:before{
+  -webkit-mask-image: url(icons/picture-o.svg);
+          mask-image: url(icons/picture-o.svg);
+}
+#toolbar-bar a.toolbar-icon-comment-admin:before{
+  -webkit-mask-image: url(icons/clock-o.svg);
+          mask-image: url(icons/clock-o.svg);
+}
+#toolbar-bar a.card__title--icon-admin-toolbar-extra-tools:before{
+  -webkit-mask-image: url(icons/clock-o.svg);
+          mask-image: url(icons/clock-o.svg);
+}
+
+
+
+/*structure */
+#toolbar-bar a.toolbar-icon-block-admin-display:before{
+  -webkit-mask-image: url(icons/th.svg);
+          mask-image: url(icons/th.svg);
+}
+#toolbar-bar a.toolbar-icon-book-admin::before{
+  -webkit-mask-image: url(icons/book.svg);
+          mask-image: url(icons/book.svg);
+}
+#toolbar-bar a.toolbar-icon-entity-comment-type-collection:before{
+  -webkit-mask-image: url(icons/comments-o.svg);
+          mask-image: url(icons/comments-o.svg);
+}
+#toolbar-bar a.toolbar-icon-entity-contact-form-collection:before{
+  -webkit-mask-image: url(icons/envelope.svg);
+          mask-image: url(icons/envelope.svg);
+}
+#toolbar-bar a.toolbar-icon-entity-entity-form-mode-collection:before{
+  -webkit-mask-image: url(icons/);
+          mask-image: url(icons/);
+}
+#toolbar-bar a.toolbar-icon-entity-entity-view-mode-collection:before{
+  -webkit-mask-image: url(icons/);
+          mask-image: url(icons/);
+}
+#toolbar-bar a.toolbar-icon-entity-node-type-collection:before{
+  -webkit-mask-image: url(icons/briefcase.svg);
+          mask-image: url(icons/briefcase.svg);
+}
+#toolbar-bar a.toolbar-icon-field-ui-display-mode:before{
+  -webkit-mask-image: url(icons/desktop.svg);
+          mask-image: url(icons/desktop.svg);
+}
+
+#toolbar-bar a.toolbar-icon-forum-overview:before{
+  -webkit-mask-image: url(icons/comments.svg);
+          mask-image: url(icons/comments.svg);
+}
+#toolbar-bar a.toolbar-icon-entity-menu-collection:before{
+  -webkit-mask-image: url(icons/reorder.svg);
+          mask-image: url(icons/reorder.svg);
+}
+#toolbar-bar a.toolbar-icon-entity-taxonomy-vocabulary-collection:before{
+  -webkit-mask-image: url(icons/tags.svg);
+          mask-image: url(icons/tags.svg);
+}
+#toolbar-bar a.toolbar-icon-entity-view-collection:before{
+  -webkit-mask-image: url(icons/tasks.svg);
+          mask-image: url(icons/tasks.svg);
+}
+
+/* Appearance */
+#toolbar-bar a.toolbar-icon-update-theme-install-:before{
+  -webkit-mask-image: url(icons/plus-circle.svg);
+          mask-image: url(icons/plus-circle.svg);
+}
+#toolbar-bar a.toolbar-icon-system-theme-settings-:before{
+  -webkit-mask-image: url(icons/gears.svg);
+          mask-image: url(icons/gears.svg);
+}
+#toolbar-bar a.toolbar-icon-update-theme-update-:before{
+  -webkit-mask-image: url(icons/refresh.svg);
+          mask-image: url(icons/refresh.svg);
+}
+
+/* Extend */
+#toolbar-bar a.toolbar-icon-update-module-install:before{
+  -webkit-mask-image: url(icons/plus-circle.svg);
+          mask-image: url(icons/plus-circle.svg);
+}
+
+#toolbar-bar a.toolbar-icon-system-modules-uninstall:before{
+  -webkit-mask-image: url(icons/power-off.svg);
+          mask-image: url(icons/power-off.svg);
+}
+#toolbar-bar a.toolbar-icon-update-module-update:before{
+  -webkit-mask-image: url(icons/refresh.svg);
+          mask-image: url(icons/refresh.svg);
+}
+/*people */
+#toolbar-bar a.toolbar-icon-user-admin-create:before{
+  -webkit-mask-image: url(icons/plus-circle.svg);
+          mask-image: url(icons/plus-circle.svg);
+}
+#toolbar-bar a.toolbar-icon-user-admin-permissions:before{
+  -webkit-mask-image: url(icons/lock.svg);
+          mask-image: url(icons/lock.svg);
+}
+
+#toolbar-bar a.toolbar-icon-entity-user-role-collection:before{
+  -webkit-mask-image: url(icons/child.svg);
+          mask-image: url(icons/child.svg);
+}
+
+
+
+toolbar-icon-entity-user-role-collection
+
+/* Configuration */
+#toolbar-bar a.toolbar-icon-user-admin-index:before{
+  -webkit-mask-image: url(icons/id-card.svg);
+          mask-image: url(icons/id-card.svg);
+}
+#toolbar-bar a.toolbar-icon-system-admin-config-system:before{
+  -webkit-mask-image: url(icons/drupal.svg);
+          mask-image: url(icons/drupal.svg);
+}
+#toolbar-bar a.toolbar-icon-system-admin-config-content:before{
+  -webkit-mask-image: url(icons/pencil.svg);
+          mask-image: url(icons/pencil.svg);
+}
+#toolbar-bar a.toolbar-icon-filter-admin-overview:before{
+  -webkit-mask-image: url(icons/pencil.svg);
+          mask-image: url(icons/pencil.svg);
+}
+#toolbar-bar a.toolbar-icon-system-admin-config-ui:before{
+  -webkit-mask-image: url(icons/heart.svg);
+          mask-image: url(icons/heart.svg);
+}
+#toolbar-bar a.toolbar-icon-system-admin-config-development:before{
+  -webkit-mask-image: url(icons/terminal.svg);
+          mask-image: url(icons/terminal.svg);
+}
+#toolbar-bar a.toolbar-icon-system-admin-config-media:before{
+  -webkit-mask-image: url(icons/picture-o.svg);
+          mask-image: url(icons/picture-o.svg);
+}
+
+#toolbar-bar a.toolbar-icon-system-admin-config-search:before{
+  -webkit-mask-image: url(icons/search.svg);
+          mask-image: url(icons/search.svg);
+}
+#toolbar-bar a.toolbar-icon-system-admin-config-regional:before{
+  -webkit-mask-image: url(icons/flag.svg);
+          mask-image: url(icons/flag.svg);
+}
+#toolbar-bar a.toolbar-icon-system-admin-config-services:before{
+  -webkit-mask-image: url(icons/rss.svg);
+          mask-image: url(icons/rss.svg);
+}
+#toolbar-bar a.toolbar-icon-system-admin-config-workflow:before{
+  -webkit-mask-image: url(icons/truck.svg);
+          mask-image: url(icons/truck.svg);
+}
+
+/* Reports */
+#toolbar-bar a.toolbar-icon-update-status:before{
+  -webkit-mask-image: url(icons/info-circle.svg);
+          mask-image: url(icons/info-circle.svg);
+}
+#toolbar-bar a.toolbar-icon-dblog-overview:before{
+  -webkit-mask-image: url(icons/bullhorn.svg);
+          mask-image: url(icons/bullhorn.svg);
+}
+#toolbar-bar a.toolbar-icon-locale-translate-status:before{
+  -webkit-mask-image: url(icons/flag.svg);
+          mask-image: url(icons/flag.svg);
+}
+#toolbar-bar a.toolbar-icon-entity-field-storage-config-collection:before{
+  -webkit-mask-image: url(icons/th.svg);
+          mask-image: url(icons/th.svg);
+}
+#toolbar-bar a.toolbar-icon-system-status:before{
+  -webkit-mask-image: url(icons/exclamation-circle.svg);
+          mask-image: url(icons/exclamation-circle.svg);
+}
+#toolbar-bar a.toolbar-icon-dblog-access-denied:before{
+  -webkit-mask-image: url(icons/minus-circle.svg);
+          mask-image: url(icons/minus-circle.svg);
+}
+#toolbar-bar a.toolbar-icon-dblog-page-not-found:before{
+  -webkit-mask-image: url(icons/times-circle.svg);
+          mask-image: url(icons/times-circle.svg);
+}
+#toolbar-bar a.toolbar-icon-dblog-search:before{
+  -webkit-mask-image: url(icons/search.svg);
+          mask-image: url(icons/search.svg);
+}
+#toolbar-bar a.toolbar-icon-views-ui-reports-plugins:before{
+  -webkit-mask-image: url(icons/tasks.svg);
+          mask-image: url(icons/tasks.svg);
+}
