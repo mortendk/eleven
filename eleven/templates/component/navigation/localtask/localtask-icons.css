@@ -33,6 +33,12 @@
 .tabs li a[href*="/admin/structure/contact/"]:before {
 }
 
+.tabs li a[href="/admin/config/content/scheduler/cron"]:before,
+.tabs li a[href$="/scheduled"]:before {
+  -webkit-mask-image: url(icons/clock-o.svg);
+          mask-image: url(icons/clock-o.svg);
+}
+
 
 /*content --------------------------------------------------------------------*/
 .tabs li a[href="/admin/content"]:before {
@@ -58,6 +64,8 @@
   -webkit-mask-image: url(icons/plug.svg);
           mask-image: url(icons/plug.svg);
 }
+
+.tabs li a[href="/admin/config/content/scheduler"]:before,
 .tabs li a[href="/admin/appearance/settings"]:before {
   -webkit-mask-image: url(icons/gears.svg);
           mask-image: url(icons/gears.svg);
@@ -255,6 +263,7 @@
 }
 
 /*  edit */
+.tabs li a[href^="/admin/config/media/image-styles/manage/"]:before,
 .tabs li a[href^="/admin/structure/views/view/"]:before,
 .tabs li a[href="/admin/structure/taxonomy/manage/forums"]:before,
 .tabs li a[href="/admin/structure/types/manage/article"]:before,
