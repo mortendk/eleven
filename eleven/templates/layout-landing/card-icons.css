@@ -166,13 +166,17 @@
 -webkit-mask-image: url(icons/globe.svg);
 }
 
+.card__title--icon-admin-config-media-file-system:before{
+  mask-image: url(icons/folder-open-o.svg);
+  -webkit-mask-image: url(icons/folder-open-o.svg);
+}
 
 .card__title--icon-admin-config-media-image-toolkit:before,
 .card__title--icon-admin-config-media-responsive-image-style:before,
 .card__title--icon-admin-config-media-image-styles:before,
 .card__title--icon-admin-structure-media::before{
   mask-image: url(icons/picture-o.svg);
--webkit-mask-image: url(icons/picture-o.svg);
+  -webkit-mask-image: url(icons/picture-o.svg);
 
 }
 
@@ -232,6 +236,7 @@
           mask-image: url(icons/search.svg);
   -webkit-mask-image: url(icons/search.svg);
 }
+.card__title--icon-admin-config-services-rss-publishing::before,
 .card__title--icon-web-services::before {
           mask-image: url(icons/rss.svg);
   -webkit-mask-image: url(icons/rss.svg);
@@ -580,7 +585,7 @@
 }
 
  /*system settings */
-.card__title--icon-admin-config-system-site-information::before {
+ .card__title--icon-admin-config-system-site-information::before {
   mask-image: url(icons/wrench.svg);
 -webkit-mask-image: url(icons/wrench.svg);
 }
@@ -601,4 +606,39 @@
   mask-image: url(icons/paragraph.svg);
 -webkit-mask-image: url(icons/paragraph.svg);
 
+}
+
+/*language */
+.card__title--icon-admin-config-regional-settings:before{
+  mask-image: url(icons/globe.svg);
+  -webkit-mask-image: url(icons/globe.svg);
+
+}
+.card__title--icon-admin-config-regional-date-time:before{
+  mask-image: url(icons/clock-o.svg);
+  -webkit-mask-image: url(icons/clock-o.svg);
+}
+
+.card__title--icon-admin-config-regional-language:before{
+  mask-image: url(icons/flag.svg);
+  -webkit-mask-image: url(icons/flag.svg);
+}
+.card__title--icon-admin-config-regional-content-language:before{
+  mask-image: url(icons/flag.svg);
+  -webkit-mask-image: url(icons/flag.svg);
+}
+.card__title--icon-admin-config-regional-translate:before{
+  mask-image: url(icons/flag.svg);
+  -webkit-mask-image: url(icons/flag.svg);
+
+}
+.card__title--icon-admin-config-regional-config-translation:before{
+  mask-image: url(icons/gears.svg);
+  -webkit-mask-image: url(icons/gears.svg);
+
+}
+
+.card__title--icon-admin-config-search-pages:before{
+  mask-image: url(icons/search.svg);
+  -webkit-mask-image: url(icons/search.svg);
 }
