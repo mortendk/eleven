@@ -4,8 +4,9 @@ Fieldset
 fieldset {
   padding: 0 0.5rem;
   border: 0;
-  border-bottom: 1px solid var(--concrete-light);
-  background-color: var(--gravel-light);
+  border-top: 1px solid var(--bluesky-light);
+  background-color: var(--white);
+  margin-bottom: 1rem
 }
 
 fieldset > legend{
@@ -13,20 +14,18 @@ fieldset > legend{
   margin-left: -0.5rem;
   margin-right: 1rem;
   width: calc(100% + 1rem);
-  background-color: var(--white);
-  border-top: 1px solid var(--concrete-light);
+  background-color: var(--bluesky-light-light);
+  border-top: 1px solid var(--bluesky-light);
 }
 
 .fieldset-legend{
-  font-weight: 100;
+  font-weight: 500;
   color: var(--bluesky);
   border-bottom: 1px solid var(--bluesky-light);
   width: 100%;
   display: block;
-  line-height: 2rem
-
-
-
+  line-height: 2rem;
+  padding-left: 1rem
 }
 
 fieldset > .fieldset-wrapper > .form-item {
