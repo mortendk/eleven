@@ -155,12 +155,18 @@
 
 
 
-toolbar-icon-entity-user-role-collection
+
 
 /* Configuration */
+
 #toolbar-bar a.toolbar-icon-user-admin-index:before{
   -webkit-mask-image: url(icons/id-card.svg);
           mask-image: url(icons/id-card.svg);
+}
+#toolbar-bar a.toolbar-icon-entity-user-admin-form:before{
+  -webkit-mask-image: url(icons/id-card.svg);
+          mask-image: url(icons/id-card.svg);
+
 }
 #toolbar-bar a.toolbar-icon-system-admin-config-system:before{
   -webkit-mask-image: url(icons/drupal.svg);
@@ -204,6 +210,25 @@ toolbar-icon-entity-user-role-collection
           mask-image: url(icons/truck.svg);
 }
 
+
+#toolbar-bar a.toolbar-icon-system-site-information-settings:before{
+  -webkit-mask-image: url(icons/wrench.svg);
+          mask-image: url(icons/wrench.svg);
+}
+#toolbar-bar a.toolbar-icon-statistics-settings:before{
+  -webkit-mask-image: url(icons/bar-chart-o.svg);
+          mask-image: url(icons/bar-chart-o.svg);
+}
+
+#toolbar-bar a.toolbar-icon-system-cron-settings:before{
+  -webkit-mask-image: url(icons/clock-o.svg);
+          mask-image: url(icons/clock-o.svg);
+
+}
+
+
+
+
 /* Reports */
 #toolbar-bar a.toolbar-icon-update-status:before{
   -webkit-mask-image: url(icons/info-circle.svg);
@@ -240,4 +265,53 @@ toolbar-icon-entity-user-role-collection
 #toolbar-bar a.toolbar-icon-views-ui-reports-plugins:before{
   -webkit-mask-image: url(icons/tasks.svg);
           mask-image: url(icons/tasks.svg);
+}
+
+/* devel */
+
+#toolbar-bar a[data-drupal-link-system-path="admin/config/development/devel"]:before,
+#toolbar-bar a[data-drupal-link-system-path^="devel/"]:before{
+  -webkit-mask-image: url(icons/terminal.svg);
+          mask-image: url(icons/terminal.svg);
+}
+#toolbar-bar a[data-drupal-link-system-path="admin/reports/status/php"]:before{
+  -webkit-mask-image: url(icons/terminal.svg);
+          mask-image: url(icons/terminal.svg);
+}
+/* devel */
+#toolbar-bar a.edit-devel-toolbar{
+  background-image: var(--button-rasberry);
+}
+
+.toolbar-horizontal #toolbar-bar a.edit-devel-toolbar{
+  position: absolute;
+  right: 32px;
+  bottom: 0;
+  display: block;
+  height:  32px;
+  margin: 0;
+  padding: 0 8px 0 40px;
+  outline: none;
+  background-image: var(--button-rasberry);
+
+}
+
+
+#toolbar-bar a.edit-devel-toolbar:hover{
+  background-image: var(--button-rasberry-rev);
+}
+#toolbar-bar a.edit-devel-toolbar:before{
+  -webkit-mask-image: url(icons/gears.svg);
+          mask-image: url(icons/gears.svg);
+  background-color: var(--white);
+}
+
+/* lockr*/
+#toolbar-bar a.toolbar-icon-entity-key-collection:before{
+  -webkit-mask-image: url(icons/key.svg);
+          mask-image: url(icons/key.svg);
+}
+#toolbar-bar a.toolbar-icon-lockr-admin:before{
+  -webkit-mask-image: url(icons/lock.svg);
+          mask-image: url(icons/lock.svg);
 }

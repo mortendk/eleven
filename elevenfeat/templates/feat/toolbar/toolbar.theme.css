@@ -346,15 +346,15 @@ level 1 : horizontal
 }
 #toolbar-bar nav[aria-label="User-defined shortcuts"] a.edit-shortcuts {
   position: absolute;
-  right: calc( 2 * 16px );
+  right: 32px;
   display: block;
-  height: calc( 2 * 16px );
+  height:  32px;
   margin: 0;
-  padding: 0 calc( 0.5 * 16px ) 0 calc( 2.5 * 16px );
+  padding: 0 8px 0 40px;
   outline: none;
   background-image: var(--button-rasberry);
   color: var(--white);
-  line-height: calc( 2 * 16px );
+  line-height: 32px;
 }
 #toolbar-bar nav[aria-label="User-defined shortcuts"] a.edit-shortcuts:before {
   position: absolute;
@@ -476,19 +476,21 @@ Vertical
 /* vertical lvl 3*/
 .toolbar-vertical #toolbar-bar .toolbar-menu .level-3 a {
   padding-left: 48px;
-  border-bottom: 1px solid var(--concrete);
-  background-image: var(--button-gravel);
+  border-bottom: 1px solid var(--concrete-light);
+  background-image: var(--button-gravel-light);
   color: var(--asphalt-light);;
 }
 .toolbar-vertical #toolbar-bar .toolbar-menu .level-3 a:hover {
   border-bottom: 1px solid var(--asphalt-light);
   background-image: var(--button-gravel-light);
-  color: var(--asphalt-light);
+  color: var(--bluesky-light);
 }
 .toolbar-vertical #toolbar-bar .toolbar-menu .level-3 a:before {
-  background-color: transparent;
+  background-color: var(--concrete);;
 }
-
+.toolbar-vertical #toolbar-bar .toolbar-menu .level-3 a.menu-item--active{
+  color: var(--bluesky);
+}
 
 #toolbar-bar .toolbar-icon.toolbar-handle {
   background-color: var(--bluesky-light);
@@ -535,8 +537,3 @@ Vertical
 #toolbar-bar .level-2 .toolbar-icon.toolbar-handle.open:hover:before {
   transform: scale(1) translateY(-0.3rem) translateX(0.2rem);
 }
-
-
-/*------------------------------------------------------------------------------
-Horizontal
--------------------------------------------------------------------------------*/

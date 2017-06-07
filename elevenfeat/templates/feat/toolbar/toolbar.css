@@ -30,6 +30,7 @@
 }
 
 /*  icons default */
+#toolbar-bar nav a,
 #toolbar-bar .menu a,
 #toolbar-bar .toolbar-icon,
 #toolbar-bar .toolbar-menu a {
@@ -51,11 +52,12 @@
 #toolbar-bar button.toolbar-icon {
   border: 0;
 }
-
+#toolbar-bar nav a:hover,
 #toolbar-bar .toolbar-icon:hover,
 #toolbar-bar .toolbar-menu a:hover {
   text-decoration: none;
 }
+#toolbar-bar nav a:before,
 #toolbar-bar .toolbar-icon:before,
 #toolbar-bar .toolbar-menu a:before {
   position: absolute;

@@ -682,3 +682,16 @@
   .ask-image: url(icons/reorder.svg);
   -webkit-mask-image: url(icons/reorder.svg);
 }
+
+
+/* lockr */
+.card__title--icon-admin-config-system-keys:before{
+  -webkit-mask-image: url(icons/key.svg);
+          mask-image: url(icons/key.svg);
+
+}
+.card__title--icon-admin-config-system-lockr::before{
+  -webkit-mask-image: url(icons/lock.svg);
+          mask-image: url(icons/lock.svg);
+
+}

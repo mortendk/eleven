@@ -115,8 +115,8 @@ a.smallbtn--view-diff:before {
           mask-image: url(icons/exchange.svg);
 }
 a.smallbtn--devel:before{
-  -webkit-mask-image: url(icons/code-fork.svg);
-          mask-image: url(icons/code-fork.svg);
+  -webkit-mask-image: url(icons/terminal.svg);
+          mask-image: url(icons/terminal.svg);
 
 }
 
