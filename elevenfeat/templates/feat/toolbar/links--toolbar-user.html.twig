@@ -10,7 +10,7 @@
 
   <ul{{ attributes.addClass('').removeclass('operations', 'clearfix') }}>
     {%- for item in links -%}
-      <li{{ item.attributes.addClass }}>
+      <li{{ item.attributes.addClass('menu-item--0') }}>
         {%- if item.link -%}
           {{ item.link }}
         {%- elseif item.text_attributes -%}

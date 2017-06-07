@@ -52,6 +52,11 @@ libraries-override:
       state:
         css/toolbar.menu.css: false
 
+  devel/devel-toolbar:
+    css:
+      component:
+        css/devel.toolbar.css: false
+
   # contextual
   contextual/drupal.contextual-links:
     css:
