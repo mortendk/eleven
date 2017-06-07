@@ -39,17 +39,23 @@
           mask-image: url(icons/clock-o.svg);
 }
 
+.tabs li a[href$="/shortcuts"]:before {
+  -webkit-mask-image: url(icons/heart.svg);
+          mask-image: url(icons/heart.svg);
+}
+
+
 
 /*content --------------------------------------------------------------------*/
-.tabs li a[href="/admin/content"]:before {
+.tabs li a[data-drupal-link-system-path="admin/content"]:before {
   -webkit-mask-image: url(icons/file-text.svg);
           mask-image: url(icons/file-text.svg);
 }
-.tabs li a[href="/admin/content/comment"]:before {
+.tabs li a[data-drupal-link-system-path="admin/content/comment"]:before {
   -webkit-mask-image: url(icons/comments.svg);
           mask-image: url(icons/comments.svg);
 }
-.tabs li a[href="/admin/content/files"]:before {
+.tabs li a[data-drupal-link-system-path="admin/content/files"]:before {
   -webkit-mask-image: url(icons/file-picture-o.svg);
           mask-image: url(icons/file-picture-o.svg);
 
@@ -60,10 +66,12 @@
   -webkit-mask-image: url(icons/rocket.svg);
           mask-image: url(icons/rocket.svg);
 }
+
 .tabs li a[href="/admin/theme/update"]:before {
   -webkit-mask-image: url(icons/refresh.svg);
           mask-image: url(icons/refresh.svg);
 }
+
 
 .tabs li a[href="/admin/config/content/scheduler"]:before,
 .tabs li a[href="/admin/appearance/settings"]:before {
@@ -75,6 +83,15 @@
           mask-image: url(icons/paint-brush.svg);
 }
 
+
+.tabs li a[href="/admin/reports/updates/update"]:before {
+  -webkit-mask-image: url(icons/refresh.svg);
+          mask-image: url(icons/refresh.svg);
+}
+.tabs li a[href="/admin/reports/updates"]:before {
+  -webkit-mask-image: url(icons/info-circle.svg);
+          mask-image: url(icons/info-circle.svg);
+}
 
 
 /*modules*/
@@ -274,8 +291,8 @@
 }
 /*devel */
 .tabs li a[href^="/devel"]:before {
-  -webkit-mask-image: url(icons/code-fork.svg);
-          mask-image: url(icons/code-fork.svg);
+  -webkit-mask-image: url(icons/terminal.svg);
+          mask-image: url(icons/terminal.svg);
 }
 /*view node */
 ul.tabs > li:first-child a[href^="/node/"]:before {

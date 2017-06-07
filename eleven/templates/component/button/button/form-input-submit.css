@@ -34,6 +34,8 @@ input[type="submit"].js-hide + .form-item__icon {
 }
 
 /* form actions -------------------------------------------------------------*/
+form.pagewidth #edit-actions,
+.shortcut-set-switch #edit-actions,
 .nodesubmit,
 .views-form  #edit-actions,
 #view-edit-form #edit-actions,
@@ -118,21 +120,27 @@ input[type="submit"].js-hide + .form-item__icon {
 
 
 /* primary */
+
+#edit-actions input[type="submit"].form-submit,
 input[type="submit"].button--primary {
   margin-right: 1rem;
   background-color: var(--grass-light);
 }
+#edit-actions input[type="submit"].form-submit  + .form-item__icon,
 input[type="submit"].button--primary + .form-item__icon {
   background-color: var(--grass);
 }
+#edit-actions input[type="submit"].form-submit  + .form-item__icon::before,
 input[type="submit"].button--primary + .form-item__icon::before {
           mask-image: url(../icons/thumbs-up.svg);
   -webkit-mask-image: url(../icons/thumbs-up.svg);
 }
 
+#edit-actions input[type="submit"].form-submit:hover,
 input[type="submit"].button--primary:hover {
   background-color: var(--grass);
 }
+#edit-actions input[type="submit"].form-submit:hover + .form-item__icon,
 input[type="submit"].button--primary:hover + .form-item__icon {
   background-color: var(--grass-light);
 }
