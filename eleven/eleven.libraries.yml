@@ -110,6 +110,7 @@ form.file:
   css:
     theme:
       templates/component/form/input-file/form-input-file.css: {}
+      templates/component/form/input-file/form-input-file.icons.css: {}
   js:
     templates/component/form/input-file/form-input-file.js: {}
 
