@@ -353,3 +353,8 @@ ul.tabs > li:first-child a[href^="/node/"]:before {
   -webkit-mask-image: url(icons/reorder.svg);
           mask-image: url(icons/reorder.svg);
 }
+
+.tabs li a[href$="/revisions"]:before {
+  -webkit-mask-image: url(icons/history.svg);
+          mask-image: url(icons/history.svg);
+}

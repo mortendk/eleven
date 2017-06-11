@@ -1,0 +1,56 @@
+/**
+ * @file
+ * Styles for node preview page.
+ */
+
+.node-preview-container {
+  position: fixed;
+  bottom: 0;
+  z-index: 666;
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  background-color: var(--white-90);
+  border-top: 1px solid var(--grass-light);
+
+}
+.node-preview-form-select{
+
+}
+
+
+.node-preview-backlink {
+  position: relative;
+  background-image: var(--button-rasberry);
+  padding: 0.5rem 0.5rem  0.5rem  2.5rem;
+  color: var(--white);
+  text-decoration: none
+}
+.node-preview-backlink:hover {
+    background-image: var(--button-rasberry-rev);
+    color: var(--white);
+}
+
+.node-preview-backlink:before {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--white);
+  content: "";
+  transition: 0.5s ease-in;
+
+          mask-image: var(--icon-pen);
+  -webkit-mask-image: var(--icon-pen);
+  -webkit-mask-size: contain !important;
+          mask-size: contain !important;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+}
+
+.node-preview-backlink:hover:before {
+  /*transform: scale(1.5);*/
+  background-color: var(--white);
+}

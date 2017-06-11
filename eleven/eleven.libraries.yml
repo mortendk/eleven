@@ -22,7 +22,7 @@ global:
   dependencies:
     - system/admin
     - core/modernizr
-
+    - core/jquery.cookie
 # ------------------------------------------------------------------------------
 #
 # ------------------------------------------------------------------------------
@@ -83,7 +83,7 @@ nav.breadcrumb:
 nav.tabs:
   css:
     theme:
-      templates/component/navigation/tabs.css: {}
+      templates/component/navigation/tabs/tabs.css: {}
       templates/component/navigation/localtask/localtask.css: {}
       templates/component/navigation/localtask/localtask-icons.css: {}
 
@@ -91,6 +91,11 @@ nav.dropbutton.smallbutton:
   css:
     theme:
       templates/component/navigation/dropbutton/smallbuttons.css: {}
+
+nav.smalltabs:
+  css:
+    theme:
+
 # ------------------------------------------------------------------------------
 # Forms
 # ------------------------------------------------------------------------------
@@ -182,3 +187,13 @@ themes:
   css:
     theme:
       templates/layout-landing/themes/themes.css: {}
+
+# ------------------------------------------------------------------------------
+# node edit
+# ------------------------------------------------------------------------------
+node.edit:
+  css:
+    theme:
+      templates/layout-landing/node/node-edit-form.css: {}
+  js:
+    templates/layout-landing/node/node-edit-form.js: {}

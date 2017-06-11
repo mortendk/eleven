@@ -1,3 +1,4 @@
+
 <?php
 // ----------------------------------------------------------------------------
 // PREPROCESS
@@ -250,37 +251,39 @@ function eleven_theme_suggestions_container_alter(array &$suggestions, array $va
 use Drupal\Core\Form\FormStateInterface;
 
 function eleven_form_node_form_alter(&$form, FormStateInterface $form_state) {
+
   $node = $form_state->getFormObject()->getEntity();
 
   $form['#theme'] = array('node_edit_form');
-
   $form['advanced']['#type'] = 'container';
+
+
   $is_new = !$node->isNew() ? format_date($node->getChangedTime(), 'short') : t('Not saved yet');
-  $form['meta'] = array(
-    '#attributes' => array('class' => array('entity-meta__header')),
-    '#type' => 'container',
-    '#group' => 'advanced',
-    '#weight' => -100,
-    'published' => array(
-      '#type' => 'html_tag',
-      '#tag' => 'h4',
-      '#value' => $node->isPublished() ? t('Published') : t('Not published'),
-      '#access' => !$node->isNew(),
-      '#attributes' => array(
-        'class' => 'entity-meta__title',
+
+  $form['metacard'] = array(
+      'changed' => array(
+        '#value' => $is_new,
       ),
-    ),
-    'changed' => array(
-      '#type' => 'item',
-      '#wrapper_attributes' => array('class' => array('entity-meta__last-saved')),
-      '#markup' => '<b>' . t('Last saved') . '</b> ' . $is_new,
-    ),
-    'author' => array(
-      '#type' => 'item',
-      '#wrapper_attributes' => array('class' => array('entity-meta__author')),
-      '#markup' => '<b>' . t('Author') . '</b> ' . $node->getOwner()->getUsername(),
-    ),
+      'author' => array(
+        '#value' => $node->getOwner()->getUsername(),
+      ),
+      'publised' => array(
+        '#value' => $node->isPublished() ? t('Published') : t('Not published'),
+      ),
+
   );
+  $form['meta'] = array(
+
+    '#attributes' => array('class' => array('entity-meta__header')),
+       '#type' => 'container',
+       '#group' => 'advanced',
+       '#weight' => -100,
+  );
+
   $form['revision_information']['#type'] = 'container';
   $form['revision_information']['#group'] = 'meta';
 }
+
+// ----------------------------------------------------------------------------
+// node-edit 2 columns
+// ----------------------------------------------------------------------------
