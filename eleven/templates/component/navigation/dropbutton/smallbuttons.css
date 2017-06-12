@@ -32,24 +32,21 @@
 
 /* colors */
 .smallbtn {
-  background-color: var(--bluesky-light);
+  background-color: var(--gravel-light);
   color: var(--white);
-  border-right: 1px solid var(--bluesky);
+  border-right: 1px solid var(--white);
 }
 .smallbtn:hover {
-  background-color: var(--bluesky);
-  border-right: 1px solid var(--bluesky-light);
+  background-color: var(--gravel);
 }
 .smallbtn:before {
-  background-color: var(--white);
-
+  background-color: var(--concrete);
           mask-image: var(--icon-coffee);
   -webkit-mask-image: var(--icon-coffee);
 }
 
 .smallbtn:hover:before {
-  background-color: var(--bluesky);
-  background-color: var(--white);
+  background-color: var(--asphalt);
 }
 
 /* icons */

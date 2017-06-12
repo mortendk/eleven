@@ -285,5 +285,8 @@ function eleven_form_node_form_alter(&$form, FormStateInterface $form_state) {
 }
 
 // ----------------------------------------------------------------------------
-// node-edit 2 columns
+// content type
 // ----------------------------------------------------------------------------
+// function eleven_form_node_form_alter(&$form, FormStateInterface $form_state) {
+//
+// }

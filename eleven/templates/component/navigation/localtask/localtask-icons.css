@@ -47,15 +47,15 @@
 
 
 /*content --------------------------------------------------------------------*/
-.tabs li a[data-drupal-link-system-path="admin/content"]:before {
+.tabs li a[href$="admin/content"]:before {
   -webkit-mask-image: url(icons/file-text.svg);
           mask-image: url(icons/file-text.svg);
 }
-.tabs li a[data-drupal-link-system-path="admin/content/comment"]:before {
+.tabs li a[href$="admin/content/comment"]:before {
   -webkit-mask-image: url(icons/comments.svg);
           mask-image: url(icons/comments.svg);
 }
-.tabs li a[data-drupal-link-system-path="admin/content/files"]:before {
+.tabs li a[href$="admin/content/files"]:before {
   -webkit-mask-image: url(icons/file-picture-o.svg);
           mask-image: url(icons/file-picture-o.svg);
 
