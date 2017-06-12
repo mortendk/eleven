@@ -85,60 +85,48 @@ details summary::after {
 
 /* -- details colors ---------------------------------------------------------*/
 form details {
-  outline: 1px solid var(--bluesky-light);
   background-color: var(--white);
+  border: 1px solid var(--bluesky-light-light);
+  border-top: none
 }
 
 /* summary bar closed */
 details summary {
-  background-image: var(--button-bluesky);
-  color: var(--white);
+  background-color: var(--concrete-light);
+  color: var(--asphalt-light);
+  font-weight: 500;
+  margin-left: -1px;
+  width: calc(100% + 2px)
+
 }
+details[open] summary{
+  border-bottom: none
+}
+details summary:hover{
+  color: var(--concrete);
+}
+
+/* icon */
 details summary::before {
-  background-color: var(--white);
-
-          mask-image: url(icons/reorder.svg);
-  -webkit-mask-image: url(icons/reorder.svg);
-}
-details summary::after {
-  background-color: var(--white);
-
-          mask-image: url(icons/arrow-down.svg);
-  -webkit-mask-image: url(icons/arrow-down.svg);
-}
-details[open] summary::after {
-          mask-image: url(icons/arrow-up.svg);
-  -webkit-mask-image: url(icons/arrow-up.svg);
-}
-
-
-details summary:hover:before {
-  background-color: var(--white);
-}
-
-/* summary bar open */
-details[open] summary {
-  background-image: var(--button-bluesky-rev);
-  color: var(--white);
-}
-details[open] summary:hover {
-  background-image: var(--button-bluesky);
-  color: var(--bluesky-light-light);
+  background-color: var(--asphalt);
+          mask-image: url(icons/arrow-circle-up.svg);
+  -webkit-mask-image: url(icons/arrow-circle-up.svg);
 }
 details[open] summary::before {
-  background-color: var(--bluesky-light-light);
-}
-details[open] summary:hover:before {
-  background-color: var(--white);
-  /*transform: rotate(-90deg);*/
+  background-color: var(--asphalt);
+  transform: rotate(180deg);
 }
 
+details summary:hover:before {
+  transform: rotate(90deg);
+
+}
 
 
 /* make details summy display like a link ------------------------------------*/
 details.details-summary-link {
   margin-top: 0.5rem;
-  margin-bottom: 0.5rem
+  margin-bottom: 0.5rem;
 }
 details[open].details-summary-link summary::after,
 details.details-summary-link summary::after {

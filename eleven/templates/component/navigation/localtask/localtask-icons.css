@@ -1,5 +1,11 @@
 /* icons */
 
+/*node edit delete is not a tab its a function kill it */
+.path-node .tabs li a[href$="/delete"]{
+  display: none
+}
+
+
 /* general */
 .tabs li a[href$="/form-display"]:before {
   -webkit-mask-image: url(icons/columns.svg);
@@ -47,15 +53,15 @@
 
 
 /*content --------------------------------------------------------------------*/
-.tabs li a[data-drupal-link-system-path="admin/content"]:before {
+.tabs li a[href$="admin/content"]:before {
   -webkit-mask-image: url(icons/file-text.svg);
           mask-image: url(icons/file-text.svg);
 }
-.tabs li a[data-drupal-link-system-path="admin/content/comment"]:before {
+.tabs li a[href$="admin/content/comment"]:before {
   -webkit-mask-image: url(icons/comments.svg);
           mask-image: url(icons/comments.svg);
 }
-.tabs li a[data-drupal-link-system-path="admin/content/files"]:before {
+.tabs li a[href$="admin/content/files"]:before {
   -webkit-mask-image: url(icons/file-picture-o.svg);
           mask-image: url(icons/file-picture-o.svg);
 
@@ -352,4 +358,9 @@ ul.tabs > li:first-child a[href^="/node/"]:before {
 .tabs li a[href="/admin/config/development/devel/toolbar"]:before {
   -webkit-mask-image: url(icons/reorder.svg);
           mask-image: url(icons/reorder.svg);
+}
+
+.tabs li a[href$="/revisions"]:before {
+  -webkit-mask-image: url(icons/history.svg);
+          mask-image: url(icons/history.svg);
 }

@@ -1,3 +1,6 @@
+/*
+TODO: havent tested on a mobile yet
+*/
 [data-helptext] {
   overflow: visible;
 }
@@ -22,7 +25,8 @@
   transform-origin: top;
 }
 
-[data-helptext]:hover:after {
+[data-helptext]:hover:after,
+[data-helptext]:focus:after  {
   opacity: 1;
   transform: translate(-50%, 0);
 }

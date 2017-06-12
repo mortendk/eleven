@@ -1,14 +1,46 @@
 {# eleven.theme eleven_form_node_form_alter() #}
 
-{{ attach_library(active_theme()~'/libname') }}
+{{ attach_library(active_theme()~'/node.edit') }}
+{{ attach_library(active_theme()~'/nav.tabs') }}
 
 <div class="L">
+  {{ form.title }}
+  <div class="node-edit-main w-8 w-12@s">
 
-  <div class="w-8 w-12@s">
-    {{ form|without('advanced', 'actions') }}
+  <nav class="tabs tabs--icon">
+    <ul class="L-right">
+      <li><a href="#" class="js-11-layout-chooser" data-layout="8"  data-helptext="{{ 'Layout 2 columns'|t }}">{{ 'Layout 2 columns'|t }}</a></li>
+      <li><a href="#" class="js-11-layout-chooser" data-layout="10" data-helptext="{{ 'Layout Layout 2 col wide'|t }}">{{ 'Layout 2 col wide'|t }}</a></li>
+      <li><a href="#" class="js-11-layout-chooser" data-layout="12" data-helptext="{{ 'Layout Full width'|t }}">{{ 'Layout Full width'|t }}</a></li>
+    </ul>
+  </nav>
+
+    {{ form|without('advanced', 'actions', 'meta') }}
   </div>
 
-  <div class="w-4 w-12@s">
+  <div class="node-edit-sidebar w-4 w-12@s">
+
+
+      {#
+    <div class="card w-12">
+      State: {{ form.metacard.publised['#value'] }}
+      <strong>{{ form.title.widget.0.value['#default_value'] }}</strong>
+      <br>
+      Date {{ form.metacard.changed['#value'] }}
+      <br>
+      Author {{ form.metacard.author['#value'] }}
+      <hr>
+      {% if form.sticky.widget.value['#default_value'] %}
+      Sticky
+      {% endif %}
+
+      {% if form.promote.widget.value['#default_value'] %}
+        promoted to frontpage
+      {% endif %}
+
+    </div>
+      #}
+
     {{ form.advanced }}
   </div>
 

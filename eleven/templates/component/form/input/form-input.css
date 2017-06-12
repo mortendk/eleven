@@ -2,7 +2,7 @@
   input
 ------------------------------------------------------------------------------*/
 input {
-  height: calc(2rem - 2px);
+  height: 2rem;
   padding-left: 0.5rem;
   border: 1px solid var(--bluesky);
   background-color: var(--white);
@@ -58,12 +58,40 @@ input[type="text"].form-autocomplete {
   -webkit-mask-size: contain !important;
           mask-size: contain !important;
   -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
+          mansk-repeat: no-repeat;
 }
 
 .form-item__icon:hover::before {
   transform: scale(1.2);
 }
+
+/* icon types */
+/*date*/
+input[type="date"]{
+  border-left: none
+}
+input[type="date"] + .form-item__icon{
+  border: 1px solid var(--bluesky-light);
+  border-right: none,
+}
+input[type="date"] + .form-item__icon::before{
+  mask-image: url(icons/calendar-o.svg);
+  -webkit-mask-image: url(icons/calendar-o.svg);
+}
+/*time*/
+input[type="time"]{
+  border-left: none
+}
+input[type="time"] + .form-item__icon{
+  border: 1px solid var(--bluesky-light);
+  border-right: none,
+}
+
+input[type="time"] + .form-item__icon::before{
+  mask-image: url(icons/clock-o.svg);
+  -webkit-mask-image: url(icons/clock-o.svg);
+}
+
 
 /* colors  ------------------------------------------------------------------*/
 ::-webkit-input-placeholder {

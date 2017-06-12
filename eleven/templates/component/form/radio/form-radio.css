@@ -57,10 +57,15 @@ input[type=radio] {
 }
 .radio__title label {
   padding: 0;
+  line-height: 1.5rem;
 }
 .radio input[type=radio]:focus + label + .radio__title label,
 .radio input[type=radio]:hover + label + .radio__title label {
   outline: 0;
+}
+
+.form-item--radio .form-item__description{
+  padding-left: 2rem
 }
 
 /*-- colors ---------------------------------------------------------*/

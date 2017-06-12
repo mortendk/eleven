@@ -115,3 +115,9 @@ libraries-override:
   core/modernizr:
     js:
       assets/vendor/modernizr/modernizr.min.js: js/modernizr-custom.js
+
+
+  node/drupal.node.preview:
+    css:
+      theme:
+        css/node.preview.css: templates/feat/node-preview/nodepreview.css

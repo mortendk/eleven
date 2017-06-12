@@ -4,12 +4,11 @@ tabs
 .tabs {
 }
 .tabs li {
-  overflow: hidden;
   margin: 0;
   border: 0;
   border-right: 1px solid var(--white);
 }
-.tabs li a {
+.tabs a {
   position: relative;
   display: block;
   min-width: 7rem;
@@ -25,11 +24,8 @@ tabs
   line-height: 2rem;
   text-align: left;
   text-decoration: none;
-  transition: all 0.5s ease-in-out;
 }
-.tabs li a:hover {
-}
-.tabs li a:before {
+.tabs a:before {
   position: absolute;
   top: 0.5rem;
   left: 0.5rem;
@@ -39,7 +35,7 @@ tabs
   background-color: var(--bluesky);
   background-image: none ! important; /* yes we wanna make sure no module have fun here */
   content: "";
-  transition: 0.5s ease-in;
+  transition: 0.2s ease-in;
 
           /*mask-image: var(--icon-coffee);
   -webkit-mask-image: var(--icon-coffee);*/
@@ -49,7 +45,7 @@ tabs
           mask-repeat: no-repeat;
 
 }
-.tabs li a:hover:before {
+.tabs a:hover:before {
   transform: scale(1.2);
 }
 
@@ -57,30 +53,35 @@ tabs
   .localtask__lvl1{
     padding-left: 0
   }
-  .tabs li {
-    width: 100%;
-    border-bottom: 1px solid var(--bluesky);
+  .tabs a {
+      position: relative;
+      display: block;
+      min-width: 2rem;
+      margin: 0;
+      padding: 0 0 0 0 ;
+      text-indent: -999px
   }
 }
 
 /*------------------------------------------------------------------------------
 color
 ----------------------------------------------------------------------------- */
-.tabs li a {
+.tabs a {
   background-color: var(--bluesky-50);
   color: var(--white);
 }
-.tabs li a::before {
+.tabs a::before {
   background-color: var(--bluesky);
 }
-.tabs li a:hover {
+.tabs a:hover,
+.tabs a:focus {
   background-color: var(--bluesky-light);
 }
-.tabs li a:hover::before {
+.tabs a:hover::before {
   background-color: var(--white);
 }
 
-/* acitve */
+/* active */
 .tabs li.is-active a {
   background-color: var(--bluesky);
   color: var(--white);
@@ -92,7 +93,9 @@ color
 }
 
 
-/* tabs small*/
+/* -----------------------------------------------------------------------------
+tabs small
+------------------------------------------------------------------------------*/
 .tabs-small {
   padding-top: 0.5rem;
 }
@@ -115,4 +118,64 @@ color
   border-bottom: 1px solid var(--bluesky-light);
   color: var(--bluesky-light);
   font-weight: bold;
+}
+
+
+/*------------------------------------------------------------------------------
+tabs--icon
+shows a tab only with its icon
+------------------------------------------------------------------------------*/
+.tabs--icon a {
+  position: relative;
+  display: block;
+  min-width: 2rem;
+  margin: 0;
+  padding: 0 0 0 0 ;
+  text-indent: -999px;
+  width: 2rem;
+
+}
+
+/* smalltabs colors */
+.tabs--icon a{
+  background-color: var(--gravel);
+}
+.tabs--icon a::before {
+  background-color: var(--concrete-light);
+}
+/* hover */
+.tabs--icon a:hover{
+  background-color: var(--concrete);
+}
+.tabs--icon a:hover::before {
+  background-color: var(--gravel-light);
+}
+/* is-active */
+.tabs--icon a.is-active{
+  background-color: var(--concrete-light);
+}
+.tabs--icon a.is-active::before {
+  background-color: var(--concrete);
+}
+
+/* icons */
+.tabs--icon a:before{
+  mask-image: url(icons/columns.svg);
+  -webkit-mask-image: url(icons/columns.svg);
+}
+.tabs--icon a[data-layout="8"]{
+}
+.tabs--icon a[data-layout="8"]:before{
+  mask-image: url(icons/layout-2col.svg);
+  -webkit-mask-image: url(icons/layout-2col.svg);
+}
+
+.tabs--icon a[data-layout="10"]:before{
+  mask-image: url(icons/layout-2colwide.svg);
+  -webkit-mask-image: url(icons/layout-2colwide.svg);
+}
+
+.tabs--icon a[data-layout="12"]:before{
+  mask-image: url(icons/layout-full.svg);
+  -webkit-mask-image: url(icons/layout-full.svg);
 }

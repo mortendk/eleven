@@ -45,6 +45,9 @@ a.button:hover:before {
   transform: rotate(90deg);
 }
 
+a.button--green{
+  background-image: var(--button-grass);
+}
 /* button variations */
 a.button--small {
   width: auto;

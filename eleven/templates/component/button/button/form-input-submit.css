@@ -106,6 +106,7 @@ form.pagewidth #edit-actions,
 /* button delete  */
 .form-actions a.button--danger {
   background-image: var(--button-strawberry);
+  float: right;
 }
 .form-actions a.button--danger:hover {
   background-image: var(--button-strawberry-rev);
