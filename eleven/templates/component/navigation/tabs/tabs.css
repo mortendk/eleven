@@ -24,7 +24,6 @@ tabs
   line-height: 2rem;
   text-align: left;
   text-decoration: none;
-  transition: all 0.5s ease-in-out;
 }
 .tabs a:before {
   position: absolute;
@@ -36,7 +35,7 @@ tabs
   background-color: var(--bluesky);
   background-image: none ! important; /* yes we wanna make sure no module have fun here */
   content: "";
-  transition: 0.5s ease-in;
+  transition: 0.2s ease-in;
 
           /*mask-image: var(--icon-coffee);
   -webkit-mask-image: var(--icon-coffee);*/
@@ -142,21 +141,21 @@ shows a tab only with its icon
   background-color: var(--gravel);
 }
 .tabs--icon a::before {
-  background-color: var(--bluesky-light);
+  background-color: var(--concrete-light);
 }
 /* hover */
 .tabs--icon a:hover{
-  background-color: var(--bluesky-light);
+  background-color: var(--concrete);
 }
 .tabs--icon a:hover::before {
-  background-color: var(--bluesky-light-light-light);
+  background-color: var(--gravel-light);
 }
 /* is-active */
 .tabs--icon a.is-active{
-  background-color: var(--concrete);
+  background-color: var(--concrete-light);
 }
 .tabs--icon a.is-active::before {
-  background-color: var(--asphalt);
+  background-color: var(--concrete);
 }
 
 /* icons */

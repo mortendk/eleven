@@ -169,3 +169,11 @@ adds in the visually-hidden class we wanna overwrite
 .checkbox-style-check .visually-hidden {
   clip: inherit;
 }
+
+
+
+/* checkbox that should look like an open close button*/
+.js-form-item-revision,
+.js-form-item-menu-enabled {
+  
+}

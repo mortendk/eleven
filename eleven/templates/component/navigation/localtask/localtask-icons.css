@@ -1,5 +1,11 @@
 /* icons */
 
+/*node edit delete is not a tab its a function kill it */
+.path-node .tabs li a[href$="/delete"]{
+  display: none
+}
+
+
 /* general */
 .tabs li a[href$="/form-display"]:before {
   -webkit-mask-image: url(icons/columns.svg);

@@ -20,15 +20,15 @@
 
   <div class="node-edit-sidebar w-4 w-12@s">
 
-    <div class="card w-12">
-      <strong>{{ form.title.widget.0.value['#default_value'] }}</strong>
 
-      <hr>
-      state {{ form.metacard.publised['#value'] }}
+      {#
+    <div class="card w-12">
+      State: {{ form.metacard.publised['#value'] }}
+      <strong>{{ form.title.widget.0.value['#default_value'] }}</strong>
       <br>
-      date {{ form.metacard.changed['#value'] }}
+      Date {{ form.metacard.changed['#value'] }}
       <br>
-      author {{ form.metacard.author['#value'] }}
+      Author {{ form.metacard.author['#value'] }}
       <hr>
       {% if form.sticky.widget.value['#default_value'] %}
       Sticky
@@ -39,7 +39,7 @@
       {% endif %}
 
     </div>
-
+      #}
 
     {{ form.advanced }}
   </div>
