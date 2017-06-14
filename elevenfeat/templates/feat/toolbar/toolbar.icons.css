@@ -315,3 +315,14 @@
   -webkit-mask-image: url(icons/lock.svg);
           mask-image: url(icons/lock.svg);
 }
+
+/*paragraphs*/
+#toolbar-bar a.toolbar-icon-entity-paragraphs-type-collection:before{
+  -webkit-mask-image: url(icons/paragraph.svg);
+          mask-image: url(icons/paragraph.svg);
+}
+
+ #toolbar-bar a.toolbar-icon-entity-media-bundle-collection:before{
+   -webkit-mask-image: url(icons/camera-retro.svg);
+           mask-image: url(icons/camera-retro.svg);
+ }
