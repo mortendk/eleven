@@ -30,7 +30,6 @@
     $('.card__text').toggleClass('card__text--hide');
     $(this).toggleClass("is-active");
 
-
     e.preventDefault();
   });
 

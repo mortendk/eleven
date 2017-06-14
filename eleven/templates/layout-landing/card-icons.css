@@ -695,3 +695,13 @@
           mask-image: url(icons/lock.svg);
 
 }
+
+.card__title--icon-paragraphs:before{
+  -webkit-mask-image: url(icons/paragraph.svg);
+          mask-image: url(icons/paragraph.svg);
+}
+
+.card__title--icon-admin-structure-media-bundle:before{
+  -webkit-mask-image: url(icons/camera-retro.svg);
+          mask-image: url(icons/camera-retro.svg);
+}
