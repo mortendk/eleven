@@ -1,7 +1,9 @@
 {{ attach_library(active_theme()~'/card') }}
 
 {% if rows %}
-<section class="L LW-4 pagewidth">
+{% include active_theme_path() ~ '/templates/component/navigation/cardlayout/cardlayout.html.twig' %}
+<section class="L LW-4 LW--nooverflow pagewidth js-card-layout-target">
+
 
   {% for row in rows %}
     <article {{ row.attributes.addClass('card', 'w') }}>

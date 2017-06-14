@@ -771,6 +771,7 @@ LW-[width of children elements with the class w]
 [class*="LW-"],
 [class*=" LW-"] {
   margin-left: -0.5rem;
+
 }
 
 /*
@@ -782,10 +783,15 @@ test:
   margin: 0.5rem;
   overflow: hidden;
 }*/
-.w{
+[class*="LW-"] .w{
     margin: 0.5rem;
 }
-.LW-ten    .w { flex-basis: calc(10% - 1rem);}
+[class*="LW--nooverflow"] .w{
+  overflow: hidden;
+}
+
+
+/*.LW-ten    .w { flex-basis: calc(10% - 1rem);}
 .LW-nine   .w { flex-basis: calc(11.11% - 1rem);}
 .LW-eight  .w { flex-basis: calc(12.5% - 1rem);}
 .LW-seven  .w { flex-basis: calc(14.28% - 1rem);}
@@ -794,13 +800,15 @@ test:
 .LW-fourth .w { flex-basis: calc(25% - 1rem);}
 .LW-third  .w { flex-basis: calc(33.33% - 1rem);}
 .LW-half   .w { flex-basis: calc(50% - 1rem);}
-.LW-full   .w { flex-basis: calc(100% - 1rem);}
+.LW-full   .w { flex-basis: calc(100% - 1rem);}*/
 
 
+.LW-12    .w { flex-basis: calc(8.33% - 1rem);}
+.LW-11    .w { flex-basis: calc(9.09% - 1rem);}
 .LW-10    .w { flex-basis: calc(10% - 1rem);}
 .LW-9   .w { flex-basis: calc(11.11% - 1rem);}
 .LW-8  .w { flex-basis: calc(12.5% - 1rem);}
-.LW-7  .w { flex-basis: calc(14.28% - 1rem);}
+.LW-7  .w { flex-basis: calc(14.24% - 1rem);}
 .LW-6  .w { flex-basis: calc(16.66% - 1rem);}
 .LW-5  .w { flex-basis: calc(20% - 1rem);}
 .LW-4 .w { flex-basis: calc(25% - 1rem);}

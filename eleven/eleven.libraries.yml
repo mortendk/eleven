@@ -40,6 +40,14 @@ card:
       templates/layout-landing/card.css: {weight: -20}
       templates/layout-landing/card-icons.css: {}
 
+# card layout
+card.layout:
+  css:
+    theme:
+      templates/component/navigation/cardlayout/cardlayout.css: {}
+  js:
+    templates/component/navigation/cardlayout/cardlayout.js: {}
+
 # ------------------------------------------------------------------------------
 # System
 # ------------------------------------------------------------------------------
@@ -87,14 +95,15 @@ nav.tabs:
       templates/component/navigation/localtask/localtask.css: {}
       templates/component/navigation/localtask/localtask-icons.css: {}
 
+nav.tabs.icon:
+  css:
+    theme:
+      templates/component/navigation/tabs/tabs-icon.css: {}
+
 nav.dropbutton.smallbutton:
   css:
     theme:
       templates/component/navigation/dropbutton/smallbuttons.css: {}
-
-nav.smalltabs:
-  css:
-    theme:
 
 # ------------------------------------------------------------------------------
 # Forms
