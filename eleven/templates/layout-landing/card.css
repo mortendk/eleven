@@ -46,7 +46,6 @@ tr.card {
   width: 100%;
 }
 .card--small .card__title{
-
   font-size: 1rem;
   color: var(--bluesky);
   border-bottom: 1px solid var(--bluesky-light-light);
@@ -67,7 +66,18 @@ tr.card {
 /* text */
 .card__text {
   margin-top: 0.5rem;
+  min-height: 5rem;
+  height: 20rem
+  transition: all .1s ease-in-out;
 }
+
+.card__text--hide {
+  min-height: 0rem;
+  height: 0rem;
+  padding: 0;
+  overflow: hidden
+}
+
 
 /* hovers */
 .card a:hover {

@@ -23,19 +23,14 @@
     set classes = [
       'L',
       'LW-4',
-      'pagewidth'
+      'LW--nooverflow',
+      'pagewidth',
+      'js-card-layout-target'
+
     ]
   %}
-  {# lets show a small change number of card  for the card layouts #}
-  {#
-  <div class="pagewidth L-right">
-    <ul class="L-right tabs-small">
-      <li><a href="#" class="">1</a> </li>
-      <li><a href="#" class="">2</a> </li>
-      <li><a href="#" class="">3</a> </li>
-    </ul>
-  </div>
-  #}
+
+  {% include active_theme_path() ~ '/templates/component/navigation/cardlayout/cardlayout.html.twig' %}
 
   {% if content %}
     <section{{ attributes.addClass(classes) }}>
@@ -71,8 +66,12 @@
           <h4 class="card__subelements-title">
             <a href="{{ item.url }}" class="card__subelement">{{ item.title}}</a>
           </h4>
+
           {% if item.description %}
+          <div class="card__text">
             {{ item.description }}
+          </div>
+
           {% endif %}
         </div>
       </li>

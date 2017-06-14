@@ -1,8 +1,7 @@
 /*
 tabs
 */
-.tabs {
-}
+.tabs { }
 .tabs li {
   margin: 0;
   border: 0;
@@ -118,64 +117,4 @@ tabs small
   border-bottom: 1px solid var(--bluesky-light);
   color: var(--bluesky-light);
   font-weight: bold;
-}
-
-
-/*------------------------------------------------------------------------------
-tabs--icon
-shows a tab only with its icon
-------------------------------------------------------------------------------*/
-.tabs--icon a {
-  position: relative;
-  display: block;
-  min-width: 2rem;
-  margin: 0;
-  padding: 0 0 0 0 ;
-  text-indent: -999px;
-  width: 2rem;
-
-}
-
-/* smalltabs colors */
-.tabs--icon a{
-  background-color: var(--gravel);
-}
-.tabs--icon a::before {
-  background-color: var(--concrete-light);
-}
-/* hover */
-.tabs--icon a:hover{
-  background-color: var(--concrete);
-}
-.tabs--icon a:hover::before {
-  background-color: var(--gravel-light);
-}
-/* is-active */
-.tabs--icon a.is-active{
-  background-color: var(--concrete-light);
-}
-.tabs--icon a.is-active::before {
-  background-color: var(--concrete);
-}
-
-/* icons */
-.tabs--icon a:before{
-  mask-image: url(icons/columns.svg);
-  -webkit-mask-image: url(icons/columns.svg);
-}
-.tabs--icon a[data-layout="8"]{
-}
-.tabs--icon a[data-layout="8"]:before{
-  mask-image: url(icons/layout-2col.svg);
-  -webkit-mask-image: url(icons/layout-2col.svg);
-}
-
-.tabs--icon a[data-layout="10"]:before{
-  mask-image: url(icons/layout-2colwide.svg);
-  -webkit-mask-image: url(icons/layout-2colwide.svg);
-}
-
-.tabs--icon a[data-layout="12"]:before{
-  mask-image: url(icons/layout-full.svg);
-  -webkit-mask-image: url(icons/layout-full.svg);
 }

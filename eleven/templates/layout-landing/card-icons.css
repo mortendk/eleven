@@ -26,8 +26,6 @@
           mask-repeat: no-repeat;
 }
 
-
-
 /* card title  icons----------------------------------------------------------*/
 .card__title--icon {
   position: relative;
@@ -40,7 +38,7 @@
   display: block;
   width: 2rem;
   height: 2rem;
-  background-color: var(--bluesky-light);
+  background-color: var(--concrete-light);
   background-image: none ! important; /* yes we wanna make sure no module have fun here */
   content: "";
   transition: 0.5s ease-in;
@@ -50,6 +48,8 @@
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
 }
+
+
 
 /* small variation */
 .card--small .card__title--icon {
@@ -63,7 +63,7 @@
 }
 
 /* color variations  ---------------------------------------------------------*/
-.card:nth-of-type(8n+1) .card__title--icon:before {
+/*.card:nth-of-type(8n+1) .card__title--icon:before {
   background-color: var(--grass-light);
 }
 .card:nth-of-type(8n+2) .card__title--icon:before {
@@ -86,7 +86,7 @@
 }
 .card:nth-of-type(8n+8) .card__title--icon:before {
   background-color: var(--pumpkin);
-}
+}*/
 
 
 /* icons ---------------------------------------------------------------------*/
