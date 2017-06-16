@@ -134,3 +134,48 @@ td input.field-weight {
   width: 3rem;
   min-width: 3rem;
 }
+
+
+
+
+
+
+
+/*
+.table-card-layout{
+  display: block;
+}
+.table-card-layout thead{
+}
+.table-card-layout tbody{
+  display: block
+}
+.table-card-layout tbody tr{
+  display: block;
+  border: 1px solid red;
+  width: 33.3%;
+  float: left;
+  overflow: hidden
+}
+.table-card-layout tbody tr:nth-child(3n+4){
+  clear: both;
+}
+.table-card-layout tbody td{
+  display: block
+}
+.table-card-layout tbody tr{
+  position: relative;
+}
+
+.views-field-node-bulk-form{
+  position: absolute;
+  right: 0;
+  height: 2rem;
+  background-color: var(--rasberry);
+}
+
+
+.views-field-title{
+  font-size: 2rem;
+
+}*/

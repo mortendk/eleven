@@ -1,18 +1,36 @@
-.views-exposed-form{
+/*
+hide / show filter & actions 
+*/
+.views-filter-layout {
+  margin-top: -2.5rem;
+}
+.tabs-icon a.hide-filter:before {
+          mask-image: url(icons/filter.svg);
+  -webkit-mask-image: url(icons/filter.svg);
+}
+.tabs-icon a.hide-actions:before {
+          mask-image: url(icons/check-square-o.svg);
+  -webkit-mask-image: url(icons/check-square-o.svg);
+}
+
+
+/**/
+
+.views-exposed-form {
+  border-top: 1px solid var(--bluesky-light-light);
   background-color: var(--white);
-  border-top:1px solid var(--bluesky-light-light);
 }
 .views-exposed-form:hover {
+  border-top: 1px solid var(--bluesky-light);
   background-color: var(--bluesky-light-light);
-  border-top:1px solid var(--bluesky-light);
 }
-.view-filters-actions{
-  border-top:1px solid var(--bluesky-light-light);
+.view-filters-actions {
+  border-top: 1px solid var(--bluesky-light-light);
   background-color: var(--white);
 }
 .view-filters-actions:hover {
+  border-top: 1px solid var(--bluesky-light);
   background-color: var(--bluesky-light-light);
-  border-top:1px solid var(--bluesky-light);
 }
 
 
@@ -23,35 +41,35 @@ Form item small variants wrapper class
 TODO move into the right places ?
 ------------------------------------------------------------------------------*/
 
-.form-item-smallvariant .form-item{
+.form-item-smallvariant .form-item {
   padding-top: 0;
-  padding-right: 2rem
+  padding-right: 2rem;
 }
 /* label */
-.form-item-smallvariant label{
+.form-item-smallvariant label {
   display: block;
-  font-weight: bold;
   font-size: 0.75rem;
+  font-weight: bold;
   /*color: var(--ashalt-light);*/
 }
 
 /* select form small */
-.form-item-smallvariant form-item--select{
-  padding-right: 0
+.form-item-smallvariant form-item--select {
+  padding-right: 0;
 }
 .form-item-smallvariant select {
-  height: 1.5rem;
   /*border-color: var(--concrete);
   background-color: var(--concrete-light);
   color: var(--asphalt-light);*/
-  max-width: 15rem
+  max-width: 15rem;
+  height: 1.5rem;
 }
 .form-item-smallvariant .select__arrow {
-  height: 1.5rem;
   width: 1.5rem;
+  height: 1.5rem;
   margin-right: -1.5rem;
   /*background-color: var(--concrete);*/
-  border: 0
+  border: 0;
 }
 .form-item-smallvariant select:hover + .select__arrow,
 .form-item-smallvariant select:focus + .select__arrow {
@@ -63,68 +81,68 @@ TODO move into the right places ?
 }
 
 /* input */
-.form-item-smallvariant input{
-  height:1.5rem;
-  min-width:10rem;
-  line-height: 1.5rem
-}
-
-.form-item-smallvariant input[type="submit"]{
-  min-width: auto
-}
-.form-item-smallvariant .form-item__icon{
+.form-item-smallvariant input {
+  min-width: 10rem;
   height: 1.5rem;
-  width: 1.5rem
-}
-.form-item-smallvariant .form-item__icon:before{
-  top: 0.25rem;
-  left: 0.25rem
-}
-
-/* form actions */
-.form-item-smallvariant .form-actions{
-  margin: 0
+  line-height: 1.5rem;
 }
 
 .form-item-smallvariant input[type="submit"] {
-  height: 2rem
+  min-width: auto;
 }
-.form-item-smallvariant input[type="submit"] + .form-item__icon{
+.form-item-smallvariant .form-item__icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.form-item-smallvariant .form-item__icon:before {
+  top: 0.25rem;
+  left: 0.25rem;
+}
+
+/* form actions */
+.form-item-smallvariant .form-actions {
+  margin: 0;
+}
+
+.form-item-smallvariant input[type="submit"] {
   height: 2rem;
-  width: 2rem
+}
+.form-item-smallvariant input[type="submit"] + .form-item__icon {
+  width: 2rem;
+  height: 2rem;
 }
 .form-item-smallvariant input[type="submit"] + .form-item__icon::before {
   top: 0.5rem;
-  left:0.5rem
+  left: 0.5rem;
 }
 
 /* filter */
-.view-filters input[data-drupal-selector="edit-submit-content"] + .form-item__icon::before{
-  mask-image: url(icons/filter.svg);
+.view-filters input[data-drupal-selector="edit-submit-content"] + .form-item__icon::before {
+          mask-image: url(icons/filter.svg);
   -webkit-mask-image: url(icons/filter.svg);
 }
 
 /* filter reset */
-.view-filters input[data-drupal-selector="edit-reset"]{
+.view-filters input[data-drupal-selector="edit-reset"] {
   background-color: var(--concrete-light);
 }
-.view-filters input[data-drupal-selector="edit-reset"] + .form-item__icon{
+.view-filters input[data-drupal-selector="edit-reset"] + .form-item__icon {
   background-color: var(--concrete);
 }
-.view-filters input[data-drupal-selector="edit-reset"]:hover{
+.view-filters input[data-drupal-selector="edit-reset"]:hover {
   background-color: var(--concrete);
 }
-.view-filters input[data-drupal-selector="edit-reset"]:hover + .form-item__icon{
+.view-filters input[data-drupal-selector="edit-reset"]:hover + .form-item__icon {
   background-color: var(--concrete-light);
 }
-.view-filters input[data-drupal-selector="edit-reset"]:active{
+.view-filters input[data-drupal-selector="edit-reset"]:active {
   background-color: var(--concrete);
 }
-.view-filters input[data-drupal-selector="edit-reset"]:active + .form-item__icon{
+.view-filters input[data-drupal-selector="edit-reset"]:active + .form-item__icon {
   background-color: var(--concrete);
 }
-.view-filters input[data-drupal-selector="edit-reset"] + .form-item__icon::before{
-  mask-image: url(icons/times-circle-o.svg);
+.view-filters input[data-drupal-selector="edit-reset"] + .form-item__icon::before {
+          mask-image: url(icons/times-circle-o.svg);
   -webkit-mask-image: url(icons/times-circle-o.svg);
 }
 
@@ -132,32 +150,32 @@ TODO move into the right places ?
 
 
 /* submit views form */
-.views-form input[data-drupal-selector="edit-submit"]{
+.views-form input[data-drupal-selector="edit-submit"] {
   background-color: var(--grass-light);
 }
-.views-form input[data-drupal-selector="edit-submit"] + .form-item__icon{
+.views-form input[data-drupal-selector="edit-submit"] + .form-item__icon {
   background-color: var(--grass);
 }
-.views-form input[data-drupal-selector="edit-submit"]:hover{
+.views-form input[data-drupal-selector="edit-submit"]:hover {
   background-color: var(--grass);
 }
-.views-form input[data-drupal-selector="edit-submit"]:hover + .form-item__icon{
+.views-form input[data-drupal-selector="edit-submit"]:hover + .form-item__icon {
   background-color: var(--grass-light);
 }
-.views-form input[data-drupal-selector="edit-submit"]:active{
+.views-form input[data-drupal-selector="edit-submit"]:active {
   background-color: var(--grass);
 }
-.views-form input[data-drupal-selector="edit-submit"]:active + .form-item__icon{
+.views-form input[data-drupal-selector="edit-submit"]:active + .form-item__icon {
   background-color: var(--grass);
 }
-.views-form input[data-drupal-selector="edit-submit"] + .form-item__icon::before{
-  mask-image: url(icons/check-circle.svg);
+.views-form input[data-drupal-selector="edit-submit"] + .form-item__icon::before {
+          mask-image: url(icons/check-circle.svg);
   -webkit-mask-image: url(icons/check-circle.svg);
 }
 
 
 /*- colors -------------------------------------------------------------------*/
-.form-item-smallvariant label{
+.form-item-smallvariant label {
   color: var(--ashalt-light);
 }
 /* select form small */

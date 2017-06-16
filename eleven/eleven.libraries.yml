@@ -178,6 +178,8 @@ views.exposed:
   css:
     theme:
       templates/component/views/exposed/views-exposed-form.css: {}
+  js:
+      templates/component/views/exposed/views-exposed-form.js: {}        
 
 # ------------------------------------------------------------------------------
 # Modules

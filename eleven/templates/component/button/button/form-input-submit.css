@@ -34,7 +34,6 @@ input[type="submit"].js-hide + .form-item__icon {
 }
 
 /* form actions -------------------------------------------------------------*/
-form.pagewidth #edit-actions,
 .shortcut-set-switch #edit-actions,
 .nodesubmit,
 .views-form  #edit-actions,
