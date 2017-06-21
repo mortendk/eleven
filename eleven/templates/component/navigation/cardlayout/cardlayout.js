@@ -27,7 +27,7 @@
 
   // hide show card text
   $( ".js-hide-cardtext" ).click(function(e) {
-    $('.card__text').toggleClass('card__text--hide');
+    $('.card__text').toggleClass('visually-hidden');
     $(this).toggleClass("is-active");
 
     e.preventDefault();

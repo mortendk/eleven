@@ -6,9 +6,11 @@
       'messages--' ~ type
     ]
   %}
-  <article role="contentinfo" aria-label="{{ status_headings[type] }}"{{ attributes.addClass(classes)|without('role', 'aria-label') }}>
+<article role="contentinfo" aria-label="{{ status_headings[type] }}"{{ attributes.addClass(classes)|without('role', 'aria-label') }}>
 
-    <div class="messages__content">
+  <a href="#" class="js-hide-message hide-message" data-helptext="{{'Hide Message'|t}}">{{'Hide Message'|t}}</a>
+
+  <div class="messages__content">
 
     {% if type == 'error' %}
       <div role="alert">
@@ -16,6 +18,7 @@
       {% if status_headings[type] %}
         <h2 class="visually-hidden">{{ status_headings[type] }}</h2>
       {% endif %}
+
       {% if messages|length > 1 %}
         <ul class="messages__list">
           {% for message in messages %}
@@ -25,11 +28,13 @@
       {% else %}
         {{ messages|first }}
       {% endif %}
+
     {% if type == 'error' %}
       </div>
     {% endif %}
-    </div>
 
-  </article>
+  </div>
+
+</article>
 {% endfor %}
 {% endblock messages %}

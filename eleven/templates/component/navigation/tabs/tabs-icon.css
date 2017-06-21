@@ -69,3 +69,9 @@
           mask-image: url(icons/layout-full.svg);
   -webkit-mask-image: url(icons/layout-full.svg);
 }
+
+.tabs-icon a.hide-messages:before{
+  mask-image: url(icons/layout-full.svg);
+-webkit-mask-image: url(icons/layout-full.svg);
+  
+}

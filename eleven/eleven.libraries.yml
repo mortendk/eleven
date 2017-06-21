@@ -55,7 +55,8 @@ messages:
   css:
     theme:
       templates/component/messages/messages.css: {}
-
+  js:
+    templates/component/messages/messages.js: {}    
 shortcut:
   css:
     theme:
@@ -179,7 +180,7 @@ views.exposed:
     theme:
       templates/component/views/exposed/views-exposed-form.css: {}
   js:
-      templates/component/views/exposed/views-exposed-form.js: {}        
+      templates/component/views/exposed/views-exposed-form.js: {}
 
 # ------------------------------------------------------------------------------
 # Modules
