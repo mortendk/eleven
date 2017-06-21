@@ -7,7 +7,15 @@
 {% endif %}
 
 {{ attach_library(active_theme()~'/views.exposed') }}
+{{ attach_library(active_theme()~'/nav.tabs.icon') }}
 
-<div class="L-left-bottom form-item-smallvariant">
+<nav class="tabs-icon views-filter-layout">
+  <ul class="L-right">
+    <li><a href="#" class="js-hide-filter hide-filter" data-helptext="{{'Hide Filter'|t}}">{{'Hide Filter'|t}}</a></li>
+    <li><a href="#" class="js-hide-actions hide-actions" data-helptext="{{'Hide Actions'|t}}">{{'Hide Actions'|t}}</a></li>
+  </ul>
+</nav>
+
+<div class="views-filter L-left-bottom form-item-smallvariant">
   {{ form }}
 </div>
