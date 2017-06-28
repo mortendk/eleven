@@ -104,6 +104,11 @@ libraries-override:
         css/components/progress.css: false
 
 
+  classy/user:
+    css:
+      component:
+        css/components/user.css: templates/component/form/password.css
+
 # vertical tabs
   core/drupal.vertical-tabs:
     css:
@@ -132,6 +137,7 @@ libraries-override:
     css:
       component:
         /core/themes/stable/css/dblog/dblog.module.css: templates/layout-landing/reports/dblog.css
+
 
 
 

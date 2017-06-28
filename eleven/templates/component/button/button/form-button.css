@@ -102,21 +102,31 @@ button span {
 /* buttons that should look like a link
   ex admin/structure/types/manage/article/fields/node.article.body
 */
+button.link,
 button.link-edit-summary {
   height: auto;
   background-color: transparent;
   background-image: none;
-  color: var(--bluesky);
+  color: var(--grass);
   padding: 0;
   -webkit-appearance: none;
   font-weight: normal;
 
 }
+button.link:before,
 button.link-edit-summary:before {
           mask-image: none;
   -webkit-mask-image: none;
   background-color: transparent
 }
+button.link:hover,
 button.link-edit-summary:hover{
-  color: var(--bluesky-light);
+  color: var(--grass-light);
 }
+
+
+/*button.link:before {
+  background-color: var(--transparent);
+          mask: none;
+  -webkit-mask: none;
+}*/
