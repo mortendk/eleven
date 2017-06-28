@@ -61,6 +61,11 @@ shortcut:
     theme:
       templates/component/shortcut/shortcut.css: {}
 
+progress:
+  css:
+    theme:
+      templates/component/progress/progress-bar.css: {}
+
 # ------------------------------------------------------------------------------
 # Admin landing pages
 # ------------------------------------------------------------------------------
@@ -105,6 +110,10 @@ nav.dropbutton.smallbutton:
     theme:
       templates/component/navigation/dropbutton/smallbuttons.css: {}
 
+nav.pager:
+  css:
+    theme:
+      templates/component/navigation/pager/pager.css: {}
 # ------------------------------------------------------------------------------
 # Forms
 # ------------------------------------------------------------------------------
@@ -179,7 +188,7 @@ views.exposed:
     theme:
       templates/component/views/exposed/views-exposed-form.css: {}
   js:
-      templates/component/views/exposed/views-exposed-form.js: {}        
+      templates/component/views/exposed/views-exposed-form.js: {}
 
 # ------------------------------------------------------------------------------
 # Modules

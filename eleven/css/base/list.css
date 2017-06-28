@@ -14,30 +14,19 @@ ol li{
   list-style: decimal;
 }
 ul li {
-  margin-left: 2rem;
+  margin-left: 0;
+  padding: 0.25rem 0;
 }
 ol li {
-  margin-left: 3rem;
+  margin-left: 1rem;
 }
 
-/* fake dots */
-.content li:before {
+/*ul li:before {
   position: relative;
-  top: 0.1em;
-  padding-right: 0.25em;
   color: gray;
-  font-size: 1.5em;
-  content: "-";
-}
-
-/* -- list items -------------------------------------------------------------*/
-.content li {
-  margin-left: 2rem;
-  padding-top: 0.2rem;
-  padding-bottom: 0.2rem;
-  border-bottom: 1px solid gray;
-  color: gray;
-}
+  font-size: 1rem;
+  content: "- ";
+}*/
 
 /* commalist */
 .item-list__comma-list li{

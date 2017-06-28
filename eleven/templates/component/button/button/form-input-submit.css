@@ -55,7 +55,7 @@ input[type="submit"].js-hide + .form-item__icon {
 }
 
 /* links  buttons */
-.form-actions a.button {
+a.button {
   position: relative;
   display: inline-block;
   height: 2rem;
@@ -74,7 +74,7 @@ input[type="submit"].js-hide + .form-item__icon {
   text-decoration: none;
 }
 
-.form-actions a.button:before {
+a.button:before {
   position: absolute;
   top: 0.5rem;
   left: 0.5rem;
@@ -94,11 +94,11 @@ input[type="submit"].js-hide + .form-item__icon {
           mask-repeat: no-repeat;
 }
 
-.form-actions a.button:hover {
+a.button:hover {
   background-image: var(--button-bluesky-rev);
 }
-.form-actions a.button:hover:before {
-  transform: rotate(180deg);
+a.button:hover:before {
+
 }
 
 
@@ -144,6 +144,7 @@ input[type="submit"].button--primary:hover {
 input[type="submit"].button--primary:hover + .form-item__icon {
   background-color: var(--grass-light);
 }
+
 
 /*  ----------------------------------------------------------------------------
 update button on form-display

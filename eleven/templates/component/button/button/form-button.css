@@ -70,6 +70,7 @@ button.action-save:before {
 }
 
 /* cancel */
+
 .button[data-drupal-selector="edit-cancel"] {
   background-image: var(--button-concrete);
   color: var(--asphalt-light);

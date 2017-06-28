@@ -86,11 +86,46 @@ input[type="time"] + .form-item__icon{
   border: 1px solid var(--bluesky-light);
   border-right: none,
 }
-
 input[type="time"] + .form-item__icon::before{
   mask-image: url(icons/clock-o.svg);
   -webkit-mask-image: url(icons/clock-o.svg);
 }
+
+/*password*/
+input[type="password"]{
+  border-left: none
+}
+input[type="password"] + .form-item__icon{
+  border: 1px solid var(--bluesky-light);
+  border-right: none,
+}
+input[type="password"] + .form-item__icon::before{
+  mask-image: url(icons/lock.svg);
+  -webkit-mask-image: url(icons/lock.svg);
+}
+
+/*search */
+/* type icons */
+
+input[type="search"]{
+  border-left: none
+}
+input[type="search"] + .form-item__icon{
+  border: 1px solid var(--bluesky-light);
+  border-right: none,
+}
+input[type="search"] + .form-item__icon::before{
+  mask-image: url(icons/search.svg);
+  -webkit-mask-image: url(icons/search.svg);
+}
+
+
+.form-item--search input{
+  width: calc( 100% - 3rem);
+  border-left: none
+}
+
+
 
 
 /* colors  ------------------------------------------------------------------*/
@@ -141,18 +176,6 @@ input:hover + .form-item__icon::before {
   background-color: var(--bluesky);
 }
 
-
-/* type icons */
-.form-item__icon--date::before { }
-
-.form-item--search input{
-  width: calc( 100% - 3rem);
-  border-left: none
-}
-.form-item__icon--search::before {
-          mask-image: url(icons/search.svg);
-  -webkit-mask-image: url(icons/search.svg);
-}
 
 
 .form-item__icon--password::before {}

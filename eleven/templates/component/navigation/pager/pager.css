@@ -1,0 +1,97 @@
+
+.pager {
+}
+.pager__items {
+}
+
+/* items */
+.pager__item {
+  position: relative;
+}
+.pager__item a {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: var(--bluesky-light);
+  color: var(--white);
+  line-height: 1.5rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* active item */
+.pager__item.is-active a {
+  background-color: var(--bluesky);
+  color: var(--bluesky-light-light);
+}
+.pager__item a:hover {
+  background-color: var(--bluesky);
+  color: var(--bluesky-light-light);
+}
+
+/* hide the text */
+.pager__item--first a,
+.pager__item--previous a,
+.pager__item--ellipsis a,
+.pager__item--next a,
+.pager__item--last a {
+  text-indent: -666rem;
+}
+
+/* icons */
+.pager__item--first a:before,
+.pager__item--previous a:before,
+.pager__item--ellipsis a:before,
+.pager__item--next a:before,
+.pager__item--last a:before,
+.pager__item--last a::before {
+  position: absolute;
+  top: 0.25rem;
+  left: 0.5rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--white);
+  background-image: none ! important; /* yes we wanna make sure no module have fun here */
+  content: "";
+  transition: 0.5s ease-in;
+
+  -webkit-mask-size: contain !important;
+          mask-size: contain !important;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+}
+
+
+.pager__item--first a:before {
+          mask-image: url(icons/chevron-up.svg);
+  -webkit-mask-image: url(icons/chevron-up.svg);
+  top: 0.25rem;
+  left: 0.25rem;
+}
+.pager__item--previous a:before {
+          mask-image: url(icons/chevron-left.svg);
+  -webkit-mask-image: url(icons/chevron-left.svg);
+  top: 0.25rem;
+  left: 0.25rem;
+
+}
+
+.pager__item--ellipsis a:before {
+          mask-image: url(icons/ellipsis-h.svg);
+  -webkit-mask-image: url(icons/ellipsis-h.svg);
+  top: 0.5rem;
+  left: 0.25rem;
+}
+
+.pager__item--next a:before {
+          mask-image: url(icons/chevron-right.svg);
+  -webkit-mask-image: url(icons/chevron-right.svg);
+}
+.pager__item--last a::before {
+          mask-image: url(icons/chevron-down.svg);
+  -webkit-mask-image: url(icons/chevron-down.svg);
+  top: 0.5rem;
+  left: 0.25rem;
+
+}
