@@ -158,3 +158,4 @@ stylesheets-remove:
   - core/themes/stable/css/field_ui/field_ui.admin.css
   - core/themes/stable/css/system/components/fieldgroup.module.css
   - core/themes/stable/css/user/user.admin.css
+  - profiles/thunder/modules/thunder_article/css/article-form.css
