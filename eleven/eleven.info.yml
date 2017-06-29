@@ -97,12 +97,10 @@ libraries-override:
       component:
         css/components/file.css: false
 
-
   classy/progress:
     css:
       component:
         css/components/progress.css: false
-
 
   classy/user:
     css:
@@ -138,8 +136,11 @@ libraries-override:
       component:
         /core/themes/stable/css/dblog/dblog.module.css: templates/layout-landing/reports/dblog.css
 
-
-
+# paragraphs
+  paragraphs/drupal.paragraphs.admin:
+    css:
+      theme:
+        css/paragraphs.admin.css: templates/modules/paragraphs/paragraphs.css
 
 # jquery ui
   # look at #/core/core.libraries.yml for my libs

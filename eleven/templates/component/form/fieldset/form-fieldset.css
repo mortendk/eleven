@@ -14,14 +14,14 @@ fieldset > legend{
   margin-left: -0.5rem;
   margin-right: 1rem;
   width: calc(100% + 1rem);
-  background-color: var(--bluesky-light-light);
-  border-top: 1px solid var(--bluesky-light);
+  background-color: var(--gravel);
+  border-top: 1px solid var(--concrete-light);
 }
 
 .fieldset-legend{
   font-weight: 500;
   color: var(--bluesky);
-  border-bottom: 1px solid var(--bluesky-light);
+  border-bottom: 1px solid var(--concrete-light);
   width: 100%;
   display: block;
   line-height: 2rem;

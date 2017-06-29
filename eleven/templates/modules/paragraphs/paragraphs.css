@@ -1,0 +1,83 @@
+.field-multiple-table td{
+  padding: 0.5rem 0 0.5rem 0.5rem
+}
+.field-multiple-drag{
+  width: 3rem;
+}
+
+.paragraph-type-top{
+  width: 100%;
+  background-color: var(--white-90);
+  position: relative;
+  height: 2rem;
+  border-bottom: 1px solid var(--gravel);
+}
+
+.paragraph-type-title {
+  float: left;
+}
+.paragraph-type-top .form-item--input{
+  float: right
+}
+/* default */
+.paragraph-type-top input[type="submit"]{
+  background-color: var(--concrete-light);
+  color: var(--white);
+}
+.paragraph-type-top input[type="submit"] + .form-item__icon{
+  background-color: var(--concrete);
+}
+.paragraph-type-top input[type="submit"] + .form-item__icon:before{
+  mask-image: url(icons/pencil.svg);
+    -webkit-mask-image: url(icons/pencil.svg);
+}
+
+
+
+/*thunder specific stuff ...*/
+
+.paragraph-type-top .dropbutton{
+  position: absolute;
+  right: 0
+}
+
+
+
+
+.paragraph-type-top .dropbutton li{
+  display: inline-block;
+}
+.paragraph-type-top .dropbutton li span{
+  display: block
+}
+.paragraph-type-top .dropbutton input[type="submit"]{
+  height: 2rem;
+  width: 10rem
+}
+
+
+/*edit */
+.paragraph-type-top li.edit input[type="submit"] {
+  background-color: var(--grass-light);
+  color: var(--white);
+}
+.paragraph-type-top li.edit input[type="submit"] + .form-item__icon{
+  background-color: var(--grass);
+}
+.paragraph-type-top li.edit input[type="submit"] + .form-item__icon:before{
+  mask-image: url(icons/pencil.svg);
+    -webkit-mask-image: url(icons/pencil.svg);
+}
+
+/*remove*/
+.paragraph-type-top li.remove input[type="submit"]{
+  background-color: var(--strawberry-light);
+  color: var(--white);
+}
+.paragraph-type-top li.remove input[type="submit"] + .form-item__icon{
+  background-color: var(--strawberry);
+}
+.paragraph-type-top li.edit input[type="submit"] + .form-item__icon:before{
+  mask-image: url(icons/thrash.svg);
+    -webkit-mask-image: url(icons/thrash.svg);
+}
