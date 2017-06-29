@@ -90,10 +90,11 @@ td a {
 th {
   position: relative;
   padding: 0.25rem 0.5rem;
-  border: 1px solid var(--blueskye);
+  border-top: 1px solid var(--concrete);
+  border-bottom: 1px solid var(--concrete);
   border-right: 0;
-  background-color: var(--bluesky-light);
-  color: var(--bluesky-light-light);
+  background-color: var(--gravel-light);
+  /*color: var(--bluesky-light-light);*/
   font-size: 1rem;
   font-weight: bold;
   text-align: left;

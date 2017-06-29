@@ -1,83 +1,99 @@
-.field-multiple-table td{
-  padding: 0.5rem 0 0.5rem 0.5rem
+.field-multiple-table td {
+  padding: 0.5rem 0 0.5rem 0.5rem;
 }
-.field-multiple-drag{
+.field-multiple-drag {
   width: 3rem;
 }
 
-.paragraph-type-top{
-  width: 100%;
-  background-color: var(--white-90);
+.paragraph-type-top {
   position: relative;
+  width: 100%;
   height: 2rem;
   border-bottom: 1px solid var(--gravel);
+  background-color: var(--white-90);
 }
 
 .paragraph-type-title {
   float: left;
 }
-.paragraph-type-top .form-item--input{
-  float: right
+.paragraph-type-top .form-item--input {
+  float: right;
 }
-/* default */
-.paragraph-type-top input[type="submit"]{
-  background-color: var(--concrete-light);
-  color: var(--white);
-}
-.paragraph-type-top input[type="submit"] + .form-item__icon{
-  background-color: var(--concrete);
-}
-.paragraph-type-top input[type="submit"] + .form-item__icon:before{
-  mask-image: url(icons/pencil.svg);
-    -webkit-mask-image: url(icons/pencil.svg);
-}
-
 
 
 /*thunder specific stuff ...*/
+.paragraph-type-add-modal
 
-.paragraph-type-top .dropbutton{
+
+
+.paragraph-type-top .dropbutton {
   position: absolute;
-  right: 0
+  right: 0;
 }
 
 
-
-
-.paragraph-type-top .dropbutton li{
+.paragraph-type-top .dropbutton li {
   display: inline-block;
+  margin-right: 0.25rem;
+  padding: 0
 }
-.paragraph-type-top .dropbutton li span{
-  display: block
+
+.paragraph-type-top .dropbutton li span {
+  display: block;
 }
-.paragraph-type-top .dropbutton input[type="submit"]{
+.paragraph-type-top .dropbutton input[type="submit"] {
+  width: 10rem;
   height: 2rem;
-  width: 10rem
 }
 
+/*------------------------------------------------------------------------------
+Buttons
+------------------------------------------------------------------------------*/
 
-/*edit */
-.paragraph-type-top li.edit input[type="submit"] {
-  background-color: var(--grass-light);
+/*default */
+.paragraph-type-top .dropbutton input[type="submit"],
+.paragraph-type-top input[type="submit"] {
+  background-color: var(--concrete);
   color: var(--white);
 }
-.paragraph-type-top li.edit input[type="submit"] + .form-item__icon{
-  background-color: var(--grass);
+.paragraph-type-top input[type="submit"] + .form-item__icon {
+  background-color: var(--asphalt-light);
 }
-.paragraph-type-top li.edit input[type="submit"] + .form-item__icon:before{
-  mask-image: url(icons/pencil.svg);
-    -webkit-mask-image: url(icons/pencil.svg);
+
+.paragraph-type-top .dropbutton input[type="submit"]:hover,
+.paragraph-type-top input[type="submit"]:hover {
+  background-color: var(--asphalt-light);
+}
+.paragraph-type-top input[type="submit"]:hover + .form-item__icon {
+  background-color: var(--concrete);
+}
+
+.paragraph-type-top input[type="submit"] + .form-item__icon:before {
+          mask-image: url(icons/trash.svg);
+  -webkit-mask-image: url(icons/trash.svg);
+}
+
+/*edit */
+.paragraph-type-top li.edit input[type="submit"] + .form-item__icon:before {
+          mask-image: url(icons/pencil.svg);
+  -webkit-mask-image: url(icons/pencil.svg);
 }
 
 /*remove*/
-.paragraph-type-top li.remove input[type="submit"]{
-  background-color: var(--strawberry-light);
-  color: var(--white);
+.paragraph-type-top li.confirm-remove input[type="submit"] + .form-item__icon:before,
+.paragraph-type-top li.remove input[type="submit"] + .form-item__icon:before {
+          mask-image: url(icons/trash.svg);
+  -webkit-mask-image: url(icons/trash.svg);
 }
-.paragraph-type-top li.remove input[type="submit"] + .form-item__icon{
-  background-color: var(--strawberry);
+
+/* restore*/
+.paragraph-type-top li.restore input[type="submit"] + .form-item__icon:before {
+          mask-image: url(icons/refresh.svg);
+  -webkit-mask-image: url(icons/refresh.svg);
 }
-.paragraph-type-top li.edit input[type="submit"] + .form-item__icon:before{
-  mask-image: url(icons/thrash.svg);
-    -webkit-mask-image: url(icons/thrash.svg);
+
+/* collapse*/
+.paragraph-type-top li.collapse input[type="submit"] + .form-item__icon:before {
+          mask-image: url(icons/sort-down.svg);
+  -webkit-mask-image: url(icons/sort-down.svg);
 }

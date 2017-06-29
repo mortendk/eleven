@@ -67,10 +67,10 @@ td .tabledrag-changed {
 
 /* form settings edit */
 .ajax-new-content {
-  margin-top: -0.5rem;
+  /*margin-top: -0.5rem;
   margin-bottom: -0.5rem;
   margin-left: -0.5rem;
-  padding: 0.5rem;
+  padding: 0.5rem;*/
   background-color: var(--bluesky-light-20);
 }
 
