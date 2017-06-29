@@ -4,19 +4,8 @@
 
 ## Installation
 
-
-#### 1. In the section repositories of your composer.json, add:
-
 ```
-{
-    "type": "vcs",
-    "url": "https://github.com/thememachine/eleven"
-}
-```
-
-#### 2. Install theme
-
-```
+composer config repositories.eleven vcs https://github.com/thememachine/eleven
 composer require thememachine/eleven
 ```
 
