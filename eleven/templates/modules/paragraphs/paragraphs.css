@@ -97,3 +97,9 @@ Buttons
           mask-image: url(icons/sort-down.svg);
   -webkit-mask-image: url(icons/sort-down.svg);
 }
+
+
+input[type="submit"].field-add-more-submit + .form-item__icon:before {
+          mask-image: url(icons/plus-circle.svg);
+  -webkit-mask-image: url(icons/plus-circle.svg);
+}
