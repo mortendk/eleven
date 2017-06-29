@@ -69,6 +69,8 @@ input[type="text"].form-autocomplete {
 /* icon types */
 /*date*/
 input[type="date"]{
+  width: auto;
+  min-height: none;
   border-left: none
 }
 input[type="date"] + .form-item__icon{

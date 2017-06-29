@@ -71,12 +71,6 @@ tr.card {
   transition: all .1s ease-in-out;
 }
 
-.card__text--hide {
-  min-height: 0rem;
-  height: 0rem;
-  padding: 0;
-  overflow: hidden
-}
 
 
 /* hovers */

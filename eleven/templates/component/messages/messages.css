@@ -2,60 +2,114 @@
 .messages {
   min-height: 5rem;
   margin: 1rem auto;
+  padding: 0.5rem 1rem;
   border: 1px solid black;
   border-left: 1rem solid  black;
-  transition: all 1s ease-out;
   color: var(--white);
-  padding: 1rem 2rem;
-  width: 50%;
+  transition: all 1s ease-out;
 }
 @media (max-width: 47.99em) {
-  .messages { width: 100%}
+  .messages {
+    width: 100%;
+  }
 }
 .messages__content {
-  padding: 1rem;
+  padding: 0.5rem;
 }
 .messages a {
   color: var(--white);
   text-decoration: underline;
 }
-.messages em{
+.messages em {
   font-weight: bold;
 }
-
-.messages .backtrace{
+.messages .backtrace {
   background-color: var(--rasberry);
-
 }
+
+/* hide message */
+a.hide-message {
+  position: relative;
+  display: block;
+  float: right;
+  width: 1rem;
+  padding: 0;
+  line-height: 1rem;
+  text-indent: -666rem;
+}
+
+a.hide-message:before {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--black);
+  background-image: none ! important; /* yes we wanna make sure no module have fun here */
+  content: "";
+  transition: 0.2s ease-in;
+
+          mask-image: url(icons/button-x.svg);
+  -webkit-mask-image: url(icons/button-x.svg);
+  -webkit-mask-size: contain !important;
+          mask-size: contain !important;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+}
+
 
 /* color */
 .messages--status {
-  background-color: var(--bluesky-light-light);
   border-color: var(--bluesky-light);
+  background-color: var(--bluesky-light-light);
   color: var(--bluesky);
+}
+.messages--status a.hide-message:before {
+  background-color: var(--bluesky);
 }
 
 .messages--warning {
-  background-color: var(--yellowsnow-light);
   border-color: var(--yellowsnow);
-    color: var(--rasberry);
+  background-color: var(--yellowsnow-light);
+  color: var(--yellowsnow);
+}
+.messages--warning a.hide-message:before {
+  background-color: var(--rasberry);
 }
 
 .messages--error {
-  background-color: var(--strawberry-light);
   border-color: var(--strawberry);
-
+  background-color: var(--strawberry-light);
+}
+.messages--error a.hide-message:before {
+  background-color: var(--strawberry);
 }
 
 .messages + .messages {
-}
 
+}
 .messages__list {
-}
 
+}
 
 /*help message */
 .message-help {
 }
 .message-help__content {
+}
+
+
+/* message hide effect */
+.message {
+  transition: all 0.2s ease-in-out;
+}
+.message--hide {
+  overflow: hidden;
+  height: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  border: none;
 }

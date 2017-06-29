@@ -11,9 +11,18 @@
  * - content: The content of this block.
  */
 #}
-{# Why is there a div wrapped around here its completely blank ? #}
 
-{# lets taste on it and then only output if we need it  #}
+{#
+
+<a href="#" class="button hide-messages js-hide-messages" data-helptext="{{'Hide Messages'|t}}">{{'Hide Messages'|t}}</a>
+
+#}
+
+
+
+
 {% if content|render %}
-  {{ content }}
+  <div class="w-8">
+    {{ content }}
+  </div>
 {% endif %}

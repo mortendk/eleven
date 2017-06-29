@@ -55,7 +55,8 @@ messages:
   css:
     theme:
       templates/component/messages/messages.css: {}
-
+  js:
+    templates/component/messages/messages.js: {}    
 shortcut:
   css:
     theme:
