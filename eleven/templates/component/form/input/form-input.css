@@ -3,13 +3,14 @@
 ------------------------------------------------------------------------------*/
 input {
   height: 2rem;
+  padding: 0;
   padding-left: 0.5rem;
   border: 1px solid var(--bluesky);
   background-color: var(--white);
   color: var(--asphalt);
   line-height: 2rem;
   transition: all 0.5s ease-in-out;
-  border-style: solid;
+  border-width: 1px
 }
 input:focus {
   outline: 0;
@@ -86,11 +87,47 @@ input[type="time"] + .form-item__icon{
   border: 1px solid var(--bluesky-light);
   border-right: none,
 }
-
 input[type="time"] + .form-item__icon::before{
   mask-image: url(icons/clock-o.svg);
   -webkit-mask-image: url(icons/clock-o.svg);
 }
+
+/*password*/
+input[type="password"]{
+  border-left: none
+}
+input[type="password"] + .form-item__icon{
+  border: 1px solid var(--bluesky-light);
+  border-right: none,
+}
+input[type="password"] + .form-item__icon::before{
+  mask-image: url(icons/lock.svg);
+  -webkit-mask-image: url(icons/lock.svg);
+}
+
+/*search */
+/* type icons */
+
+input[type="search"]{
+  border-left: none;
+  box-sizing: border-box;
+}
+input[type="search"] + .form-item__icon{
+  border: 1px solid var(--bluesky-light);
+  border-right: none,
+}
+input[type="search"] + .form-item__icon::before{
+  mask-image: url(icons/search.svg);
+  -webkit-mask-image: url(icons/search.svg);
+}
+
+
+.form-item--search input{
+  width: calc( 100% - 3rem);
+  border-left: none
+}
+
+
 
 
 /* colors  ------------------------------------------------------------------*/
@@ -142,18 +179,6 @@ input:hover + .form-item__icon::before {
 }
 
 
-/* type icons */
-.form-item__icon--date::before { }
-
-.form-item--search input{
-  width: calc( 100% - 3rem);
-  border-left: none
-}
-.form-item__icon--search::before {
-          mask-image: url(icons/search.svg);
-  -webkit-mask-image: url(icons/search.svg);
-}
-
 
 .form-item__icon--password::before {}
 .form-item__icon--file { }
@@ -161,29 +186,11 @@ input:hover + .form-item__icon::before {
 
 
 
-
-
-
 /* admin link in forms */
-small .admin-link {
+.machine-name-label {
+  font-weight: bold;
+}
+.form-item .admin-link {
   display: inline-block;
-  margin-left: 0.5rem;
-}
-small .admin-link button.link {
-  color: var(--bluesky-light);
-}
-small .admin-link button.link:hover {
-  color: var(--bluesky-10);
-}
-small .admin-link:before {
-  content: "";
-}
-small .admin-link:after {
-  content: "";
-}
-.admin-link button:before {
-  background-color: var(--transparent);
-
-          mask: none;
-  -webkit-mask: none;
+  padding-left: 0.5rem
 }

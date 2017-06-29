@@ -182,10 +182,18 @@ function eleven_theme_suggestions_item_list_alter(array &$suggestions, array $va
 
   //views list of paths
   if( isset($path[3]) and $path[3] == 'views') {
-    $suggestions[] = 'item_list__' . $path[3];;
+    $suggestions[] = 'item_list__' . $path[3];
   }
 
+  if( isset($path[3]) and $path[3] == 'styleguide') {
+    $suggestions[] = 'item_list__' . $path[3];
+  }
+
+
+
 }
+
+// function THEMENAME_preprocess_item_list(&$variables) { }
 
 
 

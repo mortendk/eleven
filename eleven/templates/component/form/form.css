@@ -22,7 +22,6 @@ form.pagewidth {
 }
 
 
-
 .label,
 .form-item label,
 .form-type-textfield label {
@@ -54,48 +53,7 @@ form.pagewidth {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 .container-inline div,
 .container-inline label {
   display: inline-block;
-}
-
-
-
-/*------------------------------------------------------------------------------
-  widgets
-------------------------------------------------------------------------------*/
-
-/* admin edit  link in forms */
-.form-item .admin-link {
-  display: inline-block;
-  margin-left: 0.5rem;
-}
-.form-item .admin-link button.link {
-  color: var(--bluesky-light);
-}
-.form-item .admin-link button.link:hover {
-  color: var(--bluesky-10);
-}
-.form-item .admin-link:before {
-  content: "";
-}
-.form-item .admin-link:after {
-  content: "";
-}
-.form-item .admin-link button:before {
-  background-color: var(--transparent);
-
-          mask: none;
-  -webkit-mask: none;
 }

@@ -1,0 +1,18 @@
+<div class="pagewidth">
+
+  <h2>{{ "Showing style guide for @name"|t({'@name': theme_info.name}) }}</h2>
+
+  {% if theme_info.description %}
+    <p>{{ theme_info.description }}</p>
+  {% endif %}
+
+  <h2> {{ 'Styleguide element entries'|t }}</h2>
+
+  <p>{{ 'Optional item description.'|t}}</p>
+
+  <p>
+  {{'The header area indicates the style element being displayed. The horizontal rules indicate the top and bottom baselines of the rendered element.'|t}}
+  </p>
+
+
+</div>

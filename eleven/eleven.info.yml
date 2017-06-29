@@ -79,6 +79,7 @@ libraries-override:
         css/components/textarea.css: false
         css/components/ui-dialog.css: false
 
+
 #messages
   classy/messages:
     css:
@@ -96,6 +97,17 @@ libraries-override:
       component:
         css/components/file.css: false
 
+
+  classy/progress:
+    css:
+      component:
+        css/components/progress.css: false
+
+
+  classy/user:
+    css:
+      component:
+        css/components/user.css: templates/component/form/password.css
 
 # vertical tabs
   core/drupal.vertical-tabs:
@@ -121,11 +133,13 @@ libraries-override:
       theme:
         /core/themes/stable/css/views_ui/views_ui.admin.theme.css: false
 
-
   dblog/drupal.dblog:
     css:
       component:
         /core/themes/stable/css/dblog/dblog.module.css: templates/layout-landing/reports/dblog.css
+
+
+
 
 # jquery ui
   # look at #/core/core.libraries.yml for my libs
@@ -158,3 +172,4 @@ stylesheets-remove:
   - core/themes/stable/css/field_ui/field_ui.admin.css
   - core/themes/stable/css/system/components/fieldgroup.module.css
   - core/themes/stable/css/user/user.admin.css
+  - profiles/thunder/modules/thunder_article/css/article-form.css
