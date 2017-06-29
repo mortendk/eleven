@@ -34,6 +34,7 @@ input[type="submit"].js-hide + .form-item__icon {
 }
 
 /* form actions -------------------------------------------------------------*/
+form[data-drupal-selector="node-type-edit-form"] .form-actions,
 .shortcut-set-switch #edit-actions,
 .nodesubmit,
 .views-form  #edit-actions,
