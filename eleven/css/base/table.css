@@ -8,6 +8,7 @@ table {
   border-collapse: collapse;
   color: black;
   font-size: 1rem;
+  border-bottom: 1px solid var(--concrete-light);
 }
 caption,
 th,
@@ -28,10 +29,10 @@ tr:nth-of-type(odd) {
   background-color: var(--white);
 }
 tr:nth-of-type(even) {
-  background-color: var(--gravel-light);
+  background-color: var(--gravel-light-light);
 }
 tr:hover {
-  background-color: var(--gravel-light-light);
+  background-color: var(--gravel-light);
 }
 tr:hover td {
   border-color: var(--bluesky-50);
@@ -44,7 +45,7 @@ tr.selected:nth-of-type(odd) {
   color: var(--bluesky);
 }
 tr.selected:nth-of-type(odd) a {
-  border-color: var(--bluesky);
+
 }
 
 tr.selected:nth-of-type(even) {
@@ -90,7 +91,7 @@ td a {
 th {
   position: relative;
   padding: 1rem 0.5rem;
-  border-right: 0;
+  border-right: 1px solid var(--concrete);
   background-color: var(--concrete-light);
   color: var(--asphalt-light);
   font-size: 1rem;
@@ -107,21 +108,18 @@ th:last-child {
   border-right: none;
 }
 th a {
-  position: absolute;
+  /*position: absolute;
   top: 0;
-  left: 0;
+  left: 0;*/
   display: block;
   width: 100%;
   color: var(--bluesky);
-  line-height: 4rem
+  /*line-height: 4rem;*/
+  padding-left: 0.5rem
 }
-th.is-active a {
-  /*background-color: var(--bluesky);*/
-  color: var(--bluesky);
-}
+th.is-active { }
 th a:hover {
-  background-color: var(--bluesky);
-  color: var(--bluesky-light-light);
+  color: var(--bluesky-light);
   text-decoration: none;
   cursor: ns-resize;
 }

@@ -52,7 +52,7 @@ input[type="text"].form-autocomplete {
   height: 1rem;
   background-image: none ! important; /* yes we wanna make sure no module have fun here */
   content: "";
-  transition: 0.5s ease-in;
+  transition: 0.2s ease-in;
 
           mask-image: var(--icon-coffee);
   -webkit-mask-image: var(--icon-coffee);
@@ -62,7 +62,8 @@ input[type="text"].form-autocomplete {
           mansk-repeat: no-repeat;
 }
 
-.form-item__icon:hover::before {
+
+input:focus + .form-item__icon::before, input:hover + .form-item__icon::before{
   transform: scale(1.2);
 }
 

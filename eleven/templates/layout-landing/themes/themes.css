@@ -61,7 +61,7 @@
   background-color: var(--concrete);
   background-image: none ! important; /* yes we wanna make sure no module have fun here */
   content: "";
-  transition: 0.5s ease-in;
+  transition: 0.2s ease-in;
 
   -webkit-mask-size: contain !important;
           mask-size: contain !important;

@@ -26,7 +26,7 @@ button:before {
   background-color: var(--white);
   background-image: none ! important; /* yes we wanna make sure no module have fun here */
   content: "";
-  transition: 0.5s ease-in;
+  transition: 0.2s ease-in;
 
           mask-image: var(--icon-coffee);
   -webkit-mask-image: var(--icon-coffee);

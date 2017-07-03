@@ -17,13 +17,13 @@
 {% if primary %}
   <h2 class="visually-hidden">{{ 'Primary tabs'|t }}</h2>
   <div class="localtask__lvl1">
-    <ul class="L tabs pagewidth">{{ primary }}</ul>
+    <ul class="pagewidth L L--nested tabs">{{ primary }}</ul>
   </div>
 {% endif %}
 
 {% if secondary %}
   <div class="localtask__lvl2">
     <h2 class="visually-hidden">{{ 'Secondary tabs'|t }}</h2>
-    <ul class="L tabs-small pagewidth">{{ secondary }}</ul>
+    <ul class="pagewidth L L--nested tabs-small">{{ secondary }}</ul>
   </div>
 {% endif %}

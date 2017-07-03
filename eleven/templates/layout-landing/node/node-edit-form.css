@@ -45,7 +45,7 @@
   background-color: var(--bluesky);
   background-image: none ! important;
   content: "";
-  transition: 0.5s ease-in;
+  transition: 0.2s ease-in;
   transition: all 0.5s ease-in-out;
 
           /*mask-image: var(--icon-coffee);

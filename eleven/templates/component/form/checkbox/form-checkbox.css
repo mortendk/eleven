@@ -34,7 +34,7 @@ input[type=checkbox] {
 th.select-all input[type=checkbox] {
   width: 1.5rem;
   height: 1.5rem;
-  background-color: var(--rasberry-light);
+  background-color: var(--bluesky-light);
   border: none;
   -webkit-appearance: none;
           mask-image: url(icons/check-square.svg);

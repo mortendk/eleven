@@ -43,7 +43,6 @@ arrow
   right: 0;
   width: 2rem;
   height: 2rem;
-  margin-right: -2rem;
   pointer-events: none;
 }
 .select__arrow::before {
