@@ -55,12 +55,12 @@ tr.card {
   text-decoration: underline;
 }
 .card .card__title a {
-  color: var(--black);
+  color: var(--bluesky);
   text-decoration: none
 }
 .card .card__title a:hover,
 .card a:hover .card__title {
-  color: var(--bluesky);
+  color: var(--bluesky-light);
 }
 
 /* text */

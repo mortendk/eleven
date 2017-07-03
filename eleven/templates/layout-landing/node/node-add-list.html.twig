@@ -4,18 +4,12 @@
  #}
 {{ attach_library(active_theme()~'/card') }}
 
-{% if types is not empty %}
-{#
-<div class="pagewidth L-right">
-  <ul class="L-right tabs-small">
-    <li><a href="#" class="button">1</a> </li>
-    <li><a href="#" class="button">2</a> </li>
-    <li><a href="#" class="button">3</a> </li>
-  </ul>
-</div>
- #}
 
-<section class="L LW-third cards">
+{% if types is not empty %}
+
+{% include active_theme_path() ~ '/templates/component/navigation/cardlayout/cardlayout.html.twig' %}
+
+<section class="pagewidth L LW-4 LW--nooverflow cards js-card-layout-target">
   {% for type in types %}
     <article class="card w">
 
