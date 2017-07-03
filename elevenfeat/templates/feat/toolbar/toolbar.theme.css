@@ -32,7 +32,7 @@ body.is-edit-ui-toolbar-opened #toolbar-bar .toolbar-bar,
   color: var(--gravel);
 }
 #toolbar-bar .toolbar-item.trigger.is-active {
-  background-color: var(--bluesky);
+  background-color: var(--asphalt-light);
 }
 /* tab icons colors*/
 #toolbar-bar .toolbar-item.trigger:hover:before {
@@ -155,7 +155,7 @@ body.is-edit-ui-toolbar-opened #toolbar-bar .toolbar-bar,
 ------------------------------------------------------------------------------*/
 #toolbar-bar button.toolbar-icon-toggle-vertical,
 #toolbar-bar button.toolbar-icon-toggle-vertical:focus {
-  border-left: 1px solid var(--bluesky-light);
+  border-left: 1px solid var(--asphalt);
   background-color: var(--bluesky-light);
 }
 
@@ -224,15 +224,14 @@ level 1 : horizontal
 }
 .toolbar-horizontal .toolbar-tray li.menu-item--0 > a {
   background-image: none;
-  background-color: var(--bluesky-light);
-  border-right: 1px solid var(--bluesky);
+  background-color: var(--asphalt-light);
+  border-right: 1px solid var(--asphalt);
 }
 .toolbar-horizontal .toolbar-tray li.menu-item--0 > a.is-active{
-  background-color: var(--bluesky);
-  border-right: 1px solid var(--bluesky);
+  background-color: var(--concrete);
 }
 .toolbar-horizontal .toolbar-tray li.menu-item--0 > a:hover{
-  background-color: var(--bluesky);
+  background-color: var(--asphalt);
 }
 
 /* level 1 */
