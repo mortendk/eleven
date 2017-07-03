@@ -58,7 +58,7 @@ tr.selected td {
   /*border-color: var(--rasberry);*/
 }
 
- td.views-field-node-bulk-form {
+ td.© {
    width: 3rem;
    height: 1rem;
    overflow: hidden
@@ -72,15 +72,15 @@ tr.selected td {
 
 /*cells ---------------------------------------------------------------------*/
 td {
-  padding-left: 0.5rem;
-  border-bottom: 1px solid var(--bluesky-light-20);
-  border-left: 1px solid var(--bluesky-light-20);
+  padding: 1rem 0.5rem;
+  /*border-bottom: 1px solid var(--bluesky-light-20);
+  border-left: 1px solid var(--bluesky-light-20);*/
 }
 td:first-child {
-  border-left: none;
+  /*border-left: 1px solid var(--asphalt);*/
 }
 td:last-child {
-  border-right: none;
+  /*border-right: 1px solid var(--asphalt);*/
 }
 td a {
   color: var(--bluesky-light);
@@ -89,16 +89,15 @@ td a {
 /* header --------------------------------------------------------------------*/
 th {
   position: relative;
-  padding: 0.25rem 0.5rem;
-  border-top: 1px solid var(--concrete);
-  border-bottom: 1px solid var(--concrete);
+  padding: 1rem 0.5rem;
   border-right: 0;
-  background-color: var(--gravel-light);
-  /*color: var(--bluesky-light-light);*/
+  background-color: var(--concrete-light);
+  color: var(--asphalt-light);
   font-size: 1rem;
   font-weight: bold;
   text-align: left;
   white-space: nowrap;
+  line-height: 2rem;
 }
 
 th:firs-child {
@@ -113,13 +112,12 @@ th a {
   left: 0;
   display: block;
   width: 100%;
-  padding: 0.25rem 0.5rem;
-  background-color: var(--bluesky-light);
-  color: var(--white);
+  color: var(--bluesky);
+  line-height: 4rem
 }
 th.is-active a {
-  background-color: var(--bluesky);
-  color: var(--white);
+  /*background-color: var(--bluesky);*/
+  color: var(--bluesky);
 }
 th a:hover {
   background-color: var(--bluesky);
@@ -138,7 +136,7 @@ th a[href$="sort=desc"]:hover {
 /* tablesorting icons */
 .tablesort {
   position: absolute;
-  top: 0.5rem;
+  top: 1.5rem;
   right: 0.5rem;
   display: block;
   width: 1rem;
@@ -152,7 +150,7 @@ th a[href$="sort=desc"]:hover {
 .tablesort--asc,
 .tablesort--desc {
   background-image: none;
-  background-color: var(--white);
+  background-color: var(--asphalt);
 }
 .tablesort--asc {
           mask-image: url(icons/angle-down.svg);
@@ -164,7 +162,7 @@ th a[href$="sort=desc"]:hover {
 }
 
 th.views-field-operations {
-  width: 6rem;
+  width: 10rem;
 }
 
 

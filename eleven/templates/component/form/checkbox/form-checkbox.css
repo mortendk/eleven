@@ -32,8 +32,8 @@ input[type=checkbox] {
 
 /* select all element from views slector */
 th.select-all input[type=checkbox] {
-  width: 1rem;
-  height: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
   background-color: var(--rasberry-light);
   border: none;
   -webkit-appearance: none;
@@ -175,5 +175,5 @@ adds in the visually-hidden class we wanna overwrite
 /* checkbox that should look like an open close button*/
 .js-form-item-revision,
 .js-form-item-menu-enabled {
-  
+
 }

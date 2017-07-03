@@ -1,7 +1,7 @@
 /* -- select -----------------------------------------------------------------*/
 select {
   width: 100%;
-  min-width: 10rem;
+  min-width: 11rem;
   height: 2rem;
   margin: 0;
   padding: 0 0.5rem;
@@ -152,24 +152,6 @@ select.form-select[multiple] + .select__arrow {
 
 
 /* size variabtions  -------------------------------------------------------- */
-
-/* inside a table we want it to have the same size as the text */
-td select {
-  height: 1.5rem;
-  line-height: 1.5rem;
-}
-/* arrow */
-td .select__arrow {
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-right: -1.5rem;
-}
-td .select__arrow::before {
-  top: 0.5rem;
-  left: 0.25rem;
-  width: 1rem;
-  height: 1rem;
-}
 
 
 /* block admin page variant */

@@ -133,6 +133,7 @@ option:checked {
 }
 
 /* Elements that were selecting */
+
 /*
 option:checked {
   box-shadow: inset 20px 30px red;
@@ -153,6 +154,7 @@ select option:not(:checked) {
   width: 1rem;
   padding-left: 2rem;
 }
+*/
 
 /* was selected */
 option[selected] {
