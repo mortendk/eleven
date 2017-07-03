@@ -5,9 +5,9 @@
 #}
 {{ attach_library(active_theme()~'/admin.config') }}
 
-{# do we really want this ?? #}
+{# do we really want this ??
 {{ system_compact_link }}
-
+#}
 {% include active_theme_path() ~ '/templates/component/navigation/cardlayout/cardlayout.html.twig' %}
 <section{{ attributes.addClass('L','LW-4', 'LW--nooverflow', 'pagewidth', 'js-card-layout-target') }}>
 
