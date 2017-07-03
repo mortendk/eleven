@@ -18,7 +18,6 @@ regions:
   #footer
   footer:  'Footer'
 
-
 # -- Libraries -----------------------------------------------------------------
 libraries:
   - eleven/global
@@ -36,7 +35,6 @@ libraries-extend:
 
   core/drupal.tabledrag:
     - eleven/table.drag
-
 
   # core/jquery.ui:
   # - eleven/jquery_ui
@@ -78,7 +76,7 @@ libraries-override:
         css/components/tabs.css: false
         css/components/textarea.css: false
         css/components/ui-dialog.css: false
-
+        css/components/dialog.css: false
 
 #messages
   classy/messages:
@@ -113,7 +111,6 @@ libraries-override:
       component:
         /core/themes/stable/css/core/vertical-tabs.css: templates/component/navigation/vertical-tabs/vertical-tabs.css
 
-
 # shotcut
   shortcut/drupal.shortcut:
     css:
@@ -144,10 +141,10 @@ libraries-override:
 
 # jquery ui
   # look at #/core/core.libraries.yml for my libs
-  # core/jquery.ui:
-  #   css:
-  #     theme:
-  #       assets/vendor/jquery.ui/themes/base/theme.css: false
+  core/jquery.ui:
+    css:
+      theme:
+        assets/vendor/jquery.ui/themes/base/theme.css: false
 
   # core/jquery.ui.button:
   #   css:
@@ -159,7 +156,6 @@ libraries-override:
   core/modernizr:
     js:
       assets/vendor/modernizr/modernizr.min.js: js/modernizr-custom.js
-
 
 #-------------------------------------------------------------------------------
 # Remove stylesheets
