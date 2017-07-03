@@ -55,7 +55,7 @@ messages:
     theme:
       templates/component/messages/messages.css: {}
   js:
-    templates/component/messages/messages.js: {}    
+    templates/component/messages/messages.js: {}
 shortcut:
   css:
     theme:
@@ -73,13 +73,6 @@ admin.config:
   css:
     theme:
       templates/layout-landing/config/admin-config.css: {}
-
-# TODO: add a more specific lib name ala views.overview
-permissions:
-  css:
-    theme:
-      templates/layout-landing/permissions/permissions.css: {}
-      templates/layout-landing/permissions-icons.css: {}
 
 blocklayout:
   css:
