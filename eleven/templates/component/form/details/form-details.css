@@ -138,7 +138,7 @@ details.details-summary-link {
 }
 details.details-summary-link summary,
 details.details-summary-link summary:hover {
-  padding-left: 1.5rem;
+  padding-left: 2rem;
   border: none;
   background-color: transparent;
   background-image: none;
@@ -174,4 +174,5 @@ details.details-summary-link summary:hover::before,
 details[open].details-summary-link summary:hover,
 details[open].details-summary-link summary:hover::before {
   color: var(--rasberry);
+  transform: none
 }

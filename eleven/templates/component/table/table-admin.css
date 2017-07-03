@@ -179,3 +179,13 @@ td input.field-weight {
   font-size: 2rem;
 
 }*/
+
+/*  ----------------------------------------------------------------------------
+  user permissions
+----------------------------------------------------------------------------- */
+.module {
+  color: var(--bluesky);
+  font-weight: bold;
+  padding-top: 1rem
+
+}

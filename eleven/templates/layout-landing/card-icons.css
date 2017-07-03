@@ -38,7 +38,7 @@
   display: block;
   width: 2rem;
   height: 2rem;
-  background-color: var(--concrete-light);
+  background-color: var(--bluesky-light);
   background-image: none ! important; /* yes we wanna make sure no module have fun here */
   content: "";
   transition: 0.5s ease-in;
