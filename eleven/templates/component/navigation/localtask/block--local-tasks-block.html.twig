@@ -1,6 +1,5 @@
 {%
   set classes = [
-    'localtask'
     ]
 %}
 <div{{ attributes.addClass(classes) }}>
@@ -12,7 +11,7 @@
 
 
   {% if content %}
-    <nav class="localtask" role="navigation" aria-label="{{ 'Tabs'|t }}">
+    <nav class="localtask " role="navigation" aria-label="{{ 'Tabs'|t }}">
       {{ content }}
     </nav>
   {% endif %}

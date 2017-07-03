@@ -8,6 +8,7 @@ table {
   border-collapse: collapse;
   color: black;
   font-size: 1rem;
+  border-bottom: 1px solid var(--concrete-light);
 }
 caption,
 th,
@@ -28,10 +29,10 @@ tr:nth-of-type(odd) {
   background-color: var(--white);
 }
 tr:nth-of-type(even) {
-  background-color: var(--gravel-light);
+  background-color: var(--gravel-light-light);
 }
 tr:hover {
-  background-color: var(--gravel-light-light);
+  background-color: var(--gravel-light);
 }
 tr:hover td {
   border-color: var(--bluesky-50);
@@ -44,7 +45,7 @@ tr.selected:nth-of-type(odd) {
   color: var(--bluesky);
 }
 tr.selected:nth-of-type(odd) a {
-  border-color: var(--bluesky);
+
 }
 
 tr.selected:nth-of-type(even) {
@@ -58,7 +59,7 @@ tr.selected td {
   /*border-color: var(--rasberry);*/
 }
 
- td.views-field-node-bulk-form {
+ td.© {
    width: 3rem;
    height: 1rem;
    overflow: hidden
@@ -72,15 +73,15 @@ tr.selected td {
 
 /*cells ---------------------------------------------------------------------*/
 td {
-  padding-left: 0.5rem;
-  border-bottom: 1px solid var(--bluesky-light-20);
-  border-left: 1px solid var(--bluesky-light-20);
+  padding: 1rem 0.5rem;
+  /*border-bottom: 1px solid var(--bluesky-light-20);
+  border-left: 1px solid var(--bluesky-light-20);*/
 }
 td:first-child {
-  border-left: none;
+  /*border-left: 1px solid var(--asphalt);*/
 }
 td:last-child {
-  border-right: none;
+  /*border-right: 1px solid var(--asphalt);*/
 }
 td a {
   color: var(--bluesky-light);
@@ -89,16 +90,15 @@ td a {
 /* header --------------------------------------------------------------------*/
 th {
   position: relative;
-  padding: 0.25rem 0.5rem;
-  border-top: 1px solid var(--concrete);
-  border-bottom: 1px solid var(--concrete);
-  border-right: 0;
-  background-color: var(--gravel-light);
-  /*color: var(--bluesky-light-light);*/
+  padding: 1rem 0.5rem;
+  border-right: 1px solid var(--concrete);
+  background-color: var(--concrete-light);
+  color: var(--asphalt-light);
   font-size: 1rem;
   font-weight: bold;
   text-align: left;
   white-space: nowrap;
+  line-height: 2rem;
 }
 
 th:firs-child {
@@ -108,22 +108,18 @@ th:last-child {
   border-right: none;
 }
 th a {
-  position: absolute;
+  /*position: absolute;
   top: 0;
-  left: 0;
+  left: 0;*/
   display: block;
   width: 100%;
-  padding: 0.25rem 0.5rem;
-  background-color: var(--bluesky-light);
-  color: var(--white);
+  color: var(--bluesky);
+  /*line-height: 4rem;*/
+  padding-left: 0.5rem
 }
-th.is-active a {
-  background-color: var(--bluesky);
-  color: var(--white);
-}
+th.is-active { }
 th a:hover {
-  background-color: var(--bluesky);
-  color: var(--bluesky-light-light);
+  color: var(--bluesky-light);
   text-decoration: none;
   cursor: ns-resize;
 }
@@ -138,7 +134,7 @@ th a[href$="sort=desc"]:hover {
 /* tablesorting icons */
 .tablesort {
   position: absolute;
-  top: 0.5rem;
+  top: 1.5rem;
   right: 0.5rem;
   display: block;
   width: 1rem;
@@ -152,7 +148,7 @@ th a[href$="sort=desc"]:hover {
 .tablesort--asc,
 .tablesort--desc {
   background-image: none;
-  background-color: var(--white);
+  background-color: var(--asphalt);
 }
 .tablesort--asc {
           mask-image: url(icons/angle-down.svg);
@@ -164,7 +160,7 @@ th a[href$="sort=desc"]:hover {
 }
 
 th.views-field-operations {
-  width: 6rem;
+  width: 10rem;
 }
 
 

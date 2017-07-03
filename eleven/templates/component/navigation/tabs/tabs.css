@@ -96,25 +96,22 @@ color
 tabs small
 ------------------------------------------------------------------------------*/
 .tabs-small {
-  padding-top: 0.5rem;
 }
 .tabs-small li {
-  margin: 0.25rem 0.5rem;
   border: 0;
+  border-right: 1px solid var(--bluesky-light-light);
+}
+.tabs-small li:first-child{
+  margin-left: 0
 }
 .tabs-small li a {
   display: block;
   padding: 0.5rem 1rem;
-  border-top: 1px solid transparent;
-  border-bottom: 1px solid var(--bluesky);
 }
 .tabs-small li a:hover {
-  border-top: 1px solid var(--bluesky);
   text-decoration: none;
-  border-bottom: 1px solid transparent;
 }
-.tabs-small li a.is-active {
-  border-bottom: 1px solid var(--bluesky-light);
+.tabs-small li.is-active {
   color: var(--bluesky-light);
-  font-weight: bold;
+
 }

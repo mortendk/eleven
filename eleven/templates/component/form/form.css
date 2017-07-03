@@ -3,9 +3,7 @@ main form {
   /*border-top: 1px solid var(--bluesky-light-20);*/
 }
 
-form.pagewidth {
-  /*padding: 0 3rem;*/
-}
+form.pagewidth { }
 
 .form-item--inline {
   display: inline-block;

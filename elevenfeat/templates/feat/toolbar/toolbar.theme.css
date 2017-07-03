@@ -208,7 +208,7 @@ level 1 : horizontal
   height: 8px;
   background-image: none ! important; /* yes we wanna make sure no module have fun here */
   content: "";
-  transition: 0.5s ease-in;
+  transition: 0.2s ease-in;
 
           mask: url(icons/nav-next.svg) no-repeat;
   -webkit-mask: url(icons/nav-next.svg) no-repeat;
@@ -365,7 +365,7 @@ level 1 : horizontal
   background-color: var(--white);
   background-image: none ! important; /* yes we wanna make sure no module have fun here */
   content: "";
-  transition: 0.5s ease-in;
+  transition: 0.2s ease-in;
 
   -webkit-mask-image: var(--icon-pen);
           mask-image: var(--icon-pen);

@@ -1,6 +1,11 @@
 /*
-hide / show filter & actions 
+hide / show filter & actions
 */
+.views-filter{
+  border-bottom: 1px solid var(--bluesky-light-light);
+  padding-bottom: 1rem
+}
+
 .views-filter-layout {
   margin-top: -2.5rem;
 }
@@ -17,103 +22,8 @@ hide / show filter & actions
 /**/
 
 .views-exposed-form {
-  border-top: 1px solid var(--bluesky-light-light);
-  background-color: var(--white);
-}
-.views-exposed-form:hover {
-  border-top: 1px solid var(--bluesky-light);
-  background-color: var(--bluesky-light-light);
 }
 .view-filters-actions {
-  border-top: 1px solid var(--bluesky-light-light);
-  background-color: var(--white);
-}
-.view-filters-actions:hover {
-  border-top: 1px solid var(--bluesky-light);
-  background-color: var(--bluesky-light-light);
-}
-
-
-/* ----------------------------------------------------------------------------
-Form item small variants wrapper class
-
-
-TODO move into the right places ?
-------------------------------------------------------------------------------*/
-
-.form-item-smallvariant .form-item {
-  padding-top: 0;
-  padding-right: 2rem;
-}
-/* label */
-.form-item-smallvariant label {
-  display: block;
-  font-size: 0.75rem;
-  font-weight: bold;
-  /*color: var(--ashalt-light);*/
-}
-
-/* select form small */
-.form-item-smallvariant form-item--select {
-  padding-right: 0;
-}
-.form-item-smallvariant select {
-  /*border-color: var(--concrete);
-  background-color: var(--concrete-light);
-  color: var(--asphalt-light);*/
-  max-width: 15rem;
-  height: 1.5rem;
-}
-.form-item-smallvariant .select__arrow {
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-right: -1.5rem;
-  /*background-color: var(--concrete);*/
-  border: 0;
-}
-.form-item-smallvariant select:hover + .select__arrow,
-.form-item-smallvariant select:focus + .select__arrow {
-  /*background-color: var(--concrete-light);*/
-}
-.form-item-smallvariant .select__arrow:before {
-  top: 0.5rem;
-  left: 0.25rem;
-}
-
-/* input */
-.form-item-smallvariant input {
-  min-width: 10rem;
-  height: 1.5rem;
-  line-height: 1.5rem;
-}
-
-.form-item-smallvariant input[type="submit"] {
-  min-width: auto;
-}
-.form-item-smallvariant .form-item__icon {
-  width: 1.5rem;
-  height: 1.5rem;
-}
-.form-item-smallvariant .form-item__icon:before {
-  top: 0.25rem;
-  left: 0.25rem;
-}
-
-/* form actions */
-.form-item-smallvariant .form-actions {
-  margin: 0;
-}
-
-.form-item-smallvariant input[type="submit"] {
-  height: 2rem;
-}
-.form-item-smallvariant input[type="submit"] + .form-item__icon {
-  width: 2rem;
-  height: 2rem;
-}
-.form-item-smallvariant input[type="submit"] + .form-item__icon::before {
-  top: 0.5rem;
-  left: 0.5rem;
 }
 
 /* filter */
@@ -121,6 +31,17 @@ TODO move into the right places ?
           mask-image: url(icons/filter.svg);
   -webkit-mask-image: url(icons/filter.svg);
 }
+
+.form-item-smallvariant .form-item{
+  padding: 0 0.25rem 0 0
+}
+.form-item-smallvariant label{
+  display: block
+}
+.form-item-smallvariant .form-actions {
+  padding:0
+}
+
 
 /* filter reset */
 .view-filters input[data-drupal-selector="edit-reset"] {
@@ -171,23 +92,4 @@ TODO move into the right places ?
 .views-form input[data-drupal-selector="edit-submit"] + .form-item__icon::before {
           mask-image: url(icons/check-circle.svg);
   -webkit-mask-image: url(icons/check-circle.svg);
-}
-
-
-/*- colors -------------------------------------------------------------------*/
-.form-item-smallvariant label {
-  color: var(--ashalt-light);
-}
-/* select form small */
-.form-item-smallvariant select {
-  border-color: var(--concrete);
-  background-color: var(--gravel-light);
-  color: var(--asphalt-light);
-}
-.form-item-smallvariant .select__arrow {
-  background-color: var(--concrete);
-}
-.form-item-smallvariant select:hover + .select__arrow,
-.form-item-smallvariant select:focus + .select__arrow {
-  background-color: var(--concrete-light);
 }

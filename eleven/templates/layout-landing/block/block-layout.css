@@ -37,7 +37,7 @@ bloack layout page
   background-color: var(--bluesky);
   background-image: none ! important; /* yes we wanna make sure no module have fun here */
   content: "";
-  transition: 0.5s ease-in;
+  transition: 0.2s ease-in;
 
           mask-image: url(icons/cubes.svg);
   -webkit-mask-image: url(icons/cubes.svg);

@@ -1,8 +1,11 @@
 .shortcut-action {
   position: absolute;
-  top: 1rem;
-  left: 0;
+  top: -1rem;
+  right: 0;
   display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: var(--rasberry);
 }
 .shortcut-action:hover {
   text-decoration: none;
@@ -11,7 +14,6 @@
 /* icon */
 .shortcut-action__icon {
   display: block;
-  float: left;
   width: 1rem;
   height: 1rem;
   margin-right: 0.5rem;
@@ -43,7 +45,7 @@
 
 /* colors --------------------------------------------------------------------*/
 .shortcut-action__icon {
-  background-color: var(--rasberry-light);
+  background-color: var(--white);
 
           mask-image: url(icons/heart-o.svg);
   -webkit-mask-image: url(icons/heart-o.svg);

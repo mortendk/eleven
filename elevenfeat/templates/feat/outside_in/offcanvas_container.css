@@ -29,7 +29,7 @@ ui dialog Titlebar
   background-image: none ! important; /* yes we wanna make sure no module have fun here */
   text-indent: -999rem;
   content: "";
-  transition: 0.5s ease-in;
+  transition: 0.2s ease-in;
 
           mask: var(--icon-coffee) no-repeat;
   -webkit-mask: var(--icon-coffee) no-repeat;
