@@ -1,5 +1,7 @@
 {%
   set classes = [
+    'L',
+    'pagewidth'
     ]
 %}
 <div{{ attributes.addClass(classes) }}>
@@ -11,7 +13,7 @@
 
 
   {% if content %}
-    <nav class="localtask " role="navigation" aria-label="{{ 'Tabs'|t }}">
+    <nav class="w-12 localtask " role="navigation" aria-label="{{ 'Tabs'|t }}">
       {{ content }}
     </nav>
   {% endif %}

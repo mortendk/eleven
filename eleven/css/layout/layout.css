@@ -381,7 +381,7 @@ known issues
 /* -----------------------------------------------------------------------------
 Nesting
 ------------------------------------------------------------------------------*/
-@media (max-width: 47.99em) {
+/*@media (max-width: 47.99em) {
   .L{
     margin-left: -0.2rem !important;
   }
@@ -390,15 +390,17 @@ Nesting
   .L{
     margin-left: -0.5rem;
   }
-}
+}*/
 
-.L--nested{
+
+.L--nomargin{
   margin-left: 0;
+  margin-right: 0;
 }
 
 
 /*fix  for nested tables */
-[class^="w-"] table  .L,
+/*[class^="w-"] table  .L,
 [class^=" w-"] table  .L,
 table  .L{
   margin-left: 0;
@@ -416,7 +418,7 @@ table  .L{
 .L--nomargin [class^="w-"] .L--nomargin,
 .L--nomargin [class*=" w-"] .L--nomargin{
   margin: 0;
-}
+}*/
 
 
  /*
@@ -787,6 +789,9 @@ table  .L{
 {
   outline: 1px solid red
 }
+._testlayout .pagewidth{
+  background-color: rgba(255, 0, 0, 0.5);
+}
 
 
 
@@ -794,10 +799,9 @@ table  .L{
 LW-[n]
 LW-[width of children elements with the class w]
 ------------------------------------------------------------------------------*/
-[class*="LW-"],
-[class*=" LW-"] {
+.L [class*="LW-"],
+.L [class*=" LW-"] {
   margin-left: -0.5rem;
-
 }
 
 /*
