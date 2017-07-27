@@ -78,5 +78,7 @@
 
 .shortcut-action__message {
   background-color: var(--white-90);
-  color: var(--strawberry);
+  color: var(--asphalt);
+  min-width: 10rem;
+  padding: 0.2rem;
 }

@@ -90,7 +90,7 @@ td a {
 /* header --------------------------------------------------------------------*/
 th {
   position: relative;
-  padding: 1rem 0.5rem;
+  padding: 0.5rem 0.5rem;
   border-right: 1px solid var(--concrete);
   background-color: var(--concrete-light);
   color: var(--asphalt-light);
