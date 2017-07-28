@@ -5,15 +5,7 @@
   ]
 %}
 
-{% set class = [
-    attributes.id == 'comment-admin-overview' ? 'wrapper--pagewidth-details',
-    attributes.id == 'update-manager-update-form' ? 'pagewidth',
-  ]
-%}
-
-
 {# Dont remove attribute ID will break the module installation  #}
 <form{{ attributes.removeClass(remove_classes).addclass(class) }}>
-
   {{ children }}
 </form>

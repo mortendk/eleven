@@ -6,6 +6,7 @@
 <h2 class="pagewidth">{{ theme_group.title }}</h2>
 
 {% include active_theme_path() ~ '/templates/component/navigation/cardlayout/cardlayout.html.twig' %}
+
 <section{{ theme_group.attributes.addClass('L','LW-4', 'LW--nooverflow', 'pagewidth', 'js-card-layout-target') }}>
 {% for theme in theme_group.themes %}
 
