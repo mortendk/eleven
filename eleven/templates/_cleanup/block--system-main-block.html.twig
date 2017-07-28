@@ -15,7 +15,6 @@ this template is used as a wrapper for the main content
 {% if admin or nodeedit %}
   <section{{ attributes.addClass(classes).removeAttribute('id') }}>
   <h2 class="admincontent__title">{{ title }}</h2>
-
 {% endif %}
 
 {{ title_prefix }}
