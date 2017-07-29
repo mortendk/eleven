@@ -159,8 +159,8 @@
 -webkit-mask-image: url(icons/reorder.svg);
 }
 .card__title--icon-workflows::before{
-  mask-image: url(icons/f278.svg);
--webkit-mask-image: url(icons/f278.svg);
+  mask-image: url(icons/truck.svg);
+-webkit-mask-image: url(icons/truck.svg);
 }
 
 .card__title--icon-path::before{
@@ -259,6 +259,7 @@
           mask-image: url(icons/flag.svg);
   -webkit-mask-image: url(icons/flag.svg);
 }
+.card__title--icon-admin-config-workflow-workflows::before,
 .card__title--icon-workflow::before {
           mask-image: url(icons/truck.svg);
   -webkit-mask-image: url(icons/truck.svg);

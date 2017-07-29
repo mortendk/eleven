@@ -1,0 +1,35 @@
+{#
+media tables layout
+
+ eleven_theme_suggestions_table_alter()
+ #}
+{{ attach_library(active_theme()~'/card') }}
+
+{% if rows %}
+
+{% include active_theme_path() ~ '/templates/component/navigation/cardlayout/cardlayout.html.twig' %}
+
+<section class="L LW-4 LW--nooverflow w-12 js-card-layout-target">
+
+  {% for row in rows %}
+  <article {{ row.attributes.addClass('w','card') }}>
+
+    <h3 class="card__title card__title--icon card__title--icon-admin-structure-book">
+      {{ row.cells.0.content|striptags  }}
+    </h3>
+
+    <p class="card__text">
+      <strong>{{ 'book'|t }}: </strong> {{ row.cells.0.content  }} <br>
+    </p>
+
+    <div class="card__operations">
+      {{ row.cells.1.content  }}
+
+    </div>
+
+  </article>
+  {% endfor %}
+</section>
+{% else %}
+{{ 'no fields defined'|t }}
+{% endif %}

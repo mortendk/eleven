@@ -1,0 +1,58 @@
+{#
+media tables layout
+
+ eleven_theme_suggestions_table_alter()
+ #}
+{{ attach_library(active_theme()~'/card') }}
+
+{{ label }}
+
+<style media="screen">
+  h2{
+    padding-top: 1rem
+  }
+</style>
+
+
+{% if rows %}
+
+{% include active_theme_path() ~ '/templates/component/navigation/cardlayout/cardlayout.html.twig' %}
+
+<section class="L LW-4 LW--nooverflow w-12 js-card-layout-target">
+
+  {% for row in rows %}
+  {# lets taste if we have a label  #}
+  {% if row.cells.label %}
+
+  <article {{ row.attributes.addClass('w','card') }}>
+
+    <h3 class="card__title card__title--icon card__title--icon-admin-structure-display-modes">
+      <a href="/{{ row.cells.operations.content['#links'].edit.url.getInternalPath() }}">
+        {{ row.cells.label.content}}
+      </a>
+    </h3>
+
+    <div class="card__operations">
+      {{ row.cells.operations.content }}
+    </div>
+  </article>
+
+  {% else %}
+    {# create new button #}
+    <div class="w-12 L LW--nooverflow">
+      <div class="w-4 card">
+        <div class="button">
+          {{ link(row.cells.0.content['#title']|striptags, row.cells.0.content['#url'], { 'class':['button','button-action']} ) }}
+        </div>
+
+      </div>
+
+    </div>
+
+  {% endif %}
+
+  {% endfor %}
+</section>
+{% else %}
+{{ 'no fields defined'|t }}
+{% endif %}
