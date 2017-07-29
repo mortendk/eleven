@@ -1,11 +1,11 @@
-{%
-  set classes = [
-    'L',
-    'pagewidth',
-    'view',
+{#     'view',
     'view-' ~ id|clean_class,
     'view-id-' ~ id,
     'view-display-id-' ~ display_id,
+ #}
+{%
+  set classes = [
+    'L',
     dom_id ? 'js-view-dom-id-' ~ dom_id,
   ]
 %}

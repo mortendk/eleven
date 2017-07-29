@@ -801,7 +801,10 @@ LW-[width of children elements with the class w]
 ------------------------------------------------------------------------------*/
 .L [class*="LW-"],
 .L [class*=" LW-"] {
-  margin-left: -0.5rem;
+  margin-left: 0;
+  margin-right: 0;
+  flex-basis: 100%;
+  background-color: hotpink
 }
 
 /*
