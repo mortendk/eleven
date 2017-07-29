@@ -5,26 +5,33 @@
  #}
 {%
   set classes = [
+    'view',
     'L',
     dom_id ? 'js-view-dom-id-' ~ dom_id,
   ]
 %}
+
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
+
   {% if title %}
     {{ title }}
   {% endif %}
+
   {{ title_suffix }}
+
   {% if header %}
     <div class="view-header">
       {{ header }}
     </div>
   {% endif %}
+
   {% if exposed %}
     <div class="w-12">
       {{ exposed }}
     </div>
   {% endif %}
+
   {% if attachment_before %}
     <div class="attachment attachment-before">
       {{ attachment_before }}
@@ -32,14 +39,13 @@
   {% endif %}
 
   {% if rows %}
-    <div class="w-12">
       {{ rows }}
-    </div>
   {% elseif empty %}
     <div class="view-empty">
       {{ empty }}
     </div>
   {% endif %}
+
 
   {% if pager %}
     <div class="w-12">
