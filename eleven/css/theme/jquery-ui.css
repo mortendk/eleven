@@ -2,8 +2,8 @@
   position: absolute;
   z-index: 1260;
   overflow: visible;
-  color: var(--gravel);
-  background: var(--gravel);
+  color: var(--aspalt-light);
+  background-color: var(--gravel);
   border: solid 1px var(--asphalt);
   padding: 0;
 }
@@ -11,10 +11,17 @@
 .ui-dialog .ui-dialog-titlebar{
   background-color: var(--asphalt-light);
   color: var(--white);
-  border: none
+  border: none;
+  padding: 0.25rem 1rem;
+  height: 2rem
 }
 
-.ui-dialog .ui-dialog-titlebar-close {
+.ui-dialog .ui-dialog-content{
+  padding: 0
+}
+
+/* close button icon */
+.ui-dialog .ui-dialog-titlebar-close{
   top: 0;
   right: 0;
   width: 2rem;
@@ -22,6 +29,24 @@
   margin: 0;
   padding: 0;
   border: 0;
+}
+
+button.ui-dialog-titlebar-close{
+  background-image: none;
+  background-color: var(--asphalt-light);
+}
+button.ui-dialog-titlebar-close:hover{
+  background-image: none;
+}
+.ui-dialog button.ui-dialog-titlebar-close:before {
+  mask-image: url(icons/times.svg);
+  -webkit-mask-image: url(icons/times.svg);
+  background-color: var(--concrete);
+
+}
+.ui-dialog button.ui-dialog-titlebar-close:hover:before {
+  background-color: var(--concrete-light);
+  transform: scale(1.2  );
 }
 
 
@@ -43,10 +68,11 @@
 .ui-corner-all{border-radius: 0}
 .ui-widget {}
 .ui-widget .ui-widget {}
-.ui-widget input,
+.ui-widget input[type="text"],
 .ui-widget select,
 .ui-widget textarea,
 .ui-widget button {
+  min-width: 100%
 }
 
 .ui-widget-content {
