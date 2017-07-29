@@ -1,5 +1,15 @@
-/**/
+/* we cant get the w-12 class into the views-edit-view wrapper as its prefixex
+so we have to fix the width here...*/
 .views-edit-view {
+  width: 100%;
+}
+
+/* more hacks */
+.views-list-section > h2{
+  margin-left:0.5rem;
+}
+#views-entity-list > .form-item {
+  margin-left: 0.5rem
 }
 
 /* main bg for the view*/

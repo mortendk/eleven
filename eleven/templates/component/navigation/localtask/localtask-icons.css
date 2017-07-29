@@ -6,6 +6,17 @@
 }
 
 
+.tabs li a[href="/admin"]:before {
+  -webkit-mask-image: url(icons/inbox.svg);
+          mask-image: url(icons/inbox.svg);
+}
+
+.tabs li a[href="/admin/index"]:before {
+  -webkit-mask-image: url(icons/hdd-o.svg);
+          mask-image: url(icons/hdd-o.svg);
+}
+
+
 /* general */
 .tabs li a[href$="/form-display"]:before {
   -webkit-mask-image: url(icons/columns.svg);

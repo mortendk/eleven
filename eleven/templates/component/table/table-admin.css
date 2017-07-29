@@ -1,15 +1,4 @@
-td .checkbox-style-check{
-  margin-right: 0
-}
-td .checkbox-style-check input[type=checkbox] + label {
-  width: 1rem;
-  height: 1rem
-}
-td .checkbox-style-check input[type=checkbox] + label:before {
-  top: 0.1rem;
-  left: 0;
-  width: 0.875rem;
-  height: 0.875rem;
+.views-field-node-bulk-form .form-item{
 }
 
 /* draggable -----------------------------------------------------------------*/
@@ -24,7 +13,7 @@ a.tabledrag-handle .handle {
   margin: 0 0.5rem;
   padding: 0;
   background-color: var(--bluesky);
-  transition: 0.5s ease-in;
+  transition: 0.2s ease-in;
 
           mask-image: url(icons/arrows.svg);
   -webkit-mask-image: url(icons/arrows.svg);
@@ -74,6 +63,17 @@ td .tabledrag-changed {
   background-color: var(--bluesky-light-20);
 }
 
+/* title for regions in layouts*/
+.region-title td{
+  font-size: 1.25rem;
+  background-color: var(--concrete);
+}
+
+
+td.views-field-operations {
+  float: right
+}
+
 
 /*
 table files
@@ -93,7 +93,7 @@ td.views-field-filename a::before {
   background-color: var(--asphalt);
   background-image: none ! important; /* yes we wanna make sure no module have fun here */
   content: "";
-  transition: 0.5s ease-in;
+  transition: 0.2s ease-in;
 
           mask-image: url(icons/file-o.svg);
   -webkit-mask-image: url(icons/file-o.svg);
@@ -138,47 +138,6 @@ td input.field-weight {
 
 
 
-
-
-
-/*
-.table-card-layout{
-  display: block;
-}
-.table-card-layout thead{
-}
-.table-card-layout tbody{
-  display: block
-}
-.table-card-layout tbody tr{
-  display: block;
-  border: 1px solid red;
-  width: 33.3%;
-  float: left;
-  overflow: hidden
-}
-.table-card-layout tbody tr:nth-child(3n+4){
-  clear: both;
-}
-.table-card-layout tbody td{
-  display: block
-}
-.table-card-layout tbody tr{
-  position: relative;
-}
-
-.views-field-node-bulk-form{
-  position: absolute;
-  right: 0;
-  height: 2rem;
-  background-color: var(--rasberry);
-}
-
-
-.views-field-title{
-  font-size: 2rem;
-
-}*/
 
 /*  ----------------------------------------------------------------------------
   user permissions

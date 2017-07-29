@@ -36,6 +36,7 @@ paths:
       route == "system.404" ? 'error-403',
     ]
   %}
+  {#        '_testlayout' #}
   <body{{ attributes.addClass(body_classes) }}>
     <a href="#main-content" class="visually-hidden focusable"> {# link to main-content is in page.html.twig #}
       {{ 'Skip to main content'|t }}

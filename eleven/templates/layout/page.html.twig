@@ -27,21 +27,19 @@
   {{ page.navigation }}
 {% endif %}
 
-<main role="main" id="main">
+<main role="main" id="main" class="pagewidth L">
   <a id="main-content" tabindex="-1"></a>
 
   {# pagetop #}
   {# local actions is always printed out into the the page.[region]  so yeah we have an empty div here ....  #}
   {% if page.top_first or page.top_second %}
-  <div class="L pagewidth">
     {% if page.top_first %}<div class="w-6 w-12@s">{{ page.top_first }}</div>{% endif %}
     {% if page.top_second %}<div class="w-6 w-12@s">{{ page.top_second }}</div>{% endif %}
-  </div>
   {% endif %}
 
   {# messages #}
   {% if page.messages %}
-    <aside role="complementary"  class="L-center">
+    <aside role="complementary"  class="L-center w-12">
       {{ page.messages }}
     </aside>
   {% endif %}
@@ -50,9 +48,11 @@
 </main>
 
 {# footer #}
-<footer class="L site-footer pagewidth">
+<footer class="L pagewidth site-footer">
   {% if page.footer %}
-    {{ page.footer }}
+    <div class="w-12">
+      {{ page.footer }}  
+    </div>
   {% endif %}
 
   {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}

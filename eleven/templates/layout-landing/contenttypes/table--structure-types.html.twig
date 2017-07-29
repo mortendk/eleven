@@ -3,7 +3,7 @@
 {% if rows %}
 
 {% include active_theme_path() ~ '/templates/component/navigation/cardlayout/cardlayout.html.twig' %}
-<section class="L LW-4 LW--nooverflow pagewidth js-card-layout-target">
+<section class="L LW-4 LW--nooverflow js-card-layout-target">
 
   {% for row in rows %}
     <article {{ row.attributes.addClass('card', 'w') }}>

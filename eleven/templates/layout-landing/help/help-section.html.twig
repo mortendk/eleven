@@ -13,10 +13,11 @@
  */
 #}
 {{ attach_library(active_theme()~'/card') }}
-<div class="pagewidth">
+<div class="w-12">
   <h2>{{ title }}</h2>
 
   <p>{{ description }}</p>
+
   {% if links %}
     {# Calculate the column length, to divide links into 4 columns. #}
     {% set size = links|length // 4 %}

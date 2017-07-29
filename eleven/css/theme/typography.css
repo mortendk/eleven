@@ -67,9 +67,16 @@ h6,
 
 .page-title {
   color: var(--bluesky);
-  padding-left: 2rem;
   margin: 1rem 0
 }
+.page-title em {
+  font-style: normal;
+  color: var(--bluesky-light-light);
+}
+.page-title em::after{
+  content: ":";
+}
+
 @media (max-width: 47.99em) {
   .page-title{
     font-size: 2rem;

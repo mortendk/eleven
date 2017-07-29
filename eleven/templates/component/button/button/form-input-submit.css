@@ -34,10 +34,11 @@ input[type="submit"].js-hide + .form-item__icon {
 }
 
 /* form actions -------------------------------------------------------------*/
+#edit-actions,
 form[data-drupal-selector="node-type-edit-form"] .form-actions,
 .shortcut-set-switch #edit-actions,
 .nodesubmit,
-.views-form  #edit-actions,
+.views-form #edit-actions,
 #view-edit-form #edit-actions,
 .user-admin-permissions #edit-actions,
 .system-modules .form-actions,
@@ -85,7 +86,7 @@ a.button:before {
   background-color: var(--white);
   background-image: none ! important; /* yes we wanna make sure no module have fun here */
   content: "";
-  transition: 0.5s ease-in;
+  transition: 0.2s ease-in;
 
           mask-image: var(--icon-coffee);
   -webkit-mask-image: var(--icon-coffee);
@@ -121,17 +122,14 @@ a.button:hover:before {
 
 
 /* primary */
-
-#edit-actions input[type="submit"].form-submit,
 input[type="submit"].button--primary {
   margin-right: 1rem;
   background-color: var(--grass-light);
 }
-#edit-actions input[type="submit"].form-submit  + .form-item__icon,
 input[type="submit"].button--primary + .form-item__icon {
   background-color: var(--grass);
 }
-#edit-actions input[type="submit"].form-submit  + .form-item__icon::before,
+
 input[type="submit"].button--primary + .form-item__icon::before {
           mask-image: url(../icons/thumbs-up.svg);
   -webkit-mask-image: url(../icons/thumbs-up.svg);

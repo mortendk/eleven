@@ -7,6 +7,10 @@
   if( $.cookie("eleven-cardLayout") ){
     $("a[data-layout="  + $.cookie('eleven-cardLayout') + "]" ).addClass("is-active");
     $( ".js-card-layout" ).removeClass( widthClasses ).addClass( 'LW-' + $.cookie("eleven-cardLayout") );
+  }else{
+    //default
+    $("a[data-layout='4']").addClass("is-active");
+    $( ".js-card-layout-target" ).addClass( 'LW-4');
   }
 
   // change layout
@@ -20,7 +24,7 @@
     $(this).toggleClass("is-active");
 
     //umm cookies
-    $.cookie("eleven-cardLayout", layout);
+    $.cookie("eleven-cardLayout", layout,  { path: '/' });
 
     e.preventDefault();
   });

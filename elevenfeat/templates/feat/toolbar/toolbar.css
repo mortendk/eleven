@@ -14,6 +14,7 @@
 #toolbar-bar .toolbar-menu {
   padding: 0;
   list-style: none;
+  margin: 0;
 }
 #toolbar-bar li {
   margin: 0;

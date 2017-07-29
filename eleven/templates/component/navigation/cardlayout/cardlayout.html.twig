@@ -1,13 +1,12 @@
 {{ attach_library(active_theme()~'/card.layout') }}
 {{ attach_library(active_theme()~'/nav.tabs.icon') }}
 
-<nav class="tabs-icon ">
-  <ul class="L-right pagewidth">
+<nav class="L-right w-12 tabs-icon ">
+  <ul class="L">
     <li><a href="#" class="js-hide-cardtext hide-cardtext" data-helptext="{{'Hide help text'|t}}">{{'Hide help text'|t}}</a></li>
-
   {% for i in range(3, 6) %}
-
-    <li><a href="#" class="js-cardlayout cardlayout {% if i == 4 %}is-active {% endif %}" data-layout="{{ i }}" data-helptext="Layout {{ i }} columns"> {{ i }}</a></li>
+    {#  {% if i == 4 %}is-active {% endif %} #}
+    <li><a href="#" class="js-cardlayout cardlayout" data-layout="{{ i }}" data-helptext="Layout {{ i }} columns"> {{ i }}</a></li>
   {% endfor %}
 
   </ul>
