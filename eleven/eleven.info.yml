@@ -76,7 +76,11 @@ libraries-override:
         css/components/tabs.css: false
         css/components/textarea.css: false
         css/components/ui-dialog.css: false
-        css/components/dialog.css: false
+
+  classy/dialog:
+    css:
+      component:
+        css/components/dialog.css: css/theme/jquery-dialog.css
 
 #messages
   classy/messages:

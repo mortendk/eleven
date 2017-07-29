@@ -101,6 +101,12 @@ a.smallbtn--disable:before {
   -webkit-mask-image: url(icons/power-off.svg);
           mask-image: url(icons/power-off.svg);
 }
+/*enable */
+a.smallbtn--enable:before {
+  -webkit-mask-image: url(icons/power-off.svg);
+          mask-image: url(icons/power-off.svg);
+}
+
 /* list */
 a.smallbtn--list:before {
   -webkit-mask-image: url(icons/th-list.svg);
