@@ -3,7 +3,8 @@
   position: relative;
   display: block;
   transition: all 0.5s ease-in-out;
-
+  width: 4rem;
+  height: 4rem;
 }
 .card__icon::before {
   top: 0.5rem;
@@ -48,7 +49,6 @@
           mask-repeat: no-repeat;
 }
 
-
 /* small variation */
 .card--small .card__title--icon {
   padding-left: 1.5rem;
@@ -88,6 +88,20 @@
 
 
 /* icons ---------------------------------------------------------------------*/
+.card__title--icon-module:before{
+  mask-image: url(icons/puzzle-piece.svg);
+-webkit-mask-image: url(icons/puzzle-piece.svg);
+}
+.card__title--icon-theme:before{
+  mask-image: url(icons/paint-brush.svg);
+-webkit-mask-image: url(icons/paint-brush.svg);
+}
+.card__title--icon-core:before{
+  mask-image: url(icons/d8-logo.svg);
+-webkit-mask-image: url(icons/d8-logo.svg);
+}
+
+
 .card__title--icon-views::before {
           mask-image: url(icons/tasks.svg);
   -webkit-mask-image: url(icons/tasks.svg);
@@ -198,8 +212,8 @@
   -webkit-mask-image: url(icons/file-text-o.svg);
 }
 .card__title--icon-admin-reports-status::before {
-          mask-image: url(icons/exclamation-circle.svg);
-  -webkit-mask-image: url(icons/exclamation-circle.svg);
+          mask-image: url(icons/times-circle.svg);
+  -webkit-mask-image: url(icons/times-circle.svg);
 }
 .card__title--icon-admin-reports-access-denied::before {
           mask-image: url(icons/minus-circle.svg);
@@ -711,8 +725,8 @@
           mask-image: url(icons/check-circle-o.svg);
 }
 .card__title--icon-error:before{
-  -webkit-mask-image: url(icons/exclamation-circle.svg);
-          mask-image: url(icons/exclamation-circle.svg);
+  -webkit-mask-image: url(icons/times-circle.svg);
+          mask-image: url(icons/times-circle.svg);
 }
 .card__title--icon-warning:before{
   -webkit-mask-image: url(icons/warning.svg);
@@ -747,8 +761,8 @@
           mask-image: url(icons/warning.svg);
 }
 .card__icon--error:before{
-  -webkit-mask-image: url(icons/exclamation-circle.svg);
-          mask-image: url(icons/exclamation-circle.svg);
+  -webkit-mask-image: url(icons/times-circle.svg);
+          mask-image: url(icons/times-circle.svg);
 }
 .card__icon--checked:before{
   -webkit-mask-image: url(icons/check-circle-o.svg);

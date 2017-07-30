@@ -57,6 +57,7 @@ messages:
       templates/component/messages/messages.css: {}
   js:
     templates/component/messages/messages.js: {}
+
 shortcut:
   css:
     theme:
@@ -67,6 +68,10 @@ progress:
     theme:
       templates/component/progress/progress-bar.css: {}
 
+status.report:
+  css:
+    theme:
+      templates/layout-landing/reports/status/report.css: {}
 # ------------------------------------------------------------------------------
 # Admin landing pages
 # ------------------------------------------------------------------------------

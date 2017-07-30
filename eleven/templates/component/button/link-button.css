@@ -42,7 +42,7 @@ a.button:before {
           mask-repeat: no-repeat;
 }
 a.button:hover:before {
-  transform: rotate(90deg);
+  transform: scale(1.2);
 }
 
 a.button--green{

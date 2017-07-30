@@ -1,0 +1,24 @@
+{{ attach_library(active_theme()~'/card') }}
+
+{% if rows %}
+  <section{{ attributes.addClass('L','LW-4') }}>
+  {% for row in rows %}
+
+    {% set cardclasses = [
+      'card',
+      'w',
+      row.cells.0.content['#project'].project_type =="core" ? 'w-12',
+      ]
+    %}
+
+    {% for cell in row.cells %}
+      <article{{ row.attributes.addClass(cardclasses) }}>
+      {# update-project-status.html.twig #}
+      {{ cell.content }}
+      </article>
+    {% endfor %}
+
+
+  {% endfor %}
+</section>
+{% endif %}

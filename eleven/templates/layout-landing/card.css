@@ -124,7 +124,7 @@ tr.card {
   line-height: 1.5rem;
 }
 
-/*card status ----------------------------------------------------------------*/
+/* card status ---------------------------------------------------------------*/
 .card__status {
   position: absolute;
   z-index: 10;
@@ -179,8 +179,8 @@ tr.card {
   background-color: var(--strawberry);
 }
 .card__status--error:before{
-  -webkit-mask-image: url(icons/exclamation-circle.svg);
-          mask-image: url(icons/exclamation-circle.svg);
+  -webkit-mask-image: url(icons/times-circle.svg);
+          mask-image: url(icons/times-circle.svg);
 }
 
 /* warning */
@@ -191,14 +191,49 @@ tr.card {
   -webkit-mask-image: url(icons/warning.svg);
           mask-image: url(icons/warning.svg);
 }
+
+/*ok*/
+.card__status--ok {
+  background-color: var(--grass-light);
+}
+.card__status--ok:before{
+  -webkit-mask-image: url(icons/check.svg);
+          mask-image: url(icons/check.svg);
+}
+
 /* checked */
 .card__status--checked {
   background-color: var(--grass-light);
 }
 .card__status--checked:before{
-  -webkit-mask-image: url(icons/check-circle-o.svg);
-          mask-image: url(icons/check-circle-o.svg);
+  exclamation-circle.svg
 }
+
+/* update */
+.card__status--update {
+  background-color: var(--rasberry-light);
+}
+.card__status--update:before{
+  -webkit-mask-image: url(icons/exclamation-circle.svg);
+          mask-image: url(icons/exclamation-circle.svg);
+}
+
+/* not supported*/
+.card__status--not-supported{
+  background-color: var(--pumpkin);
+}
+.card__status--not-supported:before{
+  -webkit-mask-image: url(icons/exclamation-circle.svg);
+          mask-image: url(icons/exclamation-circle.svg);
+}
+.card__status--revoked{
+  background-color: var(--asphalt);
+}
+.card__status--revoked::before{
+  -webkit-mask-image: url(icons/lock.svg);
+          mask-image: url(icons/lock.svg);
+}
+
 
 
 .card__status--themedefault {
