@@ -7,6 +7,7 @@
   height: 4rem;
 }
 .card__icon::before {
+  position: absolute;
   top: 0.5rem;
   left: 0.5rem;
   display: block;©
@@ -400,8 +401,8 @@
 -webkit-mask-image: url(icons/bar-chart-o.svg);
 }
 .card__title--icon-tour::before{
-  mask-image: url(icons/f277.svg);
--webkit-mask-image: url(icons/f277.svg);
+  mask-image: url(icons/map-signs.svg);
+-webkit-mask-image: url(icons/map-signs.svg);
 
 }
 

@@ -16,6 +16,7 @@
           mask-image: url(icons/ban.svg);
   -webkit-mask-image: url(icons/ban.svg);
 }
+.card__icon--place-blocks::before,
 .card__icon--block::before,
 .card__icon--custom-block::before {
           mask-image: url(icons/cube.svg);
@@ -50,178 +51,201 @@
 }
 
 .card__icon--configuration-manager::before {
-          mask-image: url(icons/plug.svg);
-  -webkit-mask-image: url(icons/plug.svg);
+          mask-image: url(icons/gears.svg);
+  -webkit-mask-image: url(icons/gears.svg);
 }
 .card__icon--contact::before {
-          mask-image: url(icons/plug.svg);
-  -webkit-mask-image: url(icons/plug.svg);
+          mask-image: url(icons/envelope.svg);
+  -webkit-mask-image: url(icons/envelope.svg);
 }
 .card__icon--contextual-links::before {
-          mask-image: url(icons/plug.svg);
-  -webkit-mask-image: url(icons/plug.svg);
+          mask-image: url(icons/bullseye.svg);
+  -webkit-mask-image: url(icons/bullseye.svg);
 }
 
 .card__icon--database-logging::before {
-          mask-image: url(icons/plug.svg);
-  -webkit-mask-image: url(icons/plug.svg);
+          mask-image: url(icons/database.svg);
+  -webkit-mask-image: url(icons/database.svg);
 }
 
-.card__icon--field,
+.card__icon--field:before,
 .card__icon--field-ui::before {
-          mask-image: url(icons/plug.svg);
-  -webkit-mask-image: url(icons/plug.svg);
+          mask-image: url(icons/list-alt.svg);
+  -webkit-mask-image: url(icons/list-alt.svg);
 }
 .card__icon--filter::before {
-          mask-image: url(icons/plug.svg);
-  -webkit-mask-image: url(icons/plug.svg);
+          mask-image: url(icons/filter.svg);
+  -webkit-mask-image: url(icons/filter.svg);
 }
 
 .card__icon--forum::before {
-          mask-image: url(icons/plug.svg);
-  -webkit-mask-image: url(icons/plug.svg);
+          mask-image: url(icons/comments.svg);
+  -webkit-mask-image: url(icons/comments.svg);
 }
 .card__icon--help::before {
-          mask-image: url(icons/plug.svg);
-  -webkit-mask-image: url(icons/plug.svg);
+          mask-image: url(icons/medkit.svg);
+  -webkit-mask-image: url(icons/medkit.svg);
 }
 .card__icon--history::before {
-          mask-image: url(icons/plug.svg);
-  -webkit-mask-image: url(icons/plug.svg);
+          mask-image: url(icons/history.svg);
+  -webkit-mask-image: url(icons/history.svg);
 }
 
 .card__icon--menu-ui::before,
 .card__icon--custom-menu-links::before {
-          mask-image: url(icons/plug.svg);
-  -webkit-mask-image: url(icons/plug.svg);
+          mask-image: url(icons/reorder.svg);
+  -webkit-mask-image: url(icons/reorder.svg);
 }
 
 
 .card__icon--internal-dynamic-page-cache::before {
-          mask-image: url(icons/plug.svg);
-  -webkit-mask-image: url(icons/plug.svg);
+          mask-image: url(icons/history.svg);
+  -webkit-mask-image: url(icons/history.svg);
 }
 .card__icon--internal-page-cache::before {
-          mask-image: url(icons/plug.svg);
-  -webkit-mask-image: url(icons/plug.svg);
+          mask-image: url(icons/history.svg);
+  -webkit-mask-image: url(icons/history.svg);
 }
 
 .card__icon--node::before {
-          mask-image: url(icons/plug.svg);
-  -webkit-mask-image: url(icons/plug.svg);
+          mask-image: url(icons/briefcase.svg);
+  -webkit-mask-image: url(icons/briefcase.svg);
 }
 .card__icon--path::before {
-          mask-image: url(icons/plug.svg);
-  -webkit-mask-image: url(icons/plug.svg);
+          mask-image: url(icons/map.svg);
+  -webkit-mask-image: url(icons/map.svg);
 }
 
 .card__icon--quick-edit::before {
-          mask-image: url(icons/plug.svg);
-  -webkit-mask-image: url(icons/plug.svg);
+          mask-image: url(icons/flash.svg);
+  -webkit-mask-image: url(icons/flash.svg);
 }
 .card__icon--responsive-image::before {
-          mask-image: url(icons/plug.svg);
-  -webkit-mask-image: url(icons/plug.svg);
+          mask-image: url(icons/picture-o.svg);
+  -webkit-mask-image: url(icons/picture-o.svg);
 }
 .card__icon--search::before {
-          mask-image: url(icons/plug.svg);
-  -webkit-mask-image: url(icons/plug.svg);
+          mask-image: url(icons/search.svg);
+  -webkit-mask-image: url(icons/search.svg);
 }
-.card__icon--short::before {
-          mask-image: url(icons/plug.svg);
-  -webkit-mask-image: url(icons/plug.svg);
+.card__icon--shortcut::before{
+          mask-image: url(icons/heart-o.svg);
+  -webkit-mask-image: url(icons/heart-o.svg);
 }
+.card__icon--rdf:before{
+  mask-image: url(icons/code.svg);
+-webkit-mask-image: url(icons/code.svg);
+
+}
+
 .card__icon--statistics::before {
-          mask-image: url(icons/plug.svg);
-  -webkit-mask-image: url(icons/plug.svg);
+          mask-image: url(icons/pie-chart.svg);
+  -webkit-mask-image: url(icons/pie-chart.svg);
 }
 .card__icon--syslog::before {
-          mask-image: url(icons/plug.svg);
-  -webkit-mask-image: url(icons/plug.svg);
+          mask-image: url(icons/pie-chart.svg);
+  -webkit-mask-image: url(icons/pie-chart.svg);
 }
 
 .card__icon--system::before {
-          mask-image: url(icons/plug.svg);
-  -webkit-mask-image: url(icons/plug.svg);
+          mask-image: url(icons/d8-logo.svg);
+  -webkit-mask-image: url(icons/d8-logo.svg);
 }
 .card__icon--taxonomy::before {
-          mask-image: url(icons/plug.svg);
-  -webkit-mask-image: url(icons/plug.svg);
+          mask-image: url(icons/tags.svg);
+  -webkit-mask-image: url(icons/tags.svg);
 }
 .card__icon--testing::before {
-          mask-image: url(icons/plug.svg);
-  -webkit-mask-image: url(icons/plug.svg);
+          mask-image: url(icons/bomb.svg);
+  -webkit-mask-image: url(icons/bomb.svg);
 }
 .card__icon--toolbar::before {
-          mask-image: url(icons/plug.svg);
-  -webkit-mask-image: url(icons/plug.svg);
+          mask-image: url(icons/minus.svg);
+  -webkit-mask-image: url(icons/minus.svg);
 }
 .card__icon--tour::before {
-          mask-image: url(icons/plug.svg);
-  -webkit-mask-image: url(icons/plug.svg);
+    mask-image: url(icons/map-signs.svg);
+  -webkit-mask-image: url(icons/map-signs.svg);
 }
 
 .card__icon--update-manager::before {
-          mask-image: url(icons/plug.svg);
-  -webkit-mask-image: url(icons/plug.svg);
+          mask-image: url(icons/refresh.svg);
+  -webkit-mask-image: url(icons/refresh.svg);
 }
 
 .card__icon--user::before {
-          mask-image: url(icons/plug.svg);
-  -webkit-mask-image: url(icons/plug.svg);
+          mask-image: url(icons/id-card.svg);
+  -webkit-mask-image: url(icons/id-card.svg);
 }
 
-.card__icon--view::before,
+.card__icon--views::before,
 .card__icon--views-ui::before {
-          mask-image: url(icons/plug.svg);
-  -webkit-mask-image: url(icons/plug.svg);
+          mask-image: url(icons/tasks.svg);
+  -webkit-mask-image: url(icons/tasks.svg);
 }
 
 
 .card__icon--bigpipe::before {
-          mask-image: url(icons/plug.svg);
-  -webkit-mask-image: url(icons/plug.svg);
+          mask-image: url(icons/fast-forward.svg);
+  -webkit-mask-image: url(icons/fast-forward.svg);
 }
 .card__icon--content-moderation::before {
-          mask-image: url(icons/plug.svg);
-  -webkit-mask-image: url(icons/plug.svg);
+          mask-image: url(icons/child.svg);
+  -webkit-mask-image: url(icons/child.svg);
 }
 .card__icon--datetime-range::before {
-          mask-image: url(icons/plug.svg);
-  -webkit-mask-image: url(icons/plug.svg);
+          mask-image: url(icons/clock-o.svg);
+  -webkit-mask-image: url(icons/clock-o.svg);
 }
 
 .card__icon--inline-form-errors::before {
-          mask-image: url(icons/plug.svg);
-  -webkit-mask-image: url(icons/plug.svg);
+          mask-image: url(icons/times-circle.svg);
+  -webkit-mask-image: url(icons/times-circle.svg);
 }
 
 
-.card__icon--migrate,
-.card__icon--migrate-drupal,
+.card__icon--migrate:before,
+.card__icon--migrate-drupal:before,
 .card__icon--migrate-drupal-ui::before {
-          mask-image: url(icons/plug.svg);
-  -webkit-mask-image: url(icons/plug.svg);
+          mask-image: url(icons/compress.svg);
+  -webkit-mask-image: url(icons/compress.svg);
 }
 
 
-.card__icon--place-blocks::before {
-          mask-image: url(icons/plug.svg);
-  -webkit-mask-image: url(icons/plug.svg);
-}
 .card__icon--settings-tray::before {
-          mask-image: url(icons/plug.svg);
-  -webkit-mask-image: url(icons/plug.svg);
+          mask-image: url(icons/flash.svg);
+  -webkit-mask-image: url(icons/flash.svg);
 }
 
+.card__icon--workflows:before{
+  mask-image: url(icons/retweet.svg);
+-webkit-mask-image: url(icons/retweet.svg);
+
+}
+.card__icon--layout-discovery:before,
+.card__icon--field-layout:before{
+  mask-image: url(icons/desktop.svg);
+-webkit-mask-image: url(icons/desktop.svg);
+
+}
+
+.card__icon--paragraphs-type-permissions:before,
+.card__icon--paragraphs-demo:before,
+.card__icon--paragraphs:before{
+  mask-image: url(icons/paragraph.svg);
+-webkit-mask-image: url(icons/paragraph.svg);
 
 
 
-.card__icon--devel,
-.card__icon--devel-generate,
-.card__icon--devel-kint,
-.card__icon--devel-node-access,
-.card__icon--web-profiler {
+}
+
+.card__icon--devel:before,
+.card__icon--devel-generate:before,
+.card__icon--devel-kint:before,
+.card__icon--devel-node-access:before,
+.card__icon--web-profiler:before {
+  mask-image: url(icons/terminal.svg);
+-webkit-mask-image: url(icons/terminal.svg);
 
 }
 .card__icon--libraries-ui {

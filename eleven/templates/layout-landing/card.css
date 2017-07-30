@@ -16,9 +16,9 @@
 
 /**/
 .card--small .view__setting {
-  font-size: 0.75rem
+  font-size: 0.75rem;
 }
-.card--small .label{
+.card--small .label {
   font-size: 0.75rem;
 }
 
@@ -40,25 +40,25 @@ tr.card {
 
 /* title */
 .card__title {
+  width: 100%;
   margin-bottom: 0.5rem;
   color: var(--black);
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1;
-  width: 100%;
 }
-.card--small .card__title{
-  font-size: 1rem;
-  color: var(--bluesky);
+.card--small .card__title {
   border-bottom: 1px solid var(--bluesky-light-light);
-  line-height: 1.5rem
+  color: var(--bluesky);
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 .card a {
   text-decoration: underline;
 }
 .card .card__title a {
   color: var(--bluesky);
-  text-decoration: none
+  text-decoration: none;
 }
 .card .card__title a:hover,
 .card a:hover .card__title {
@@ -67,10 +67,8 @@ tr.card {
 
 /* text */
 .card__text {
-  margin-top: 0.5rem;
   min-height: 5rem;
-  height: 20rem
-  transition: all .1s ease-in-out;
+  margin-top: 0.5rem;
 }
 
 
@@ -178,7 +176,7 @@ tr.card {
 .card__status--error {
   background-color: var(--strawberry);
 }
-.card__status--error:before{
+.card__status--error:before {
   -webkit-mask-image: url(icons/times-circle.svg);
           mask-image: url(icons/times-circle.svg);
 }
@@ -187,7 +185,7 @@ tr.card {
 .card__status--warning {
   background-color: var(--pumpkin-light);
 }
-.card__status--warning:before{
+.card__status--warning:before {
   -webkit-mask-image: url(icons/warning.svg);
           mask-image: url(icons/warning.svg);
 }
@@ -196,7 +194,7 @@ tr.card {
 .card__status--ok {
   background-color: var(--grass-light);
 }
-.card__status--ok:before{
+.card__status--ok:before {
   -webkit-mask-image: url(icons/check.svg);
           mask-image: url(icons/check.svg);
 }
@@ -205,31 +203,32 @@ tr.card {
 .card__status--checked {
   background-color: var(--grass-light);
 }
-.card__status--checked:before{
-  exclamation-circle.svg
+.card__status--checked:before {
+  -webkit-mask-image: url(icons/exclamation-circle.svg);
+          mask-image: url(icons/exclamation-circle.svg);
 }
 
 /* update */
 .card__status--update {
   background-color: var(--rasberry-light);
 }
-.card__status--update:before{
+.card__status--update:before {
   -webkit-mask-image: url(icons/exclamation-circle.svg);
           mask-image: url(icons/exclamation-circle.svg);
 }
 
 /* not supported*/
-.card__status--not-supported{
+.card__status--not-supported {
   background-color: var(--pumpkin);
 }
-.card__status--not-supported:before{
+.card__status--not-supported:before {
   -webkit-mask-image: url(icons/exclamation-circle.svg);
           mask-image: url(icons/exclamation-circle.svg);
 }
-.card__status--revoked{
+.card__status--revoked {
   background-color: var(--asphalt);
 }
-.card__status--revoked::before{
+.card__status--revoked::before {
   -webkit-mask-image: url(icons/lock.svg);
           mask-image: url(icons/lock.svg);
 }
@@ -246,27 +245,27 @@ tr.card {
 
 
 /* card group elements */
-.card__subelements{
+.card__subelements {
   clear: both;
-  margin-top: 1rem
+  margin-top: 1rem;
 }
-.card__subelements li{
+.card__subelements li {
   margin-left: 0;
 }
-.card__subelement{
-  border-bottom: 1px solid var(--gravel);
+.card__subelement {
+  display: block;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  display: block;
+  border-bottom: 1px solid var(--gravel);
 }
-.card__subelement:hover{
+.card__subelement:hover {
   background-color: var(--gravel-light);
 }
 
 .card__subelements-title {
   color: var(--bluesky);
   font-size: 1.2rem;
-  font-weight: 100
+  font-weight: 100;
 }
 
 /* card link / buttons actions  ----------------------------------------------*/
@@ -275,8 +274,8 @@ tr.card {
   margin-bottom: 0.5rem;
 }
 .card__links li {
-  border-right: 1px solid var(--bluesky-light);
   padding-right: 0.5rem;
+  border-right: 1px solid var(--concrete-light);
 }
 .card__links li:last-child {
   border: none;
@@ -350,10 +349,10 @@ tr.card {
 }
 
 /*Messages */
-.card .messages{
+.card .messages {
   width: 100%;
+  min-height: 2rem;
   margin: 0 0 0.5rem 0;
   padding: 0.5rem 0;
   font-size: 0.75rem;
-  min-height: 2rem;
 }
