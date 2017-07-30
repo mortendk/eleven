@@ -13,6 +13,7 @@ global:
     theme:
       css/theme/eleven.css: { weight: -20}
       css/theme/typography.css: {}
+      css/theme/jquery-ui.css: {}
     component:
       css/component/icon.css: {}
       css/component/help.css: {}
