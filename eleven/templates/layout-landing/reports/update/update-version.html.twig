@@ -1,0 +1,28 @@
+{#
+/**
+ * @file
+ * Theme override for the version display of a project.
+ *
+ * Available variables:
+ * - attributes: HTML attributes suitable for a container element.
+ * - title: The title of the project.
+ * - version:  A list of data about the latest released version, containing:
+ *   - version: The version number.
+ *   - date: The date of the release.
+ *   - download_link: The URL for the downloadable file.
+ *   - release_link: The URL for the release notes.
+ */
+#}
+
+
+<div class="{{ attributes.class }}"{{ attributes|without('class') }}>
+    <strong>{{ title }}</strong><br>
+
+    <a href="{{ version.release_link }}">{{ version.version }}</a>
+    {{ version.date|date('Y-M-d') }}
+    <br>
+    <a href="{{ version.download_link }}">{{ 'Download'|t }}</a>
+    |
+    <a href="{{ version.release_link }}">{{ 'Release notes'|t }}</a>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+{{ attach_library(active_theme()~'/card') }}
+{{ attach_library(active_theme()~'/status.report') }}
+
+
+<section class="L cards">
+{% for counter in counters %}
+
+  {% if counters|length == 3 %}
+    <article class="w-4">
+  {% elseif counters|length == 2 %}
+    <article class="w-3">
+  {% endif %}
+
+    {# status-report-counter.html.twig #}
+    {{ counter }}
+  </article>
+{% endfor %}
+</section>
+
+{{ general_info }}
+
+{{ requirements }}

@@ -60,6 +60,7 @@ known issues
   -ms-flex-align: start;
   align-items: stretch;
   align-content: flex-start;
+  width: 100%
 }
 .L-center{
   display: -webkit-box;
@@ -351,7 +352,6 @@ known issues
 ------------------------------------------------------------------------------*/
 
 
-
 /* -- w- defaults ------------------------------------------------------------*/
 [class^="w-"],
 [class*=" w-"] {
@@ -370,13 +370,6 @@ known issues
 .L--nooverflow [class*=" w-"] {
   overflow: hidden;
 }
-
-/*.L [class^="w-"]:first-child,
-.L [class*=" w-"]:first-child {
-  background-color: red;
-  margin-left: 0;
-}*/
-
 
 /* -----------------------------------------------------------------------------
 Nesting
@@ -437,17 +430,6 @@ table  .L{
 .w-11 { flex-basis: calc(91.63% - 0.4rem);}
 .w-12 { flex-basis: calc(100% - 0.4rem);}
 
-.w-ten   { flex-basis: calc(10% - 0.4rem);}
-.w-nine  { flex-basis: calc(11.11% - 0.4rem);}
-.w-eight { flex-basis: calc(12.5% - 0.4rem);}
-.w-seven { flex-basis: calc(14.28% - 0.4rem);}
-.w-sixth { flex-basis: calc(16.66% - 0.4rem);}
-.w-fifth { flex-basis: calc(20% - 0.4rem);}
-.w-fourth{ flex-basis: calc(25% - 0.4rem);}
-.w-third { flex-basis: calc(33.33% - 0.4rem);}
-.w-half  { flex-basis: calc(50% - 0.4rem);}
-.w-full  { flex-basis: calc(100% - 0.4rem);}
-
 @media (min-width: 48em) {
   .w-1  { flex-basis: calc(8.33% - 1rem);}
   .w-2  { flex-basis: calc(16.66% - 1rem);}
@@ -461,19 +443,7 @@ table  .L{
   .w-10 { flex-basis: calc(83.3% - 1rem);}
   .w-11 { flex-basis: calc(91.63% - 1rem);}
   .w-12 { flex-basis: calc(100% - 1rem);}
-
-  .w-ten   {  flex-basis: calc(10% - 1rem);}
-  .w-nine  {  flex-basis: calc(11.11% - 1rem);}
-  .w-eight {  flex-basis: calc(12.5% - 1rem);}
-  .w-seven {  flex-basis: calc(14.28% - 1rem);}
-  .w-sixth {  flex-basis: calc(16.66% - 1rem);}
-  .w-fifth {  flex-basis: calc(20% - 1rem);}
-  .w-fourth{  flex-basis: calc(25% - 1rem);}
-  .w-third {  flex-basis: calc(33.33% - 1rem);}
-  .w-half  {  flex-basis: calc(50% - 1rem);}
-  .w-full  {  flex-basis: calc(100% - 1rem);}
 }
-
 
 /* -- w-[n]@s Small ----------------------------------------------------------*/
 @media (max-width: 47.99em) {
@@ -489,17 +459,6 @@ table  .L{
   .w-10\@s { flex-basis: calc(83.3% - 1rem); }
   .w-11\@s { flex-basis: calc(91.63% - 1rem);}
   .w-12\@s { flex-basis: calc(100% - 1rem);  }
-
-  .w-ten\@s   { flex-basis: calc(10% - 1rem);}
-  .w-nine\@s  { flex-basis: calc(11.11 - 1rem);}
-  .w-eight\@s { flex-basis: calc(12.5 - 1rem);}
-  .w-seven\@s { flex-basis: calc(14.28 - 1rem);}
-  .w-sixth\@s { flex-basis: calc(16.66% - 1rem);}
-  .w-fifth\@s { flex-basis: calc(20% - 1rem);}
-  .w-fourth\@s{ flex-basis: calc(25% - 1rem);}
-  .w-third\@s { flex-basis: calc(33.33% - 1rem);}
-  .w-half\@s  { flex-basis: calc(50% - 1rem);}
-  .w-full\@s  { flex-basis: calc(100% - 1rem);}
 }
 /* -- w-[n]@m Medium ---------------------------------------------------------*/
 @media (min-width: 48em) {
@@ -515,17 +474,6 @@ table  .L{
   .w-10\@m { flex-basis: calc(83.3% - 1rem);  }
   .w-11\@m { flex-basis: calc(91.63% - 1rem); }
   .w-12\@m { flex-basis: calc(100% - 1rem);   }
-
-  .w-ten\@m   { flex-basis: calc(10% - 1rem);}
-  .w-nine\@m  { flex-basis: calc(11.11 - 1rem);}
-  .w-eight\@m { flex-basis: calc(12.5 - 1rem);}
-  .w-seven\@m { flex-basis: calc(14.28 - 1rem);}
-  .w-sixth\@m { flex-basis: calc(16.66% - 1rem);}
-  .w-fifth\@m { flex-basis: calc(20% - 1rem);}
-  .w-fourth\@m{ flex-basis: calc(25% - 1rem);}
-  .w-third\@m { flex-basis: calc(33.33% - 1rem);}
-  .w-half\@m  { flex-basis: calc(50% - 1rem);}
-  .w-full\@m  { flex-basis: calc(100% - 1rem);}
 }
 /* -- w-[n]@l Large ----------------------------------------------------------*/
 @media (min-width: 62em) {
@@ -541,17 +489,6 @@ table  .L{
   .w-10\@l { flex-basis: calc(83.3% - 1rem);  }
   .w-11\@l { flex-basis: calc(91.63% - 1rem); }
   .w-12\@l { flex-basis: calc(100% - 1rem);   }
-
-  .w-ten\@l   { flex-basis: calc(10% - 1rem);}
-  .w-nine\@l  { flex-basis: calc(11.11 - 1rem);}
-  .w-eight\@l { flex-basis: calc(12.5 - 1rem);}
-  .w-seven\@l { flex-basis: calc(14.28 - 1rem);}
-  .w-sixth\@l { flex-basis: calc(16.66% - 1rem);}
-  .w-fifth\@l { flex-basis: calc(20% - 1rem);}
-  .w-fourth\@l{ flex-basis: calc(25% - 1rem);}
-  .w-third\@l { flex-basis: calc(33.33% - 1rem);}
-  .w-half\@l  { flex-basis: calc(50% - 1rem);}
-  .w-full\@l  { flex-basis: calc(100% - 1rem);}
 }
 /* -- w-[n]@xl XL ------------------------------------------------------------*/
 @media (min-width: 75em) {
@@ -567,17 +504,6 @@ table  .L{
   .w-10\@xl { flex-basis: calc(83.3% - 1rem);  }
   .w-11\@xl { flex-basis: calc(91.63% - 1rem); }
   .w-12\@xl { flex-basis: calc(100% - 1rem);   }
-
-  .w-ten\@xl   { flex-basis: calc(10% - 1rem);}
-  .w-nine\@xl  { flex-basis: calc(11.11 - 1rem);}
-  .w-eight\@xl { flex-basis: calc(12.5 - 1rem);}
-  .w-seven\@xl { flex-basis: calc(14.28 - 1rem);}
-  .w-sixth\@xl { flex-basis: calc(16.66% - 1rem);}
-  .w-fifth\@xl { flex-basis: calc(20% - 1rem);}
-  .w-fourth\@xl{ flex-basis: calc(25% - 1rem);}
-  .w-third\@xl { flex-basis: calc(33.33% - 1rem);}
-  .w-half\@xl  { flex-basis: calc(50% - 1rem);}
-  .w-full\@xl  { flex-basis: calc(100% - 1rem);}
 }
 
 /* -----------------------------------------------------------------------------
@@ -596,17 +522,6 @@ table  .L{
 .L--nomargin .w-11 { flex-basis: 91.63%;}
 .L--nomargin .w-12 { flex-basis: 100%;}
 
-.L--nomargin .w-ten   { flex-basis: 10%;}
-.L--nomargin .w-nine  { flex-basis: 11.11%;}
-.L--nomargin .w-eight { flex-basis: 12.5%;}
-.L--nomargin .w-seven { flex-basis: 14.28%;}
-.L--nomargin .w-sixth { flex-basis: 16.66%;}
-.L--nomargin .w-fifth { flex-basis: 20%;}
-.L--nomargin .w-fourth{ flex-basis: 25%;}
-.L--nomargin .w-third { flex-basis: 33.33%;}
-.L--nomargin .w-half  { flex-basis: 50%;}
-.L--nomargin .w-full { flex-basis: 100%;}
-
 @media (max-width: 47.99em) {
   .L--nomargin .w-1\@s { flex-basis: 8.33%;}
   .L--nomargin .w-2\@s { flex-basis: 16.66%;}
@@ -620,17 +535,6 @@ table  .L{
   .L--nomargin .w-10\@s { flex-basis: 83.3%;}
   .L--nomargin .w-11\@s { flex-basis: 91.63%;}
   .L--nomargin .w-12\@s { flex-basis: 100%;}
-
-  .L--nomargin .w-ten\@s   { flex-basis: 10%;}
-  .L--nomargin .w-nine\@s  { flex-basis: 11.11%;}
-  .L--nomargin .w-eight\@s { flex-basis: 12.5%;}
-  .L--nomargin .w-seven\@s { flex-basis: 14.28%;}
-  .L--nomargin .w-sixth\@s { flex-basis: 16.66%;}
-  .L--nomargin .w-fifth\@s { flex-basis: 20%;}
-  .L--nomargin .w-fourth\@s{ flex-basis: 25%;}
-  .L--nomargin .w-third\@s { flex-basis: 33.33%;}
-  .L--nomargin .w-half\@s  { flex-basis: 50%;}
-  .L--nomargin .w-full\@s { flex-basis: 100%;}
 }
 @media (min-width: 48em) {
   .L--nomargin .w-1\@m { flex-basis: 8.33%;}
@@ -646,15 +550,6 @@ table  .L{
   .L--nomargin .w-11\@m { flex-basis: 91.63%;}
   .L--nomargin .w-12\@m { flex-basis: 100%;}
 
-  .L--nomargin .w-ten   { flex-basis: 10%;}
-  .L--nomargin .w-nine  { flex-basis: 11.11%;}
-  .L--nomargin .w-eight { flex-basis: 12.5%;}
-  .L--nomargin .w-seven { flex-basis: 14.28%;}
-  .L--nomargin .w-sixth { flex-basis: 16.66%;}
-  .L--nomargin .w-fifth { flex-basis: 20%;}
-  .L--nomargin .w-fourth{ flex-basis: 25%;}
-  .L--nomargin .w-third { flex-basis: 33.33%;}
-  .L--nomargin .w-half  { flex-basis: 50%;}
 }
 @media (min-width: 62em) {
   .L--nomargin .w-1\@l { flex-basis: 8.33%;}
@@ -669,16 +564,6 @@ table  .L{
   .L--nomargin .w-10\@l { flex-basis: 83.3%;}
   .L--nomargin .w-11\@l { flex-basis: 91.63%;}
   .L--nomargin .w-12\@l { flex-basis: 100%;}
-
-  .L--nomargin .w-ten   { flex-basis: 10%;}
-  .L--nomargin .w-nine  { flex-basis: 11.11%;}
-  .L--nomargin .w-eight { flex-basis: 12.5%;}
-  .L--nomargin .w-seven { flex-basis: 14.28%;}
-  .L--nomargin .w-sixth { flex-basis: 16.66%;}
-  .L--nomargin .w-fifth { flex-basis: 20%;}
-  .L--nomargin .w-fourth{ flex-basis: 25%;}
-  .L--nomargin .w-third { flex-basis: 33.33%;}
-  .L--nomargin .w-half  { flex-basis: 50%;}
 }
 @media (min-width: 75em) {
   .L--nomargin .w-1\@xl { flex-basis: 8.33%;}
@@ -693,16 +578,6 @@ table  .L{
   .L--nomargin .w-10\@xl { flex-basis: 83.3%;}
   .L--nomargin .w-11\@xl { flex-basis: 91.63%;}
   .L--nomargin .w-12\@xl { flex-basis: 100%;}
-
-  .L--nomargin .w-ten   { flex-basis: 10%;}
-  .L--nomargin .w-nine  { flex-basis: 11.11%;}
-  .L--nomargin .w-eight { flex-basis: 12.5%;}
-  .L--nomargin .w-seven { flex-basis: 14.28%;}
-  .L--nomargin .w-sixth { flex-basis: 16.66%;}
-  .L--nomargin .w-fifth { flex-basis: 20%;}
-  .L--nomargin .w-fourth{ flex-basis: 25%;}
-  .L--nomargin .w-third { flex-basis: 33.33%;}
-  .L--nomargin .w-half  { flex-basis: 50%;}
 }
 
 
@@ -713,38 +588,6 @@ table  .L{
 .L--width-90{ max-width: 90%; width: 90%; margin: 0 auto; flex-basis: 90%;}
 .L--width-100{ max-width: 100%; width: 100%; flex-basis: 100%; }
 
-
-/* -- Columns ----------------------------------------------------------------*/
-@media (min-width: 48em) {
-  .columns-2 {
-    display: block;
-    -webkit-column-count: 2;
-       -moz-column-count: 2;
-            column-count: 2;
-
-    -webkit-column-gap: 0.875rem;
-       -moz-column-gap: 0.875rem;
-            column-gap: 0.875rem;
-  }
-  .columns-3 {
-    display: block;
-    -webkit-column-count: 3;
-       -moz-column-count: 3;
-            column-count: 3;
-    -webkit-column-gap: 0.875rem;
-       -moz-column-gap: 0.875rem;
-            column-gap: 0.875rem;
-  }
-  .columns-4{
-    display: block;
-    -webkit-column-count: 4;
-       -moz-column-count: 4;
-            column-count: 4;
-    -webkit-column-gap: 0.875rem;
-       -moz-column-gap: 0.875rem;
-            column-gap: 0.875rem;
-  }
-}
 
 /* -- Show hide utilities ----------------------------------------------------*/
 /*TODO@ do we want this ?  */
@@ -806,22 +649,12 @@ LW-[width of children elements with the class w]
   flex-basis: 100%;
 }
 
-/*
-test:
-
-[class*="LW-"] > .w,
-[class*=" LW-"] > .w {
-  outline: 1px solid gray;
-  margin: 0.5rem;
-  overflow: hidden;
-}*/
 [class*="LW-"] .w{
     margin: 0.5rem;
 }
 [class*="LW--nooverflow"] .w{
   overflow: hidden;
 }
-
 
 .LW-12 .w { flex-basis: calc(8.33% - 1rem);}
 .LW-11 .w { flex-basis: calc(9.09% - 1rem);}
@@ -847,3 +680,8 @@ test:
     flex-basis: calc(50% - 2rem);
   }
 }/* Medium */
+
+/**/
+[class*="LW-"] .w-12{
+  flex-basis: calc(100% - 1rem);
+}
