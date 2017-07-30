@@ -1,0 +1,34 @@
+{{ attach_library(active_theme()~'/form.form') }}
+{% for group in grouped_requirements %}
+
+  <h2 id="{{ group.type }}" class="w-12">{{ group.title }}</h2>
+
+  {% if group.type =='checked' %}
+  <section class="L LW-5">
+  {% else %}
+  <section class="L LW-3">
+  {% endif %}
+
+  {% for requirement in group.items %}
+  <article class="card w">
+    <div class="card__status card__status--{{group.type}}"></div>
+
+    <h3 class="card__title">{{ requirement.title }}</h3>
+
+    {{ requirement.value }}
+
+    {% if requirement.description %}
+      <details class="details-summary-link">
+      <summary>{{ 'Description'|t }}</summary>
+      <div class="card__text card__text--small">
+        {{ requirement.description }}
+      </div>
+      </details>
+    {% endif %}
+
+  </article>
+  {% endfor %}
+</section>
+
+
+{% endfor %}

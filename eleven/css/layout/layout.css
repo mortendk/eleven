@@ -60,6 +60,7 @@ known issues
   -ms-flex-align: start;
   align-items: stretch;
   align-content: flex-start;
+  width: 100%
 }
 .L-center{
   display: -webkit-box;

@@ -2,18 +2,17 @@
 .card__icon {
   position: relative;
   display: block;
-  width: 4rem;
-  height: 4rem;
   transition: all 0.5s ease-in-out;
+
 }
 .card__icon::before {
-  position: absolute;
   top: 0.5rem;
   left: 0.5rem;
   display: block;©
-  width: 3rem;
-  height: 3rem;
-  background-color: var(--white);
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--concrete);
   background-image: none ! important; /* yes we wanna make sure no module have fun here */
   content: "";
   transition: 0.2s ease-in;
@@ -48,7 +47,6 @@
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
 }
-
 
 
 /* small variation */
@@ -705,4 +703,54 @@
 .card__title--icon-admin-structure-media-bundle:before{
   -webkit-mask-image: url(icons/camera-retro.svg);
           mask-image: url(icons/camera-retro.svg);
+}
+
+
+.card__title--icon-checked:before{
+  -webkit-mask-image: url(icons/check-circle-o.svg);
+          mask-image: url(icons/check-circle-o.svg);
+}
+.card__title--icon-error:before{
+  -webkit-mask-image: url(icons/exclamation-circle.svg);
+          mask-image: url(icons/exclamation-circle.svg);
+}
+.card__title--icon-warning:before{
+  -webkit-mask-image: url(icons/warning.svg);
+          mask-image: url(icons/warning.svg);
+}
+
+
+/* card icons */
+.card__icon--drupal:before{
+  -webkit-mask-image: url(icons/d8-logo.svg);
+          mask-image: url(icons/d8-logo.svg);
+}
+.card__icon--php:before{
+  -webkit-mask-image: url(icons/php-logo.svg);
+          mask-image: url(icons/php-logo.svg);
+}
+.card__icon--database:before{
+  -webkit-mask-image: url(icons/database.svg);
+          mask-image: url(icons/database.svg);
+}
+.card__icon--webserver:before{
+  -webkit-mask-image: url(icons/tasks.svg);
+          mask-image: url(icons/tasks.svg);
+}
+.card__icon--cron:before{
+  -webkit-mask-image: url(icons/clock-o.svg);
+          mask-image: url(icons/clock-o.svg);
+}
+
+.card__icon--warning:before{
+  -webkit-mask-image: url(icons/warning.svg);
+          mask-image: url(icons/warning.svg);
+}
+.card__icon--error:before{
+  -webkit-mask-image: url(icons/exclamation-circle.svg);
+          mask-image: url(icons/exclamation-circle.svg);
+}
+.card__icon--checked:before{
+  -webkit-mask-image: url(icons/check-circle-o.svg);
+          mask-image: url(icons/check-circle-o.svg);
 }

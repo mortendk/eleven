@@ -22,6 +22,8 @@
   font-size: 0.75rem;
 }
 
+
+
 /* module list*/
 tr.card {
   overflow: none;
@@ -172,23 +174,40 @@ tr.card {
   -webkit-mask-image: url(icons/plug.svg);
 }
 
-/*status error */
-.card--module.card--status-error {
-  border-color: var(--strawberry);
-}
-.card__status--error::before {
-          mask-image: url(icons/frown-o.svg);
-  -webkit-mask-image: url(icons/frown-o.svg);
-}
+/* status error */
 .card__status--error {
   background-color: var(--strawberry);
 }
+.card__status--error:before{
+  -webkit-mask-image: url(icons/exclamation-circle.svg);
+          mask-image: url(icons/exclamation-circle.svg);
+}
+
+/* warning */
+.card__status--warning {
+  background-color: var(--pumpkin-light);
+}
+.card__status--warning:before{
+  -webkit-mask-image: url(icons/warning.svg);
+          mask-image: url(icons/warning.svg);
+}
+/* checked */
+.card__status--checked {
+  background-color: var(--grass-light);
+}
+.card__status--checked:before{
+  -webkit-mask-image: url(icons/check-circle-o.svg);
+          mask-image: url(icons/check-circle-o.svg);
+}
+
+
 .card__status--themedefault {
   background-color: var(--rasberry);
 }
 .card__status--themeadmin {
   background-color: var(--bluesky);
 }
+
 
 
 /* card group elements */
