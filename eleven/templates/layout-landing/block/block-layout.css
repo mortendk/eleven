@@ -1,33 +1,37 @@
 /*------------------------------------------------------------------------------
 bloack layout page
 -------------------------------------------------------------------------------*/
+/* th color */
+#blocks th{
+  padding: 0 0.5rem;
+  background-color: var(--gravel);
+  border-right: none
+}
+
 /* Region title */
 #blocks .region-title {
-  border-top: 1px dashed var(--bluesky);
+
 }
 #blocks .region-title:first-child {
-  border-top: 0rem;
+
 }
 #blocks tr.region-title {
-  background-color: var(--bluesky-light-20);
+  background-color: var(--concrete-light);
 }
 #blocks tr.region-title td {
-  margin: 0;
-  padding-right: 3rem;
-  border-top: 1px solid var(--bluesky-light);
-  border-bottom: 1px solid  var(--bluesky-light);
-  color: var(--white);
-  font-size: 1.5rem;
-  font-weight: normal;
+  padding: 0.5rem 3rem 0.5rem 0.5rem;
+  font-size: 1rem;
+  line-height: 2rem
+
 }
 
 /* Region name */
-.region-title__name {
+#blocks .region-title__name {
   display: inline-block;
   position: relative;
   padding-left: 2rem;
 }
-.region-title__name:before {
+#blocks .region-title__name:before {
   position: absolute;
   top: 0.2rem;
   left: 0rem;
@@ -60,10 +64,6 @@ bloack layout page
   text-align: center;
 }
 
-/* Draggable handle */
-#blocks .draggable a.tabledrag-handle {
-  background-color: var(--grass);
-}
 
 #blocks .block {
   font-weight: bold;
