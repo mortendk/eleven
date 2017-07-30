@@ -1,9 +1,14 @@
 {{ attach_library(active_theme()~'/table.admin') }}
 {{ attach_library(active_theme()~'/table.responsive') }}
-
 {{ attach_library(active_theme()~'/button') }}
 
-<table{{ attributes }}>
+{% set classes = [
+  table__views_ui_style_plugin_table == "table__views_ui_style_plugin_table" ? 'nope' : 'yep',
+  ]
+%}
+
+<table{{ attributes.addClass(classes) }}>
+
   {% if caption %}
     <caption>{{ caption }}</caption>
   {% endif %}

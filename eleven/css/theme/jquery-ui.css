@@ -1,8 +1,14 @@
+/* Overlays */
+.ui-widget-overlay {
+	background: var(--white-90);
+}
+.ui-widget-shadow { }
+
 .ui-dialog {
   position: absolute;
   z-index: 1260;
   overflow: visible;
-  color: var(--aspalt-light);
+  color: var(--rasberry);
   background-color: var(--gravel);
   border: solid 1px var(--asphalt);
   padding: 0;
@@ -13,15 +19,18 @@
   color: var(--white);
   border: none;
   padding: 0.25rem 1rem;
-  height: 2rem
+  height: 2rem;
+  width: 100%;
+  position: relative;
 }
 
 .ui-dialog .ui-dialog-content{
-  padding: 0
+  padding: 0.5rem
 }
 
 /* close button icon */
 .ui-dialog .ui-dialog-titlebar-close{
+  position: absolute;
   top: 0;
   right: 0;
   width: 2rem;
@@ -51,10 +60,6 @@ button.ui-dialog-titlebar-close:hover{
 
 
 
-
-
-
-
 .ui-dialog .ajax-progress-throbber { }
 .ui-dialog .ajax-progress-throbber .throbber,
 .ui-dialog .ajax-progress-throbber .message {
@@ -66,12 +71,7 @@ button.ui-dialog-titlebar-close:hover{
 /* Component containers
 ----------------------------------*/
 .ui-corner-all{border-radius: 0}
-.ui-widget {}
-.ui-widget .ui-widget {}
-.ui-widget input[type="text"],
-.ui-widget select,
-.ui-widget textarea,
-.ui-widget button {
+.ui-widget input[type="text"] {
   min-width: 100%
 }
 
@@ -166,33 +166,9 @@ button.ui-dialog-titlebar-close:hover{
 
 /* Icons
 ----------------------------------*/
-
 /* states and images */
 .ui-icon { }
-.ui-icon,
-.ui-widget-content .ui-icon {
 
-}
-.ui-widget-header .ui-icon {
-
-}
-.ui-state-default .ui-icon {
-
-}
-.ui-state-hover .ui-icon,
-.ui-state-focus .ui-icon {
-
-}
-.ui-state-active .ui-icon {
-
-}
-.ui-state-highlight .ui-icon {
-
-}
-.ui-state-error .ui-icon,
-.ui-state-error-text .ui-icon {
-
-}
 /* Misc visuals
 ----------------------------------*/
 /* Corner radius */
@@ -220,10 +196,3 @@ button.ui-dialog-titlebar-close:hover{
 .ui-corner-br {
 	border-bottom-right-radius: 0
 }
-
-
-/* Overlays */
-.ui-widget-overlay {
-	background: var(--white-90);
-}
-.ui-widget-shadow { }

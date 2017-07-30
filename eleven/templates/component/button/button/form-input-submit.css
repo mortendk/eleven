@@ -144,6 +144,25 @@ input[type="submit"].button--primary:hover + .form-item__icon {
   background-color: var(--grass-light);
 }
 
+/*cancel */
+#edit-actions  input[type="submit"][data-drupal-selector="edit-actions-cancel"]{
+  background-color: var(--concrete);
+}
+#edit-actions  input[type="submit"][data-drupal-selector="edit-actions-cancel"] + .form-item__icon{
+  background-color: var(--asphalt-light);
+}
+#edit-actions  input[type="submit"][data-drupal-selector="edit-actions-cancel"]:hover{
+  background-color: var(--asphalt-light);
+}
+#edit-actions  input[type="submit"][data-drupal-selector="edit-actions-cancel"]:hover + .form-item__icon{
+  background-color: var(--concrete);
+}
+
+
+input[type="submit"][data-drupal-selector="edit-actions-cancel"] + .form-item__icon::before {
+  mask-image: url(../icons/times-circle.svg);
+-webkit-mask-image: url(../icons/times-circle.svg);
+}
 
 /*  ----------------------------------------------------------------------------
 update button on form-display

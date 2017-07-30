@@ -1,7 +1,52 @@
-/**
- * @file
- * Presentational styles for Drupal dialogs.
- */
+div.ui-dialog .ui-dialog-buttonpane button{
+  margin: 0 1rem 0 0
+}
+
+.ui-button-text-only span.ui-button-text{
+  padding: 0 0.5rem 0 2.5rem
+}
+
+/*default button*/
+.ui-dialog-buttonset .button{
+  background-image: var(--button-asphalt);
+}
+.ui-dialog-buttonset .button:hover{
+  background-image: var(--button-asphalt-rev);
+}
+.ui-dialog-buttonset .button:hover:before{
+  transform: scale(1.5);
+}
+
+/*default button icon ...*/
+.ui-dialog-buttonset .button:before{
+  mask-image: url(icons/times-circle.svg);
+-webkit-mask-image: url(icons/times-circle.svg);
+}
+
+/* primary */
+.ui-dialog-buttonset .button--primary{
+  background-image: var(--button-grass);
+}
+.ui-dialog-buttonset .button--primary:hover{
+  background-image: var(--button-grass-rev);
+}
+.ui-dialog-buttonset .button--primary:before{
+  mask-image: url(icons/thumbs-up.svg);
+-webkit-mask-image: url(icons/thumbs-up.svg);
+
+}
+/*danger*/
+.ui-dialog-buttonset .button--danger{
+  background-image: var(--button-strawberry);
+}
+.ui-dialog-buttonset .button--danger:hover{
+  background-image: var(--button-strawberry-rev);
+}
+.ui-dialog-buttonset .button--danger:before{
+  mask-image: url(icons/trash.svg);
+-webkit-mask-image: url(icons/trash.svg);
+}
+
 
 @media all and (max-width: 48em) {
   /* 768px */
@@ -9,8 +54,9 @@
     width: 92% !important;
   }
 }
-
+/* title bar */
 .ui-dialog .ui-dialog-titlebar {
+  width: 100%
 }
 
 .ui-dialog .ui-dialog-titlebar-close {
@@ -22,21 +68,11 @@
   padding: 0;
   border: 0;
 }
-.ui-dialog .ui-dialog-buttonpane {
-}
-.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
-}
-.ui-dialog .ui-dialog-buttonpane .ui-button-text-only .ui-button-text {
-}
 
-/* Form action buttons are moved in dialogs. Remove empty space. */
-.ui-dialog .ui-dialog-content .form-actions {
-}
 .ui-dialog .ajax-progress-throbber {
   position: fixed;
   z-index: 1000;
   top: 48.5%;
-  /* Can't do center:50% middle: 50%, so approximate it for a typical window size. */
   left: 49%;
   width: 24px;
   height: 24px;
@@ -49,7 +85,16 @@
   background-repeat: no-repeat;
   background-position: center center;
 }
+
 .ui-dialog .ajax-progress-throbber .throbber,
 .ui-dialog .ajax-progress-throbber .message {
   display: none;
+}
+
+/* form corrections */
+.ui-dialog .form-item__description{
+  max-width: 100%;
+}
+div.views-ui-dialog .scroll{
+  padding: 0
 }
