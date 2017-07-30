@@ -63,13 +63,6 @@ td .tabledrag-changed {
   background-color: var(--bluesky-light-20);
 }
 
-/* title for regions in layouts*/
-.region-title td{
-  font-size: 1.25rem;
-  background-color: var(--concrete);
-}
-
-
 td.views-field-operations {
   float: right
 }

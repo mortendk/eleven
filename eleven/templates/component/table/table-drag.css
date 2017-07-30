@@ -1,38 +1,21 @@
 @media (max-width: 47.99em) {
-
   .tabledrag {
     display: block;
     overflow-y: auto;
     width: 100%;
     position: relative;
-    border: 1px solid red
   }
-
 
   /* region title */
   .tabledrag .region-title td,
   .tabledrag .region-title td:nth-child(1){
-    background-color: var(--bluesky-light);
-    text-align: center;
-    color: var(--white);
-    font-weight: normal;
-  }
-
-  tr.tabledrag-leaf {
-  }
-
-  tr.tabledrag-leaf td {
-
+    font-weight: bold;
   }
 
   .tabledrag-leaf td:nth-child(1) {
     background-color: var(--black-50);
-    /*position: absolute;*/
-    /*left: 0*/
-
   }
   .tabledrag-leaf td:nth-child(2){
-
     background-color: var(--grass);
   }
 
