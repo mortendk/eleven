@@ -7,7 +7,7 @@ dependencies:
     - eleven
 id: eleven_breadcrumbs
 theme: eleven
-region: header_second
+region: footer
 weight: -3
 provider: null
 plugin: system_breadcrumb_block

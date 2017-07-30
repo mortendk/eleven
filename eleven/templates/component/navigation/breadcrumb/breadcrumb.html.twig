@@ -1,7 +1,7 @@
 {{ attach_library(active_theme()~'/nav.breadcrumb') }}
 
 {% if breadcrumb %}
-  <nav class="breadcrumb L-right" role="navigation" aria-labelledby="system-breadcrumb">
+  <nav class="breadcrumb" role="navigation" aria-labelledby="system-breadcrumb">
     <h2 id="system-breadcrumb" class="visually-hidden">{{ 'Breadcrumb'|t }}</h2>
     <ol>
     {% for item in breadcrumb %}
