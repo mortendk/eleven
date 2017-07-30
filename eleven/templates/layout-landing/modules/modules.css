@@ -27,7 +27,7 @@
 .card--module .card__icon {
   float: none;
   width: 100%;
-  height: 6rem;
+  height: 8rem;
   border: none;
   background-color: var(--gravel-light);
 }
@@ -35,6 +35,7 @@
   top: calc(50% - 1.5rem);
   left: calc(50% - 2rem);
   width: 4rem;
+  height: 3rem;
   background-color: var(--concrete);
 }
 
@@ -76,6 +77,8 @@
 .card__list--modules-required-by li{ }
 .card__list--modules-requires li{ }
 .card__list--modules-required li{ }
+
+
 
 /* -- submit -----------------------------------------------------------------------*/
 .system-modules .form-actions input[type="submit"].button--primary + .form-item__icon::before {
