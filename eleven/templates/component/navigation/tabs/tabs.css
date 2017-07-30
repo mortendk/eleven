@@ -1,7 +1,8 @@
 /*
 tabs
 */
-.tabs { }
+.tabs {
+}
 .tabs li {
   margin: 0;
   border: 0;
@@ -35,30 +36,29 @@ tabs
   background-image: none ! important; /* yes we wanna make sure no module have fun here */
   content: "";
   transition: 0.2s ease-in;
-
-          /*mask-image: var(--icon-coffee);
+  /*mask-image: var(--icon-coffee);
   -webkit-mask-image: var(--icon-coffee);*/
+
   -webkit-mask-size: contain !important;
           mask-size: contain !important;
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
-
 }
 .tabs a:hover:before {
   transform: scale(1.2);
 }
 
 @media (max-width: 47.99em) {
-  .localtask__lvl1{
-    padding-left: 0
+  .localtask__lvl1 {
+    padding-left: 0;
   }
   .tabs a {
-      position: relative;
-      display: block;
-      min-width: 2rem;
-      margin: 0;
-      padding: 0 0 0 0 ;
-      text-indent: -999px
+    position: relative;
+    display: block;
+    min-width: 2rem;
+    margin: 0;
+    padding: 0 0 0 0 ;
+    text-indent: -999px;
   }
 }
 
@@ -101,8 +101,8 @@ tabs small
   border: 0;
   border-right: 1px solid var(--bluesky-light-light);
 }
-.tabs-small li:first-child{
-  margin-left: 0
+.tabs-small li:first-child {
+  margin-left: 0;
 }
 .tabs-small li a {
   display: block;
@@ -111,7 +111,8 @@ tabs small
 .tabs-small li a:hover {
   text-decoration: none;
 }
-.tabs-small li.is-active {
-  color: var(--bluesky-light);
-
+.tabs-small li.is-active,
+.tabs-small li.is-active a {
+  color: var(--strawberry-light);
+  font-weight: bold
 }
