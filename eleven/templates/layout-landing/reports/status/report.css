@@ -1,3 +1,6 @@
+.card__icon::before {
+  position: relative;
+}
 /* colors icons */
 .system-status--error a{
   color: var(--rasberry);
