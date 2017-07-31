@@ -3,11 +3,9 @@
   position: relative;
   display: block;
   transition: all 0.5s ease-in-out;
-  width: 4rem;
-  height: 4rem;
 }
 .card__icon::before {
-  position: absolute;
+
   top: 0.5rem;
   left: 0.5rem;
   display: block;©
@@ -19,8 +17,8 @@
   content: "";
   transition: 0.2s ease-in;
 
-          mask-image: var(--icon-coffee);
-  -webkit-mask-image: var(--icon-coffee);
+          mask-image: url(icons/d8-logo.svg);
+  -webkit-mask-image: url(icons/d8-logo.svg);
   -webkit-mask-size: contain !important;
           mask-size: contain !important;
   -webkit-mask-repeat: no-repeat;
@@ -43,6 +41,8 @@
   background-image: none ! important; /* yes we wanna make sure no module have fun here */
   content: "";
   transition: 0.2s ease-in;
+  mask-image: url(icons/d8-logo.svg);
+-webkit-mask-image: url(icons/d8-logo.svg);
 
   -webkit-mask-size: contain !important;
           mask-size: contain !important;
@@ -733,6 +733,30 @@
   -webkit-mask-image: url(icons/warning.svg);
           mask-image: url(icons/warning.svg);
 }
+
+.card__title--icon-access-unpublished:before{
+  -webkit-mask-image: url(icons/ban.svg);
+          mask-image: url(icons/ban.svg);
+}
+
+.card__title--icon-thunder-taxonomy:before,
+.card__title--icon-thunder-media:before{
+  -webkit-mask-image: url(icons/thunder.svg);
+          mask-image: url(icons/thunder.svg);
+
+}
+
+.card__title--icon-checklist-api:before{
+  -webkit-mask-image: url(icons/check-square-o.svg);
+          mask-image: url(icons/check-square-o.svg);
+
+}
+
+.card__title--icon-dropzonejs{
+
+}
+
+
 
 
 /* card icons */

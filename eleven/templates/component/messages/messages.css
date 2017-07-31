@@ -5,7 +5,7 @@
   padding: 0.5rem 1rem;
   border: 1px solid black;
   border-left: 1rem solid  black;
-  color: var(--white);
+  color: var(--asphalt);
   transition: all 1s ease-out;
 }
 @media (max-width: 47.99em) {
@@ -17,7 +17,6 @@
   padding: 0.5rem;
 }
 .messages a {
-  color: var(--white);
   text-decoration: underline;
 }
 .messages em {
@@ -27,6 +26,9 @@
   background-color: var(--rasberry);
 }
 
+.messages li{
+  padding: 0.5rem 0
+}
 /* hide message */
 a.hide-message {
   position: relative;
@@ -63,7 +65,6 @@ a.hide-message:before {
 .messages--status {
   border-color: var(--bluesky-light);
   background-color: var(--bluesky-light-light);
-  color: var(--bluesky);
 }
 .messages--status a.hide-message:before {
   background-color: var(--bluesky);
@@ -81,6 +82,10 @@ a.hide-message:before {
 .messages--error {
   border-color: var(--strawberry);
   background-color: var(--strawberry-light);
+  color: var(--white);
+}
+.messages--error a{
+  color: var(--yellowsnow-light);
 }
 .messages--error a.hide-message:before {
   background-color: var(--strawberry);

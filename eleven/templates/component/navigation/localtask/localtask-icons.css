@@ -73,10 +73,21 @@
           mask-image: url(icons/comments.svg);
 }
 .tabs li a[href$="admin/content/files"]:before {
+  -webkit-mask-image: url(icons/file-text-o.svg);
+          mask-image: url(icons/file-text-o.svg);
+}
+.tabs li a[href$="admin/content/media"]:before {
   -webkit-mask-image: url(icons/file-picture-o.svg);
           mask-image: url(icons/file-picture-o.svg);
 
 }
+.tabs li a[href$="admin/content/scheduled_update"]:before {
+  -webkit-mask-image: url(icons/clock-o.svg);
+          mask-image: url(icons/clock-o.svg);
+
+}
+
+
 
 /*apperance ------------------------------------------------------------------*/
 .tabs li a[href="/admin/appearance"]:before {
