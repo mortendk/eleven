@@ -68,7 +68,7 @@ tr.selected td {
 
 /* sticky header -------------------------------------------------------------*/
 .sticky-header th {
-  border-right: 1px solid var(--blue);
+  /*border-right: 1px solid var(--blue);*/
 }
 
 /*cells ---------------------------------------------------------------------*/

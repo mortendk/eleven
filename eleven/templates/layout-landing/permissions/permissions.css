@@ -1,0 +1,95 @@
+/*  ----------------------------------------------------------------------------
+  user permissions
+----------------------------------------------------------------------------- */
+.dummy-checkbox{
+  display: none;
+}
+
+.permissions td {
+  padding: 1rem 0.5rem;
+  border-top: 1px solid transparent
+  border-bottom: 1px solid transparent;
+}
+
+/* Module */
+.permissions td.module {
+  border-bottom: 1px solid var(--asphalt-light);
+  color: var(--bluesky);
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.permissions .title {
+  color: var(--asphalt-light);
+  font-weight: bold;
+  font-style: normal;
+}
+.permissions .title em {
+  color: var(--asphalt);
+  font-style: normal;
+}
+
+.permissions .permission{
+    padding-left: 1rem
+}
+.permissions .description {
+  max-width: 100%
+}
+
+.permission-warning {
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--strawberry);
+  background-color: var(--strawberry-light);
+  color: var(--white);
+  font-style: normal;
+  padding: 0.5rem;
+  transition: height 0.1s ease-in-out;
+  float: right
+}
+
+
+/* Hover */
+.permissions tr:hover td {
+  border-top: 1px solid var(--bluesky);
+  border-bottom: 1px solid var(--bluesky);
+}
+
+
+/* checkbox madness*/
+.permissions th.checkbox,
+.sticky-header th.checkbox {
+  width: 3rem;
+  height: 3rem;
+}
+
+.permissions td.checkbox {
+  width: 3rem;
+  padding: 1rem 0.5rem;
+  border-right: 1px solid var(--concrete);
+}
+
+
+
+/* -----------------------------------------------------------------------------
+checkbox dummy hell  -
+yes the permissions js file adds in a dummy checkbox into the dom so the css explodes and that makes the label checkbox hack break
+*/
+
+/* default checkbox */
+.checkbox-style-check input[type=checkbox].real-checkbox + input[type=checkbox].dummy-checkbox + label {
+  border-color: var(--bluesky);
+  background-color: var(--white);
+}
+
+/* checked */
+.checkbox-style-check input[type=checkbox].real-checkbox:checked + input[type=checkbox].dummy-checkbox + label {
+  border-color: var(--bluesky);
+  background-color: var(--bluesky-light);
+}
+.checkbox-style-check input[type=checkbox].real-checkbox:checked + input[type=checkbox].dummy-checkbox + label:before {
+  background-color: var(--white);
+}
+.checkbox-style-check input[type=checkbox].real-checkbox:checked + input[type=checkbox].dummy-checkbox + label + .checkbox__title label {
+  color: var(--bluesky);
+}

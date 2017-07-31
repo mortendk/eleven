@@ -1,4 +1,4 @@
-.views-field-node-bulk-form .form-item{
+.views-field-node-bulk-form .form-item {
 }
 
 /* draggable -----------------------------------------------------------------*/
@@ -64,7 +64,7 @@ td .tabledrag-changed {
 }
 
 td.views-field-operations {
-  float: right
+  float: right;
 }
 
 
@@ -126,18 +126,4 @@ td.views-field-filename a[href$=".xlsx"]::before {
 td input.field-weight {
   width: 3rem;
   min-width: 3rem;
-}
-
-
-
-
-
-/*  ----------------------------------------------------------------------------
-  user permissions
------------------------------------------------------------------------------ */
-.module {
-  color: var(--bluesky);
-  font-weight: bold;
-  padding-top: 1rem
-
 }

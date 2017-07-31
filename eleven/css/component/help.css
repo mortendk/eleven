@@ -17,16 +17,22 @@ TODO: havent tested on a mobile yet
   background-color: var(--black-50);
   color: var(--white);
   font-size: 0.75rem;
-  white-space: nowrap;
+  /*white-space: nowrap;*/
   text-indent: 0;
   content: attr(data-helptext);
   transition: all 0.18s ease-out 0.18s;
-  transform: translate(-50%, 10px);
+  transform: translate(-50%, 1rem);
   transform-origin: top;
+  max-width: 30rem
 }
 
 [data-helptext]:hover:after,
 [data-helptext]:focus:after  {
   opacity: 1;
   transform: translate(-50%, 0);
+}
+
+
+[data-helptext-position="down"]:hover:after {
+  transform: translate(-50%, 3rem);
 }

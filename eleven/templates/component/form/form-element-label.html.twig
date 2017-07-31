@@ -18,6 +18,7 @@ the wrapper is defined over in form-element.html.twig remeber to set it to inlin
 
 {#     '_t-elementname--' ~ element_name|clean_class, #}
 
+{#      #}
 {%
   set classes = [
     title_display == 'invisible' ? 'visually-hidden',
@@ -27,10 +28,8 @@ the wrapper is defined over in form-element.html.twig remeber to set it to inlin
 %}
 
 {% if title is not empty or required -%}
-  <label{{ attributes.addClass(classes) }}>
-
+  <label{{ attributes.addClass(classes).setAttribute('data-helptext', title)  }}>
   {# hide the name if its printed as an icon #}
-  {{ title }}
-
+    {{ title }}
   </label>
 {%- endif %}
