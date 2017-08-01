@@ -60,6 +60,8 @@ body.is-edit-ui-toolbar-opened #toolbar-bar .toolbar-bar,
   background-color: var(--bluesky-light);
           mask-image: url(icons/d8-logo.svg);
   -webkit-mask-image: url(icons/d8-logo.svg);
+  width: 24px;
+  height: 24px;
 }
 
 /* tab:  manage */
