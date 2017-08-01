@@ -1,15 +1,15 @@
 .shortcut-action {
   position: absolute;
-  top: -3rem;
-  right: -5rem;
+  top: 1rem;
+  left: -2rem;
   display: block;
   width: 2rem;
   height: 2rem;
-  background-color: var(--asphalt);
-  z-index: 666;
+  background-color: var(--white);
+  z-index: 1;
 }
 .toolbar-tray-open .shortcut-action{
-  top: calc(-5rem - 1px ) ;
+  /*top: calc(-5rem - 1px ) ;*/
 }
 
 .shortcut-action:hover {
@@ -51,7 +51,7 @@
 
 /* colors --------------------------------------------------------------------*/
 .shortcut-action__icon {
-  background-color: var(--white);
+  background-color: var(--rasberry);
 
           mask-image: url(icons/heart-o.svg);
   -webkit-mask-image: url(icons/heart-o.svg);

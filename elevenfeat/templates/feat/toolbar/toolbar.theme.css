@@ -58,21 +58,21 @@ body.is-edit-ui-toolbar-opened #toolbar-bar .toolbar-bar,
 
 #toolbar-bar .toolbar-icon-escape-admin:before {
   background-color: var(--bluesky-light);
-          mask-image: var(--icon-drop);
-  -webkit-mask-image: var(--icon-drop);
+          mask-image: url(icons/d8-logo.svg);
+  -webkit-mask-image: url(icons/d8-logo.svg);
 }
 
 /* tab:  manage */
 #toolbar-bar .toolbar-icon-menu::before {
-  -webkit-mask-image: var(--icon-manage);
-          mask-image: var(--icon-manage);
+  -webkit-mask-image: url(icons/tachometer.svg);
+          mask-image: url(icons/tachometer.svg);
 }
 /* tab: shortcuts */
 #toolbar-bar .toolbar-tab .toolbar-icon-shortcut:before {
   background-color: var(--strawberry);
 
-  -webkit-mask-image: var(--icon-heart);
-          mask-image: var(--icon-heart);
+  -webkit-mask-image: url(icons/heart.svg);
+          mask-image: url(icons/heart.svg);
 }
 /* tab: user */
 #toolbar-bar .toolbar-tab .toolbar-icon-user:before {
@@ -163,8 +163,8 @@ body.is-edit-ui-toolbar-opened #toolbar-bar .toolbar-bar,
 }
 
 #toolbar-bar button.toolbar-icon.toolbar-icon-toggle-vertical:before {
-  -webkit-mask-image: var(--icon-arrow-left);
-          mask-image: var(--icon-arrow-left);
+  -webkit-mask-image: url(icons/angle-left.svg)
+          mask-image: url(icons/angle-left.svg)
 }
 #toolbar-bar button.toolbar-icon-toggle-vertical:hover:before {
   transform: rotate(-90deg);
@@ -179,8 +179,8 @@ body.is-edit-ui-toolbar-opened #toolbar-bar .toolbar-bar,
   background-color: var(--asphalt-light);
 }
 #toolbar-bar button.toolbar-icon-toggle-horizontal:before {
-  -webkit-mask-image: var(--icon-up);
-          mask-image: var(--icon-up);
+  -webkit-mask-image: url(icons/angle-up.svg);
+          mask-image: url(icons/angle-up.svg);
 }
 #toolbar-bar button.toolbar-icon-toggle-horizontal:hover:before {
   transform: rotate(90deg);
@@ -215,6 +215,7 @@ level 1 : horizontal
 }
 
 /* level 0 horizontal menu items */
+.toolbar-tray-horizontal .level-1 a,
 .toolbar-tray-horizontal .menu-item--expanded,
 .toolbar-horizontal .toolbar-tray li.menu-item--0 > a {
   background-image: none;
@@ -302,28 +303,28 @@ level 1 : horizontal
 ------------------------------------------------------------------------------*/
 /* content */
 #toolbar-bar a.toolbar-icon-system-admin-content:before {
-  -webkit-mask-image: var(--icon-content);
-          mask-image: var(--icon-content);
+  -webkit-mask-image: url(icons/archive.svg);
+          mask-image: url(icons/archive.svg);
 }
 /* Structure */
 #toolbar-bar a.toolbar-icon-system-admin-structure:before {
-  -webkit-mask-image: var(--icon-structure);
-          mask-image: var(--icon-structure);
+  -webkit-mask-image: url(icons/cubes.svg);
+          mask-image: url(icons/cubes.svg);
 }
 /* Apperance */
 #toolbar-bar a.toolbar-icon-system-themes-page:before {
-  -webkit-mask-image: var(--icon-rocket);
-          mask-image: var(--icon-rocket);
+  -webkit-mask-image: url(icons/paint-brush.svg);
+          mask-image: url(icons/paint-brush.svg);
 }
 /* Extend */
 #toolbar-bar a.toolbar-icon-system-modules-list:before {
-  -webkit-mask-image: var(--icon-puzzle);
-          mask-image: var(--icon-puzzle);
+  -webkit-mask-image: url(icons/puzzle-piece.svg);
+          mask-image: url(icons/puzzle-piece.svg);
 }
 /* Configuration */
 #toolbar-bar a.toolbar-icon-system-admin-config:before {
-  -webkit-mask-image: var(--icon-gears);
-          mask-image: var(--icon-gears);
+  -webkit-mask-image: url(icons/gears.svg);
+          mask-image: url(icons/gears.svg);
 }
 /* People */
 #toolbar-bar a.toolbar-icon-entity-user-collection:before {
@@ -332,16 +333,16 @@ level 1 : horizontal
 }
 /* Report */
 #toolbar-bar a.toolbar-icon-system-admin-reports:before {
-  -webkit-mask-image: var(--icon-piechart);
-          mask-image: var(--icon-piechart);
+  -webkit-mask-image: url(icons/pie-chart.svg);
+          mask-image: url(icons/pie-chart.svg);
 }
 
 /*
  Shortcuts icons
 */
 #toolbar-bar nav[aria-label="User-defined shortcuts"] a:before {
-  -webkit-mask-image: var(--icon-heart);
-          mask-image: var(--icon-heart);
+  -webkit-mask-image: url(icons/heart.svg);
+          mask-image: url(icons/heart.svg);
 }
 #toolbar-bar nav[aria-label="User-defined shortcuts"] a.edit-shortcuts {
   position: absolute;
@@ -497,15 +498,15 @@ Vertical
 #toolbar-bar .toolbar-icon.toolbar-handle:before {
   background-color: var(--white);
 
-  -webkit-mask-image: var(--icon-down);
-          mask-image: var(--icon-down);
+  -webkit-mask-image: url(icons/angle-down.svg);
+          mask-image: url(icons/angle-down.svg);
 }
 #toolbar-bar .toolbar-icon.toolbar-handle:hover:before {
   transform: scale(1) translateY(0.5rem) ;
 }
 #toolbar-bar .toolbar-icon.toolbar-handle.open:before {
-  -webkit-mask-image: var(--icon-up);
-          mask-image: var(--icon-up);
+  -webkit-mask-image: url(icons/angle-up.svg);
+          mask-image: url(icons/angle-up.svg);
 }
 #toolbar-bar .toolbar-icon.toolbar-handle.open:hover:before {
   transform: scale(1) translateY(-0.5rem) ;

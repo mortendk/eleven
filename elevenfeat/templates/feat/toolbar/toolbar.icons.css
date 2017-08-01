@@ -13,8 +13,8 @@
 
 
 #toolbar-bar .level-2 a:before {
-  -webkit-mask-image: var(--icon-arrow-right);
-          mask-image: var(--icon-arrow-right);
+  -webkit-mask-image: url(icons/angle-right.svg);
+          mask-image: url(icons/angle-right.svg);
   background-color: var(--asphalt);
 }
 
