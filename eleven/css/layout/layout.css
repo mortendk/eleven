@@ -591,7 +591,7 @@ table  .L{
 
 /* -- Show hide utilities ----------------------------------------------------*/
 /*TODO@ do we want this ?  */
-/*.u-visible { display: none;}
+.u-visible { display: none;}
 @media (max-width: 47.99em) {
   .u-visible\@s{ display: block;}
   .u-visible\@m{ display: none;}
@@ -623,7 +623,7 @@ table  .L{
   .u-visible\@l{ display: none;}
   .u-visible\@g{ display: none;}
   .u-visible\@print{ display: block;}
-}*/
+}
 
 /* -- testing --------------------------------------------------------------- */
 ._testlayout [class^="w-"],

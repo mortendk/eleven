@@ -111,9 +111,7 @@ the trick is simpel were using 2 * label and using the first as the visual check
   outline: 0;
 }
 
-
 /*--  colors ---------------------------------------------------------*/
-
 .checkbox-style-check input[type=checkbox] + label {
   border: 1px solid var(--bluesky);
   background-color: var(--white);
@@ -121,14 +119,15 @@ the trick is simpel were using 2 * label and using the first as the visual check
 .checkbox-style-check input[type=checkbox] + label:before {
   background-color: var(--white);
 }
-/*hover*/
+/* hover */
 .checkbox-style-check input[type=checkbox] + label:hover {
-  border-color: var(--bluesky);
+  border-color: var(--rasberry);
   background-color: var(--white);
 }
 .checkbox-style-check input[type=checkbox] + label:hover:before {
   background-color: var(--bluesky);
 }
+
 /* checked */
 .checkbox-style-check input[type=checkbox]:checked + label {
   border-color: var(--bluesky);
@@ -141,7 +140,6 @@ the trick is simpel were using 2 * label and using the first as the visual check
   color: var(--bluesky);
 }
 
-
 /* disabled */
 .checkbox-style-check input[type=checkbox]:disabled + label {
   border-color: var(--concrete);
@@ -150,7 +148,6 @@ the trick is simpel were using 2 * label and using the first as the visual check
 .checkbox-style-check input[type=checkbox]:disabled + label:before {
   width: 0.875rem;
   background-color: var(--gravel);
-
           mask-image: url(icons/times.svg);
   -webkit-mask-image: url(icons/times.svg);
 }
@@ -158,8 +155,6 @@ the trick is simpel were using 2 * label and using the first as the visual check
   color: var(--concrete);
   font-weight: 100;
 }
-
-
 
 /*
 fixes for views tables with the select all functions
@@ -171,9 +166,55 @@ adds in the visually-hidden class we wanna overwrite
 }
 
 
-
 /* checkbox that should look like an open close button*/
 .js-form-item-revision,
 .js-form-item-menu-enabled {
 
 }
+
+/* -----------------------------------------------------------------------------
+checkbox dummy hell  -
+yes the permissions js file adds in a dummy checkbox into the dom so the css
+explodes and that makes the label checkbox hack break
+*/
+.dummy-checkbox{
+  display: none;
+}
+
+/* default checkbox */
+.checkbox-style-check input[type=checkbox].real-checkbox + input[type=checkbox].dummy-checkbox + label {
+  border-color: var(--bluesky);
+  background-color: var(--white);
+}
+.checkbox-style-check input[type=checkbox].real-checkbox + input[type=checkbox].dummy-checkbox + label:hover{
+  border-color: var(--rasberry);
+}
+
+/* checked and disabled */
+.checkbox-style-check input[type=checkbox].real-checkbox:disabled + input[type=checkbox].dummy-checkbox:disabled + label {
+  border-color: var(--bluesky);
+  background-color: var(--gravel);
+}
+.checkbox-style-check input[type=checkbox].real-checkbox:disabled + input[type=checkbox].dummy-checkbox:disabled + label:before{
+  background-color: var(--bluesky);
+}
+
+/* checked  */
+.checkbox-style-check input[type=checkbox].real-checkbox:checked + input[type=checkbox].dummy-checkbox + label{
+  background-color: var(--bluesky);
+}
+.checkbox-style-check input[type=checkbox].real-checkbox:checked + input[type=checkbox].dummy-checkbox + label:before {
+  background-color: var(--white);
+  mask-image: url(icons/check.svg);
+  -webkit-mask-image: url(icons/check.svg);
+}
+
+/*not checked*/
+.checkbox-style-check input[type=checkbox].real-checkbox + input[type=checkbox].dummy-checkbox:disabled + label:before {
+  background-color: var(--white);
+  mask-image: url(icons/check.svg);
+  -webkit-mask-image: url(icons/check.svg);
+}
+
+/*<input class="form-checkbox real-checkbox js-real-checkbox" type="checkbox" id="edit-page-creator-administer-entity-browsers" value="1">
+<input type="checkbox" class="dummy-checkbox js-dummy-checkbox" disabled="disabled" checked="checked">*/
