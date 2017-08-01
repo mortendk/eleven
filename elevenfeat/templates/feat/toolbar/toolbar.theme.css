@@ -62,7 +62,6 @@ body.is-edit-ui-toolbar-opened #toolbar-bar .toolbar-bar,
   -webkit-mask-image: var(--icon-drop);
 }
 
-
 /* tab:  manage */
 #toolbar-bar .toolbar-icon-menu::before {
   -webkit-mask-image: var(--icon-manage);
@@ -188,8 +187,6 @@ body.is-edit-ui-toolbar-opened #toolbar-bar .toolbar-bar,
 }
 
 
-
-
 /* -----------------------------------------------------------------------------
 level 1 : horizontal
 -----------------------------------------------------------------------------=*/
@@ -217,78 +214,81 @@ level 1 : horizontal
   background-color: var(--white);
 }
 
-
 /* level 0 horizontal menu items */
-.toolbar-horizontal .toolbar-tray li.menu-item--0:hover > a{
-  background-color: var(--bluesky);
-}
+.toolbar-tray-horizontal .menu-item--expanded,
 .toolbar-horizontal .toolbar-tray li.menu-item--0 > a {
   background-image: none;
   background-color: var(--asphalt-light);
   border-right: 1px solid var(--asphalt);
 }
-.toolbar-horizontal .toolbar-tray li.menu-item--0 > a.is-active{
-  background-color: var(--concrete);
+.toolbar-horizontal .toolbar-tray li.menu-item--0:hover > a{
+  background-color: var(--asphalt);
 }
+.toolbar-horizontal .toolbar-tray li.menu-item--0 > a.is-active{
+  background-color: var(--asphalt);
+}
+.toolbar-tray-horizontal .menu-item:hover,
 .toolbar-horizontal .toolbar-tray li.menu-item--0 > a:hover{
   background-color: var(--asphalt);
 }
 
-/* level 1 */
+/* level 1  ------------------------------------------------------------------*/
+.toolbar-horizontal .toolbar-menu--lvl1{
+  background-color: var(--asphalt-light);
+}
+/* active menu lvl 1*/
 .toolbar-horizontal .toolbar-tray li.menu-item--1:hover > a{
-  background-color: var(--bluesky);
+  background-color: var(--asphalt);
 }
 .toolbar-horizontal .toolbar-tray li.menu-item--1 > a {
   background-image: none;
-  background-color: var(--bluesky-light);
-  border-bottom: 1px solid var(--bluesky);
+  background-color: var(--aspalt);
+  border-bottom: 1px solid var(--asphalt);
 }
 .toolbar-horizontal .toolbar-tray li.menu-item--1 > a.is-active{
-  background-color: var(--bluesky);
-  border-bottom: 1px solid var(--bluesky);
+  background-color: var(--asphalt);
+  border-bottom: 1px solid var(--asphalt);
 }
 .toolbar-horizontal .toolbar-tray li.menu-item--1 > a:hover{
-  background-color: var(--bluesky);
+  background-color: var(--asphalt);
 }
 .toolbar-horizontal .toolbar-tray li.menu-item--1.menu-item--expanded > a {
-
 }
 
-
-/* level 2 */
+/* level 2 -------------------------------------------------------------------*/
 .toolbar-horizontal .toolbar-tray li.menu-item--2:hover > a{
-  background-color: var(--bluesky);
+  background-color: var(--asphalt);
 }
 .toolbar-horizontal .toolbar-tray li.menu-item--2 > a {
   background-image: none;
-  background-color: var(--bluesky-light);
-  border-bottom: 1px solid var(--bluesky);
+  background-color: var(--asphalt-light);
+  border-bottom: 1px solid var(--asphalt);
 }
 .toolbar-horizontal .toolbar-tray li.menu-item--2 > a.is-active{
-  background-color: var(--bluesky);
-  border-bottom: 1px solid var(--bluesky);
+  background-color: var(--asphalt-light);
+  border-bottom: 1px solid var(--asphalt);
 }
 .toolbar-horizontal .toolbar-tray li.menu-item--2 > a:hover{
-  background-color: var(--bluesky);
+  background-color: var(--asphalt);
 }
 .toolbar-horizontal .toolbar-tray li.menu-item--2.menu-item--expanded > a:after {
 }
 
 /* level 3 */
 .toolbar-horizontal .toolbar-tray li.menu-item--3:hover > a{
-  background-color: var(--bluesky);
+  background-color: var(--asphalt-light);
 }
 .toolbar-horizontal .toolbar-tray li.menu-item--3 > a {
   background-image: none;
-  background-color: var(--bluesky-light);
-  border-bottom: 1px solid var(--bluesky);
+  background-color: var(--asphalt-light);
+  border-bottom: 1px solid var(--asphalt);
 }
 .toolbar-horizontal .toolbar-tray li.menu-item--3 > a.is-active{
-  background-color: var(--bluesky);
-  border-bottom: 1px solid var(--bluesky);
+  background-color: var(--asphalt-light);
+  border-bottom: 1px solid var(--asphalt);
 }
 .toolbar-horizontal .toolbar-tray li.menu-item--3 > a:hover{
-  background-color: var(--bluesky);
+  background-color: var(--asphalt);
 }
 .toolbar-horizontal .toolbar-tray li.menu-item--3.menu-item--expanded > a {
 

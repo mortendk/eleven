@@ -2,6 +2,10 @@
   Admin Toolbar
   Dont change the classnames - stuff will break ;)
 */
+.toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded{
+  background-image: none
+}
+
 /* set global toolbar settings*/
 #toolbar-administration {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
@@ -14,7 +18,6 @@
 #toolbar-bar .toolbar-menu {
   padding: 0;
   list-style: none;
-  margin: 0;
 }
 #toolbar-bar li {
   margin: 0;
@@ -75,6 +78,10 @@
   -webkit-mask: var(--icon-coffee) no-repeat;
   -webkit-mask-size: contain;
           mask-size: contain;
+}
+
+#toolbar-bar .toolbar-menu--lvl2 a:before{
+  background-color: var(--yellowsnow);
 }
 
 /*------------------------------------------------------------------------------
@@ -231,7 +238,7 @@ admin toolbar module corrections
   border: none
 }
 .toolbar-tray-horizontal ul li.menu-item--expanded:hover ul {
-    box-shadow: none
+  box-shadow: none
 }
 .toolbar-tray-horizontal li.menu-item--expanded:hover ul ul,
 .toolbar-tray-horizontal li.menu-item--expanded:hover ul ul ul,
@@ -251,20 +258,22 @@ admin toolbar module corrections
   left: auto;
 }
 
+/* show level 2*/
 .toolbar-tray-horizontal ul li.menu-item--expanded:hover ul {
   display: block;
   position: absolute;
   width: 208px;
   z-index: 1;
-  background-color: red! important
 }
 .toolbar-tray-horizontal ul li.menu-item--expanded .menu-item > ul {
   display: none;
 }
 
+/* 2nd level */
 .toolbar-tray-horizontal ul li.menu-item--expanded .menu-item:hover ul {
   display: block;
   margin: -33px 0 0 208px;
+
 }
 .toolbar-tray-horizontal li:hover ul li {
   float: none;

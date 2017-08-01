@@ -1,3 +1,17 @@
+#toolbar-bar .toolbar-menu--lvl2 a{
+  padding: 0 8px 0 8px
+}
+
+#toolbar-bar .toolbar-menu--lvl2 a:before{
+  -webkit-mask-image: none;
+          mask-image: none;
+  width: 0;
+  height: 0;
+  background-color: var(--yellowsnow);
+}
+
+
+
 #toolbar-bar .level-2 a:before {
   -webkit-mask-image: var(--icon-arrow-right);
           mask-image: var(--icon-arrow-right);
@@ -6,12 +20,12 @@
 
 /* admin toolbar help */
 #toolbar-bar a.toolbar-icon-admin-toolbar-tools-help:before{
-  -webkit-mask-image: url(icons/drupal.svg);
-          mask-image: url(icons/drupal.svg);
+  -webkit-mask-image: url(icons/d8-logo.svg);
+          mask-image: url(icons/d8-logo.svg);
 }
 #toolbar-bar a.toolbar-icon-system-admin-index:before{
-  -webkit-mask-image: url(icons/drupal.svg);
-          mask-image: url(icons/drupal.svg);
+  -webkit-mask-image: url(icons/d8-logo.svg);
+          mask-image: url(icons/d8-logo.svg);
 }
 #toolbar-bar a.toolbar-icon-admin-toolbar-tools-flush:before{
   -webkit-mask-image: url(icons/spinner.svg);
@@ -30,8 +44,8 @@
           mask-image: url(icons/refresh.svg);
 }
 #toolbar-bar a.toolbar-icon-admin-toolbar-tools-drupalorg:before{
-  -webkit-mask-image: url(icons/drupal.svg);
-          mask-image: url(icons/drupal.svg);
+  -webkit-mask-image: url(icons/wordmark.svg);
+          mask-image: url(icons/wordmark.svg);
 }
 #toolbar-bar a.toolbar-icon-admin-toolbar-tools-user-logout:before{
   -webkit-mask-image: url(icons/sign-out.svg);
@@ -169,8 +183,8 @@
 
 }
 #toolbar-bar a.toolbar-icon-system-admin-config-system:before{
-  -webkit-mask-image: url(icons/drupal.svg);
-          mask-image: url(icons/drupal.svg);
+  -webkit-mask-image: url(icons/d8-logo.svg);
+          mask-image: url(icons/d8-logo.svg);
 }
 #toolbar-bar a.toolbar-icon-system-admin-config-content:before{
   -webkit-mask-image: url(icons/pencil.svg);
