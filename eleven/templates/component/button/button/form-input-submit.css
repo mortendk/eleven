@@ -277,7 +277,18 @@ first one is keeping the state that it have the other changes it to published or
 }
 
 
+/* uninstall */
+.system-modules-uninstall #edit-actions input[type="submit"]{
+  background-color: var(--grass-light);
+}
+.system-modules-uninstall #edit-actions input[type="submit"] + .form-item__icon{
+  background-color: var(--grass);
+}
+.system-modules-uninstall .form-item__icon::before{
+  mask-image: url(../icons/power-off.svg);
+-webkit-mask-image: url(../icons/power-off.svg);
 
+}
 
 /*input[type="submit"][formnovalidate="formnovalidate"] {
   background-color: var(--concrete);
