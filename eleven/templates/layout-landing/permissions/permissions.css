@@ -1,6 +1,11 @@
 /*  ----------------------------------------------------------------------------
   user permissions
 ----------------------------------------------------------------------------- */
+/* begone compact links*/
+.compact-link {
+  display: none
+}
+
 .permissions td {
   padding: 1rem 0.5rem;
   border-top: 1px solid transparent;

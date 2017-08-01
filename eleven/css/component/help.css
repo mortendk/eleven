@@ -32,11 +32,13 @@ TODO: havent tested on a mobile yet
 [data-helptext]:hover:after {
   opacity: 1;
   transform: translate(-50%, 0);
-  width: 10rem;
+  min-width: 4rem;
   height: auto;
   overflow: visible;
 }
-
+.permissions [data-helptext]:hover:after {
+  width: 10rem
+}
 /*[data-helptext-position="down"]:hover:after {
   transform: translate(5-0%, 3rem);
 }*/
