@@ -92,6 +92,7 @@ a.smallbtn--add:before {
           mask-image: url(icons/plus-circle.svg);
 }
 /*duplicate*/
+a.smallbtn--clone:before,
 a.smallbtn--duplicate:before {
   -webkit-mask-image: url(icons/f24d.svg);
           mask-image: url(icons/f24d.svg);
@@ -105,6 +106,11 @@ a.smallbtn--disable:before {
 a.smallbtn--enable:before {
   -webkit-mask-image: url(icons/power-off.svg);
           mask-image: url(icons/power-off.svg);
+}
+/* messages */
+a.smallbtn--view-messages:before {
+  -webkit-mask-image: url(icons/envelope.svg);
+          mask-image: url(icons/envelope.svg);
 }
 
 /* list */

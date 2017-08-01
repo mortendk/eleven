@@ -148,8 +148,8 @@
 
 /*people ---------------------------------------------------------------------*/
 .tabs li a[href="/admin/people"]:before {
-  -webkit-mask-image: url(icons/list.svg);
-          mask-image: url(icons/list.svg);
+  -webkit-mask-image: url(icons/userid.svg);
+          mask-image: url(icons/userid.svg);
 
 }
 .tabs li a[href="/admin/people/permissions"]:before {
@@ -332,6 +332,34 @@ ul.tabs > li:first-child a[href^="/node/"]:before {
 .tabs li a[href$="/outline"]:before {
   -webkit-mask-image: url(icons/sitemap.svg);
           mask-image: url(icons/sitemap.svg);
+}
+
+
+
+
+.tabs li a[href$="structure/media/manage/document"]:before {
+  -webkit-mask-image: url(icons/file-picture-o.svg);
+          mask-image: url(icons/file-picture-o.svg);
+}
+
+/* content types*/
+.tabs li a[href$="structure/types/manage/page"]:before {
+  -webkit-mask-image: url(icons/briefcase.svg);
+          mask-image: url(icons/briefcase.svg);
+}
+
+
+/*conctact */
+.tabs li a[href$="structure/contact"]:before {
+  -webkit-mask-image: url(icons/envelope.svg);
+          mask-image: url(icons/envelope.svg);
+}
+
+
+/* messages */
+.tabs li a[href$="/messages"]:before {
+  -webkit-mask-image: url(icons/envelope.svg);
+          mask-image: url(icons/envelope.svg);
 }
 
 /*settings */

@@ -146,9 +146,15 @@ function eleven_preprocess_links__dropbutton(&$variables) {
 
 }
 
-// function eleven_preprocess_form_element_label(&$variables) {
-//    kint($variables);
-// }
+/* the permission page do fun stuff with the form elements and js so we need a specific template for the label ... */
+function eleven_theme_suggestions_form_element_label_alter(array &$suggestions, array $variables) {
+  $path = explode('/', \Drupal::service('path.current')->getPath());
+
+  if (isset($path[3]) AND $path[1] =="admin" AND $path[2] =="people" AND $path[3] =="permissions") {
+    $suggestions[] = 'form_element_label__permissions';
+  }
+
+}
 
 
 
