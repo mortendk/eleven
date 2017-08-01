@@ -24,9 +24,15 @@
             {% if loop.index == 1%}
               {{cell.content}}
             {% else %}
-            <span class="help" data-helptext="{{cell.content}}">
-              {{ cell.content|slice(0,4) }}
+
+            <span data-helptext="{{cell.content}}">
+                {#
+                {{ cell.content|slice(0,4) }}
+                 #}
+
+              {{ cell.content }}
             </span>
+
 
             {% endif %}
           </{{ cell.tag }}>

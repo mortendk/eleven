@@ -32,22 +32,13 @@
   max-width: 100%
 }
 
+/* Warning */
 .permission-warning {
   display: block;
   overflow: hidden;
-  border: 1px solid var(--strawberry);
-  background-color: var(--strawberry-light);
-  color: var(--white);
+  color: var(--strawberry);
   font-style: normal;
-  padding: 0.5rem;
-  transition: height 0.1s ease-in-out;
-}
-
-
-/* Hover */
-.permissions tr:hover td {
-  border-top: 1px solid var(--bluesky);
-  border-bottom: 1px solid var(--bluesky);
+  padding: 0.5rem 0;
 }
 
 
@@ -62,6 +53,27 @@
   width: 4rem;
   padding: 1rem 1rem;
   border-right: 1px solid var(--concrete);
+}
+
+
+
+@media (max-width: 48em) {
+  body table.responsive-enabled tbody > tr > td:first-child{
+    text-align: left
+  }
+
+  table.sticky-header{
+    display: none
+  }
+
+
+  .permissions td.checkbox {
+    width: 100%;
+    padding: 0.5rem 0.5rem 0.5rem 8rem;
+    border-right: 1px solid var(--concrete);
+  }
+
+
 }
 
 
