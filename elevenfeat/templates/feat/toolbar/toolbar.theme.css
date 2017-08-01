@@ -85,8 +85,8 @@ body.is-edit-ui-toolbar-opened #toolbar-bar .toolbar-bar,
   background-image: var(--button-asphalt);
 }
 #toolbar-bar button.toolbar-icon-edit:before {
-  -webkit-mask-image: var(--icon-pen);
-          mask-image: var(--icon-pen);
+  -webkit-mask-image: url(icons/pencil.svg);
+          mask-image: url(icons/pencil.svg);
 }
 #toolbar-bar button.toolbar-icon-edit:hover:before {
   background-color: var(--rasberry-light);
@@ -163,8 +163,8 @@ body.is-edit-ui-toolbar-opened #toolbar-bar .toolbar-bar,
 }
 
 #toolbar-bar button.toolbar-icon.toolbar-icon-toggle-vertical:before {
-  -webkit-mask-image: url(icons/angle-left.svg)
-          mask-image: url(icons/angle-left.svg)
+  -webkit-mask-image: url(icons/angle-left.svg);
+          mask-image: url(icons/angle-left.svg);
 }
 #toolbar-bar button.toolbar-icon-toggle-vertical:hover:before {
   transform: rotate(-90deg);
@@ -368,8 +368,8 @@ level 1 : horizontal
   content: "";
   transition: 0.2s ease-in;
 
-  -webkit-mask-image: var(--icon-pen);
-          mask-image: var(--icon-pen);
+  -webkit-mask-image: url(icons/pencil.svg);
+          mask-image: url(icons/pencil.svg);
 }
 #toolbar-bar nav[aria-label="User-defined shortcuts"] a.edit-shortcuts:hover {
   background-image: var(--button-rasberry-rev);
@@ -389,8 +389,8 @@ level 1 : horizontal
 }
 /* Edit profile */
 #toolbar-bar .account-edit a:before {
-  -webkit-mask-image: var(--icon-pen);
-          mask-image: var(--icon-pen);
+  -webkit-mask-image: url(icons/pencil.svg);
+          mask-image: url(icons/pencil.svg);
 }
 
 /* Logout */
