@@ -1,13 +1,9 @@
 /*  ----------------------------------------------------------------------------
   user permissions
 ----------------------------------------------------------------------------- */
-.dummy-checkbox{
-  display: none;
-}
-
 .permissions td {
   padding: 1rem 0.5rem;
-  border-top: 1px solid transparent
+  border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
 }
 
@@ -30,7 +26,7 @@
 }
 
 .permissions .permission{
-    padding-left: 1rem
+  padding-left: 1rem
 }
 .permissions .description {
   max-width: 100%
@@ -45,7 +41,6 @@
   font-style: normal;
   padding: 0.5rem;
   transition: height 0.1s ease-in-out;
-  float: right
 }
 
 
@@ -59,37 +54,23 @@
 /* checkbox madness*/
 .permissions th.checkbox,
 .sticky-header th.checkbox {
-  width: 3rem;
+  width: 4rem;
   height: 3rem;
 }
 
 .permissions td.checkbox {
-  width: 3rem;
-  padding: 1rem 0.5rem;
+  width: 4rem;
+  padding: 1rem 1rem;
   border-right: 1px solid var(--concrete);
 }
 
 
 
-/* -----------------------------------------------------------------------------
-checkbox dummy hell  -
-yes the permissions js file adds in a dummy checkbox into the dom so the css explodes and that makes the label checkbox hack break
+
+/*To make it even more fun labels are there twice so the help text is a pita as well
+lets hide the 2nd one
 */
-
-/* default checkbox */
-.checkbox-style-check input[type=checkbox].real-checkbox + input[type=checkbox].dummy-checkbox + label {
-  border-color: var(--bluesky);
-  background-color: var(--white);
-}
-
-/* checked */
-.checkbox-style-check input[type=checkbox].real-checkbox:checked + input[type=checkbox].dummy-checkbox + label {
-  border-color: var(--bluesky);
-  background-color: var(--bluesky-light);
-}
-.checkbox-style-check input[type=checkbox].real-checkbox:checked + input[type=checkbox].dummy-checkbox + label:before {
-  background-color: var(--white);
-}
-.checkbox-style-check input[type=checkbox].real-checkbox:checked + input[type=checkbox].dummy-checkbox + label + .checkbox__title label {
-  color: var(--bluesky);
+.checkbox__title,
+.checkbox__title label[data-helptext]:hover:after{
+  display: none
 }

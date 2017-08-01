@@ -19,10 +19,16 @@
               cell.active_table_sort ? 'is-active',
             ]
           %}
+
           <{{ cell.tag }}{{ cell.attributes.addClass(cell_classes) }}>
-            <span class="help" data-helptext="{{cell.content}}" data-helptext-position="down">
+            {% if loop.index == 1%}
+              {{cell.content}}
+            {% else %}
+            <span class="help" data-helptext="{{cell.content}}">
               {{ cell.content|slice(0,4) }}
             </span>
+
+            {% endif %}
           </{{ cell.tag }}>
         {% endfor %}
       </tr>

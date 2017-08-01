@@ -5,7 +5,7 @@ and yank in some icons etc
 first lets grap the label for id and use that as a identifier so we can add
 a span for an icon inside the label
 
-the wrapper is defined over in form-element.html.twig remeber to set it to inline etc
+the wrapper is defined over in form-element.html.twig remember to set it to inline etc
 #}
 
 {% if element['#title'].getUntranslatedString() %}
@@ -18,18 +18,22 @@ the wrapper is defined over in form-element.html.twig remeber to set it to inlin
 
 {#     '_t-elementname--' ~ element_name|clean_class, #}
 
-{#      #}
+{#      title_display == 'invisible' ? 'visually-hidden',     #}
 {%
   set classes = [
-    title_display == 'invisible' ? 'visually-hidden',
     required ? 'js-form-required',
     required ? 'is-required',
   ]
 %}
 
+
 {% if title is not empty or required -%}
-  <label{{ attributes.addClass(classes).setAttribute('data-helptext', title)  }}>
-  {# hide the name if its printed as an icon #}
-    {{ title }}
+  <label{{ attributes.addClass(classes).setAttribute('data-helptext', title )  }}>
+    {# hide the name if its printed as an icon #}
+    {% if title_display == 'invisible' %}
+      <span class="visually-hidden">{{ title }}</span>
+    {% endif %}
+
+
   </label>
 {%- endif %}
