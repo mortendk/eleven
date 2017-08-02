@@ -35,13 +35,21 @@
   }
 }
 
-.fullwidth {
-  width: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem;
+
+ul li{
+  list-style: none;
+  padding: 0;
+  margin: 0
 }
 
+header{
+  background-color: var(--gravel-light);
+  text-align: center;
+  border-bottom: 1px solid var(--gravel);
+  width: 100%
+}
 
-img{
-  border: 1px solid hotpink
+.footer{
+  padding: 4rem 0;
+  text-align: center
 }
