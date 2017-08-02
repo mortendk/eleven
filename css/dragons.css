@@ -49,6 +49,19 @@ header{
   width: 100%
 }
 
+html{
+  background: url(../images/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+}
+
+header{
+  text-align: center
+}
 .footer{
   padding: 4rem 0;
   text-align: center

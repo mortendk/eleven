@@ -34,15 +34,18 @@ h1,
   font-size: 3rem;
   font-weight: 100;
   font-style: normal;
+  text-align: center;
 }
 
 h2,
 .h2 {
-  font-size: 2rem;
-  font-weight: 200;
+  font-size: 3rem;
+  font-weight: 600;
   font-style: normal;
   text-align: center;
-  padding-top: 2rem 
+  padding-top: 2rem;
+  color: var(--bluesky);
+
 }
 h3,
 .h3 {
