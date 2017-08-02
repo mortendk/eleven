@@ -1,0 +1,91 @@
+/* -- base table -------------------------------------------------------------*/
+table {
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  table-layout: auto;
+  border-spacing: 0;
+  border-collapse: collapse;
+  color: black;
+  font-size: 1rem;
+  border-bottom: 1px solid var(--concrete-light);
+}
+caption,
+th,
+td {
+  padding: 0.25rem 0;
+  text-align: left;
+  vertical-align: top;
+}
+caption {
+  border-bottom: 1px solid color: var(--black);
+  color: var(--black);
+  text-align: center;
+  text-transform: uppercase;;
+}
+
+/* -- Row background colors  ------------------------------------------------*/
+tr:nth-of-type(odd) {
+  background-color: var(--white);
+}
+tr:nth-of-type(even) {
+  background-color: var(--gravel-light-light);
+}
+tr:hover {
+  background-color: var(--gravel-light);
+}
+tr:hover td {
+  border-color: var(--bluesky-50);
+  color: var(--bluesky);
+}
+
+ td. {
+   width: 3rem;
+   height: 1rem;
+   overflow: hidden
+ }
+
+
+/* header --------------------------------------------------------------------*/
+th {
+  position: relative;
+  padding: 0.5rem 0.5rem;
+  border-right: 1px solid var(--concrete);
+  background-color: var(--concrete-light);
+  color: var(--asphalt-light);
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: left;
+  white-space: nowrap;
+  line-height: 2rem;
+}
+
+th:firs-child {
+  border-left: none
+}
+th:last-child {
+  border-right: none;
+}
+th a {
+  /*position: absolute;
+  top: 0;
+  left: 0;*/
+  display: block;
+  width: 100%;
+  color: var(--bluesky);
+  /*line-height: 4rem;*/
+  padding-left: 0.5rem
+}
+th.is-active { }
+th a:hover {
+  color: var(--bluesky-light);
+  text-decoration: none;
+  cursor: ns-resize;
+}
+
+th a[href$="sort=asc"]:hover {
+  cursor: n-resize;
+}
+th a[href$="sort=desc"]:hover {
+  cursor: s-resize;
+}

@@ -1,0 +1,35 @@
+img {
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+  border: 0;
+  vertical-align: middle;
+}
+
+img[src$=".svg"]{
+  max-width: auto;
+  width: 100%;
+  height: auto;
+}
+
+/* Correct overflow not hidden in IE 9/10/11.*/
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+figcaption {
+  display: block;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+/* pita when images are behaving like inline elements inside of pict & img */
+picture img,
+figure img {
+  display: block;
+}

@@ -1,0 +1,21 @@
+{
+  "name": "slick-lightbox",
+  "version": "0.2.10",
+  "ignore": [
+  	"node_modules",
+  	"gh-pages",
+    "docs",
+    "demo",
+    "src/bower_components",
+  	"src/index.html"
+  ],
+  "main": [
+    "dist/slick-lightbox.js",
+    "dist/slick-lightbox.min.js",
+  	"dist/slick-lightbox.css"
+  ],
+  "dependencies": {
+    "jquery": "~1",
+    "slick-carousel": "~1.4.1"
+  }
+}

@@ -1,0 +1,198 @@
+/* Overlays */
+.ui-widget-overlay {
+	background: var(--white-90);
+}
+.ui-widget-shadow { }
+
+.ui-dialog {
+  position: absolute;
+  z-index: 1260;
+  overflow: visible;
+  color: var(--rasberry);
+  background-color: var(--gravel);
+  border: solid 1px var(--asphalt);
+  padding: 0;
+}
+
+.ui-dialog .ui-dialog-titlebar{
+  background-color: var(--asphalt-light);
+  color: var(--white);
+  border: none;
+  padding: 0.25rem 1rem;
+  height: 2rem;
+  width: 100%;
+  position: relative;
+}
+
+.ui-dialog .ui-dialog-content{
+  padding: 0.5rem
+}
+
+/* close button icon */
+.ui-dialog .ui-dialog-titlebar-close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2rem;
+  height: 2rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+button.ui-dialog-titlebar-close{
+  background-image: none;
+  background-color: var(--asphalt-light);
+}
+button.ui-dialog-titlebar-close:hover{
+  background-image: none;
+}
+.ui-dialog button.ui-dialog-titlebar-close:before {
+  mask-image: url(icons/times.svg);
+  -webkit-mask-image: url(icons/times.svg);
+  background-color: var(--concrete);
+
+}
+.ui-dialog button.ui-dialog-titlebar-close:hover:before {
+  background-color: var(--concrete-light);
+  transform: scale(1.2  );
+}
+
+
+
+.ui-dialog .ajax-progress-throbber { }
+.ui-dialog .ajax-progress-throbber .throbber,
+.ui-dialog .ajax-progress-throbber .message {
+  display: none;
+}
+
+
+
+/* Component containers
+----------------------------------*/
+.ui-corner-all{border-radius: 0}
+.ui-widget input[type="text"] {
+  min-width: 100%
+}
+
+.ui-widget-content {
+	border: 1px solid var(--concrete);
+}
+.ui-widget-content a { }
+.ui-widget-header { }
+.ui-widget-header a { }
+
+/* Interaction states
+----------------------------------*/
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+}
+
+.ui-state-default a,
+.ui-state-default a:link,
+.ui-state-default a:visited { }
+
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus { }
+
+.ui-state-hover a,
+.ui-state-hover a:hover,
+.ui-state-hover a:link,
+.ui-state-hover a:visited,
+.ui-state-focus a,
+.ui-state-focus a:hover,
+.ui-state-focus a:link,
+.ui-state-focus a:visited {
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active {
+}
+
+.ui-state-active a,
+.ui-state-active a:link,
+.ui-state-active a:visited {
+}
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+}
+
+.ui-state-highlight a,
+.ui-widget-content .ui-state-highlight a,
+.ui-widget-header .ui-state-highlight a {
+
+}
+.ui-state-error,
+.ui-widget-content .ui-state-error,
+.ui-widget-header .ui-state-error {
+}
+.ui-state-error a,
+.ui-widget-content .ui-state-error a,
+.ui-widget-header .ui-state-error a {
+
+}
+.ui-state-error-text,
+.ui-widget-content .ui-state-error-text,
+.ui-widget-header .ui-state-error-text {
+}
+
+.ui-priority-primary,
+.ui-widget-content .ui-priority-primary,
+.ui-widget-header .ui-priority-primary {
+
+}
+.ui-priority-secondary,
+.ui-widget-content .ui-priority-secondary,
+.ui-widget-header .ui-priority-secondary {
+}
+
+.ui-state-disabled,
+.ui-widget-content .ui-state-disabled,
+.ui-widget-header .ui-state-disabled {
+}
+.ui-state-disabled .ui-icon {
+
+}
+
+/* Icons
+----------------------------------*/
+/* states and images */
+.ui-icon { }
+
+/* Misc visuals
+----------------------------------*/
+/* Corner radius */
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-left,
+.ui-corner-tl {
+	border-top-left-radius: 0
+}
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-right,
+.ui-corner-tr {
+	border-top-right-radius: 0
+}
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-left,
+.ui-corner-bl {
+	border-bottom-left-radius: 0
+}
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-right,
+.ui-corner-br {
+	border-bottom-right-radius: 0
+}

@@ -1,0 +1,71 @@
+.icon-11 {
+  position: relative;
+}
+
+.icon-11:before {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--bluesky);
+  background-image: none ! important; /* yes we wanna make sure no module have fun here */
+  content: "";
+  transition: 0.2s ease-in;
+
+          mask-image: var(--icon-coffee);
+  -webkit-mask-image: var(--icon-coffee);
+  -webkit-mask-size: contain !important;
+          mask-size: contain !important;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+}
+
+.icon-11:hover:before {
+  /*transform: scale(1.5);*/
+  background-color: var(--bluesky-light);
+}
+
+
+
+/*nav.icon-buttons ul {
+  margin-top: 1rem;
+}
+.icon-buttons li{
+  width: 40%;
+  display: block
+}
+.icon-buttons li a {
+  position: relative;
+  display: block;
+  background-image: var(--button-bluesky);
+  padding-left: 2rem;
+  color: var(--white);
+  height: 2rem;
+  transition: all 0.5s ease-in-out;
+
+}
+.icon-buttons ul li a::before {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--bluesky);
+  background-image: none ! important;
+  content: "";
+  transition: 0.2s ease-in;
+  transition: all 0.5s ease-in-out;
+
+          mask-image: var(--icon-coffee);
+  -webkit-mask-image: var(--icon-coffee);
+  -webkit-mask-size: contain !important;
+          mask-size: contain !important;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+}
+.icon-buttons ul li a {
+  background-color: var(--concrete-light);
+}*/

@@ -1,0 +1,73 @@
+/* box-sizing */
+* {
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+html {
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: #f3f5f6;
+  text-size-adjust: 100%; /*ios only*/
+  font-size: 16px
+}
+hr {
+  border-top: 1px solid var(--bluesky-light);
+  width: 100%;
+}
+
+/* flex fix to make sure the footer is always placed at the bottom */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin:0;
+}
+
+main {
+  flex: 1;
+}
+
+/* basic links */
+a{
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+}
+
+
+
+img {
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+  border: 0;
+  vertical-align: middle;
+}
+
+img[src$=".svg"]{
+  max-width: auto;
+  width: 100%;
+  height: auto;
+}
+
+/* Correct overflow not hidden in IE 9/10/11.*/
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+figcaption {
+  display: block;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+/* pita when images are behaving like inline elements inside of pict & img */
+picture img,
+figure img {
+  display: block;
+}

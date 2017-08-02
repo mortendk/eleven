@@ -1,0 +1,79 @@
+:root {
+  --asphalt: #566075;
+  --asphalt-light: #6c7b8a;
+  --concrete: #b0bec5;
+  --concrete-light: #cfd8dc;
+  --gravel: #f0f0f0;
+  --gravel-light: #f9f9f9;
+  --gravel-light-light: #f3f3f3;
+  --bluesky: #18a9e0;
+  --bluesky-light: #6bbee4;
+  --bluesky-light-light: #d1f1ff; /*209 241 255 */
+  --bluesky-light-light-light: #bfecff;
+  --bluesky-10: #2fb1e3;
+  --bluesky-20: #46bae6;
+  --bluesky-30: #5dc2e9;
+  --bluesky-40: #74cbec;
+  --bluesky-50: #8bd4ef;
+  --bluesky-light-50: rgba(107, 190, 228, 0.5);
+  --bluesky-light-20: rgba(107, 190, 228, 0.2);
+
+  --rasberry: #cd255c;
+  --rasberry-light: #f8608c;
+  --rasberry-light-50: rgba(248, 96, 140, 0.5);
+  --rasberry-light-20: rgba(248, 96, 140, 0.2);
+  --grass: #7ebd4e;
+  --grass-light: #98d468;
+  --strawberry: #d8434d;
+  --strawberry-light: #ed5465;
+  --pumpkin: #e9673f;
+  --pumpkin-light: #f87e51;
+  --yellowsnow: #f5ba41;
+  --yellowsnow-light: #fcce54;
+  --yellowsnow-light-50: rgba(252, 206, 84, 0.5);
+  --yellowsnow-light-20: rgba(252, 206, 84, 0.2);
+
+  --black: #000;
+  --black-80: rgba(0, 0, 0, 0.8);
+  --black-50: rgba(0, 0, 0, 0.5);
+  --white: #fff;
+  --white-90: rgba(255, 255, 255, 0.9);
+  --white-20: rgba(255, 255, 255, 0.2);
+
+  --button-bluesky: repeating-linear-gradient(to right, var(--bluesky) 0rem, var(--bluesky) 32px, var(--bluesky-light) 32px, var(--bluesky-light) );
+  --button-bluesky-rev: repeating-linear-gradient(to right, var(--bluesky-light) 0rem, var(--bluesky-light) 32px, var(--bluesky) 32px, var(--bluesky) );
+  --button-bluesky-solid: repeating-linear-gradient(to right, var(--bluesky) 0rem, var(--bluesky) 32px, var(--bluesky) 32px, var(--bluesky) );
+  --button-bluesky-light: repeating-linear-gradient(to right, var(--bluesky-light) 0rem, var(--bluesky-light) 32px,  var(--bluesky-50) 32px,  var(--bluesky-50) );
+  --button-bluesky-light-solid: repeating-linear-gradient(to right, var(--bluesky-light) 0rem, var(--bluesky-light) 32px, var(--bluesky-light) 32px, var(--bluesky-light) );
+  --button-bluesky-50: repeating-linear-gradient(to right,  var(--bluesky) 0rem,  var(--bluesky) 32px, var(--bluesky-50) 32px, var(--bluesky-50) );
+
+  --button-bluesky-small: repeating-linear-gradient(to right, var(--bluesky) 0rem, var(--bluesky) 24px, var(--bluesky-light) 24px, var(--bluesky-light) );
+  --button-bluesky-small-rev: repeating-linear-gradient(to right, var(--bluesky-light) 0rem, var(--bluesky-light) 24px, var(--bluesky) 24px, var(--bluesky) );
+
+  --button-asphalt: repeating-linear-gradient(to right, var(--asphalt) 0rem, var(--asphalt) 32px, var(--asphalt-light) 32px, var(--asphalt-light) );
+  --button-asphalt-light: repeating-linear-gradient(to right, var(--asphalt-light) 0rem, var(--asphalt-light) 32px, var(--concrete) 32px, var(--concrete) );
+  --button-asphalt-rev: repeating-linear-gradient(to right, var(--asphalt-light) 0rem, var(--asphalt-light) 32px, var(--asphalt) 32px, var(--asphalt) );
+  --button-asphalt-small: repeating-linear-gradient(to right, var(--asphalt) 0rem, var(--asphalt) 24px, var(--asphalt-light) 24px, var(--asphalt-light) );
+  --button-asphalt-small-rev: repeating-linear-gradient(to right, var(--asphalt-light) 0rem, var(--asphalt-light) 24px, var(--asphalt) 24px, var(--asphalt) );
+
+  --button-concrete: repeating-linear-gradient(to right, var(--concrete) 0rem, var(--concrete) 32px, var(--concrete-light) 32px, var(--concrete-light) );
+  --button-concrete-rev: repeating-linear-gradient(to right, var(--concrete-light) 0rem, var(--concrete-light) 32px,  var(--concrete) 32px,  var(--concrete) );
+  --button-concrete-solid: repeating-linear-gradient(to right, var(--concrete) 0rem, var(--concrete) 32px, var(--concrete) 32px, var(--concrete) );
+
+  --button-concrete-small: repeating-linear-gradient(to right, var(--concrete) 0rem, var(--concrete) 24px, var(--concrete-light) 24px, var(--concrete-light) );
+  --button-concrete-small-rev: repeating-linear-gradient(to right, var(--concrete-light) 0rem, var(--concrete-light) 24px,  var(--concrete) 24px,  var(--concrete) );
+
+  --button-gravel: repeating-linear-gradient(to right, var(--gravel) 0rem, var(--gravel) 32px, var(--gravel-light) 32px, var(--gravel-light) );
+  --button-gravel-light: repeating-linear-gradient(to right, var(--gravel-light) 0rem, var(--gravel-light) 32px, #fff 32px, #fff );
+
+  --button-grass: repeating-linear-gradient(to right, var(--grass) 0rem, var(--grass) 32px, var(--grass-light) 32px, var(--grass-light) );
+  --button-grass-rev: repeating-linear-gradient(to right, var(--grass-light) 0rem, var(--grass-light) 32px,  var(--grass) 32px,  var(--grass) );
+
+  --button-rasberry: repeating-linear-gradient(to right, var(--rasberry) 0rem, var(--rasberry) 32px, var(--rasberry-light) 32px, var(--rasberry-light) );
+  --button-rasberry-rev: repeating-linear-gradient(to right, var(--rasberry-light) 0rem, var(--rasberry-light) 32px, var(--rasberry) 32px, var(--rasberry) );
+  --button-rasberry-active: repeating-linear-gradient(to right, var(--rasberry) 0rem, var(--rasberry) 32px, var(--rasberry) 32px, var(--rasberry) );
+
+  --button-strawberry: repeating-linear-gradient(to right, #d8434d 0rem, #d8434d 32px, #ed5465 32px, #ed5465 );
+  --button-strawberry-rev: repeating-linear-gradient(to right, #ed5465 0rem, #ed5465 32px, #d8434d 32px, #d8434d );
+  --button-strawberry-active: repeating-linear-gradient(to right, #d8434d 0rem, #d8434d 32px, #d8434d 32px, #d8434d );
+}
