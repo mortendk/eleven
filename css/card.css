@@ -7,7 +7,7 @@
   margin-bottom: 1rem;
   padding: 1rem;
   border: 1px solid var(--gravel);
-  background-color: var(--white);
+  background-color: var(--white-90);
   transition: all 0.5s ease-in-out;
 }
 .card:hover {

@@ -66,3 +66,17 @@ header{
   padding: 4rem 0;
   text-align: center
 }
+
+.download{
+  position: fixed;
+  right: 0;
+  width: 8rem;
+  background-color: var(--rasberry-light);
+  border: 3px solid var(--raaberry);
+  z-index: 666;
+  padding: 1rem
+}
+
+.download a{
+  color: var(--white);
+}
