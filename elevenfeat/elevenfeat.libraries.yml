@@ -9,7 +9,7 @@ global:
     # layout:
       # css/layout.css: {}
     theme:
-      css/theme/type.css
+      css/theme/type.css: {}
   dependencies:
     - system/admin
     # - core/modernizr
