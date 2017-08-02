@@ -81,3 +81,21 @@ header{
 .download a{
   color: var(--white);
 }
+
+
+/*preview*/
+.preview{
+  border: 1px solid var(--concrete);
+  display: block;
+  width: 100%;
+  height: 50rem;
+}
+.preview:hover img{
+  opacity: 0
+}
+.preview:hover{
+
+  background-image: url(../images/eleven-preview.gif);
+  background-size: cover;
+
+}
