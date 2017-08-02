@@ -41,7 +41,7 @@ h2,
 .h2 {
   font-size: 3rem;
   font-weight: 600;
-  font-style: normal;
+  font-style: 300;
   text-align: center;
   padding-top: 2rem;
   color: var(--bluesky);

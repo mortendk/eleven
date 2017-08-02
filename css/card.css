@@ -356,3 +356,59 @@ tr.card {
   padding: 0.5rem 0;
   font-size: 0.75rem;
 }
+
+
+
+
+/*button */
+
+a.button {
+  position: relative;
+  display: inline-block;
+  min-width: 9rem;
+  margin: 0;
+  padding: 0 1rem 0 2.5rem ;
+  border: none;
+  outline: none;
+  background-image: var(--button-grass);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: auto;
+  color: var(--white);
+  font-weight: bold;
+  line-height: 2rem;
+  text-align: left;
+  text-decoration: none;
+  transition: all 0.1s ease-in-out;
+}
+
+a.button:hover {
+  background-image: var(--button-grass-rev);
+  color: var(--white);
+  text-decoration: none;
+}
+a.button:before {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--white);
+  content: "";
+  transition: all 0.2s ease-in-out;
+
+          mask-image: url(icons/d8-logo.svg);
+  -webkit-mask-image: url(icons/d8-logo.svg);
+  -webkit-mask-size: contain !important;
+          mask-size: contain !important;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+}
+a.button:hover:before {
+  transform: scale(1.2);
+}
+
+a.button--green{
+  background-image: var(--button-grass);
+}

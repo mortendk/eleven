@@ -69,6 +69,7 @@ header{
 
 .download{
   position: fixed;
+  top: 10rem;
   right: 0;
   width: 8rem;
   background-color: var(--rasberry-light);
