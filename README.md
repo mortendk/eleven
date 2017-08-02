@@ -10,3 +10,7 @@ composer require thememachine/eleven
 ```
 
 Afterwards enable modules as usual.
+
+## Demo
+
+Visit [Eleven Theme](http://eleventheme.com/) for the demo and screenshots.
