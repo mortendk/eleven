@@ -308,10 +308,3 @@ function eleven_form_node_form_alter(&$form, FormStateInterface $form_state) {
   $form['revision_information']['#type'] = 'container';
   $form['revision_information']['#group'] = 'meta';
 }
-
-// ----------------------------------------------------------------------------
-// content type
-// ----------------------------------------------------------------------------
-// function eleven_form_node_form_alter(&$form, FormStateInterface $form_state) {
-//
-// }
