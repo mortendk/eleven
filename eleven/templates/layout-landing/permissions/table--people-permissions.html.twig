@@ -25,14 +25,12 @@
               {{cell.content}}
             {% else %}
 
-            <span data-helptext="{{cell.content}}">
-                {#
-                {{ cell.content|slice(0,4) }}
-                 #}
-
-              {{ cell.content }}
+            <span data-helptext="{{cell.content}}" class="u-visible u-visible@sm u-visible@l u-visible@xl">
+              {{ cell.content|slice(0,4) }}
             </span>
-
+            <span class="u-visible u-visible@s">
+            {{ cell.content }}
+            </span>
 
             {% endif %}
           </{{ cell.tag }}>
