@@ -1,7 +1,9 @@
 {{ attach_library(active_theme()~'/card.layout') }}
 {{ attach_library(active_theme()~'/nav.tabs.icon') }}
 
-<nav class="L-right w-12 tabs-icon ">
+<div class="L-right w-12 ">
+
+<nav class="tabs-icon ">
   <ul class="L">
     <li><a href="#" class="js-hide-cardtext hide-cardtext" data-helptext="{{'Hide help text'|t}}">{{'Hide help text'|t}}</a></li>
   {% for i in range(3, 6) %}
@@ -11,3 +13,5 @@
 
   </ul>
 </nav>
+
+</div>
