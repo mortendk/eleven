@@ -308,3 +308,12 @@ function eleven_form_node_form_alter(&$form, FormStateInterface $form_state) {
   $form['revision_information']['#type'] = 'container';
   $form['revision_information']['#group'] = 'meta';
 }
+
+
+// function eleven_editor_js_settings_alter(array &$settings) {
+//   foreach (array_keys($settings['editor']['formats']) as $text_format_id) {
+//     if ($settings['editor']['formats'][$text_format_id]['editor'] === 'ckeditor') {
+//       $settings['editor']['formats'][$text_format_id]['editorSettings']['skin'] = ''office2013', '/themes/eleven/elevenfeat/office2013'';
+//     }
+//   }
+// }
