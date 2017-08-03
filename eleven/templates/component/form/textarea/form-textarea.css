@@ -4,11 +4,12 @@
 textarea {
   width: 100%;
   border: 1px solid var(--bluesky-light);
-  background-color: var(--gravel-light);
+  background-color: var(--white);
   color: var(--asphalt);
   font-size: 1rem;
   line-height: 1.5rem;
   transition: all 0.5s ease-in-out;
+  padding: 0.5rem
 }
 textarea:focus {
   border: 1px solid var(--bluesky-light);

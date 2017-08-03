@@ -21,37 +21,10 @@
   border-color: var(--concrete-light);
 }
 
-
-/* smalltabs */
-
-.smalltabs ul { }
-
-.smalltabs a {
-  position: relative;
-  display: block;
-  width: 2rem;
-  height: 2rem;
-  margin-left: 1px;
-  text-indent: -999rem;
-  transition: all 0.5s ease-in-out;
+.tabs-icon{
+  padding: 0.5rem 0 0.6rem 0
 }
-.smalltabs a:before {
-  position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
-  display: block;
-  width: 1rem;
-  height: 1rem;
-  background-color: var(--bluesky);
-  background-image: none ! important;
-  content: "";
-  transition: 0.2s ease-in;
-  transition: all 0.5s ease-in-out;
 
-          /*mask-image: var(--icon-coffee);
-  -webkit-mask-image: var(--icon-coffee);*/
-  -webkit-mask-size: contain !important;
-          mask-size: contain !important;
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
+.cke_editable {
+  color: var(--rasberry) !important
 }
