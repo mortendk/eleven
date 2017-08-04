@@ -10,3 +10,8 @@ libraries-override:
     css:
       theme:
         css/toolbar.theme.css: false
+
+# we have to set the ckeditor default in the frontend facing theme.
+# so it can be picked up in the backend as well
+ckeditor_stylesheets:
+  - ckeditoriframe.css

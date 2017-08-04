@@ -39,6 +39,7 @@ TODO: havent tested on a mobile yet
 .permissions [data-helptext]:hover:after {
   width: 10rem
 }
+
 /*[data-helptext-position="down"]:hover:after {
   transform: translate(5-0%, 3rem);
 }*/

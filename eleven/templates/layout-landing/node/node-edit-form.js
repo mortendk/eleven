@@ -1,6 +1,9 @@
 // show hide the sidebar
 (function ($) {
 
+  // $('iframe').contents().find('body').css("margin", "40px");
+  // $(".cke_wysiwyg_frame").contents().find(".cke_editable").css('background-color', 'red');
+
   var widthClasses = "w-1 w-2 w-3 w-4 w-5 w-6 w-7 w-8 w-9 w-10 w-11 w-12"
 
   // grap a cookie set button to active

@@ -22,6 +22,7 @@ regions:
 libraries:
   - eleven/global
 
+  
 #-------------------------------------------------------------------------------
 # LIBRARIES EXTEND
 #-------------------------------------------------------------------------------
@@ -39,9 +40,10 @@ libraries-extend:
   # core/jquery.ui:
   # - eleven/jquery_ui
 
-  #Forms
+  # ckeditor
   # ckeditor/drupal.ckeditor:
   # - eleven/form.ckeditor
+
 
 #-------------------------------------------------------------------------------
 # LIBRARIES OVERRIDE

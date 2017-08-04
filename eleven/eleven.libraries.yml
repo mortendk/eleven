@@ -17,6 +17,7 @@ global:
     component:
       css/component/icon.css: {}
       css/component/help.css: {}
+      css/component/github.css: {}
       templates/component/button/link-button.css: {}
   js:
     js/eleven.js: {}

@@ -1,0 +1,24 @@
+.github-issues{
+  display: block;
+  width: 100%;
+  background-color: var(--bluesky-light);
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.github-issues a{
+  color: var(--white);
+}
+.github-issues a:hover{
+  color: var(--bluesky-light-light);
+}
+
+.github-issues a{
+  padding-left: 2rem
+}
+.github-issues a::before{
+  background-color: var(--white);
+}
+.github-issues a:hover::before{
+background-color: var(--bluesky-light-light);
+}
