@@ -106,7 +106,7 @@ the trick is simpel were using 2 * label and using the first as the visual check
   padding: 0;
   line-height: 1.5rem;
 }
-.checkbox-style-check input[type=checkbox]:focus + label + .checkbox__title label,
+
 .checkbox-style-check input[type=checkbox]:hover + label + .checkbox__title label {
   outline: 0;
 }

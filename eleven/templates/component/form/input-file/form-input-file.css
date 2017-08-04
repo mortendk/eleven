@@ -16,7 +16,8 @@
   padding: 0.5rem 0.5rem 0.5rem 2.5rem;
   position: relative;
 }
-.form-file:focus + label,
+
+
 .form-file + label:hover {
   background-image: var(--button-grass-rev);
   color: var(--white);
@@ -40,11 +41,6 @@
           mask-size: contain !important;
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
-}
-
-.form-file:focus + label {
-  outline: 2px solid var(--bluesky-light);
-
 }
 
 /* Delete file */

@@ -47,7 +47,7 @@ template: form-element--checkbox.html.twig
 }
 .checkbox input[type=checkbox]:focus + label + .checkbox__title label,
 .checkbox input[type=checkbox]:hover + label + .checkbox__title label {
-  outline: 0;
+
 }
 
 /*--  colors ---------------------------------------------------------*/

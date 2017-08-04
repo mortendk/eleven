@@ -1,0 +1,5 @@
+:focus,
+a:focus {
+  outline: auto 2px var(--rasberry);
+  text-decoration: none;
+}

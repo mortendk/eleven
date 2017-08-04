@@ -148,7 +148,7 @@ colors
 ------------------------------------------------------------------------------*/
 /* color for the region */
 .contextual-region.focus {
-  outline: 1px dotted var(--bluesky-light);
+  outline: auto 2px var(--rasberry);
   background-color: var(--white-20);
 }
 .js-outside-in-edit-mode .contextual-region{

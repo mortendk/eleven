@@ -13,8 +13,8 @@ textarea {
 }
 textarea:focus {
   border: 1px solid var(--bluesky-light);
-  outline: 0;
-  background-color: var(--white);
+  background-color: var(--bluesky-light-20);
+  outline: 0
 }
 
 textarea.form-textarea{
