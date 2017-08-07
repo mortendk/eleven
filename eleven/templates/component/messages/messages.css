@@ -3,7 +3,7 @@
   min-height: 5rem;
   margin: 1rem auto;
   padding: 0.5rem 1rem;
-  border: 1px solid black;
+  border: 2px solid black;
   border-left: 1rem solid  black;
   color: var(--asphalt);
   transition: all 1s ease-out;
@@ -23,7 +23,8 @@
   font-weight: bold;
 }
 .messages .backtrace {
-  background-color: var(--rasberry);
+  background-color: var(--concrete-light);
+  color: var(--asphalt);
 }
 
 .messages li {
