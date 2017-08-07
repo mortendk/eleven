@@ -40,7 +40,7 @@
   background-color: var(--gravel);
 }
 .smallbtn:before {
-  background-color: var(--concrete);
+  background-color: var(--asphalt-light);
           mask-image: var(--icon-coffee);
   -webkit-mask-image: var(--icon-coffee);
 }

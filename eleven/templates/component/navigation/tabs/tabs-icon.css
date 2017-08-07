@@ -2,9 +2,10 @@
   position: relative;
   display: block;
   width: 2rem;
+  height: 2rem;
   padding: 0;
   line-height: 2rem;
-  text-indent: -666rem;
+  /*text-indent: -666rem;*/
 }
 
 .tabs-icon a:before {
@@ -29,21 +30,21 @@
   background-color: var(--gravel);
 }
 .tabs-icon a::before {
-  background-color: var(--concrete-light);
+  background-color: var(--asphalt-light);
 }
 /* hover */
 .tabs-icon a:hover {
   background-color: var(--concrete);
 }
 .tabs-icon a:hover::before {
-  background-color: var(--gravel-light);
+  background-color: var(--asphalt-light);
 }
 /* is-active */
 .tabs-icon a.is-active {
   background-color: var(--concrete-light);
 }
 .tabs-icon a.is-active::before {
-  background-color: var(--concrete);
+  background-color: var(--asphalt);
 }
 
 
@@ -70,8 +71,7 @@
   -webkit-mask-image: url(icons/layout-full.svg);
 }
 
-.tabs-icon a.hide-messages:before{
-  mask-image: url(icons/layout-full.svg);
--webkit-mask-image: url(icons/layout-full.svg);
-  
+.tabs-icon a.hide-messages:before {
+          mask-image: url(icons/layout-full.svg);
+  -webkit-mask-image: url(icons/layout-full.svg);
 }
