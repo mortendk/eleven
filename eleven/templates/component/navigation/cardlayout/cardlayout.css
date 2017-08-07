@@ -1,4 +1,3 @@
-/**/
 /*
 the compact linke on /admin/config isnt needed anymore as we fix this with js
 */
@@ -27,7 +26,6 @@ the compact linke on /admin/config isnt needed anymore as we fix this with js
           mask-image: url(icons/layout-6.svg);
   -webkit-mask-image: url(icons/layout-6.svg);
 }
-
 
 
 /*

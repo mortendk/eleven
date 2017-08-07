@@ -1,17 +1,14 @@
 /*
 template: form-element--checkbox.html.twig
 */
-input[type=checkbox] {
-  height: 1rem;
-}
 .form-checkboxes {
   margin: 0.5rem 1rem;
 }
 .form-checkboxes .form-item__description {
   margin-left: 1rem;
 }
-.form-item--checkbox {
-  margin-bottom: 0.5rem;
+.form-item--checkbox label{
+  padding: 0
 }
 .form-item--checkbox .form-item__description {
   max-width: 40rem;
@@ -25,12 +22,150 @@ input[type=checkbox] {
   line-height: 1.5rem;
 }
 
-/* hide the checkbox and use the label for visual */
+/* hide the checkbox and use the label so we can do something with it */
 .form-item--checkbox input[type=checkbox] {
-  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  display: block
+}
+.checkbox-style-check input[type=checkbox] + label {
+  position: relative;
 }
 
+.checkbox-style-check .form-item__icon{
+  background-color: var(--white);
+  border: 1px solid var(--bluesky);
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+
+
+}
+.checkbox-style-check label .form-item__icon::before {
+  top: 0.25rem;
+  left: 0.25rem;
+          mask-image: url(icons/check.svg);
+  -webkit-mask-image: url(icons/check.svg);
+  width: 0.75rem;
+  height: 0.75rem
+
+}
+
+/*--  colors ---------------------------------------------------------*/
+/* default */
+.checkbox-style-check .form-item__icon::before {
+  background-color: var(--white);
+}
+
+/* focus */
+.checkbox-style-check input[type='checkbox']:focus + label .form-item__icon{
+  outline: auto 3px var(--bluesky);
+}
+
+/* hover */
+.checkbox-style-check input[type='checkbox']:hover + label .form-item__icon{
+  outline: auto 3px var(--bluesky);
+}
+
+/* checked */
+.checkbox-style-check input[type='checkbox']:checked + label .form-item__icon{
+  background-color: var(--bluesky-light);
+}
+.checkbox-style-check input[type='checkbox']:checked + label .form-item__icon::before{
+  width: 1rem;
+  height: 1rem
+}
+
+/* disabled */
+.checkbox-style-check input[type='checkbox']:disabled + label .form-item__icon {
+  border-color: var(--concrete);
+  background-color: var(--concrete-light);
+}
+
+.checkbox-style-check input[type='checkbox']:disabled + label .form-item__icon:before {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: var(--gravel);
+          mask-image: url(icons/times.svg);
+  -webkit-mask-image: url(icons/times.svg);
+}
+.checkbox-style-check input[type=checkbox]:disabled + label + .checkbox__title label {
+  color: var(--concrete);
+  font-weight: 100;
+}
+
+
+/* -----------------------------------------------------------------------------
+checkbox dummy hell  -
+yes the permissions js file adds in a dummy checkbox into the dom so the css
+explodes and that makes the label checkbox hack break
+*/
+
+/* default checkbox */
+.checkbox-style-check input[type=checkbox].real-checkbox + input[type=checkbox].dummy-checkbox + label .form-item__icon{
+  border-color: var(--bluesky);
+  background-color: var(--white);
+}
+.checkbox-style-check input[type=checkbox].real-checkbox + input[type=checkbox].dummy-checkbox + label .form-item__icon:before{
+  background-color: var(--white);
+  mask-image: url(icons/check.svg);
+  -webkit-mask-image: url(icons/check.svg);
+}
+
+/* focus */
+.checkbox-style-check input[type=checkbox].real-checkbox:focus + input[type=checkbox].dummy-checkbox + label .form-item__icon{
+  outline: auto 3px var(--bluesky);
+}
+
+/*hover*/
+.checkbox-style-check input[type=checkbox].real-checkbox:hover + input[type=checkbox].dummy-checkbox + label .form-item__icon{
+  outline: auto 3px var(--bluesky);
+}
+
+/*disabled*/
+.checkbox-style-check input[type=checkbox].real-checkbox:disabled + input[type=checkbox].dummy-checkbox + label .form-item__icon{
+  border-color: var(--bluesky);
+  background-color: var(--gravel);
+}
+.checkbox-style-check input[type=checkbox].real-checkbox:disabled + input[type=checkbox].dummy-checkbox + label .form-item__icon::before{
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--concrete);
+}
+
+/* checked*/
+.checkbox-style-check input[type=checkbox].real-checkbox:checked + input[type=checkbox].dummy-checkbox + label .form-item__icon{
+  border-color: var(--bluesky);
+  background-color: var(--bluesky-light);
+}
+.checkbox-style-check input[type=checkbox].real-checkbox:checked + input[type=checkbox].dummy-checkbox + label .form-item__icon::before{
+  width: 1rem;
+  height: 1rem
+
+}
+
+
+/* -----------------------------------------------------------------------------
+fixes for views tables with the select all functions
+ex: /admin/content
+adds in the visually-hidden class we wanna overwrite
+*/
+.checkbox-style-check .visually-hidden {
+  clip: inherit;
+}
+
+
+/* checkbox that should look like an open close button*/
+.js-form-item-revision,
+.js-form-item-menu-enabled {
+
+}
+
+
 /* select all element from views slector */
+th.select-all{
+  width: 2rem
+}
 th.select-all input[type=checkbox] {
   width: 1.5rem;
   height: 1.5rem;
@@ -51,170 +186,4 @@ th.select-all input[type=checkbox] {
 }
 .select-all input[type=checkbox]:checked {
   background-color: var(--asphalt);
-
 }
-
-/* checkbox ------------------------------------------------------------------*/
-/*
-the trick is simpel were using 2 * label and using the first as the visual checkbox
-*/
-
-.checkbox-style-check input[type=checkbox] + label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1.5rem;
-  height: 1.5rem;
-  padding: 0;
-  line-height: 1rem;
-  text-indent: -999rem;
-  cursor: pointer;
-  transition: all 0.5s ease-in-out;
-}
-.checkbox-style-check input[type=checkbox] + label::before {
-  position: absolute;
-  top: 0.25rem;
-  left: 0.25rem;
-  display: block;
-  width: 1rem;
-  height: 1rem;
-  background-color: white;
-  content: "";
-  transition: all 0.5s ease-in-out;
-
-          mask-image: url(icons/check.svg);
-  -webkit-mask-image: url(icons/check.svg);
-  -webkit-mask-size: contain !important;
-          mask-size: contain !important;
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-}
-
-.checkbox__title {
-  display: inline-block;
-  margin-left: 1rem;
-}
-@media (max-width: 47.99em) {
-  .checkbox__title {
-    margin-left: 1rem;
-    width: calc(100% - 3rem);
-  }
-
-}
-
-.checkbox__title label {
-  padding: 0;
-  line-height: 1.5rem;
-}
-.checkbox-style-check input[type=checkbox]:focus + label + .checkbox__title label,
-.checkbox-style-check input[type=checkbox]:hover + label + .checkbox__title label {
-  outline: 0;
-}
-
-/*--  colors ---------------------------------------------------------*/
-.checkbox-style-check input[type=checkbox] + label {
-  border: 1px solid var(--bluesky);
-  background-color: var(--white);
-}
-.checkbox-style-check input[type=checkbox] + label:before {
-  background-color: var(--white);
-}
-/* hover */
-.checkbox-style-check input[type=checkbox] + label:hover {
-  border-color: var(--rasberry);
-  background-color: var(--white);
-}
-.checkbox-style-check input[type=checkbox] + label:hover:before {
-  background-color: var(--bluesky);
-}
-
-/* checked */
-.checkbox-style-check input[type=checkbox]:checked + label {
-  border-color: var(--bluesky);
-  background-color: var(--bluesky-light);
-}
-.checkbox-style-check input[type=checkbox]:checked + label:before {
-  background-color: var(--white);
-}
-.checkbox-style-check input[type=checkbox]:checked + label + .checkbox__title label {
-  color: var(--bluesky);
-}
-
-/* disabled */
-.checkbox-style-check input[type=checkbox]:disabled + label {
-  border-color: var(--concrete);
-  background-color: var(--concrete-light);
-}
-.checkbox-style-check input[type=checkbox]:disabled + label:before {
-  width: 0.875rem;
-  background-color: var(--gravel);
-          mask-image: url(icons/times.svg);
-  -webkit-mask-image: url(icons/times.svg);
-}
-.checkbox-style-check input[type=checkbox]:disabled + label + .checkbox__title label {
-  color: var(--concrete);
-  font-weight: 100;
-}
-
-/*
-fixes for views tables with the select all functions
-ex: /admin/content
-adds in the visually-hidden class we wanna overwrite
-*/
-.checkbox-style-check .visually-hidden {
-  clip: inherit;
-}
-
-
-/* checkbox that should look like an open close button*/
-.js-form-item-revision,
-.js-form-item-menu-enabled {
-
-}
-
-/* -----------------------------------------------------------------------------
-checkbox dummy hell  -
-yes the permissions js file adds in a dummy checkbox into the dom so the css
-explodes and that makes the label checkbox hack break
-*/
-.dummy-checkbox{
-  display: none;
-}
-
-/* default checkbox */
-.checkbox-style-check input[type=checkbox].real-checkbox + input[type=checkbox].dummy-checkbox + label {
-  border-color: var(--bluesky);
-  background-color: var(--white);
-}
-.checkbox-style-check input[type=checkbox].real-checkbox + input[type=checkbox].dummy-checkbox + label:hover{
-  border-color: var(--rasberry);
-}
-
-/* checked and disabled */
-.checkbox-style-check input[type=checkbox].real-checkbox:disabled + input[type=checkbox].dummy-checkbox:disabled + label {
-  border-color: var(--bluesky);
-  background-color: var(--gravel);
-}
-.checkbox-style-check input[type=checkbox].real-checkbox:disabled + input[type=checkbox].dummy-checkbox:disabled + label:before{
-  background-color: var(--bluesky);
-}
-
-/* checked  */
-.checkbox-style-check input[type=checkbox].real-checkbox:checked + input[type=checkbox].dummy-checkbox + label{
-  background-color: var(--bluesky);
-}
-.checkbox-style-check input[type=checkbox].real-checkbox:checked + input[type=checkbox].dummy-checkbox + label:before {
-  background-color: var(--white);
-  mask-image: url(icons/check.svg);
-  -webkit-mask-image: url(icons/check.svg);
-}
-
-/*not checked*/
-.checkbox-style-check input[type=checkbox].real-checkbox + input[type=checkbox].dummy-checkbox:disabled + label:before {
-  background-color: var(--white);
-  mask-image: url(icons/check.svg);
-  -webkit-mask-image: url(icons/check.svg);
-}
-
-/*<input class="form-checkbox real-checkbox js-real-checkbox" type="checkbox" id="edit-page-creator-administer-entity-browsers" value="1">
-<input type="checkbox" class="dummy-checkbox js-dummy-checkbox" disabled="disabled" checked="checked">*/

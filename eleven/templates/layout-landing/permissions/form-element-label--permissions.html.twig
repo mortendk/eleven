@@ -18,22 +18,19 @@ the wrapper is defined over in form-element.html.twig remember to set it to inli
 
 {#     '_t-elementname--' ~ element_name|clean_class, #}
 
-{#      title_display == 'invisible' ? 'visually-hidden',     #}
 {%
   set classes = [
+    title_display == 'invisible' ? 'visually-hidden',
     required ? 'js-form-required',
     required ? 'is-required',
   ]
 %}
 
-
 {% if title is not empty or required -%}
-  <label{{ attributes.addClass(classes).setAttribute('data-helptext', title )  }}>
-    {# hide the name if its printed as an icon #}
-    {% if title_display == 'invisible' %}
+
+  <label{{ attributes.addClass(classes).removeClass('visually-hidden') }}>
+    <span class="form-item__icon"></span>
+
       <span class="visually-hidden">{{ title }}</span>
-    {% endif %}
-
-
   </label>
 {%- endif %}

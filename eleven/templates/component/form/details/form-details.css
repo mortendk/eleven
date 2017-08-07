@@ -20,9 +20,6 @@ form details > .details-wrapper {
 details summary::-webkit-details-marker {
   display: none;
 }
-details summary:focus {
-  outline: none;
-}
 
 /* summary bar ---------------------------------------------------------------*/
 details summary {
@@ -144,6 +141,7 @@ details.details-summary-link summary:hover {
   background-image: none;
   text-decoration: underline;
 }
+
 details[open].details-summary-link summary::before,
 details.details-summary-link summary::before {
   top: 0;
@@ -155,6 +153,7 @@ details.details-summary-link summary::before {
 
           mask-image: none !important;
   -webkit-mask-image: none !important;
+  transform: none;
 }
 details[open].details-summary-link summary::before {
   content: "[-]";

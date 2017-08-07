@@ -9,7 +9,10 @@
   %}
 <article role="contentinfo" aria-label="{{ status_headings[type] }}"{{ attributes.addClass(classes)|without('role', 'aria-label') }}>
 
-  <a href="#" class="js-hide-message hide-message" data-helptext="{{'Hide Message'|t}}">{{'Hide Message'|t}}</a>
+  <a href="#" class="js-hide-message hide-message" data-helptext="{{'Hide Message'|t}}">
+      <span class="visually-hidden">{{'Hide Message'|t}}</span>
+
+  </a>
 
   <div class="messages__content">
 

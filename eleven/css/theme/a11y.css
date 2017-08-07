@@ -1,0 +1,6 @@
+input[type=checkbox]:focus,
+:focus,
+a:focus {
+  outline: auto 3px var(--bluesky);
+  text-decoration: none;
+}

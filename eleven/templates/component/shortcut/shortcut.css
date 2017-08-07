@@ -42,8 +42,7 @@
           transform: translateY(-12px);
 }
 
-.shortcut-action:hover .shortcut-action__message,
-.shortcut-action:focus .shortcut-action__message {
+.shortcut-action:hover .shortcut-action__message {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);

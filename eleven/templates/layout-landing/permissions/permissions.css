@@ -80,14 +80,3 @@
 
 
 }
-
-
-
-
-/*To make it even more fun labels are there twice so the help text is a pita as well
-lets hide the 2nd one
-*/
-.checkbox__title,
-.checkbox__title label[data-helptext]:hover:after{
-  display: none
-}

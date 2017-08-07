@@ -9,9 +9,14 @@ input[type="submit"] {
   height: 2rem
 }
 input[type="submit"] + .form-item__icon {
+  width: 2rem;
+  height: 2rem;
+
   background-color: var(--bluesky-light);
 }
 input[type="submit"] + .form-item__icon::before {
+  width: 1rem;
+  height: 1rem;
   background-color: var(--white);
 }
 
@@ -135,6 +140,8 @@ input[type="submit"].button--primary + .form-item__icon::before {
   -webkit-mask-image: url(../icons/thumbs-up.svg);
 }
 
+#edit-actions input[type="submit"].form-submit:focus,
+input[type="submit"].button--primary:focus {
 #edit-actions input[type="submit"].form-submit:hover,
 input[type="submit"].button--primary:hover {
   background-color: var(--grass);

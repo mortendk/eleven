@@ -71,7 +71,7 @@ h6,
 }
 .page-title em {
   font-style: normal;
-  color: var(--bluesky-light-light);
+  color: var(--bluesky-light);
 }
 .page-title em::after{
   content: ":";
@@ -249,10 +249,7 @@ a:active {
   color: var(--bluesky-light);
   text-decoration: underline;
 }
-a:focus {
-  outline: 0;
-  text-decoration: none;
-}
+
 
 
 /* -- content text -----------------------------------------------------------*/
@@ -271,7 +268,6 @@ a:focus {
 */
 p a,
 .content a {
-  border-bottom: 1px dashed var(--bluesky);
   text-decoration: none;
   transition: all 0.2s ease-in;
 }
@@ -282,11 +278,6 @@ p a:hover,
 p a:active,
 .content a:active {
   text-decoration: underline;
-}
-p a:focus,
-.content a:focus {
-  outline: 0;
-  text-decoration: none;
 }
 
 .content h2 {
