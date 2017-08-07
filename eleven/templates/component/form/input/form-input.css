@@ -130,20 +130,22 @@ input[type="search"]{
 }
 input[type="search"] + .form-item__icon{
   border: 1px solid var(--bluesky-light);
-  border-right: none,
+  border-right: none;
+  background-color: var(--bluesky-light-light);
+  width: 2rem;
+  height: 2rem
+
 }
 input[type="search"] + .form-item__icon::before{
   mask-image: url(icons/search.svg);
   -webkit-mask-image: url(icons/search.svg);
+  width: 1rem;
+  height: 1rem
 }
-
 
 .form-item--search input{
   width: calc( 100% - 3rem);
-  border-left: none
 }
-
-
 
 
 /* colors  ------------------------------------------------------------------*/
