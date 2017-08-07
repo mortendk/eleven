@@ -13,7 +13,7 @@ input {
   border-width: 1px
 }
 input:focus {
-  outline: 0;
+  /*outline: 0;*/
 }
 input[type="text"] {
   width: 100%;
@@ -40,16 +40,14 @@ input[type="text"].form-autocomplete {
   position: relative;
   display: block;
   float: left;
-  width: 2rem;
-  height: 2rem;
 }
 .form-item__icon::before {
   position: absolute;
   top: 0.5rem;
   left: 0.5rem;
   display: block;
-  width: 1rem;
-  height: 1rem;
+  /*width: 1rem;
+  height: 1rem;*/
   background-image: none ! important; /* yes we wanna make sure no module have fun here */
   content: "";
   transition: 0.2s ease-in;
@@ -62,8 +60,8 @@ input[type="text"].form-autocomplete {
           mansk-repeat: no-repeat;
 }
 
-
-input:focus + .form-item__icon::before, input:hover + .form-item__icon::before{
+input:focus + .form-item__icon::before,
+input:hover + .form-item__icon::before{
   transform: scale(1.2);
 }
 
@@ -76,23 +74,33 @@ input[type="date"]{
 }
 input[type="date"] + .form-item__icon{
   border: 1px solid var(--bluesky-light);
-  border-right: none,
+  border-right: none;
+  height: 2rem;
+  width: 2rem;
 }
 input[type="date"] + .form-item__icon::before{
   mask-image: url(icons/calendar-o.svg);
   -webkit-mask-image: url(icons/calendar-o.svg);
+  width: 1rem;
+  height: 1rem
 }
+
 /*time*/
 input[type="time"]{
   border-left: none
 }
 input[type="time"] + .form-item__icon{
   border: 1px solid var(--bluesky-light);
-  border-right: none,
+  border-right: none;
+  height: 2rem;
+  width: 2rem;
+
 }
 input[type="time"] + .form-item__icon::before{
   mask-image: url(icons/clock-o.svg);
   -webkit-mask-image: url(icons/clock-o.svg);
+  height: 1rem;
+  width: 1rem;
 }
 
 /*password*/
@@ -101,11 +109,16 @@ input[type="password"]{
 }
 input[type="password"] + .form-item__icon{
   border: 1px solid var(--bluesky-light);
-  border-right: none,
+  border-right: none;
+  height: 2rem;
+  width: 2rem;
 }
 input[type="password"] + .form-item__icon::before{
   mask-image: url(icons/lock.svg);
   -webkit-mask-image: url(icons/lock.svg);
+  height: 1rem;
+  width: 1rem;
+
 }
 
 /*search */
@@ -165,12 +178,12 @@ input {
 }
 
 /* focus*/
-input:hover,
+/*input:hover,
 input:focus {
   border-color: var(--bluesky-light);
   color: var(--bluesky);
   background-color: var(--bluesky-light-20);
-}
+}*/
 input:hover + .form-item__icon,
 input:focus + .form-item__icon {
   background-color: var(--bluesky-light-20);

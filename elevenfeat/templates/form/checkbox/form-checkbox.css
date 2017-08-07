@@ -2,7 +2,7 @@
 template: form-element--checkbox.html.twig
 */
 .form-item--checkbox input[type=checkbox] {
-  visibility: hidden;
+  opacity: 0
 }
 
 /* checkbox ------------------------------------------------------------------*/

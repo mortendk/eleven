@@ -1,130 +1,96 @@
 /*
-template: form-element--radio.html.twig
+template: form-element--checkbox.html.twig
 */
-input[type=radio] {
-  height: 1rem;
-}
 .form-radios {
-  margin: 1rem;
+  margin: 0.5rem 1rem;
 }
-.form-item--radio {
-  margin-bottom: 0.5rem;
+.form-radios .form-item__description {
+  margin-left: 1rem;
 }
 
-/* radio ------------------------------------------------------------------*/
+.form-item--radio .form-item__description {
+  max-width: 40rem;
+  margin-left: 2rem;
+}
+
 .radio {
   position: relative;
   display: inline-block;
   margin-right: 0.5rem;
-  line-height: 1rem;
-}
-.form-item--radio input[type="radio"] {
-  visibility: hidden;
+  line-height: 1.5rem;
 }
 
+/* hide the checkbox and use the label so we can do something with it */
+.form-item--radio input[type=radio] {
+  display: block;
+  height: 0;
+  opacity: 0;
+}
 .radio input[type=radio] + label {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
+}
+
+.radio .form-item__icon {
   width: 1.5rem;
   height: 1.5rem;
-  padding: 0;
+  margin-right: 0.5rem;
+  border: 1px solid var(--bluesky);
   border-radius: 1rem;
-  line-height: 1.5rem;
-  text-indent: -999rem;
-  cursor: pointer;
-  border:1px solid var(--bluesky);
+  background-color: var(--white);
 }
-.radio input[type=radio] + label::before {
-  position: absolute;
-  top: 0.3rem;
-  left: 0.2rem;
-  display: block;
+
+.radio label .form-item__icon::before {
+  top: 0.25rem;
+  left: 0.25rem;
   width: 1rem;
   height: 1rem;
-  content: "";
-  transition: all 0.5s ease-in-out;
 
-  -webkit-mask-size: contain !important;
-          mask-size: contain !important;
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
+          mask-image: url(icons/check.svg);
+  -webkit-mask-image: url(icons/check.svg);
 }
 
-.radio__title {
-  display: inline-block;
-  margin-left: 0.5rem;
-}
-.radio__title label {
-  padding: 0;
-  line-height: 1.5rem;
-}
-
-.radio input[type=radio]:focus + label + .radio__title label,
-.radio input[type=radio]:hover + label + .radio__title label {
-
-}
-
-.form-item--radio .form-item__description{
-  padding-left: 2rem
-}
-
-/*-- colors ---------------------------------------------------------*/
-
-/* radio input color */
-.radio input[type=radio] + label {
+/*--  colors ---------------------------------------------------------*/
+/* default */
+.radio .form-item__icon::before {
   background-color: var(--white);
-  border-color:var(--bluesky);
 }
-.radio input[type=radio]:checked + label {
+
+/* focus */
+.radio input[type="radio"]:focus + label .form-item__icon {
+    outline: auto 3px var(--bluesky);
+
+}
+.radio input[type="radio"]:focus + label .form-item__icon::before {
+  background-color: var(--white);
+}
+
+/* hover */
+.radio label:hover .form-item__icon,
+.radio input[type="radio"]:hover + label .form-item__icon {
+  border-color: var(--rasberry);
+}
+
+/* checked */
+.radio input[type="radio"]:checked + label .form-item__icon {
+  border-color: var(--bluesky);
   background-color: var(--bluesky-light);
 }
-.radio input[type=radio]:focus + label,
-.radio input[type=radio]:hover + label {
-  background-color: var(--bluesky-light-light);
-}
-.form-item--disabled .radio input[type=radio] + label,
-.form-item--disabled .radio input[type=radio]:checked + label,
-.form-item--disabled .radio input[type=radio]:focus + label,
-.form-item--disabled .radio input[type=radio]:hover + label {
-  background-color: var(--concrete);
+
+/* disabled */
+.radio input[type=radio]:disabled + label {
+  border-color: var(--concrete);
+  background-color: var(--concrete-light);
 }
 
-/* radio icon */
-.radio input[type=radio] + label:before {
+.radio input[type="radio"]:disabled + label .form-item__icon {
+  width: 0.875rem;
   background-color: var(--gravel);
 
-          mask-image: url(icons/check.svg);
-  -webkit-mask-image: url(icons/check.svg);
-
-}
-.radio input[type=radio]:checked + label:before,
-.radio input[type=radio]:checked:focus + label:before,
-.radio input[type=radio]:checked:hover + label:before {
-  background-color: white;
-
-          mask-image: url(icons/check.svg);
-  -webkit-mask-image: url(icons/check.svg);
-}
-.radio input[type=radio]:focus + label:before,
-.radio input[type=radio]:hover + label:before {
-  background-color: var(--bluesky-light);
-
-  mask-image: url(icons/check.svg);
--webkit-mask-image: url(icons/check.svg);
+          mask-image: url(icons/times.svg);
+  -webkit-mask-image: url(icons/times.svg);
 }
 
-
-/* title */
-.radio input[type=radio]:checked + label + .radio__title label {
-  color: var(--bluesky);
-}
-
-/*
-fixes for views tables with the select all functions
-ex: /admin/content
-adds in the visually-hidden class we wanna overwrite
-*/
-.radio .visually-hidden {
-  clip: inherit;
+.radio input[type=radio]:disabled + label + .checkbox__title label {
+  color: var(--concrete);
+  font-weight: 100;
 }
