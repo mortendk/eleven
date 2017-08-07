@@ -212,8 +212,8 @@ mark {
 }
 
 del {
-  background-color: var(--pumpkin-light);
-  color: var(--strawberry);
+  background-color: var(--strawberry);
+  color: var(--white);
 }
 /* strike throught */
 s {
@@ -236,7 +236,9 @@ var {
 }
 
 .marker{
-  color: var(--rasberry);
+  color: var(--rasberry-light);
+  padding: 0.25rem;
+  background-color: var(--rasberry);
 }
 
 /* -- links ------------------------------------------------------------------*/
