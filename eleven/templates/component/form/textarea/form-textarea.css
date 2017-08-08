@@ -3,45 +3,87 @@
 ------------------------------------------------------------------------------*/
 textarea {
   width: 100%;
+  padding: 0.5rem;
   border: 1px solid var(--bluesky-light);
   background-color: var(--white);
   color: var(--asphalt);
   font-size: 1rem;
   line-height: 1.5rem;
   transition: all 0.5s ease-in-out;
-  padding: 0.5rem
 }
 textarea:focus {
   border: 1px solid var(--bluesky-light);
+  outline: 0;
   background-color: var(--bluesky-light-20);
-  outline: 0
 }
 
-textarea.form-textarea{
-
+textarea.form-textarea {
 }
 textarea.resize-vertical {
   min-height: 12em;
 }
 
-
-/* filter wrapper */
+/* filter */
 .filter-wrapper {
+  margin-top: -0.5rem;
   padding: 0;
   border: 0;
-}
-.filter-help{
-  float:right
+  background-color: var(--gravel);
 }
 
-.filter-help a {
-  margin: 0;
+.filter-wrapper .form-item--select {
+  float: right;
+  padding-right: 0;
 }
-.filter-help a:after {
-  background-image: none;
-  right: 0;
-  width: 0;
-  height: 0;
-  display: none
+.filter-wrapper .filter-help {
+  float: right;
+}
+.filter-wrapper .filter-guidelines {
+  float: left;
+}
+
+/* filter help */
+.filter-help {
+  position: relative;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  margin: 0.6rem 0.5rem 0 0;
+  padding: 0.5rem 0;
+  background-color: var(--asphalt-light);
+  text-indent: -9999rem;
+}
+.filter-help a:before {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--white);
+  background-image: none ! important; /* yes we wanna make sure no module have fun here */
+  content: "";
+  transition: 0.2s ease-in;
+
+          mask-image: url(icons/question.svg);
+  -webkit-mask-image: url(icons/question.svg);
+  -webkit-mask-size: contain !important;
+          mask-size: contain !important;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+}
+
+.filter-guidelines{
+  padding: 0.5rem 1rem
+}
+
+.filter-guidelines ul.tips li{
+  color: var(--asphalt);
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--concrete);
+
+  font-family: monospace;
+
+
 
 }
