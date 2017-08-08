@@ -69,6 +69,9 @@ a.hide-message:before {
 .messages--status a.hide-message:before {
   background-color: var(--bluesky);
 }
+.messages--status a{
+  color: var(--asphalt);
+}
 
 /* warning */
 .messages--warning {
