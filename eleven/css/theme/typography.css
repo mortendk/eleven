@@ -164,15 +164,12 @@ pre {
   display: block;
   margin: 1rem 0 1rem;
   padding: 0.5rem;
-  border-top: 1px solid var(--gray500);
-  border-bottom: 1px solid var(--pink750);
+  border-top: 1px solid var(--asphalt);
   background-color: #f5f2f0;
   font-family: monospace;
   white-space: pre;
 }
 samp {
-  background-color: var(--bluegray600);
-  color: var(--bluegray100);
   font-family:  monospace;
 }
 
