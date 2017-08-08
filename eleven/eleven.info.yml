@@ -22,7 +22,7 @@ regions:
 libraries:
   - eleven/global
 
-  
+
 #-------------------------------------------------------------------------------
 # LIBRARIES EXTEND
 #-------------------------------------------------------------------------------
@@ -157,11 +157,12 @@ libraries-override:
   #     component:
   #       assets/vendor/jquery.ui/themes/base/button.css: false
 
-  # modernizr custom build
-  # https://modernizr.com/download/?cssmask-details-inputtypes-touchevents-addtest-prefixes-setclasses-teststyles&q=mask
-  core/modernizr:
-    js:
-      assets/vendor/modernizr/modernizr.min.js: js/modernizr-custom.js
+#ckeditor
+  ckeditor/drupal.ckeditor.admin:
+    css:
+      theme:
+        /core/themes/stable/css/ckeditor/ckeditor.admin.css: templates/modules/ckeditor/ckeditor.admin.css
+
 
 #-------------------------------------------------------------------------------
 # Remove stylesheets

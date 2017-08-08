@@ -1,56 +1,45 @@
 .cke.cke_chrome {
-  border: 1px solid #ededed;
-  box-shadow: none;
+}
+div.cke_chrome {
+  border: none;
+  border-top: 1px solid var(--concrete);
 }
 .cke .cke_top {
-  padding: 0;
-  border-top: 0 solid black;
-  border-bottom: 0 solid black;
-  background: #f9f9f9;
-  box-shadow: none;
+  padding: 0.5rem 0 0 0;
+  border: none
 }
+
+div.cke_contents{
+  border: 1px solid var(--bluesky);
+}
+
 /* buttons */
 .cke .cke_toolgroup {
   margin: 0;
-  border: 1px solid #edf4fe;
   border-radius: 0;
-  background: #f9f9f9;
+  background: var(--gravel);;
   background-image: none;
   box-shadow: none;
-}
-.cke .cke_toolbar_separator {
-  background-color: black;
-  box-shadow: none;
-}
-.cke.cke_chrome .cke_button {
-  border-radius: 0;
-  background: none;
-  background-image: none;
-  box-shadow: none;
-}
-.cke.cke_chrome .cke_button:first-child,
-.cke.cke_chrome .cke_button:last-child {
-  border-radius: 0;
 }
 
 
 /* -- buttons actions --------------------------------------------------------*/
 .cke .cke_button:hover,
 .cke .cke_button:focus {
-  background: #edf4fe;
+  background: var(--gravel-light);
 }
 .cke.cke_chrome .cke_button_on {
-  background: #ccc;
+  background: var(--bluesky-light);
 }
 
 /* button icons */
 .cke.cke_chrome .cke_button_icon {
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
 }
 .cke.cke_chrome .cke_button .cke_button_icon[style] {
   background-position: 0 !important;
-  background-size: 16px !important;
+  background-size: 1rem !important;
 }
 .cke.cke_chrome .cke_button .cke_button__bold_icon {
   background: url(icons/bold.svg) no-repeat !important;
@@ -107,27 +96,23 @@
 
 /* drop down */
 .cke .cke_combo_button {
-  border: 1px solid #EDEDED;
+  border: 1px solid var(--concrete-light);
   border-radius: 0;
-  background: #efefef;
-  background-image: none;
-  box-shadow: none;
-
 }
 .cke.cke_chrome .cke_combo_button:active,
 .cke.cke_chrome .cke_combo_button:focus,
 .cke.cke_chrome .cke_combo_button:hover {
-  border: 1px solid #77AFEF;
-  background: #edf4fe;
+  border: 1px solid var(--concrete);
+  background: var(--varname);;
   background-image: none;
   box-shadow: none;
 }
 .cke .cke_combo_text {
-  color: #666;
+  color: var(--concrete);
   text-shadow: none;
 }
 .cke .cke_combo_arrow {
-  border-top: 3px solid #666;
+  border-top: 3px solid var(--concrete);
 }
 
 .cke .cke_combo_on a.cke_combo_button {
@@ -138,8 +123,8 @@
 /* -- bottom -----------------------------------------------------------------*/
 .cke .cke_bottom {
   padding: 0;
-  border-top: 0 solid black;
-  border-bottom: 0 solid black;
+  border-top: 0 solid var(--bluesky);;
+  border-bottom: 0 solid var(--bluesky);;
   background: #f9f9f9;
   box-shadow: none;
 }
