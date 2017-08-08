@@ -167,7 +167,7 @@
 }
 .ckeditor-buttons li .cke-icon-only {
   text-indent: -9999px;
-  width: 1rem;
+  width: 2rem;
   /* Firefox includes the offscreen text in the focus indicator, resulting in a
      far too wide focus indicator. This fixes that. */
   overflow: hidden;
