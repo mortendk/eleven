@@ -22,8 +22,6 @@
   font-size: 0.75rem;
 }
 
-
-
 /* module list*/
 tr.card {
   overflow: none;
@@ -37,7 +35,6 @@ tr.card {
   border: none;
 }
 
-
 /* title */
 .card__title {
   width: 100%;
@@ -47,6 +44,15 @@ tr.card {
   font-weight: 500;
   line-height: 1;
 }
+.LW-6 .card__title{
+  font-size: 1.1rem;
+  padding-left: 2rem
+}
+.LW-6 .card__title--icon::before{
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 .card--small .card__title {
   border-bottom: 1px solid var(--bluesky-light-light);
   color: var(--bluesky);
