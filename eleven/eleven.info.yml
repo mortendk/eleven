@@ -22,7 +22,6 @@ regions:
 libraries:
   - eleven/global
 
-
 #-------------------------------------------------------------------------------
 # LIBRARIES EXTEND
 #-------------------------------------------------------------------------------
@@ -43,6 +42,11 @@ libraries-extend:
   # ckeditor
   # ckeditor/drupal.ckeditor:
   # - eleven/form.ckeditor
+
+  # Dragons, modules that do stuff we want to correct, but cant in a pretty way
+  # so we load in the dragons library where we fix all the stuff (tm)
+  module_filter/filter:
+  - eleven/dragons
 
 
 #-------------------------------------------------------------------------------

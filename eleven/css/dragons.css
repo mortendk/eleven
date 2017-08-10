@@ -1,0 +1,35 @@
+/*------------------------------------------------------------------------------
+
+  Here be dragons
+
+
+{ --.\  |          .)%%%)%%
+ '-._\\ | (\___   %)%%(%%(%%%
+     `\\|{/ ^ _)-%(%%%%)%%;%%%
+ .'^^^^^^^  /`    %%)%%%%)%%%'
+ /\   ) ,  /       '%%%%(%%'
+,  _.'/  `\<-- \<
+`^^^`     ^^   ^^
+
+------------------
+
+Name of fix
+-------------------------------------------------------
+Description of the issue and why were doing this fix
+* path: admin/foo/bar
+* module: modulename
+------------------------------------------------------------------------------*/
+
+
+/*
+Module Filter .w-12 issue
+--------------------
+The module filter is clashing with the w-12 class thats set on the form
+we cant detect this with twig cause its set with js.
+
+* url: /admin/modules
+* module: module_filter
+*/
+.system-modules.w-12.modules-tabs__pane{
+  margin-left: 240px
+}
