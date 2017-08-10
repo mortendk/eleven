@@ -226,3 +226,12 @@ node.edit:
       templates/layout-landing/node/node-edit-form.css: {}
   js:
     templates/layout-landing/node/node-edit-form.js: {}
+
+
+# ------------------------------------------------------------------------------
+# Here be dragons...
+# ------------------------------------------------------------------------------
+dragons:
+  css:
+    theme:
+      css/dragons.css: {}
