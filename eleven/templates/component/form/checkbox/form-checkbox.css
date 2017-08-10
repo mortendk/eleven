@@ -123,11 +123,11 @@ explodes and that makes the label checkbox hack break
 }
 
 /*disabled*/
-.checkbox-style-check input[type=checkbox].real-checkbox:disabled + input[type=checkbox].dummy-checkbox + label .form-item__icon{
-  border-color: var(--bluesky);
+.checkbox-style-check input[type=checkbox].real-checkbox:disabled:checked + input[type=checkbox].dummy-checkbox + label .form-item__icon{
+  border-color: var(--concrete);
   background-color: var(--gravel);
 }
-.checkbox-style-check input[type=checkbox].real-checkbox:disabled + input[type=checkbox].dummy-checkbox + label .form-item__icon::before{
+.checkbox-style-check input[type=checkbox].real-checkbox:disabled:checked + input[type=checkbox].dummy-checkbox + label .form-item__icon::before{
   width: 1rem;
   height: 1rem;
   background-color: var(--concrete);
