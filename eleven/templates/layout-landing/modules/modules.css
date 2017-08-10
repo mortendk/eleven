@@ -42,6 +42,7 @@
 
 .card--module label {
   cursor: pointer;
+  line-height: 1.5rem
 }
 
 /* card status --------------------------------------------------------------------*/

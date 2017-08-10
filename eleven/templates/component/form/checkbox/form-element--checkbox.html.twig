@@ -44,7 +44,9 @@
     {% if label['#title'] %}
       {{ label }}
     {% else %}
-      <label for="{{ label['#id']}}"></label>
+      <label for="{{ label['#id']}}">
+        <span class="form-item__icon"></span>
+      </label>
     {% endif %}
 
   </div>

@@ -45,9 +45,15 @@
         <div for="{{ module.enable_id }}" class="card__title">{{ module.name }}</div>
 
         <div class="card__instalmodule">
+
           {{ module.checkbox }}
-          <label for="{{ module.enable_id }}" class="card__instalmodule-title">{{ 'Install Module'|t }}</label>
+
+          <label for="{{ module.enable_id }}" class="card__instalmodule-title">
+            <span class="form-item__icon"></span>
+            <span>{{ 'Install Module'|t }}</span>
+          </label>
         </div>
+
 
         {# <pre>card__icon--{{ module.name['#markup']|clean_class }}</pre> #}
 
