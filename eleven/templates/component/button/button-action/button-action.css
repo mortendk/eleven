@@ -44,9 +44,7 @@ a.button.button-action:before {
           mask-repeat: no-repeat;
 }
 
-
 /* color ---------------------------------------------------------------------*/
-/*tr:last-child td[data-title="Name"] a,*/
 a.button.button-action {
   background-image: var(--button-rasberry);
   color: var(--white);

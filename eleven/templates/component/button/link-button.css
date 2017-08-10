@@ -1,3 +1,67 @@
+/* links  buttons */
+a.button {
+  position: relative;
+  display: inline-block;
+  height: 2rem;
+  margin: 0;
+  padding: 0 0.5rem 0 2.5rem ;
+  border: 0;
+  outline: none;
+  background-image: var(--button-bluesky);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: auto;
+  color: var(--white);
+  font-weight: normal;
+  line-height: 2rem;
+  text-align: left;
+  text-decoration: none;
+}
+
+a.button:before {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--white);
+  background-image: none ! important; /* yes we wanna make sure no module have fun here */
+  content: "";
+  transition: 0.2s ease-in;
+
+          mask-image: var(--icon-coffee);
+  -webkit-mask-image: var(--icon-coffee);
+  -webkit-mask-size: contain !important;
+          mask-size: contain !important;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+}
+
+a.button:hover {
+  background-image: var(--button-bluesky-rev);
+}
+a.button:hover:before {
+}
+
+
+/* button delete  */
+.form-actions a.button--danger {
+  float: right;
+  background-image: var(--button-strawberry);
+}
+.form-actions a.button--danger:hover {
+  background-image: var(--button-strawberry-rev);
+}
+.form-actions a.button--danger:active {
+  background-image: var(--button-strawberry-active);
+}
+.form-actions a.button--danger:before {
+          mask-image: var(--icon-trash);
+  -webkit-mask-image: var(--icon-trash);
+}
+
+
 a.button {
   position: relative;
   display: inline-block;
@@ -45,7 +109,7 @@ a.button:hover:before {
   transform: scale(1.2);
 }
 
-a.button--green{
+a.button--green {
   background-image: var(--button-grass);
 }
 /* button variations */
@@ -73,7 +137,7 @@ a.button--trash {
   min-width: 2rem;
   padding: 0;
   background-image: var(--button-rasberry);
-  text-indent: -999px
+  text-indent: -999px;
 }
 a.button--trash::before {
           mask-image: url(icons/trash.svg);
