@@ -79,6 +79,9 @@ a.hide-message:before {
   background-color: var(--yellowsnow-light);
   color: var(--pumpkin);
 }
+.messages--warning a{
+  color: var(--pumpkin);
+}
 .messages--warning a.hide-message:before {
   background-color: var(--rasberry);
 }
