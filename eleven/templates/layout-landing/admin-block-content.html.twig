@@ -34,7 +34,7 @@
 
 
   {% if content %}
-    <section{{ attributes.addClass(classes) }}>
+    <section{{ attributes.addClass(classes).setAttribute('aria-label', section_title) }}>
 
     {% for item in content %}
       <article class="w card {{ cardclasses }}" aria-label="{{ item.title}}">

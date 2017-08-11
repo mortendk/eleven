@@ -38,7 +38,27 @@ function eleven_preprocess_admin_block_content(&$variables) {
     $variables['admin_subsection'] = $path[3];
   }
 
+  // we need a title for the section wrapper and aria-label
+  $request = \Drupal::request();
+  if ($route = $request->attributes->get(\Symfony\Cmf\Component\Routing\RouteObjectInterface::ROUTE_OBJECT)) {
+    $title = \Drupal::service('title_resolver')->getTitle($request, $route);
+  }
+  $variables['section_title'] = $title;
+
 }
+
+
+function eleven_preprocess_admin_page(&$variables) {
+  // we need a title for the section wrapper and aria-label
+  $request = \Drupal::request();
+  if ($route = $request->attributes->get(\Symfony\Cmf\Component\Routing\RouteObjectInterface::ROUTE_OBJECT)) {
+    $title = \Drupal::service('title_resolver')->getTitle($request, $route);
+  }
+  $variables['section_title'] = $title;
+}
+
+
+
 
 
 // ----------------------------------------------------------------------------
