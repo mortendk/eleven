@@ -44,6 +44,7 @@ feat.quickedit:
   css:
     theme:
       templates/feat/quickedit/quickedit.css: {}
+      templates/feat/quickedit/quickedit-tool.css: {}
 
 # feat.jquery_ui:
 #   css:

@@ -1,286 +1,85 @@
+
+/*
+Quickedit
+
+<span
+class="
+quickedit-field quickedit-candidate quickedit-editable quickedit-highlighted quickedit-editing"
+contenteditable="true">title agian ?</span>
+*/
+
+/*this field can be edited*/
+.quickedit-field {}
+
+/*.quickedit-candidate shows all the elements that can be edited*/
+.quickedit-candidate {
+  background-color: var(--bluesky-light-20);
+  border-bottom: 1px solid var(--bluesky-light);
+}
+
+/*The active element */
+.quickedit-editable.quickedit-highlighted {
+  background-color: var(--white);
+  border: 1px solid var(--ashalt);;
+}
+
+/*This is the  active element */
+[contenteditable="true"],
+[contenteditable="true"]:focus,
 [contenteditable="true"]:hover{
-  border: 1px dashed hotpink
-}
-[contenteditable="true"]:focus{
-  border:0;
-  outline: 1px solid red;
-  background: white;
+  margin: 0 !important;
+  padding: 0 !important;
   cursor:text;
+  background-color: var(--bluesky-light-50);
 }
-
-a:hover{
-  text-decoration: none
-}
-
-
 
 
 /* indicator of the elements that we can quick edit*/
-.quickedit-field{
-  transition: all .5s ease-in-out;
+.quickedit-field {
+
+
+  /*background: linear-gradient(white, white) padding-box,
+  repeating-linear-gradient(-45deg, black 0, black 25%, white 0, white 50%) 0 / 0.5rem 0.5rem;
+  animation: thisIsHowYouGetAnts 50s linear infinite;
+*/
+
+
+
 }
 
 .quickedit-candidate {
-  color: var(--white);
+  /*border: 1px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+  repeating-linear-gradient(-45deg, black 0, black 25%, white 0, white 50%) 0 / 0.5rem 0.5rem;
+  animation: thisIsHowYouGetAnts 50s linear infinite;*/
+
+}
+@keyframes thisIsHowYouGetAnts {
+  to {
+    background-position: 100%;
+  }
 }
 
-.quickedit-field.quickedit-editable,
-.quickedit-field .quickedit-editable {
-  /*box-shadow: 0 0 0 2px yellow;*/
-  outline: 1px dashed var(--yellowsnow-light);
-}
 
-.quickedit-editable {
-  /*box-shadow: 0 0 0 1px var(--bluesky-light);*/
-  /*outline: 1px dotted var(--rasberry-light);*/
-}
-.quickedit-entity-active:focus a{
-  outline-color: yellow;
-  outline-width: 1px;
-  outline-offset: 0;
-  outline-style: dotted;
-}
-a:hover .quickedit-editable{
-  text-decoration: none;
-  outline: 1px dotted var(--rasberry-light);
-  background-color: hotpink;
-  outline: none
-}
-.quickedit-editing{
-  background-color: var(--rasberry-light);
-  color: var(--white);
-}
+
+.quickedit-editable { }
+.quickedit-entity-active:focus a{ }
+a:hover .quickedit-editable{ }
+.quickedit-editing{ }
+
+
 .quickedit-editable:focus{
-  outline: 3px solid hotpink
 }
 .quickedit-highlighted{
-  box-shadow: 0 0 0 1px var(--rasberry);
-  color: var(--black);
-  background-color: var(--white-20);
 }
 .quickedit-changed {
-  font-style: italic;
-  box-shadow: 0 0 0 2px var(--pumpkin);
 }
 .quickedit-validation-error {
-  box-shadow: 0 0 0px 1px var(--strawberry);
+
 }
 .quickedit-editing.quickedit-editor-is-popup {
-  box-shadow: none;
+
 }
 .quickedit-form .form-item .error {
-  border: 1px solid var(--strawberry);
-}
 
-
-
-
-
-/* Quickedit toolbar */
-.quickedit-toolbar{
-  background-color: var(--black);
-  color: var(--concrete);
-}
-.quickedit-toolbar-container {
-  height: 2rem;
-  transition: all 1s;
-}
-.quickedit-toolbar-content {
-  position: relative;
-}
-
-/* Label */
-.quickedit-toolbar-label {
-  font-size: 1rem;
-  white-space: nowrap;
-  background-color: var(--black);
-  padding: 0.5rem 0
-}
-.quickedit-toolbar-label .field{
-  background-color: var(--asphalt);
-  font-weight: bold;
-  padding: 0.5rem;
-  margin-right: 0.5rem
-}
-
-/* quickedit action buttons */
-button.quickedit-button{
-  border: none !important;
-  border-radius: 0;
-  color: var(--white);
-  background-color: var(--black);
-  height: 2rem;
-  text-shadow: none !important;
-  font-weight: bold;
-}
-.quickedit-button.action-save{
-  background-image: var(--button-bluesky);
-  margin-top: 0;
-}
-
-.quickedit-button.action-cancel{
-  width: 1rem;
-  height: 1rem;
-  margin: 0.5rem;
-  border:none;
-  background-color: var(--gravel);
-          mask: url(icons/times.svg) no-repeat;
-  -webkit-mask: url(icons/times.svg) no-repeat;
-  -webkit-mask-size: contain;
-          mask-size: contain;
-  text-indent: -999rem;
-  transition: all 0.2s;
-  padding: 0;
-  background-image: none
-}
-.quickedit-button.action-cancel:before{
-  display: none
-}
-.quickedit-button.action-cancel:hover{
-  background-color: var(--asphalt);
-  cursor: pointer;
-  transform: scale(.8);
-}
-
-/* -----------------------------------------------------------------------------
-Quick edit Form
-------------------------------------------------------------------------------*/
-.quickedit-form-container .quickedit-highlighted{
-  background-color: var(--asphalt);
-  color: var(--concrete);
-  box-shadow: 0 0 0 1px var(--asphalt);
-  margin-top: 1rem;
-  width: 100%;
-}
-.quickedit-form-container a{
-  color: var(--bluesky);
-}
-
-.quickedit-form-container form{
-  margin: 1rem 0.5rem;
-}
-.quickedit-form-container label,
-.quickedit-form-container .label {
-  color: var(--concrete-light);
-}
-
-.quickedit-form-container input{ }
-.quickedit-form-container textarea{ }
-
-.quickedit-form-container select{
-  border: 1px solid var(--bluesky-light);
-  background-color: var(--concrete-light);
-  color: var(--asphalt);
-}
-
-
-.quickedit-form-container .description{
-  color: var(--gravel);
-}
-.quickedit-form-container button.link{
-  color: var(--bluesky-light);
-}
-
-
-
-
-
-
-
-
-
-
-
- /**
-  * Info toolgroup.
-  */
-.quickedit-toolbar-fullwidth {
-  width: 100%;
-}
-.quickedit-toolgroup.wysiwyg-floated {
-  float: right; /* LTR */
-}
-[dir="rtl"] .quickedit-toolgroup.wysiwyg-floated {
-  float: left;
-}
-.quickedit-toolgroup.wysiwyg-main {
-  clear: both;
-  width: 100%;
-  padding-left: 0; /* LTR */
-}
-[dir="rtl"] .quickedit-toolgroup.wysiwyg-main {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-/**
- * Buttons.
- */
-.quickedit-button {
-}
-.quickedit-button[aria-hidden="true"] {
-  visibility: hidden;
-  opacity: 0;
-}
-.quickedit-button + .quickedit-button {
-
-}
-[dir="rtl"] .quickedit-button + .quickedit-button {
-}
-/* Button with icons. */
-.quickedit-button:hover,
-.quickedit-button:active {
-}
-.quickedit-toolbar-container .quickedit-button.action-cancel {
-}
-/* Save */
-.quickedit-button.action-save { }
-.quickedit-button.action-save:hover,
-.quickedit-button.action-save:active {
-
-}
-.quickedit-button.action-saving,
-.quickedit-button.action-saving:hover,
-.quickedit-button.action-saving:active {
-}
-
-
-
-.quickedit .icon { }
-.quickedit .icon-only { }
-.quickedit .icon-end { }
-.quickedit .icon {}
-.quickedit button.icon { }
-.quickedit .icon-close {}
-.quickedit .icon-throbber {}
-.quickedit .icon-pencil {}
-
-
-
-
-
-
-/**
- * Animations.
- */
-.quickedit-animate-invisible {
-  opacity: 0;
-}
-.quickedit-animate-default {
-  transition: all .4s ease;
-}
-.quickedit-animate-slow {
-  transition: all .6s ease;
-}
-.quickedit-animate-delay-veryfast {
-  transition-delay: .05s;
-}
-.quickedit-animate-delay-fast {
-  transition-delay: .2s;
-}
-.quickedit-animate-disable-width {
-  transition: width 0s;
-}
-.quickedit-animate-only-visibility {
-  transition: opacity .2s ease;
 }
