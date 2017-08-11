@@ -5,7 +5,7 @@
 {{ attach_library('eleven/admin.config') }}
 {{ attach_library('eleven/card') }}
 
-<div class="card w L">
+<div class="card w L" aria-label="{{ block.title }}">
   {# TODO: needs the untranslated string here #}
   <h3 class="card__title card__title--icon card__title--icon-{{ block.title|clean_class }}">{{ block.title }}</h3>
 

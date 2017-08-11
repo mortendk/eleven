@@ -3,10 +3,10 @@
 {% if rows %}
 
 {% include themepath ~ '/templates/component/navigation/cardlayout/cardlayout.html.twig' %}
-<section{{ attributes.addClass('L','LW-4', 'LW--nooverflow', 'w-12', 'js-card-layout-target') }}>
+<section{{ attributes.addClass('L','LW-4', 'LW--nooverflow', 'w-12', 'js-card-layout-target').setAttribute('aria-label', 'Contact forms'|t) }}>
 
   {% for row in rows %}
-    <article {{ row.attributes.addClass('w', 'card') }}>
+    <article {{ row.attributes.addClass('w', 'card').setAttribute('aria-label', row.cells.form.content) }}>
 
       <h3 class="card__title card__title--icon card__title--icon-admin-structure-contact">{{ row.cells.form.content  }}</h3>
       <h4>{{ row.cells.recipients.content }}</h4>

@@ -6,7 +6,7 @@
 <section{{ attributes.addClass('L','LW-4', 'LW--nooverflow', 'js-card-layout-target') }}>
 
   {% for row in rows %}
-    <article {{ row.attributes.addClass('card', 'w') }}>
+    <article {{ row.attributes.addClass('card', 'w').setAttribute('aria-label', row.cells.title.content) }}>
 
       <h3 class="card__title card__title--icon card__title--icon-admin-structure-media-bundle">{{ row.cells.title.content }}</h3>
 

@@ -3,15 +3,17 @@
 // PREPROCESS
 // ----------------------------------------------------------------------------
 
-function eleven_preprocess_html(&$variables){
- $variables['path'] = \Drupal::service('path.current')->getPath();
-
- $variables['systempath'] = explode('/', \Drupal::service('path.current')->getPath());
-}
-
+// we need this for including twig files & subthemes
 function eleven_preprocess(&$variables){
   $variables['themepath'] = drupal_get_path('theme','eleven');
 }
+
+
+function eleven_preprocess_html(&$variables){
+ $variables['path'] = \Drupal::service('path.current')->getPath();
+ $variables['systempath'] = explode('/', \Drupal::service('path.current')->getPath());
+}
+
 
 // ----------------------------------------------------------------------------
 // admin blocks wrappers for

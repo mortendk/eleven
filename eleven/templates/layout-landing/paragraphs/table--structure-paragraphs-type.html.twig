@@ -3,7 +3,7 @@
 {% if rows %}
 
 {% include themepath ~ '/templates/component/navigation/cardlayout/cardlayout.html.twig' %}
-<section{{ attributes.addClass('L','LW-4', 'LW--nooverflow', 'js-card-layout-target') }}>
+<section{{ attributes.addClass('L','LW-4', 'LW--nooverflow', 'js-card-layout-target').setAttribute('aria-label', row.cells.label.content) }}>
 
   {% for row in rows %}
     <article {{ row.attributes.addClass('card', 'w') }}>
