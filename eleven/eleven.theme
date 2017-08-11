@@ -2,11 +2,15 @@
 // ----------------------------------------------------------------------------
 // PREPROCESS
 // ----------------------------------------------------------------------------
+
 function eleven_preprocess_html(&$variables){
  $variables['path'] = \Drupal::service('path.current')->getPath();
 
  $variables['systempath'] = explode('/', \Drupal::service('path.current')->getPath());
+}
 
+function eleven_preprocess(&$variables){
+  $variables['themepath'] = drupal_get_path('theme','eleven');
 }
 
 // ----------------------------------------------------------------------------

@@ -19,7 +19,7 @@
  * @see template_preprocess_item_list()
  */
 #}
-{{ attach_library(active_theme()~'/card') }}
+{{ attach_library('eleven/card') }}
 
 {% if context.list_style %}
   {%- set wrapper_attributes = wrapper_attributes.addClass('item-list--' ~ context.list_style) %}
