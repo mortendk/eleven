@@ -18,7 +18,7 @@ media tables layout
 
 {% include themepath ~ '/templates/component/navigation/cardlayout/cardlayout.html.twig' %}
 
-<section class="L LW-4 LW--nooverflow w-12 js-card-layout-target">
+<section class="L LW-4 LW--nooverflow w-12 js-card-layout-target" aria-label="{{ section_title }}">
 
   {% for row in rows %}
   {# lets taste if we have a label  #}

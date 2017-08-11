@@ -46,6 +46,16 @@ function eleven_preprocess_admin_block_content(&$variables) {
 // dont tables for layouts of admin pages content + cause were grownups
 //
 // ----------------------------------------------------------------------------
+function eleven_preprocess_table(&$variables) {
+  // we need a title for the section wrapper and aria-label
+  $request = \Drupal::request();
+  if ($route = $request->attributes->get(\Symfony\Cmf\Component\Routing\RouteObjectInterface::ROUTE_OBJECT)) {
+    $title = \Drupal::service('title_resolver')->getTitle($request, $route);
+  }
+  $variables['section_title'] = $title;
+
+}
+
 function eleven_theme_suggestions_table_alter(array &$suggestions, array $variables) {
   // TODO we can do better here use layout fields suggestion and translate suggestion
   $path = explode('/', \Drupal::service('path.current')->getPath());

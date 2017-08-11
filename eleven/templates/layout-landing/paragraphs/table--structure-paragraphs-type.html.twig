@@ -3,10 +3,10 @@
 {% if rows %}
 
 {% include themepath ~ '/templates/component/navigation/cardlayout/cardlayout.html.twig' %}
-<section{{ attributes.addClass('L','LW-4', 'LW--nooverflow', 'js-card-layout-target').setAttribute('aria-label', row.cells.label.content) }}>
+<section{{ attributes.addClass('L','LW-4', 'LW--nooverflow', 'js-card-layout-target').setAttribute('aria-label', section_title) }}>
 
   {% for row in rows %}
-    <article {{ row.attributes.addClass('card', 'w') }}>
+    <article {{ row.attributes.addClass('card', 'w').setAttribute('aria-label', row.cells.label.content) }}>
 
       <h3 class="card__title card__title--icon card__title--icon-paragraphs">
         {{ row.cells.label.content}}
