@@ -7,14 +7,14 @@ avalible Variables:
 {{ db_offline }}
 paths:
 {{ root_path }} # first parth of the path : ex node, user
-{{ active_theme_path() }} # ex: /theme/vanilla
+{{ themepath }} # ex: /theme/vanilla
 #}
 <!DOCTYPE html>
 <html{{ html_attributes }}>
   <head>
     <head-placeholder token="{{ placeholder_token|raw }}">
 
-    {% include active_theme_path() ~ '/favicons/favicon.html.twig' %}
+    {% include themepath ~ '/favicons/favicon.html.twig' %}
 
     {% if not root_path %}
       <title>{{ head_title|safe_join(' > ')|replace({'| ': ''}) }}</title>

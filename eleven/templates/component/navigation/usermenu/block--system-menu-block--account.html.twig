@@ -4,7 +4,7 @@
   ]
 %}
 
-{{ attach_library(active_theme()~'/usermenu') }}
+{{ attach_library('eleven/usermenu') }}
 
 <nav role="navigation"
 aria-labelledby="{{ attributes.id ~ '-menu'|clean_id }}"
@@ -21,7 +21,7 @@ aria-labelledby="{{ attributes.id ~ '-menu'|clean_id }}"
 
   <a href="" class="js-showusermenu">
   <span class="iconsvg iconsvg--s">
-      {% include active_theme_path() ~ '/templates/component/navigation/usermenu/user.svg' %}
+      {% include themepath ~ '/templates/component/navigation/usermenu/user.svg' %}
   </span>
   {{ user.getDisplayName }}
   </a>

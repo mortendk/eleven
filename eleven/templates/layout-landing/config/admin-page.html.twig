@@ -3,12 +3,12 @@
   parts the cards out into 2 columns
   this template is the same patterns as system-admin-index.html.twig
 #}
-{{ attach_library(active_theme()~'/admin.config') }}
+{{ attach_library('eleven/admin.config') }}
 
 {# do we really want this ??
 {{ system_compact_link }}
 #}
-{% include active_theme_path() ~ '/templates/component/navigation/cardlayout/cardlayout.html.twig' %}
+{% include themepath ~ '/templates/component/navigation/cardlayout/cardlayout.html.twig' %}
 <section{{ attributes.addClass('L','LW-4', 'LW--nooverflow', 'js-card-layout-target') }}>
 
   {% for container in containers %}

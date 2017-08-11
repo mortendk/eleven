@@ -1,8 +1,8 @@
 {#
 we need this template so we dont messes with views admin ui specific elements
  #}
-{{ attach_library(active_theme()~'/button') }}
-{{ attach_library(active_theme()~'/form.form') }}
+{{ attach_library('eleven/button') }}
+{{ attach_library('eleven/form.form') }}
 
 {%
   set remove_classes = [

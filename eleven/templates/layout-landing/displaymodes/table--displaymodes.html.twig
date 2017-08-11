@@ -3,7 +3,7 @@ media tables layout
 
  eleven_theme_suggestions_table_alter()
  #}
-{{ attach_library(active_theme()~'/card') }}
+{{ attach_library('eleven/card') }}
 
 {{ label }}
 
@@ -16,7 +16,7 @@ media tables layout
 
 {% if rows %}
 
-{% include active_theme_path() ~ '/templates/component/navigation/cardlayout/cardlayout.html.twig' %}
+{% include themepath ~ '/templates/component/navigation/cardlayout/cardlayout.html.twig' %}
 
 <section class="L LW-4 LW--nooverflow w-12 js-card-layout-target">
 

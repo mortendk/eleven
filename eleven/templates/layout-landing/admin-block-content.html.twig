@@ -9,7 +9,7 @@
 
   admin/index
 #}
-{{ attach_library(active_theme()~'/card') }}
+{{ attach_library('eleven/card') }}
 
 {# test if this is the admin index or config page #}
 {% set test = [
@@ -29,7 +29,7 @@
     ]
   %}
 
-  {% include active_theme_path() ~ '/templates/component/navigation/cardlayout/cardlayout.html.twig' %}
+  {% include themepath ~ '/templates/component/navigation/cardlayout/cardlayout.html.twig' %}
 
   {% if content %}
     <section{{ attributes.addClass(classes) }}>
