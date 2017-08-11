@@ -57,8 +57,8 @@ a.button:hover:before {
   background-image: var(--button-strawberry-active);
 }
 .form-actions a.button--danger:before {
-          mask-image: var(--icon-trash);
-  -webkit-mask-image: var(--icon-trash);
+  mask-image: url(icons/trash.svg);
+-webkit-mask-image: url(icons/trash.svg);
 }
 
 

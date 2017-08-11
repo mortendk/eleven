@@ -1,7 +1,7 @@
 /* debug */
-/*.contextual .contextual-links[hidden] {
+.contextual .contextual-links[hidden] {
   display: block !important;
-}*/
+}
 
 .contextual {
   position: absolute;
@@ -137,8 +137,8 @@
   content: "";
   transition: 0.1s ease-in;
 
-  -webkit-mask: var(--icon-coffee) no-repeat;
-          mask: var(--icon-coffee) no-repeat;
+  -webkit-mask: url(icons/d8-logo.svg) no-repeat;
+          mask: url(icons/d8-logo.svg) no-repeat;
   -webkit-mask-size: contain ! important;
           mask-size: contain ! important;
 }
@@ -148,8 +148,8 @@ colors
 ------------------------------------------------------------------------------*/
 /* color for the region */
 .contextual-region.focus {
-  outline: auto 2px var(--rasberry);
-  background-color: var(--white-20);
+  outline: auto 1px var(--rasberry);
+  background-color: var(--bluesky-light-light);
 }
 .js-outside-in-edit-mode .contextual-region{
   outline: 1px dotted var(--bluesky-light);
@@ -200,8 +200,8 @@ contextual links icon colors
   top: calc(50% - 8px);
   left: calc(50% - 8px);
 
-  -webkit-mask: var(--icon-contextual) no-repeat;
-          mask: var(--icon-contextual) no-repeat;
+  -webkit-mask: url(icons/bullseye.svg) no-repeat;
+          mask: url(icons/bullseye.svg) no-repeat;
 }
 
 /* -----------------------------------------------------------------------------
@@ -209,8 +209,8 @@ Contextual links icons
 ----------------------------------------------------------------------------- */
 /* block config */
 .contextual .contextual-links .block-configure a:before {
-  -webkit-mask: var(--icon-gears) no-repeat;
-          mask: var(--icon-gears) no-repeat;
+  -webkit-mask: url(icons/gears.svg);
+          mask: url(icons/gears.svg);
 }
 
 /* quick edit */
@@ -222,30 +222,29 @@ Contextual links icons
 .contextual .contextual-links .quickedit a:before {
   background-color: var(--rasberry-light);
 
-  -webkit-mask: var(--icon-action) no-repeat;
-          mask: var(--icon-action) no-repeat;
+  -webkit-mask: url(icons/flash.svg) no-repeat;
+          mask: url(icons/flash.svg) no-repeat;
 }
 
 /* translate */
 .contextual .contextual-links .config-translationcontextual-linksentityblockconfig-translation-overview a:before,
 .contextual .contextual-links .config-translationcontextual-linksentitymenuconfig-translation-overview a:before,
 .contextual .contextual-links .config-translationcontextual-linksentityviewconfig-translation-overview a:before {
-  -webkit-mask: var(--icon-gears) no-repeat;
-          mask: var(--icon-gears) no-repeat;
+  -webkit-mask: url(icons/gears.svg);
+          mask: url(icons/gears.svg);
 }
 
 /* edit */
 .contextual .contextual-links .entitymenuedit-form a:before,
 .contextual .contextual-links .entitynodeedit-form a:before,
 .contextual .contextual-links .entityviewedit-form a:before {
-  -webkit-mask: var(--icon-pen) no-repeat;
-          mask: var(--icon-pen) no-repeat;
+  -webkit-mask: url(icons/pencil.svg) no-repeat;
+          mask: url(icons/pencil.svg) no-repeat;
 }
 
 /* delete */
 .contextual .contextual-links .entitynodedelete-form a:before {
-  background-color: var(--strawberry);
 
-  -webkit-mask: var(--icon-trash) no-repeat;
-          mask: var(--icon-trash) no-repeat;
+  -webkit-mask: url(icons/trash.svg) no-repeat;
+          mask: url(icons/trash.svg) no-repeat;
 }

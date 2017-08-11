@@ -1,4 +1,5 @@
 input[type="submit"] {
+  height: 2rem;
   padding: 0 1rem 0 0.5rem;
   border: none;
   border-bottom: 0;
@@ -6,7 +7,6 @@ input[type="submit"] {
   color: var(--white);
   font-weight: normal;
   line-height: 2;
-  height: 2rem
 }
 input[type="submit"] + .form-item__icon {
   width: 2rem;
@@ -50,14 +50,14 @@ form[data-drupal-selector="node-type-edit-form"] .form-actions,
 .entity-form-display-edit-form #edit-actions,
 .block-admin-display-form #edit-actions {
   position: fixed;
+  z-index: 666;
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: var(--white-90);
-  padding: 1rem 2rem 1rem 2rem;
-  z-index: 666;
-  border-top: 1px solid var(--grass);
   margin: 0;
+  padding: 1rem 2rem 1rem 2rem;
+  border-top: 1px solid var(--grass);
+  background-color: var(--white-90);
 }
 
 
@@ -88,23 +88,23 @@ input[type="submit"].button--primary:hover + .form-item__icon {
 }
 
 /*cancel */
-#edit-actions  input[type="submit"][data-drupal-selector="edit-actions-cancel"]{
+#edit-actions  input[type="submit"][data-drupal-selector="edit-actions-cancel"] {
   background-color: var(--concrete);
 }
-#edit-actions  input[type="submit"][data-drupal-selector="edit-actions-cancel"] + .form-item__icon{
+#edit-actions  input[type="submit"][data-drupal-selector="edit-actions-cancel"] + .form-item__icon {
   background-color: var(--asphalt-light);
 }
-#edit-actions  input[type="submit"][data-drupal-selector="edit-actions-cancel"]:hover{
+#edit-actions  input[type="submit"][data-drupal-selector="edit-actions-cancel"]:hover {
   background-color: var(--asphalt-light);
 }
-#edit-actions  input[type="submit"][data-drupal-selector="edit-actions-cancel"]:hover + .form-item__icon{
+#edit-actions  input[type="submit"][data-drupal-selector="edit-actions-cancel"]:hover + .form-item__icon {
   background-color: var(--concrete);
 }
 
 
 input[type="submit"][data-drupal-selector="edit-actions-cancel"] + .form-item__icon::before {
-  mask-image: url(../icons/times-circle.svg);
--webkit-mask-image: url(../icons/times-circle.svg);
+          mask-image: url(../icons/times-circle.svg);
+  -webkit-mask-image: url(../icons/times-circle.svg);
 }
 
 /*  ----------------------------------------------------------------------------
@@ -129,16 +129,16 @@ input[type="submit"][data-drupal-selector$="actions-cancel-settings"] + .form-it
           mask-image: url(../icons/trash.svg);
   -webkit-mask-image: url(../icons/trash.svg);
 }
-#edit-clear-cache  input[type="submit"]{
-background-color: var(--rasberry-light);  
+#edit-clear-cache  input[type="submit"] {
+  background-color: var(--rasberry-light);
 }
 
 #edit-clear-cache  input[type="submit"] + .form-item__icon {
   background-color: var(--rasberry);
 }
 #edit-clear-cache  input[type="submit"] + .form-item__icon::before {
-  mask-image: url(../icons/refresh.svg);
--webkit-mask-image: url(../icons/refresh.svg);
+          mask-image: url(../icons/refresh.svg);
+  -webkit-mask-image: url(../icons/refresh.svg);
 }
 
 
@@ -165,8 +165,10 @@ input[type="submit"].button--edit + .form-item__icon::before {
 /* cancel
 on form-display
 */
-.settings-edit-form-actions-cancel-settings{}
-.settings-edit-form-actions-cancel-settings{}
+.settings-edit-form-actions-cancel-settings {
+}
+.settings-edit-form-actions-cancel-settings {
+}
 
 
 /*node edit */
@@ -187,12 +189,12 @@ on form-display
 node edut submit have to different states
 first one is keeping the state that it have the other changes it to published or unpublished
 */
-.nodesubmit .form-item--input:nth-child(1) input + .form-item__icon::before{
-  mask-image: url(../icons/thumbs-up.svg);
+.nodesubmit .form-item--input:nth-child(1) input + .form-item__icon::before {
+          mask-image: url(../icons/thumbs-up.svg);
   -webkit-mask-image: url(../icons/thumbs-up.svg);
 }
-.nodesubmit .form-item--input:nth-child(2) input + .form-item__icon::before{
-  mask-image: url(../icons/thumbs-o-up.svg);
+.nodesubmit .form-item--input:nth-child(2) input + .form-item__icon::before {
+          mask-image: url(../icons/thumbs-o-up.svg);
   -webkit-mask-image: url(../icons/thumbs-o-up.svg);
 }
 
@@ -200,14 +202,14 @@ first one is keeping the state that it have the other changes it to published or
 @media (max-width: 47.99em) {
   .nodesubmit .form-item--input {
     display: block;
-    margin-bottom: 0.5rem
+    margin-bottom: 0.5rem;
   }
   .nodesubmit input {
     width: 90%;
-    text-align: left
+    text-align: left;
   }
   .nodesubmit a.button--danger {
-    width: 97%
+    width: 97%;
   }
 }/* small */
 
@@ -215,7 +217,7 @@ first one is keeping the state that it have the other changes it to published or
 
 
 /*preview */
-.nodesubmit input[type="submit"]#edit-preview{
+.nodesubmit input[type="submit"]#edit-preview {
   background-color: var(--bluesky-light);
 }
 .nodesubmit input[type="submit"]#edit-preview + .form-item__icon {
@@ -225,7 +227,7 @@ first one is keeping the state that it have the other changes it to published or
           mask-image: url(../icons/desktop.svg);
   -webkit-mask-image: url(../icons/desktop.svg);
 }
-.nodesubmit input[type="submit"]#edit-preview:hover{
+.nodesubmit input[type="submit"]#edit-preview:hover {
   background-color: var(--bluesky);
 }
 .nodesubmit input[type="submit"]#edit-preview:hover + .form-item__icon {
@@ -234,31 +236,13 @@ first one is keeping the state that it have the other changes it to published or
 
 
 /* uninstall */
-.system-modules-uninstall #edit-actions input[type="submit"]{
+.system-modules-uninstall #edit-actions input[type="submit"] {
   background-color: var(--grass-light);
 }
-.system-modules-uninstall #edit-actions input[type="submit"] + .form-item__icon{
+.system-modules-uninstall #edit-actions input[type="submit"] + .form-item__icon {
   background-color: var(--grass);
 }
-.system-modules-uninstall .form-item__icon::before{
-  mask-image: url(../icons/power-off.svg);
--webkit-mask-image: url(../icons/power-off.svg);
-
+.system-modules-uninstall .form-item__icon::before {
+          mask-image: url(../icons/power-off.svg);
+  -webkit-mask-image: url(../icons/power-off.svg);
 }
-
-/*input[type="submit"][formnovalidate="formnovalidate"] {
-  background-color: var(--concrete);
-}
-input[type="submit"][formnovalidate="formnovalidate"] + .form-item__icon {
-  background-color: var(--asphalt-light);
-}
-input[type="submit"][formnovalidate="formnovalidate"]:hover {
-  background-color: var(--asphalt-light);
-}
-input[type="submit"][formnovalidate="formnovalidate"]:hover + .form-item__icon {
-  background-color: var(--concrete);
-}
-input[type="submit"][formnovalidate="formnovalidate"] + .form-item__icon::before {
-          mask-image: var(--icon-trash);
-  -webkit-mask-image: var(--icon-trash);
-}*/

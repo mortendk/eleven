@@ -78,8 +78,8 @@ body.is-edit-ui-toolbar-opened #toolbar-bar .toolbar-bar,
 }
 /* tab: user */
 #toolbar-bar .toolbar-tab .toolbar-icon-user:before {
-  -webkit-mask-image: var(--icon-user);
-          mask-image: var(--icon-user);
+  -webkit-mask-image: url(icons/id-badge.svg);
+          mask-image: url(icons/id-badge.svg);
 }
 
 /* tab: button : edit*/
@@ -117,8 +117,8 @@ body.is-edit-ui-toolbar-opened #toolbar-bar .toolbar-bar,
 }
 #toolbar-bar .toolbar-icon-place-block-inactive:before,
 #toolbar-bar .toolbar-icon-place-block-active:before {
-  -webkit-mask-image: var(--icon-browser);
-          mask-image: var(--icon-browser);
+  -webkit-mask-image: url(icons/desktop.svg);
+          mask-image: url(icons/desktop.svg);
 }
 #toolbar-bar .toolbar-icon-place-block-inactive:hover {
   background-image: var(--button-rasberry);
@@ -330,8 +330,8 @@ level 1 : horizontal
 }
 /* People */
 #toolbar-bar a.toolbar-icon-entity-user-collection:before {
-  -webkit-mask-image: var(--icon-user);
-          mask-image: var(--icon-user);
+  -webkit-mask-image: url(icons/id-card.svg);
+          mask-image: url(icons/id-card.svg);
 }
 /* Report */
 #toolbar-bar a.toolbar-icon-system-admin-reports:before {
@@ -386,8 +386,8 @@ level 1 : horizontal
 
 /* view profile */
 #toolbar-bar .account a:before {
-  -webkit-mask-image: var(--icon-user);
-          mask-image: var(--icon-user);
+  -webkit-mask-image: url(icons/id-badge.svg);
+          mask-image: url(icons/id-badge.svg);
 }
 /* Edit profile */
 #toolbar-bar .account-edit a:before {
@@ -533,8 +533,8 @@ Vertical
 }
 
 #toolbar-bar .level-2 .toolbar-icon.toolbar-handle.open:before {
-  -webkit-mask-image: var(--icon-up-small);
-          mask-image: var(--icon-up-small);
+  -webkit-mask-image: url(icons/up.svg);
+          mask-image: url(icons/up.svg);
 }
 #toolbar-bar .level-2 .toolbar-icon.toolbar-handle.open:hover:before {
   transform: scale(1) translateY(-0.3rem) translateX(0.2rem);

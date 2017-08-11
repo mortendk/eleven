@@ -1,8 +1,8 @@
 /* icons */
 
 /*node edit delete is not a tab its a function kill it */
-.path-node .tabs li a[href$="/delete"]{
-  display: none
+.path-node .tabs li a[href$="/delete"] {
+  display: none;
 }
 
 
@@ -79,12 +79,10 @@
 .tabs li a[href$="admin/content/media"]:before {
   -webkit-mask-image: url(icons/file-picture-o.svg);
           mask-image: url(icons/file-picture-o.svg);
-
 }
 .tabs li a[href$="admin/content/scheduled_update"]:before {
   -webkit-mask-image: url(icons/clock-o.svg);
           mask-image: url(icons/clock-o.svg);
-
 }
 
 
@@ -131,36 +129,34 @@
   -webkit-mask-image: url(icons/refresh.svg);
           mask-image: url(icons/refresh.svg);
 }
-.tabs li a[href="/admin/modules/uninstall"]{
+.tabs li a[href="/admin/modules/uninstall"] {
   background-image: var(--button-strawberry);
   color: var(--white);
 }
-.tabs li a[href="/admin/modules/uninstall"]:hover{
+.tabs li a[href="/admin/modules/uninstall"]:hover {
   background-image: var(--button-strawberry-rev);
   color: var(--white);
 }
 
 .tabs li a[href="/admin/modules/uninstall"]:before {
+  background-color: var(--white);
+
   -webkit-mask-image: url(icons/power-off.svg);
           mask-image: url(icons/power-off.svg);
-  background-color: var(--white);
 }
 
 /*people ---------------------------------------------------------------------*/
 .tabs li a[href="/admin/people"]:before {
   -webkit-mask-image: url(icons/userid.svg);
           mask-image: url(icons/userid.svg);
-
 }
 .tabs li a[href="/admin/people/permissions"]:before {
   -webkit-mask-image: url(icons/lock.svg);
           mask-image: url(icons/lock.svg);
-
 }
 .tabs li a[href="/admin/people/roles"]:before {
   -webkit-mask-image: url(icons/child.svg);
           mask-image: url(icons/child.svg);
-
 }
 
 /*  block --------------------------------------------------------------------*/
@@ -197,114 +193,115 @@
 }
 
 /* views */
-.tabs li a[href="/admin/structure/views"]:before{
+.tabs li a[href="/admin/structure/views"]:before {
   -webkit-mask-image: url(icons/list.svg);
           mask-image: url(icons/list.svg);
 }
-.tabs li a[href="/admin/structure/views/settings"]:before{
+.tabs li a[href="/admin/structure/views/settings"]:before {
   -webkit-mask-image: url(icons/gear.svg);
           mask-image: url(icons/gear.svg);
 }
 
 /* account*/
-.tabs li a[href="/admin/config/people/accounts"]:before{
+.tabs li a[href="/admin/config/people/accounts"]:before {
   -webkit-mask-image: url(icons/userid.svg);
           mask-image: url(icons/userid.svg);
 }
 
 /*site settings */
-.tabs li a[href="/admin/config/system/site-information"]:before{
+.tabs li a[href="/admin/config/system/site-information"]:before {
   -webkit-mask-image: url(icons/info-circle.svg);
           mask-image: url(icons/info-circle.svg);
 }
 
 /* translate */
-.tabs li a[href="/admin/config/regional/translate/import"]:before{
+.tabs li a[href="/admin/config/regional/translate/import"]:before {
   -webkit-mask-image: url(icons/cloud-upload.svg);
           mask-image: url(icons/cloud-upload.svg);
 }
 
-.tabs li a[href="/admin/config/regional/translate/export"]:before{
+.tabs li a[href="/admin/config/regional/translate/export"]:before {
   -webkit-mask-image: url(icons/cloud-download.svg);
           mask-image: url(icons/cloud-download.svg);
 }
 
-.tabs li a[href="/admin/config/regional/translate/settings"]:before{
+.tabs li a[href="/admin/config/regional/translate/settings"]:before {
   -webkit-mask-image: url(icons/gears.svg);
           mask-image: url(icons/gears.svg);
 }
 
 /* RSS */
-.tabs li a[href="/admin/config/services/rss-publishing"]:before{
+.tabs li a[href="/admin/config/services/rss-publishing"]:before {
   -webkit-mask-image: url(icons/rss.svg);
           mask-image: url(icons/rss.svg);
 }
 
-.tabs li a[href="/admin/config/services/aggregator"]:before{
+.tabs li a[href="/admin/config/services/aggregator"]:before {
   -webkit-mask-image: url(icons/rss.svg);
           mask-image: url(icons/rss.svg);
 }
-.tabs li a[href="/admin/config/services/aggregator/settings"]:before{
+.tabs li a[href="/admin/config/services/aggregator/settings"]:before {
   -webkit-mask-image: url(icons/gears.svg);
           mask-image: url(icons/gears.svg);
 }
 
 /* maintainenec */
-.tabs li a[href="/admin/config/development/maintenance"]:before{
+.tabs li a[href="/admin/config/development/maintenance"]:before {
   -webkit-mask-image: url(icons/gears.svg);
           mask-image: url(icons/gears.svg);
 }
 
 /* CMI */
-.tabs li a[href="/admin/config/development/configuration"]:before{
+.tabs li a[href="/admin/config/development/configuration"]:before {
   -webkit-mask-image: url(icons/rotate-right.svg);
           mask-image: url(icons/rotate-right.svg);
 }
 
-.tabs li a[href="/admin/config/development/configuration/full/import"]:before{
+.tabs li a[href="/admin/config/development/configuration/full/import"]:before {
   -webkit-mask-image: url(icons/cloud-upload.svg);
           mask-image: url(icons/cloud-upload.svg);
 }
-.tabs li a[href="/admin/config/development/configuration/full/export"]:before{
+.tabs li a[href="/admin/config/development/configuration/full/export"]:before {
   -webkit-mask-image: url(icons/cloud-download.svg);
           mask-image: url(icons/cloud-download.svg);
 }
 
 
 /*dblog*/
-.tabs li a[href="/admin/reports/dblog"]:before{
+.tabs li a[href="/admin/reports/dblog"]:before {
   -webkit-mask-image: url(icons/bullhorn.svg);
           mask-image: url(icons/bullhorn.svg);
 }
 
 
 /* delete */
-.tabs li a[href="/admin/reports/dblog/confirm"]{
+.tabs li a[href="/admin/reports/dblog/confirm"] {
   background-image: var(--button-strawberry);
   color: var(--white);
 }
-.tabs li a[href="/admin/reports/dblog/confirm"]:hover{
+.tabs li a[href="/admin/reports/dblog/confirm"]:hover {
   background-image: var(--button-strawberry-rev);
   color: var(--white);
 }
-.tabs li a[href="/admin/reports/dblog/confirm"]::before{
-  -webkit-mask-image: var(--icon-trash);
-          mask-image: var(--icon-trash);
-          background-color: white
+.tabs li a[href="/admin/reports/dblog/confirm"]::before {
+  background-color: white;
+
+          mask-image: url(icons/trash.svg);
+  -webkit-mask-image: url(icons/trash.svg);
 }
 
 /*node delete*/
-.tabs li a[href$="/delete"]{
+.tabs li a[href$="/delete"] {
   background-image: var(--button-strawberry);
   color: var(--white);
 }
-.tabs li a[href$="/delete"]:hover{
+.tabs li a[href$="/delete"]:hover {
   background-image: var(--button-strawberry-rev);
 }
 .tabs li a[href$="/delete"]:before {
-  -webkit-mask-image: var(--icon-trash);
-          mask-image: var(--icon-trash);
-          background-color: white
+  background-color: white;
+  mask-image: url(icons/trash.svg);
+-webkit-mask-image: url(icons/trash.svg);
 }
 
 /*  edit */
@@ -379,14 +376,14 @@ ul.tabs > li:first-child a[href^="/node/"]:before {
 .tabs li a[href="/admin/reports/fields/views-fields"]:before {
   -webkit-mask-image: url(icons/tasks.svg);
           mask-image: url(icons/tasks.svg);
-
 }
 
 /* views */
 .tabs li a[href="/admin/structure/views/view/content"]:before {
+  background-color: white;
+
   -webkit-mask-image: url(icons/pencil.svg);
           mask-image: url(icons/pencil.svg);
-          background-color: white
 }
 
 .tabs li a[href^="/admin/structure/block/manage/"]:before {

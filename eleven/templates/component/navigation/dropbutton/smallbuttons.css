@@ -137,8 +137,8 @@ a.smallbtn--flush:before{
 
 /* delete */
 a.smallbtn--delete:before {
-  -webkit-mask-image: var(--icon-trash);
-          mask-image: var(--icon-trash);
+  mask-image: url(icons/trash.svg);
+-webkit-mask-image: url(icons/trash.svg);
 }
 a.smallbtn--delete:hover {
   /*background-color: var(--strawberry-light);*/
