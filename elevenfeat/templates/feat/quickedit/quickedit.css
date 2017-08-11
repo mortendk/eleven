@@ -124,8 +124,8 @@ button.quickedit-button{
   margin: 0.5rem;
   border:none;
   background-color: var(--gravel);
-          mask: var(--icon-close) no-repeat;
-  -webkit-mask: var(--icon-close) no-repeat;
+          mask: url(icons/times.svg) no-repeat;
+  -webkit-mask: url(icons/times.svg) no-repeat;
   -webkit-mask-size: contain;
           mask-size: contain;
   text-indent: -999rem;

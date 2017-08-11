@@ -65,8 +65,8 @@ button.button--primary:hover {
 }
 button.button--primary:before,
 button.action-save:before {
-          mask-image: var(--icon-save);
-  -webkit-mask-image: var(--icon-save);
+          mask-image: url(../icons/thumbs-up.svg);
+  -webkit-mask-image: url(../icons/thumbs-up.svg);
 }
 
 /* cancel */
@@ -79,8 +79,8 @@ button.action-save:before {
   background-image: var(--button-concrete-rev);
 }
 .button[data-drupal-selector="edit-cancel"]:before {
-          mask-image: var(--icon-trash);
-  -webkit-mask-image: var(--icon-trash);
+          mask-image: url(../icons/trash.svg);
+  -webkit-mask-image: url(../icons/trash.svg);
 }
 
 button span {

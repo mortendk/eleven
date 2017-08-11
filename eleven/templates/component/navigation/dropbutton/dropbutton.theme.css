@@ -329,8 +329,8 @@ drop button on a mobile is not a good idea they are harder to navigate so lets s
 .dropbutton .delete a:before {
   background-color: var(--strawberry);
 
-  -webkit-mask-image: var(--icon-trash);
-          mask-image: var(--icon-trash);
+  mask-image: url(icons/trash.svg);
+-webkit-mask-image: url(icons/trash.svg);
 }
 .dropbutton .delete a:hover {
   /*background-color: var(--strawberry-light);*/

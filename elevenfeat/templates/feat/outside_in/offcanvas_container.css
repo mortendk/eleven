@@ -41,8 +41,8 @@ ui dialog Titlebar
   left: 0.5rem;
   background-color: var(--concrete-light);
 
-          mask: var(--icon-close) no-repeat;
-  -webkit-mask: var(--icon-close) no-repeat;
+          mask: url(icons/x.svg) no-repeat;
+  -webkit-mask: url(icons/x.svg) no-repeat;
 }
 .ui-dialog  .ui-dialog-titlebar-close:hover:before,
 .ui-dialog  .ui-dialog-titlebar-close:active:before {

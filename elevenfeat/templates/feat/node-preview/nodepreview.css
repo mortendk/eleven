@@ -5,30 +5,28 @@
 
 .node-preview-container {
   position: fixed;
-  bottom: 0;
   z-index: 666;
+  bottom: 0;
+  box-sizing: border-box;
   width: 100%;
   padding: 1rem;
-  box-sizing: border-box;
-  background-color: var(--white-90);
   border-top: 1px solid var(--grass-light);
-
+  background-color: var(--white-90);
 }
-.node-preview-form-select{
-
+.node-preview-form-select {
 }
 
 
 .node-preview-backlink {
   position: relative;
-  background-image: var(--button-rasberry);
   padding: 0.5rem 0.5rem  0.5rem  2.5rem;
+  background-image: var(--button-rasberry);
   color: var(--white);
-  text-decoration: none
+  text-decoration: none;
 }
 .node-preview-backlink:hover {
-    background-image: var(--button-rasberry-rev);
-    color: var(--white);
+  background-image: var(--button-rasberry-rev);
+  color: var(--white);
 }
 
 .node-preview-backlink:before {
@@ -42,8 +40,8 @@
   content: "";
   transition: 0.2s ease-in;
 
-          mask-image: var(--icon-pen);
-  -webkit-mask-image: var(--icon-pen);
+          mask-image: url(icons/pencil.svg);
+  -webkit-mask-image: url(icons/pencil.svg);
   -webkit-mask-size: contain !important;
           mask-size: contain !important;
   -webkit-mask-repeat: no-repeat;

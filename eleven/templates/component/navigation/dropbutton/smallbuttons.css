@@ -132,13 +132,18 @@ a.smallbtn--devel:before{
 a.smallbtn--flush:before{
   -webkit-mask-image: url(icons/refresh.svg);
           mask-image: url(icons/refresh.svg);
+}
+
+a.smallbtn--revert:before{
+  -webkit-mask-image: url(icons/history.svg);
+          mask-image: url(icons/history.svg);
 
 }
 
 /* delete */
 a.smallbtn--delete:before {
-  -webkit-mask-image: var(--icon-trash);
-          mask-image: var(--icon-trash);
+  mask-image: url(icons/trash.svg);
+-webkit-mask-image: url(icons/trash.svg);
 }
 a.smallbtn--delete:hover {
   /*background-color: var(--strawberry-light);*/

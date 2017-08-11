@@ -9,7 +9,7 @@ hidden: TRUE
 # -- Libraries -----------------------------------------------------------------
 libraries:
   - elevenfeat/global
-  - elevenfeat/colorscheme
+  # - elevenfeat/colorscheme
 
 #-------------------------------------------------------------------------------
 # LIBRARIES EXTEND
@@ -18,14 +18,19 @@ libraries-extend:
   #FEAT
   toolbar/toolbar:
     - elevenfeat/feat.toolbar
+
   contextual/drupal.contextual-links:
     - elevenfeat/feat.contextual
+
   outside_in/drupal.outside_in:
     - elevenfeat/feat.outside_in
+
   block_place/drupal.block_place:
     - elevenfeat/feat.placeblock
+
   block_place/drupal.block_place.icons:
     - elevenfeat/feat.placeblock
+
   quickedit/quickedit:
   - elevenfeat/feat.quickedit
   # core/jquery.ui:
@@ -110,12 +115,6 @@ libraries-override:
   #   css:
   #     component:
   #       assets/vendor/jquery.ui/themes/base/button.css: false
-
-  # modernizr custom build
-  # https://modernizr.com/download/?cssmask-details-inputtypes-touchevents-addtest-prefixes-setclasses-teststyles&q=mask
-  core/modernizr:
-    js:
-      assets/vendor/modernizr/modernizr.min.js: js/modernizr-custom.js
 
 
   node/drupal.node.preview:
