@@ -78,10 +78,13 @@ ul.toolbar-menu {
   content: "";
   transition: 0.2s ease-in;
 
-          mask: var(--icon-coffee) no-repeat;
-  -webkit-mask: var(--icon-coffee) no-repeat;
-  -webkit-mask-size: contain;
-          mask-size: contain;
+          mask: var(--icon-coffee);
+  -webkit-mask: var(--icon-coffee);
+          -webkit-mask-size: contain !important;
+                  mask-size: contain !important;
+          -webkit-mask-repeat: no-repeat;
+                  mask-repeat: no-repeat;
+
 }
 
 #toolbar-bar .toolbar-menu--lvl2 a:before{

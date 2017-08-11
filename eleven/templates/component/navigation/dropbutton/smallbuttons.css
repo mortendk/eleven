@@ -132,6 +132,11 @@ a.smallbtn--devel:before{
 a.smallbtn--flush:before{
   -webkit-mask-image: url(icons/refresh.svg);
           mask-image: url(icons/refresh.svg);
+}
+
+a.smallbtn--revert:before{
+  -webkit-mask-image: url(icons/history.svg);
+          mask-image: url(icons/history.svg);
 
 }
 
