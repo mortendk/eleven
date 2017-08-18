@@ -11,6 +11,7 @@ Manual
 ###Drush
 ```
 drush dl eleven
+drush en eleven
 drush config-set system.theme admin eleven
 ```
 
