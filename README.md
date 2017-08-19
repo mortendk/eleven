@@ -28,6 +28,11 @@ Go to the apparence page in your drupal site `/admin/appearance`
 
 Afterwards enable modules as usual.
 
+### Uninstall
+```
+drush pm-uninstall eleven elevenfeat -y
+```
+
 ## Demo
 
 Visit [Eleven Theme](http://eleventheme.com/) for the demo and screenshots.
