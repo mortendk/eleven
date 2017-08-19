@@ -11,8 +11,8 @@ Manual
 ###Drush
 ```
 drush dl eleven
-drush en eleven
-drush config-set system.theme admin eleven
+drush en eleven -y
+drush config-set system.theme admin eleven -y
 ```
 
 ###Composer
