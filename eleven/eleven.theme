@@ -8,7 +8,6 @@ function eleven_preprocess(&$variables){
   $variables['themepath'] = drupal_get_path('theme','eleven');
 }
 
-
 function eleven_preprocess_html(&$variables){
  $variables['path'] = \Drupal::service('path.current')->getPath();
  $variables['systempath'] = explode('/', \Drupal::service('path.current')->getPath());
@@ -124,13 +123,15 @@ function eleven_theme_suggestions_table_alter(array &$suggestions, array $variab
     }
   }
 
+  if(! isset( $path[7])) {
 
-  if(isset( $path[6])) {
-    if($path[4] == "manage" AND $path[6] =="fields") {
-      $suggestions[] ='table__layout__fields';
-    }
-    if($path[4] == "manage" AND $path[6] =="translate") {
-      $suggestions[] ='table__layout__translate';
+    if(isset( $path[6])) {
+      if($path[4] == "manage" AND $path[6] =="fields") {
+        $suggestions[] ='table__layout__fields';
+      }
+      if($path[4] == "manage" AND $path[6] =="translate") {
+        $suggestions[] ='table__layout__translate';
+      }
     }
   }
 
@@ -140,6 +141,7 @@ function eleven_theme_suggestions_table_alter(array &$suggestions, array $variab
       $suggestions[] ='table__layout__fields';
     }
   }
+
 
   //protip dont have - in a twig filename its not gonna be picked up
   $suggestions = str_replace('-', '',$suggestions);
