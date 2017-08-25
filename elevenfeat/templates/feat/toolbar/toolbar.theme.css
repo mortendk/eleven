@@ -421,8 +421,8 @@ level 1 : horizontal
   background-image: var(--button-strawberry-active);
 }
 #toolbar-bar .toolbar-menu .logout a:before {
-  -webkit-mask-image: var(--icon-logout);
-          mask-image: var(--icon-logout);
+  -webkit-mask-image: url(icons/sign-out.svg);
+          mask-image: url(icons/sign-out.svg);
 }
 
 /*------------------------------------------------------------------------------
