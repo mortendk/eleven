@@ -1,10 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="28px" height="26px" viewBox="0 0 28 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
-    <title>layout-2colwide</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M2.98571716,23.571457 C2.53794865,23.571457 2.14286,23.32034 2.14286,23.035742 L2.14286,4.285719 L19,4.285719 L19,23.571457 L2.98571716,23.571457 Z M25.714316,23.035742 C25.714316,23.32034 25.6038244,23.571457 25.4786002,23.571457 L21,23.571457 L21,4.285719 L25.714316,4.285719 L25.714316,23.035742 Z M27.857176,2.678575 C27.857176,1.205359 26.651817,0 25.178601,0 L2.678575,0 C1.205359,0 0,1.205359 0,2.678575 L0,23.035742 C0,24.508958 1.205359,25.714316 2.678575,25.714316 L25.178601,25.714316 C26.651817,25.714316 27.857176,24.508958 27.857176,23.035742 L27.857176,2.678575 Z" id="layout-2colwide" fill="#000000" fill-rule="nonzero"></path>
-    </g>
-</svg>
+<svg width="28" height="26" viewBox="0 0 28 26" xmlns="http://www.w3.org/2000/svg"><title>layout-2colwide</title><path d="M2.986 23.571c-.448 0-.843-.25-.843-.535V4.286H19V23.57H2.986zm22.728-.535c0 .284-.11.535-.235.535H21V4.286h4.714v18.75zm2.143-20.357A2.686 2.686 0 0 0 25.18 0h-22.5A2.686 2.686 0 0 0 0 2.679v20.357a2.686 2.686 0 0 0 2.679 2.678h22.5a2.686 2.686 0 0 0 2.678-2.678V2.679z" fill="#000" fill-rule="nonzero"/></svg>

@@ -1,15 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="22px" height="21px" viewBox="0 0 22 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
-    <title>layout-4</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="layout-4" fill="#000000">
-            <rect id="Rectangle-Copy-6" x="0" y="0" width="2" height="21"></rect>
-            <rect id="Rectangle-Copy-7" x="20" y="0" width="2" height="21"></rect>
-            <rect id="Rectangle-Copy-8" x="6.66666667" y="0" width="2" height="21"></rect>
-            <rect id="Rectangle-Copy-10" x="13.3333333" y="0" width="2" height="21"></rect>
-        </g>
-    </g>
-</svg>
+<svg width="22" height="21" viewBox="0 0 22 21" xmlns="http://www.w3.org/2000/svg"><title>layout-4</title><g fill="#000" fill-rule="evenodd"><path d="M0 0h2v21H0zM20 0h2v21h-2zM6.667 0h2v21h-2zM13.333 0h2v21h-2z"/></g></svg>
