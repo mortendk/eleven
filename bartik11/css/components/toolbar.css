@@ -1,0 +1,8 @@
+/**
+ * @file
+ * Toolbar module overrides for bartik11.
+ */
+
+.toolbar a {
+  border-bottom: none;
+}
