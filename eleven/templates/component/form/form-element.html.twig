@@ -54,7 +54,7 @@
 
   {# description before #}
   {% if description.content %}
-    <div{{ description.attributes.addclass(description_classes).removeAttribute('id') }}>
+    <div{{ description.attributes.addclass(description_classes) }}>
       {{ description.content }}
     </div>
   {% endif %}
