@@ -1,14 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="15px" height="25px" viewBox="0 0 15 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
-    <title>nav-left</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Admin-Navigation" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="admin-menu" transform="translate(-679.000000, -1126.000000)" fill="#666F87">
-            <g id="admin-menu-left" transform="translate(-1.000000, 916.000000)">
-                <polygon id="nav-left" points="694.83 231.67 685.66 222.5 694.83 213.33 692 210.5 680 222.5 692 234.5"></polygon>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg width="15" height="25" viewBox="0 0 15 25" xmlns="http://www.w3.org/2000/svg"><title>nav-left</title><path d="M14.83 21.67L5.66 12.5l9.17-9.17L12 .5l-12 12 12 12z" fill="#666F87" fill-rule="evenodd"/></svg>
