@@ -1,0 +1,93 @@
+<?php
+
+/**
+ * @file
+ * Provides hooks for elevenformsuggestions module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Element;
+
+function elevenformsuggestions_theme_suggestions_input(array $variables) {
+  $suggestions = [];
+  if (isset($variables['element']['#form_id'])) {
+    $suggestions = ['input__' . $variables['element']['#type'] . '__form_id__'. $variables['element']['#form_id']];
+  }
+  return $suggestions;
+}
+
+/**
+ * Implements hook_theme_suggestions_form_element().
+ */
+function elevenformsuggestions_theme_suggestions_form_element(array $variables) {
+  $suggestions = ['form_element__type__' . $variables['element']['#type']];
+  if (isset($variables['element']['#form_id'])) {
+    $suggestions[] = 'form_element__form_id__' . $variables['element']['#form_id'];
+    $suggestions[] = 'form_element__form_id__' . $variables['element']['#form_id'] . '__' . $variables['element']['#type'];
+  }
+
+  return $suggestions;
+}
+
+/**
+ * Implements hook_theme_suggestions_form_element_label().
+ */
+function elevenformsuggestions_theme_suggestions_form_element_label(array $variables) {
+  $suggestions = [];
+  if (isset($variables['element']['#form_element_type'])) {
+    $suggestions[] = 'form_element_label__type__' . $variables['element']['#form_element_type'];
+  }
+  if (isset($variables['element']['#form_id'])) {
+    $suggestions[] = 'form_element_label__form-id__' . $variables['element']['#form_id'];
+    $suggestions[] = 'form_element_label__type__' . $variables['element']['#form_element_type'] .'__form_id__' . $variables['element']['#form_id'];
+
+  }
+  if (isset($variables['element']['#form_element_type']) && isset($variables['element']['#form_id'])) {
+    $suggestions[] = 'form_element_label__' . $variables['element']['#form_id'] . '__' . $variables['element']['#form_element_type'];
+  }
+
+
+  return $suggestions;
+}
+
+/**
+ * Implements hook_preprocess_form_element().
+ */
+function elevenformsuggestions_preprocess_form_element(array &$variables) {
+  if (!isset($variables['label'])) {
+    return;
+  }
+
+  if (isset($variables['element']['#form_id'])) {
+    $variables['label']['#form_id'] = $variables['element']['#form_id'];
+  }
+  if (isset($variables['element']['#type'])) {
+    $variables['label']['#form_element_type'] = $variables['element']['#type'];
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function elevenformsuggestions_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  elevenformsuggestions_attach_form_id($form, $form_id);
+}
+
+/**
+ * Attaches form id to all form elements.
+ *
+ * @param $form
+ *   The form or form element which children should have form id attached.
+ * @param $form_id
+ *   The form id attached to form elements.
+ *
+ * @return array
+ */
+function elevenformsuggestions_attach_form_id(&$form, $form_id) {
+  foreach (Element::children($form) as $child) {
+    if (!isset($form[$child]['#form_id'])) {
+      $form[$child]['#form_id'] = $form_id;
+    }
+    elevenformsuggestions_attach_form_id($form[$child], $form_id);
+  }
+}
