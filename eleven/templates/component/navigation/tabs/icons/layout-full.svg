@@ -1,10 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="28px" height="26px" viewBox="0 0 28 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
-    <title>layout-full</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M3.33571722,23.571457 C2.70201092,23.571457 2.14286,23.32034 2.14286,23.035742 L2.14286,4.285719 L26,4.285719 L26,23.571457 L3.33571722,23.571457 Z M27.857176,2.678575 C27.857176,1.205359 26.651817,0 25.178601,0 L2.678575,0 C1.205359,0 0,1.205359 0,2.678575 L0,23.035742 C0,24.508958 1.205359,25.714316 2.678575,25.714316 L25.178601,25.714316 C26.651817,25.714316 27.857176,24.508958 27.857176,23.035742 L27.857176,2.678575 Z" id="layout-full" fill="#000000" fill-rule="nonzero"></path>
-    </g>
-</svg>
+<svg width="28" height="26" viewBox="0 0 28 26" xmlns="http://www.w3.org/2000/svg"><title>layout-full</title><path d="M3.336 23.571c-.634 0-1.193-.25-1.193-.535V4.286H26V23.57H3.336zM27.857 2.68A2.686 2.686 0 0 0 25.18 0h-22.5A2.686 2.686 0 0 0 0 2.679v20.357a2.686 2.686 0 0 0 2.679 2.678h22.5a2.686 2.686 0 0 0 2.678-2.678V2.679z" fill="#000" fill-rule="nonzero"/></svg>

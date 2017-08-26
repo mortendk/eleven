@@ -1,10 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
-    <title>log</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M0,12.6662036 L0,16 L3.33379636,16 L13.1707182,6.16307821 L9.83692179,2.82928184 L0,12.6662036 L0,12.6662036 Z M15.7399639,3.59383248 C16.0866787,3.24711766 16.0866787,2.6825948 15.7399639,2.33587998 L13.66412,0.260036116 C13.3174052,-0.0866787054 12.7528823,-0.0866787054 12.4061675,0.260036116 L10.7792749,1.88692874 L14.1130713,5.2207251 L15.7399639,3.59383248 L15.7399639,3.59383248 Z" id="log" fill="#E899E2"></path>
-    </g>
-</svg>
+<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><title>log</title><path d="M0 12.666V16h3.334l9.837-9.837L9.837 2.83 0 12.666zm15.74-9.072a.89.89 0 0 0 0-1.258L13.664.26a.89.89 0 0 0-1.258 0L10.78 1.887l3.334 3.334 1.627-1.627z" fill="#E899E2" fill-rule="evenodd"/></svg>

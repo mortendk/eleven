@@ -5,6 +5,10 @@
   height: 16rem;
 }
 
+td.icon::before{
+  display: none
+}
+
 /*---------------------------------------------------------------------------*/
 /*
 idea: rethink the way the select boxes are shown
@@ -80,7 +84,7 @@ would it make more sense to have em horizonal shown instead ?
 /* -- table log icons  -------------------------------------------------------*/
 .admin-dblog .icon {
   position: relative;
-  top: 0.5rem;
+  top: 1rem;
   left: 0.5rem;
   display: block;
   width: 1rem;
@@ -189,9 +193,9 @@ tr.dblog-warning td,
 .dblog-warning,
 .dblog-warning a,
 .dblog-warning a:hover {
-  background-color: var(--pumpkin-light);
+  color: var(--pumpkin);
   border-color: var(--pumpkin);
-  color: var(--white);
+  /*color: var(--white);*/
 }
 tr.dblog-warning:hover td,
 tr.dblog-warning:hover td a{
@@ -200,7 +204,7 @@ tr.dblog-warning:hover td a{
   color: var(--yellowsnow);
 }
 .dblog-warning .icon {
-  background-color: var(--pumpkin);
+  background-color: var(--pumpkin-light);
 
           mask-image: url(icons/warning.svg);
   -webkit-mask-image: url(icons/warning.svg);

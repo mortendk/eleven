@@ -1,5 +1,14 @@
 /* ui dialog components */
-
+.ui-corner-all{
+  border-radius: 0;
+  border-left: 1px solid var(--asphalt-light);
+  border-top: 0 solid;
+  border-right: 0 solid;
+}
+/*remove all ui icons */
+.ui-icon {
+  display: none;
+}
 /* -----------------------------------------------------------------------------
 ui dialog Titlebar
 ------------------------------------------------------------------------------*/

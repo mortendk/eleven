@@ -1,0 +1,5 @@
+# Schema for the configuration files of the bartik11 theme.
+
+bartik11.settings:
+  type: theme_settings
+  label: 'bartik11 settings'

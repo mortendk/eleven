@@ -24,7 +24,7 @@ media tables layout
   {# lets taste if we have a label  #}
   {% if row.cells.label %}
 
-  <article {{ row.attributes.addClass('w','card').setAttribute('aria-label', row.cells.label.content) }}> }}>
+  <article {{ row.attributes.addClass('w','card').setAttribute('aria-label', row.cells.label.content) }}>
 
     <h3 class="card__title card__title--icon card__title--icon-admin-structure-display-modes">
       <a href="/{{ row.cells.operations.content['#links'].edit.url.getInternalPath() }}">
