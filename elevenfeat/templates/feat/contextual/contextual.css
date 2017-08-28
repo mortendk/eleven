@@ -207,6 +207,9 @@ contextual links icon colors
 /* -----------------------------------------------------------------------------
 Contextual links icons
 ----------------------------------------------------------------------------- */
+
+
+
 /* block config */
 .contextual .contextual-links .block-configure a:before {
   -webkit-mask: url(icons/gears.svg);
@@ -218,12 +221,18 @@ Contextual links icons
 .contextual .contextual-links .quickedit a {
   color: var(--rasberry);
 }
-.contextual .contextual-links .outside-inblock-configure a:before,
-.contextual .contextual-links .quickedit a:before {
+.contextual .contextual-links .outside-inblock-configure a:before{
   background-color: var(--rasberry-light);
 
   -webkit-mask: url(icons/flash.svg) no-repeat;
           mask: url(icons/flash.svg) no-repeat;
+}
+
+.contextual .contextual-links .quickedit{
+  color: var(--grass);
+}
+.contextual .contextual-links .quickedit a:before {
+  background-color: var(--grass-light);
 }
 
 /* translate */

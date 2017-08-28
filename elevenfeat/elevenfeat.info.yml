@@ -1,10 +1,10 @@
-name: elevenfeat
+name: eleven Front End Amin Tools
 type: theme
 description: 'eleven FEAT - Seperation of the FrontEnd Admin Tools for the Eleven theme'
 base theme: classy
 core: '8.x'
 
-hidden: TRUE
+# hidden: TRUE
 
 # -- Libraries -----------------------------------------------------------------
 libraries:

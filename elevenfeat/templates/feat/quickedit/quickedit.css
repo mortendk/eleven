@@ -19,7 +19,7 @@ contenteditable="true">title agian ?</span>
 
 /*The active element */
 .quickedit-editable.quickedit-highlighted {
-  background-color: var(--white);
+  background-color: var(--rasberry);
   border: 1px solid var(--ashalt);;
 }
 

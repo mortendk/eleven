@@ -8,11 +8,17 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Render\Element;
 
 function elevenformsuggestions_theme_suggestions_input(array $variables) {
+
   $suggestions = [];
+
   if (isset($variables['element']['#form_id'])) {
-    $suggestions = ['input__' . $variables['element']['#type'] . '__form_id__'. $variables['element']['#form_id']];
+    $suggestions[] = 'input__form_id__'. $variables['element']['#form_id'];
+    $suggestions[] = 'input__' . $variables['element']['#type'] . '__form_id__'. $variables['element']['#form_id'];
   }
   return $suggestions;
+
+  kint($suggestions);
+
 }
 
 
@@ -20,6 +26,7 @@ function elevenformsuggestions_theme_suggestions_input(array $variables) {
  * Implements hook_preprocess_form_element().
  */
 function elevenformsuggestions_preprocess_form_element(array &$variables) {
+
   if (!isset($variables['label'])) {
     return;
   }
@@ -30,6 +37,7 @@ function elevenformsuggestions_preprocess_form_element(array &$variables) {
   if (isset($variables['element']['#type'])) {
     $variables['label']['#form_element_type'] = $variables['element']['#type'];
   }
+
 }
 
 /**
@@ -50,12 +58,8 @@ function elevenformsuggestions_theme_suggestions_form_element(array $variables) 
  */
 function elevenformsuggestions_theme_suggestions_form_element_label(array $variables) {
   $suggestions = [];
-  // if (isset($variables['element']['#form_element_type'])) {
-  //   $suggestions[] = 'form_element_label__type__' . $variables['element']['#form_element_type'];
-  // }
   if (isset($variables['element']['#form_id'])) {
     $suggestions[] = 'form_element_label__form-id__' . $variables['element']['#form_id'];
-    // $suggestions[] = 'form_element_label__type__' . $variables['element']['#form_element_type'] .'__form_id__' . $variables['element']['#form_id'];
   }
   if (isset($variables['element']['#form_element_type']) && isset($variables['element']['#form_id'])) {
     $suggestions[] = 'form_element_label__' . $variables['element']['#form_id'] . '__' . $variables['element']['#form_element_type'];
@@ -63,6 +67,18 @@ function elevenformsuggestions_theme_suggestions_form_element_label(array $varia
 
   return $suggestions;
 }
+
+
+function elevenformsuggestions_theme_suggestions_form(array $variables) {
+  $suggestions = [];
+
+  if (isset($variables['element']['#form_id'])) {
+    $suggestions[] = 'form__form-id__' . $variables['element']['#form_id'];
+  }
+
+  return $suggestions;
+}
+
 
 /**
  * Implements hook_theme_suggestions_details().
@@ -76,6 +92,75 @@ function elevenformsuggestions_theme_suggestions_details(array $variables) {
 
   return $suggestions;
 }
+
+/**
+ * Implements hook_theme_suggestions_select().
+ */
+function elevenformsuggestions_theme_suggestions_select(array $variables) {
+  $suggestions = [];
+
+  if (isset($variables['element']['#form_id'])) {
+    $suggestions[] = 'select__form-id__' . $variables['element']['#form_id'];
+  }
+
+  return $suggestions;
+}
+
+/**
+ * Implements hook_theme_suggestions_select().
+ */
+function elevenformsuggestions_theme_suggestions_fieldset(array $variables) {
+  $suggestions = [];
+
+  if (isset($variables['element']['#form_id'])) {
+    $suggestions[] = 'fieldset__form-id__' . $variables['element']['#form_id'];
+  }
+
+  return $suggestions;
+}
+
+function elevenformsuggestions_theme_suggestions_checkboxes(array $variables) {
+  $suggestions = [];
+
+  if (isset($variables['element']['#form_id'])) {
+    $suggestions[] = 'checkboxes__form-id__' . $variables['element']['#form_id'];
+  }
+
+  return $suggestions;
+}
+
+
+function elevenformsuggestions_theme_suggestions_radios(array $variables) {
+  $suggestions = [];
+
+  if (isset($variables['element']['#form_id'])) {
+    $suggestions[] = 'radios__form-id__' . $variables['element']['#form_id'];
+  }
+
+  return $suggestions;
+}
+
+function elevenformsuggestions_theme_suggestions_textarea(array $variables) {
+  $suggestions = [];
+
+  if (isset($variables['element']['#form_id'])) {
+    $suggestions[] = 'textarea__form-id__' . $variables['element']['#form_id'];
+  }
+
+  return $suggestions;
+}
+
+function elevenformsuggestions_theme_suggestions_vertical_tabs(array $variables) {
+  $suggestions = [];
+
+  if (isset($variables['element']['#form_id'])) {
+    $suggestions[] = 'vertical_tabs__form-id__' . $variables['element']['#form_id'];
+  }
+
+  return $suggestions;
+}
+
+
 
 /**
  * Implements hook_form_alter().
