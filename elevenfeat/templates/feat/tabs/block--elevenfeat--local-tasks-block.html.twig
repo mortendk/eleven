@@ -1,0 +1,25 @@
+{# remove the id from blocks #}
+
+{%
+  set classes = [
+    'elevenfeattabs',
+  ]
+%}
+
+<div{{ attributes.addClass(classes).removeAttribute('id') }}>
+
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes.addClass('block-title') }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% block content %}
+
+  <nav class="tabs" role="navigation" aria-label="{{ 'Tabs'|t }}">
+    {{ content }}
+  </nav>
+
+  {% endblock %}
+
+</div>

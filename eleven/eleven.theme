@@ -60,6 +60,32 @@ function eleven_preprocess_admin_page(&$variables) {
   $variables['section_title'] = $title;
 }
 
+//------------------------------------------------------------------------------
+// tabs
+// block templates
+function eleven_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+
+  $id = $variables['elements']['#plugin_id'];
+
+  if( $id ="local_tasks_block"){
+    $suggestions[] = 'block__eleven__' . $id;
+  }
+
+}
+
+function eleven_theme_suggestions_menu_local_tasks_alter(array &$suggestions, array $variables) {
+
+  $suggestions[] = 'menu_local_tasks__eleven';
+
+}
+
+function eleven_theme_suggestions_menu_local_task_alter(array &$suggestions, array $variables) {
+
+  $suggestions[] = 'menu_local_task__eleven';
+
+}
+
+
 
 
 // ----------------------------------------------------------------------------
@@ -233,8 +259,6 @@ function eleven_theme_suggestions_item_list_alter(array &$suggestions, array $va
   }
 
 }
-
-
 
 // -----------------------------------------------------------------------------
 // Form
