@@ -1,5 +1,3 @@
-
-
 /* Quickedit toolbar */
 .quickedit-toolbar{
   background-color: var(--black);
@@ -21,6 +19,8 @@
   padding: 0.5rem 0
 }
 .quickedit-toolbar-label .field{
+  /*why is the field even of anything we want to knoe about ??*/
+  display: none;
   background-color: var(--asphalt);
   font-weight: bold;
   padding: 0.5rem;
