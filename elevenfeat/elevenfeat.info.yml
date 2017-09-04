@@ -40,6 +40,8 @@ libraries-extend:
   ckeditor/drupal.ckeditor:
   - elevenfeat/form.ckeditor
 
+
+
 #-------------------------------------------------------------------------------
 # LIBRARIES OVERRIDE
 # Remove css files, use libraries-extend to add in new libs with elevens css files
@@ -103,6 +105,11 @@ libraries-override:
     css:
       theme:
         css/block-place.icons.theme.css: false
+
+  panels/panels_ipe:
+    css:
+      component:
+        css/panels_ipe.css: templates/feat/panels/panels_ipe.css
 
   # jquery ui
   # look at #/core/core.libraries.yml for more libs
