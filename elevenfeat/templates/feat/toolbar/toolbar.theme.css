@@ -504,7 +504,11 @@ Vertical
           mask-image: url(icons/angle-down.svg);
 }
 #toolbar-bar .toolbar-icon.toolbar-handle:hover:before {
-  transform: scale(1) translateY(0.5rem) ;
+  transform: scale(1) translateY(0.3rem) translateX(0.2rem);
+
+  -webkit-mask-size: 0.5rem;
+          mask-size: 0.5rem;
+
 }
 #toolbar-bar .toolbar-icon.toolbar-handle.open:before {
   -webkit-mask-image: url(icons/angle-up.svg);
@@ -523,8 +527,6 @@ Vertical
   background-color: var(--asphalt);
   transform: scale(1) translateY(0.3rem) translateX(0.2rem);
 
-  -webkit-mask-image: var(--icon-down-small);
-          mask-image: var(--icon-down-small);
   -webkit-mask-size: 0.5rem;
           mask-size: 0.5rem;
 }
