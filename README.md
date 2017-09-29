@@ -29,18 +29,23 @@ composer config repositories.eleven vcs https://github.com/thememachine/eleven
 composer require thememachine/eleven
 ```
 
-###Manually
+### Manually
 Download latest release from  [Drupal.org](https://www.drupal.org/project/eleven)
 Go to the apparence page in your drupal site `/admin/appearance` 
 
-
 Afterwards enable modules as usual.
 
-### Uninstall
+## Uninstall
+
+### drush 
 ```
 drush pm-uninstall eleven elevenfeat -y
 ```
 
+### Drupal Consule
+```
+drupal theme uninstall eleven
+````
 ## Demo
 
 Visit [Eleven Theme](http://eleventheme.com/) for the demo and screenshots.
