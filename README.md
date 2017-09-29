@@ -1,8 +1,10 @@
 # eleven: A Drupal 8 administration theme
 
-[![Join the chat at https://gitter.im/eleventheme/Lobby](https://badges.gitter.im/eleventheme/Lobby.svg)](https://gitter.im/eleventheme/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 > this one goes to 11 —mortendk
+
+## Slack 
+Find us at drupal.slack.com `#eleven`
+https://drupal.slack.com/messages/C78T43P34
 
 ## Installation
 Manual
