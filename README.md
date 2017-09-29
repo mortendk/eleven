@@ -10,14 +10,20 @@ https://drupal.slack.com/messages/C78T43P34
 Manual
 
 
-###Drush
+### Drush
 ```
 drush dl eleven
 drush en eleven -y
 drush config-set system.theme admin eleven -y
 ```
 
-###Composer
+### Drupal Console
+```
+drupal theme:install eleven
+drupal config:override system.theme admin eleven
+```
+
+### Composer
 ```
 composer config repositories.eleven vcs https://github.com/thememachine/eleven
 composer require thememachine/eleven
