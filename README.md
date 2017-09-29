@@ -2,6 +2,11 @@
 
 > this one goes to 11 —mortendk
 
+An Admin theme that is build to make Drupal Prettier to look at for content editors, sitebuilders & developers.
+
+#Demo
+
+
 ## Slack 
 Find us at drupal.slack.com `#eleven`
 https://drupal.slack.com/messages/C78T43P34
@@ -45,7 +50,11 @@ drush pm-uninstall eleven elevenfeat -y
 ### Drupal Consule
 ```
 drupal theme uninstall eleven
-````
+```
 ## Demo
 
 Visit [Eleven Theme](http://eleventheme.com/) for the demo and screenshots.
+
+
+## Keep in touch 
+https://twitter.com/hashtag/eleventheme?src=hash
