@@ -4,16 +4,14 @@
 
 An Admin theme that is build to make Drupal Prettier to look at for content editors, sitebuilders & developers.
 
-#Demo
-
-
 ## Slack 
 Find us at drupal.slack.com `#eleven`
 https://drupal.slack.com/messages/C78T43P34
 
 ## Installation
-Manual
 
+### Dependencies
+There is a dependency on the core help module
 
 ### Drush
 ```
