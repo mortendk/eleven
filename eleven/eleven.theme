@@ -67,7 +67,7 @@ function eleven_theme_suggestions_block_alter(array &$suggestions, array $variab
 
   $id = $variables['elements']['#plugin_id'];
 
-  if( $id ="local_tasks_block"){
+  if( $id == "local_tasks_block"){
     $suggestions[] = 'block__eleven__' . $id;
   }
 

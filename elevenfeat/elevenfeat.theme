@@ -4,7 +4,7 @@
 function elevenfeat_theme_suggestions_block_alter(array &$suggestions, array $variables) {
   $id = $variables['elements']['#plugin_id'];
 
-  if( $id ="local_tasks_block"){
+  if( $id == "local_tasks_block"){
     $suggestions[] = 'block__elevenfeat__' . $id;
   }
 }
