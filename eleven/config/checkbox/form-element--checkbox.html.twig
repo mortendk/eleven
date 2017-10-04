@@ -1,24 +1,17 @@
 {{ attach_library('eleven/form.form') }}
-
-{% if element['#title'].getUntranslatedString() %}
-  {% set element_name = element['#title'].getUntranslatedString()|clean_class %}
-{% else %}
-  {% set element_name = element['#title']|clean_class %}
-{% endif %}
-
 {%
   set classes = [
     'form-item',
     'form-item--' ~ type|clean_class ,
-    element['#type'] == 'select' ? 'form-item--inline' ,
-    element['#multiple'] ? 'form-item--select-multiple'  ,
-    errors ? 'form-item--error',
+    'form-item--name-' ~ name|clean_class ,
     disabled == 'disabled' ? 'form-item--disabled',
+    errors ? 'form-item--error',
     'js-form-item',
     'js-form-type-' ~ type|clean_class,
     'js-form-item-' ~ name|clean_class,
   ]
 %}
+
 {%
   set description_classes = [
     'form-item__description',
@@ -26,17 +19,7 @@
   ]
 %}
 
-{# {{ element_name }}  #}
-
 <div{{ attributes.addClass(classes).removeAttribute('id') }}>
-
-  {% block formItemIcon %}
-  {% endblock %}
-
-  {# label before/invisble #}
-  {% if label_display in ['before', 'invisible'] %}
-    {{ label }}
-  {% endif %}
 
   {# prefix #}
   {% if prefix is not empty %}
@@ -44,17 +27,32 @@
   {% endif %}
 
   {# children = the content of a field. #}
-  {% if type == "item" %}
-    <div class="form-item__value">
-      {{ children }}
-    </div>
-  {% else %}
-    {{ children }}
-  {% endif %}
 
-  {# description before #}
+  {# -- checkbox--slide / checkbox--check --------------------------------------#}
+  <div class="checkbox-style-check">
+
+    {# checkbox #}
+    {{ children }}
+
+    {#
+      If a checkbox is printed out witout a label the checkbox--slide/check wont
+      work - so we test on the labels title and if its not there we create a label
+      this is used for the module pages admin/modules
+     #}
+
+    {# form-element-label.html.twig #}
+    {% if label['#title'] %}
+      {{ label }}
+    {% else %}
+      <label for="{{ label['#id']}}">
+        <span class="form-item__icon"></span>
+      </label>
+    {% endif %}
+
+  </div>
+
   {% if description.content %}
-    <div{{ description.attributes.addclass(description_classes) }}>
+    <div{{ description.attributes.addClass(description_classes) }}>
       {{ description.content }}
     </div>
   {% endif %}
@@ -62,11 +60,6 @@
   {# suffix #}
   {% if suffix is not empty %}
     <span class="form-item__suffix">{{ suffix }}</span>
-  {% endif %}
-
-  {# label after #}
-  {% if label_display == 'after' %}
-    {{ label }}
   {% endif %}
 
   {# errors #}

@@ -1,14 +1,14 @@
 /* debug */
-/*.contextual .contextual-links[hidden] {
+.contextual .contextual-links[hidden] {
   display: block !important;
-}*/
+}
 
 .contextual {
   position: absolute;
   z-index: 500;
   top: 8px;
   right: 8px; /* LTR */
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .contextual.open {
   z-index: 600;
@@ -20,7 +20,7 @@
 
 /* region */
 .contextual-region {
-  transition: background-color 1s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
 }
 .contextual-region.focus {
   /*min-height: 32px;*/
@@ -105,7 +105,7 @@
   font-size: 16px;
   line-height: 32px;
   text-decoration: none;
-  transition: all 1s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .contextual .contextual-links a,

@@ -1,12 +1,30 @@
+/*
+Lets start by resetting what can come out from the frontend theme
+*/
+.quickedit-form .form-item,
+.quickedit-form .form-actions {
+  margin:0;
+  padding: 0
+}
+.quickedit-form .label,
+.quickedit-form .form-item label,
+.quickedit-form .form-type-textfield label {
+  padding: 0
+}
 
 /*
 Quickedit
-
-<span
-class="
-quickedit-field quickedit-candidate quickedit-editable quickedit-highlighted quickedit-editing"
-contenteditable="true">title agian ?</span>
 */
+
+.quickedit-form {
+  background-color: var(--white-90);
+  width: 100%;
+  padding: 0.5rem;
+  color: var(--gravel-light);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  border: 1px solid var(--asphalt);
+}
 
 /*this field can be edited*/
 .quickedit-field {}
@@ -17,11 +35,6 @@ contenteditable="true">title agian ?</span>
   border-bottom: 1px solid var(--bluesky-light);
 }
 
-/*The active element */
-.quickedit-editable.quickedit-highlighted {
-  background-color: var(--rasberry);
-  border: 1px solid var(--ashalt);;
-}
 
 /*This is the  active element */
 [contenteditable="true"],
@@ -36,24 +49,20 @@ contenteditable="true">title agian ?</span>
 
 /* indicator of the elements that we can quick edit*/
 .quickedit-field {
-
-
-  /*background: linear-gradient(white, white) padding-box,
-  repeating-linear-gradient(-45deg, black 0, black 25%, white 0, white 50%) 0 / 0.5rem 0.5rem;
-  animation: thisIsHowYouGetAnts 50s linear infinite;
-*/
-
-
-
+  border: 1px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+  repeating-linear-gradient(-45deg, #333 0, #333 25%, white 0, white 50%) 0 / 0.5rem 0.5rem;
 }
-
-.quickedit-candidate {
-  /*border: 1px solid transparent;
+.quickedit-field:hover{
+  animation: thisIsHowYouGetAnts 50s linear infinite;
+}
+/*.quickedit-candidate {
+  border: 1px solid transparent;
   background: linear-gradient(white, white) padding-box,
   repeating-linear-gradient(-45deg, black 0, black 25%, white 0, white 50%) 0 / 0.5rem 0.5rem;
-  animation: thisIsHowYouGetAnts 50s linear infinite;*/
+  animation: thisIsHowYouGetAnts 50s linear infinite;
 
-}
+}*/
 @keyframes thisIsHowYouGetAnts {
   to {
     background-position: 100%;

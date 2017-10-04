@@ -20,36 +20,41 @@ global:
 feat.toolbar:
   css:
     theme:
-      templates/feat/toolbar/toolbar.css: {}
-      templates/feat/toolbar/toolbar.theme.css: {}
-      templates/feat/toolbar/toolbar.icons.css: {}
-      # templates/feat/toolbar/toolbar_edit.css: {}
+      templates/toolbar/toolbar.css: {}
+      templates/toolbar/toolbar.theme.css: {}
+      templates/toolbar/toolbar.icons.css: {}
+      # templates/toolbar/toolbar_edit.css: {}
 feat.contextual:
   css:
     theme:
-      templates/feat/contextual/contextual.css: {}
+      templates/contextual/contextual.css: {}
 
 feat.placeblock:
   css:
     theme:
-      templates/feat/block_place/block_place.css: {}
+      templates/block_place/block_place.css: {}
 
 feat.outside_in:
   css:
     theme:
-      templates/feat/outside_in/outside_in.css: {}
-      templates/feat/outside_in/offcanvas_container.css: {}
+      templates/outside_in/outside_in.css: {}
+      templates/outside_in/offcanvas_container.css: {}
 
 feat.quickedit:
   css:
+    module:
+      templates/quickedit/quickedit.module.css: {}
     theme:
-      templates/feat/quickedit/quickedit.css: {}
-      templates/feat/quickedit/quickedit-tool.css: {}
+      templates/quickedit/quickedit.css: {}
+      templates/quickedit/quickedit.toolbar.css: {}
+      # templates/quickedit/quickedit-toolbar.css: {}
+
+
 
 # feat.jquery_ui:
 #   css:
 #     theme:
-#       templates/feat/jquery_ui/jquery_ui.css: {}
+#       templates/jquery_ui/jquery_ui.css: {}
 
 # ------------------------------------------------------------------------------
 # Forms

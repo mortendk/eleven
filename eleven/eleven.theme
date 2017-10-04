@@ -2,21 +2,21 @@
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Render\Element;
 
-
 // ----------------------------------------------------------------------------
 // PREPROCESS
 // ----------------------------------------------------------------------------
 
-// we need this for including twig files & subthemes
+//Define a basic theme patch, which can be used all around the theme
 function eleven_preprocess(&$variables){
   $variables['themepath'] = drupal_get_path('theme','eleven');
 }
 
 function eleven_preprocess_html(&$variables){
  $variables['path'] = \Drupal::service('path.current')->getPath();
+
+ //used on html.html.twig
  $variables['systempath'] = explode('/', \Drupal::service('path.current')->getPath());
 }
-
 
 // ----------------------------------------------------------------------------
 // admin blocks wrappers for
@@ -25,8 +25,7 @@ function eleven_preprocess_html(&$variables){
 // admin/structure
 // ----------------------------------------------------------------------------
 function eleven_preprocess_admin_block_content(&$variables) {
-  // this is not pretty but lets taste on the path and grap the
-  // section of it so we can
+  // this is not pretty but lets taste on the path and graps the section of it so we can
   $variables['path'] = \Drupal::service('path.current')->getPath() ;
 
   $path = explode('/', \Drupal::service('path.current')->getPath());
@@ -52,7 +51,8 @@ function eleven_preprocess_admin_block_content(&$variables) {
 
 
 function eleven_preprocess_admin_page(&$variables) {
-  // we need a title for the section wrapper and aria-label
+
+  // Need a title for the section wrapper and aria-label
   $request = \Drupal::request();
   if ($route = $request->attributes->get(\Symfony\Cmf\Component\Routing\RouteObjectInterface::ROUTE_OBJECT)) {
     $title = \Drupal::service('title_resolver')->getTitle($request, $route);
@@ -287,10 +287,6 @@ function eleven_theme_suggestions_input_alter(array &$suggestions, array $variab
     $suggestions[] = 'input__submit__view_admin_ui';
   }
 }
-
-
-
-
 
 // Container
 /**

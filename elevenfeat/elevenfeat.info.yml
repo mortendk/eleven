@@ -79,6 +79,8 @@ libraries-override:
   # quickedit
   quickedit/quickedit:
     css:
+      component:
+        css/quickedit.module.css: false
       theme:
         css/quickedit.theme.css: false
         css/quickedit.icons.theme.css: false
@@ -106,10 +108,10 @@ libraries-override:
       theme:
         css/block-place.icons.theme.css: false
 
-  panels/panels_ipe:
-    css:
-      component:
-        css/panels_ipe.css: templates/feat/panels/panels_ipe.css
+  # panels/panels_ipe:
+  #   css:
+  #     component:
+  #       css/panels_ipe.css: templates/feat/panels/panels_ipe.css
 
   # jquery ui
   # look at #/core/core.libraries.yml for more libs
@@ -127,4 +129,4 @@ libraries-override:
   node/drupal.node.preview:
     css:
       theme:
-        css/node.preview.css: templates/feat/node-preview/nodepreview.css
+        css/node.preview.css: templates/node-preview/nodepreview.css

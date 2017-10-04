@@ -1,0 +1,73 @@
+.quickedit-toolbar-container {
+}
+.quickedit-toolbar-container[style] {
+  width: 5rem  !important;
+  min-width: 5rem  !important;
+  /*right: auto !important;*/
+  /*left: 10% !important*/
+}
+
+.quickedit-toolbar-content {
+  background-color: var(--black-80);
+  padding: 0.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  color: var(--white);
+}
+
+/* Save + Close */
+.quickedit-toolgroup {}
+
+
+/* Label name  hide that we dont need it */
+.quickedit-toolbar-label {
+  display: none;
+}
+.quickedit-toolbar-label .field { }
+
+
+/* -----------------------------------------------------------------------------
+Buttons
+ -----------------------------------------------------------------------------*/
+.quickedit-button{
+  border: none;
+  border-radius: 0;
+  height: 2rem;
+  text-shadow: none;
+  width: 1rem;
+  height: 1rem;
+  margin: 0.5rem;
+  border:none;
+  text-indent: -999rem;
+  transition: all 0.2s;
+  padding: 0;
+  background-image: none
+  -webkit-mask-size: contain;
+          mask-size: contain;
+
+}
+.quickedit-button:hover{
+  background-color: var(--asphalt);
+  cursor: pointer;
+  transform: scale(.8);
+}
+
+.quickedit-button.action-save{
+  background-color: var(--grass);
+          mask: url(icons/thumbs-up.svg) no-repeat;
+  -webkit-mask: url(icons/thumbs-up.svg) no-repeat;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+
+}
+
+.quickedit-button.action-cancel{
+  background-color: var(--gravel);
+          mask: url(icons/times.svg) no-repeat;
+  -webkit-mask: url(icons/times.svg) no-repeat;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+}
+.quickedit-button.action-cancel:before{
+  display: none
+}
