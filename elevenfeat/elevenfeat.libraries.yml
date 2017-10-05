@@ -42,7 +42,7 @@ feat.outside_in:
 
 feat.quickedit:
   css:
-    module:
+    component:
       templates/quickedit/quickedit.module.css: {}
     theme:
       templates/quickedit/quickedit.css: {}

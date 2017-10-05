@@ -10,21 +10,10 @@ original: core/modules/quickedit/css/quickedit.module.css
   position: relative;
   cursor: pointer;
 }
-
-/**
- * Highlighted (hovered) editable.
- */
 .quickedit-editable.quickedit-highlighted {
   z-index: 99;
 }
-.quickedit-validation-errors > .messages {
-}
-.quickedit-validation-errors > .messages > ul {
-}
 
-/**
- * In-place editors that don't use a popup.
- */
 .quickedit-validation-errors {
   z-index: 300;
   position: relative;
@@ -32,10 +21,6 @@ original: core/modules/quickedit/css/quickedit.module.css
 .quickedit-validation-errors .messages.error {
   position: absolute;
 }
-
-/**
- * Styling specific to the 'form' in-place editor.
- */
 
 #quickedit_backstage {
   display: none;
@@ -51,14 +36,8 @@ original: core/modules/quickedit/css/quickedit.module.css
 /**
  * Default form styling overrides.
  */
-.quickedit-form .form-wrapper .form-wrapper {
-  /*margin: inherit;*/
-}
 .quickedit-form .form-actions {
   display: none;
-}
-.quickedit-form input {
-  /*max-width: 100%;*/
 }
 
 /**

@@ -15,9 +15,8 @@ Lets start by resetting what can come out from the frontend theme
 /*
 Quickedit
 */
-
 .quickedit-form {
-  background-color: var(--white-90);
+  background-color: var(--black-80);
   width: 100%;
   padding: 0.5rem;
   color: var(--gravel-light);
@@ -26,10 +25,6 @@ Quickedit
   border: 1px solid var(--asphalt);
 }
 
-/*this field can be edited*/
-.quickedit-field {}
-
-/*.quickedit-candidate shows all the elements that can be edited*/
 .quickedit-candidate {
   background-color: var(--bluesky-light-20);
   border-bottom: 1px solid var(--bluesky-light);
@@ -49,46 +44,22 @@ Quickedit
 
 /* indicator of the elements that we can quick edit*/
 .quickedit-field {
-  border: 1px solid transparent;
-  background: linear-gradient(white, white) padding-box,
-  repeating-linear-gradient(-45deg, #333 0, #333 25%, white 0, white 50%) 0 / 0.5rem 0.5rem;
+  outline: 1px dashed var(--bluesky);
+  /*border: 1px solid transparent;*/
+  /*background: linear-gradient(white, white) padding-box,
+  repeating-linear-gradient(-45deg, red 0, Gainsboro 25%, Gainsboro 0, white 50%) 0 / 0.5rem 0.5rem;*/
 }
 .quickedit-field:hover{
-  animation: thisIsHowYouGetAnts 50s linear infinite;
+  /*animation: thisIsHowYouGetAnts 50s linear infinite;*/
+  background-color: var(--bluesky-light-light-light)
 }
-/*.quickedit-candidate {
-  border: 1px solid transparent;
-  background: linear-gradient(white, white) padding-box,
-  repeating-linear-gradient(-45deg, black 0, black 25%, white 0, white 50%) 0 / 0.5rem 0.5rem;
-  animation: thisIsHowYouGetAnts 50s linear infinite;
-
-}*/
-@keyframes thisIsHowYouGetAnts {
+/*@keyframes thisIsHowYouGetAnts {
   to {
     background-position: 100%;
   }
 }
-
-
-
-.quickedit-editable { }
-.quickedit-entity-active:focus a{ }
-a:hover .quickedit-editable{ }
-.quickedit-editing{ }
-
-
-.quickedit-editable:focus{
-}
-.quickedit-highlighted{
-}
-.quickedit-changed {
-}
-.quickedit-validation-error {
-
-}
-.quickedit-editing.quickedit-editor-is-popup {
-
-}
-.quickedit-form .form-item .error {
-
+*/
+.quickedit-highlighted {
+  color: var(--bluesky);
+  background-color: var(--bluesky-light)
 }
