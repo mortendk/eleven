@@ -22,9 +22,7 @@
 .contextual-region {
   transition: background-color 0.2s ease-in-out;
 }
-.contextual-region.focus {
-  /*min-height: 32px;*/
-}
+.contextual-region.focus { }
 
 /**
  * Contextual trigger.
@@ -121,7 +119,7 @@
 }
 
 .js-outside-in-edit-mode .contextual-region {
-  min-height: calc(2.5 * 16px);
+  min-height: 32px;
 }
 
 /* icons default  */
@@ -147,10 +145,24 @@
 colors
 ------------------------------------------------------------------------------*/
 /* color for the region */
-.contextual-region.focus {
-  outline: auto 1px var(--rasberry);
-  background-color: var(--bluesky-light-light);
+.contextual-region:before {
+  box-sizing: border-box;
+  position: absolute;
+  content: '';
+  top: 0;
+  left:0;
+  width: 0;
+  height: 0;
+  border: 1px dashed transparent;
 }
+
+.contextual-region.focus:before{
+  width: 100%;
+  height: 100%;
+  border: 1px dashed var(--bluesky-light);
+  transition: width 0.1s ease-in-out, height 0.1s ease-out 0.1s;
+}
+
 .js-outside-in-edit-mode .contextual-region{
   outline: 1px dotted var(--bluesky-light);
 }

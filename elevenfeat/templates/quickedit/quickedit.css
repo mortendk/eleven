@@ -27,7 +27,6 @@ Quickedit
 
 .quickedit-candidate {
   background-color: var(--bluesky-light-20);
-  border-bottom: 1px solid var(--bluesky-light);
 }
 
 
@@ -41,24 +40,26 @@ Quickedit
   background-color: var(--bluesky-light-50);
 }
 
+.quickedit-field:before {
+  box-sizing: border-box;
+  position: absolute;
+  content: '';
+  top: 0;
+  left:0;
+  width: 0;
+  height: 0;
+  border: 1px dashed transparent;
+}
+
 
 /* indicator of the elements that we can quick edit*/
-.quickedit-field {
-  outline: 1px dashed var(--bluesky);
-  /*border: 1px solid transparent;*/
-  /*background: linear-gradient(white, white) padding-box,
-  repeating-linear-gradient(-45deg, red 0, Gainsboro 25%, Gainsboro 0, white 50%) 0 / 0.5rem 0.5rem;*/
-}
 .quickedit-field:hover{
-  /*animation: thisIsHowYouGetAnts 50s linear infinite;*/
-  background-color: var(--bluesky-light-light-light)
+  width: 100%;
+  height: 100%;
+  border: 1px dashed var(--bluesky-light);
+  transition: width 0.1s ease-in-out, height 0.1s ease-out 0.1s;
 }
-/*@keyframes thisIsHowYouGetAnts {
-  to {
-    background-position: 100%;
-  }
-}
-*/
+
 .quickedit-highlighted {
   color: var(--bluesky);
   background-color: var(--bluesky-light)
