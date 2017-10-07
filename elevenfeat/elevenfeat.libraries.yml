@@ -17,6 +17,12 @@ global:
 # ------------------------------------------------------------------------------
 # Front End Admin Tools:
 # ------------------------------------------------------------------------------
+feat.themersbestfriend:
+  js:
+    templates/themersbestfriend/themersbestfriend.js: {}
+  css:
+    component:
+      templates/themersbestfriend/themersbestfriend.css: {}
 feat.toolbar:
   css:
     theme:

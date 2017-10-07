@@ -9,6 +9,7 @@ core: '8.x'
 # -- Libraries -----------------------------------------------------------------
 libraries:
   - elevenfeat/global
+  - elevenfeat/feat.themersbestfriend  
   # - elevenfeat/colorscheme
 
 #-------------------------------------------------------------------------------

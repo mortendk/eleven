@@ -25,9 +25,7 @@ Quickedit
   border: 1px solid var(--asphalt);
 }
 
-.quickedit-candidate {
-  background-color: var(--bluesky-light-20);
-}
+.quickedit-candidate { }
 
 
 /*This is the  active element */
@@ -37,7 +35,6 @@ Quickedit
   margin: 0 !important;
   padding: 0 !important;
   cursor:text;
-  background-color: var(--bluesky-light-50);
 }
 
 .quickedit-field:before {
@@ -50,17 +47,24 @@ Quickedit
   height: 0;
   border: 1px dashed transparent;
 }
-
-
-/* indicator of the elements that we can quick edit*/
-.quickedit-field:hover{
+.quickedit-field:before:hover{
   width: 100%;
   height: 100%;
   border: 1px dashed var(--bluesky-light);
   transition: width 0.1s ease-in-out, height 0.1s ease-out 0.1s;
 }
 
-.quickedit-highlighted {
-  color: var(--bluesky);
-  background-color: var(--bluesky-light)
+
+.quickedit-highlighted:before {
+  box-sizing: border-box;
+  position: absolute;
+  content: '';
+  top: 0;
+  left:0;
+  width: 0;
+  height: 0;
+  border: 1px dashed transparent;
+  width: 100%;
+  height: 100%;
+  border: 1px dashed var(--bluesky-light);
 }

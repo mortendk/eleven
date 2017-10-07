@@ -59,12 +59,6 @@ original: core/modules/quickedit/css/quickedit.module.css
   vertical-align: baseline;
   z-index: 100;
 }
-.quickedit-toolgroup.ops {
-  float: right; /* LTR */
-}
-[dir="rtl"] .quickedit-toolgroup.ops {
-  float: left;
-}
 .quickedit-toolbar-label {
   overflow: hidden;
 }

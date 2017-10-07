@@ -38,8 +38,6 @@ form.pagewidth { }
   cursor: pointer;
 }
 
-
-
 /* description */
 .description,
 .form-item__description {
@@ -54,4 +52,33 @@ form.pagewidth { }
 .container-inline div,
 .container-inline label {
   display: inline-block;
+}
+
+
+/*------------------------------------------------------------------------------
+
+confirmation card
+
+*/
+form.confirmation {
+  width: 40rem !important;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--gravel);
+  background-color: var(--white);
+  transition: all 0.5s ease-in-out;
+}
+
+form.confirmation  ul{
+  padding-bottom: 1rem;
+}
+form.confirmation li {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--asphalt)
+}
+form.confirmation #edit-actions {
+  padding: 2rem 0 1rem 0;
+  text-align: center
 }
