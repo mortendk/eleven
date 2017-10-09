@@ -3,6 +3,7 @@
 .cke_reset_all a,
 .cke_reset_all textarea {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+  font-size: 16px;
 }
 div.cke_chrome {
   border: none;
@@ -22,7 +23,6 @@ div.cke_chrome {
 .cke .cke_toolgroup {
   margin: 0;
   border-radius: 0;
-  /*background: var(--asphalt);*/
   background-image: none;
   box-shadow: none;
 }
@@ -70,10 +70,11 @@ div.cke_chrome {
 }
 
 .cke_button.cke_button_on {
-  background-color: transparent
+  background-color: transparent;
+  border: none;
 }
 
-/*Hover button*/
+/* Hover button*/
 .cke_button:hover:before {
   background-color: var(--asphalt-light);
   cursor: pointer;
@@ -96,6 +97,10 @@ button icons
   mask-image: url(icons/italic.svg);
   -webkit-mask-image: url(icons/italic.svg);
 }
+.cke_button__underline:before {
+  mask-image: url(icons/underline.svg);
+  -webkit-mask-image: url(icons/underline.svg);
+}
 .cke_button__strike:before {
   mask-image: url(icons/strikethrough.svg);
   -webkit-mask-image: url(icons/strikethrough.svg);
@@ -108,6 +113,33 @@ button icons
   mask-image: url(icons/subscript.svg);
   -webkit-mask-image: url(icons/subscript.svg);
 }
+
+.cke_button__outdent:before {
+  mask-image: url(icons/outdent.svg);
+  -webkit-mask-image: url(icons/outdent.svg);
+}
+.cke_button__indent:before {
+  mask-image: url(icons/indent.svg);
+  -webkit-mask-image: url(icons/indent.svg);
+}
+
+.cke_button__justifyleft:before {
+  mask-image: url(icons/align-left.svg);
+  -webkit-mask-image: url(icons/align-left.svg);
+}
+.cke_button__justifycenter:before {
+  mask-image: url(icons/align-center.svg);
+  -webkit-mask-image: url(icons/align-center.svg);
+}
+.cke_button__justifyright:before {
+  mask-image: url(icons/align-right.svg);
+  -webkit-mask-image: url(icons/align-right.svg);
+}
+.cke_button__justifyblock:before {
+  mask-image: url(icons/align-justify.svg);
+  -webkit-mask-image: url(icons/align-justify.svg);
+}
+
 .cke_button__removeformat:before {
   mask-image: url(icons/format_clear.svg);
   -webkit-mask-image: url(icons/format_clear.svg);
@@ -163,13 +195,15 @@ drop down
   border: 1px solid var(--asphalt);
   border-radius: 0;
   margin: 0 8px;
+  padding: 0;
+  background-color: var(--rasberry);
 }
 
-.cke .cke_combo_on  a.cke_combo_button,
-.cke .cke_combo_off a.cke_combo_button:hover,
-.cke .cke_combo_off a.cke_combo_button:focus,
-.cke .cke_combo_off a.cke_combo_button:active {
-  border: 1px solid var(--rasberry);
+div  .cke .cke_combo_on  a.cke_combo_button,
+div .cke .cke_combo_off a.cke_combo_button:hover,
+div  .cke .cke_combo_off a.cke_combo_button:focus,
+div .cke .cke_combo_off a.cke_combo_button:active {
+  border: 1px solid var(--asphalt-light);
   padding: 0;
   margin: 0 8px
 }
@@ -196,7 +230,7 @@ drop down
 }
 .cke .cke_combo_open {
   height: 16px;
-  margin: 0;
+  margin: 0 8px;
   line-height: 0;
 }
 .cke .cke_combo_on a.cke_combo_button {
