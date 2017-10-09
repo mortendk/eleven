@@ -1,7 +1,7 @@
 /* debug */
-/*.contextual .contextual-links[hidden] {
+.contextual .contextual-links[hidden] {
   display: block !important;
-}*/
+}
 
 .contextual {
   position: absolute;
@@ -229,12 +229,13 @@ Contextual links icons
 }
 
 /* quick edit */
-.contextual .contextual-links .outside-inblock-configure a,
+.contextual .contextual-links .settings-trayblock-configure a,
 .contextual .contextual-links .quickedit a {
-  color: var(--rasberry);
+  /*color: var(--rasberry);*/
 }
-.contextual .contextual-links .outside-inblock-configure a:before{
-  background-color: var(--rasberry-light);
+.contextual .contextual-links .settings-trayblock-configure a:before,
+.contextual .contextual-links .quickedit a:before{
+  /*background-color: var(--rasberry-light);*/
 
   -webkit-mask: url(icons/flash.svg) no-repeat;
           mask: url(icons/flash.svg) no-repeat;

@@ -9,7 +9,7 @@ core: '8.x'
 # -- Libraries -----------------------------------------------------------------
 libraries:
   - elevenfeat/global
-  - elevenfeat/feat.themersbestfriend  
+  - elevenfeat/feat.themersbestfriend
   # - elevenfeat/colorscheme
 
 #-------------------------------------------------------------------------------
@@ -23,8 +23,10 @@ libraries-extend:
   contextual/drupal.contextual-links:
     - elevenfeat/feat.contextual
 
-  outside_in/drupal.outside_in:
-    - elevenfeat/feat.outside_in
+  settings_tray/drupal.settings_tray:
+    - elevenfeat/feat.settingstray
+
+  #settings_tray/drupal.off_canvas:
 
   block_place/drupal.block_place:
     - elevenfeat/feat.placeblock
@@ -86,17 +88,43 @@ libraries-override:
         css/quickedit.theme.css: false
         css/quickedit.icons.theme.css: false
 
-  # outside_in
-  outside_in/drupal.outside_in:
+  # Settings Tray
+  settings_tray/drupal.settings_tray:
     css:
       component:
-        css/outside_in.details.css: false
-        css/outside_in.form.css: false
-        css/outside_in.motion.css: false
-        css/outside_in.table.css: false
-        css/outside_in.tabledrag.css: false
+        css/settings_tray.module.css: false
+        css/settings_tray.motion.css: false
+        css/settings_tray.toolbar.css: false
       theme:
-        css/outside_in.theme.css: false
+        css/settings_tray.theme.css: false
+
+  settings_tray/drupal.off_canvas:
+    css:
+      base:
+        css/off-canvas.reset.css: false
+        css/off-canvas.base.css: false
+        css/off-canvas.css: false
+        css/off-canvas.theme.css: false
+      component:
+        css/off-canvas.motion.css: false
+        css/off-canvas.button.css: false
+        css/off-canvas.form.css: false
+        css/off-canvas.table.css: false
+        css/off-canvas.details.css: false
+        css/off-canvas.tabledrag.css: false
+        css/off-canvas.dropbutton.css: false
+
+
+  # outside_in/drupal.outside_in:
+  #   css:
+  #     component:
+  #       css/outside_in.details.css: false
+  #       css/outside_in.form.css: false
+  #       css/outside_in.motion.css: false
+  #       css/outside_in.table.css: false
+  #       css/outside_in.tabledrag.css: false
+  #     theme:
+  #       css/outside_in.theme.css: false
 
   # place blocks
   block_place/drupal.block_place:

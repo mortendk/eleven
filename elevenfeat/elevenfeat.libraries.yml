@@ -23,6 +23,7 @@ feat.themersbestfriend:
   css:
     component:
       templates/themersbestfriend/themersbestfriend.css: {}
+
 feat.toolbar:
   css:
     theme:
@@ -30,6 +31,7 @@ feat.toolbar:
       templates/toolbar/toolbar.theme.css: {}
       templates/toolbar/toolbar.icons.css: {}
       # templates/toolbar/toolbar_edit.css: {}
+
 feat.contextual:
   css:
     theme:
@@ -40,11 +42,11 @@ feat.placeblock:
     theme:
       templates/block_place/block_place.css: {}
 
-feat.outside_in:
+feat.settingstray:
   css:
     theme:
-      templates/outside_in/outside_in.css: {}
-      templates/outside_in/offcanvas_container.css: {}
+      templates/settingstray/settingstray.css: {}
+      templates/settingstray/offcanvas_container.css: {}
 
 feat.quickedit:
   css:
