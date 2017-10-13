@@ -73,18 +73,19 @@ div.cke_chrome {
   background-color: transparent;
   border: none;
 }
-
 /* Hover button*/
 .cke_button:hover:before {
   background-color: var(--asphalt-light);
   cursor: pointer;
-
 }
 /* active cke button */
 .cke_button_on::before{
   background-color: var(--bluesky);
 }
-
+/*disabled*/
+.cke_button_disabled:before {
+  background-color: var(--asphalt-light)
+}
 
 /*
 button icons
@@ -113,7 +114,6 @@ button icons
   mask-image: url(icons/subscript.svg);
   -webkit-mask-image: url(icons/subscript.svg);
 }
-
 .cke_button__outdent:before {
   mask-image: url(icons/outdent.svg);
   -webkit-mask-image: url(icons/outdent.svg);
@@ -149,8 +149,8 @@ button icons
   -webkit-mask-image: url(icons/link.svg);
 }
 .cke_button__drupalunlink:before {
-  mask-image: url(icons/link.svg);
-  -webkit-mask-image: url(icons/link.svg);
+  mask-image: url(icons/unlink.svg);
+  -webkit-mask-image: url(icons/unlink.svg);
 }
 .cke_button__bulletedlist:before {
   mask-image: url(icons/list-bullet.svg);
@@ -185,6 +185,45 @@ button icons
   -webkit-mask-image: url(icons/code.svg);
 }
 
+.cke_button__redo:before {
+  mask-image: url(icons/share.svg);
+  -webkit-mask-image: url(icons/share.svg);
+}
+.cke_button__undo:before {
+  mask-image: url(icons/reply.svg);
+  -webkit-mask-image: url(icons/reply.svg);
+}
+.cke_button__paste:before {
+  mask-image: url(icons/paste.svg);
+  -webkit-mask-image: url(icons/paste.svg);
+}
+.cke_button__pastetext:before {
+  mask-image: url(icons/paste.svg);
+  -webkit-mask-image: url(icons/paste.svg);
+}
+.cke_button__pastefromword:before {
+  mask-image: url(icons/paste.svg);
+  -webkit-mask-image: url(icons/paste.svg);
+}
+
+.cke_button__copy:before {
+  mask-image: url(icons/archive.svg);
+  -webkit-mask-image: url(icons/archive.svg);
+}
+.cke_button__cut:before {
+  mask-image: url(icons/scissors.svg);
+  -webkit-mask-image: url(icons/scissors.svg);
+}
+.cke_button__specialchar:before {
+  mask-image: url(icons/copyright.svg);
+  -webkit-mask-image: url(icons/copyright.svg);
+}
+.cke_button__language:before {
+  mask-image: url(icons/language.svg);
+  -webkit-mask-image: url(icons/language.svg);
+}
+
+
 /* -----------------------------------------------------------------------------
 drop down
  -----------------------------------------------------------------------------*/
@@ -196,7 +235,7 @@ drop down
   border-radius: 0;
   margin: 0 8px;
   padding: 0;
-  background-color: var(--rasberry);
+  background-color: var(--asphalt-light);
 }
 
 div  .cke .cke_combo_on  a.cke_combo_button,
@@ -238,11 +277,13 @@ div .cke .cke_combo_off a.cke_combo_button:active {
   background-image: none;
   box-shadow: none;
 }
+
+
 /* -- bottom -----------------------------------------------------------------*/
 .cke .cke_bottom {
   padding: 0;
-  border-top: 0 solid var(--bluesky);;
-  border-bottom: 0 solid var(--bluesky);;
+  border-top: 0 solid var(--asphalt);
+  border-bottom: 0 solid var(--asphalt);
   background: #f9f9f9;
   box-shadow: none;
 }
