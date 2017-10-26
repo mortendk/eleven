@@ -8,8 +8,6 @@ global:
       # templates/form/select/form-select.css: {}
     # layout:
       # css/layout.css: {}
-    component:
-      css/ui-dialog.css: {}
     theme:
       css/type.css: {}
   dependencies:
@@ -61,10 +59,12 @@ feat.quickedit:
 
 
 
-# feat.jquery_ui:
-#   css:
-#     theme:
-#       templates/jquery_ui/jquery_ui.css: {}
+feat.jquery_ui:
+  css:
+    theme:
+      templates/jquery_ui/jquery_ui.css: {}
+      templates/jquery_ui/dialog.css: {}
+
 
 # ------------------------------------------------------------------------------
 # Forms

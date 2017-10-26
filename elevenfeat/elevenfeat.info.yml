@@ -35,13 +35,14 @@ libraries-extend:
     - elevenfeat/feat.placeblock
 
   quickedit/quickedit:
-  - elevenfeat/feat.quickedit
-  # core/jquery.ui:
-  # - elevenfeat/feat.jquery_ui
+    - elevenfeat/feat.quickedit
+
+  core/jquery.ui:
+    - elevenfeat/feat.jquery_ui
 
   #Forms
   ckeditor/drupal.ckeditor:
-  - elevenfeat/form.ckeditor
+    - elevenfeat/form.ckeditor
 
 
 
@@ -141,7 +142,7 @@ libraries-override:
   #   css:
   #     component:
   #       assets/vendor/jquery.ui/themes/base/button.css: false
-
+  #
 
   node/drupal.node.preview:
     css:

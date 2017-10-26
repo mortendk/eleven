@@ -4,14 +4,6 @@
 }
 
 /*UI dialog*/
-.ui-widget.ui-widget-content {
-  border: 0 solid var(--asphalt);
-}
-
-/* dialog */
-.ui-dialog .ui-dialog-buttonpane button{
-  margin: 0 0.25rem
-}
 
 .ui-dialog {
   position: absolute;
@@ -40,9 +32,6 @@
   width: 100%;
 }
 
-/* button
-TODO: this should be a standard button
-*/
 .ui-dialog a.button-action,
 .ui-dialog .dropbutton-single a {
   /*background-image: var(--icon-heart), var(--button-rasberry);

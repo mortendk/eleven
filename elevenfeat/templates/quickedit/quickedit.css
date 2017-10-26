@@ -25,7 +25,11 @@ Quickedit
   border: 1px solid var(--asphalt-light);
 }
 
-.quickedit-candidate { }
+.quickedit-candidate:hover {
+  outline: 1px dashed var(--bluesky-light);
+  background-color: var(--bluesky-light-light);
+}
+
 
 
 /*This is the  active element */
