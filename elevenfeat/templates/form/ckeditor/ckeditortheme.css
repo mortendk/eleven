@@ -278,7 +278,19 @@ div .cke .cke_combo_off a.cke_combo_button:active {
   box-shadow: none;
 }
 
+.cke_panel {
+  border: 1px solid var(--asphalt);
 
+}
+
+.cke_panel_grouptitle {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  color: var(--concrete);
+}
+.cke_panel_listItem a{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+}
 /* -- bottom -----------------------------------------------------------------*/
 .cke .cke_bottom {
   padding: 0;

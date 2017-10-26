@@ -55,7 +55,7 @@ Quickedit
 }
 
 
-.quickedit-highlighted:before {
+.quickedit-highlighted:before:hover {
   box-sizing: border-box;
   position: absolute;
   content: '';
