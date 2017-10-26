@@ -8,6 +8,8 @@ global:
       # templates/form/select/form-select.css: {}
     # layout:
       # css/layout.css: {}
+    component:
+      css/ui-dialog.css: {}
     theme:
       css/type.css: {}
   dependencies:

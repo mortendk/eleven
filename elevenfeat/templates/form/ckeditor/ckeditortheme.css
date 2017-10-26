@@ -8,9 +8,11 @@
 div.cke_chrome {
   border: none;
 }
+
 .cke .cke_top {
   padding: 0.25rem;
-  border: none
+  border: none;
+  background-color: var(--black-80)
 }
 
 /* Seperator */
@@ -180,7 +182,7 @@ button icons
   mask-image: url(icons/showblocks.svg);
   -webkit-mask-image: url(icons/showblocks.svg);
 }
-.cke_button__sourcedialog:before {
+.cke_button__source:before {
   mask-image: url(icons/code.svg);
   -webkit-mask-image: url(icons/code.svg);
 }
@@ -222,7 +224,11 @@ button icons
   mask-image: url(icons/language.svg);
   -webkit-mask-image: url(icons/language.svg);
 }
+.cke_button__maximize:before{
+  mask-image: url(icons/expand.svg);
+  -webkit-mask-image: url(icons/expand.svg);
 
+}
 
 /* -----------------------------------------------------------------------------
 drop down
@@ -280,7 +286,6 @@ div .cke .cke_combo_off a.cke_combo_button:active {
 
 .cke_panel {
   border: 1px solid var(--asphalt);
-
 }
 
 .cke_panel_grouptitle {
