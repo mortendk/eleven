@@ -10,6 +10,9 @@
   display: none;
 }
 
+.ui-widget.ui-widget-content.ui-dialog-off-canvas {
+  border-left: 1px solid var(--concrete);
+}
 /* -----------------------------------------------------------------------------
 ui dialog Titlebar
 ------------------------------------------------------------------------------*/
