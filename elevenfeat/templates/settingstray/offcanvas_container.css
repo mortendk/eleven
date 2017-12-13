@@ -9,10 +9,13 @@
 .ui-icon {
   display: none;
 }
+
+.ui-widget.ui-widget-content.ui-dialog-off-canvas {
+  border-left: 1px solid var(--concrete);
+}
 /* -----------------------------------------------------------------------------
 ui dialog Titlebar
 ------------------------------------------------------------------------------*/
-
 /* title bar */
 .ui-dialog .ui-dialog-titlebar {
   padding: 0.5rem 0;

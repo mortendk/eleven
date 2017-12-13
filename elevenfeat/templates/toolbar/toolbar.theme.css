@@ -70,8 +70,9 @@ body.is-edit-ui-toolbar-opened #toolbar-bar .toolbar-bar,
           mask-image: url(icons/tachometer.svg);
 }
 /* tab: shortcuts */
-#toolbar-bar .toolbar-tab .toolbar-icon-shortcut:before {
-  background-color: var(--strawberry);
+#toolbar-bar .toolbar-tab .toolbar-icon-shortcut:before,
+#toolbar-bar .toolbar-tab .toolbar-icon-shortcut:hover:before {
+  background-color: var(--bluesky-light);
 
   -webkit-mask-image: url(icons/heart.svg);
           mask-image: url(icons/heart.svg);

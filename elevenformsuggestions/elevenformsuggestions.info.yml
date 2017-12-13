@@ -1,4 +1,4 @@
 name: eleven form suggestions
-description: Provides a form id for form template suggestions
+description: Provides the form id for form template suggestions
 type: module
 core: '8.x'

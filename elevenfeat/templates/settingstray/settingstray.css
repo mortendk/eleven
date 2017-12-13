@@ -1,7 +1,16 @@
 /**/
-form.block-off-canvas-form{
+#toolbar-bar.js-settings-tray-edit-mode {
+  background-color: var(--rasberry-light)
+}
+
+.js-settings-tray-edit-mode .settings-tray-editable {
+  outline: 1px dashed var(--rasberry);
+  background-color: var(--white-20);
 
 }
+
+/**/
+form.block-off-canvas-form { }
 /* Style content in the tray. */
 .ui-dialog-offcanvas p,
 .ui-dialog-offcanvas h1,

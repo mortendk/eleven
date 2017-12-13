@@ -1,0 +1,93 @@
+/*
+overwrites for ui dialog for eleven feat.
+*/
+body .ui-widget-overlay {
+	background: var(--white-90);
+}
+
+/*.ui-dialog[style] {
+  width: 33% !important;
+  left: 33% !important
+}*/
+.ui-dialog.ui-corner-all.ui-widget-content {
+  /*border: 1px solid var(--concrete);*/
+}
+.ui-widget-content,
+.ui-widget.ui-widget-content{
+  border: none;
+}
+
+.ui-dialog-title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+}
+
+.ui-dialog .ui-dialog-content {
+  margin: 0;
+  padding: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  background-color: var(--gravel);
+  color: var(--asphalt);
+}
+
+/* Buttons */
+.ui-dialog .ui-dialog-buttonpane {
+  background-color: var(--gravel);
+  padding-bottom: 16px;
+  border: none;
+}
+
+body .ui-dialog .button {
+  font-size: 16px;
+  color: var(--white);
+  position: relative;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+  border: none;
+  border-radius: 0;
+  text-shadow: none;
+  width: auto;
+  height: 2rem;
+  padding-left: 2.5rem;
+  margin: 0 0.25rem 0 0;
+  border:none;
+  transition: all 0.2s;
+  background-image: var(--button-asphalt);
+}
+body .ui-dialog .button:before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 8px;
+  top: 8px;
+  background-color: var(--white);
+
+  mask-image: var(--icon-coffee);
+  -webkit-mask-image: var(--icon-coffee);
+  -webkit-mask-size: contain !important;
+  mask-size: contain !important;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+body .ui-dialog .button:hover {
+  background-image: var(--button-asphalt-rev);
+}
+/* save */
+body .ui-dialog .button.button--primary:before{
+  mask-image: url(icons/thumbs-up.svg);
+  -webkit-mask-image: url(icons/thumbs-up.svg);
+}
+body .ui-dialog .button--primary{
+  background-image: var(--button-grass);
+}
+body .ui-dialog .button--primary:hover{
+  background-image: var(--button-grass-rev);
+}
+
+
+body .ui-dialog .button:before{
+  mask-image: url(icons/times.svg);
+  -webkit-mask-image: url(icons/times.svg);
+}

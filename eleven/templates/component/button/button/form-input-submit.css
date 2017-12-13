@@ -38,17 +38,11 @@ input[type="submit"].js-hide + .form-item__icon {
 }
 
 /* form actions -------------------------------------------------------------*/
+form:not(.confirmation)
 #edit-actions,
 form[data-drupal-selector="node-type-edit-form"] .form-actions,
-.shortcut-set-switch #edit-actions,
 .nodesubmit,
-.views-form #edit-actions,
-#view-edit-form #edit-actions,
-.user-admin-permissions #edit-actions,
-.system-modules .form-actions,
-.entity-view-display-edit-form  #edit-actions,
-.entity-form-display-edit-form #edit-actions,
-.block-admin-display-form #edit-actions {
+.system-modules .form-actions {
   position: fixed;
   z-index: 666;
   bottom: 0;

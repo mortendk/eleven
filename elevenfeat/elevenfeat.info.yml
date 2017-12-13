@@ -1,14 +1,15 @@
-name: elevenfeat
+name: eleven Front End Amin Tools
 type: theme
 description: 'eleven FEAT - Seperation of the FrontEnd Admin Tools for the Eleven theme'
 base theme: classy
 core: '8.x'
 
-hidden: TRUE
+# hidden: TRUE
 
 # -- Libraries -----------------------------------------------------------------
 libraries:
   - elevenfeat/global
+  - elevenfeat/feat.themersbestfriend
   # - elevenfeat/colorscheme
 
 #-------------------------------------------------------------------------------
@@ -22,8 +23,10 @@ libraries-extend:
   contextual/drupal.contextual-links:
     - elevenfeat/feat.contextual
 
-  outside_in/drupal.outside_in:
-    - elevenfeat/feat.outside_in
+  settings_tray/drupal.settings_tray:
+    - elevenfeat/feat.settingstray
+
+  #settings_tray/drupal.off_canvas:
 
   block_place/drupal.block_place:
     - elevenfeat/feat.placeblock
@@ -32,13 +35,16 @@ libraries-extend:
     - elevenfeat/feat.placeblock
 
   quickedit/quickedit:
-  - elevenfeat/feat.quickedit
-  # core/jquery.ui:
-  # - elevenfeat/feat.jquery_ui
+    - elevenfeat/feat.quickedit
+
+  core/jquery.ui:
+    - elevenfeat/feat.jquery_ui
 
   #Forms
   ckeditor/drupal.ckeditor:
-  - elevenfeat/form.ckeditor
+    - elevenfeat/form.ckeditor
+
+
 
 #-------------------------------------------------------------------------------
 # LIBRARIES OVERRIDE
@@ -77,21 +83,37 @@ libraries-override:
   # quickedit
   quickedit/quickedit:
     css:
+      component:
+        css/quickedit.module.css: false
       theme:
         css/quickedit.theme.css: false
         css/quickedit.icons.theme.css: false
 
-  # outside_in
-  outside_in/drupal.outside_in:
+  # Settings Tray
+  settings_tray/drupal.settings_tray:
     css:
       component:
-        css/outside_in.details.css: false
-        css/outside_in.form.css: false
-        css/outside_in.motion.css: false
-        css/outside_in.table.css: false
-        css/outside_in.tabledrag.css: false
+        css/settings_tray.module.css: false
+        css/settings_tray.motion.css: false
+        css/settings_tray.toolbar.css: false
       theme:
-        css/outside_in.theme.css: false
+        css/settings_tray.theme.css: false
+
+  settings_tray/drupal.off_canvas:
+    css:
+      base:
+        css/off-canvas.reset.css: false
+        css/off-canvas.base.css: false
+        css/off-canvas.css: false
+        css/off-canvas.theme.css: false
+      component:
+        css/off-canvas.motion.css: false
+        css/off-canvas.button.css: false
+        css/off-canvas.form.css: false
+        css/off-canvas.table.css: false
+        css/off-canvas.details.css: false
+        css/off-canvas.tabledrag.css: false
+        css/off-canvas.dropbutton.css: false
 
   # place blocks
   block_place/drupal.block_place:
@@ -104,6 +126,11 @@ libraries-override:
       theme:
         css/block-place.icons.theme.css: false
 
+  # panels/panels_ipe:
+  #   css:
+  #     component:
+  #       css/panels_ipe.css: templates/feat/panels/panels_ipe.css
+
   # jquery ui
   # look at #/core/core.libraries.yml for more libs
   # core/jquery.ui:
@@ -115,9 +142,9 @@ libraries-override:
   #   css:
   #     component:
   #       assets/vendor/jquery.ui/themes/base/button.css: false
-
+  #
 
   node/drupal.node.preview:
     css:
       theme:
-        css/node.preview.css: templates/feat/node-preview/nodepreview.css
+        css/node.preview.css: templates/node-preview/nodepreview.css
