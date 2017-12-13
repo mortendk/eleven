@@ -1,38 +1,58 @@
 # eleven: A Drupal 8 administration theme
 
-[![Join the chat at https://gitter.im/eleventheme/Lobby](https://badges.gitter.im/eleventheme/Lobby.svg)](https://gitter.im/eleventheme/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 > this one goes to 11 —mortendk
+An Admin theme that is build to make Drupal Prettier to look at for content editors, sitebuilders & developers.
+
+#Demo
+
+## Slack with us
+Find us at [drupal.slack #eleven](https://drupal.slack.com/messages/C78T43P34)
+
+Weekly hangout at 20:00 CET
 
 ## Installation
-Manual
+Eleven theme installs as a normal theme.
 
-
-###Drush
+### Drush
 ```
 drush dl eleven
 drush en eleven -y
 drush config-set system.theme admin eleven -y
 ```
 
-###Composer
+### Drupal Console
+```
+drupal theme:install eleven
+drupal config:override system.theme admin eleven
+```
+
+### Composer
 ```
 composer config repositories.eleven vcs https://github.com/thememachine/eleven
 composer require thememachine/eleven
 ```
 
-###Manually
+### Manually
 Download latest release from  [Drupal.org](https://www.drupal.org/project/eleven)
 Go to the apparence page in your drupal site `/admin/appearance` 
 
-
 Afterwards enable modules as usual.
 
-### Uninstall
+## Uninstall
+
+### drush 
 ```
 drush pm-uninstall eleven elevenfeat -y
 ```
 
+### Drupal Consule
+```
+drupal theme uninstall eleven
+```
 ## Demo
 
 Visit [Eleven Theme](http://eleventheme.com/) for the demo and screenshots.
+
+
+## Keep in touch 
+https://twitter.com/hashtag/eleventheme?src=hash

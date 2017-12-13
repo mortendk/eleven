@@ -46,7 +46,7 @@ arrow
 }
 .select__arrow::before {
   position: absolute;
-  top: 0.5rem;
+  top: 0.75rem;
   left: 0.5rem;
   width: 1rem;
   height: 1rem;
@@ -185,8 +185,7 @@ select:focus + .select__arrow {
 }
 
 .select__arrow::before {
-  background-color: var(--gravel-light);
-  transition: all 0.5s ease-in-out;
+  background-color: var(--gravel);
 
           mask-image: url(icons/angle-down.svg);
   -webkit-mask-image: url(icons/angle-down.svg);
@@ -194,6 +193,5 @@ select:focus + .select__arrow {
 
 select:hover + .select__arrow::before,
 select:focus + .select__arrow::before {
-  background-color: var(--gravel);
-  transform: translateY(0.25rem);
+  background-color: var(--white);
 }
