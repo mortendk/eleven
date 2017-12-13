@@ -3,15 +3,15 @@
 > this one goes to 11 —mortendk
 An Admin theme that is build to make Drupal Prettier to look at for content editors, sitebuilders & developers.
 
-#Demo
 
-## Slack with us
-Find us at [drupal.slack #eleven](https://drupal.slack.com/messages/C78T43P34)
-
-Weekly hangout at 20:00 CET
+## Slack 
+Find us at drupal.slack.com `#eleven`
+https://drupal.slack.com/messages/C78T43P34
 
 ## Installation
-Eleven theme installs as a normal theme.
+
+### Dependencies
+There is a dependency on the core help module
 
 ### Drush
 ```
