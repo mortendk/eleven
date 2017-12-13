@@ -164,6 +164,9 @@ input[type="search"] + .form-item__icon::before{
 input:placeholder-shown {
   background-color: var(--white);
 }
+input::placeholder {
+    color: var(--bluesky-light-50);
+}
 
 /* default */
 input {

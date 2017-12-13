@@ -1,0 +1,127 @@
+.quickedit-toolbar-container { }
+.quickedit-toolbar-content {
+  position: relative;
+}
+/* resets the pesky style change*/
+.quickedit-editable.quickedit-highlighted[style] {
+  left: 0!important;
+  top:0 !important;
+}
+
+
+/* -----------------------------------------------------------------------------
+Quickedit toolbar save, cancel and info label field
+-----------------------------------------------------------------------------*/
+/*  position */
+.quickedit-toolbar-entity {
+  position: absolute;
+  left: 16px;
+  top: -72px;
+  transition: all 0.5s ease-in
+}
+
+/* Save + Close and field info speech bobble*/
+.quickedit-toolbar-entity {
+  background-color: var(--black-80);
+  color: var(--white);
+  padding: 8px;
+  border-radius: 2px;
+}
+.quickedit-toolbar-entity:before {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid var(--black-80);
+}
+/* Label and info field */
+.quickedit-toolbar-label {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+  font-size: 12px;
+  color: var(--white);
+}
+.quickedit-toolbar-label .field {
+  font-weight: bold;
+  padding-right: 8px;
+  color: var(--bluesky-light-light)
+}
+
+/* -----------------------------------------------------------------------------
+Buttons
+ -----------------------------------------------------------------------------*/
+.quickedit-button {
+  position: relative;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+  border: none;
+  border-radius: 0;
+  text-shadow: none;
+  width: auto;
+  height: 2rem;
+  padding-left: 2.5rem;
+  margin: 0 0.25rem 0 0;
+  border:none;
+  transition: all 0.2s;
+  background-image: var(--button-bluesky);
+}
+.quickedit-button:before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 8px;
+  top: 8px;
+  background-color: var(--white);
+
+  mask-image: var(--icon-coffee);
+  -webkit-mask-image: var(--icon-coffee);
+  -webkit-mask-size: contain !important;
+  mask-size: contain !important;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+.quickedit-button:hover {
+  background-image: var(--button-bluesky-rev);
+}
+
+/* Save */
+.quickedit-button.action-save:before{
+  mask-image: url(icons/thumbs-up.svg);
+  -webkit-mask-image: url(icons/thumbs-up.svg);
+}
+.quickedit-button.action-save{
+  background-image: var(--button-grass);
+}
+.quickedit-button.action-save:hover{
+  background-image: var(--button-grass-rev);
+}
+
+
+/* Cancel */
+.quickedit-button.action-cancel:before{
+  mask: url(icons/times.svg) no-repeat;
+  -webkit-mask: url(icons/times.svg) no-repeat;
+}
+.quickedit-button.action-cancel{
+  background-image: var(--button-asphalt);
+}
+.quickedit-button.action-cancel:hover{
+  background-image: var(--button-asphalt-rev);
+}
+
+
+
+/* -----------------------------------------------------------------------------
+Content toolbar
+-----------------------------------------------------------------------------*/
+
+.quickedit-toolbar-content {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  background-color: var(--black-80);
+  border: none;
+  color: var(--black);
+  min-width: 60rem;
+}

@@ -1,0 +1,31 @@
+/*
+A simple way to remove all admin tools so we can see whats going on for normal users.
+
+btw !important is a terrbile thing, but in this case it is actually important ;)
+
+toggle .themersbestfiend-hide-admintools in the body field to hide n show the tools
+*/
+
+body[style].themersbestfiend-hide-admintools {
+  padding-top: 0 !important
+}
+
+/* Toolbar */
+.themersbestfiend-hide-admintools #toolbar-administration {
+  display: none
+}
+
+/* Contextual link */
+.themersbestfiend-hide-admintools .contextual,
+.themersbestfiend-hide-admintools .contextual[style] {
+  display: none !important
+}
+
+/* tabs */
+.themersbestfiend-hide-admintools .elevenfeattabs {
+  display: none
+}
+
+/*
+admin toolbar
+*/
