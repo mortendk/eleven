@@ -1,0 +1,72 @@
+/*
+original: core/modules/quickedit/css/quickedit.module.css
+*/
+
+/**
+ * Editable.
+ */
+.quickedit-editable {
+  z-index: 98;
+  position: relative;
+  cursor: pointer;
+}
+.quickedit-editable.quickedit-highlighted {
+  z-index: 99;
+}
+
+.quickedit-validation-errors {
+  z-index: 300;
+  position: relative;
+}
+.quickedit-validation-errors .messages.error {
+  position: absolute;
+}
+
+#quickedit_backstage {
+  display: none;
+}
+.quickedit-form {
+  position: absolute;
+  z-index: 300;
+}
+.quickedit-form .placeholder {
+  min-height: 1rem;
+}
+
+/**
+ * Default form styling overrides.
+ */
+.quickedit-form .form-actions {
+  display: none;
+}
+
+/**
+ * Entity toolbar.
+ */
+.quickedit-toolbar-container {
+  position: absolute;
+  z-index: 100;
+}
+.quickedit-toolbar-container > .quickedit-toolbar-pointer,
+.quickedit-toolbar-container > .quickedit-toolbar-lining {
+  display: none;
+}
+.quickedit-form-container {
+  position: relative;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  vertical-align: baseline;
+  z-index: 100;
+}
+.quickedit-toolbar-label {
+  overflow: hidden;
+}
+#quickedit-toolbar-fence {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  position: fixed;
+  z-index: -1;
+}

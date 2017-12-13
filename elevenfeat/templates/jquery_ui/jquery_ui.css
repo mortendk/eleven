@@ -3,39 +3,26 @@
   background-color: var(--white-90);
 }
 
+/*UI dialog*/
 
-.ui-widget { }
-.ui-widget-content { }
-
-/* dialog */
-.ui-dialog .ui-dialog-buttonpane button{
-  margin: 0 0.25rem
-}
-
-.ui-dialog{
+.ui-dialog {
   position: absolute;
   z-index: 6666;
   overflow: visible;
   background-color: var(--asphalt-light);
   color: var(--gravel);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
 }
-.ui-dialog .ui-dialog-buttonpane{
+.ui-dialog .ui-dialog-buttonpane {
   background-color: var(--asphalt);
 }
-
-.ui-button-text{
+.ui-button-text {
   text-align: left
 }
 /* title bar */
 .ui-dialog-titlebar {
 }
 
-
-/* Content */
-.ui-dialog-content {
-  margin: 0;
-  padding: 0;
-}
 
 /* custom block */
 .ui-dialog .action-links {
@@ -45,9 +32,6 @@
   width: 100%;
 }
 
-/* button
-TODO: this should be a standard button
-*/
 .ui-dialog a.button-action,
 .ui-dialog .dropbutton-single a {
   /*background-image: var(--icon-heart), var(--button-rasberry);

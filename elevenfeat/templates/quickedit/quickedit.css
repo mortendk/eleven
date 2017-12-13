@@ -1,0 +1,94 @@
+/*
+Lets start by resetting what can come out from the frontend theme
+*/
+.quickedit-form .form-item,
+.quickedit-form .form-actions {
+  margin:0;
+  padding: 0
+}
+.quickedit-form .label,
+.quickedit-form .form-item label,
+.quickedit-form .form-type-textfield label {
+  padding: 0
+}
+
+/*
+Quickedit
+*/
+.quickedit-form {
+  background-color: var(--black-80);
+  width: 100%;
+  padding: 0.5rem;
+  color: var(--gravel);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  border: 1px solid var(--asphalt-light);
+}
+
+.quickedit-candidate:hover {
+  outline: 1px dashed var(--bluesky-light);
+  background-color: var(--bluesky-light-light);
+}
+
+
+
+/*This is the  active element */
+[contenteditable="true"],
+[contenteditable="true"]:focus,
+[contenteditable="true"]:hover{
+  margin: 0 !important;
+  padding: 0 !important;
+  cursor:text;
+}
+
+.quickedit-field:before {
+  box-sizing: border-box;
+  position: absolute;
+  content: '';
+  top: 0;
+  left:0;
+  width: 0;
+  height: 0;
+  border: 1px dashed transparent;
+}
+.quickedit-field:before:hover{
+  width: 100%;
+  height: 100%;
+  border: 1px dashed var(--bluesky-light);
+  transition: width 0.1s ease-in-out, height 0.1s ease-out 0.1s;
+}
+
+
+.quickedit-highlighted:before:hover {
+  box-sizing: border-box;
+  position: absolute;
+  content: '';
+  top: 0;
+  left:0;
+  width: 0;
+  height: 0;
+  border: 1px dashed transparent;
+  width: 100%;
+  height: 100%;
+  border: 1px dashed var(--bluesky-light);
+}
+
+
+/*Label*/
+.quickedit-form .form-item label {
+  color: var(--concrete);
+}
+
+.quickedit-form a {
+  color: var(--rasberry-light);
+}
+.quickedit-form a:hover {
+  color: var(--rasberry-light);
+
+}
+
+.quickedit-form  .filter-wrapper {
+  border: none;
+  padding: 0;
+  border-radius: 0;
+}
