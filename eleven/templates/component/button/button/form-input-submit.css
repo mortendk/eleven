@@ -3,6 +3,7 @@ input[type="submit"] {
   padding: 0 1rem 0 0.5rem;
   border: none;
   border-bottom: 0;
+  border-radius: 0;
   background-color: var(--bluesky);
   color: var(--white);
   font-weight: normal;
