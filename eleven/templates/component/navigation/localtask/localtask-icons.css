@@ -181,7 +181,7 @@
 }
 
 /*menu -----------------------------------------------------------------------*/
-.tabs li a[href="/admin/structure/menu/manage/admin"]:before {
+.tabs li a[href*="/admin/structure/menu/manage/"]:before {
   -webkit-mask-image: url(icons/list.svg);
           mask-image: url(icons/list.svg);
 }
@@ -229,6 +229,14 @@
   -webkit-mask-image: url(icons/gears.svg);
           mask-image: url(icons/gears.svg);
 }
+
+/* text formats */
+.tabs li a[href*="/admin/config/content/formats/manage/"]:before {
+  -webkit-mask-image: url(icons/gears.svg);
+          mask-image: url(icons/gears.svg);
+}
+
+
 
 /* RSS */
 .tabs li a[href="/admin/config/services/rss-publishing"]:before {
@@ -314,16 +322,21 @@
   -webkit-mask-image: url(icons/pencil.svg);
           mask-image: url(icons/pencil.svg);
 }
+
 /*devel */
 .tabs li a[href^="/devel"]:before {
   -webkit-mask-image: url(icons/terminal.svg);
           mask-image: url(icons/terminal.svg);
 }
+/*configure */
+f
+
 /*view node */
 ul.tabs > li:first-child a[href^="/node/"]:before {
   -webkit-mask-image: url(icons/desktop.svg);
           mask-image: url(icons/desktop.svg);
 }
+
 
 /*outline*/
 .tabs li a[href$="/outline"]:before {
