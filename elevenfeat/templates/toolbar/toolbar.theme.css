@@ -340,6 +340,14 @@ level 1 : horizontal
           mask-image: url(icons/pie-chart.svg);
 }
 
+/* Help */
+#toolbar-bar a.toolbar-icon-help-main:before {
+  -webkit-mask-image: url(icons/ambulance.svg);
+          mask-image: url(icons/ambulance.svg);
+}
+
+
+
 /*
  Shortcuts icons
 */
