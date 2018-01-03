@@ -75,3 +75,18 @@
           mask-image: url(icons/layout-full.svg);
   -webkit-mask-image: url(icons/layout-full.svg);
 }
+
+
+@media (max-width: 47.99em) {
+  .tabs-icon a[data-layout="8"],
+  .tabs-icon a[data-layout="10"],
+  .tabs-icon a[data-layout="12"] {
+    display: none
+  }
+}
+
+@media (min-width: 48rem) and (max-width: 61.99rem){
+  .tabs-icon a[data-layout="10"] {
+    display: none
+  }
+}

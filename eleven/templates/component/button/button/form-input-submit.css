@@ -55,6 +55,16 @@ form[data-drupal-selector="node-type-edit-form"] .form-actions,
   background-color: var(--white-90);
 }
 
+@media (max-width: 47.99em) {
+  form:not(.confirmation)
+  #edit-actions,
+  form[data-drupal-selector="node-type-edit-form"] .form-actions,
+  .nodesubmit,
+  .system-modules .form-actions {
+    padding: 1rem 2rem 1rem 1rem;
+  }
+}
+
 
 
 /* primary */
@@ -200,11 +210,14 @@ first one is keeping the state that it have the other changes it to published or
     margin-bottom: 0.5rem;
   }
   .nodesubmit input {
-    width: 90%;
+    width: calc(100% - 3rem);
     text-align: left;
   }
   .nodesubmit a.button--danger {
-    width: 97%;
+    width: calc(100% - 1rem);
+  }
+  .form-actions a.button--danger {
+    float: left
   }
 }/* small */
 
