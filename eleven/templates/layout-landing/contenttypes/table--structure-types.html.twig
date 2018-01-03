@@ -12,7 +12,8 @@
         {{ row.cells.title.content}}
       </h3>
       <p class="card__text">
-        {{ row.cells.description.content['#markup']}}
+        {# we need to do a |raw here as the data is already escaped #}
+        {{ row.cells.description.content['#markup']|raw }}
       </p>
 
 
