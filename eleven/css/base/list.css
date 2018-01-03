@@ -32,3 +32,16 @@ ol li {
 .item-list__comma-list li{
   margin-left: 0;
 }
+
+dl {
+  margin: 1rem 0
+}
+
+dt {
+  font-weight: bold;
+}
+dd {
+  margin: 0;
+  padding-bottom:1rem
+
+}
