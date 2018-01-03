@@ -323,6 +323,12 @@
           mask-image: url(icons/pencil.svg);
 }
 
+.tabs li a[href^="/node/"]:before {
+  -webkit-mask-image: url(icons/desktop.svg);
+          mask-image: url(icons/desktop.svg);
+}
+
+
 /*devel */
 .tabs li a[href^="/devel"]:before {
   -webkit-mask-image: url(icons/terminal.svg);
