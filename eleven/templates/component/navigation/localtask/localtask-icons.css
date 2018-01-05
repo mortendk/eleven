@@ -430,3 +430,14 @@ ul.tabs > li:first-child a[href^="/node/"]:before {
   -webkit-mask-image: url(icons/history.svg);
           mask-image: url(icons/history.svg);
 }
+
+/* shortcuts */
+.tabs li a[href="/admin/config/user-interface/shortcut/manage/default/customize"]:before {
+  -webkit-mask-image: url(icons/heart.svg);
+          mask-image: url(icons/heart.svg);
+}
+
+.tabs li a[href$="/admin/config/user-interface/shortcut/manage/default"]:before {
+  -webkit-mask-image: url(icons/pencil.svg);
+          mask-image: url(icons/pencil.svg);
+}
