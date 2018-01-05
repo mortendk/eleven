@@ -10,7 +10,7 @@ input {
   color: var(--asphalt);
   line-height: 2rem;
   transition: all 0.5s ease-in-out;
-  border-width: 1px
+  border-width: 1px;
 }
 input:focus {
   /*outline: 0;*/

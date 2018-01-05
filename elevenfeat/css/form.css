@@ -7,7 +7,7 @@ form { }
 .label,
 .form-item label,
 .form-type-textfield label {
-  display: block;
+  display: inline-block;
   padding: 0.5rem 0;
   font-size: 1rem;
   font-weight: bold;

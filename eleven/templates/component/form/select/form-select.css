@@ -2,9 +2,9 @@
 select {
   width: 100%;
   min-width: 11rem;
-  height: 2rem;
+  min-height: 2rem;
   margin: 0;
-  padding: 0 1rem;
+  padding: 0;
   border-right: 0;
   -webkit-border-radius: 0rem;
           border-radius: 0;
@@ -21,8 +21,17 @@ select:focus {
   cursor: pointer;
 }
 
+select option {
+  border-bottom: 1px solid var(--gravel);
+  padding: 0 0.5rem
+}
+
 .form-item--select label {
   display: inline-block;
+}
+
+select[multiple="multiple"] {
+
 }
 
 /*
@@ -163,6 +172,7 @@ select.block-weight {
 colors
  -----------------------------------------------------------------------------*/
 select {
+  border:1px solid;
   border-color: var(--bluesky);
   background-color: var(--gravel-light);
   color: var(--bluesky);
