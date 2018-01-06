@@ -6,10 +6,14 @@
   -moz-appearance: none;
   transition: all 0.30s ease-in-out;
 }
-
 input[type=checkbox]:hover {
   cursor: pointer;
 }
+input[type='checkbox']:hover,
+input[type='checkbox']:focus {
+  outline: 1px solid var(--bluesky);
+}
+/* background colour */
 input[type='checkbox']:before {
   content: '';
   display: inline-block;
@@ -18,34 +22,42 @@ input[type='checkbox']:before {
   background-color: var(--white);
   outline: 1px solid var(--bluesky);
 }
+/* checked  */
 input[type='checkbox']:checked:before {
   background-color: var(--bluesky-light);
 }
-
-input[type='checkbox']:hover,
-input[type='checkbox']:focus {
-  outline: 1px solid var(--bluesky);
-}
-
 input[type='checkbox']:after {
-  width: 50%;
-  height: 50%;
-}
-input[type='checkbox']:checked:after {
   display: block;
   content: '';
-  width: 1rem;
-  height: 1rem;
+  width: 50%;
+  height: 50%;
   position: absolute;
   top: 0.25rem;
   left: 0.25rem;
-  mask-image: url(icons/check.svg);
-  -webkit-mask-image: url(icons/check.svg);
-  background-color: var(--white);
   mask-size: contain;
   -webkit-mask-size: contain;
   mask-position: center;
   -webkit-mask-position: center;
   mask-repeat: no-repeat;
   -webkit-mask-repeat: no-repeat;
+}
+
+input[type='checkbox']:checked:after {
+  width: 1rem;
+  height: 1rem;
+  mask-image: url(icons/check.svg);
+  -webkit-mask-image: url(icons/check.svg);
+  background-color: var(--white);
+}
+
+/* disabled   */
+input[type='checkbox']:disabled:before {
+  background-color: var(--concrete);
+}
+input[checked='checked']:disabled:after {
+  width: 1rem;
+  height: 1rem;
+  mask-image: url(icons/times.svg);
+  -webkit-mask-image: url(icons/times.svg);
+  background-color: var(--white);
 }
