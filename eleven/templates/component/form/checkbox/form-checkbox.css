@@ -1,35 +1,36 @@
- input[type=checkbox] {
+ input[type='checkbox'] {
   width: 1.5rem;
   height: 1.5rem;
   position: relative;
   -webkit-appearance: none;
   -moz-appearance: none;
-  transition: all 0.30s ease-in-out;
+  border: none;
+  vertical-align: top;
+
 }
-input[type=checkbox]:hover {
+input[type='checkbox']:hover {
   cursor: pointer;
 }
-input[type='checkbox']:hover,
-input[type='checkbox']:focus {
-  outline: 1px solid var(--bluesky);
-}
+
 /* background colour */
-input[type='checkbox']:before {
+input[type='checkbox']:before,
+input[type='checkbox']:after {
   content: '';
-  display: inline-block;
+  display: block;
+}
+input[type='checkbox']:before {
   width: 1.5rem;
   height: 1.5rem;
   background-color: var(--white);
-  outline: 1px solid var(--bluesky);
+  border: 1px solid var(--bluesky);
 }
-/* checked  */
+
+/* checked   tate*/
 input[type='checkbox']:checked:before {
   background-color: var(--bluesky-light);
 }
 input[type='checkbox']:after {
-  display: block;
-  content: '';
-  width: 50%;
+  width: 10%;
   height: 50%;
   position: absolute;
   top: 0.25rem;
@@ -60,4 +61,16 @@ input[checked='checked']:disabled:after {
   mask-image: url(icons/times.svg);
   -webkit-mask-image: url(icons/times.svg);
   background-color: var(--white);
+}
+
+/* hover + focus  */
+input[type='checkbox']:hover:before,
+input[type='checkbox']:focus:before {
+  outline: 1px solid var(--bluesky);
+}
+
+/* label correction */
+.form-item input[type='checkbox'] ~  label {
+  padding: 0;
+  line-height: 1.5rem
 }

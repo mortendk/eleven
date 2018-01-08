@@ -1,54 +1,37 @@
-/*
-template: form-element--radio.html.twig
-*/
-.form-radios {
-  margin: 0.5rem 1rem;
-}
-.form-radios .form-item__description {
-  margin-left: 1rem;
-}
-
-.form-item--radio .form-item__description {
-  max-width: 40rem;
-  margin-left: 2rem;
-}
-
-input[type=radio] {
+input[type='radio'] {
  width: 1.5rem;
  height: 1.5rem;
  position: relative;
  -webkit-appearance: none;
  -moz-appearance: none;
- transition: all 0.30s ease-in-out;
-  border: none
-}
-input[type=radio]:hover {
- cursor: pointer;
-}
-input[type=radio]:hover,
-input[type=radio]:focus {
+ border: none;
+ vertical-align: top;
 
+}
+input[type='radio']:hover {
+ cursor: pointer;
 }
 
 /* background colour */
-input[type=radio]:before {
-  position: absolute;
-  content: '';
-  display: inline-block;
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: var(--white);
-  border: 1px solid var(--rasberry);
-  border-radius: 50%;
+input[type='radio']:before,
+input[type='radio']:after {
+ content: '';
+ display: block;
 }
-/* checked  */
-input[type=radio]:checked:before {
+input[type='radio']:before {
+ width: 1.5rem;
+ height: 1.5rem;
+ background-color: var(--white);
+ border: 1px solid var(--bluesky);
+ border-radius: 50%;
+}
+
+/* checked   tate*/
+input[type='radio']:checked:before {
  background-color: var(--bluesky-light);
 }
-input[type=radio]:after {
- display: block;
- content: '';
- width: 50%;
+input[type='radio']:after {
+ width: 10%;
  height: 50%;
  position: absolute;
  top: 0.25rem;
@@ -61,7 +44,7 @@ input[type=radio]:after {
  -webkit-mask-repeat: no-repeat;
 }
 
-input[type=radio]:checked:after {
+input[type='radio']:checked:after {
  width: 1rem;
  height: 1rem;
  mask-image: url(icons/check.svg);
@@ -70,7 +53,7 @@ input[type=radio]:checked:after {
 }
 
 /* disabled   */
-input[type=radio]:disabled:before {
+input[type='radio']:disabled:before {
  background-color: var(--concrete);
 }
 input[checked='checked']:disabled:after {
@@ -79,4 +62,16 @@ input[checked='checked']:disabled:after {
  mask-image: url(icons/times.svg);
  -webkit-mask-image: url(icons/times.svg);
  background-color: var(--white);
+}
+
+/* hover + focus  */
+input[type='radio']:hover:before,
+input[type='radio']:focus:before {
+ outline: 1px solid var(--bluesky);
+}
+
+/* label correction */
+.form-item input[type='radio'] ~  label {
+ padding: 0;
+ line-height: 1.5rem
 }
