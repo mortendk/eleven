@@ -1,6 +1,6 @@
  input[type='checkbox'] {
   width: 1.5rem;
-  height: 1.5rem;
+  height: auto;
   position: relative;
   -webkit-appearance: none;
   -moz-appearance: none;
