@@ -6,10 +6,12 @@
   {% set element_name = element['#title']|clean_class %}
 {% endif %}
 
+
 {%
   set classes = [
     'form-item',
     'form-item--' ~ type|clean_class ,
+    'form-item--label' ~ label_display|clean_class,
     element['#type'] == 'select' ? 'form-item--inline' ,
     element['#multiple'] ? 'form-item--select-multiple'  ,
     errors ? 'form-item--error',

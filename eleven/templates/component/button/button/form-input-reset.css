@@ -1,0 +1,26 @@
+input[type="reset"] {
+  height: 2rem;
+  padding: 0 1rem 0 2.5rem;
+  margin: 0;
+  border: none;
+  border-bottom: 0;
+  border-radius: 0;
+  background-image: var(--button-strawberry),
+  url(../icons/refresh.svg);
+  color: var(--white);
+  font-weight: normal;
+  line-height: 2;
+
+}
+
+input[type="reset"]:hover {
+  background-image: var(--button-strawberry-rev);
+}
+
+input[type="reset"]:hover:before{
+  transform: scale(1.5);
+}
+input[type="reset"]:before{
+  mask-image: url(../icons/refresh.svg);
+  -webkit-mask-image: url(../icons/refresh.svg);
+}

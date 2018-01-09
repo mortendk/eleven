@@ -143,6 +143,7 @@ button:
     theme:
       templates/component/button/button/form-button.css: {}
       templates/component/button/button/form-input-submit.css: {}
+      templates/component/button/button/form-input-reset.css: {}
 
 button.action:
   css:

@@ -441,3 +441,11 @@ ul.tabs > li:first-child a[href^="/node/"]:before {
   -webkit-mask-image: url(icons/pencil.svg);
           mask-image: url(icons/pencil.svg);
 }
+
+.tabs li a[href^="/admin/people/roles/manage/"]:before,
+.tabs li a[href^="/admin/structure/display-modes/view/manage/"]:before,
+.tabs li a[href="/admin/structure/contact/manage/feedback"]:before,
+.tabs li a[href="/admin/structure/comment/manage/comment"]:before {
+  -webkit-mask-image: url(icons/pencil.svg);
+          mask-image: url(icons/pencil.svg);
+}
