@@ -49,7 +49,10 @@ input[type="submit"].visually-hidden+.form-item__icon, input[type="submit"].js-h
 
 /* form actions -------------------------------------------------------------*/
 
-form:not(.confirmation) #edit-actions, form[data-drupal-selector="node-type-edit-form"] .form-actions, .nodesubmit, .system-modules .form-actions {
+form:not(.confirmation):not(.field-ui-field-storage-add-form) #edit-actions,
+form[data-drupal-selector="node-type-edit-form"] .form-actions,
+.nodesubmit,
+.system-modules .form-actions {
   position: fixed;
   z-index: 666;
   bottom: 0;
