@@ -48,7 +48,7 @@ textarea.resize-vertical {
   display: block;
   width: 2rem;
   height: 2rem;
-  margin: 0.6rem 0.5rem 0 0;
+  margin: 0.5rem 0.5rem 0 0;
   padding: 0.5rem 0;
   background-color: var(--asphalt-light);
   text-indent: -9999rem;
@@ -83,7 +83,4 @@ textarea.resize-vertical {
   border-bottom: 1px solid var(--concrete);
 
   font-family: monospace;
-
-
-
 }
