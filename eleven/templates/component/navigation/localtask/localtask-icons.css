@@ -442,6 +442,7 @@ ul.tabs > li:first-child a[href^="/node/"]:before {
           mask-image: url(icons/pencil.svg);
 }
 
+.tabs li a[href^="/admin/structure/types/manage/"]:before,
 .tabs li a[href^="/admin/people/roles/manage/"]:before,
 .tabs li a[href^="/admin/structure/display-modes/view/manage/"]:before,
 .tabs li a[href="/admin/structure/contact/manage/feedback"]:before,
