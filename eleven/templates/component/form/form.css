@@ -19,6 +19,14 @@ form.pagewidth { }
   padding-bottom: 0.5rem;
 }
 
+.form-item--inline {
+  display: inline-block;
+}
+
+.form--inline {
+  display: flex
+}
+
 
 .label,
 .form-item label,
