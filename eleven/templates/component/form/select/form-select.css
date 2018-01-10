@@ -4,7 +4,7 @@ select {
   min-width: 11rem;
   min-height: 2rem;
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 0.5rem;
   border-right: 0;
   -webkit-border-radius: 0rem;
           border-radius: 0;
@@ -12,7 +12,7 @@ select {
   font-weight: normal;
   text-transform: none;
   transition: all 0.5s ease-in-out;
-
+  padding-left: 0.5rem;
   -webkit-appearance: none;
      -moz-appearance: none;
 }
@@ -48,10 +48,11 @@ arrow
 .select__arrow {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 0rem;
   width: 2rem;
   height: 2rem;
   pointer-events: none;
+
 }
 .select__arrow::before {
   position: absolute;
@@ -187,7 +188,7 @@ select:focus {
 /* arrow */
 .select__arrow {
   border-left: 1px solid var(--bluesky-light);
-  background-color: var(--bluesky);
+  background-color: var(--bluesky-light-50);
 }
 select:hover + .select__arrow,
 select:focus + .select__arrow {
@@ -195,7 +196,7 @@ select:focus + .select__arrow {
 }
 
 .select__arrow::before {
-  background-color: var(--gravel);
+  background-color: var(--bluesky);
 
           mask-image: url(icons/angle-down.svg);
   -webkit-mask-image: url(icons/angle-down.svg);
@@ -203,5 +204,5 @@ select:focus + .select__arrow {
 
 select:hover + .select__arrow::before,
 select:focus + .select__arrow::before {
-  background-color: var(--white);
+  background-color: var(--bluesky);
 }

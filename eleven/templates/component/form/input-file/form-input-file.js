@@ -1,6 +1,6 @@
 (function () {
 
-  var inputs = document.querySelectorAll( '.form-file' );
+  var inputs = document.querySelectorAll( '.js-form-file' );
   Array.prototype.forEach.call( inputs, function( input )
   {
   	var label	 = input.nextElementSibling,
