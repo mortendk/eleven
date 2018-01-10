@@ -106,9 +106,11 @@ a.hide-message:before {
   background-color: var(--strawberry);
 }
 
+/* help module  */
  .messages--help {
-   background-color: var(--asphalt)
-
+  background-color: var(--gravel);
+  border-color: var(--concrete);
+  color: var(--asphalt-light);
  }
 
 
