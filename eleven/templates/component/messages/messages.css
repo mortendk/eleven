@@ -38,6 +38,7 @@ a.hide-message {
   float: right;
   width: 1rem;
   padding: 0;
+
 }
 
 a.hide-message:before {
@@ -104,6 +105,11 @@ a.hide-message:before {
 .messages--error a.hide-message:before {
   background-color: var(--strawberry);
 }
+
+ .messages--help {
+   background-color: var(--asphalt)
+
+ }
 
 
 /* message hide effect */
