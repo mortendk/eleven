@@ -44,17 +44,27 @@
 }
 
 /* Delete file */
+.form-managed-file .form-item--input input[type="submit"],
 .image-widget-data .form-item--input input[type="submit"]{
   background-color: var(--strawberry-light);
 }
+.form-managed-file .form-item--input input[type="submit"]+ .form-item__icon,
 .image-widget-data .form-item--input input[type="submit"] + .form-item__icon{
   background-color: var(--strawberry);
 }
+
+.form-managed-file .form-item--input input[type="submit"]:hover,
+.form-managed-file .form-item--input input[type="submit"]:focus,
+.form-managed-file .form-item--input input[type="submit"]:active,
 .image-widget-data .form-item--input input[type="submit"]:hover,
 .image-widget-data .form-item--input input[type="submit"]:focus,
 .image-widget-data .form-item--input input[type="submit"]:active{
   background-color: var(--strawberry);
 }
+
+.form-managed-file .form-item--input input[type="submit"]:hover + .form-item__icon,
+.form-managed-file .form-item--input input[type="submit"]:focus + .form-item__icon,
+.form-managed-file .form-item--input input[type="submit"]:active + .form-item__icon,
 .image-widget-data .form-item--input input[type="submit"]:hover + .form-item__icon,
 .image-widget-data .form-item--input input[type="submit"]:focus + .form-item__icon,
 .image-widget-data .form-item--input input[type="submit"]:active + .form-item__icon {
@@ -63,5 +73,5 @@
 
 .image-widget-data .form-item--input input[type="submit"] + .form-item__icon:before{
   mask-image: url(icons/trash.svg);
--webkit-mask-image: url(icons/trash.svg);
+  -webkit-mask-image: url(icons/trash.svg);
 }

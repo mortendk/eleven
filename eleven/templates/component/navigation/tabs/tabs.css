@@ -111,6 +111,6 @@ tabs small
 }
 .tabs-small li.is-active,
 .tabs-small li.is-active a {
-  color: var(--strawberry-light);
+  color: var(--grass);
   font-weight: bold
 }

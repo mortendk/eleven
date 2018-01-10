@@ -86,7 +86,6 @@ body.admin-view nav.localtask {
 }
 .views-display-top .tabs > li a {
   display: block;
-  width: 5rem;
   height: 2rem;
   background-color: var(--bluesky-50);
   color: var(--white);
@@ -464,4 +463,10 @@ form details.views-display-column {
   padding: 0.5rem 0;
   border: 1px dashed var(--gravel);
   background-color: var(--white);
+}
+
+
+/* modal */
+body .ui-dialog .ui-dialog-titlebar-close {
+  position: absolute;
 }
