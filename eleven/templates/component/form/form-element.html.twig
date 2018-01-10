@@ -54,13 +54,6 @@
     {{ children }}
   {% endif %}
 
-  {# description before #}
-  {% if description.content %}
-    <div{{ description.attributes.addclass(description_classes) }}>
-      {{ description.content }}
-    </div>
-  {% endif %}
-
   {# suffix #}
   {% if suffix is not empty %}
     <span class="form-item__suffix">{{ suffix }}</span>
@@ -70,6 +63,16 @@
   {% if label_display == 'after' %}
     {{ label }}
   {% endif %}
+
+
+    {% if description.content %}
+      <div{{ description.attributes.addclass(description_classes) }}>
+        <b>desc</b>
+        {{ description.content }}
+      </div>
+    {% endif %}
+
+
 
   {# errors #}
   {% if errors %}
