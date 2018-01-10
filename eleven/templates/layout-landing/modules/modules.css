@@ -60,7 +60,7 @@
   margin: 0.5rem;
 }
 .card__instalmodule .form-item--checkbox {
-  float: left;
+  display: inline-block;
 }
 .card__instalmodule-title {
   color: var(--bluesky);
