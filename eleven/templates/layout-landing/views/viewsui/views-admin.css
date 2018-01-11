@@ -86,10 +86,15 @@ body.admin-view nav.localtask {
 }
 .views-display-top .tabs > li a {
   display: block;
+  width: 5rem;
   height: 2rem;
   background-color: var(--bluesky-50);
   color: var(--white);
   line-height: 2rem;
+  transition: all 0.2s ease-in;
+}
+.views-display-top .tabs > li a:hover {
+  width: 15rem;
 }
 .views-display-top .tabs > li a::before {
   display: block;
@@ -469,4 +474,13 @@ form details.views-display-column {
 /* modal */
 body .ui-dialog .ui-dialog-titlebar-close {
   position: absolute;
+}
+
+body .ui-dialog .ui-dialog-buttonpane {
+  margin-top:0
+}
+
+/* fix the strange fix views ui does with the submit buttons hidden with inline css */
+input[style] + .form-item__icon {
+  display: none
 }
