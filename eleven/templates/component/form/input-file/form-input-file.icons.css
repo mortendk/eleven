@@ -8,7 +8,7 @@
 }
 .file:before{
   position: absolute;
-  top: 0.25rem;
+  top: 0;
   left: 0rem;
   display: block;
   width: 1rem;
@@ -71,5 +71,5 @@
 }
 .file--text:before {
   mask-image: url(icons/file-text.svg);
-  -webkit-mask-image: url(icons/file-text.svg);  
+  -webkit-mask-image: url(icons/file-text.svg);
 }
