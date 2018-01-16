@@ -9,7 +9,7 @@
       <th class="description visually-hidden priority-low">{{ 'Description'|t }}</th>
     </tr>
   </thead>
-  <tbody class="L L--nooverflow LW-5">
+  <tbody class="cards cards--layout-5">
   {% for module in modules %}
 
     {# set status for the module  #}
@@ -25,9 +25,6 @@
     {% endif %}
 
     {% set classes = [
-      'w',
-      'L',
-      'L--horizontal',
       'card',
       'card--module',
       'card--status-'  ~ card_status,

@@ -5,11 +5,11 @@
 
 
 
-<section class="L LW-4 LW--nooverflow js-card-layout-target" aria-label="{{  section_title }}">
+<section class="cards js-card-layout-target" aria-label="{{  section_title }}">
 
 
   {% for row in rows %}
-    <article {{ row.attributes.addClass('card', 'w').setAttribute('aria-label', row.cells.title.content) }}>
+    <article {{ row.attributes.addClass('card').setAttribute('aria-label', row.cells.title.content) }}>
 
 
 

@@ -2,7 +2,9 @@
 tabs
 */
 .tabs {
+  display: flex;
 }
+
 .tabs li {
   margin: 0;
   border: 0;
@@ -94,6 +96,7 @@ color
 tabs small
 ------------------------------------------------------------------------------*/
 .tabs-small {
+  display: flex
 }
 .tabs-small li {
   border: 0;

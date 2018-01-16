@@ -5,6 +5,21 @@ the compact linke on /admin/config isnt needed anymore as we fix this with js
   display: none
 }
 
+.cardslayout {
+  display: none;
+}
+@media (min-width: 62rem){
+  .cardslayout {
+    display: block;
+  }
+
+}
+
+.tabs-icon ul{
+  display: flex;
+  justify-content: flex-end;
+}
+
 /*hide*/
 .tabs-icon a.hide-cardtext::before {
           mask-image: url(icons/support.svg);
@@ -31,7 +46,8 @@ the compact linke on /admin/config isnt needed anymore as we fix this with js
 /*
 Corrections for layouts chooser
 */
-.LW-8 .card__title--icon,
+
+/* .LW-8 .card__title--icon,
 .LW-9 .card__title--icon,
 .LW-10 .card__title--icon,
 .LW-11 .card__title--icon,
@@ -49,4 +65,4 @@ Corrections for layouts chooser
   width: 100%;
   height: 2rem;
   transform: translate(-25%,0);
-}
+} */

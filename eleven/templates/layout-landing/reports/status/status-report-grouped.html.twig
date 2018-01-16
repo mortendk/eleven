@@ -1,12 +1,12 @@
 {{ attach_library('eleven/form.form') }}
 {% for group in grouped_requirements %}
 
-  <h2 id="{{ group.type }}" class="w-12">{{ group.title }}</h2>
+  <h2 id="{{ group.type }}">{{ group.title }}</h2>
 
   {% if group.type =='checked' %}
-  <section class="L LW-5">
+  <section class="cards cards--layout-4">
   {% else %}
-  <section class="L LW-3">
+  <section class="cards cards--layout-3">
   {% endif %}
 
   {% for requirement in group.items %}

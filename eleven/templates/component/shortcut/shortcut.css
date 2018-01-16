@@ -1,12 +1,13 @@
+.page-title {
+  display: inline-block;
+}
 .shortcut-action {
-  position: absolute;
-  top: 1rem;
-  right: -2rem;
-  display: block;
+  display: inline-block;
   width: 2rem;
   height: 2rem;
   background-color: var(--white);
   z-index: 1;
+  vertical-align: text-bottom;
 }
 .toolbar-tray-open .shortcut-action{
   /*top: calc(-5rem - 1px ) ;*/

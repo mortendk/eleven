@@ -13,12 +13,9 @@
    ]
 %}
 
-<header class="L pagewidth" role="banner" aria-label="{{ 'Site header'|t }}">
+<header class="pagewidth" role="banner" aria-label="{{ 'Site header'|t }}">
   {% if page.header_first %}
-    <div class="w-9 w-12@s">{{ page.header_first }}</div>
-  {% endif %}
-  {% if page.header_second %}
-    <div class="w-3 w-12@s">{{ page.header_second }}</div>
+    {{ page.header_first }}
   {% endif %}
 </header>
 
@@ -33,13 +30,13 @@
   {# pagetop #}
   {# local actions is always printed out into the the page.[region]  so yeah we have an empty div here ....  #}
   {% if page.top_first or page.top_second %}
-    {% if page.top_first %}<div class="w-6 w-12@s">{{ page.top_first }}</div>{% endif %}
-    {% if page.top_second %}<div class="w-6 w-12@s">{{ page.top_second }}</div>{% endif %}
+    {% if page.top_first %}<div class="">{{ page.top_first }}</div>{% endif %}
+    {% if page.top_second %}<div class="">{{ page.top_second }}</div>{% endif %}
   {% endif %}
 
   {# messages #}
   {% if page.messages %}
-    <aside role="complementary"  class="L-center w-12">
+    <aside role="complementary" class="">
       {{ page.messages }}
     </aside>
   {% endif %}
@@ -48,22 +45,24 @@
 </main>
 
 {# footer #}
-<footer class="L pagewidth site-footer">
+
+
+<footer class="L pagewidth site-footer" role="contentinfo">
   {% if page.footer %}
-    <div class="w-12">
+    <div class="">
       {{ page.footer }}
     </div>
   {% endif %}
 
   {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
-    {% if page.header_first %}<div class="w-3 site-footer__first">{{ page.footer_first }}</div>{% endif %}
-    {% if page.footer_second %}<div class="w-3 site-footer__second">{{ page.footer_second }}</div>{% endif %}
-    {% if page.footer_third %}<div class="w-3 site-footer__third">{{ page.footer_third }}</div>{% endif %}
-    {% if page.footer_fourth %}<div class="w-3 site-footer__fourth">{{ page.footer_fourth }}</div>{% endif %}
+    {% if page.header_first %}<div class="site-footer__first">{{ page.footer_first }}</div>{% endif %}
+    {% if page.footer_second %}<div class="site-footer__second">{{ page.footer_second }}</div>{% endif %}
+    {% if page.footer_third %}<div class="site-footer__third">{{ page.footer_third }}</div>{% endif %}
+    {% if page.footer_fourth %}<div class="site-footer__fourth">{{ page.footer_fourth }}</div>{% endif %}
   {% endif %}
 
   {% if page.footer_bottom %}
-    <div class="site-footer__bottom w-12">
+    <div class="site-footer__bottom">
       {{ page.footer_bottom }}
     </div>
   {% endif %}

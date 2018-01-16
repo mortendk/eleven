@@ -1,31 +1,17 @@
-body {
-}
+body { }
 main {
   background-color: var(--gravel-light);
   padding-top: 1rem;
   border-top: 1px solid var(--concrete-light);
 }
-
 .site-footer {
   padding-bottom: 5rem
-}
-
-.stickyfooter {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0;
-  background-color: red;
-}
-
-main {
-  flex: 1;
-  min-height: 50vh;
 }
 
 header{
   margin-bottom: 0.5rem
 }
+
 /* -- page width -------------------------------------------------------------*/
 .pagewidth {
   width: 100%;
@@ -43,7 +29,8 @@ header{
 /* medium */
 @media (min-width: 48rem) and (max-width: 61.99rem){
   .pagewidth {
-    padding: 0 calc( (100% - 91rem) / 2 );
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 }
 /* large */
