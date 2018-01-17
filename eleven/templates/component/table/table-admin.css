@@ -64,12 +64,15 @@ td.views-field-operations {
   /* float: right; */
 }
 
-/* ---------------------Card view for tables ------------------*/
-table.responsive-enabled thead {
+/* ---------------------Card view for tables ------------------
+@TODO: move this into a seperate class
+*/
+
+form[data-drupal-selector="views-form-content-page-1"] table.responsive-enabled thead {
   display: grid;
 }
-table.sticky-header thead tr,
-table.responsive-enabled thead tr {
+form[data-drupal-selector="views-form-content-page-1"] table.sticky-header thead tr,
+form[data-drupal-selector="views-form-content-page-1"] table.responsive-enabled thead tr {
   background-color: var(--concrete-light);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr) );
@@ -81,14 +84,14 @@ table.responsive-enabled thead tr {
 
 @media (min-width: 48rem) {
 
-  table.responsive-enabled tbody {
+  form[data-drupal-selector="views-form-content-page-1"] table.responsive-enabled tbody {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-auto-rows: minmax(3rem, auto);
     grid-gap: 1rem
   }
 
-  table.responsive-enabled tbody tr {
+  form[data-drupal-selector="views-form-content-page-1"] table.responsive-enabled tbody tr {
     display: grid;
     grid-template-columns: 1.5rem 1fr;
     grid-template-rows: minmax(2rem, auto);
@@ -98,19 +101,19 @@ table.responsive-enabled thead tr {
     padding: 1rem
   }
 
-  table.responsive-enabled tbody tr td {
-    padding: 0.5rem 0;
+  form[data-drupal-selector="views-form-content-page-1"] table.responsive-enabled tbody tr td {
+    padding: 0.25rem 0;
   }
 
-  .responsive-enabled td.views-field-node-bulk-form input[type='checkbox'] {
+  form[data-drupal-selector="views-form-content-page-1"] .responsive-enabled td.views-field-node-bulk-form input[type='checkbox'] {
     width: 1rem;
     height: 1rem;
   }
-  .responsive-enabled td.views-field-node-bulk-form input[type='checkbox']:before {
+  form[data-drupal-selector="views-form-content-page-1"] .responsive-enabled td.views-field-node-bulk-form input[type='checkbox']:before {
     width: 1rem;
     height: 1rem;
   }
-  .responsive-enabled td.views-field-node-bulk-form input[type='checkbox']:after {
+  form[data-drupal-selector="views-form-content-page-1"] .responsive-enabled td.views-field-node-bulk-form input[type='checkbox']:after {
     width: 1rem;
     height: 1rem;
     top: 0;
@@ -118,36 +121,36 @@ table.responsive-enabled thead tr {
   }
 
 
-  .responsive-enabled td.views-field-title {
-    font-size: 1.25rem
+  form[data-drupal-selector="views-form-content-page-1"] .responsive-enabled td.views-field-title {
+    padding-left: 0.5rem
   }
 
-  .responsive-enabled td.views-field-type {
+  form[data-drupal-selector="views-form-content-page-1"] .responsive-enabled td.views-field-type {
     grid-column: 1/3;
     border-top: 1px solid var(--gravel)
     /* insert icon */
   }
-  .responsive-enabled td.views-field-name{
+  form[data-drupal-selector="views-form-content-page-1"] .responsive-enabled td.views-field-name{
     /* user icon */
     grid-column: 1/3;
     border-top: 1px solid var(--gravel)
   }
 
-  .responsive-enabled td.views-field-status {
+  form[data-drupal-selector="views-form-content-page-1"] .responsive-enabled td.views-field-status {
     grid-column: 1/3;
     border-top: 1px solid var(--gravel)
   }
-  .responsive-enabled td.views-field-status.is-active {
+  form[data-drupal-selector="views-form-content-page-1"] .responsive-enabled td.views-field-status.is-active {
     grid-column: 1/3;
     border-top: 1px solid var(--gravel)
   }
 
-  .responsive-enabled td.views-field-changed {
+  form[data-drupal-selector="views-form-content-page-1"] .responsive-enabled td.views-field-changed {
     grid-column: 1/3;
     border-top: 1px solid var(--gravel)
     /* date icon */
   }
-  .responsive-enabled td.views-field-operations {
+  form[data-drupal-selector="views-form-content-page-1"] .responsive-enabled td.views-field-operations {
     display: flex;
     align-items: center
 
@@ -158,12 +161,12 @@ table.responsive-enabled thead tr {
 /* medium */
 @media (min-width: 48rem) and (max-width: 61.99rem){
 
-  table.responsive-enabled tbody {
+  form[data-drupal-selector="views-form-content-page-1"] table.responsive-enabled tbody {
     grid-template-columns: repeat(3, 1fr);
   }
 
 }
-
+/* --------------------------------------------table cards  */
 
 
 

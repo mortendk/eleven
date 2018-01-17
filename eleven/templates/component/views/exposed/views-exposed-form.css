@@ -20,6 +20,7 @@ hide / show filter & actions
 
 .views-filter-layout {
   margin-top: -2.5rem;
+  float: right
 }
 .tabs-icon a.hide-filter:before {
           mask-image: url(icons/filter.svg);
