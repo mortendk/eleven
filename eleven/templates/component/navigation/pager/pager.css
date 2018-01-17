@@ -2,11 +2,15 @@
 .pager {
 }
 .pager__items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 /* items */
 .pager__item {
   position: relative;
+  margin-left: 0.5rem
 }
 .pager__item a {
   width: 1.5rem;
@@ -17,6 +21,7 @@
   line-height: 1.5rem;
   text-align: center;
   text-decoration: none;
+
 }
 
 /* active item */

@@ -9,10 +9,10 @@ media tables layout
 
 {% include themepath ~ '/templates/component/navigation/cardlayout/cardlayout.html.twig' %}
 
-<section class="L LW-4 LW--nooverflow w-12 js-card-layout-target" aria-label="{{ section_title }}">
+<section class="cards js-card-layout-target" aria-label="{{ section_title }}">
 
   {% for row in rows %}
-  <article {{ row.attributes.addClass('w','card').setAttribute('aria-label', row.cells.0.content|striptags) }}>
+  <article {{ row.attributes.addClass('card').setAttribute('aria-label', row.cells.0.content|striptags) }}>
 
     <h3 class="card__title card__title--icon card__title--icon-admin-structure-book">
       {{ row.cells.0.content|striptags  }}

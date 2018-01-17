@@ -8,7 +8,6 @@ screenshot: goes-to-eleven.jpg
 # -- regions -------------------------------------------------------------------
 regions:
   header_first:  'Header First'
-  header_second: 'Header Last'
   navigation: 'Navigation'
   messages: 'Messages'
   top_first: 'Top First'

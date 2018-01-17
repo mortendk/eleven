@@ -13,7 +13,7 @@
  */
 #}
 {{ attach_library('eleven/card') }}
-<div class="w-12">
+<div>
   <h2>{{ title }}</h2>
 
   <p>{{ description }}</p>
@@ -24,14 +24,14 @@
     {% if size * 4 < links|length %}
       {% set size = size + 1 %}
     {% endif %}
-    <section class="L LW-4">
+    <section class="cards">
     {# Output the links in 4 columns. #}
     {% set count = 0 %}
     {% for link in links %}
 
       {% if count == 0 %}
         {# Start a new column. #}
-        <article class="w card">
+        <article class="card">
           <ul>
       {% endif %}
       <li>{{ link }}</li>

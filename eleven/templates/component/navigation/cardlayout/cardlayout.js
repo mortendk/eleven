@@ -1,17 +1,17 @@
 // show hide the sidebar
 (function ($) {
 
-  var widthClasses = "LW-1 LW-2 LW-3 LW-4 LW-5 LW-6 LW-7 LW-8 LW-9 LW-10 LW-11 LW-12"
+  var widthClasses = "cards--layout-3 cards--layout-4 cards--layout-5"
 
   console.log( $.cookie("eleven-cardLayout") )
   // grap a cookie set button to active
   if( $.cookie("eleven-cardLayout") ){
     $("a[data-layout="  + $.cookie('eleven-cardLayout') + "]" ).addClass("is-active");
-    $( ".js-card-layout-target" ).removeClass( widthClasses ).addClass( 'LW-' + $.cookie("eleven-cardLayout") );
+    $( ".js-card-layout-target" ).removeClass( widthClasses ).addClass( 'cards--layout-' + $.cookie("eleven-cardLayout") );
   }else{
     //default
     $("a[data-layout='4']").addClass("is-active");
-    $(".js-card-layout-target").addClass( 'LW-4');
+    $(".js-card-layout-target").addClass( 'cards--layout-4');
   }
 
 
@@ -20,7 +20,7 @@
   $(".js-cardlayout" ).click(function(e) {
 
     var layout = $(this).attr("data-layout");
-    $( ".js-card-layout-target" ).removeClass( widthClasses ).addClass( 'LW-' + layout );
+    $( ".js-card-layout-target" ).removeClass( widthClasses ).addClass( 'cards--layout-' + layout );
 
     //color buttons
     $(".js-cardlayout").removeClass("is-active");

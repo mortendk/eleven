@@ -9,10 +9,10 @@ fields tables layout
 {% if rows %}
 
 {% include themepath ~ '/templates/component/navigation/cardlayout/cardlayout.html.twig' %}
-<section class="L LW-4 LW--nooverflow w-12 js-card-layout-target">
+<section class="cards js-card-layout-target">
 
   {% for row in rows %}
-  <article {{ row.attributes.addClass('w','card').setAttribute('aria-label', row.cells.label.content) }}>
+  <article {{ row.attributes.addClass('card').setAttribute('aria-label', row.cells.label.content) }}>
 
     <h3 class="card__title card__title--icon card__title--icon-{{ row.cells.field_type.content['#title'].getUntranslatedString()|clean_class}}">
       <a href="/{{ row.cells.operations.content['#links'].edit.url.getInternalPath() }}">

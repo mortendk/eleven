@@ -1,23 +1,20 @@
 {{ attach_library('eleven/card.layout') }}
 {{ attach_library('eleven/nav.tabs.icon') }}
 
-<div class="L-right w-12 ">
-
-<nav class="tabs-icon ">
-  <ul class="L">
+<nav class="cardslayout tabs-icon">
+  <ul>
     <li><a href="#" class="js-hide-cardtext hide-cardtext" data-helptext="{{'Hide help text'|t}}">
       <span class="visually-hidden">{{'Hide help text'|t}}</span>
     </a></li>
-  {% for i in range(3, 6) %}
+
+  {% for i in range(3, 5) %}
     {#  {% if i == 4 %}is-active {% endif %} #}
     <li><a href="#" class="js-cardlayout cardlayout" data-layout="{{ i }}" data-helptext="Layout: {{ i }} columns">
       <span class="visually-hidden">
       Layout: {{ i }} columns
       </span>
-  </a></li>
+    </a></li>
   {% endfor %}
 
   </ul>
 </nav>
-
-</div>

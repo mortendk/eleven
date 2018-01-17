@@ -21,11 +21,8 @@
 {% if path not in test  %}
   {%
     set classes = [
-      'L',
-      'LW-4',
-      'LW--nooverflow',
+      'cards',
       'js-card-layout-target'
-
     ]
   %}
 
@@ -37,7 +34,7 @@
     <section{{ attributes.addClass(classes).setAttribute('aria-label', section_title) }}>
 
     {% for item in content %}
-      <article class="w card {{ cardclasses }}" aria-label="{{ item.title}}">
+      <article class="card {{ cardclasses }}" aria-label="{{ item.title}}">
         <h3 class="card__title card__title--icon card__title--icon-{{ item.url.getInternalPath()|clean_class }}">
           <a href="{{ item.url }}" class="L">{{ item.title}}</a>
         </h3>
