@@ -34,6 +34,7 @@
   padding: 0 0.5rem
 }
 
+
 .views-filter {
   display: grid;
   grid-auto-flow:column;
@@ -53,26 +54,51 @@ div[data-drupal-selector="edit-node-bulk-form"] {
   display: block;
 }
 
+
+/* Filter  */
+.views-filter input[data-drupal-selector="edit-submit-content"] {
+  background-color: var(--rasberry-light);
+}
+.views-filter input[data-drupal-selector="edit-submit-content"] + .form-item__icon {
+  background-color: var(--rasberry);
+}
+.views-filter input[data-drupal-selector="edit-submit-content"]:hover {
+  background-color: var(--rasberry);
+}
+.views-filter input[data-drupal-selector="edit-submit-content"]:hover + .form-item__icon {
+  background-color: var(--rasberry-light);
+}
+.views-filter input[data-drupal-selector="edit-submit-content"]:active {
+  background-color: var(--rasberry);
+}
+.views-filter input[data-drupal-selector="edit-submit-content"]:active + .form-item__icon {
+  background-color: var(--rasberry);
+}
+.views-filter input[data-drupal-selector="edit-submit-content"] + .form-item__icon:before {
+          mask-image: url(icons/filter.svg);
+  -webkit-mask-image: url(icons/filter.svg);
+}
+
 /* filter reset */
-.view-filters input[data-drupal-selector="edit-reset"] {
+.views-filter input[data-drupal-selector="edit-reset"] {
   background-color: var(--concrete-light);
 }
-.view-filters input[data-drupal-selector="edit-reset"] + .form-item__icon {
+.views-filter input[data-drupal-selector="edit-reset"] + .form-item__icon {
   background-color: var(--concrete);
 }
-.view-filters input[data-drupal-selector="edit-reset"]:hover {
+.views-filter input[data-drupal-selector="edit-reset"]:hover {
   background-color: var(--concrete);
 }
-.view-filters input[data-drupal-selector="edit-reset"]:hover + .form-item__icon {
+.views-filter input[data-drupal-selector="edit-reset"]:hover + .form-item__icon {
   background-color: var(--concrete-light);
 }
-.view-filters input[data-drupal-selector="edit-reset"]:active {
+.views-filter input[data-drupal-selector="edit-reset"]:active {
   background-color: var(--concrete);
 }
-.view-filters input[data-drupal-selector="edit-reset"]:active + .form-item__icon {
+.views-filter input[data-drupal-selector="edit-reset"]:active + .form-item__icon {
   background-color: var(--concrete);
 }
-.view-filters input[data-drupal-selector="edit-reset"] + .form-item__icon::before {
+.views-filter input[data-drupal-selector="edit-reset"] + .form-item__icon:before {
           mask-image: url(icons/times-circle-o.svg);
   -webkit-mask-image: url(icons/times-circle-o.svg);
 }
