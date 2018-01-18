@@ -50,7 +50,7 @@ input[type="submit"].js-hide+.form-item__icon {
 
 /* form actions -------------------------------------------------------------*/
 
-form:not(.confirmation):not(.field-ui-field-storage-add-form) #edit-actions,
+form:not(.confirmation):not(.field-ui-field-storage-add-form):not(.views-exposed-form) #edit-actions,
 form[data-drupal-selector="node-type-edit-form"] .form-actions,
 .nodesubmit,
 .system-modules .form-actions {
