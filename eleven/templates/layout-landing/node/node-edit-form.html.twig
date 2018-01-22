@@ -3,12 +3,12 @@
 {{ attach_library('eleven/node.edit') }}
 {{ attach_library('eleven/nav.tabs.icon') }}
 
-<div class="L">
+<div>
 
-  <div class="node-edit-main w-8 w-12@s">
+  <div class="node-edit-main">
 
   <nav class="tabs-icon">
-    <ul class="L-right">
+    <ul>
       <li>
         <a href="#" class="js-11-layout-chooser" data-layout="8"  data-helptext="{{ 'Layout 2 columns'|t }}">
           <span class="visually-hidden">{{ 'Layout 2 columns'|t }}</span>
@@ -30,11 +30,11 @@
     {{ form|without('advanced', 'actions', 'meta') }}
   </div>
 
-  <div class="node-edit-sidebar w-4 w-12@s">
+  <div class="node-edit-sidebar">
 
 
       {#
-    <div class="card w-12">
+    <div class="card">
       State: {{ form.metacard.publised['#value'] }}
       <strong>{{ form.title.widget.0.value['#default_value'] }}</strong>
       <br>
@@ -56,7 +56,7 @@
     {{ form.advanced }}
   </div>
 
-  <div class="w-12 nodesubmit">
+  <div class="nodesubmit">
     {{ form.actions }}
   </div>
 </div>

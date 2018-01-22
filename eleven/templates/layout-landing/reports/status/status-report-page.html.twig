@@ -2,13 +2,13 @@
 {{ attach_library('eleven/status.report') }}
 
 
-<section class="L cards">
+<section class="cards">
 {% for counter in counters %}
 
   {% if counters|length == 3 %}
-    <article class="w-4">
+    <article>
   {% elseif counters|length == 2 %}
-    <article class="w-3">
+    <article>
   {% endif %}
 
     {# status-report-counter.html.twig #}

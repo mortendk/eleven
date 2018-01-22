@@ -36,7 +36,7 @@
     {% for item in content %}
       <article class="card {{ cardclasses }}" aria-label="{{ item.title}}">
         <h3 class="card__title card__title--icon card__title--icon-{{ item.url.getInternalPath()|clean_class }}">
-          <a href="{{ item.url }}" class="L">{{ item.title}}</a>
+          <a href="{{ item.url }}">{{ item.title}}</a>
         </h3>
 
         <p class="card__text">
