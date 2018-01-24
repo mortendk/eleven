@@ -3,34 +3,30 @@
 {{ attach_library('eleven/node.edit') }}
 {{ attach_library('eleven/nav.tabs.icon') }}
 
-<div>
+<article class="node-edit">
 
-  <div class="node-edit-main">
+  <div class="node-edit__main">
 
-  <nav class="tabs-icon">
-    <ul>
-      <li>
-        <a href="#" class="js-11-layout-chooser" data-layout="8"  data-helptext="{{ 'Layout 2 columns'|t }}">
-          <span class="visually-hidden">{{ 'Layout 2 columns'|t }}</span>
-        </a>
-      </li>
-      <li>
-        <a href="#" class="js-11-layout-chooser" data-layout="10" data-helptext="{{ 'Layout Layout 2 col wide'|t }}">
-          <span class="visually-hidden">{{ 'Layout 2 col wide'|t }}</span>
-        </a>
-    </li>
-      <li>
-        <a href="#" class="js-11-layout-chooser" data-layout="12" data-helptext="{{ 'Layout Full width'|t }}">
-          <span class="visually-hidden">{{ 'Layout Full width'|t }}</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
 
-    {{ form|without('advanced', 'actions', 'meta') }}
+    <nav class="tabs-icon">
+      <ul>
+        <li>
+          <a href="#" class="js-11-layout-chooser" data-layout="2"  data-helptext="{{ 'Layout 2 columns'|t }}">
+            <span class="visually-hidden">{{ 'Layout 2 columns'|t }}</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="js-11-layout-chooser" data-layout="full" data-helptext="{{ 'Layout Full width'|t }}">
+            <span class="visually-hidden">{{ 'Layout Full width'|t }}</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    {{ form|without('advanced', 'actions', 'meta', 'status') }}
   </div>
 
-  <div class="node-edit-sidebar">
+  <div class="node-edit__sidebar">
 
 
       {#
@@ -53,10 +49,12 @@
     </div>
       #}
 
+
     {{ form.advanced }}
+
   </div>
 
-  <div class="nodesubmit">
+  <div class="node-edit__submit">
     {{ form.actions }}
   </div>
-</div>
+</article>
