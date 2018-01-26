@@ -12,13 +12,13 @@
 #}
 {%
   set classes = [
-    'layout',
-    'layout--onecol',
+    'layout'
   ]
 %}
 {% if content %}
+<h2>one col </h2>
   <div{{ attributes.addClass(classes) }}>
-    <div {{ region_attributes.content.addClass('layout__region', 'layout__region--content') }}>
+    <div {{ region_attributes.content.addClass('layout__content') }}>
       {{ content.content }}
     </div>
   </div>

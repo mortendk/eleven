@@ -8,13 +8,10 @@
     display: flex;
     justify-content: flex-end;
   }
-
-
-
   .node-edit{
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-gap: 1rem
+    grid-gap: 1rem;
   }
 
 }

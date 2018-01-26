@@ -137,6 +137,29 @@ libraries-override:
       theme:
         /core/themes/stable/css/views_ui/views_ui.admin.theme.css: false
 
+  #layouts
+  layout_discovery/onecol:
+    css:
+      theme:
+        layouts/onecol/onecol.css: false
+  layout_discovery/twocol_bricks:
+    css:
+      theme:
+        layouts/twocol_bricks/twocol_bricks.css: templates/layout/layout.css
+  layout_discovery/twocol:
+    css:
+      theme:
+        layouts/twocol/twocol.css: templates/layout/layout.css
+  layout_discovery/threecol_25_50_25:
+    css:
+      theme:
+        layouts/threecol_25_50_25/threecol_25_50_25.css: templates/layout/layout.css
+  layout_discovery/threecol_33_34_33:
+    css:
+      theme:
+        layouts/threecol_33_34_33/threecol_33_34_33.css: templates/layout/layout.css
+
+
   dblog/drupal.dblog:
     css:
       component:
