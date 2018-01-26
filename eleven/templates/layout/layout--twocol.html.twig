@@ -17,8 +17,7 @@
   ]
 %}
 {% if content %}
-<h2>two col</h2>
-  <div{{ attributes.addClass(classes) }}>
+  <section{{ attributes.addClass(classes) }}>
 
     {% if content.top %}
       <div {{ region_attributes.top.addClass('layout__top') }}>
@@ -43,5 +42,5 @@
         {{ content.bottom }}
       </div>
     {% endif %}
-  </div>
+  </section>
 {% endif %}

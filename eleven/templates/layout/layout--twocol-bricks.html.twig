@@ -20,8 +20,8 @@
   ]
 %}
 {% if content %}
-<h2> 2 col brichs </h2>
-  <div{{ attributes.addClass(classes) }}>
+
+  <section{{ attributes.addClass(classes) }}>
     {% if content.top %}
       <div {{ region_attributes.top.addClass('layout__top') }}>
         {{ content.top }}
@@ -63,5 +63,5 @@
         {{ content.bottom }}
       </div>
     {% endif %}
-  </div>
+  </section>
 {% endif %}
