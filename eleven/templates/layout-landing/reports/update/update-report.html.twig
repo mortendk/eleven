@@ -15,7 +15,7 @@
 #}
 
 {% for project_type in project_types %}
-  <h3 class="w-12">{{ project_type.label }}</h3>
+  <h3>{{ project_type.label }}</h3>
   {{ project_type.table }}
 {% else %}
   <p>{{ no_updates_message }}</p>

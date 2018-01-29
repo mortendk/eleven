@@ -10,9 +10,9 @@
 #}
 {% include themepath ~ '/templates/component/navigation/cardlayout/cardlayout.html.twig' %}
 
-admin page: 
+admin page:
 {{ section_title}}
-<section{{ attributes.addClass('L','LW-4', 'LW--nooverflow', 'js-card-layout-target').setAttribute('aria-label', section_title) }}>
+<section{{ attributes.addClass('cards js-card-layout-target').setAttribute('aria-label', section_title) }}>
 
   {% for container in containers %}
 

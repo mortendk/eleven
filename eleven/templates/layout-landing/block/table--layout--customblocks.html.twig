@@ -6,10 +6,10 @@ fields tables layout
 
 {% if rows %}
 
-<section class="L LW-3">
+<section>
 
   {% for row in rows %}
-  <article {{ row.attributes.addClass('w','card') }}>
+  <article {{ row.attributes.addClass('card') }}>
 
     <div class="card__icon card__icon--fieldtype card__icon--fieldtype-{{ row.cells.field_type.content['#title'].getUntranslatedString()|clean_class}}"></div>
 

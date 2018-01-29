@@ -2,9 +2,9 @@
 
   <section class="cards">
     {# Drupal version #}
-    <article class="card w L">
-      <div class="card__icon card__icon--drupal w-3"></div>
-      <div class="w-9">
+    <article class="card">
+      <div class="card__icon card__icon--drupal"></div>
+      <div class="">
         <h3>{{ 'Drupal Version'|t }}</h3>
         <div class="card__text card__text--small">
           {{ drupal.value }}
@@ -15,8 +15,8 @@
 
     {# php #}
     <article class="card">
-      <div class="card__icon card__icon--php w-3"></div>
-      <div class="w-9">
+      <div class="card__icon card__icon--php"></div>
+      <div class=''>
         <h3>{{ 'PHP'|t }}</h3>
         <div class="card__text card__text--small">
           <strong>{{ 'Version'|t }}</strong>
@@ -36,9 +36,9 @@
     </article>
 
     {# webserver #}
-    <article class="card w L">
-      <div class="card__icon card__icon--webserver w-3"></div>
-      <div class="w-9">
+    <article class="card">
+      <div class="card__icon card__icon--webserver"></div>
+      <div class="">
         <h3>{{ 'Web Server'|t }}</h3>
         <div class="card__text card__text--small">
         {{ webserver.value }}
@@ -50,9 +50,9 @@
     </article>
 
     {# DB #}
-    <article class="card w L">
-      <div class="card__icon card__icon--database w-3"></div>
-      <div class="w-9">
+    <article class="card">
+      <div class="card__icon card__icon--database"></div>
+      <div class="">
         <h3>{{ 'Database'|t }}</h3>
         <div class="card__text card__text--small">
         {{ 'Version'|t }}
@@ -72,9 +72,9 @@
     </article>
 
     {# cron #}
-    <article class="card w L">
-      <div class="card__icon card__icon--cron w-3"></div>
-      <div class="w-9">
+    <article class="card">
+      <div class="card__icon card__icon--cron"></div>
+      <div class="">
         <h3>{{ 'Last Cron Run'|t }}</h3>
         <div class="card__text card__text--small">
         {{ cron.value }}

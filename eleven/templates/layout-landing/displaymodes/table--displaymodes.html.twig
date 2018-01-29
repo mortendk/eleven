@@ -39,8 +39,8 @@ media tables layout
 
   {% else %}
     {# create new button #}
-    <div class="w-12 L LW--nooverflow">
-      <div class="w-4 card">
+    <div class="">
+      <div class="card">
         <div class="button">
           {{ link(row.cells.0.content['#title']|striptags, row.cells.0.content['#url'], { 'class':['button','button-action']} ) }}
         </div>

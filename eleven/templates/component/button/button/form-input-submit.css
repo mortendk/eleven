@@ -50,9 +50,8 @@ input[type="submit"].js-hide+.form-item__icon {
 
 /* form actions -------------------------------------------------------------*/
 
-form:not(.confirmation):not(.field-ui-field-storage-add-form):not(.views-exposed-form) #edit-actions,
+form:not(.confirmation):not(.field-ui-field-storage-add-form):not(.views-exposed-form):not(.node-form) #edit-actions,
 form[data-drupal-selector="node-type-edit-form"] .form-actions,
-.nodesubmit,
 .system-modules .form-actions {
   position: fixed;
   z-index: 666;

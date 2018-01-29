@@ -56,7 +56,7 @@
         {# links #}
         {% if module.links %}
           <nav class="card__links">
-          <ul class="L-space width-2">
+          <ul>
             {% for link_type in ['help', 'permissions', 'configure'] %}
               {% if module.links[link_type] is defined %}
                 <li>

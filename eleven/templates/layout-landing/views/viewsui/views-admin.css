@@ -1,5 +1,3 @@
-/* we cant get the w-12 class into the views-edit-view wrapper as its prefixex
-so we have to fix the width here...*/
 .views-edit-view {
   width: 100%;
 }
