@@ -3,7 +3,6 @@
 
   var widthClasses = "cards--layout-3 cards--layout-4 cards--layout-5"
 
-  console.log( $.cookie("eleven-cardLayout") )
   // grap a cookie set button to active
   if( $.cookie("eleven-cardLayout") ){
     $("a[data-layout="  + $.cookie('eleven-cardLayout') + "]" ).addClass("is-active");

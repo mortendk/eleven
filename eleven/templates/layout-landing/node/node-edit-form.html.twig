@@ -7,48 +7,28 @@
 
   <div class="node-edit__main">
 
-
-    <nav class="tabs-icon">
+    <nav class="node-edit__layout tabs-icon">
       <ul>
         <li>
-          <a href="#" class="js-11-layout-chooser" data-layout="2"  data-helptext="{{ 'Layout 2 columns'|t }}">
+          <a href="#" class="js-nodeedit-layout" data-layout="node-edit--2col"  data-helptext="{{ 'Layout 2 columns'|t }}">
             <span class="visually-hidden">{{ 'Layout 2 columns'|t }}</span>
           </a>
         </li>
         <li>
-          <a href="#" class="js-11-layout-chooser" data-layout="full" data-helptext="{{ 'Layout Full width'|t }}">
+          <a href="#" class="js-nodeedit-layout" data-layout="node-edit--full" data-helptext="{{ 'Layout Full width'|t }}">
             <span class="visually-hidden">{{ 'Layout Full width'|t }}</span>
           </a>
         </li>
       </ul>
     </nav>
 
+
+
     {{ form|without('advanced', 'actions', 'meta', 'status') }}
+
   </div>
 
   <div class="node-edit__sidebar">
-
-
-      {#
-    <div class="card">
-      State: {{ form.metacard.publised['#value'] }}
-      <strong>{{ form.title.widget.0.value['#default_value'] }}</strong>
-      <br>
-      Date {{ form.metacard.changed['#value'] }}
-      <br>
-      Author {{ form.metacard.author['#value'] }}
-      <hr>
-      {% if form.sticky.widget.value['#default_value'] %}
-      Sticky
-      {% endif %}
-
-      {% if form.promote.widget.value['#default_value'] %}
-        promoted to frontpage
-      {% endif %}
-
-    </div>
-      #}
-
 
     {{ form.advanced }}
 
