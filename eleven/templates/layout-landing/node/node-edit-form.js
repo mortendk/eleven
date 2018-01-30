@@ -1,44 +1,29 @@
 // show hide the sidebar
 (function ($) {
 
-  // $('iframe').contents().find('body').css("margin", "40px");
-  // $(".cke_wysiwyg_frame").contents().find(".cke_editable").css('background-color', 'red');
-
-  var widthClasses = "w-1 w-2 w-3 w-4 w-5 w-6 w-7 w-8 w-9 w-10 w-11 w-12"
+  var widthClasses = "node-edit--2col node-edit--full"
 
   // grap a cookie set button to active
   if( $.cookie("eleven-nodeEditLayout") ){
+
+    console.log( 'wtf: ' + $.cookie("eleven-nodeEditLayout") );
+
     $("a[data-layout="  + $.cookie('eleven-nodeEditLayout') + "]" ).addClass("is-active");
 
-    $( ".node-edit-main" ).removeClass( widthClasses ).addClass( 'w-' + $.cookie("eleven-nodeEditLayout") );
+    $( ".node-edit" ).removeClass( widthClasses ).addClass( $.cookie("eleven-nodeEditLayout") );
 
-    if($.cookie("eleven-nodeEditLayout") == "12"){
-
-      $( ".node-edit-sidebar" ).removeClass( widthClasses ).addClass('w-12');
-
-    }else{
-      $( ".node-edit-sidebar" ).removeClass( widthClasses ).addClass( 'w-' + (12 -  $.cookie("eleven-nodeEditLayout"))  );
-    }
   }
 
-  // change layout for a node
-  $(".js-11-layout-chooser" ).click(function(e) {
+
+  // change layout
+  $(".js-nodeedit-layout" ).click(function(e) {
 
     var layout = $(this).attr("data-layout");
-    $( ".node-edit-main" ).removeClass( widthClasses ).addClass( 'w-' + layout );
 
-    if(layout == "12"){
-      var layoutSidebar = 12 ;
-
-      $( ".node-edit-sidebar" ).removeClass(widthClasses).addClass('w-12');
-
-    }else{
-      var layoutSidebar = 12  - layout ;
-      $( ".node-edit-sidebar" ).removeClass( widthClasses ).addClass( 'w-' + layoutSidebar );
-    }
+    $( ".node-edit" ).removeClass( widthClasses ).addClass( layout );
 
     //color buttons
-    $(".js-11-layout-chooser").removeClass("is-active");
+    $(".js-nodeedit-layout").removeClass("is-active");
     $(this).toggleClass("is-active");
 
     //umm cookies
