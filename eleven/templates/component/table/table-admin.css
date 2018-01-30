@@ -189,6 +189,11 @@ form[data-drupal-selector="views-form-content-page-1"] table.responsive-enabled 
     -webkit-mask-image: url(icons/adjust.svg);
   }
 
+  /* selected */
+  form[data-drupal-selector="views-form-content-page-1"] table.responsive-enabled tbody tr.selected {
+    background-color: var(--bluesky-light-light)
+  }
+
 
 
 }

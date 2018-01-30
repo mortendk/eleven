@@ -13,34 +13,33 @@ TODO: havent tested on a mobile yet
   bottom: 100%;
   left: 50%;
   opacity: 0;
-  width: 1rem;
-  height: 1rem;
+  width: auto;
   overflow: hidden;
+  padding: 0.5rem;
+  height: 2rem;
   background-color: var(--black-50);
   color: var(--white);
   font-size: 0.75rem;
   line-height: 1rem;
-  white-space: normal;
+  white-space:nowrap;
   text-indent: 0;
   content: attr(data-helptext);
   transition: opacity .2s ease-in-out;
-  transform: translate(-50%, 1rem);
+  transform: translate(-50%, 2rem);
   transform-origin: top;
-
+  transition: all 0.2s ease-in
 }
 
 [data-helptext]:hover:after {
   opacity: 1;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -0.5rem);
   min-width: 4rem;
+  width:auto;
   height: auto;
   overflow: visible;
   padding: 0.5rem
 }
+
 .permissions [data-helptext]:hover:after {
   width: 10rem
 }
-
-/*[data-helptext-position="down"]:hover:after {
-  transform: translate(5-0%, 3rem);
-}*/
