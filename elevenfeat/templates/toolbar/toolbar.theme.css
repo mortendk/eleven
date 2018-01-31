@@ -14,6 +14,12 @@ body.is-edit-ui-toolbar-opened #toolbar-bar .toolbar-bar,
 .toolbar-menu a:before {
   background-color: var(--white);
 }
+
+.toolbar-icon.is-active:before,
+.toolbar-menu a.is-active:before {
+  background-color: var(--bluesky-light);
+}
+
 #toolbar-bar .toolbar-icon:hover:before,
 #toolbar-bar .toolbar-menu a:hover:before {
   transform: scale(1.5);
