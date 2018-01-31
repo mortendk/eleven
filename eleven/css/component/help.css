@@ -26,13 +26,14 @@ TODO: havent tested on a mobile yet
   text-indent: 0;
   content: attr(data-helptext);
   transition: all .2s ease-in-out;
-  transform: translate(-50%, -2rem);
+  top: 0;
+  left: 25%;
   transform-origin: top;
 }
 
 [data-helptext]:hover:after {
   opacity: 1;
-  transform: translate(-50%, -0.5rem);
+  top: -3rem;
   overflow: visible;
   padding: 0.5rem
 }

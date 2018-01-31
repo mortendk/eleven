@@ -50,7 +50,8 @@
 
 /**/
 .card--small .view__setting {
-  font-size: 0.75rem;
+  font-size: 1rem;
+
 }
 .card--small .label {
   font-size: 0.75rem;

@@ -89,8 +89,8 @@ form details {
 
 /* summary bar closed */
 details summary {
-  background-color: var(--concrete-light);
-  color: var(--asphalt-light);
+  background-color: var(--bluesky-light-light);
+  color: var(--bluesky);
   font-weight: 500;
   margin-left: -1px;
   width: calc(100% + 2px)
@@ -100,24 +100,30 @@ details[open] summary{
   border-bottom: none
 }
 details summary:hover{
-  color: var(--concrete);
+  background-color: var(--bluesky-light-light);
 }
 
 /* icon */
 details summary::before {
-  background-color: var(--asphalt);
-          mask-image: url(icons/arrow-circle-up.svg);
-  -webkit-mask-image: url(icons/arrow-circle-up.svg);
+  background-color: var(--bluesky);
+          mask-image: url(icons/arrow-circle-right.svg);
+  -webkit-mask-image: url(icons/arrow-circle-right.svg);
 }
-details[open] summary::before {
-  background-color: var(--asphalt);
-  transform: rotate(180deg);
-}
-
 details summary:hover:before {
-  transform: rotate(90deg);
-
+  background-color: var(--bluesky-light);
+  transform: rotate(45deg);
 }
+
+details[open] summary::before {
+  background-color: var(--bluesky);
+  transform: rotate(90deg);
+}
+details[open] summary:hover:before {
+  background-color: var(--bluesky-light);
+  transform: rotate(-45deg);
+}
+
+
 
 
 /* make details summy display like a link ------------------------------------*/

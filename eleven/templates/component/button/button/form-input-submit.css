@@ -144,15 +144,16 @@ input[type="submit"][data-drupal-selector$="actions-cancel-settings"]+.form-item
   -webkit-mask-image: url(../icons/trash.svg);
 }
 
-#edit-clear-cache input[type="submit"] {
+input[type="submit"]#edit-clear-cache {
   background-color: var(--rasberry-light);
 }
 
-#edit-clear-cache input[type="submit"]+.form-item__icon {
+input[type="submit"]#edit-clear-cache  + .form-item__icon {
   background-color: var(--rasberry);
 }
 
-#edit-clear-cache input[type="submit"]+.form-item__icon::before {
+
+input[type="submit"]#edit-clear-cache + .form-item__icon::before {
   mask-image: url(../icons/refresh.svg);
   -webkit-mask-image: url(../icons/refresh.svg);
 }
