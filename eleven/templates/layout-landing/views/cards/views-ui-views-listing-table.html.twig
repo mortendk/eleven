@@ -20,9 +20,9 @@
 
 
 {% include themepath ~ '/templates/component/navigation/cardlayout/cardlayout.html.twig' %}
-<section{{ attributes.addClass('L','LW-4', 'LW--nooverflow', 'js-card-layout-target') }}>
+<section{{ attributes.addClass('js-card-layout-target', 'cards') }}>
   {% for row in rows %}
-  <article{{ row.attributes.addClass('w', 'card').setAttribute('aria-label', row.data.view_name.data) }}>
+  <article{{ row.attributes.addClass('card').setAttribute('aria-label', row.data.view_name.data) }}>
     <div class="card__status"></div>
     <h3 class="card__title card__title--icon card__title--icon-views" data-drupal-selector="views-table-filter-text-source">
 
