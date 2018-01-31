@@ -193,6 +193,12 @@ tr.card {
 }
 
 /* status ready to be installed */
+.cards--disabled .card__title a{
+  color: var(--concrete)
+}
+.cards--disabled .card__title--icon::before {
+  background-color: var(--concrete);
+}
 .cards--disabled .card__status,
 .card__status--notinstalled {
   background-color: var(--concrete);
