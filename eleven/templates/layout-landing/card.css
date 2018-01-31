@@ -376,6 +376,9 @@ tr.card {
 }
 
 /* operations */
+.card__operations {
+  padding: 1rem 0;
+}
 .card__operations .dropbutton-multiple .dropbutton-widget {
   width: 20rem;
 }
