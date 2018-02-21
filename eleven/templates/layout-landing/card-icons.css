@@ -420,10 +420,83 @@
 }
 .card__title--icon-update-manager {
 }
+
+
+
+
 .card__title--icon-views-ui::before {
           mask-image: url(icons/tasks.svg);
   -webkit-mask-image: url(icons/tasks.svg);
 }
+/* Views */
+.card__title--icon-title::before {
+  mask-image: url(icons/info-circle.svg);
+-webkit-mask-image: url(icons/info-circle.svg);
+}
+.card__title--icon-format::before {
+    mask-image: url(icons/file-text-o.svg);
+  -webkit-mask-image: url(icons/file-text-o.svg);
+}
+
+.card__title--icon-field::before {
+  mask-image: url(icons/newspaper-o.svg);
+-webkit-mask-image: url(icons/newspaper-o.svg);
+}
+
+.card__title--icon-sort::before {
+  mask-image: url(icons/sort-alpha-down.svg);
+-webkit-mask-image: url(icons/sort-alpha-down.svg);
+}
+
+.card__title--icon-page::before {
+  mask-image: url(icons/tasks.svg);
+-webkit-mask-image: url(icons/tasks.svg);
+}
+.card__title--icon-attachment::before {
+  mask-image: url(icons/plus-circle.svg);
+-webkit-mask-image: url(icons/plus-circle.svg);
+}
+
+.card__title--icon-header::before {
+  mask-image: url(icons/tasks.svg);
+-webkit-mask-image: url(icons/tasks.svg);
+}
+
+.card__title--icon-footer::before {
+  mask-image: url(icons/tasks.svg);
+-webkit-mask-image: url(icons/tasks.svg);
+}
+
+.card__title--icon-empty::before {
+  mask-image: url(icons/ban.svg);
+-webkit-mask-image: url(icons/ban.svg);
+}
+
+.card__title--icon-pager::before {
+  mask-image: url(icons/arrows-h.svg);
+-webkit-mask-image: url(icons/arrows-h.svg);
+}
+
+.card__title--icon-argument::before {
+  mask-image: url(icons/sliders.svg);
+-webkit-mask-image: url(icons/sliders.svg);
+}
+
+.card__title--icon-relationship::before {
+  mask-image: url(icons/heart.svg);
+-webkit-mask-image: url(icons/heart.svg);
+}
+
+.card__title--icon-exposed::before {
+  mask-image: url(icons/mouse-pointer.svg);
+-webkit-mask-image: url(icons/mouse-pointer.svg);
+}
+
+.card__title--icon-other::before {
+  mask-image: url(icons/truck.svg);
+-webkit-mask-image: url(icons/truck.svg);
+}
+
 
 /*
 ./admin/people/permissions#module-devel_generate
