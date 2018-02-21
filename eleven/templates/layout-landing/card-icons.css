@@ -453,9 +453,8 @@
 -webkit-mask-image: url(icons/tasks.svg);
 }
 .card__title--icon-attachment::before {
-  mask-image: url(icons/tasks.svg);
--webkit-mask-image: url(icons/tasks.svg);
-
+  mask-image: url(icons/plus-circle.svg);
+-webkit-mask-image: url(icons/plus-circle.svg);
 }
 
 .card__title--icon-header::before {

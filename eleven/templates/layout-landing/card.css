@@ -398,3 +398,15 @@ tr.card {
   padding: 0.5rem 0;
   font-size: 0.75rem;
 }
+
+
+/* Dropbutton */
+.card .dropbutton-wrapper {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.card .dropbutton-wrapper a{
+  text-decoration: none;
+  color: var(--rasberry)
+}
