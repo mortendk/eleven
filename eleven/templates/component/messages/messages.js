@@ -1,20 +1,20 @@
-(function ($) {
+(function ($, Drupal) {
+  Drupal.behaviors.elevenHideMessages = {
+    attach: function (context, settings) {
+      // hide all messages
+      $(".js-hide-messages").once().click(function (e) {
 
-  // hide all messages
-  $( ".js-hide-messages" ).click(function(e) {
+        $('.messages').toggleClass('message--hide');
 
-    $('.messages').toggleClass('message--hide');
+        $(this).toggleClass("is-active");
 
-    $(this).toggleClass("is-active");
+        e.preventDefault();
+      });
 
-    e.preventDefault();
-  });
-
-
-  $( ".js-hide-message" ).click(function(e) {
-    $(this).parent().toggleClass("message--hide");
-    e.preventDefault();
-  });
-
-
-}(jQuery))
+      $(".js-hide-message").once().click(function (e) {
+        $(this).parent().toggleClass("message--hide");
+        e.preventDefault();
+      });
+    }
+  };
+})(window.jQuery, window.Drupal);

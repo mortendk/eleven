@@ -59,6 +59,10 @@ messages:
       templates/component/messages/messages.css: {}
   js:
     templates/component/messages/messages.js: {}
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
 
 shortcut:
   css:
