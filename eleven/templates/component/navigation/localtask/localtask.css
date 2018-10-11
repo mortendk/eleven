@@ -1,5 +1,6 @@
 .localtask{
   border-bottom: 1px solid var(--bluesky-light-light);
+   z-index: 0;
 }
 .localtask__lvl1{
   /*border-bottom: 1px solid var(--bluesky-light-light);*/
